@@ -1,16 +1,19 @@
-# app/models/investigation_result.py
 from pydantic import BaseModel, Field, field_validator, model_serializer
 from uuid import UUID, uuid4
 from typing import Optional, Union
-from datetime import datetime, timezone
-from app.utils.time import format_datetime_to_ist
+from datetime import datetime
+from app.utils.time import IST, format_datetime_to_ist
 
 class InvestigationResultCreate(BaseModel):
     value: Union[float, str] = Field(..., description="Result value")
     unit: str = Field(..., min_length=1, max_length=20, description="Unit of measurement")
-    investigation_id: UUID = Field(..., description="Linked investigation UUID")
-    visit_id: UUID = Field(..., description="Linked visit UUID")
-    recorded_at: Optional[datetime] = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    investigation_id: UUID = Field(..., description="Linked Investigation UUID")
+    patient_id: UUID = Field(..., description="Patient who received the investigation")
+    staff_id: UUID = Field(..., description="Staff member who recorded the result")
+    branch_id: Optional[UUID] = Field(None, description="Branch where result was recorded")
+
+    recorded_at: datetime = Field(default_factory=lambda: datetime.now(IST))
 
     @field_validator("unit", mode="before")
     @classmethod

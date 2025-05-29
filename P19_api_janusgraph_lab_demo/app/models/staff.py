@@ -3,7 +3,6 @@ from uuid import UUID, uuid4
 from enum import Enum
 from datetime import datetime
 from app.utils.time import IST, format_datetime_to_ist
-from app.utils.emp_id import generate_emp_id
 
 class StaffRoleEnum(str, Enum):
     doctor = "doctor"
@@ -16,6 +15,7 @@ class StaffCreate(BaseModel):
     first_name: str = Field(..., min_length=2, max_length=50)
     last_name: str = Field(..., min_length=2, max_length=50)
     role: StaffRoleEnum = Field(default=StaffRoleEnum.other)
+    branch_id: UUID = Field(...)  # mandatory branch assignment
 
     @field_validator("first_name", "last_name")
     @classmethod
@@ -28,16 +28,7 @@ class StaffCreate(BaseModel):
 class Staff(StaffCreate):
     id: UUID = Field(default_factory=uuid4)
     created_at: datetime = Field(default_factory=lambda: datetime.now(IST))
-    emp_id: str = Field(default="")
-
-    @field_validator("emp_id", mode="before")
-    @classmethod
-    def set_emp_id(cls, v, info):
-        if v:
-            return v
-        role = info.data.get("role")
-        created_at = info.data.get("created_at") or datetime.now(IST)
-        return generate_emp_id(role.value, created_at)
+    emp_id: str = Field(default="")  # assigned externally
 
     @model_serializer
     def serialize_created_at(self) -> str:
