@@ -2,6 +2,7 @@ from fastapi import FastAPI
 from app.core.logger import setup_logging
 from app.api.v1.endpoints import health
 from app.api.v1.endpoints import patients
+from app.api.v1.endpoints import results
 
 setup_logging()
 
@@ -13,10 +14,11 @@ app = FastAPI(
 
 # include_router() is a FastAPI method used to add routes (endpoints) 
 # defined in a separate router to the main application.
-app.include_router(health.router)
+app.include_router(health.router, prefix="/status")
 
 # app/api/v1/endpoints/health.py is the module where you defined your health endpoints, 
 # in that we created an instance of APIRouter() called router. So health.router 
 # is the router instance that contains the health check endpoints
 
 app.include_router(patients.router)
+app.include_router(results.router)

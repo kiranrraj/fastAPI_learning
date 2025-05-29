@@ -2,6 +2,8 @@ from pydantic import BaseModel, Field, field_validator
 from uuid import UUID, uuid4
 from enum import Enum
 from typing import Optional
+from datetime import datetime
+from app.utils.time import IST
 
 class GenderEnum(str, Enum):
     male = "male"
@@ -35,4 +37,4 @@ class PatientCreate(BaseModel):
 
 class Patient(PatientCreate):
     id: UUID = Field(default_factory=uuid4)
-    
+    created_at: datetime = Field(default_factory=lambda: datetime.now(IST))
