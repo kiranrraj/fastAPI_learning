@@ -3,6 +3,9 @@ from app.core.logger import setup_logging
 from app.api.v1.endpoints import health
 from app.api.v1.endpoints import patients
 from app.api.v1.endpoints import results
+from app.api.v1.endpoints import branch
+from app.api.v1.endpoints import investigation
+from app.api.v1.endpoints import staff
 
 setup_logging()
 
@@ -20,5 +23,8 @@ app.include_router(health.router, prefix="/status")
 # in that we created an instance of APIRouter() called router. So health.router 
 # is the router instance that contains the health check endpoints
 
-app.include_router(patients.router)
-app.include_router(results.router)
+app.include_router(patients.router, prefix="")
+app.include_router(results.router, prefix="")
+app.include_router(investigation.router, prefix="")
+app.include_router(staff.router, prefix="")
+app.include_router(branch.router, prefix="")
