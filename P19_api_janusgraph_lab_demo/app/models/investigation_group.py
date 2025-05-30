@@ -1,3 +1,4 @@
+# app/models/investigation_group.py
 from pydantic import BaseModel, Field, field_validator, model_serializer
 from uuid import UUID, uuid4
 from typing import Optional
