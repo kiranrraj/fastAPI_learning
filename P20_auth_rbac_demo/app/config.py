@@ -35,12 +35,12 @@ class AppSettings(BaseSettings):
     # Role based collection names
     ADMIN_COLLECTION: str = Field("admin_data", env="ADMIN_COLLECTION")
     DOCTOR_COLLECTION: str = Field("doctor_data", env="DOCTOR_COLLECTION")
-    TESTCENTER_COLLECTION: str = Field("test_center_data", env="TESTCENTER_COLLECTION")
+    TESTCENTER_COLLECTION: str = Field("testcenter_data", env="TESTCENTER_COLLECTION")
 
     # Logging Settings
     LOG_DIR: str = Field("logs", env="LOG_DIR")
     LOG_FILE_NAME: str = Field("api.log", env="LOG_FILE_NAME")
-    LOG_LEVEL: int = Field(logging.INFO, env="LOG_LEVEL") 
+    LOG_LEVEL: str = Field(logging.INFO, env="LOG_LEVEL") 
     LOG_BACKUP_COUNT: int = Field(7, env="LOG_BACKUP_COUNT") 
     LOG_TO_CONSOLE: bool = Field(True, env="LOG_TO_CONSOLE")
 

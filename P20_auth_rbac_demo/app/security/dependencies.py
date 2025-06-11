@@ -6,9 +6,9 @@ from fastapi.security import OAuth2PasswordBearer
 from motor.motor_asyncio import AsyncIOMotorClient
 
 from app.database import get_database
-from app.models.user import UserInDB
+from app.models.user import UserInDB, Role
 from app.security.jwt_handler import decode_access_token
-from app.logger import get_logger 
+from app.utils.logger import get_logger
 
 logger = get_logger(__name__)
 
@@ -37,6 +37,7 @@ async def get_user_from_db(username: str, db: AsyncIOMotorClient) -> Optional[Us
         user_data = await users_collection.find_one({"username": username})
         if user_data:
             logger.debug(f"User '{username}' found in database.")
+            # Ensure UserInDB initialization correctly handles the role from DB
             return UserInDB(**user_data)
         logger.debug(f"User '{username}' not found in database during lookup.")
         return None
@@ -70,7 +71,7 @@ async def get_current_user(
         detail="Could not validate credentials. Please log in again.",
         headers={"WWW-Authenticate": "Bearer"},
     )
-
+    
     # Calls the decode_access_token function (from jwt_handler.py) to
     # parse the JWT. If the token is invalid (malformed, expired,
     # invalid signature), decode_access_token returns None
@@ -93,7 +94,18 @@ async def get_current_user(
         logger.warning(f"User '{token_data.username}' from token not found in database (user may have been deleted).")
         raise credentials_exception
 
-    logger.info(f"User '{user.username}' successfully authenticated. Role: {user.role}") 
+    # Convert token_data.role (which is a string) to a Role Enum for comparison.
+    try:
+        token_role_enum = Role(token_data.role)
+    except ValueError:
+        logger.warning(f"Invalid role '{token_data.role}' found in JWT payload for user '{token_data.username}'.")
+        raise credentials_exception # Token has invalid role string
+
+    if user.role != token_role_enum: # Compare Enum to Enum
+        logger.warning(f"Role mismatch for user '{token_data.username}': Token has '{token_data.role}', DB has '{user.role.value}'.")
+        raise credentials_exception
+
+    logger.info(f"User '{user.username}' successfully authenticated. Role: {user.role.value}") # Use .value for logging Enum
     return user
 
 
@@ -101,38 +113,50 @@ def require_roles(roles: list[str]):
     # This is the actual dependency function that require_roles returns.
     async def role_checker(current_user: UserInDB = Depends(get_current_user)):
 
+        # Convert required roles strings to Role Enum values for comparison
+        # This handles cases where roles might be passed as simple strings (e.g., ["admin"])
+        # but are compared against the Enum type of current_user.role
+        try:
+            required_role_enums = [Role(r) for r in roles]
+        except ValueError:
+            logger.error(f"Invalid role string provided to require_roles: {roles}. This indicates a code error.")
+            raise HTTPException(
+                status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+                detail="Server configuration error with roles."
+            )
+        
         # It checks if the current_user's role (from the UserInDB object
         # fetched from the DB) is present in the roles list passed to
         # the factory. If the user's role is not among the allowed roles,
         # it raises a 403 Forbidden HTTP exception.
-        if current_user.role not in roles:
-            logger.warning(f"User '{current_user.username}' (Role: {current_user.role}) attempted unauthorized access to roles: {', '.join(roles)}.")
+        if current_user.role not in required_role_enums:
+            logger.warning(f"User '{current_user.username}' (Role: {current_user.role.value}) attempted unauthorized access to roles: {', '.join(roles)}.")
             raise HTTPException(
                 status_code=status.HTTP_403_FORBIDDEN,
                 detail=f"Not enough permissions. Required roles: {', '.join(roles)}",
             )
-        logger.debug(f"User '{current_user.username}' has required role(s): {current_user.role} in {', '.join(roles)}") 
+        logger.debug(f"User '{current_user.username}' has required role(s): {current_user.role.value} in {', '.join(roles)}") 
         return current_user
     return role_checker
 
 # These three async def functions are FastAPI dependencies that provide a convenient way to
 # enforce role-based access control (RBAC) on your API endpoints.
 async def get_current_admin_user(
-    current_user: UserInDB = Depends(require_roles(["admin"]))
+    current_user: UserInDB = Depends(require_roles([Role.ADMIN.value])) # CORRECTED: Use Role Enum .value
 ):
     logger.debug(f"Current user '{current_user.username}' is an admin.") 
     return current_user
 
 # To ensure only a doctor OR an admin user can access the endpoint.
 async def get_current_doctor_user(
-    current_user: UserInDB = Depends(require_roles(["doctor", "admin"]))
+    current_user: UserInDB = Depends(require_roles([Role.DOCTOR.value, Role.ADMIN.value])) # CORRECTED: Use Role Enum .value
 ):
     logger.debug(f"Current user '{current_user.username}' is a doctor or admin.") 
     return current_user
 
-# To ensure only a testCenter OR an admin user can access the endpoint.
+# To ensure only a testcenter OR an admin user can access the endpoint.
 async def get_current_testcenter_user(
-    current_user: UserInDB = Depends(require_roles(["testCenter", "admin"]))
+    current_user: UserInDB = Depends(require_roles([Role.TESTCENTER.value, Role.ADMIN.value])) # CORRECTED: "testCenter" -> Role.TESTCENTER.value
 ):
     logger.debug(f"Current user '{current_user.username}' is a test center user or admin.") 
     return current_user

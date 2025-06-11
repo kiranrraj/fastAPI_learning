@@ -17,7 +17,7 @@ class DoctorDataItem(AppBaseModel):
     diagnosis: str
     medication: str
 
-class TestCenterDataItem(AppBaseModel):
+class TestcenterDataItem(AppBaseModel):
     id: int
     test_type: str
     results: str

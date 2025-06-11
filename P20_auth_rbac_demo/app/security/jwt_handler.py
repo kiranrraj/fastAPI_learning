@@ -6,7 +6,7 @@ from typing import Optional
 from jose import JWTError, jwt
 from app.config import settings
 from app.models.token import TokenData
-from app.logger import get_logger 
+from app.utils.logger import get_logger
 
 logger = get_logger(__name__)
 
@@ -33,7 +33,7 @@ def create_access_token(data: dict, expires_delta: Optional[timedelta] = None) -
     # JSON Web Token (JWT) is created and signed. take a set of data, a
     # secret key, and an algorithm, and then combine them to produce a
     # compact, cryptographically signed, URL-safe JSON Web Token string.
-    try: # NEW: Add try-except for JWT encoding errors
+    try: 
         encoded_jwt = jwt.encode(
             to_encode, # Dictionary that represents the data you want to embed within the JWT.
             settings.JWT_SECRET_KEY.get_secret_value(),  # secret key used to sign the token
