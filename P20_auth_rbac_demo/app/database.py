@@ -2,36 +2,47 @@
 
 from motor.motor_asyncio import AsyncIOMotorClient
 from app.config import settings
-import logging
+from app.logger import get_logger 
 
-logging.basicConfig(
-    level=logging.INFO, 
-    format='%(asctime)s - %(levelname)s - %(message)s'
-)
-logger = logging.getLogger("appLogger")
+logger = get_logger(__name__)
 
-client: AsyncIOMotorClient = None
-database: str = None
+mongo_client: AsyncIOMotorClient = None
+mongo_db: None = None 
 
 async def connect_to_mongo():
-    global client, database
-    try:
-        client = AsyncIOMotorClient(settings.MONGO_DB_URL)
-        database = client[settings.MONGO_DB_NAME]
-        users_collection = database["users"]
 
+    global mongo_client, mongo_db
+    try:
+        mongo_client = AsyncIOMotorClient(
+            settings.MONGO_DB_URL,
+            serverSelectionTimeoutMS=5000 
+        )
+
+        await mongo_client.admin.command('ping')
+        mongo_db = mongo_client[settings.MONGO_DB_NAME]
+        logger.info("Successfully connected to MongoDB!")
+
+        users_collection = mongo_db["users"]
         try:
             await users_collection.create_index("username", unique=True)
             logger.info("Ensured unique index on 'username' in 'users' collection.")
         except Exception as e:
-            logger.warning(f"Could not create unique index on 'username': {e}. It might already exist.")
+            logger.warning(f"Could not create unique index on 'username' in 'users' collection: {e}. It might already exist.", exc_info=False) # exc_info=False as this is often expected
 
+        await _initialize_collections()
 
-            # create sample data collections and add some initial data if they don't exist
-            await _initialize_collections()
     except Exception as e:
-        logger.error(f"Failed to connect to MongoDB: {e}")
+        logger.critical(f"Failed to connect or initialize MongoDB at {settings.MONGO_DB_URL}: {e}", exc_info=True)
         raise # Re-raise to prevent app from starting if DB connection fails
+
+async def close_mongo_connection():
+
+    global mongo_client
+    if mongo_client:
+        mongo_client.close()
+        logger.info("MongoDB connection closed.")
+    else:
+        logger.warning("Attempted to close MongoDB connection but client was not initialized.")
 
 async def _initialize_collections():
     collections_to_init = {
@@ -50,19 +61,21 @@ async def _initialize_collections():
     }
 
     for col_name, sample_data in collections_to_init.items():
-        collection = database[col_name]
-        count = await collection.count_documents({})
-        if count == 0:
-            await collection.insert_many(sample_data)
-            logger.info(f"Initialized '{col_name}' collection with sample data.")
-        else:
-            logger.info(f"Collection '{col_name}' already contains data. Skipping initialization.")
+        try:
+            collection = mongo_db[col_name]
+            count = await collection.count_documents({})
+            if count == 0:
+                await collection.insert_many(sample_data)
+                logger.info(f"Initialized '{col_name}' collection with sample data ({len(sample_data)} documents).")
+            else:
+                logger.info(f"Collection '{col_name}' already contains {count} documents. Skipping initialization.")
+        except Exception as e:
+            logger.error(f"Error initializing collection '{col_name}': {e}", exc_info=True)
 
 # Dependency to inject the database object into routes
-# The get_database() dependency ensures that any route 
-# or other dependency that needs to interact with MongoDB 
-# receives a valid, already connected motor database instance
 async def get_database():
-    if database is None:
-        raise ConnectionError("MongoDB not connected. Ensure connect_to_mongo() runs on startup.")
-    return database
+
+    if mongo_db is None:
+        logger.critical("MongoDB database client is not initialized. Ensure connect_to_mongo() runs on application startup.")
+        raise ConnectionError("MongoDB not connected. Application startup failed or database connection lost.")
+    return mongo_db
