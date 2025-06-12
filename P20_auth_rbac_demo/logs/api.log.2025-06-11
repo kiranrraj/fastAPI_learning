@@ -1,0 +1,68 @@
+2025-06-11 21:51:53 - INFO - root - Logging configured. Logs will be written to: logs\api.log
+2025-06-11 21:51:53 - INFO - app.main - Application 'FastAPI Auth Demo' starting up...
+2025-06-11 21:51:53 - INFO - app.database - Successfully connected to MongoDB!
+2025-06-11 21:51:53 - INFO - app.database - Ensured unique index on 'username' in 'users' collection.
+2025-06-11 21:51:53 - INFO - app.database - Initialized 'admin_data' collection with sample data (2 documents).
+2025-06-11 21:51:53 - INFO - app.database - Initialized 'doctor_data' collection with sample data (2 documents).
+2025-06-11 21:51:53 - INFO - app.database - Initialized 'testcenter_data' collection with sample data (2 documents).
+2025-06-11 21:51:53 - INFO - app.main - Database connection established.
+2025-06-11 21:52:07 - INFO - app.database - MongoDB connection closed.
+2025-06-11 21:52:07 - INFO - app.main - Database connection closed.
+2025-06-11 21:52:07 - INFO - app.main - Application 'FastAPI Auth Demo' shutting down.
+2025-06-11 21:52:29 - INFO - root - Logging configured. Logs will be written to: logs\api.log
+2025-06-11 21:52:29 - INFO - app.main - Application 'FastAPI Auth Demo' starting up...
+2025-06-11 21:52:29 - INFO - app.database - Successfully connected to MongoDB!
+2025-06-11 21:52:29 - INFO - app.database - Ensured unique index on 'username' in 'users' collection.
+2025-06-11 21:52:29 - INFO - app.database - Collection 'admin_data' already contains 2 documents. Skipping initialization.
+2025-06-11 21:52:29 - INFO - app.database - Collection 'doctor_data' already contains 2 documents. Skipping initialization.
+2025-06-11 21:52:29 - INFO - app.database - Collection 'testcenter_data' already contains 2 documents. Skipping initialization.
+2025-06-11 21:52:29 - INFO - app.main - Database connection established.
+2025-06-11 21:52:42 - INFO - app.database - MongoDB connection closed.
+2025-06-11 21:52:42 - INFO - app.main - Database connection closed.
+2025-06-11 21:52:42 - INFO - app.main - Application 'FastAPI Auth Demo' shutting down.
+2025-06-11 21:52:51 - INFO - root - Logging configured. Logs will be written to: logs\api.log
+2025-06-11 21:52:51 - INFO - app.main - Application 'FastAPI Auth Demo' starting up...
+2025-06-11 21:52:51 - INFO - app.database - Successfully connected to MongoDB!
+2025-06-11 21:52:51 - INFO - app.database - Ensured unique index on 'username' in 'users' collection.
+2025-06-11 21:52:51 - INFO - app.database - Collection 'admin_data' already contains 2 documents. Skipping initialization.
+2025-06-11 21:52:51 - INFO - app.database - Collection 'doctor_data' already contains 2 documents. Skipping initialization.
+2025-06-11 21:52:51 - INFO - app.database - Collection 'testcenter_data' already contains 2 documents. Skipping initialization.
+2025-06-11 21:52:51 - INFO - app.main - Database connection established.
+2025-06-11 21:52:54 - INFO - app.main - Root endpoint accessed.
+2025-06-11 21:54:35 - INFO - app.database - MongoDB connection closed.
+2025-06-11 21:54:35 - INFO - app.main - Database connection closed.
+2025-06-11 21:54:35 - INFO - app.main - Application 'FastAPI Auth Demo' shutting down.
+2025-06-11 21:54:36 - INFO - root - Logging configured. Logs will be written to: logs\api.log
+2025-06-11 21:54:36 - INFO - app.main - Application 'FastAPI Auth Demo' starting up...
+2025-06-11 21:54:36 - INFO - app.database - Successfully connected to MongoDB!
+2025-06-11 21:54:36 - INFO - app.database - Ensured unique index on 'username' in 'users' collection.
+2025-06-11 21:54:36 - INFO - app.database - Collection 'admin_data' already contains 2 documents. Skipping initialization.
+2025-06-11 21:54:36 - INFO - app.database - Collection 'doctor_data' already contains 2 documents. Skipping initialization.
+2025-06-11 21:54:36 - INFO - app.database - Collection 'testcenter_data' already contains 2 documents. Skipping initialization.
+2025-06-11 21:54:36 - INFO - app.main - Database connection established.
+2025-06-11 21:54:58 - INFO - app.services.doctor_services - DoctorService initialized for collection: doctor_data
+2025-06-11 21:55:15 - INFO - app.services.admin_services - AdminService initialized for collection: admin_data
+2025-06-11 21:56:22 - INFO - app.database - MongoDB connection closed.
+2025-06-11 21:56:22 - INFO - app.main - Database connection closed.
+2025-06-11 21:56:22 - INFO - app.main - Application 'FastAPI Auth Demo' shutting down.
+2025-06-11 21:56:24 - INFO - root - Logging configured. Logs will be written to: logs\api.log
+2025-06-11 21:56:24 - INFO - app.main - Starting FastAPI Auth Demo in development
+2025-06-11 21:56:24 - INFO - app.database - Successfully connected to MongoDB!
+2025-06-11 21:56:24 - INFO - app.database - Ensured unique index on 'username' in 'users' collection.
+2025-06-11 21:56:24 - INFO - app.database - Collection 'admin_data' already contains 2 documents. Skipping initialization.
+2025-06-11 21:56:24 - INFO - app.database - Collection 'doctor_data' already contains 2 documents. Skipping initialization.
+2025-06-11 21:56:24 - INFO - app.database - Collection 'testcenter_data' already contains 2 documents. Skipping initialization.
+2025-06-11 21:56:24 - INFO - app.main - Connected to MongoDB
+2025-06-11 21:56:34 - INFO - app.services.admin_services - AdminService initialized for collection: admin_data
+2025-06-11 21:56:40 - INFO - app.services.doctor_services - DoctorService initialized for collection: doctor_data
+2025-06-11 21:56:51 - INFO - app.database - MongoDB connection closed.
+2025-06-11 21:56:51 - INFO - app.main - Closed MongoDB connection
+2025-06-11 21:56:51 - INFO - app.main - Shutting down FastAPI Auth Demo
+2025-06-11 21:56:51 - INFO - root - Logging configured. Logs will be written to: logs\api.log
+2025-06-11 21:56:51 - INFO - app.main - Application 'FastAPI Auth Demo' starting up...
+2025-06-11 21:56:51 - INFO - app.database - Successfully connected to MongoDB!
+2025-06-11 21:56:51 - INFO - app.database - Ensured unique index on 'username' in 'users' collection.
+2025-06-11 21:56:51 - INFO - app.database - Collection 'admin_data' already contains 2 documents. Skipping initialization.
+2025-06-11 21:56:51 - INFO - app.database - Collection 'doctor_data' already contains 2 documents. Skipping initialization.
+2025-06-11 21:56:51 - INFO - app.database - Collection 'testcenter_data' already contains 2 documents. Skipping initialization.
+2025-06-11 21:56:51 - INFO - app.main - Database connection established.
