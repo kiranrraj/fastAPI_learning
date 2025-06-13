@@ -3,7 +3,7 @@ from pydantic import BaseModel, ConfigDict, Field
 from enum import Enum
 from uuid import UUID
 from datetime import datetime
-from typing import Optional, Union 
+from typing import Optional
 
 
 class Gender(str, Enum):
