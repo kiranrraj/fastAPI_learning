@@ -1,0 +1,1002 @@
+[
+  {
+    "id": "606f95a7-4f98-49b9-926b-996e852a2ddf",
+    "value": 152.96,
+    "unit": "mmol/L",
+    "investigation_id": "133217b3-5854-4aae-bc49-18a510a86e13",
+    "patient_id": "8f892794-0138-49ff-b833-617bfe2999f3",
+    "staff_id": "3f14a0bf-32cd-4f73-9a10-b8614b4db920",
+    "branch_id": "245f0cb7-74e3-4763-a634-8a6ae09a025a",
+    "recorded_at": "2024-08-31T18:20:03.877533"
+  },
+  {
+    "id": "05e12f1c-8370-4bd6-bdaf-a133732341e8",
+    "value": "Positive",
+    "unit": "mmol/L",
+    "investigation_id": "054530fe-4f54-4d26-b629-dc5b820802d5",
+    "patient_id": "5144dd61-9e94-464d-910e-47cc9f9772b7",
+    "staff_id": "e5269835-dd9c-485c-992c-b17e06f872d9",
+    "branch_id": "845c8853-7ba9-471b-b623-1c50593701a7",
+    "recorded_at": "2025-01-17T18:20:03.877533"
+  },
+  {
+    "id": "b19a4662-f460-46c6-a3f2-04edf615f9b0",
+    "value": 134.31,
+    "unit": "mmol/L",
+    "investigation_id": "aa264100-a7c1-4f1b-9e64-c42aa768ab0c",
+    "patient_id": "2459e85d-6c8b-4a53-a959-883f1b0b5a49",
+    "staff_id": "a0199d0c-f936-45bd-9cc1-223a687e3afd",
+    "branch_id": "d808bdd2-232b-4fd6-8721-246d8e417c6b",
+    "recorded_at": "2024-07-02T18:20:03.877533"
+  },
+  {
+    "id": "b251c23f-7d6f-4e5a-bd5c-a596f1be6692",
+    "value": 0.74,
+    "unit": "mmol/L",
+    "investigation_id": "0d174db4-8740-4c46-ab20-927997910ea8",
+    "patient_id": "566f2f96-60c0-4da9-a0f6-8fb0698c9154",
+    "staff_id": "73d92457-b3fe-4aeb-ba65-7860fe56b374",
+    "branch_id": "780ca8e2-13a2-4605-97e6-a8149450dde5",
+    "recorded_at": "2024-11-28T18:20:03.877533"
+  },
+  {
+    "id": "05f5f42d-0b0b-4a05-863e-dd6bcbe12ea2",
+    "value": 78.09,
+    "unit": "mmol/L",
+    "investigation_id": "7eab90f5-0a02-4936-b5ff-04d64f6217a4",
+    "patient_id": "16e114cc-7500-4cc5-b86c-5868ea55d7cc",
+    "staff_id": "33341cfd-2f51-4589-8620-034cdc1e43f2",
+    "branch_id": "fc8fa26c-3fc3-449a-a6b3-eb7a449aba2c",
+    "recorded_at": "2025-05-11T18:20:03.877533"
+  },
+  {
+    "id": "8f73d720-5ed0-4793-ae11-3bba9823434a",
+    "value": 117.9,
+    "unit": "IU/L",
+    "investigation_id": "1d6b66fe-f62b-4008-b8fd-29ce68524399",
+    "patient_id": "566f2f96-60c0-4da9-a0f6-8fb0698c9154",
+    "staff_id": "cd8fdc68-01eb-4bcb-9352-7b49cdd8f75b",
+    "branch_id": "82cee154-8b15-487f-b95b-271862f34ce0",
+    "recorded_at": "2024-08-10T18:20:03.877533"
+  },
+  {
+    "id": "2a08cf47-e718-466d-b799-1ad85f07e97a",
+    "value": 111.07,
+    "unit": "mmol/L",
+    "investigation_id": "13a3e66c-abdc-478b-9c1e-7e34c0be388d",
+    "patient_id": "0d2da5a9-9a2d-43d2-bf93-e09e706dcd6c",
+    "staff_id": "b8fe855f-a696-4731-b33c-efdcfb00fc7c",
+    "branch_id": "ce5b9273-aae4-40af-9899-0b30cc0f2f89",
+    "recorded_at": "2025-05-11T18:20:03.877533"
+  },
+  {
+    "id": "76a501fb-7464-4b9d-b5c6-b5de54ec3110",
+    "value": "Negative",
+    "unit": "g/L",
+    "investigation_id": "dfd82ab4-b209-490e-8aa3-d8c6caa671d7",
+    "patient_id": "61739012-b237-43b3-bd8e-9a12b7556b87",
+    "staff_id": "b8fe855f-a696-4731-b33c-efdcfb00fc7c",
+    "branch_id": "fc8fa26c-3fc3-449a-a6b3-eb7a449aba2c",
+    "recorded_at": "2024-09-19T18:20:03.877533"
+  },
+  {
+    "id": "de5b339e-1dba-4dbb-97c5-d0d12213d15d",
+    "value": 39.94,
+    "unit": "mmol/L",
+    "investigation_id": "087a07e3-4b75-4194-a586-edb6eab4a502",
+    "patient_id": "327efe5a-6d7f-42f1-9271-de2239e7ffc7",
+    "staff_id": "0d24b209-5871-4788-b22c-6f9cbeab01c3",
+    "branch_id": "0f9c01aa-79aa-4c70-b9ab-ab3300ede8b0",
+    "recorded_at": "2024-07-29T18:20:03.877533"
+  },
+  {
+    "id": "4bb95e8a-6766-4724-a336-b9c3327efa67",
+    "value": 138.71,
+    "unit": "cells/mcL",
+    "investigation_id": "80457a94-d353-4a7e-bd12-e873cac8a7c5",
+    "patient_id": "9673047e-b8f5-484f-af45-bf1e0732f9d2",
+    "staff_id": "1adb4849-b996-425e-95f4-8836e9b1ffbc",
+    "branch_id": "dc51b806-5b82-4791-9f6a-720a1d55cea3",
+    "recorded_at": "2025-03-02T18:20:03.877533"
+  },
+  {
+    "id": "62893c74-bde1-4fd8-96cc-9062713864e8",
+    "value": 165.72,
+    "unit": "cells/mcL",
+    "investigation_id": "fa1f71ee-032c-43c5-851c-8593875e2206",
+    "patient_id": "3ad41b12-6ce6-4545-9466-e1d61dfe4726",
+    "staff_id": "9dfa7ba4-3c37-40ed-a5d3-89874c6f2665",
+    "branch_id": "0c852be4-494e-4636-aecc-a559a7e9b736",
+    "recorded_at": "2024-07-09T18:20:03.877533"
+  },
+  {
+    "id": "bfb38d5b-ae7f-43a2-8930-2df7ce3bf2da",
+    "value": 187.78,
+    "unit": "cells/mcL",
+    "investigation_id": "ec5baa6e-a09e-4c6b-9050-c98caa094bba",
+    "patient_id": "56b92972-8dbb-49ab-892b-c557e0c37006",
+    "staff_id": "9e78425f-7380-4dd7-8634-5f0f274b3410",
+    "branch_id": "60163865-2e73-4d64-9a73-d3fd5af19deb",
+    "recorded_at": "2024-09-27T18:20:03.877533"
+  },
+  {
+    "id": "5e26cbf4-cae4-4da0-bc2a-5675ba182bea",
+    "value": 176.7,
+    "unit": "mg/dL",
+    "investigation_id": "84eb6570-420b-4bdf-8e92-b16a4933bc4a",
+    "patient_id": "66e80f07-166d-492e-9c6c-5aecc75c8945",
+    "staff_id": "c78d4d04-1f1c-415c-ad61-d590b1c9a7c0",
+    "branch_id": "a674d012-d701-43ae-bcf9-1db1efe860aa",
+    "recorded_at": "2025-03-30T18:20:03.877533"
+  },
+  {
+    "id": "32e758d7-dcd7-4c26-af16-ad87fc9be9af",
+    "value": 62.95,
+    "unit": "mmol/L",
+    "investigation_id": "57def83a-b727-415e-9082-e76c880e189a",
+    "patient_id": "736aec81-446f-4e4e-b848-d76d70ff7992",
+    "staff_id": "f563e539-bf79-45cc-ae2d-25b34496d8e8",
+    "branch_id": "7c5515f3-1cb4-4046-af7d-2c6891dbb98d",
+    "recorded_at": "2025-05-03T18:20:03.877533"
+  },
+  {
+    "id": "f27f0516-76da-4805-a3c9-625866aa2fa5",
+    "value": 45.19,
+    "unit": "g/L",
+    "investigation_id": "74650c43-5dfd-4f2e-a7b7-48d8d434bb2b",
+    "patient_id": "e5abe03a-7176-49ec-99df-4cfcbdf8511a",
+    "staff_id": "c2e1061e-5483-439a-86fa-f284d8ac8939",
+    "branch_id": "7b893c61-7d61-4f6c-a90b-f0313af1baee",
+    "recorded_at": "2025-05-23T18:20:03.877533"
+  },
+  {
+    "id": "55ce6aff-55b9-412e-8903-64dd8ee9d267",
+    "value": 68.7,
+    "unit": "g/L",
+    "investigation_id": "d61fcdd8-db6d-481e-a317-8e8629794df2",
+    "patient_id": "9612fbda-7a47-4357-b482-45b0bbd63abb",
+    "staff_id": "7402c587-1670-48e9-9a96-538f3f55232a",
+    "branch_id": "d9a30787-ee91-48f5-961c-80012a47e4a3",
+    "recorded_at": "2025-06-11T18:20:03.877533"
+  },
+  {
+    "id": "aa77fb55-0286-4e05-83f7-aef98e363baa",
+    "value": 14.7,
+    "unit": "g/L",
+    "investigation_id": "b04f1051-3e47-4b84-8395-59942d3d8a1c",
+    "patient_id": "75bbe96a-bdb5-4670-8ddd-9c736d37e982",
+    "staff_id": "81a3141c-9f6a-4563-924b-dcd0de2f58a0",
+    "branch_id": "a674d012-d701-43ae-bcf9-1db1efe860aa",
+    "recorded_at": "2025-02-22T18:20:03.877533"
+  },
+  {
+    "id": "2d97e56c-8018-42f8-8da4-fc3ff7b49f73",
+    "value": 173.15,
+    "unit": "mg/dL",
+    "investigation_id": "dc28a022-c26e-4f83-ae14-1e26f3053cd2",
+    "patient_id": "82ea1c8e-8454-4c38-9ba8-bf3e76ef3180",
+    "staff_id": "34f58713-963f-4190-92b8-867c71dd8d83",
+    "branch_id": "d3969d4a-5ba3-4ee7-bace-61dc75dfc824",
+    "recorded_at": "2025-06-12T18:20:03.877533"
+  },
+  {
+    "id": "8ea643c1-f16b-4b65-9dc3-02192734a801",
+    "value": 147.82,
+    "unit": "mmol/L",
+    "investigation_id": "9c381665-c474-4ea8-9d5d-edebe98e577d",
+    "patient_id": "a655bc27-d532-4b29-9671-544e54fd10d5",
+    "staff_id": "9f1e0d8b-21af-488a-baee-e66c0b0e5e11",
+    "branch_id": "41476585-3a67-4f33-a6b5-eee404261d73",
+    "recorded_at": "2025-06-05T18:20:03.877533"
+  },
+  {
+    "id": "420d4b61-dc08-4493-8e5c-7243cf611004",
+    "value": "Positive",
+    "unit": "g/L",
+    "investigation_id": "61b23ed2-7bb5-4a47-9ac1-4af50947634c",
+    "patient_id": "720ab408-c3aa-4d4e-b429-4d8c5627af9b",
+    "staff_id": "6602d5e2-c2c5-4c36-8e9a-9240c49db698",
+    "branch_id": "66c886c3-5fcf-4b87-bbf2-9a855118c2fa",
+    "recorded_at": "2024-07-05T18:20:03.877533"
+  },
+  {
+    "id": "a27dfe7e-bc73-4e7d-b55b-682670fb7637",
+    "value": 57.59,
+    "unit": "IU/L",
+    "investigation_id": "776f391f-2bb7-4e37-bff0-5ffc0cad1aab",
+    "patient_id": "2459e85d-6c8b-4a53-a959-883f1b0b5a49",
+    "staff_id": "fcfce7f0-1635-4ea8-a016-aee52a83c701",
+    "branch_id": "a59365d9-11ab-4329-b4d9-dd13c72151b4",
+    "recorded_at": "2025-02-07T18:20:03.877533"
+  },
+  {
+    "id": "6cd74d8d-085a-4221-93a7-b11763461efd",
+    "value": 66.32,
+    "unit": "mmol/L",
+    "investigation_id": "af3d6c5f-3142-422f-afe0-ae2fe203968f",
+    "patient_id": "54b18d7b-8fad-429b-a69b-8fe5a7d1a4d1",
+    "staff_id": "9f1e0d8b-21af-488a-baee-e66c0b0e5e11",
+    "branch_id": "66c886c3-5fcf-4b87-bbf2-9a855118c2fa",
+    "recorded_at": "2024-12-23T18:20:03.877533"
+  },
+  {
+    "id": "22861e4e-7655-4e92-98d5-a97ddfa9cb4b",
+    "value": 99.22,
+    "unit": "mg/dL",
+    "investigation_id": "8773f680-b056-48ee-b758-f307325869dc",
+    "patient_id": "31983d0e-3892-458f-a498-7b5a0b6057b8",
+    "staff_id": "72a2a031-a4b2-45ed-ac46-16bace72a041",
+    "branch_id": "b5807c16-f78c-414d-92f2-fde092097304",
+    "recorded_at": "2024-09-10T18:20:03.877533"
+  },
+  {
+    "id": "89ce9c7e-72b6-4028-9962-d6061d76e0ba",
+    "value": "Negative",
+    "unit": "mg/dL",
+    "investigation_id": "bf6a593d-82eb-4ebe-810a-b28514b66913",
+    "patient_id": "f29881d2-424a-4b62-97ac-8e3ee0151d0e",
+    "staff_id": "05cf0d2e-56a5-497e-ba01-bb6df9006271",
+    "branch_id": "c3501ba5-18cb-430e-a2f0-f9d4abef646e",
+    "recorded_at": "2025-02-08T18:20:03.877533"
+  },
+  {
+    "id": "74a1b131-7a70-4cad-8d62-4d07756e1d72",
+    "value": 28.67,
+    "unit": "g/L",
+    "investigation_id": "1af6b077-fb8c-40a2-bae2-5d30f7b2ab8a",
+    "patient_id": "8a95d751-b0b0-404a-ab13-af3043cd4bd1",
+    "staff_id": "d16eb833-0e97-4eaa-b021-633af027b545",
+    "branch_id": "259a0d2a-bc2d-47b2-acec-5544a189e122",
+    "recorded_at": "2024-12-19T18:20:03.877533"
+  },
+  {
+    "id": "814a637a-08bc-48ff-a92a-659d03fcd8ec",
+    "value": 1.09,
+    "unit": "g/L",
+    "investigation_id": "253c971d-8e6d-4df5-aa8c-cc50606eecd7",
+    "patient_id": "82ea1c8e-8454-4c38-9ba8-bf3e76ef3180",
+    "staff_id": "7c4f740c-9e6a-4a7a-86ca-a29ce5ca9915",
+    "branch_id": "cef7ae07-a18d-4dd0-b8d4-dcd2f38d123b",
+    "recorded_at": "2025-02-01T18:20:03.877533"
+  },
+  {
+    "id": "c4519d00-3ecc-4cc9-bfc7-f28fbed0fc1f",
+    "value": 83.26,
+    "unit": "mmol/L",
+    "investigation_id": "a5dad69e-251a-4da7-b468-b11f2fb5d116",
+    "patient_id": "566f2f96-60c0-4da9-a0f6-8fb0698c9154",
+    "staff_id": "3fa7a8b4-ef3f-46d0-aeae-f68c9233698b",
+    "branch_id": "44dfdf1a-5217-4c7e-8a8c-bef62b212a23",
+    "recorded_at": "2025-01-21T18:20:03.877533"
+  },
+  {
+    "id": "4c1a5a50-a9d8-4c11-9741-ba839fc1b9a3",
+    "value": "Positive",
+    "unit": "mmol/L",
+    "investigation_id": "7eab90f5-0a02-4936-b5ff-04d64f6217a4",
+    "patient_id": "ed5800e1-abd2-482b-8b9f-57b4b49bf7cd",
+    "staff_id": "09fc91df-1f3e-4c90-95a6-54909aa228f7",
+    "branch_id": "bfcbce83-6cc9-470f-8142-58ca010f7089",
+    "recorded_at": "2024-07-13T18:20:03.877533"
+  },
+  {
+    "id": "ea4a9165-ad90-4fe1-b996-cc3bc8679b54",
+    "value": 134.61,
+    "unit": "mg/dL",
+    "investigation_id": "bf6a593d-82eb-4ebe-810a-b28514b66913",
+    "patient_id": "efe47517-4a5d-4d9e-8060-d0899a7aceb3",
+    "staff_id": "9dfa7ba4-3c37-40ed-a5d3-89874c6f2665",
+    "branch_id": "dc51b806-5b82-4791-9f6a-720a1d55cea3",
+    "recorded_at": "2025-05-18T18:20:03.877533"
+  },
+  {
+    "id": "d17e52a3-5ee6-4d43-b9d3-a812272458f9",
+    "value": 178.39,
+    "unit": "cells/mcL",
+    "investigation_id": "65bee01c-1872-4545-b3ea-2adcff8c4c79",
+    "patient_id": "82ea1c8e-8454-4c38-9ba8-bf3e76ef3180",
+    "staff_id": "7ffde1a5-1768-4db5-a2c9-20a58c3e8ee6",
+    "branch_id": "9130755c-3d26-418b-9f2e-a4ff6669e292",
+    "recorded_at": "2024-11-29T18:20:03.877533"
+  },
+  {
+    "id": "063eb1f2-0c92-4f99-9bdb-4093462eb060",
+    "value": 139.63,
+    "unit": "IU/L",
+    "investigation_id": "d8f980fb-0eda-4466-a246-11a2015e75a4",
+    "patient_id": "8ace242f-8e3b-4561-a03a-c7af3f570fbd",
+    "staff_id": "c8fe5555-d7c9-40d0-ae84-3b4444e64495",
+    "branch_id": "350d8492-f720-4682-9c41-b6f1c9cf9956",
+    "recorded_at": "2024-07-19T18:20:03.877533"
+  },
+  {
+    "id": "e08f3f17-4c57-43a9-bbe2-4678fb8ea828",
+    "value": 108.66,
+    "unit": "IU/L",
+    "investigation_id": "776f391f-2bb7-4e37-bff0-5ffc0cad1aab",
+    "patient_id": "59a32da2-3602-4013-bc94-be46180c30a6",
+    "staff_id": "91c22bc7-bc8e-45d7-9996-f9428119835a",
+    "branch_id": "6648f9f1-46f4-45a6-a3d6-81a3df760533",
+    "recorded_at": "2025-06-01T18:20:03.877533"
+  },
+  {
+    "id": "61a4a973-3046-4a88-8e5d-1d877561bd5c",
+    "value": 58.55,
+    "unit": "mmol/L",
+    "investigation_id": "054530fe-4f54-4d26-b629-dc5b820802d5",
+    "patient_id": "ed5800e1-abd2-482b-8b9f-57b4b49bf7cd",
+    "staff_id": "c45e787d-fb9a-41fe-a1cf-49e76fa78517",
+    "branch_id": "883a45f0-86ed-46bb-aab9-67b8981d2682",
+    "recorded_at": "2025-01-24T18:20:03.877533"
+  },
+  {
+    "id": "8cc04918-91d9-4bca-8830-2dcd730cdc07",
+    "value": 72.85,
+    "unit": "cells/mcL",
+    "investigation_id": "4b47063a-11c2-4251-b886-bb583bc92873",
+    "patient_id": "705a5651-af5f-4810-9848-b2eeb60de489",
+    "staff_id": "3fa7a8b4-ef3f-46d0-aeae-f68c9233698b",
+    "branch_id": "ad6ef822-7d20-405b-80ec-aeda48cad902",
+    "recorded_at": "2025-02-24T18:20:03.877533"
+  },
+  {
+    "id": "8a3c7735-673a-437d-8c11-0cbc1c55225f",
+    "value": 167.51,
+    "unit": "mg/dL",
+    "investigation_id": "edb9fdb9-3eb6-49eb-bdd7-0afea98146d7",
+    "patient_id": "e0de8259-188a-4556-be14-827b59aabadb",
+    "staff_id": "c45e787d-fb9a-41fe-a1cf-49e76fa78517",
+    "branch_id": "a93246e5-4fa3-4311-8bbc-7a4a4f31e2dc",
+    "recorded_at": "2024-09-07T18:20:03.877533"
+  },
+  {
+    "id": "1c980b1a-8c8d-4cf5-beac-66483b2a6ca7",
+    "value": 98.76,
+    "unit": "g/L",
+    "investigation_id": "4f94dfdf-e725-4289-94c8-7e80cacd7683",
+    "patient_id": "2459e85d-6c8b-4a53-a959-883f1b0b5a49",
+    "staff_id": "f563e539-bf79-45cc-ae2d-25b34496d8e8",
+    "branch_id": "259a0d2a-bc2d-47b2-acec-5544a189e122",
+    "recorded_at": "2024-10-11T18:20:03.877533"
+  },
+  {
+    "id": "050c2a04-1c86-49b1-a954-c5def6692767",
+    "value": 23.81,
+    "unit": "IU/L",
+    "investigation_id": "75092041-df22-42f0-89ad-b1c5cb13d77a",
+    "patient_id": "6ca5712a-501d-4dfa-912f-5cdd0f8a5595",
+    "staff_id": "b3e05e46-5bea-4ec7-b9e1-24b4fd25539d",
+    "branch_id": "44553078-1a3b-4d25-aec9-b284125d5b23",
+    "recorded_at": "2024-12-30T18:20:03.877533"
+  },
+  {
+    "id": "f973108a-833c-4c2b-b7f6-8ccdac761a86",
+    "value": 133.38,
+    "unit": "g/L",
+    "investigation_id": "c622c585-3203-4648-ae70-6b2b9e283d98",
+    "patient_id": "9612fbda-7a47-4357-b482-45b0bbd63abb",
+    "staff_id": "682a89c4-ce76-40dd-a402-428458d29f8f",
+    "branch_id": "304a1ed2-235b-45f8-9e34-42b3a835ade1",
+    "recorded_at": "2024-07-01T18:20:03.877533"
+  },
+  {
+    "id": "fc1269f8-bb30-4287-ad27-68641a524b91",
+    "value": 51.34,
+    "unit": "mg/dL",
+    "investigation_id": "d732efb6-7151-47ef-9baa-dfd7d6bdfb7b",
+    "patient_id": "5055c348-0d38-4235-a710-4bf26112acda",
+    "staff_id": "ce0f90c8-4995-4815-a49b-134e75017161",
+    "branch_id": "443d2cd7-1073-4ff5-bd06-4934e7ef6ec8",
+    "recorded_at": "2024-07-18T18:20:03.877533"
+  },
+  {
+    "id": "f19f5b6a-9096-45ec-b20c-69251c48339e",
+    "value": 47.14,
+    "unit": "mmol/L",
+    "investigation_id": "13a3e66c-abdc-478b-9c1e-7e34c0be388d",
+    "patient_id": "c5586551-8644-429c-99d6-886b48f33032",
+    "staff_id": "537781cb-2486-42c2-a6d2-0d8f9d8b7695",
+    "branch_id": "83ba2a57-b6f4-46f2-806e-ae278a118108",
+    "recorded_at": "2024-10-23T18:20:03.877533"
+  },
+  {
+    "id": "be221f37-3e6b-4938-ad9e-e4d07d800133",
+    "value": 50.4,
+    "unit": "mg/dL",
+    "investigation_id": "8773f680-b056-48ee-b758-f307325869dc",
+    "patient_id": "16e114cc-7500-4cc5-b86c-5868ea55d7cc",
+    "staff_id": "c866534c-3dde-41e7-878b-a0a83446388d",
+    "branch_id": "83ba2a57-b6f4-46f2-806e-ae278a118108",
+    "recorded_at": "2024-08-22T18:20:03.877533"
+  },
+  {
+    "id": "0f0887e4-41ec-41bc-b004-449a23ff947e",
+    "value": 172.17,
+    "unit": "g/L",
+    "investigation_id": "74650c43-5dfd-4f2e-a7b7-48d8d434bb2b",
+    "patient_id": "d2837c16-132f-4cb1-967a-820d1792dfbc",
+    "staff_id": "79b723b4-1cd9-4dbc-b38b-b0dddc39db98",
+    "branch_id": "cd256a7d-e8c7-4653-9c98-a3527d5e8937",
+    "recorded_at": "2025-05-21T18:20:03.877533"
+  },
+  {
+    "id": "de98be06-ccda-42da-9dcd-3b817d8d5832",
+    "value": 65.03,
+    "unit": "mg/dL",
+    "investigation_id": "c3bb1f61-979d-4107-9ef1-6f2f60ced54c",
+    "patient_id": "fb95d860-422f-4d65-89ad-888bfd1dca08",
+    "staff_id": "0d24b209-5871-4788-b22c-6f9cbeab01c3",
+    "branch_id": "845c8853-7ba9-471b-b623-1c50593701a7",
+    "recorded_at": "2024-09-12T18:20:03.877533"
+  },
+  {
+    "id": "55f874ac-e6ac-49cb-ac31-3c17ee9a04c0",
+    "value": "Positive",
+    "unit": "cells/mcL",
+    "investigation_id": "de299bdc-e8ac-4fa6-b723-e4be17b68b03",
+    "patient_id": "11da19cd-805e-42f7-a2f7-e4a5a4e1ab8b",
+    "staff_id": "537781cb-2486-42c2-a6d2-0d8f9d8b7695",
+    "branch_id": "51db944e-2644-4c15-8f04-ec6920dfb089",
+    "recorded_at": "2025-01-15T18:20:03.877533"
+  },
+  {
+    "id": "fcab16e3-db98-48c5-9432-8ebfe33c73ee",
+    "value": "Positive",
+    "unit": "cells/mcL",
+    "investigation_id": "31a35be9-6a7e-4686-9ed9-7e5e2e0a70a1",
+    "patient_id": "ceb92338-28ad-4360-a7a8-a6a556448f01",
+    "staff_id": "c2e1061e-5483-439a-86fa-f284d8ac8939",
+    "branch_id": "d808bdd2-232b-4fd6-8721-246d8e417c6b",
+    "recorded_at": "2025-03-20T18:20:03.877533"
+  },
+  {
+    "id": "2e3ce290-80e9-4269-b8af-e167922d6131",
+    "value": 140.88,
+    "unit": "mmol/L",
+    "investigation_id": "a5dad69e-251a-4da7-b468-b11f2fb5d116",
+    "patient_id": "3f76c5fa-23bf-4b80-9faa-e37910303b96",
+    "staff_id": "cbe04e69-aa83-496a-8623-deed86132352",
+    "branch_id": "259a0d2a-bc2d-47b2-acec-5544a189e122",
+    "recorded_at": "2024-12-20T18:20:03.877533"
+  },
+  {
+    "id": "fc3f580b-77c7-491b-82aa-7b79d4c70a54",
+    "value": 106.64,
+    "unit": "cells/mcL",
+    "investigation_id": "bde2864c-5e89-4b83-ae75-a32d9c473c85",
+    "patient_id": "fb95d860-422f-4d65-89ad-888bfd1dca08",
+    "staff_id": "6f837437-5786-4e62-b643-772bf246fb2f",
+    "branch_id": "304a1ed2-235b-45f8-9e34-42b3a835ade1",
+    "recorded_at": "2025-04-16T18:20:03.877533"
+  },
+  {
+    "id": "65128199-8128-403c-9634-f7b6805260ad",
+    "value": 25.38,
+    "unit": "cells/mcL",
+    "investigation_id": "65bee01c-1872-4545-b3ea-2adcff8c4c79",
+    "patient_id": "d2837c16-132f-4cb1-967a-820d1792dfbc",
+    "staff_id": "a0199d0c-f936-45bd-9cc1-223a687e3afd",
+    "branch_id": "d60e5a7d-3f88-47a2-a58f-c98aaf0ab828",
+    "recorded_at": "2024-11-05T18:20:03.877533"
+  },
+  {
+    "id": "797d8eae-898a-4de2-93d1-db0349a0ccf7",
+    "value": 143.1,
+    "unit": "g/L",
+    "investigation_id": "68ccd870-c357-4c21-bb2e-0ea77990e09f",
+    "patient_id": "6a613c43-5999-4b69-a299-04d5f4f5927c",
+    "staff_id": "436897bf-08d8-48b0-b1e4-34ac9eeaff52",
+    "branch_id": "edbd5059-2d9c-4e5d-90cf-aa7a812bb871",
+    "recorded_at": "2024-12-19T18:20:03.877533"
+  },
+  {
+    "id": "7a24c0e3-89fc-4bff-a35e-88da777698d1",
+    "value": "Positive",
+    "unit": "mg/dL",
+    "investigation_id": "edb9fdb9-3eb6-49eb-bdd7-0afea98146d7",
+    "patient_id": "82ea1c8e-8454-4c38-9ba8-bf3e76ef3180",
+    "staff_id": "c7a0a6ec-f562-462c-aa3b-60b659380796",
+    "branch_id": "913780fc-71b5-4fc0-bb42-9c6037bbd684",
+    "recorded_at": "2024-07-05T18:20:03.877533"
+  },
+  {
+    "id": "da7e80fd-63ef-442f-bbaa-f15f86cce576",
+    "value": 158.42,
+    "unit": "g/L",
+    "investigation_id": "61b23ed2-7bb5-4a47-9ac1-4af50947634c",
+    "patient_id": "acd77ec2-9901-4205-b772-5ed7e0b80036",
+    "staff_id": "52c1d630-7b04-4c9b-8015-7bfe90a64dd2",
+    "branch_id": "3a199074-4aae-4763-933a-8a2d3dcdbd82",
+    "recorded_at": "2025-01-20T18:20:03.877533"
+  },
+  {
+    "id": "a0fd482c-e9fb-4e0f-96fb-bbb724eff5a7",
+    "value": 191.77,
+    "unit": "mmol/L",
+    "investigation_id": "50c1ee92-5b03-4294-b3de-d8d7862321a8",
+    "patient_id": "9673047e-b8f5-484f-af45-bf1e0732f9d2",
+    "staff_id": "aff1073a-65ad-464e-bedc-7c3b855cbd66",
+    "branch_id": "44553078-1a3b-4d25-aec9-b284125d5b23",
+    "recorded_at": "2025-02-11T18:20:03.877533"
+  },
+  {
+    "id": "8be7041b-6123-438d-8517-cb75e19848c6",
+    "value": 51.29,
+    "unit": "g/L",
+    "investigation_id": "5e473a88-97fd-4a25-a557-d20b857eac6a",
+    "patient_id": "c0d2ea8c-9e03-4090-a137-109444b12018",
+    "staff_id": "5f521bf6-7b82-4d91-9351-49c437e1a6e7",
+    "branch_id": "60163865-2e73-4d64-9a73-d3fd5af19deb",
+    "recorded_at": "2024-10-31T18:20:03.877533"
+  },
+  {
+    "id": "08c7f4b9-cda6-4c04-851d-c7b2c2e0766f",
+    "value": 180.48,
+    "unit": "mg/dL",
+    "investigation_id": "402c52b2-1234-466e-8c98-e5eaaeb305f1",
+    "patient_id": "9612fbda-7a47-4357-b482-45b0bbd63abb",
+    "staff_id": "4b029aa3-fadf-4608-aa44-d00d9ef99d9c",
+    "branch_id": "64bb086d-9a59-4bcf-a871-ff3b14dca1d1",
+    "recorded_at": "2025-02-16T18:20:03.877533"
+  },
+  {
+    "id": "9611ff5b-ffe6-4d35-8044-d1c511b39922",
+    "value": 85.59,
+    "unit": "mg/dL",
+    "investigation_id": "ab0af0d7-1f2f-4f8b-8513-d64b56df8bed",
+    "patient_id": "392c8c76-5927-4f27-a7a2-cca40323150d",
+    "staff_id": "c7a0a6ec-f562-462c-aa3b-60b659380796",
+    "branch_id": "1ad83cbe-166c-4f57-be93-6407eddfec35",
+    "recorded_at": "2024-12-06T18:20:03.877533"
+  },
+  {
+    "id": "45204134-4758-47a6-a0cd-e10ac58f51ae",
+    "value": 62.86,
+    "unit": "mmol/L",
+    "investigation_id": "13a3e66c-abdc-478b-9c1e-7e34c0be388d",
+    "patient_id": "20435bc2-f628-4f47-95b8-36dcb9f0ead5",
+    "staff_id": "7402c587-1670-48e9-9a96-538f3f55232a",
+    "branch_id": "a93246e5-4fa3-4311-8bbc-7a4a4f31e2dc",
+    "recorded_at": "2024-12-04T18:20:03.877533"
+  },
+  {
+    "id": "0b50118f-c9a1-4780-a99e-c07ced57a5a7",
+    "value": 114.43,
+    "unit": "mmol/L",
+    "investigation_id": "054530fe-4f54-4d26-b629-dc5b820802d5",
+    "patient_id": "6748a9aa-aad0-4643-b901-0e6c8362fd7f",
+    "staff_id": "c8fe5555-d7c9-40d0-ae84-3b4444e64495",
+    "branch_id": "f34ba081-747e-4bcf-93f7-7de6899683d7",
+    "recorded_at": "2024-11-21T18:20:03.877533"
+  },
+  {
+    "id": "67d070fb-fdfc-42eb-a68d-472bdb2f9d18",
+    "value": 119.7,
+    "unit": "mg/dL",
+    "investigation_id": "bb7c699e-7b05-4f64-8c8d-5290a2abb989",
+    "patient_id": "8f87537d-e777-4c2a-b1fb-9c5f97ce5719",
+    "staff_id": "79b723b4-1cd9-4dbc-b38b-b0dddc39db98",
+    "branch_id": "259a0d2a-bc2d-47b2-acec-5544a189e122",
+    "recorded_at": "2025-06-11T18:20:03.877533"
+  },
+  {
+    "id": "c0034495-3741-4dc9-aa4d-6b84cc70e7e7",
+    "value": "Negative",
+    "unit": "mmol/L",
+    "investigation_id": "c2d22b4b-02af-44e7-bb82-7cea356874b5",
+    "patient_id": "6a613c43-5999-4b69-a299-04d5f4f5927c",
+    "staff_id": "0059df70-f42b-44ae-a627-a357118f5a45",
+    "branch_id": "c7ca33f3-0fd2-4003-be96-c479af289087",
+    "recorded_at": "2024-07-04T18:20:03.877533"
+  },
+  {
+    "id": "b81bac3d-ec9b-44d4-a06d-ed274a08a2ae",
+    "value": "Positive",
+    "unit": "mg/dL",
+    "investigation_id": "24fc214b-cab5-44d2-a8c9-89bcfc90ce2e",
+    "patient_id": "654b96d8-bb28-4012-80f6-a9b46446018c",
+    "staff_id": "05cf0d2e-56a5-497e-ba01-bb6df9006271",
+    "branch_id": "ad6ef822-7d20-405b-80ec-aeda48cad902",
+    "recorded_at": "2024-12-19T18:20:03.877533"
+  },
+  {
+    "id": "a7720576-e8c1-4eaf-9359-83262740e65f",
+    "value": 157.7,
+    "unit": "cells/mcL",
+    "investigation_id": "ad810e1d-e463-423d-bfcd-9ec3cadfc009",
+    "patient_id": "c0d2ea8c-9e03-4090-a137-109444b12018",
+    "staff_id": "e3c019fd-2232-43a1-93ac-30f290ab0357",
+    "branch_id": "304a1ed2-235b-45f8-9e34-42b3a835ade1",
+    "recorded_at": "2024-09-16T18:20:03.877533"
+  },
+  {
+    "id": "97726abe-a43d-48b2-ba67-3d52d98024fa",
+    "value": "Positive",
+    "unit": "IU/L",
+    "investigation_id": "776f391f-2bb7-4e37-bff0-5ffc0cad1aab",
+    "patient_id": "998c6a67-0385-4264-b5e1-dadd78962f47",
+    "staff_id": "9dfa7ba4-3c37-40ed-a5d3-89874c6f2665",
+    "branch_id": "d3969d4a-5ba3-4ee7-bace-61dc75dfc824",
+    "recorded_at": "2024-10-19T18:20:03.877533"
+  },
+  {
+    "id": "3cd1914e-1f95-4168-8b97-fdcd64990104",
+    "value": 8.65,
+    "unit": "g/L",
+    "investigation_id": "c44db287-67fb-420c-b393-de8095b784f4",
+    "patient_id": "e627d591-530d-4862-af4a-e66e8808d295",
+    "staff_id": "a229f541-3364-43c6-8221-abecde7518dc",
+    "branch_id": "c9a3f0e7-dd8b-4e68-ad85-29899b7ce6a1",
+    "recorded_at": "2024-09-27T18:20:03.877533"
+  },
+  {
+    "id": "38031d7d-ef87-4c76-b3f9-94c1c6887d16",
+    "value": 187.99,
+    "unit": "cells/mcL",
+    "investigation_id": "de299bdc-e8ac-4fa6-b723-e4be17b68b03",
+    "patient_id": "d2837c16-132f-4cb1-967a-820d1792dfbc",
+    "staff_id": "ac2dc251-8617-4252-b900-e9158c673b1c",
+    "branch_id": "ce5b9273-aae4-40af-9899-0b30cc0f2f89",
+    "recorded_at": "2024-09-08T18:20:03.877533"
+  },
+  {
+    "id": "125df14c-0623-4283-ba98-1afcf3c03355",
+    "value": 72.29,
+    "unit": "mg/dL",
+    "investigation_id": "ab0af0d7-1f2f-4f8b-8513-d64b56df8bed",
+    "patient_id": "890bb185-7c4f-4527-93de-58d0ffc9fe54",
+    "staff_id": "fc7b1e28-b297-4b4d-87ab-2f564f3638d0",
+    "branch_id": "c2c73bde-1c9f-4d36-a11a-174ca99e0a2f",
+    "recorded_at": "2024-08-07T18:20:03.877533"
+  },
+  {
+    "id": "800e8470-f583-4e94-a4ae-678f3a324966",
+    "value": 130.83,
+    "unit": "g/L",
+    "investigation_id": "5e473a88-97fd-4a25-a557-d20b857eac6a",
+    "patient_id": "d244bd70-e8fe-4bcf-b88c-99e2649f9f22",
+    "staff_id": "c7a0a6ec-f562-462c-aa3b-60b659380796",
+    "branch_id": "60163865-2e73-4d64-9a73-d3fd5af19deb",
+    "recorded_at": "2025-03-22T18:20:03.877533"
+  },
+  {
+    "id": "cc5ea33a-5b4e-4e60-a9aa-7e17bae13475",
+    "value": 71.06,
+    "unit": "g/L",
+    "investigation_id": "bd060151-9bdd-4650-b964-5184fdb75a1d",
+    "patient_id": "ceb92338-28ad-4360-a7a8-a6a556448f01",
+    "staff_id": "5f521bf6-7b82-4d91-9351-49c437e1a6e7",
+    "branch_id": "d808bdd2-232b-4fd6-8721-246d8e417c6b",
+    "recorded_at": "2024-08-10T18:20:03.877533"
+  },
+  {
+    "id": "62d0feab-4f1e-4fd0-a8be-96dd45b7c774",
+    "value": 33.54,
+    "unit": "g/L",
+    "investigation_id": "4f94dfdf-e725-4289-94c8-7e80cacd7683",
+    "patient_id": "e0de8259-188a-4556-be14-827b59aabadb",
+    "staff_id": "cd8fdc68-01eb-4bcb-9352-7b49cdd8f75b",
+    "branch_id": "ccead237-6c20-4776-a215-2df1f06e8923",
+    "recorded_at": "2025-02-09T18:20:03.877533"
+  },
+  {
+    "id": "7f9bb442-c14f-47af-9e3a-7e5561a9a277",
+    "value": 181.52,
+    "unit": "g/L",
+    "investigation_id": "49191aff-0965-4713-9822-0c2bd414ce5d",
+    "patient_id": "cbdd3daa-5db5-49ae-b91d-a1c0e9c673bd",
+    "staff_id": "7ffde1a5-1768-4db5-a2c9-20a58c3e8ee6",
+    "branch_id": "aae0c9e8-14dc-4045-81a4-509c8be8fc70",
+    "recorded_at": "2025-02-26T18:20:03.877533"
+  },
+  {
+    "id": "fea37521-3ffd-44c7-8002-d4b30b76d00a",
+    "value": 154.3,
+    "unit": "mmol/L",
+    "investigation_id": "7eab90f5-0a02-4936-b5ff-04d64f6217a4",
+    "patient_id": "80b3a020-4e4c-4477-af24-30db3531012a",
+    "staff_id": "9dfa7ba4-3c37-40ed-a5d3-89874c6f2665",
+    "branch_id": "656c0236-d366-4837-a6a7-4e29019d112c",
+    "recorded_at": "2025-02-01T18:20:03.877533"
+  },
+  {
+    "id": "7a9cabc7-04bf-4eb7-8bdc-d807ace4a56a",
+    "value": 36.52,
+    "unit": "mg/dL",
+    "investigation_id": "bf6a593d-82eb-4ebe-810a-b28514b66913",
+    "patient_id": "66e80f07-166d-492e-9c6c-5aecc75c8945",
+    "staff_id": "fcfce7f0-1635-4ea8-a016-aee52a83c701",
+    "branch_id": "64bb086d-9a59-4bcf-a871-ff3b14dca1d1",
+    "recorded_at": "2025-04-05T18:20:03.877533"
+  },
+  {
+    "id": "3d5ce35a-2e9d-430e-8c9a-cd2026421b01",
+    "value": 16.89,
+    "unit": "mg/dL",
+    "investigation_id": "24fc214b-cab5-44d2-a8c9-89bcfc90ce2e",
+    "patient_id": "deac82a1-e513-4814-a0c3-2e3b35caee51",
+    "staff_id": "189beabb-a362-4ba2-90af-60dee63f50c2",
+    "branch_id": "a93246e5-4fa3-4311-8bbc-7a4a4f31e2dc",
+    "recorded_at": "2024-08-01T18:20:03.877533"
+  },
+  {
+    "id": "27f86086-a81c-4800-9c3d-659009a11db6",
+    "value": 190.23,
+    "unit": "mmol/L",
+    "investigation_id": "6c76d8bf-6494-4e96-be06-d437c68835ca",
+    "patient_id": "71cbf2c9-635f-4cd6-9b00-27f0f6b3b559",
+    "staff_id": "fad4b80e-a28d-4741-bc2b-e661babf9122",
+    "branch_id": "aae0c9e8-14dc-4045-81a4-509c8be8fc70",
+    "recorded_at": "2024-11-05T18:20:03.877533"
+  },
+  {
+    "id": "0ee92d9b-ac02-4f31-a934-7db27770c991",
+    "value": 54.66,
+    "unit": "IU/L",
+    "investigation_id": "3b70e418-0bfe-4c87-bf50-fe350c9c68d5",
+    "patient_id": "327efe5a-6d7f-42f1-9271-de2239e7ffc7",
+    "staff_id": "a4b15f5d-1185-4207-ab7a-ecf93550bf2e",
+    "branch_id": "656c0236-d366-4837-a6a7-4e29019d112c",
+    "recorded_at": "2024-10-04T18:20:03.877533"
+  },
+  {
+    "id": "f6f419d3-7ac5-4fd6-8218-29e483ad3fa1",
+    "value": 162.85,
+    "unit": "mmol/L",
+    "investigation_id": "1a45526d-5166-40e0-9e6f-2c4de85afb79",
+    "patient_id": "d244bd70-e8fe-4bcf-b88c-99e2649f9f22",
+    "staff_id": "81a3141c-9f6a-4563-924b-dcd0de2f58a0",
+    "branch_id": "c7ca33f3-0fd2-4003-be96-c479af289087",
+    "recorded_at": "2025-01-28T18:20:03.877533"
+  },
+  {
+    "id": "a66a135e-0149-412b-b980-5a34ec86dc44",
+    "value": 97.19,
+    "unit": "cells/mcL",
+    "investigation_id": "3628c2e6-54a4-462d-bb27-b9ed600f6030",
+    "patient_id": "8f892794-0138-49ff-b833-617bfe2999f3",
+    "staff_id": "c78d4d04-1f1c-415c-ad61-d590b1c9a7c0",
+    "branch_id": "3a199074-4aae-4763-933a-8a2d3dcdbd82",
+    "recorded_at": "2025-05-06T18:20:03.877533"
+  },
+  {
+    "id": "842c293e-832e-4b60-9356-43c6ce2a77df",
+    "value": 10.56,
+    "unit": "mmol/L",
+    "investigation_id": "e141a25a-8d25-43d2-ac8e-b20a94f6921a",
+    "patient_id": "392c8c76-5927-4f27-a7a2-cca40323150d",
+    "staff_id": "0059df70-f42b-44ae-a627-a357118f5a45",
+    "branch_id": "436e712a-3cb6-4ce2-a29a-45f52d0fad36",
+    "recorded_at": "2025-06-01T18:20:03.877533"
+  },
+  {
+    "id": "aa577da4-1b48-42c4-9b71-d0d6ff2f684d",
+    "value": 133.32,
+    "unit": "mmol/L",
+    "investigation_id": "3fe366c9-950b-42b9-9aaf-62a46104bb40",
+    "patient_id": "a01f16d5-9a47-489d-baea-f572e800efa5",
+    "staff_id": "7ffde1a5-1768-4db5-a2c9-20a58c3e8ee6",
+    "branch_id": "443d2cd7-1073-4ff5-bd06-4934e7ef6ec8",
+    "recorded_at": "2025-03-25T18:20:03.877533"
+  },
+  {
+    "id": "e857848b-b3af-4b6a-8287-aacdec0e7ddd",
+    "value": 145.77,
+    "unit": "g/L",
+    "investigation_id": "19d517b7-e6b1-44ee-9fcc-932b6440030b",
+    "patient_id": "a4505648-a695-42af-809c-4f38b8aa9023",
+    "staff_id": "1adb4849-b996-425e-95f4-8836e9b1ffbc",
+    "branch_id": "b29e95ef-c153-4c05-9a59-24427f4bef46",
+    "recorded_at": "2024-07-02T18:20:03.877533"
+  },
+  {
+    "id": "1b907199-a83c-44fa-b3ce-1828aca92403",
+    "value": "Negative",
+    "unit": "g/L",
+    "investigation_id": "49191aff-0965-4713-9822-0c2bd414ce5d",
+    "patient_id": "c5586551-8644-429c-99d6-886b48f33032",
+    "staff_id": "57a56bc6-50bd-41f5-a88f-2f4e15bd37f7",
+    "branch_id": "4ced0873-7698-4cab-9f28-a24cae621108",
+    "recorded_at": "2025-01-03T18:20:03.877533"
+  },
+  {
+    "id": "3d4b1a83-96fb-4b83-8210-ce5321084625",
+    "value": "Positive",
+    "unit": "cells/mcL",
+    "investigation_id": "ec5baa6e-a09e-4c6b-9050-c98caa094bba",
+    "patient_id": "66e80f07-166d-492e-9c6c-5aecc75c8945",
+    "staff_id": "436897bf-08d8-48b0-b1e4-34ac9eeaff52",
+    "branch_id": "43e03ea5-df25-4e5d-afae-a33db57be2f4",
+    "recorded_at": "2025-06-11T18:20:03.877533"
+  },
+  {
+    "id": "9257e76c-9ee4-40b3-81c5-8920770e1f20",
+    "value": 74.62,
+    "unit": "cells/mcL",
+    "investigation_id": "fa1f71ee-032c-43c5-851c-8593875e2206",
+    "patient_id": "c5586551-8644-429c-99d6-886b48f33032",
+    "staff_id": "81a3141c-9f6a-4563-924b-dcd0de2f58a0",
+    "branch_id": "7ca8718d-4121-4e60-a31a-f8baae26db6f",
+    "recorded_at": "2025-05-23T18:20:03.877533"
+  },
+  {
+    "id": "45f9e1eb-d4ca-4060-bf3e-508af720cdf8",
+    "value": 18.19,
+    "unit": "cells/mcL",
+    "investigation_id": "ec5baa6e-a09e-4c6b-9050-c98caa094bba",
+    "patient_id": "96331031-93e2-4f45-a63b-6b5d6aa5694d",
+    "staff_id": "1adb4849-b996-425e-95f4-8836e9b1ffbc",
+    "branch_id": "82cee154-8b15-487f-b95b-271862f34ce0",
+    "recorded_at": "2025-02-21T18:20:03.877533"
+  },
+  {
+    "id": "914fe95e-a42d-4976-b013-0896cd42cc7a",
+    "value": 9.09,
+    "unit": "mg/dL",
+    "investigation_id": "edb9fdb9-3eb6-49eb-bdd7-0afea98146d7",
+    "patient_id": "740247e4-ba22-4f73-a7c6-7456e70c1675",
+    "staff_id": "a4b15f5d-1185-4207-ab7a-ecf93550bf2e",
+    "branch_id": "0f9c01aa-79aa-4c70-b9ab-ab3300ede8b0",
+    "recorded_at": "2025-04-12T18:20:03.877533"
+  },
+  {
+    "id": "85f29d1c-37c3-413e-87aa-52a5520aacba",
+    "value": 177.85,
+    "unit": "mmol/L",
+    "investigation_id": "0e6c2b26-15c2-43a2-876b-73821f551e97",
+    "patient_id": "3ad41b12-6ce6-4545-9466-e1d61dfe4726",
+    "staff_id": "5ff4021c-b1b3-44a5-b23e-be93e188f7c0",
+    "branch_id": "b5807c16-f78c-414d-92f2-fde092097304",
+    "recorded_at": "2025-02-07T18:20:03.877533"
+  },
+  {
+    "id": "20f08652-f65d-42a5-bfae-b7a0e47d4c0b",
+    "value": 119.84,
+    "unit": "mmol/L",
+    "investigation_id": "3304c416-09f1-466e-82da-ef135d3c6700",
+    "patient_id": "e896cd7f-593a-4c90-a3a0-d8a39e18c3e8",
+    "staff_id": "5360eef9-e87a-4207-829f-059baab1684d",
+    "branch_id": "883a45f0-86ed-46bb-aab9-67b8981d2682",
+    "recorded_at": "2024-11-12T18:20:03.877533"
+  },
+  {
+    "id": "9a485c30-f699-4a23-9305-950b1c7151b1",
+    "value": 24.37,
+    "unit": "cells/mcL",
+    "investigation_id": "4b47063a-11c2-4251-b886-bb583bc92873",
+    "patient_id": "80b3a020-4e4c-4477-af24-30db3531012a",
+    "staff_id": "7147d0ab-ff30-4435-82f0-e6ea33b9c233",
+    "branch_id": "436e712a-3cb6-4ce2-a29a-45f52d0fad36",
+    "recorded_at": "2024-07-13T18:20:03.877533"
+  },
+  {
+    "id": "5eaeb077-72d9-4f20-baf9-9510336844af",
+    "value": 88.11,
+    "unit": "mmol/L",
+    "investigation_id": "062aad4e-30de-4710-96f4-c65441b756b0",
+    "patient_id": "b9449ec3-7d7a-4c67-8b2a-9af08b8c0a46",
+    "staff_id": "4b029aa3-fadf-4608-aa44-d00d9ef99d9c",
+    "branch_id": "ad6ef822-7d20-405b-80ec-aeda48cad902",
+    "recorded_at": "2024-09-26T18:20:03.877533"
+  },
+  {
+    "id": "ac8780d9-4c61-42a1-8f7d-7ac7f8115f8c",
+    "value": 137.92,
+    "unit": "IU/L",
+    "investigation_id": "cb2527fc-e923-4038-8755-ffd1359fdd1e",
+    "patient_id": "56b92972-8dbb-49ab-892b-c557e0c37006",
+    "staff_id": "6f837437-5786-4e62-b643-772bf246fb2f",
+    "branch_id": "d9a30787-ee91-48f5-961c-80012a47e4a3",
+    "recorded_at": "2024-12-21T18:20:03.877533"
+  },
+  {
+    "id": "2b82c82e-63ea-43f9-a207-a66be8e00c67",
+    "value": 38.72,
+    "unit": "mmol/L",
+    "investigation_id": "57def83a-b727-415e-9082-e76c880e189a",
+    "patient_id": "2e1248fb-411a-4f80-a587-610c9ec82881",
+    "staff_id": "c866534c-3dde-41e7-878b-a0a83446388d",
+    "branch_id": "c887a5fd-2743-4c8d-b0e4-69f35519294f",
+    "recorded_at": "2024-07-20T18:20:03.877533"
+  },
+  {
+    "id": "3e9bd608-1b91-4473-85bd-ce6a354f717e",
+    "value": 177.45,
+    "unit": "mmol/L",
+    "investigation_id": "3304c416-09f1-466e-82da-ef135d3c6700",
+    "patient_id": "fb95d860-422f-4d65-89ad-888bfd1dca08",
+    "staff_id": "d032264a-bd17-4a99-b617-af03e5e4c735",
+    "branch_id": "71080b87-1d85-42dc-817a-05e9a076e53e",
+    "recorded_at": "2025-03-02T18:20:03.877533"
+  },
+  {
+    "id": "69d73c4d-7aec-4242-a36b-aa7a093c938e",
+    "value": "Negative",
+    "unit": "mg/dL",
+    "investigation_id": "475e7f59-4a67-498c-ad7c-322e1aa5c013",
+    "patient_id": "d0bf90fa-bcd5-4e46-81e4-d7377cb7c34b",
+    "staff_id": "b8fe855f-a696-4731-b33c-efdcfb00fc7c",
+    "branch_id": "845c8853-7ba9-471b-b623-1c50593701a7",
+    "recorded_at": "2025-02-23T18:20:03.877533"
+  },
+  {
+    "id": "d7b24870-ab66-46d4-b78a-0052825ef67f",
+    "value": 175.15,
+    "unit": "mmol/L",
+    "investigation_id": "7eab90f5-0a02-4936-b5ff-04d64f6217a4",
+    "patient_id": "8ace242f-8e3b-4561-a03a-c7af3f570fbd",
+    "staff_id": "226793fe-8ddb-480b-8803-2cd1629e6649",
+    "branch_id": "0f9c01aa-79aa-4c70-b9ab-ab3300ede8b0",
+    "recorded_at": "2024-09-12T18:20:03.877533"
+  },
+  {
+    "id": "b485fabe-6136-47fe-9bcf-2d8edbf1f4ab",
+    "value": 37.91,
+    "unit": "g/L",
+    "investigation_id": "42a2f3c2-a7d8-4c1f-a3a7-d4837bedd57e",
+    "patient_id": "7b96cef4-15af-4eff-af56-9856bac41a6c",
+    "staff_id": "91629dc2-78ff-4073-b3ae-cc2c5c56c81e",
+    "branch_id": "dc51b806-5b82-4791-9f6a-720a1d55cea3",
+    "recorded_at": "2024-08-11T18:20:03.877533"
+  },
+  {
+    "id": "11ca6b50-2a3e-494b-9292-91099867c5a1",
+    "value": 124.75,
+    "unit": "mmol/L",
+    "investigation_id": "062aad4e-30de-4710-96f4-c65441b756b0",
+    "patient_id": "82ea1c8e-8454-4c38-9ba8-bf3e76ef3180",
+    "staff_id": "d032264a-bd17-4a99-b617-af03e5e4c735",
+    "branch_id": "cef7ae07-a18d-4dd0-b8d4-dcd2f38d123b",
+    "recorded_at": "2025-01-24T18:20:03.877533"
+  },
+  {
+    "id": "4f3b0c9b-615d-442d-809d-64be42df67be",
+    "value": 99.0,
+    "unit": "g/L",
+    "investigation_id": "bd76f64d-e66e-49ea-b8e0-150fed5a54ad",
+    "patient_id": "a01f16d5-9a47-489d-baea-f572e800efa5",
+    "staff_id": "f6c61a4a-042b-42e5-8495-f0dbe88b1e01",
+    "branch_id": "71080b87-1d85-42dc-817a-05e9a076e53e",
+    "recorded_at": "2024-11-28T18:20:03.877533"
+  },
+  {
+    "id": "f5c37737-207b-4213-a8af-26d801efd974",
+    "value": 98.37,
+    "unit": "g/L",
+    "investigation_id": "c44db287-67fb-420c-b393-de8095b784f4",
+    "patient_id": "ae7991c8-6ce4-4f1b-aae0-6cf59994d1df",
+    "staff_id": "ba2a7f0d-87dc-4577-8279-751c51f21182",
+    "branch_id": "3ae1343a-b3de-4724-9c3e-8560205aca07",
+    "recorded_at": "2024-06-26T18:20:03.877533"
+  },
+  {
+    "id": "58fb18ab-d033-4950-9f66-9696719e2460",
+    "value": "Negative",
+    "unit": "g/L",
+    "investigation_id": "c622c585-3203-4648-ae70-6b2b9e283d98",
+    "patient_id": "392c8c76-5927-4f27-a7a2-cca40323150d",
+    "staff_id": "1adb4849-b996-425e-95f4-8836e9b1ffbc",
+    "branch_id": "ea429311-1f30-4cc1-bb78-cbe4f6970fd4",
+    "recorded_at": "2024-07-15T18:20:03.877533"
+  },
+  {
+    "id": "c4530af9-b50a-4d22-ba43-9971329042b9",
+    "value": 68.65,
+    "unit": "mmol/L",
+    "investigation_id": "a5dad69e-251a-4da7-b468-b11f2fb5d116",
+    "patient_id": "deac82a1-e513-4814-a0c3-2e3b35caee51",
+    "staff_id": "7402c587-1670-48e9-9a96-538f3f55232a",
+    "branch_id": "c9964292-1ab6-4192-88bc-269a7010f930",
+    "recorded_at": "2025-01-30T18:20:03.877533"
+  },
+  {
+    "id": "2a656cb6-3aa8-4dab-87c7-80c08ffcea3e",
+    "value": 75.58,
+    "unit": "mg/dL",
+    "investigation_id": "402c52b2-1234-466e-8c98-e5eaaeb305f1",
+    "patient_id": "740247e4-ba22-4f73-a7c6-7456e70c1675",
+    "staff_id": "502a714c-f8a4-44d4-8ae2-043ed03e629c",
+    "branch_id": "f2edec7a-6ad5-4672-83af-4bdf0a73bf32",
+    "recorded_at": "2025-05-31T18:20:03.877533"
+  }
+]

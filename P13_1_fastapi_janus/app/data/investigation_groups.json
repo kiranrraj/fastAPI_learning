@@ -1,0 +1,902 @@
+[
+  {
+    "id": "a86a3ccf-1bf8-43e2-8e9b-11b0e8d13da7",
+    "name": "Immunology Group 1",
+    "description": "Handles chemicals investigations",
+    "parent_group_id": null,
+    "created_by": "7ffde1a5-1768-4db5-a2c9-20a58c3e8ee6",
+    "group_code": "GRP001",
+    "created_at": "2025-06-02T18:20:03.877533"
+  },
+  {
+    "id": "8db57f09-cc2a-4d93-9047-a3c999ba3972",
+    "name": "Immunology Group 2",
+    "description": "Handles antibodies investigations",
+    "parent_group_id": null,
+    "created_by": "ac1018a3-81df-487e-89a7-cd5ef2cf4eb3",
+    "group_code": "GRP002",
+    "created_at": "2024-08-09T18:20:03.877533"
+  },
+  {
+    "id": "e1a6e92c-980c-4de2-a0be-e6b0ff281f37",
+    "name": "Microbiology Group 3",
+    "description": "Handles tissue investigations",
+    "parent_group_id": null,
+    "created_by": "ba2a7f0d-87dc-4577-8279-751c51f21182",
+    "group_code": "GRP003",
+    "created_at": "2024-07-20T18:20:03.877533"
+  },
+  {
+    "id": "e4b0680b-133e-4ca6-9136-3ea4cabf4eee",
+    "name": "Microbiology Group 4",
+    "description": "Handles bacteria investigations",
+    "parent_group_id": null,
+    "created_by": "9e78425f-7380-4dd7-8634-5f0f274b3410",
+    "group_code": "GRP004",
+    "created_at": "2024-09-01T18:20:03.877533"
+  },
+  {
+    "id": "97076487-d8e7-426f-826e-6ba9e8bf52e4",
+    "name": "Pathology Group 5",
+    "description": "Handles antibodies investigations",
+    "parent_group_id": null,
+    "created_by": "e9b7a925-4917-4175-9532-e01a53eb3924",
+    "group_code": "GRP005",
+    "created_at": "2024-10-12T18:20:03.877533"
+  },
+  {
+    "id": "3b25cbb5-8c1b-4b45-bbe7-e9ec80115b15",
+    "name": "Pathology Group 6",
+    "description": "Handles chemicals investigations",
+    "parent_group_id": null,
+    "created_by": "b3e05e46-5bea-4ec7-b9e1-24b4fd25539d",
+    "group_code": "GRP006",
+    "created_at": "2024-12-30T18:20:03.877533"
+  },
+  {
+    "id": "3be55ad6-a537-426c-8b2b-989d0d409a09",
+    "name": "Pathology Group 7",
+    "description": "Handles tissue investigations",
+    "parent_group_id": null,
+    "created_by": "502a714c-f8a4-44d4-8ae2-043ed03e629c",
+    "group_code": "GRP007",
+    "created_at": "2024-08-30T18:20:03.877533"
+  },
+  {
+    "id": "c67a0f25-6c8c-40d8-aa42-d78361fe6a38",
+    "name": "Biochemistry Group 8",
+    "description": "Handles blood investigations",
+    "parent_group_id": null,
+    "created_by": "0b10a0b4-4df9-4720-b719-e5902be344ea",
+    "group_code": "GRP008",
+    "created_at": "2025-06-07T18:20:03.877533"
+  },
+  {
+    "id": "6911e7c7-8c98-4b8f-ab96-ba17a0744455",
+    "name": "Microbiology Group 9",
+    "description": "Handles antibodies investigations",
+    "parent_group_id": null,
+    "created_by": "9e78425f-7380-4dd7-8634-5f0f274b3410",
+    "group_code": "GRP009",
+    "created_at": "2024-06-24T18:20:03.877533"
+  },
+  {
+    "id": "d9945bec-b533-4b25-b7f0-a845b5af5021",
+    "name": "Biochemistry Group 10",
+    "description": "Handles antibodies investigations",
+    "parent_group_id": null,
+    "created_by": "a229f541-3364-43c6-8221-abecde7518dc",
+    "group_code": "GRP010",
+    "created_at": "2025-03-30T18:20:03.877533"
+  },
+  {
+    "id": "304705d7-2160-4d3f-8aad-b67019c4f2fd",
+    "name": "Microbiology Group 11",
+    "description": "Handles antibodies investigations",
+    "parent_group_id": null,
+    "created_by": "9dd3f2d3-6539-4aba-86a2-978462769bd1",
+    "group_code": "GRP011",
+    "created_at": "2024-12-23T18:20:03.877533"
+  },
+  {
+    "id": "78ab7df1-761c-483c-9a0f-4f73f19b6598",
+    "name": "Biochemistry Group 12",
+    "description": "Handles tissue investigations",
+    "parent_group_id": null,
+    "created_by": "c78d4d04-1f1c-415c-ad61-d590b1c9a7c0",
+    "group_code": "GRP012",
+    "created_at": "2024-09-27T18:20:03.877533"
+  },
+  {
+    "id": "d55d1010-4482-4969-b77d-aa8012a6d85c",
+    "name": "Immunology Group 13",
+    "description": "Handles bacteria investigations",
+    "parent_group_id": null,
+    "created_by": "e296f37c-2492-4685-af53-5803cdf8f58d",
+    "group_code": "GRP013",
+    "created_at": "2024-12-08T18:20:03.877533"
+  },
+  {
+    "id": "bfc5c4cd-c4c8-42e6-b372-c5fef065bc5c",
+    "name": "Immunology Group 14",
+    "description": "Handles chemicals investigations",
+    "parent_group_id": null,
+    "created_by": "5f521bf6-7b82-4d91-9351-49c437e1a6e7",
+    "group_code": "GRP014",
+    "created_at": "2025-02-14T18:20:03.877533"
+  },
+  {
+    "id": "d9533fdd-2743-449a-be72-3bcb9c92e401",
+    "name": "Biochemistry Group 15",
+    "description": "Handles tissue investigations",
+    "parent_group_id": "4c7814e9-148c-4931-903a-b251c6631380",
+    "created_by": "9f1e0d8b-21af-488a-baee-e66c0b0e5e11",
+    "group_code": "GRP015",
+    "created_at": "2024-10-31T18:20:03.877533"
+  },
+  {
+    "id": "60b0b66e-3164-4af6-9496-f4a1a01294ed",
+    "name": "Pathology Group 16",
+    "description": "Handles bacteria investigations",
+    "parent_group_id": null,
+    "created_by": "54f7ac70-9f08-44de-9ce2-d25638d9a72c",
+    "group_code": "GRP016",
+    "created_at": "2025-02-28T18:20:03.877533"
+  },
+  {
+    "id": "e813f70b-47c8-4a62-85fd-44c18320cbb4",
+    "name": "Immunology Group 17",
+    "description": "Handles antibodies investigations",
+    "parent_group_id": null,
+    "created_by": "7f5c7b7c-eda1-485d-9bde-47f8fde8a956",
+    "group_code": "GRP017",
+    "created_at": "2025-04-21T18:20:03.877533"
+  },
+  {
+    "id": "89abc929-53d0-4ee0-9fe7-8f9381234c16",
+    "name": "Hematology Group 18",
+    "description": "Handles antibodies investigations",
+    "parent_group_id": null,
+    "created_by": "aff1073a-65ad-464e-bedc-7c3b855cbd66",
+    "group_code": "GRP018",
+    "created_at": "2025-01-16T18:20:03.877533"
+  },
+  {
+    "id": "d409879b-99c9-48cb-80a6-9659977e7c84",
+    "name": "Microbiology Group 19",
+    "description": "Handles blood investigations",
+    "parent_group_id": null,
+    "created_by": "f563e539-bf79-45cc-ae2d-25b34496d8e8",
+    "group_code": "GRP019",
+    "created_at": "2024-12-11T18:20:03.877533"
+  },
+  {
+    "id": "d817b957-4c8b-4d3b-ba0c-4cdb157c0a56",
+    "name": "Hematology Group 20",
+    "description": "Handles antibodies investigations",
+    "parent_group_id": null,
+    "created_by": "e9b7a925-4917-4175-9532-e01a53eb3924",
+    "group_code": "GRP020",
+    "created_at": "2025-04-24T18:20:03.877533"
+  },
+  {
+    "id": "31aefe36-4c2e-4a39-bc9b-9ea5d59827a2",
+    "name": "Pathology Group 21",
+    "description": "Handles chemicals investigations",
+    "parent_group_id": "bf57c488-6f0e-40d9-b739-3f6c4d42c760",
+    "created_by": "226793fe-8ddb-480b-8803-2cd1629e6649",
+    "group_code": "GRP021",
+    "created_at": "2025-05-17T18:20:03.877533"
+  },
+  {
+    "id": "53cb8584-123f-4a73-9ac2-540f5f1be0f4",
+    "name": "Immunology Group 22",
+    "description": "Handles bacteria investigations",
+    "parent_group_id": "2ca137b6-c4a5-4cf9-9e76-4125bc659ec5",
+    "created_by": "1adb4849-b996-425e-95f4-8836e9b1ffbc",
+    "group_code": "GRP022",
+    "created_at": "2024-07-07T18:20:03.877533"
+  },
+  {
+    "id": "0a1b331e-08d1-46e0-8243-7532d51d0b22",
+    "name": "Immunology Group 23",
+    "description": "Handles tissue investigations",
+    "parent_group_id": null,
+    "created_by": "ec043249-fb49-4694-85ad-822cd70622ad",
+    "group_code": "GRP023",
+    "created_at": "2024-10-21T18:20:03.877533"
+  },
+  {
+    "id": "4c7814e9-148c-4931-903a-b251c6631380",
+    "name": "Hematology Group 24",
+    "description": "Handles tissue investigations",
+    "parent_group_id": null,
+    "created_by": "e9062262-7222-48ac-92ed-d45e3cf25b45",
+    "group_code": "GRP024",
+    "created_at": "2024-09-06T18:20:03.877533"
+  },
+  {
+    "id": "ced3bb8e-854e-4670-a1ce-8af258e62124",
+    "name": "Immunology Group 25",
+    "description": "Handles chemicals investigations",
+    "parent_group_id": "de1c44bd-78ba-4b0f-9d20-ce13a2eccca5",
+    "created_by": "0b10a0b4-4df9-4720-b719-e5902be344ea",
+    "group_code": "GRP025",
+    "created_at": "2024-07-29T18:20:03.877533"
+  },
+  {
+    "id": "ca268209-fd51-403c-a15b-ceea281f23a7",
+    "name": "Biochemistry Group 26",
+    "description": "Handles bacteria investigations",
+    "parent_group_id": null,
+    "created_by": "66e28b62-9bea-45a8-9626-ec2bf0632d81",
+    "group_code": "GRP026",
+    "created_at": "2024-09-11T18:20:03.877533"
+  },
+  {
+    "id": "0d102226-6971-4d20-a7e7-16986d705b87",
+    "name": "Microbiology Group 27",
+    "description": "Handles chemicals investigations",
+    "parent_group_id": null,
+    "created_by": "ce0f90c8-4995-4815-a49b-134e75017161",
+    "group_code": "GRP027",
+    "created_at": "2025-05-03T18:20:03.877533"
+  },
+  {
+    "id": "eaa4908a-3099-4fe6-b74e-1504a64f5350",
+    "name": "Hematology Group 28",
+    "description": "Handles chemicals investigations",
+    "parent_group_id": null,
+    "created_by": "9dd3f2d3-6539-4aba-86a2-978462769bd1",
+    "group_code": "GRP028",
+    "created_at": "2024-09-03T18:20:03.877533"
+  },
+  {
+    "id": "0b53f62f-c8a3-4e35-b14a-950a76d8679a",
+    "name": "Immunology Group 29",
+    "description": "Handles antibodies investigations",
+    "parent_group_id": null,
+    "created_by": "7147d0ab-ff30-4435-82f0-e6ea33b9c233",
+    "group_code": "GRP029",
+    "created_at": "2025-02-12T18:20:03.877533"
+  },
+  {
+    "id": "16a63409-0ae9-4c2b-94cf-5083503f0ba4",
+    "name": "Hematology Group 30",
+    "description": "Handles bacteria investigations",
+    "parent_group_id": "172a80ed-a103-4936-908d-65d7ee9d0219",
+    "created_by": "448f8576-e684-4bb0-a8b7-2357d11cee28",
+    "group_code": "GRP030",
+    "created_at": "2024-08-10T18:20:03.877533"
+  },
+  {
+    "id": "5f76db74-ca9c-44eb-ad26-e7c6e9310dd6",
+    "name": "Pathology Group 31",
+    "description": "Handles blood investigations",
+    "parent_group_id": "ab89a423-d261-48ae-9f52-7e04663b2e58",
+    "created_by": "5360eef9-e87a-4207-829f-059baab1684d",
+    "group_code": "GRP031",
+    "created_at": "2025-05-10T18:20:03.877533"
+  },
+  {
+    "id": "04cdcbf1-b3d1-43ce-8b3f-a971d7881d79",
+    "name": "Pathology Group 32",
+    "description": "Handles bacteria investigations",
+    "parent_group_id": null,
+    "created_by": "c866534c-3dde-41e7-878b-a0a83446388d",
+    "group_code": "GRP032",
+    "created_at": "2024-10-05T18:20:03.877533"
+  },
+  {
+    "id": "04f54a56-dfbd-4260-b1aa-759dbcc492f4",
+    "name": "Hematology Group 33",
+    "description": "Handles antibodies investigations",
+    "parent_group_id": null,
+    "created_by": "3fa7a8b4-ef3f-46d0-aeae-f68c9233698b",
+    "group_code": "GRP033",
+    "created_at": "2025-06-07T18:20:03.877533"
+  },
+  {
+    "id": "902c7de6-737e-4f3f-b1d6-f627393dd08b",
+    "name": "Biochemistry Group 34",
+    "description": "Handles chemicals investigations",
+    "parent_group_id": null,
+    "created_by": "9f1e0d8b-21af-488a-baee-e66c0b0e5e11",
+    "group_code": "GRP034",
+    "created_at": "2025-02-04T18:20:03.877533"
+  },
+  {
+    "id": "4697d60a-5e51-4596-b16f-e9f81a1d312c",
+    "name": "Pathology Group 35",
+    "description": "Handles bacteria investigations",
+    "parent_group_id": null,
+    "created_by": "502a714c-f8a4-44d4-8ae2-043ed03e629c",
+    "group_code": "GRP035",
+    "created_at": "2024-09-05T18:20:03.877533"
+  },
+  {
+    "id": "92bcdfeb-cd82-4cdc-9f41-9a09b442af9f",
+    "name": "Biochemistry Group 36",
+    "description": "Handles antibodies investigations",
+    "parent_group_id": "c5c44269-7212-4296-9e24-2b1a118d6020",
+    "created_by": "72a2a031-a4b2-45ed-ac46-16bace72a041",
+    "group_code": "GRP036",
+    "created_at": "2025-03-17T18:20:03.877533"
+  },
+  {
+    "id": "71d68281-84f1-44cd-918e-e80988db4ec5",
+    "name": "Pathology Group 37",
+    "description": "Handles chemicals investigations",
+    "parent_group_id": "31aefe36-4c2e-4a39-bc9b-9ea5d59827a2",
+    "created_by": "52c1d630-7b04-4c9b-8015-7bfe90a64dd2",
+    "group_code": "GRP037",
+    "created_at": "2024-11-19T18:20:03.877533"
+  },
+  {
+    "id": "f9ad5c6a-9cb1-44cd-8682-55db166277ba",
+    "name": "Immunology Group 38",
+    "description": "Handles antibodies investigations",
+    "parent_group_id": "cb27b7df-7658-48bc-a44c-32690a0a0812",
+    "created_by": "f80f1c08-ec2b-4c55-8dee-931486536ff3",
+    "group_code": "GRP038",
+    "created_at": "2024-11-22T18:20:03.877533"
+  },
+  {
+    "id": "f915f0cd-37a8-4d0a-b470-d328665a4f93",
+    "name": "Biochemistry Group 39",
+    "description": "Handles chemicals investigations",
+    "parent_group_id": "e89c3c76-59d7-46a9-ad35-437b05bb6f11",
+    "created_by": "a4b15f5d-1185-4207-ab7a-ecf93550bf2e",
+    "group_code": "GRP039",
+    "created_at": "2025-04-16T18:20:03.877533"
+  },
+  {
+    "id": "b5e879c0-2d2c-40be-a819-af9c87a7045f",
+    "name": "Biochemistry Group 40",
+    "description": "Handles tissue investigations",
+    "parent_group_id": null,
+    "created_by": "b3e05e46-5bea-4ec7-b9e1-24b4fd25539d",
+    "group_code": "GRP040",
+    "created_at": "2025-06-07T18:20:03.877533"
+  },
+  {
+    "id": "0d90811d-665f-46ee-8a5d-d4ab05726098",
+    "name": "Hematology Group 41",
+    "description": "Handles antibodies investigations",
+    "parent_group_id": null,
+    "created_by": "52c1d630-7b04-4c9b-8015-7bfe90a64dd2",
+    "group_code": "GRP041",
+    "created_at": "2025-03-13T18:20:03.877533"
+  },
+  {
+    "id": "c5c44269-7212-4296-9e24-2b1a118d6020",
+    "name": "Hematology Group 42",
+    "description": "Handles antibodies investigations",
+    "parent_group_id": null,
+    "created_by": "81a3141c-9f6a-4563-924b-dcd0de2f58a0",
+    "group_code": "GRP042",
+    "created_at": "2024-09-29T18:20:03.877533"
+  },
+  {
+    "id": "09cb0844-63c7-4786-96c1-0757d1dc9877",
+    "name": "Biochemistry Group 43",
+    "description": "Handles blood investigations",
+    "parent_group_id": "4c7814e9-148c-4931-903a-b251c6631380",
+    "created_by": "73d92457-b3fe-4aeb-ba65-7860fe56b374",
+    "group_code": "GRP043",
+    "created_at": "2025-04-11T18:20:03.877533"
+  },
+  {
+    "id": "a4affed3-f760-44cc-bcb4-479eae730eaa",
+    "name": "Biochemistry Group 44",
+    "description": "Handles bacteria investigations",
+    "parent_group_id": null,
+    "created_by": "7147d0ab-ff30-4435-82f0-e6ea33b9c233",
+    "group_code": "GRP044",
+    "created_at": "2024-07-06T18:20:03.877533"
+  },
+  {
+    "id": "7e270c0f-d822-4ef5-8c32-ff7386b04348",
+    "name": "Microbiology Group 45",
+    "description": "Handles antibodies investigations",
+    "parent_group_id": null,
+    "created_by": "e4cbabef-4ec8-4533-9150-4e869c54b06d",
+    "group_code": "GRP045",
+    "created_at": "2025-06-07T18:20:03.877533"
+  },
+  {
+    "id": "82edb966-ca43-43e4-956e-51b619ea6ba4",
+    "name": "Pathology Group 46",
+    "description": "Handles blood investigations",
+    "parent_group_id": null,
+    "created_by": "226793fe-8ddb-480b-8803-2cd1629e6649",
+    "group_code": "GRP046",
+    "created_at": "2025-01-24T18:20:03.877533"
+  },
+  {
+    "id": "09e9bfcc-a6cb-419d-8678-09573a2e8999",
+    "name": "Pathology Group 47",
+    "description": "Handles bacteria investigations",
+    "parent_group_id": null,
+    "created_by": "0059df70-f42b-44ae-a627-a357118f5a45",
+    "group_code": "GRP047",
+    "created_at": "2024-06-30T18:20:03.877533"
+  },
+  {
+    "id": "2ca137b6-c4a5-4cf9-9e76-4125bc659ec5",
+    "name": "Biochemistry Group 48",
+    "description": "Handles chemicals investigations",
+    "parent_group_id": null,
+    "created_by": "0b10a0b4-4df9-4720-b719-e5902be344ea",
+    "group_code": "GRP048",
+    "created_at": "2024-08-09T18:20:03.877533"
+  },
+  {
+    "id": "e89c3c76-59d7-46a9-ad35-437b05bb6f11",
+    "name": "Immunology Group 49",
+    "description": "Handles antibodies investigations",
+    "parent_group_id": "3b25cbb5-8c1b-4b45-bbe7-e9ec80115b15",
+    "created_by": "0b10a0b4-4df9-4720-b719-e5902be344ea",
+    "group_code": "GRP049",
+    "created_at": "2025-04-08T18:20:03.877533"
+  },
+  {
+    "id": "e378130c-96cf-49c7-a8ab-d5b88efe580f",
+    "name": "Immunology Group 50",
+    "description": "Handles blood investigations",
+    "parent_group_id": null,
+    "created_by": "722d56b6-7ffe-4520-ad4a-26c74ef0940d",
+    "group_code": "GRP050",
+    "created_at": "2024-08-09T18:20:03.877533"
+  },
+  {
+    "id": "2f784156-02e4-42d5-91d9-d6a1379ccc20",
+    "name": "Pathology Group 51",
+    "description": "Handles tissue investigations",
+    "parent_group_id": null,
+    "created_by": "9e78425f-7380-4dd7-8634-5f0f274b3410",
+    "group_code": "GRP051",
+    "created_at": "2025-01-01T18:20:03.877533"
+  },
+  {
+    "id": "1c0ccf9e-b356-440d-b817-ccdb1825ffd4",
+    "name": "Hematology Group 52",
+    "description": "Handles blood investigations",
+    "parent_group_id": null,
+    "created_by": "9e78425f-7380-4dd7-8634-5f0f274b3410",
+    "group_code": "GRP052",
+    "created_at": "2025-05-28T18:20:03.877533"
+  },
+  {
+    "id": "163b71b9-a5c3-4bb5-b8a0-406af726d082",
+    "name": "Immunology Group 53",
+    "description": "Handles chemicals investigations",
+    "parent_group_id": "0a1b331e-08d1-46e0-8243-7532d51d0b22",
+    "created_by": "f80f1c08-ec2b-4c55-8dee-931486536ff3",
+    "group_code": "GRP053",
+    "created_at": "2024-07-25T18:20:03.877533"
+  },
+  {
+    "id": "4813592b-29ec-41d2-8abc-765807a9ca2c",
+    "name": "Hematology Group 54",
+    "description": "Handles antibodies investigations",
+    "parent_group_id": null,
+    "created_by": "a0199d0c-f936-45bd-9cc1-223a687e3afd",
+    "group_code": "GRP054",
+    "created_at": "2025-01-12T18:20:03.877533"
+  },
+  {
+    "id": "172a80ed-a103-4936-908d-65d7ee9d0219",
+    "name": "Hematology Group 55",
+    "description": "Handles blood investigations",
+    "parent_group_id": null,
+    "created_by": "81a3141c-9f6a-4563-924b-dcd0de2f58a0",
+    "group_code": "GRP055",
+    "created_at": "2024-06-23T18:20:03.877533"
+  },
+  {
+    "id": "ecea1440-9954-46c5-b136-55660bdf3ebc",
+    "name": "Biochemistry Group 56",
+    "description": "Handles tissue investigations",
+    "parent_group_id": null,
+    "created_by": "34f58713-963f-4190-92b8-867c71dd8d83",
+    "group_code": "GRP056",
+    "created_at": "2025-01-22T18:20:03.877533"
+  },
+  {
+    "id": "ab89a423-d261-48ae-9f52-7e04663b2e58",
+    "name": "Microbiology Group 57",
+    "description": "Handles blood investigations",
+    "parent_group_id": null,
+    "created_by": "0059df70-f42b-44ae-a627-a357118f5a45",
+    "group_code": "GRP057",
+    "created_at": "2024-12-18T18:20:03.877533"
+  },
+  {
+    "id": "d19b6ac5-624b-4474-ac5e-8b5d6da46c7e",
+    "name": "Hematology Group 58",
+    "description": "Handles chemicals investigations",
+    "parent_group_id": null,
+    "created_by": "54f7ac70-9f08-44de-9ce2-d25638d9a72c",
+    "group_code": "GRP058",
+    "created_at": "2025-03-22T18:20:03.877533"
+  },
+  {
+    "id": "ee846d9c-16cf-4b44-b5ff-857ed6d5a3db",
+    "name": "Pathology Group 59",
+    "description": "Handles tissue investigations",
+    "parent_group_id": null,
+    "created_by": "9f1e0d8b-21af-488a-baee-e66c0b0e5e11",
+    "group_code": "GRP059",
+    "created_at": "2025-02-23T18:20:03.877533"
+  },
+  {
+    "id": "ffdf76f7-dc45-4cdd-9ada-ac9cb61bbe0e",
+    "name": "Pathology Group 60",
+    "description": "Handles blood investigations",
+    "parent_group_id": null,
+    "created_by": "ec043249-fb49-4694-85ad-822cd70622ad",
+    "group_code": "GRP060",
+    "created_at": "2024-09-29T18:20:03.877533"
+  },
+  {
+    "id": "c740fe13-7b77-4297-a7dc-d920d09ed3b7",
+    "name": "Immunology Group 61",
+    "description": "Handles blood investigations",
+    "parent_group_id": null,
+    "created_by": "682a89c4-ce76-40dd-a402-428458d29f8f",
+    "group_code": "GRP061",
+    "created_at": "2024-06-26T18:20:03.877533"
+  },
+  {
+    "id": "f406645e-eb36-465b-b9cb-ad8ca78dc39d",
+    "name": "Biochemistry Group 62",
+    "description": "Handles chemicals investigations",
+    "parent_group_id": null,
+    "created_by": "fc3628f9-1f80-470c-98fc-41264a9af8ed",
+    "group_code": "GRP062",
+    "created_at": "2024-07-14T18:20:03.877533"
+  },
+  {
+    "id": "54fa16fb-e2cf-4fd7-aab2-f52b4db9a7c1",
+    "name": "Microbiology Group 63",
+    "description": "Handles bacteria investigations",
+    "parent_group_id": null,
+    "created_by": "84514e35-044b-45f1-85ca-1cade1104d85",
+    "group_code": "GRP063",
+    "created_at": "2024-09-03T18:20:03.877533"
+  },
+  {
+    "id": "9784943f-0c68-4fe3-a9e1-e0e2caccdeae",
+    "name": "Immunology Group 64",
+    "description": "Handles antibodies investigations",
+    "parent_group_id": null,
+    "created_by": "7f5c7b7c-eda1-485d-9bde-47f8fde8a956",
+    "group_code": "GRP064",
+    "created_at": "2024-12-16T18:20:03.877533"
+  },
+  {
+    "id": "cb27b7df-7658-48bc-a44c-32690a0a0812",
+    "name": "Pathology Group 65",
+    "description": "Handles tissue investigations",
+    "parent_group_id": null,
+    "created_by": "b8fe855f-a696-4731-b33c-efdcfb00fc7c",
+    "group_code": "GRP065",
+    "created_at": "2024-09-27T18:20:03.877533"
+  },
+  {
+    "id": "0f97b994-5a55-44e8-98f2-41a50b283f94",
+    "name": "Microbiology Group 66",
+    "description": "Handles antibodies investigations",
+    "parent_group_id": null,
+    "created_by": "0d24b209-5871-4788-b22c-6f9cbeab01c3",
+    "group_code": "GRP066",
+    "created_at": "2024-09-13T18:20:03.877533"
+  },
+  {
+    "id": "1dbce448-fc34-4956-9e96-560b07fc1bd9",
+    "name": "Microbiology Group 67",
+    "description": "Handles chemicals investigations",
+    "parent_group_id": "75c02e71-a29b-439f-a3a9-49eac5fad321",
+    "created_by": "66e28b62-9bea-45a8-9626-ec2bf0632d81",
+    "group_code": "GRP067",
+    "created_at": "2025-01-09T18:20:03.877533"
+  },
+  {
+    "id": "de1c44bd-78ba-4b0f-9d20-ce13a2eccca5",
+    "name": "Pathology Group 68",
+    "description": "Handles chemicals investigations",
+    "parent_group_id": "2f784156-02e4-42d5-91d9-d6a1379ccc20",
+    "created_by": "0b10a0b4-4df9-4720-b719-e5902be344ea",
+    "group_code": "GRP068",
+    "created_at": "2025-04-07T18:20:03.877533"
+  },
+  {
+    "id": "dd6e1aeb-8407-4e2a-b88c-636130f30a2b",
+    "name": "Microbiology Group 69",
+    "description": "Handles blood investigations",
+    "parent_group_id": null,
+    "created_by": "52c1d630-7b04-4c9b-8015-7bfe90a64dd2",
+    "group_code": "GRP069",
+    "created_at": "2024-09-04T18:20:03.877533"
+  },
+  {
+    "id": "686e04c8-de53-476e-bf9e-9efdf49888b6",
+    "name": "Biochemistry Group 70",
+    "description": "Handles tissue investigations",
+    "parent_group_id": "ecea1440-9954-46c5-b136-55660bdf3ebc",
+    "created_by": "73d92457-b3fe-4aeb-ba65-7860fe56b374",
+    "group_code": "GRP070",
+    "created_at": "2025-05-09T18:20:03.877533"
+  },
+  {
+    "id": "7e295b58-9ad3-4689-a6b5-f9e17cc0c4c2",
+    "name": "Immunology Group 71",
+    "description": "Handles tissue investigations",
+    "parent_group_id": null,
+    "created_by": "c2e1061e-5483-439a-86fa-f284d8ac8939",
+    "group_code": "GRP071",
+    "created_at": "2024-08-31T18:20:03.877533"
+  },
+  {
+    "id": "81104caf-8d16-486d-9ded-cb235f8b015c",
+    "name": "Microbiology Group 72",
+    "description": "Handles tissue investigations",
+    "parent_group_id": null,
+    "created_by": "91c22bc7-bc8e-45d7-9996-f9428119835a",
+    "group_code": "GRP072",
+    "created_at": "2024-07-12T18:20:03.877533"
+  },
+  {
+    "id": "f297714e-6622-4a0a-aa99-3464d76001c3",
+    "name": "Biochemistry Group 73",
+    "description": "Handles antibodies investigations",
+    "parent_group_id": null,
+    "created_by": "0b10a0b4-4df9-4720-b719-e5902be344ea",
+    "group_code": "GRP073",
+    "created_at": "2024-09-28T18:20:03.877533"
+  },
+  {
+    "id": "69b4c7ca-3b8e-4a19-9828-0f1304b2b5e9",
+    "name": "Hematology Group 74",
+    "description": "Handles bacteria investigations",
+    "parent_group_id": null,
+    "created_by": "5c1dfcb5-da9f-4234-b930-08cd7ab637ac",
+    "group_code": "GRP074",
+    "created_at": "2024-08-31T18:20:03.877533"
+  },
+  {
+    "id": "d20e1d2c-0fd6-428d-9970-2ded80816767",
+    "name": "Pathology Group 75",
+    "description": "Handles bacteria investigations",
+    "parent_group_id": null,
+    "created_by": "be2f770a-2458-450a-8387-d69d2d244b6a",
+    "group_code": "GRP075",
+    "created_at": "2025-04-18T18:20:03.877533"
+  },
+  {
+    "id": "75c02e71-a29b-439f-a3a9-49eac5fad321",
+    "name": "Microbiology Group 76",
+    "description": "Handles blood investigations",
+    "parent_group_id": null,
+    "created_by": "fad4b80e-a28d-4741-bc2b-e661babf9122",
+    "group_code": "GRP076",
+    "created_at": "2025-03-13T18:20:03.877533"
+  },
+  {
+    "id": "132b4f6e-1418-4032-b9d9-85e8dd6d976a",
+    "name": "Immunology Group 77",
+    "description": "Handles bacteria investigations",
+    "parent_group_id": "c740fe13-7b77-4297-a7dc-d920d09ed3b7",
+    "created_by": "448f8576-e684-4bb0-a8b7-2357d11cee28",
+    "group_code": "GRP077",
+    "created_at": "2025-06-01T18:20:03.877533"
+  },
+  {
+    "id": "c5c967f3-8ad7-4cbf-b14c-83e9deba9092",
+    "name": "Hematology Group 78",
+    "description": "Handles antibodies investigations",
+    "parent_group_id": null,
+    "created_by": "52c1d630-7b04-4c9b-8015-7bfe90a64dd2",
+    "group_code": "GRP078",
+    "created_at": "2025-06-06T18:20:03.877533"
+  },
+  {
+    "id": "0073f3c4-28f1-4ac8-a953-6656b0c78c49",
+    "name": "Biochemistry Group 79",
+    "description": "Handles tissue investigations",
+    "parent_group_id": null,
+    "created_by": "f563e539-bf79-45cc-ae2d-25b34496d8e8",
+    "group_code": "GRP079",
+    "created_at": "2025-03-07T18:20:03.877533"
+  },
+  {
+    "id": "fcb7e70c-d2f9-487e-9e3c-400bdfffc9c1",
+    "name": "Immunology Group 80",
+    "description": "Handles antibodies investigations",
+    "parent_group_id": "10daac3e-bf66-4009-801d-550f568c976a",
+    "created_by": "ac2dc251-8617-4252-b900-e9158c673b1c",
+    "group_code": "GRP080",
+    "created_at": "2025-03-31T18:20:03.877533"
+  },
+  {
+    "id": "f1c0beea-02b7-4b49-8f24-29267d7fc4f8",
+    "name": "Biochemistry Group 81",
+    "description": "Handles antibodies investigations",
+    "parent_group_id": "e89c3c76-59d7-46a9-ad35-437b05bb6f11",
+    "created_by": "66e28b62-9bea-45a8-9626-ec2bf0632d81",
+    "group_code": "GRP081",
+    "created_at": "2024-10-21T18:20:03.877533"
+  },
+  {
+    "id": "9b3e41da-418d-4b4d-8a91-d6e20027ee5f",
+    "name": "Pathology Group 82",
+    "description": "Handles antibodies investigations",
+    "parent_group_id": null,
+    "created_by": "81a3141c-9f6a-4563-924b-dcd0de2f58a0",
+    "group_code": "GRP082",
+    "created_at": "2024-11-28T18:20:03.877533"
+  },
+  {
+    "id": "d47d5246-597c-45dc-bbfd-c0e74b49c909",
+    "name": "Pathology Group 83",
+    "description": "Handles chemicals investigations",
+    "parent_group_id": null,
+    "created_by": "e296f37c-2492-4685-af53-5803cdf8f58d",
+    "group_code": "GRP083",
+    "created_at": "2024-10-10T18:20:03.877533"
+  },
+  {
+    "id": "d7949178-ac58-4263-8668-41a064a45583",
+    "name": "Hematology Group 84",
+    "description": "Handles blood investigations",
+    "parent_group_id": null,
+    "created_by": "5ff4021c-b1b3-44a5-b23e-be93e188f7c0",
+    "group_code": "GRP084",
+    "created_at": "2024-12-18T18:20:03.877533"
+  },
+  {
+    "id": "589a25cd-7e4a-4e90-8c1d-1bc952ec4988",
+    "name": "Immunology Group 85",
+    "description": "Handles chemicals investigations",
+    "parent_group_id": "71d68281-84f1-44cd-918e-e80988db4ec5",
+    "created_by": "98bfb57e-6904-4bd2-8a98-7bfdaa27bd5d",
+    "group_code": "GRP085",
+    "created_at": "2025-01-26T18:20:03.877533"
+  },
+  {
+    "id": "fede7d4c-52d9-4693-a212-4eae5ca35204",
+    "name": "Hematology Group 86",
+    "description": "Handles bacteria investigations",
+    "parent_group_id": "6a4ec59d-3d85-400f-8777-9f8c17570dd5",
+    "created_by": "d032264a-bd17-4a99-b617-af03e5e4c735",
+    "group_code": "GRP086",
+    "created_at": "2025-05-08T18:20:03.877533"
+  },
+  {
+    "id": "3c088608-dbea-4de8-9402-df275667aef7",
+    "name": "Immunology Group 87",
+    "description": "Handles blood investigations",
+    "parent_group_id": "6a4ec59d-3d85-400f-8777-9f8c17570dd5",
+    "created_by": "682a89c4-ce76-40dd-a402-428458d29f8f",
+    "group_code": "GRP087",
+    "created_at": "2025-05-27T18:20:03.877533"
+  },
+  {
+    "id": "b3248b6e-8f1e-409e-adb8-afc6409a19c8",
+    "name": "Pathology Group 88",
+    "description": "Handles tissue investigations",
+    "parent_group_id": null,
+    "created_by": "7cdd327b-2790-4fb0-9d0e-e0c007930a16",
+    "group_code": "GRP088",
+    "created_at": "2025-02-25T18:20:03.877533"
+  },
+  {
+    "id": "203f0e04-e717-4f85-a1e8-52afad35d959",
+    "name": "Immunology Group 89",
+    "description": "Handles chemicals investigations",
+    "parent_group_id": "0b53f62f-c8a3-4e35-b14a-950a76d8679a",
+    "created_by": "3fa7a8b4-ef3f-46d0-aeae-f68c9233698b",
+    "group_code": "GRP089",
+    "created_at": "2025-01-22T18:20:03.877533"
+  },
+  {
+    "id": "bf57c488-6f0e-40d9-b739-3f6c4d42c760",
+    "name": "Pathology Group 90",
+    "description": "Handles tissue investigations",
+    "parent_group_id": null,
+    "created_by": "f563e539-bf79-45cc-ae2d-25b34496d8e8",
+    "group_code": "GRP090",
+    "created_at": "2024-08-04T18:20:03.877533"
+  },
+  {
+    "id": "09bae5f6-0e60-4c02-a626-3aa205f3cf8b",
+    "name": "Immunology Group 91",
+    "description": "Handles antibodies investigations",
+    "parent_group_id": null,
+    "created_by": "7402c587-1670-48e9-9a96-538f3f55232a",
+    "group_code": "GRP091",
+    "created_at": "2024-06-26T18:20:03.877533"
+  },
+  {
+    "id": "6a4ec59d-3d85-400f-8777-9f8c17570dd5",
+    "name": "Hematology Group 92",
+    "description": "Handles chemicals investigations",
+    "parent_group_id": "97076487-d8e7-426f-826e-6ba9e8bf52e4",
+    "created_by": "226793fe-8ddb-480b-8803-2cd1629e6649",
+    "group_code": "GRP092",
+    "created_at": "2024-11-27T18:20:03.877533"
+  },
+  {
+    "id": "a6106868-441e-4398-950b-f4b1703a07e5",
+    "name": "Immunology Group 93",
+    "description": "Handles chemicals investigations",
+    "parent_group_id": null,
+    "created_by": "7c4f740c-9e6a-4a7a-86ca-a29ce5ca9915",
+    "group_code": "GRP093",
+    "created_at": "2024-08-10T18:20:03.877533"
+  },
+  {
+    "id": "10daac3e-bf66-4009-801d-550f568c976a",
+    "name": "Immunology Group 94",
+    "description": "Handles tissue investigations",
+    "parent_group_id": null,
+    "created_by": "6602d5e2-c2c5-4c36-8e9a-9240c49db698",
+    "group_code": "GRP094",
+    "created_at": "2024-11-02T18:20:03.877533"
+  },
+  {
+    "id": "7087d5cc-cd5d-4349-ba1e-c804138369fa",
+    "name": "Microbiology Group 95",
+    "description": "Handles tissue investigations",
+    "parent_group_id": null,
+    "created_by": "52c1d630-7b04-4c9b-8015-7bfe90a64dd2",
+    "group_code": "GRP095",
+    "created_at": "2024-12-16T18:20:03.877533"
+  },
+  {
+    "id": "0b77a03e-f186-4f11-b30d-2d1fbfcdafd2",
+    "name": "Pathology Group 96",
+    "description": "Handles blood investigations",
+    "parent_group_id": null,
+    "created_by": "98bfb57e-6904-4bd2-8a98-7bfdaa27bd5d",
+    "group_code": "GRP096",
+    "created_at": "2024-10-03T18:20:03.877533"
+  },
+  {
+    "id": "7b8f2462-6960-4af7-aab0-2f6a9dbd668d",
+    "name": "Pathology Group 97",
+    "description": "Handles tissue investigations",
+    "parent_group_id": null,
+    "created_by": "0df4c56e-edf4-4c06-9827-88a8abd34de2",
+    "group_code": "GRP097",
+    "created_at": "2025-02-21T18:20:03.877533"
+  },
+  {
+    "id": "b48ffadb-9852-46d9-a6ce-ab7c1d56e708",
+    "name": "Microbiology Group 98",
+    "description": "Handles blood investigations",
+    "parent_group_id": null,
+    "created_by": "f6c61a4a-042b-42e5-8495-f0dbe88b1e01",
+    "group_code": "GRP098",
+    "created_at": "2025-02-08T18:20:03.877533"
+  },
+  {
+    "id": "55df3f7d-1fbd-4b95-8f01-a053c3101b49",
+    "name": "Pathology Group 99",
+    "description": "Handles blood investigations",
+    "parent_group_id": null,
+    "created_by": "68fe2737-1f8b-44fe-91dd-d2e0ce522b78",
+    "group_code": "GRP099",
+    "created_at": "2025-02-28T18:20:03.877533"
+  },
+  {
+    "id": "b9ae0ae0-0012-44a5-b956-983488846bf1",
+    "name": "Pathology Group 100",
+    "description": "Handles bacteria investigations",
+    "parent_group_id": null,
+    "created_by": "f80f1c08-ec2b-4c55-8dee-931486536ff3",
+    "group_code": "GRP100",
+    "created_at": "2025-04-22T18:20:03.877533"
+  }
+]
