@@ -1,0 +1,2294 @@
+[
+  {
+    "id": "7cd8e88b-473d-4f3a-9d95-a890b27a1c1f",
+    "order_id": "THA08PR2812DATA643082GU040924134350",
+    "branch_id": "0cbf98b3-4e64-42f6-a528-5904de0a18d0",
+    "staff_id": "f5b4c7f4-a30d-48db-a381-a240128698f4",
+    "user_id": "202bb095-743e-4edf-9636-ff8ae306c53d",
+    "investigations": [
+      {
+        "inv_id": "77e67b36-74c8-4054-90af-e85201b4b86b",
+        "group_id": "22ae8b08-64c8-413e-a7d6-a2d9f876889a"
+      },
+      {
+        "inv_id": "8e0b1aaa-4867-4cca-80a6-cd9552a11c7c",
+        "group_id": "51028b81-6ac5-483a-940b-5c8ff29c11ca"
+      }
+    ],
+    "created_at": "2024-09-04T13:43:50.627581",
+    "updated_at": "2024-09-04T13:43:50.627581"
+  },
+  {
+    "id": "aa9af063-8881-4629-976e-cbb183455da1",
+    "order_id": "LUC06AD8819TRKR533000GH200525221650",
+    "branch_id": "e7a43b0a-e6fc-4a32-a2e9-18c6ccaada24",
+    "staff_id": "38c1567b-cb38-4e2e-88d0-4e18b52a2a69",
+    "user_id": "8df96cf1-9bd1-4179-b3dd-4a26d316f925",
+    "investigations": [
+      {
+        "inv_id": "d35baf6c-5a4e-44e5-817d-be9365ac94db",
+        "group_id": "b3061560-bc97-438a-bfe3-e1725511d395"
+      }
+    ],
+    "created_at": "2025-05-20T22:16:50.627581",
+    "updated_at": "2025-05-20T22:16:50.627581"
+  },
+  {
+    "id": "5cd12fde-47e6-4de9-9d1f-0d18950e1588",
+    "order_id": "THA08VI5114RAAN408232RA090225172750",
+    "branch_id": "0cbf98b3-4e64-42f6-a528-5904de0a18d0",
+    "staff_id": "144325df-695f-40c9-8cf5-69a0735a21ba",
+    "user_id": "48d5b811-869b-4e5e-ab91-0b0e72641903",
+    "investigations": [
+      {
+        "inv_id": "3d37e77b-7e42-4818-9bfa-663d7f9e2f40",
+        "group_id": "b8f888cd-ed5a-4a78-a8b3-975a8cb5927c"
+      },
+      {
+        "inv_id": "fa2d07b5-1920-4c99-901a-4d80ed981a64",
+        "group_id": "b013583c-0f64-4780-8046-85bf17741e55"
+      }
+    ],
+    "created_at": "2025-02-09T17:27:50.627581",
+    "updated_at": "2025-02-09T17:27:50.627581"
+  },
+  {
+    "id": "342b41f6-8dc8-45a6-b9ac-81ac7f565a31",
+    "order_id": "THA01KA2877MUDI397106NA020225141950",
+    "branch_id": "7e322b94-303a-49fb-ad88-b0adfbc2473a",
+    "staff_id": "314b7a7e-3640-4399-bff4-f489e58d357c",
+    "user_id": "3e12c86e-ca12-4790-9e3a-edb6dff1741e",
+    "investigations": [
+      {
+        "inv_id": "99035c8e-8dfd-46cf-af92-44446667f8f9",
+        "group_id": "40b75cd7-4a26-41ba-8595-83be583deacd"
+      }
+    ],
+    "created_at": "2025-02-02T14:19:50.627581",
+    "updated_at": "2025-02-02T14:19:50.627581"
+  },
+  {
+    "id": "321c6e04-335f-4578-a5d5-fd1e9e98ae0c",
+    "order_id": "THA08AR5717KASA195169PA201124020650",
+    "branch_id": "0cbf98b3-4e64-42f6-a528-5904de0a18d0",
+    "staff_id": "7e3819c5-2907-487f-a48f-cce3709b8776",
+    "user_id": "cbc202b8-6e48-4c2a-8d95-3042262ab07e",
+    "investigations": [
+      {
+        "inv_id": "8f9230e9-d572-4ca6-ade5-b6a83403f462",
+        "group_id": "2b0b506c-52e8-4e02-8720-ebc5baa6068d"
+      },
+      {
+        "inv_id": "b775ffde-ec54-4ff3-8ada-7e00c249b786",
+        "group_id": "96c4818f-5319-4c48-ad65-b7687b2e0a81"
+      },
+      {
+        "inv_id": "eaed6b1c-ceda-4706-8e0d-3931693d8cd2",
+        "group_id": "ea3cf07e-a2e9-4dd6-9dd6-f36d2602eba2"
+      },
+      {
+        "inv_id": "a9c6d77a-5ebe-4f6f-b0ae-5bbaf6c78601",
+        "group_id": "c1928945-5a3a-41b6-b691-52f6661d82ad"
+      }
+    ],
+    "created_at": "2024-11-20T02:06:50.627581",
+    "updated_at": "2024-11-20T02:06:50.627581"
+  },
+  {
+    "id": "27bd1695-d137-4f4d-a393-ca917c09640d",
+    "order_id": "THA01NA4470KUIR896598DE211224003650",
+    "branch_id": "7e322b94-303a-49fb-ad88-b0adfbc2473a",
+    "staff_id": "196a130f-b4f1-4c38-ae08-492bcc71c5d9",
+    "user_id": "a2f7abf5-3d72-4ac1-9a5b-0827428372f2",
+    "investigations": [
+      {
+        "inv_id": "77e67b36-74c8-4054-90af-e85201b4b86b",
+        "group_id": "22ae8b08-64c8-413e-a7d6-a2d9f876889a"
+      },
+      {
+        "inv_id": "32d53eb9-a3ee-476d-9e72-f303df733c67",
+        "group_id": "b3061560-bc97-438a-bfe3-e1725511d395"
+      }
+    ],
+    "created_at": "2024-12-21T00:36:50.627581",
+    "updated_at": "2024-12-21T00:36:50.627581"
+  },
+  {
+    "id": "01bf6f93-f4a7-48d4-a8b4-1207092b05f6",
+    "order_id": "AHM09AN7234SARE478023DE080125141950",
+    "branch_id": "1fed029d-2b25-4010-a29a-99e37636ab6f",
+    "staff_id": "fbd50ed3-6caa-4279-84a0-9e4906a91cdf",
+    "user_id": "a59cc368-6d51-4129-8d63-7043b7df0c9d",
+    "investigations": [
+      {
+        "inv_id": "e17c514c-e162-4c04-824a-4067505c4903",
+        "group_id": "5035ef6e-ab44-4822-b0bc-c4b58a2f9b50"
+      },
+      {
+        "inv_id": "8f9230e9-d572-4ca6-ade5-b6a83403f462",
+        "group_id": "96c4818f-5319-4c48-ad65-b7687b2e0a81"
+      },
+      {
+        "inv_id": "9f02d97c-d58f-4300-9373-c28616ef0852",
+        "group_id": "b9c3dadc-cf15-489a-a9ac-1f61228f8cad"
+      }
+    ],
+    "created_at": "2025-01-08T14:19:50.627581",
+    "updated_at": "2025-01-08T14:19:50.627581"
+  },
+  {
+    "id": "563f2444-8d06-4df1-9cdd-2ee2fbd9a172",
+    "order_id": "JAI05KR1191BHAN408232RA210525084950",
+    "branch_id": "90fe4d02-9a0b-4108-b788-cb1e94077c67",
+    "staff_id": "0fc4d845-9657-4e55-af74-7633b83f9443",
+    "user_id": "48d5b811-869b-4e5e-ab91-0b0e72641903",
+    "investigations": [
+      {
+        "inv_id": "77561ef8-52a4-426c-8e64-85cecb4b02fe",
+        "group_id": "b013583c-0f64-4780-8046-85bf17741e55"
+      },
+      {
+        "inv_id": "49af7800-5a3b-4b97-b31c-d6ca5a3f5f9f",
+        "group_id": "b013583c-0f64-4780-8046-85bf17741e55"
+      },
+      {
+        "inv_id": "32d53eb9-a3ee-476d-9e72-f303df733c67",
+        "group_id": "1e1ab598-088e-4925-b7c6-c9fc92377339"
+      }
+    ],
+    "created_at": "2025-05-21T08:49:50.627581",
+    "updated_at": "2025-05-21T08:49:50.627581"
+  },
+  {
+    "id": "e03da4d6-d93b-4423-90a7-23e6f12f6d14",
+    "order_id": "AHM09AR8443BOVI927818ME030525071550",
+    "branch_id": "1fed029d-2b25-4010-a29a-99e37636ab6f",
+    "staff_id": "a4ce3967-c566-4f31-a64a-11da8bb0f763",
+    "user_id": "f70a8fdd-d2cc-4bc3-9f63-8b342783e15c",
+    "investigations": [
+      {
+        "inv_id": "73a3171b-b63e-4288-af50-c74ef607a2d3",
+        "group_id": "b9c3dadc-cf15-489a-a9ac-1f61228f8cad"
+      },
+      {
+        "inv_id": "0296ab89-8577-4afe-ad31-d9ba332f5569",
+        "group_id": "b013583c-0f64-4780-8046-85bf17741e55"
+      },
+      {
+        "inv_id": "8e0b1aaa-4867-4cca-80a6-cd9552a11c7c",
+        "group_id": "40b75cd7-4a26-41ba-8595-83be583deacd"
+      }
+    ],
+    "created_at": "2025-05-03T07:15:50.627581",
+    "updated_at": "2025-05-03T07:15:50.627581"
+  },
+  {
+    "id": "9dafe655-c845-4284-aa16-56716e4672bb",
+    "order_id": "THA04AD8819TRKA458229KH110525032250",
+    "branch_id": "fc475d95-6582-4e32-bc76-3586daad0daa",
+    "staff_id": "38c1567b-cb38-4e2e-88d0-4e18b52a2a69",
+    "user_id": "35774c20-811d-4a55-becd-42148b32052f",
+    "investigations": [
+      {
+        "inv_id": "7ce58ee1-4184-48b7-bd35-c6f6c82e70c3",
+        "group_id": "d0d05f85-11b2-41bb-990d-e72f8f5d22dc"
+      },
+      {
+        "inv_id": "57d84ca9-a3ad-485e-bf0c-e3af2c603ba0",
+        "group_id": "b013583c-0f64-4780-8046-85bf17741e55"
+      },
+      {
+        "inv_id": "a33a0276-fed1-40ca-a8d5-addcca992f7f",
+        "group_id": "1238fc3b-6f63-45fb-8a95-9479829e7bbd"
+      },
+      {
+        "inv_id": "2c2204a8-51c8-4aef-aa46-0e570824fcae",
+        "group_id": "51028b81-6ac5-483a-940b-5c8ff29c11ca"
+      },
+      {
+        "inv_id": "e602525f-65d1-49d2-90fb-bb8c9700ffa1",
+        "group_id": "b013583c-0f64-4780-8046-85bf17741e55"
+      }
+    ],
+    "created_at": "2025-05-11T03:22:50.627581",
+    "updated_at": "2025-05-11T03:22:50.627581"
+  },
+  {
+    "id": "30f95317-85fa-4199-8fba-9458e536ad55",
+    "order_id": "NAG07AN7234SAVI644160KH281224021050",
+    "branch_id": "75b27ac3-ca6b-4df9-a16b-8e6836976563",
+    "staff_id": "fbd50ed3-6caa-4279-84a0-9e4906a91cdf",
+    "user_id": "76c82489-411d-4e6f-9eec-834fc0c3926c",
+    "investigations": [
+      {
+        "inv_id": "73a3171b-b63e-4288-af50-c74ef607a2d3",
+        "group_id": "b9c3dadc-cf15-489a-a9ac-1f61228f8cad"
+      },
+      {
+        "inv_id": "eaed6b1c-ceda-4706-8e0d-3931693d8cd2",
+        "group_id": "ea3cf07e-a2e9-4dd6-9dd6-f36d2602eba2"
+      }
+    ],
+    "created_at": "2024-12-28T02:10:50.627581",
+    "updated_at": "2024-12-28T02:10:50.627581"
+  },
+  {
+    "id": "a2b2a1c4-ff73-47bf-b28a-44f7377d341e",
+    "order_id": "JAI05NA1692SIVI848686KA090625182350",
+    "branch_id": "90fe4d02-9a0b-4108-b788-cb1e94077c67",
+    "staff_id": "63e49c2c-8d07-43c4-9512-5cb23e9dad39",
+    "user_id": "26022d2d-262b-49a4-9437-aca3f901a213",
+    "investigations": [
+      {
+        "inv_id": "3ff25384-613e-44da-912c-e9766a4b68c3",
+        "group_id": "ea3cf07e-a2e9-4dd6-9dd6-f36d2602eba2"
+      },
+      {
+        "inv_id": "a12e5218-bb68-4985-8ba0-ca689ca59dd8",
+        "group_id": "b013583c-0f64-4780-8046-85bf17741e55"
+      },
+      {
+        "inv_id": "16187771-714f-4a51-a305-4fede4683d09",
+        "group_id": "b3061560-bc97-438a-bfe3-e1725511d395"
+      },
+      {
+        "inv_id": "cf674d47-bbf0-4573-8ee7-f75f01a4f112",
+        "group_id": "ea3cf07e-a2e9-4dd6-9dd6-f36d2602eba2"
+      },
+      {
+        "inv_id": "57d84ca9-a3ad-485e-bf0c-e3af2c603ba0",
+        "group_id": "8b706525-5b46-4bc1-9415-c7e138e7c99f"
+      }
+    ],
+    "created_at": "2025-06-09T18:23:50.627581",
+    "updated_at": "2025-06-09T18:23:50.627581"
+  },
+  {
+    "id": "84e03ed9-33fd-4133-bf94-a9bd32cdf18e",
+    "order_id": "HYD03PA6401PAPA496826BH150924175450",
+    "branch_id": "e1143459-5d19-46d9-a5ce-9d0d1606b19d",
+    "staff_id": "0dbd9a4c-d7ec-4448-8d07-b899db53226a",
+    "user_id": "b723f2a6-f865-4dc0-a2f0-3a9339c5bf87",
+    "investigations": [
+      {
+        "inv_id": "975a370f-4a64-49df-8b7f-a9a40651c3b3",
+        "group_id": "5035ef6e-ab44-4822-b0bc-c4b58a2f9b50"
+      },
+      {
+        "inv_id": "49af7800-5a3b-4b97-b31c-d6ca5a3f5f9f",
+        "group_id": "b8f888cd-ed5a-4a78-a8b3-975a8cb5927c"
+      },
+      {
+        "inv_id": "9f02d97c-d58f-4300-9373-c28616ef0852",
+        "group_id": "1238fc3b-6f63-45fb-8a95-9479829e7bbd"
+      },
+      {
+        "inv_id": "0e68cdf3-ab89-4b5e-a393-5998e8781b4e",
+        "group_id": "01c25269-4193-41b9-afc9-f509ae85f7bc"
+      }
+    ],
+    "created_at": "2024-09-15T17:54:50.627581",
+    "updated_at": "2024-09-15T17:54:50.627581"
+  },
+  {
+    "id": "57b9b2b2-c64d-46e6-baf3-806aba27a09e",
+    "order_id": "HYD03KA2877MUKA409780SA200724180050",
+    "branch_id": "e1143459-5d19-46d9-a5ce-9d0d1606b19d",
+    "staff_id": "314b7a7e-3640-4399-bff4-f489e58d357c",
+    "user_id": "01c50e4d-6565-4f53-85b5-23e03875cd64",
+    "investigations": [
+      {
+        "inv_id": "57d84ca9-a3ad-485e-bf0c-e3af2c603ba0",
+        "group_id": "723c04b9-625e-4e84-b76a-1b79a0046770"
+      },
+      {
+        "inv_id": "b775ffde-ec54-4ff3-8ada-7e00c249b786",
+        "group_id": "96c4818f-5319-4c48-ad65-b7687b2e0a81"
+      },
+      {
+        "inv_id": "a2214b42-92f6-4a32-be8f-933cc1381c1e",
+        "group_id": "c1928945-5a3a-41b6-b691-52f6661d82ad"
+      }
+    ],
+    "created_at": "2024-07-20T18:00:50.627581",
+    "updated_at": "2024-07-20T18:00:50.627581"
+  },
+  {
+    "id": "2a13f2a7-f378-4644-b19a-db06ed0befe7",
+    "order_id": "LUC02AR5717KAAI132549GH230425064950",
+    "branch_id": "43a99605-d8a9-40bf-a78b-965336db088a",
+    "staff_id": "7e3819c5-2907-487f-a48f-cce3709b8776",
+    "user_id": "5807b50f-2cd6-4225-afc0-4a90a2f9c24b",
+    "investigations": [
+      {
+        "inv_id": "d35baf6c-5a4e-44e5-817d-be9365ac94db",
+        "group_id": "b3061560-bc97-438a-bfe3-e1725511d395"
+      },
+      {
+        "inv_id": "0296ab89-8577-4afe-ad31-d9ba332f5569",
+        "group_id": "b013583c-0f64-4780-8046-85bf17741e55"
+      },
+      {
+        "inv_id": "76799196-137d-42d0-b1ce-21c0b7eaf03e",
+        "group_id": "b8f888cd-ed5a-4a78-a8b3-975a8cb5927c"
+      },
+      {
+        "inv_id": "974c5100-1751-46f3-aa46-83d0b2624552",
+        "group_id": "5035ef6e-ab44-4822-b0bc-c4b58a2f9b50"
+      },
+      {
+        "inv_id": "9599d270-b272-42eb-b59e-03ae07627166",
+        "group_id": "96c4818f-5319-4c48-ad65-b7687b2e0a81"
+      }
+    ],
+    "created_at": "2025-04-23T06:49:50.627581",
+    "updated_at": "2025-04-23T06:49:50.627581"
+  },
+  {
+    "id": "3733a7b6-f44f-4c94-9fef-f0e3ce9c6837",
+    "order_id": "THA08VI3928KAAA400130IY300325034450",
+    "branch_id": "0cbf98b3-4e64-42f6-a528-5904de0a18d0",
+    "staff_id": "c1a10ab4-33ce-408f-ad53-ab2202622d71",
+    "user_id": "23071cd7-6b8f-46b3-991f-0eb71017dff9",
+    "investigations": [
+      {
+        "inv_id": "76799196-137d-42d0-b1ce-21c0b7eaf03e",
+        "group_id": "b8f888cd-ed5a-4a78-a8b3-975a8cb5927c"
+      },
+      {
+        "inv_id": "9f02d97c-d58f-4300-9373-c28616ef0852",
+        "group_id": "b9c3dadc-cf15-489a-a9ac-1f61228f8cad"
+      },
+      {
+        "inv_id": "0f5cb1cc-e032-4dc0-9b83-34472c27c259",
+        "group_id": "b8f888cd-ed5a-4a78-a8b3-975a8cb5927c"
+      },
+      {
+        "inv_id": "fa2d07b5-1920-4c99-901a-4d80ed981a64",
+        "group_id": "b013583c-0f64-4780-8046-85bf17741e55"
+      },
+      {
+        "inv_id": "fa25a2c8-7149-46b9-b006-3778d1537c3e",
+        "group_id": "d0d05f85-11b2-41bb-990d-e72f8f5d22dc"
+      }
+    ],
+    "created_at": "2025-03-30T03:44:50.627581",
+    "updated_at": "2025-03-30T03:44:50.627581"
+  },
+  {
+    "id": "c2cd2911-302e-450a-b70a-5780c7a5aa79",
+    "order_id": "AHM09AN4695KHAN946404GH070525192650",
+    "branch_id": "1fed029d-2b25-4010-a29a-99e37636ab6f",
+    "staff_id": "720d9e02-02fa-424e-83d7-97966343cd66",
+    "user_id": "3bce8ed2-101c-4f0c-a04c-d194edcf77f1",
+    "investigations": [
+      {
+        "inv_id": "e725f70c-0f1d-47e2-b610-0534d9c30cee",
+        "group_id": "2b0b506c-52e8-4e02-8720-ebc5baa6068d"
+      },
+      {
+        "inv_id": "77e67b36-74c8-4054-90af-e85201b4b86b",
+        "group_id": "22ae8b08-64c8-413e-a7d6-a2d9f876889a"
+      }
+    ],
+    "created_at": "2025-05-07T19:26:50.627581",
+    "updated_at": "2025-05-07T19:26:50.627581"
+  },
+  {
+    "id": "f4a09ed0-0572-48bd-bf33-624ba16934b8",
+    "order_id": "LUC10RI2489BHRI663244GU050525203350",
+    "branch_id": "9293d569-1a0c-45cf-b3e8-49d88423ea24",
+    "staff_id": "55145cf8-44c8-4862-b725-089c84a6b2fc",
+    "user_id": "13f87d4d-3474-44d1-8afe-a582c5a48813",
+    "investigations": [
+      {
+        "inv_id": "7d27db6b-e565-4421-b25c-a8cbd9ecabbf",
+        "group_id": "b013583c-0f64-4780-8046-85bf17741e55"
+      },
+      {
+        "inv_id": "f98329f9-713f-454e-9631-cf35d361da5f",
+        "group_id": "ea3cf07e-a2e9-4dd6-9dd6-f36d2602eba2"
+      },
+      {
+        "inv_id": "50898c5a-ba1e-40b7-9eba-b7c539ed231c",
+        "group_id": "a9168645-ab4a-48ea-b1a3-bd904432ebf3"
+      },
+      {
+        "inv_id": "9f02d97c-d58f-4300-9373-c28616ef0852",
+        "group_id": "1238fc3b-6f63-45fb-8a95-9479829e7bbd"
+      }
+    ],
+    "created_at": "2025-05-05T20:33:50.627581",
+    "updated_at": "2025-05-05T20:33:50.627581"
+  },
+  {
+    "id": "4e64e0b5-c081-4b2e-89a6-3731b4f73e0a",
+    "order_id": "LUC10PA6401PAVI481547DA140525084450",
+    "branch_id": "9293d569-1a0c-45cf-b3e8-49d88423ea24",
+    "staff_id": "0dbd9a4c-d7ec-4448-8d07-b899db53226a",
+    "user_id": "af5cbee9-1354-459a-99ff-975f1d1eac13",
+    "investigations": [
+      {
+        "inv_id": "cade4034-0f72-4cf1-984e-854c791bb13b",
+        "group_id": "22ae8b08-64c8-413e-a7d6-a2d9f876889a"
+      },
+      {
+        "inv_id": "3bab88b2-7470-40ab-99e6-fc8acf8a7d41",
+        "group_id": "1e1ab598-088e-4925-b7c6-c9fc92377339"
+      }
+    ],
+    "created_at": "2025-05-14T08:44:50.627581",
+    "updated_at": "2025-05-14T08:44:50.627581"
+  },
+  {
+    "id": "7acd5334-8e34-4583-9654-a65e9737a23c",
+    "order_id": "LUC02KA5464CHAN963858TR260225132650",
+    "branch_id": "43a99605-d8a9-40bf-a78b-965336db088a",
+    "staff_id": "3b58c8ac-4894-488e-a300-0f9e660192b8",
+    "user_id": "c05b37aa-a7d0-4dd4-9cc4-fec944fc757f",
+    "investigations": [
+      {
+        "inv_id": "32d53eb9-a3ee-476d-9e72-f303df733c67",
+        "group_id": "1e1ab598-088e-4925-b7c6-c9fc92377339"
+      },
+      {
+        "inv_id": "fa2d07b5-1920-4c99-901a-4d80ed981a64",
+        "group_id": "1e1ab598-088e-4925-b7c6-c9fc92377339"
+      },
+      {
+        "inv_id": "d35baf6c-5a4e-44e5-817d-be9365ac94db",
+        "group_id": "a9168645-ab4a-48ea-b1a3-bd904432ebf3"
+      }
+    ],
+    "created_at": "2025-02-26T13:26:50.627581",
+    "updated_at": "2025-02-26T13:26:50.627581"
+  },
+  {
+    "id": "2ec105b3-35f5-4832-b28d-1f426b1bcb38",
+    "order_id": "LUC10RI2489BHKA311718KA280525160750",
+    "branch_id": "9293d569-1a0c-45cf-b3e8-49d88423ea24",
+    "staff_id": "55145cf8-44c8-4862-b725-089c84a6b2fc",
+    "user_id": "e6edb383-1082-40c8-891a-e4a9e9febaa2",
+    "investigations": [
+      {
+        "inv_id": "1c05468a-84e2-49e1-b767-db65678ca658",
+        "group_id": "ea3cf07e-a2e9-4dd6-9dd6-f36d2602eba2"
+      },
+      {
+        "inv_id": "2c2204a8-51c8-4aef-aa46-0e570824fcae",
+        "group_id": "51028b81-6ac5-483a-940b-5c8ff29c11ca"
+      }
+    ],
+    "created_at": "2025-05-28T16:07:50.627581",
+    "updated_at": "2025-05-28T16:07:50.627581"
+  },
+  {
+    "id": "0a6ddabe-d2dd-466a-a560-c0163bc79682",
+    "order_id": "THA04RO8098MAKR533000GH030125141450",
+    "branch_id": "fc475d95-6582-4e32-bc76-3586daad0daa",
+    "staff_id": "514f2784-3fbe-4ec9-8124-6445b364e9fb",
+    "user_id": "8df96cf1-9bd1-4179-b3dd-4a26d316f925",
+    "investigations": [
+      {
+        "inv_id": "a8c4f6ef-69f9-4aeb-815d-6c946c592136",
+        "group_id": "8b706525-5b46-4bc1-9415-c7e138e7c99f"
+      },
+      {
+        "inv_id": "a33a0276-fed1-40ca-a8d5-addcca992f7f",
+        "group_id": "a9168645-ab4a-48ea-b1a3-bd904432ebf3"
+      },
+      {
+        "inv_id": "e9c737dc-e788-4b1b-b972-9add8ee4fdc5",
+        "group_id": "40b75cd7-4a26-41ba-8595-83be583deacd"
+      }
+    ],
+    "created_at": "2025-01-03T14:14:50.627581",
+    "updated_at": "2025-01-03T14:14:50.627581"
+  },
+  {
+    "id": "0ac31955-ab88-4969-ae9d-30a5e47f9c5b",
+    "order_id": "THA08PR2812DASI791314VE070425022050",
+    "branch_id": "0cbf98b3-4e64-42f6-a528-5904de0a18d0",
+    "staff_id": "f5b4c7f4-a30d-48db-a381-a240128698f4",
+    "user_id": "c4109bc7-3f8d-4b17-8f56-c8a208a44c1e",
+    "investigations": [
+      {
+        "inv_id": "7d27db6b-e565-4421-b25c-a8cbd9ecabbf",
+        "group_id": "b013583c-0f64-4780-8046-85bf17741e55"
+      },
+      {
+        "inv_id": "7ecee35c-2f66-4a98-b4e7-87a6f8ed2c5c",
+        "group_id": "c1928945-5a3a-41b6-b691-52f6661d82ad"
+      },
+      {
+        "inv_id": "974c5100-1751-46f3-aa46-83d0b2624552",
+        "group_id": "5035ef6e-ab44-4822-b0bc-c4b58a2f9b50"
+      }
+    ],
+    "created_at": "2025-04-07T02:20:50.627581",
+    "updated_at": "2025-04-07T02:20:50.627581"
+  },
+  {
+    "id": "6b584b2b-cbe6-4c2e-8dbd-7f91650ad660",
+    "order_id": "THA04NA8349SAKR529999JO190525055950",
+    "branch_id": "fc475d95-6582-4e32-bc76-3586daad0daa",
+    "staff_id": "bed6628e-ecb5-4217-b33f-fe5eb6adf33f",
+    "user_id": "b426a7ae-5781-4fa8-9938-ccacfc86351f",
+    "investigations": [
+      {
+        "inv_id": "16187771-714f-4a51-a305-4fede4683d09",
+        "group_id": "b3061560-bc97-438a-bfe3-e1725511d395"
+      },
+      {
+        "inv_id": "2c2204a8-51c8-4aef-aa46-0e570824fcae",
+        "group_id": "51028b81-6ac5-483a-940b-5c8ff29c11ca"
+      },
+      {
+        "inv_id": "cade4034-0f72-4cf1-984e-854c791bb13b",
+        "group_id": "22ae8b08-64c8-413e-a7d6-a2d9f876889a"
+      }
+    ],
+    "created_at": "2025-05-19T05:59:50.627581",
+    "updated_at": "2025-05-19T05:59:50.627581"
+  },
+  {
+    "id": "e5c4bf16-3b56-42ba-b110-35d2fecebda2",
+    "order_id": "AHM09KR1191BHKA219880SH081224104350",
+    "branch_id": "1fed029d-2b25-4010-a29a-99e37636ab6f",
+    "staff_id": "0fc4d845-9657-4e55-af74-7633b83f9443",
+    "user_id": "6c0a3d1e-9213-4062-bf44-d17d2ead867b",
+    "investigations": [
+      {
+        "inv_id": "16187771-714f-4a51-a305-4fede4683d09",
+        "group_id": "b3061560-bc97-438a-bfe3-e1725511d395"
+      },
+      {
+        "inv_id": "225bfe48-0586-406c-8b48-bfbc491b24ba",
+        "group_id": "8b706525-5b46-4bc1-9415-c7e138e7c99f"
+      },
+      {
+        "inv_id": "1424e6b2-d033-4080-bd3b-7009f1c2510f",
+        "group_id": "51028b81-6ac5-483a-940b-5c8ff29c11ca"
+      }
+    ],
+    "created_at": "2024-12-08T10:43:50.627581",
+    "updated_at": "2024-12-08T10:43:50.627581"
+  },
+  {
+    "id": "8a3e36ab-c9cc-499b-9139-982b6ebfa4ed",
+    "order_id": "AHM09NE3613SASA692592BH171024040750",
+    "branch_id": "1fed029d-2b25-4010-a29a-99e37636ab6f",
+    "staff_id": "f4291384-92c3-4621-9229-69809dbc2bd2",
+    "user_id": "343e9418-cd27-4333-8fae-5685f0a199d7",
+    "investigations": [
+      {
+        "inv_id": "975a370f-4a64-49df-8b7f-a9a40651c3b3",
+        "group_id": "b9c3dadc-cf15-489a-a9ac-1f61228f8cad"
+      }
+    ],
+    "created_at": "2024-10-17T04:07:50.627581",
+    "updated_at": "2024-10-17T04:07:50.627581"
+  },
+  {
+    "id": "6e6537a0-5737-4861-88ee-d6b70dd3fc94",
+    "order_id": "HYD03MY6133CHTA677105JO160425075250",
+    "branch_id": "e1143459-5d19-46d9-a5ce-9d0d1606b19d",
+    "staff_id": "7e7adf15-ea32-4fa1-97f1-3b863f5d0d5a",
+    "user_id": "7aeb53f3-5cab-412b-a4a2-e2c8e0c697ff",
+    "investigations": [
+      {
+        "inv_id": "ec22f37a-d9e6-42cc-a3e2-b1d752c6eb53",
+        "group_id": "96c4818f-5319-4c48-ad65-b7687b2e0a81"
+      },
+      {
+        "inv_id": "32d53eb9-a3ee-476d-9e72-f303df733c67",
+        "group_id": "1e1ab598-088e-4925-b7c6-c9fc92377339"
+      },
+      {
+        "inv_id": "50898c5a-ba1e-40b7-9eba-b7c539ed231c",
+        "group_id": "a9168645-ab4a-48ea-b1a3-bd904432ebf3"
+      }
+    ],
+    "created_at": "2025-04-16T07:52:50.627581",
+    "updated_at": "2025-04-16T07:52:50.627581"
+  },
+  {
+    "id": "9785dac0-2b97-4f12-b7b4-3d2381ebd518",
+    "order_id": "THA01NA1692SIKA371608TR201024061950",
+    "branch_id": "7e322b94-303a-49fb-ad88-b0adfbc2473a",
+    "staff_id": "63e49c2c-8d07-43c4-9512-5cb23e9dad39",
+    "user_id": "01d24bf6-5b1d-4964-8f16-2a685432b20a",
+    "investigations": [
+      {
+        "inv_id": "73a3171b-b63e-4288-af50-c74ef607a2d3",
+        "group_id": "a44b1931-6bc8-4734-851e-475245cb911e"
+      },
+      {
+        "inv_id": "fa2d07b5-1920-4c99-901a-4d80ed981a64",
+        "group_id": "b9c3dadc-cf15-489a-a9ac-1f61228f8cad"
+      },
+      {
+        "inv_id": "6021e149-cd4d-45ca-8930-88d742e294ec",
+        "group_id": "1238fc3b-6f63-45fb-8a95-9479829e7bbd"
+      },
+      {
+        "inv_id": "d35baf6c-5a4e-44e5-817d-be9365ac94db",
+        "group_id": "01c25269-4193-41b9-afc9-f509ae85f7bc"
+      },
+      {
+        "inv_id": "a8c4f6ef-69f9-4aeb-815d-6c946c592136",
+        "group_id": "8b706525-5b46-4bc1-9415-c7e138e7c99f"
+      }
+    ],
+    "created_at": "2024-10-20T06:19:50.627581",
+    "updated_at": "2024-10-20T06:19:50.627581"
+  },
+  {
+    "id": "fe3b5652-a4ee-45fb-a328-04aafc8f1385",
+    "order_id": "LUC02AR8443BOKA749585BO061124071750",
+    "branch_id": "43a99605-d8a9-40bf-a78b-965336db088a",
+    "staff_id": "a4ce3967-c566-4f31-a64a-11da8bb0f763",
+    "user_id": "1f0b97b9-e68b-4c3e-9de0-2035403cf9a0",
+    "investigations": [
+      {
+        "inv_id": "1c05468a-84e2-49e1-b767-db65678ca658",
+        "group_id": "c1928945-5a3a-41b6-b691-52f6661d82ad"
+      }
+    ],
+    "created_at": "2024-11-06T07:17:50.627581",
+    "updated_at": "2024-11-06T07:17:50.627581"
+  },
+  {
+    "id": "9d09c6e9-5620-4ec6-9d5d-4482bf3598c1",
+    "order_id": "JAI05KR1191BHKA576237RA050824073550",
+    "branch_id": "90fe4d02-9a0b-4108-b788-cb1e94077c67",
+    "staff_id": "0fc4d845-9657-4e55-af74-7633b83f9443",
+    "user_id": "c6b2b787-0374-4ad8-9d4c-0c2608cda54a",
+    "investigations": [
+      {
+        "inv_id": "e9c737dc-e788-4b1b-b972-9add8ee4fdc5",
+        "group_id": "723c04b9-625e-4e84-b76a-1b79a0046770"
+      },
+      {
+        "inv_id": "f2b57adc-4566-43f4-bd2a-765ed16966ae",
+        "group_id": "96c4818f-5319-4c48-ad65-b7687b2e0a81"
+      },
+      {
+        "inv_id": "974c5100-1751-46f3-aa46-83d0b2624552",
+        "group_id": "5035ef6e-ab44-4822-b0bc-c4b58a2f9b50"
+      }
+    ],
+    "created_at": "2024-08-05T07:35:50.627581",
+    "updated_at": "2024-08-05T07:35:50.627581"
+  },
+  {
+    "id": "9c4f6f49-e514-4c5d-9265-fda543f2c6f2",
+    "order_id": "HYD03AN4695KHRI663244GU210125230450",
+    "branch_id": "e1143459-5d19-46d9-a5ce-9d0d1606b19d",
+    "staff_id": "720d9e02-02fa-424e-83d7-97966343cd66",
+    "user_id": "13f87d4d-3474-44d1-8afe-a582c5a48813",
+    "investigations": [
+      {
+        "inv_id": "9f02d97c-d58f-4300-9373-c28616ef0852",
+        "group_id": "1238fc3b-6f63-45fb-8a95-9479829e7bbd"
+      },
+      {
+        "inv_id": "974c5100-1751-46f3-aa46-83d0b2624552",
+        "group_id": "5035ef6e-ab44-4822-b0bc-c4b58a2f9b50"
+      },
+      {
+        "inv_id": "975a370f-4a64-49df-8b7f-a9a40651c3b3",
+        "group_id": "b9c3dadc-cf15-489a-a9ac-1f61228f8cad"
+      },
+      {
+        "inv_id": "16187771-714f-4a51-a305-4fede4683d09",
+        "group_id": "b3061560-bc97-438a-bfe3-e1725511d395"
+      }
+    ],
+    "created_at": "2025-01-21T23:04:50.627581",
+    "updated_at": "2025-01-21T23:04:50.627581"
+  },
+  {
+    "id": "a7d6a508-9d40-410c-a91c-100ca1dcdd0a",
+    "order_id": "THA01NE3613SAAN395811CH121124134850",
+    "branch_id": "7e322b94-303a-49fb-ad88-b0adfbc2473a",
+    "staff_id": "f4291384-92c3-4621-9229-69809dbc2bd2",
+    "user_id": "9d21d3a3-5c90-4751-bbf8-a422d49ddb65",
+    "investigations": [
+      {
+        "inv_id": "a9c6d77a-5ebe-4f6f-b0ae-5bbaf6c78601",
+        "group_id": "c1928945-5a3a-41b6-b691-52f6661d82ad"
+      },
+      {
+        "inv_id": "2c2204a8-51c8-4aef-aa46-0e570824fcae",
+        "group_id": "51028b81-6ac5-483a-940b-5c8ff29c11ca"
+      }
+    ],
+    "created_at": "2024-11-12T13:48:50.627581",
+    "updated_at": "2024-11-12T13:48:50.627581"
+  },
+  {
+    "id": "233dc843-32d7-4140-b881-09a47abd52c9",
+    "order_id": "LUC02PA6852KHAN963858TR040924144650",
+    "branch_id": "43a99605-d8a9-40bf-a78b-965336db088a",
+    "staff_id": "8957c167-c09f-4d18-99eb-ed0edca67b35",
+    "user_id": "c05b37aa-a7d0-4dd4-9cc4-fec944fc757f",
+    "investigations": [
+      {
+        "inv_id": "eacd815b-52f6-414b-9814-6e1214d73bc0",
+        "group_id": "1e1ab598-088e-4925-b7c6-c9fc92377339"
+      }
+    ],
+    "created_at": "2024-09-04T14:46:50.627581",
+    "updated_at": "2024-09-04T14:46:50.627581"
+  },
+  {
+    "id": "637e6d33-3107-4c31-8a7b-31b89f9b5746",
+    "order_id": "LUC02PA6401PASI644043KA040525150250",
+    "branch_id": "43a99605-d8a9-40bf-a78b-965336db088a",
+    "staff_id": "0dbd9a4c-d7ec-4448-8d07-b899db53226a",
+    "user_id": "b7478837-7b04-4d77-880a-483ed4461188",
+    "investigations": [
+      {
+        "inv_id": "50898c5a-ba1e-40b7-9eba-b7c539ed231c",
+        "group_id": "a9168645-ab4a-48ea-b1a3-bd904432ebf3"
+      },
+      {
+        "inv_id": "c8d2ce34-6bab-4be5-87d0-906c28f59080",
+        "group_id": "a44b1931-6bc8-4734-851e-475245cb911e"
+      },
+      {
+        "inv_id": "0e68cdf3-ab89-4b5e-a393-5998e8781b4e",
+        "group_id": "01c25269-4193-41b9-afc9-f509ae85f7bc"
+      },
+      {
+        "inv_id": "7ce58ee1-4184-48b7-bd35-c6f6c82e70c3",
+        "group_id": "d0d05f85-11b2-41bb-990d-e72f8f5d22dc"
+      }
+    ],
+    "created_at": "2025-05-04T15:02:50.627581",
+    "updated_at": "2025-05-04T15:02:50.627581"
+  },
+  {
+    "id": "000e16d2-0428-4e8d-b0ba-c52a6ca0ce58",
+    "order_id": "HYD03AA4737SHKA311718KA020525021550",
+    "branch_id": "e1143459-5d19-46d9-a5ce-9d0d1606b19d",
+    "staff_id": "9d6b9e27-5975-48dd-bdcf-b7a19b3c8b01",
+    "user_id": "e6edb383-1082-40c8-891a-e4a9e9febaa2",
+    "investigations": [
+      {
+        "inv_id": "96de27cf-af32-485f-b2f6-770cf15b9c48",
+        "group_id": "40b75cd7-4a26-41ba-8595-83be583deacd"
+      },
+      {
+        "inv_id": "57d84ca9-a3ad-485e-bf0c-e3af2c603ba0",
+        "group_id": "723c04b9-625e-4e84-b76a-1b79a0046770"
+      },
+      {
+        "inv_id": "9f02d97c-d58f-4300-9373-c28616ef0852",
+        "group_id": "1238fc3b-6f63-45fb-8a95-9479829e7bbd"
+      }
+    ],
+    "created_at": "2025-05-02T02:15:50.627581",
+    "updated_at": "2025-05-02T02:15:50.627581"
+  },
+  {
+    "id": "a13ec4e9-51b4-484a-b16b-298144fa6488",
+    "order_id": "LUC10AN7234SAKR254985GH030225065450",
+    "branch_id": "9293d569-1a0c-45cf-b3e8-49d88423ea24",
+    "staff_id": "fbd50ed3-6caa-4279-84a0-9e4906a91cdf",
+    "user_id": "d5278d2c-8b58-4b94-8837-13cc3050cc1e",
+    "investigations": [
+      {
+        "inv_id": "f98329f9-713f-454e-9631-cf35d361da5f",
+        "group_id": "ea3cf07e-a2e9-4dd6-9dd6-f36d2602eba2"
+      },
+      {
+        "inv_id": "0e68cdf3-ab89-4b5e-a393-5998e8781b4e",
+        "group_id": "b013583c-0f64-4780-8046-85bf17741e55"
+      },
+      {
+        "inv_id": "2c2204a8-51c8-4aef-aa46-0e570824fcae",
+        "group_id": "51028b81-6ac5-483a-940b-5c8ff29c11ca"
+      },
+      {
+        "inv_id": "7d27db6b-e565-4421-b25c-a8cbd9ecabbf",
+        "group_id": "b013583c-0f64-4780-8046-85bf17741e55"
+      }
+    ],
+    "created_at": "2025-02-03T06:54:50.627581",
+    "updated_at": "2025-02-03T06:54:50.627581"
+  },
+  {
+    "id": "90c245bc-bc92-4fd7-a3e2-6b1855475cae",
+    "order_id": "JAI05PA6852KHKR254985GH030425080550",
+    "branch_id": "90fe4d02-9a0b-4108-b788-cb1e94077c67",
+    "staff_id": "8957c167-c09f-4d18-99eb-ed0edca67b35",
+    "user_id": "d5278d2c-8b58-4b94-8837-13cc3050cc1e",
+    "investigations": [
+      {
+        "inv_id": "7d27db6b-e565-4421-b25c-a8cbd9ecabbf",
+        "group_id": "723c04b9-625e-4e84-b76a-1b79a0046770"
+      },
+      {
+        "inv_id": "3bab88b2-7470-40ab-99e6-fc8acf8a7d41",
+        "group_id": "1e1ab598-088e-4925-b7c6-c9fc92377339"
+      },
+      {
+        "inv_id": "9599d270-b272-42eb-b59e-03ae07627166",
+        "group_id": "96c4818f-5319-4c48-ad65-b7687b2e0a81"
+      },
+      {
+        "inv_id": "57d84ca9-a3ad-485e-bf0c-e3af2c603ba0",
+        "group_id": "723c04b9-625e-4e84-b76a-1b79a0046770"
+      },
+      {
+        "inv_id": "a2214b42-92f6-4a32-be8f-933cc1381c1e",
+        "group_id": "40b75cd7-4a26-41ba-8595-83be583deacd"
+      }
+    ],
+    "created_at": "2025-04-03T08:05:50.627581",
+    "updated_at": "2025-04-03T08:05:50.627581"
+  },
+  {
+    "id": "fd801c7a-760c-4c6f-8893-decf77014119",
+    "order_id": "THA08AN7234SAAN354069KH260724025550",
+    "branch_id": "0cbf98b3-4e64-42f6-a528-5904de0a18d0",
+    "staff_id": "fbd50ed3-6caa-4279-84a0-9e4906a91cdf",
+    "user_id": "ac6d1909-1cc8-4ff9-a45f-cb05bfccd259",
+    "investigations": [
+      {
+        "inv_id": "77561ef8-52a4-426c-8e64-85cecb4b02fe",
+        "group_id": "c1928945-5a3a-41b6-b691-52f6661d82ad"
+      }
+    ],
+    "created_at": "2024-07-26T02:55:50.627581",
+    "updated_at": "2024-07-26T02:55:50.627581"
+  },
+  {
+    "id": "a14a894b-fc6e-4c11-9e37-2e7ed92094b4",
+    "order_id": "AHM09DI8915REVI481547DA021024071950",
+    "branch_id": "1fed029d-2b25-4010-a29a-99e37636ab6f",
+    "staff_id": "54254c5f-8347-4734-9eb3-b40b5bba3e41",
+    "user_id": "af5cbee9-1354-459a-99ff-975f1d1eac13",
+    "investigations": [
+      {
+        "inv_id": "f98329f9-713f-454e-9631-cf35d361da5f",
+        "group_id": "ea3cf07e-a2e9-4dd6-9dd6-f36d2602eba2"
+      },
+      {
+        "inv_id": "e725f70c-0f1d-47e2-b610-0534d9c30cee",
+        "group_id": "b9c3dadc-cf15-489a-a9ac-1f61228f8cad"
+      },
+      {
+        "inv_id": "8f9230e9-d572-4ca6-ade5-b6a83403f462",
+        "group_id": "2b0b506c-52e8-4e02-8720-ebc5baa6068d"
+      },
+      {
+        "inv_id": "3d37e77b-7e42-4818-9bfa-663d7f9e2f40",
+        "group_id": "b8f888cd-ed5a-4a78-a8b3-975a8cb5927c"
+      },
+      {
+        "inv_id": "1e990e56-1b13-4fcd-a56b-6a557794b4bd",
+        "group_id": "d0d05f85-11b2-41bb-990d-e72f8f5d22dc"
+      }
+    ],
+    "created_at": "2024-10-02T07:19:50.627581",
+    "updated_at": "2024-10-02T07:19:50.627581"
+  },
+  {
+    "id": "35b53744-f136-4554-8154-642c358d1bcd",
+    "order_id": "THA01AN7752SHSA692592BH140325075150",
+    "branch_id": "7e322b94-303a-49fb-ad88-b0adfbc2473a",
+    "staff_id": "20194af4-12b5-4e79-b53d-1d3ecc52f26f",
+    "user_id": "343e9418-cd27-4333-8fae-5685f0a199d7",
+    "investigations": [
+      {
+        "inv_id": "96de27cf-af32-485f-b2f6-770cf15b9c48",
+        "group_id": "c1928945-5a3a-41b6-b691-52f6661d82ad"
+      },
+      {
+        "inv_id": "1e990e56-1b13-4fcd-a56b-6a557794b4bd",
+        "group_id": "d0d05f85-11b2-41bb-990d-e72f8f5d22dc"
+      },
+      {
+        "inv_id": "32d53eb9-a3ee-476d-9e72-f303df733c67",
+        "group_id": "b3061560-bc97-438a-bfe3-e1725511d395"
+      },
+      {
+        "inv_id": "73a3171b-b63e-4288-af50-c74ef607a2d3",
+        "group_id": "b9c3dadc-cf15-489a-a9ac-1f61228f8cad"
+      },
+      {
+        "inv_id": "3bab88b2-7470-40ab-99e6-fc8acf8a7d41",
+        "group_id": "96c4818f-5319-4c48-ad65-b7687b2e0a81"
+      }
+    ],
+    "created_at": "2025-03-14T07:51:50.627581",
+    "updated_at": "2025-03-14T07:51:50.627581"
+  },
+  {
+    "id": "adc5d295-2ff4-4027-9904-020250a8cb93",
+    "order_id": "LUC06AA4737SHRO893975TR190425222150",
+    "branch_id": "e7a43b0a-e6fc-4a32-a2e9-18c6ccaada24",
+    "staff_id": "9d6b9e27-5975-48dd-bdcf-b7a19b3c8b01",
+    "user_id": "9283f1c5-e9e9-4982-87aa-44af052e8307",
+    "investigations": [
+      {
+        "inv_id": "975a370f-4a64-49df-8b7f-a9a40651c3b3",
+        "group_id": "5035ef6e-ab44-4822-b0bc-c4b58a2f9b50"
+      },
+      {
+        "inv_id": "0f5cb1cc-e032-4dc0-9b83-34472c27c259",
+        "group_id": "a9168645-ab4a-48ea-b1a3-bd904432ebf3"
+      },
+      {
+        "inv_id": "50898c5a-ba1e-40b7-9eba-b7c539ed231c",
+        "group_id": "a9168645-ab4a-48ea-b1a3-bd904432ebf3"
+      },
+      {
+        "inv_id": "e725f70c-0f1d-47e2-b610-0534d9c30cee",
+        "group_id": "b9c3dadc-cf15-489a-a9ac-1f61228f8cad"
+      }
+    ],
+    "created_at": "2025-04-19T22:21:50.627581",
+    "updated_at": "2025-04-19T22:21:50.627581"
+  },
+  {
+    "id": "ed5aa27f-8f86-42a2-ac03-db19cc945e88",
+    "order_id": "NAG07VI3928KAME367013GH080425142750",
+    "branch_id": "75b27ac3-ca6b-4df9-a16b-8e6836976563",
+    "staff_id": "c1a10ab4-33ce-408f-ad53-ab2202622d71",
+    "user_id": "48708404-3e6e-4bc6-b9d6-a5ba9e88e988",
+    "investigations": [
+      {
+        "inv_id": "3ff25384-613e-44da-912c-e9766a4b68c3",
+        "group_id": "ea3cf07e-a2e9-4dd6-9dd6-f36d2602eba2"
+      },
+      {
+        "inv_id": "69736a18-f751-4ddc-99ae-c04a665c92d3",
+        "group_id": "723c04b9-625e-4e84-b76a-1b79a0046770"
+      }
+    ],
+    "created_at": "2025-04-08T14:27:50.627581",
+    "updated_at": "2025-04-08T14:27:50.627581"
+  },
+  {
+    "id": "a078a6d6-62bf-4014-81c5-efab32a05a3f",
+    "order_id": "THA01PA6401PATA540826ME280624081850",
+    "branch_id": "7e322b94-303a-49fb-ad88-b0adfbc2473a",
+    "staff_id": "0dbd9a4c-d7ec-4448-8d07-b899db53226a",
+    "user_id": "6950a163-6a96-4243-8d9b-55a0d4c72fb3",
+    "investigations": [
+      {
+        "inv_id": "1c05468a-84e2-49e1-b767-db65678ca658",
+        "group_id": "c1928945-5a3a-41b6-b691-52f6661d82ad"
+      },
+      {
+        "inv_id": "99035c8e-8dfd-46cf-af92-44446667f8f9",
+        "group_id": "c1928945-5a3a-41b6-b691-52f6661d82ad"
+      },
+      {
+        "inv_id": "9f02d97c-d58f-4300-9373-c28616ef0852",
+        "group_id": "b9c3dadc-cf15-489a-a9ac-1f61228f8cad"
+      },
+      {
+        "inv_id": "57d84ca9-a3ad-485e-bf0c-e3af2c603ba0",
+        "group_id": "b013583c-0f64-4780-8046-85bf17741e55"
+      },
+      {
+        "inv_id": "a12e5218-bb68-4985-8ba0-ca689ca59dd8",
+        "group_id": "b013583c-0f64-4780-8046-85bf17741e55"
+      }
+    ],
+    "created_at": "2024-06-28T08:18:50.627581",
+    "updated_at": "2024-06-28T08:18:50.627581"
+  },
+  {
+    "id": "e6d19b4a-7e7b-4b72-88ce-f832c8f8aefc",
+    "order_id": "JAI05PA6852KHVI923579JO101124121050",
+    "branch_id": "90fe4d02-9a0b-4108-b788-cb1e94077c67",
+    "staff_id": "8957c167-c09f-4d18-99eb-ed0edca67b35",
+    "user_id": "e549ed04-8cf2-4593-9f09-847bfad8bdd5",
+    "investigations": [
+      {
+        "inv_id": "e602525f-65d1-49d2-90fb-bb8c9700ffa1",
+        "group_id": "b013583c-0f64-4780-8046-85bf17741e55"
+      },
+      {
+        "inv_id": "e17c514c-e162-4c04-824a-4067505c4903",
+        "group_id": "d0d05f85-11b2-41bb-990d-e72f8f5d22dc"
+      },
+      {
+        "inv_id": "a33a0276-fed1-40ca-a8d5-addcca992f7f",
+        "group_id": "a9168645-ab4a-48ea-b1a3-bd904432ebf3"
+      }
+    ],
+    "created_at": "2024-11-10T12:10:50.627581",
+    "updated_at": "2024-11-10T12:10:50.627581"
+  },
+  {
+    "id": "1ecf0f2c-7286-4d8c-8b94-d75c4578bbf4",
+    "order_id": "NAG07IR2387RAAD988778GH150125014250",
+    "branch_id": "75b27ac3-ca6b-4df9-a16b-8e6836976563",
+    "staff_id": "e3d31d02-d01c-47e3-acb4-9d8808e6f430",
+    "user_id": "171c44a1-b331-48f3-abf8-5141598176c5",
+    "investigations": [
+      {
+        "inv_id": "3bab88b2-7470-40ab-99e6-fc8acf8a7d41",
+        "group_id": "1e1ab598-088e-4925-b7c6-c9fc92377339"
+      }
+    ],
+    "created_at": "2025-01-15T01:42:50.627581",
+    "updated_at": "2025-01-15T01:42:50.627581"
+  },
+  {
+    "id": "9bebc0f5-6d02-4be7-a6f3-ea6d98e051ea",
+    "order_id": "LUC02PA6401PASI157333NA090425012050",
+    "branch_id": "43a99605-d8a9-40bf-a78b-965336db088a",
+    "staff_id": "0dbd9a4c-d7ec-4448-8d07-b899db53226a",
+    "user_id": "ea2bc5d0-61b0-488d-8ac8-288cc91bc25a",
+    "investigations": [
+      {
+        "inv_id": "eacd815b-52f6-414b-9814-6e1214d73bc0",
+        "group_id": "d0d05f85-11b2-41bb-990d-e72f8f5d22dc"
+      },
+      {
+        "inv_id": "f98329f9-713f-454e-9631-cf35d361da5f",
+        "group_id": "ea3cf07e-a2e9-4dd6-9dd6-f36d2602eba2"
+      },
+      {
+        "inv_id": "96de27cf-af32-485f-b2f6-770cf15b9c48",
+        "group_id": "40b75cd7-4a26-41ba-8595-83be583deacd"
+      }
+    ],
+    "created_at": "2025-04-09T01:20:50.627581",
+    "updated_at": "2025-04-09T01:20:50.627581"
+  },
+  {
+    "id": "5c5cbd51-64c9-4644-9da0-c1862326e03a",
+    "order_id": "THA04AR5717KAIS868748BH110625222150",
+    "branch_id": "fc475d95-6582-4e32-bc76-3586daad0daa",
+    "staff_id": "7e3819c5-2907-487f-a48f-cce3709b8776",
+    "user_id": "dc50c531-0d2d-4134-a456-0cf29ba8ac4c",
+    "investigations": [
+      {
+        "inv_id": "0e68cdf3-ab89-4b5e-a393-5998e8781b4e",
+        "group_id": "b013583c-0f64-4780-8046-85bf17741e55"
+      },
+      {
+        "inv_id": "974c5100-1751-46f3-aa46-83d0b2624552",
+        "group_id": "a9168645-ab4a-48ea-b1a3-bd904432ebf3"
+      },
+      {
+        "inv_id": "a12e5218-bb68-4985-8ba0-ca689ca59dd8",
+        "group_id": "b013583c-0f64-4780-8046-85bf17741e55"
+      }
+    ],
+    "created_at": "2025-06-11T22:21:50.627581",
+    "updated_at": "2025-06-11T22:21:50.627581"
+  },
+  {
+    "id": "4ea40295-3d7f-4189-90e7-29b408b35f1f",
+    "order_id": "AHM09IR5704VEVI923579JO230225162850",
+    "branch_id": "1fed029d-2b25-4010-a29a-99e37636ab6f",
+    "staff_id": "86fe7053-810f-4957-b289-8612202e8978",
+    "user_id": "e549ed04-8cf2-4593-9f09-847bfad8bdd5",
+    "investigations": [
+      {
+        "inv_id": "8f9230e9-d572-4ca6-ade5-b6a83403f462",
+        "group_id": "2b0b506c-52e8-4e02-8720-ebc5baa6068d"
+      },
+      {
+        "inv_id": "c8d2ce34-6bab-4be5-87d0-906c28f59080",
+        "group_id": "a44b1931-6bc8-4734-851e-475245cb911e"
+      },
+      {
+        "inv_id": "eacd815b-52f6-414b-9814-6e1214d73bc0",
+        "group_id": "1e1ab598-088e-4925-b7c6-c9fc92377339"
+      },
+      {
+        "inv_id": "fa25a2c8-7149-46b9-b006-3778d1537c3e",
+        "group_id": "d0d05f85-11b2-41bb-990d-e72f8f5d22dc"
+      },
+      {
+        "inv_id": "57d84ca9-a3ad-485e-bf0c-e3af2c603ba0",
+        "group_id": "8b706525-5b46-4bc1-9415-c7e138e7c99f"
+      }
+    ],
+    "created_at": "2025-02-23T16:28:50.627581",
+    "updated_at": "2025-02-23T16:28:50.627581"
+  },
+  {
+    "id": "44c930b3-eb43-48f4-98e8-4e8987c30080",
+    "order_id": "JAI05MY6133CHRE691033IY220325082050",
+    "branch_id": "90fe4d02-9a0b-4108-b788-cb1e94077c67",
+    "staff_id": "7e7adf15-ea32-4fa1-97f1-3b863f5d0d5a",
+    "user_id": "734b5e59-43f2-46b1-bf57-b41bf7e949e4",
+    "investigations": [
+      {
+        "inv_id": "99035c8e-8dfd-46cf-af92-44446667f8f9",
+        "group_id": "40b75cd7-4a26-41ba-8595-83be583deacd"
+      },
+      {
+        "inv_id": "0e68cdf3-ab89-4b5e-a393-5998e8781b4e",
+        "group_id": "b8f888cd-ed5a-4a78-a8b3-975a8cb5927c"
+      },
+      {
+        "inv_id": "57d84ca9-a3ad-485e-bf0c-e3af2c603ba0",
+        "group_id": "723c04b9-625e-4e84-b76a-1b79a0046770"
+      },
+      {
+        "inv_id": "e30db047-1a1e-4009-ba11-e0f10650e97e",
+        "group_id": "1238fc3b-6f63-45fb-8a95-9479829e7bbd"
+      }
+    ],
+    "created_at": "2025-03-22T08:20:50.627581",
+    "updated_at": "2025-03-22T08:20:50.627581"
+  },
+  {
+    "id": "7ed76c44-106e-4107-9f60-c9397f715438",
+    "order_id": "LUC10NA4470KUSI690850RE120924070750",
+    "branch_id": "9293d569-1a0c-45cf-b3e8-49d88423ea24",
+    "staff_id": "196a130f-b4f1-4c38-ae08-492bcc71c5d9",
+    "user_id": "4c4817f7-5c20-4fb8-a340-f004c8ddbc07",
+    "investigations": [
+      {
+        "inv_id": "0296ab89-8577-4afe-ad31-d9ba332f5569",
+        "group_id": "b013583c-0f64-4780-8046-85bf17741e55"
+      },
+      {
+        "inv_id": "c8d2ce34-6bab-4be5-87d0-906c28f59080",
+        "group_id": "723c04b9-625e-4e84-b76a-1b79a0046770"
+      },
+      {
+        "inv_id": "a8c4f6ef-69f9-4aeb-815d-6c946c592136",
+        "group_id": "8b706525-5b46-4bc1-9415-c7e138e7c99f"
+      },
+      {
+        "inv_id": "6021e149-cd4d-45ca-8930-88d742e294ec",
+        "group_id": "1238fc3b-6f63-45fb-8a95-9479829e7bbd"
+      }
+    ],
+    "created_at": "2024-09-12T07:07:50.627581",
+    "updated_at": "2024-09-12T07:07:50.627581"
+  },
+  {
+    "id": "adf18b6d-3ca2-46d0-820b-67c956fc5c56",
+    "order_id": "NAG07KR1191BHPA407714VE210425185950",
+    "branch_id": "75b27ac3-ca6b-4df9-a16b-8e6836976563",
+    "staff_id": "0fc4d845-9657-4e55-af74-7633b83f9443",
+    "user_id": "41c3be7b-7575-4f70-b931-aff550d6c9ff",
+    "investigations": [
+      {
+        "inv_id": "9102385c-c92a-4339-922a-dae7e573eeef",
+        "group_id": "b3061560-bc97-438a-bfe3-e1725511d395"
+      },
+      {
+        "inv_id": "9599d270-b272-42eb-b59e-03ae07627166",
+        "group_id": "96c4818f-5319-4c48-ad65-b7687b2e0a81"
+      },
+      {
+        "inv_id": "50898c5a-ba1e-40b7-9eba-b7c539ed231c",
+        "group_id": "a9168645-ab4a-48ea-b1a3-bd904432ebf3"
+      }
+    ],
+    "created_at": "2025-04-21T18:59:50.627581",
+    "updated_at": "2025-04-21T18:59:50.627581"
+  },
+  {
+    "id": "11b7e40f-faea-41af-a1ba-2bf07f016d6e",
+    "order_id": "THA01VI4422SHAD988778GH130824163650",
+    "branch_id": "7e322b94-303a-49fb-ad88-b0adfbc2473a",
+    "staff_id": "8c534f0f-52c3-4951-9c35-629bd2b00e17",
+    "user_id": "171c44a1-b331-48f3-abf8-5141598176c5",
+    "investigations": [
+      {
+        "inv_id": "9599d270-b272-42eb-b59e-03ae07627166",
+        "group_id": "22ae8b08-64c8-413e-a7d6-a2d9f876889a"
+      },
+      {
+        "inv_id": "0f5cb1cc-e032-4dc0-9b83-34472c27c259",
+        "group_id": "a44b1931-6bc8-4734-851e-475245cb911e"
+      },
+      {
+        "inv_id": "a12e5218-bb68-4985-8ba0-ca689ca59dd8",
+        "group_id": "b013583c-0f64-4780-8046-85bf17741e55"
+      },
+      {
+        "inv_id": "2c2204a8-51c8-4aef-aa46-0e570824fcae",
+        "group_id": "51028b81-6ac5-483a-940b-5c8ff29c11ca"
+      }
+    ],
+    "created_at": "2024-08-13T16:36:50.627581",
+    "updated_at": "2024-08-13T16:36:50.627581"
+  },
+  {
+    "id": "37ebf224-399c-43eb-a0c6-70812956118b",
+    "order_id": "NAG07AR5717KAKA543108NA190525234450",
+    "branch_id": "75b27ac3-ca6b-4df9-a16b-8e6836976563",
+    "staff_id": "7e3819c5-2907-487f-a48f-cce3709b8776",
+    "user_id": "c647b7a0-a928-4065-95b4-9fc7894384f8",
+    "investigations": [
+      {
+        "inv_id": "7ecee35c-2f66-4a98-b4e7-87a6f8ed2c5c",
+        "group_id": "40b75cd7-4a26-41ba-8595-83be583deacd"
+      },
+      {
+        "inv_id": "6021e149-cd4d-45ca-8930-88d742e294ec",
+        "group_id": "1e1ab598-088e-4925-b7c6-c9fc92377339"
+      }
+    ],
+    "created_at": "2025-05-19T23:44:50.627581",
+    "updated_at": "2025-05-19T23:44:50.627581"
+  },
+  {
+    "id": "f8e62c5c-bb63-4f24-82f5-24ae0b4bc9ea",
+    "order_id": "THA04MY6133CHKA749585BO120425123550",
+    "branch_id": "fc475d95-6582-4e32-bc76-3586daad0daa",
+    "staff_id": "7e7adf15-ea32-4fa1-97f1-3b863f5d0d5a",
+    "user_id": "1f0b97b9-e68b-4c3e-9de0-2035403cf9a0",
+    "investigations": [
+      {
+        "inv_id": "975a370f-4a64-49df-8b7f-a9a40651c3b3",
+        "group_id": "b9c3dadc-cf15-489a-a9ac-1f61228f8cad"
+      }
+    ],
+    "created_at": "2025-04-12T12:35:50.627581",
+    "updated_at": "2025-04-12T12:35:50.627581"
+  },
+  {
+    "id": "4aa952ab-7875-4313-bb85-865de5524990",
+    "order_id": "THA01PA6852KHPR667203RA100225125950",
+    "branch_id": "7e322b94-303a-49fb-ad88-b0adfbc2473a",
+    "staff_id": "8957c167-c09f-4d18-99eb-ed0edca67b35",
+    "user_id": "e7b9006c-36af-454f-be77-8c2cfc0bc572",
+    "investigations": [
+      {
+        "inv_id": "e17c514c-e162-4c04-824a-4067505c4903",
+        "group_id": "5035ef6e-ab44-4822-b0bc-c4b58a2f9b50"
+      }
+    ],
+    "created_at": "2025-02-10T12:59:50.627581",
+    "updated_at": "2025-02-10T12:59:50.627581"
+  },
+  {
+    "id": "aa2adb99-78ca-4c5e-af72-c42762a152ad",
+    "order_id": "THA01PR2812DARE988186KU250624114650",
+    "branch_id": "7e322b94-303a-49fb-ad88-b0adfbc2473a",
+    "staff_id": "f5b4c7f4-a30d-48db-a381-a240128698f4",
+    "user_id": "6e50698d-8099-4e2a-b134-9ce9bd31cb97",
+    "investigations": [
+      {
+        "inv_id": "f98329f9-713f-454e-9631-cf35d361da5f",
+        "group_id": "ea3cf07e-a2e9-4dd6-9dd6-f36d2602eba2"
+      },
+      {
+        "inv_id": "77e67b36-74c8-4054-90af-e85201b4b86b",
+        "group_id": "22ae8b08-64c8-413e-a7d6-a2d9f876889a"
+      },
+      {
+        "inv_id": "7ecee35c-2f66-4a98-b4e7-87a6f8ed2c5c",
+        "group_id": "40b75cd7-4a26-41ba-8595-83be583deacd"
+      },
+      {
+        "inv_id": "16187771-714f-4a51-a305-4fede4683d09",
+        "group_id": "b3061560-bc97-438a-bfe3-e1725511d395"
+      },
+      {
+        "inv_id": "7ce58ee1-4184-48b7-bd35-c6f6c82e70c3",
+        "group_id": "d0d05f85-11b2-41bb-990d-e72f8f5d22dc"
+      }
+    ],
+    "created_at": "2024-06-25T11:46:50.627581",
+    "updated_at": "2024-06-25T11:46:50.627581"
+  },
+  {
+    "id": "6fa4333f-1d7a-43f7-b8e1-f891f4cfc0d3",
+    "order_id": "THA08NE3613SASA433269VE160724181250",
+    "branch_id": "0cbf98b3-4e64-42f6-a528-5904de0a18d0",
+    "staff_id": "f4291384-92c3-4621-9229-69809dbc2bd2",
+    "user_id": "0291c34c-39ce-4542-b3a3-e2884825e06a",
+    "investigations": [
+      {
+        "inv_id": "a33a0276-fed1-40ca-a8d5-addcca992f7f",
+        "group_id": "1238fc3b-6f63-45fb-8a95-9479829e7bbd"
+      },
+      {
+        "inv_id": "9102385c-c92a-4339-922a-dae7e573eeef",
+        "group_id": "ea3cf07e-a2e9-4dd6-9dd6-f36d2602eba2"
+      },
+      {
+        "inv_id": "cf674d47-bbf0-4573-8ee7-f75f01a4f112",
+        "group_id": "01c25269-4193-41b9-afc9-f509ae85f7bc"
+      },
+      {
+        "inv_id": "1c05468a-84e2-49e1-b767-db65678ca658",
+        "group_id": "c1928945-5a3a-41b6-b691-52f6661d82ad"
+      }
+    ],
+    "created_at": "2024-07-16T18:12:50.627581",
+    "updated_at": "2024-07-16T18:12:50.627581"
+  },
+  {
+    "id": "8ca0cc1d-ffe4-4234-9cb3-dd15f717c1af",
+    "order_id": "LUC10AN4695KHMY336508NA280525134250",
+    "branch_id": "9293d569-1a0c-45cf-b3e8-49d88423ea24",
+    "staff_id": "720d9e02-02fa-424e-83d7-97966343cd66",
+    "user_id": "685d8c56-51f8-4ed2-a167-8acc2661985e",
+    "investigations": [
+      {
+        "inv_id": "e9c737dc-e788-4b1b-b972-9add8ee4fdc5",
+        "group_id": "723c04b9-625e-4e84-b76a-1b79a0046770"
+      }
+    ],
+    "created_at": "2025-05-28T13:42:50.627581",
+    "updated_at": "2025-05-28T13:42:50.627581"
+  },
+  {
+    "id": "2720157f-5ec4-4b1f-90f2-78c59367f3e1",
+    "order_id": "THA01IR5704VEKR254985GH060924170050",
+    "branch_id": "7e322b94-303a-49fb-ad88-b0adfbc2473a",
+    "staff_id": "86fe7053-810f-4957-b289-8612202e8978",
+    "user_id": "d5278d2c-8b58-4b94-8837-13cc3050cc1e",
+    "investigations": [
+      {
+        "inv_id": "77e67b36-74c8-4054-90af-e85201b4b86b",
+        "group_id": "22ae8b08-64c8-413e-a7d6-a2d9f876889a"
+      },
+      {
+        "inv_id": "9f02d97c-d58f-4300-9373-c28616ef0852",
+        "group_id": "b9c3dadc-cf15-489a-a9ac-1f61228f8cad"
+      }
+    ],
+    "created_at": "2024-09-06T17:00:50.627581",
+    "updated_at": "2024-09-06T17:00:50.627581"
+  },
+  {
+    "id": "bb3c68a9-8152-410b-b473-7967985d2df0",
+    "order_id": "NAG07NA4470KUAN408232RA290325122550",
+    "branch_id": "75b27ac3-ca6b-4df9-a16b-8e6836976563",
+    "staff_id": "196a130f-b4f1-4c38-ae08-492bcc71c5d9",
+    "user_id": "48d5b811-869b-4e5e-ab91-0b0e72641903",
+    "investigations": [
+      {
+        "inv_id": "69736a18-f751-4ddc-99ae-c04a665c92d3",
+        "group_id": "723c04b9-625e-4e84-b76a-1b79a0046770"
+      }
+    ],
+    "created_at": "2025-03-29T12:25:50.627581",
+    "updated_at": "2025-03-29T12:25:50.627581"
+  },
+  {
+    "id": "2a4aa404-7997-4a5f-a2ff-3226864532b6",
+    "order_id": "LUC02AR5717KASI690850RE010724230350",
+    "branch_id": "43a99605-d8a9-40bf-a78b-965336db088a",
+    "staff_id": "7e3819c5-2907-487f-a48f-cce3709b8776",
+    "user_id": "4c4817f7-5c20-4fb8-a340-f004c8ddbc07",
+    "investigations": [
+      {
+        "inv_id": "0f5cb1cc-e032-4dc0-9b83-34472c27c259",
+        "group_id": "a44b1931-6bc8-4734-851e-475245cb911e"
+      },
+      {
+        "inv_id": "a9c6d77a-5ebe-4f6f-b0ae-5bbaf6c78601",
+        "group_id": "c1928945-5a3a-41b6-b691-52f6661d82ad"
+      },
+      {
+        "inv_id": "e9c737dc-e788-4b1b-b972-9add8ee4fdc5",
+        "group_id": "723c04b9-625e-4e84-b76a-1b79a0046770"
+      },
+      {
+        "inv_id": "3d37e77b-7e42-4818-9bfa-663d7f9e2f40",
+        "group_id": "b8f888cd-ed5a-4a78-a8b3-975a8cb5927c"
+      },
+      {
+        "inv_id": "9599d270-b272-42eb-b59e-03ae07627166",
+        "group_id": "22ae8b08-64c8-413e-a7d6-a2d9f876889a"
+      }
+    ],
+    "created_at": "2024-07-01T23:03:50.627581",
+    "updated_at": "2024-07-01T23:03:50.627581"
+  },
+  {
+    "id": "26353530-dce4-42a4-93af-3b35b5ff7968",
+    "order_id": "JAI05AD8819TRAD914001KH300125220050",
+    "branch_id": "90fe4d02-9a0b-4108-b788-cb1e94077c67",
+    "staff_id": "38c1567b-cb38-4e2e-88d0-4e18b52a2a69",
+    "user_id": "bad199e0-66da-4c99-90a6-ebca24c8af7a",
+    "investigations": [
+      {
+        "inv_id": "fa25a2c8-7149-46b9-b006-3778d1537c3e",
+        "group_id": "5035ef6e-ab44-4822-b0bc-c4b58a2f9b50"
+      },
+      {
+        "inv_id": "9599d270-b272-42eb-b59e-03ae07627166",
+        "group_id": "22ae8b08-64c8-413e-a7d6-a2d9f876889a"
+      }
+    ],
+    "created_at": "2025-01-30T22:00:50.627581",
+    "updated_at": "2025-01-30T22:00:50.627581"
+  },
+  {
+    "id": "f9c519da-5d6f-4c8d-b06a-0c0875745946",
+    "order_id": "LUC02PR2812DAPR279369GH231024173750",
+    "branch_id": "43a99605-d8a9-40bf-a78b-965336db088a",
+    "staff_id": "f5b4c7f4-a30d-48db-a381-a240128698f4",
+    "user_id": "1e3383ba-b53c-4dd4-b31c-8f5d65084aca",
+    "investigations": [
+      {
+        "inv_id": "ec22f37a-d9e6-42cc-a3e2-b1d752c6eb53",
+        "group_id": "96c4818f-5319-4c48-ad65-b7687b2e0a81"
+      },
+      {
+        "inv_id": "fa2d07b5-1920-4c99-901a-4d80ed981a64",
+        "group_id": "b9c3dadc-cf15-489a-a9ac-1f61228f8cad"
+      },
+      {
+        "inv_id": "1e990e56-1b13-4fcd-a56b-6a557794b4bd",
+        "group_id": "d0d05f85-11b2-41bb-990d-e72f8f5d22dc"
+      },
+      {
+        "inv_id": "e725f70c-0f1d-47e2-b610-0534d9c30cee",
+        "group_id": "b9c3dadc-cf15-489a-a9ac-1f61228f8cad"
+      },
+      {
+        "inv_id": "1c05468a-84e2-49e1-b767-db65678ca658",
+        "group_id": "8b706525-5b46-4bc1-9415-c7e138e7c99f"
+      }
+    ],
+    "created_at": "2024-10-23T17:37:50.627581",
+    "updated_at": "2024-10-23T17:37:50.627581"
+  },
+  {
+    "id": "d56f204c-87e7-406a-bbcb-577462567c27",
+    "order_id": "LUC02AN7971NARO700878VE140724201150",
+    "branch_id": "43a99605-d8a9-40bf-a78b-965336db088a",
+    "staff_id": "9f3645ee-0f3f-4923-b834-d31827c64779",
+    "user_id": "59d624bb-bdf6-4ea6-be6a-f273a9c1dc08",
+    "investigations": [
+      {
+        "inv_id": "eacd815b-52f6-414b-9814-6e1214d73bc0",
+        "group_id": "d0d05f85-11b2-41bb-990d-e72f8f5d22dc"
+      },
+      {
+        "inv_id": "3ff25384-613e-44da-912c-e9766a4b68c3",
+        "group_id": "1238fc3b-6f63-45fb-8a95-9479829e7bbd"
+      },
+      {
+        "inv_id": "cf674d47-bbf0-4573-8ee7-f75f01a4f112",
+        "group_id": "01c25269-4193-41b9-afc9-f509ae85f7bc"
+      }
+    ],
+    "created_at": "2024-07-14T20:11:50.627581",
+    "updated_at": "2024-07-14T20:11:50.627581"
+  },
+  {
+    "id": "90a28f07-62b6-4e40-97c4-72304382d0c4",
+    "order_id": "THA01RO8098MAKR254985GH130525152750",
+    "branch_id": "7e322b94-303a-49fb-ad88-b0adfbc2473a",
+    "staff_id": "514f2784-3fbe-4ec9-8124-6445b364e9fb",
+    "user_id": "d5278d2c-8b58-4b94-8837-13cc3050cc1e",
+    "investigations": [
+      {
+        "inv_id": "d35baf6c-5a4e-44e5-817d-be9365ac94db",
+        "group_id": "01c25269-4193-41b9-afc9-f509ae85f7bc"
+      },
+      {
+        "inv_id": "b775ffde-ec54-4ff3-8ada-7e00c249b786",
+        "group_id": "96c4818f-5319-4c48-ad65-b7687b2e0a81"
+      },
+      {
+        "inv_id": "c8d2ce34-6bab-4be5-87d0-906c28f59080",
+        "group_id": "723c04b9-625e-4e84-b76a-1b79a0046770"
+      },
+      {
+        "inv_id": "0f5cb1cc-e032-4dc0-9b83-34472c27c259",
+        "group_id": "a44b1931-6bc8-4734-851e-475245cb911e"
+      },
+      {
+        "inv_id": "fa2d07b5-1920-4c99-901a-4d80ed981a64",
+        "group_id": "1e1ab598-088e-4925-b7c6-c9fc92377339"
+      }
+    ],
+    "created_at": "2025-05-13T15:27:50.627581",
+    "updated_at": "2025-05-13T15:27:50.627581"
+  },
+  {
+    "id": "675260c9-f415-4c01-bd6a-940b917c0d7d",
+    "order_id": "LUC02NA4470KUSA433269VE070724015150",
+    "branch_id": "43a99605-d8a9-40bf-a78b-965336db088a",
+    "staff_id": "196a130f-b4f1-4c38-ae08-492bcc71c5d9",
+    "user_id": "0291c34c-39ce-4542-b3a3-e2884825e06a",
+    "investigations": [
+      {
+        "inv_id": "96de27cf-af32-485f-b2f6-770cf15b9c48",
+        "group_id": "c1928945-5a3a-41b6-b691-52f6661d82ad"
+      },
+      {
+        "inv_id": "73a3171b-b63e-4288-af50-c74ef607a2d3",
+        "group_id": "ea3cf07e-a2e9-4dd6-9dd6-f36d2602eba2"
+      }
+    ],
+    "created_at": "2024-07-07T01:51:50.627581",
+    "updated_at": "2024-07-07T01:51:50.627581"
+  },
+  {
+    "id": "53e7d544-f95a-4430-b9ae-1cb51386d8b2",
+    "order_id": "NAG07IS5522VEKR254985GH151024223650",
+    "branch_id": "75b27ac3-ca6b-4df9-a16b-8e6836976563",
+    "staff_id": "70e24b47-8ce1-4046-a5fa-cca7a4a1bc9a",
+    "user_id": "d5278d2c-8b58-4b94-8837-13cc3050cc1e",
+    "investigations": [
+      {
+        "inv_id": "e17c514c-e162-4c04-824a-4067505c4903",
+        "group_id": "5035ef6e-ab44-4822-b0bc-c4b58a2f9b50"
+      },
+      {
+        "inv_id": "76799196-137d-42d0-b1ce-21c0b7eaf03e",
+        "group_id": "01c25269-4193-41b9-afc9-f509ae85f7bc"
+      },
+      {
+        "inv_id": "b775ffde-ec54-4ff3-8ada-7e00c249b786",
+        "group_id": "a44b1931-6bc8-4734-851e-475245cb911e"
+      }
+    ],
+    "created_at": "2024-10-15T22:36:50.627581",
+    "updated_at": "2024-10-15T22:36:50.627581"
+  },
+  {
+    "id": "4c865f6e-bca2-47e9-9ed2-d73b907abcf5",
+    "order_id": "LUC10AN7971NAAR919739KU300824110350",
+    "branch_id": "9293d569-1a0c-45cf-b3e8-49d88423ea24",
+    "staff_id": "9f3645ee-0f3f-4923-b834-d31827c64779",
+    "user_id": "4261c764-cbcc-48e1-a847-1e5ad8565197",
+    "investigations": [
+      {
+        "inv_id": "2c2204a8-51c8-4aef-aa46-0e570824fcae",
+        "group_id": "51028b81-6ac5-483a-940b-5c8ff29c11ca"
+      }
+    ],
+    "created_at": "2024-08-30T11:03:50.627581",
+    "updated_at": "2024-08-30T11:03:50.627581"
+  },
+  {
+    "id": "5a18dce9-228c-4b14-b785-a1c009efdf9a",
+    "order_id": "THA08AD8819TRKA749585BO281124233850",
+    "branch_id": "0cbf98b3-4e64-42f6-a528-5904de0a18d0",
+    "staff_id": "38c1567b-cb38-4e2e-88d0-4e18b52a2a69",
+    "user_id": "1f0b97b9-e68b-4c3e-9de0-2035403cf9a0",
+    "investigations": [
+      {
+        "inv_id": "77561ef8-52a4-426c-8e64-85cecb4b02fe",
+        "group_id": "5035ef6e-ab44-4822-b0bc-c4b58a2f9b50"
+      },
+      {
+        "inv_id": "73a3171b-b63e-4288-af50-c74ef607a2d3",
+        "group_id": "ea3cf07e-a2e9-4dd6-9dd6-f36d2602eba2"
+      },
+      {
+        "inv_id": "03cba0ee-987b-47e8-8cdb-99dd5fe23366",
+        "group_id": "b3061560-bc97-438a-bfe3-e1725511d395"
+      },
+      {
+        "inv_id": "8f9230e9-d572-4ca6-ade5-b6a83403f462",
+        "group_id": "96c4818f-5319-4c48-ad65-b7687b2e0a81"
+      }
+    ],
+    "created_at": "2024-11-28T23:38:50.627581",
+    "updated_at": "2024-11-28T23:38:50.627581"
+  },
+  {
+    "id": "1e5b02b6-f63f-41af-96f4-869d274f606b",
+    "order_id": "JAI05NA4470KUVI481547DA061124013150",
+    "branch_id": "90fe4d02-9a0b-4108-b788-cb1e94077c67",
+    "staff_id": "196a130f-b4f1-4c38-ae08-492bcc71c5d9",
+    "user_id": "af5cbee9-1354-459a-99ff-975f1d1eac13",
+    "investigations": [
+      {
+        "inv_id": "974c5100-1751-46f3-aa46-83d0b2624552",
+        "group_id": "5035ef6e-ab44-4822-b0bc-c4b58a2f9b50"
+      },
+      {
+        "inv_id": "3bab88b2-7470-40ab-99e6-fc8acf8a7d41",
+        "group_id": "96c4818f-5319-4c48-ad65-b7687b2e0a81"
+      }
+    ],
+    "created_at": "2024-11-06T01:31:50.627581",
+    "updated_at": "2024-11-06T01:31:50.627581"
+  },
+  {
+    "id": "6e51af24-2521-40ba-8b15-875dc9b7eda7",
+    "order_id": "JAI05AR8443BOKA830360VE260425100050",
+    "branch_id": "90fe4d02-9a0b-4108-b788-cb1e94077c67",
+    "staff_id": "a4ce3967-c566-4f31-a64a-11da8bb0f763",
+    "user_id": "810b6358-5f2c-4218-8339-5f8b62c9798b",
+    "investigations": [
+      {
+        "inv_id": "a12e5218-bb68-4985-8ba0-ca689ca59dd8",
+        "group_id": "b013583c-0f64-4780-8046-85bf17741e55"
+      },
+      {
+        "inv_id": "8f9230e9-d572-4ca6-ade5-b6a83403f462",
+        "group_id": "ea3cf07e-a2e9-4dd6-9dd6-f36d2602eba2"
+      },
+      {
+        "inv_id": "0296ab89-8577-4afe-ad31-d9ba332f5569",
+        "group_id": "51028b81-6ac5-483a-940b-5c8ff29c11ca"
+      },
+      {
+        "inv_id": "76799196-137d-42d0-b1ce-21c0b7eaf03e",
+        "group_id": "b8f888cd-ed5a-4a78-a8b3-975a8cb5927c"
+      },
+      {
+        "inv_id": "03cba0ee-987b-47e8-8cdb-99dd5fe23366",
+        "group_id": "01c25269-4193-41b9-afc9-f509ae85f7bc"
+      }
+    ],
+    "created_at": "2025-04-26T10:00:50.627581",
+    "updated_at": "2025-04-26T10:00:50.627581"
+  },
+  {
+    "id": "5946ef4b-806c-4081-8cbd-85090ea3c440",
+    "order_id": "THA04PA6401PAKA311718KA031224083050",
+    "branch_id": "fc475d95-6582-4e32-bc76-3586daad0daa",
+    "staff_id": "0dbd9a4c-d7ec-4448-8d07-b899db53226a",
+    "user_id": "e6edb383-1082-40c8-891a-e4a9e9febaa2",
+    "investigations": [
+      {
+        "inv_id": "775055da-1823-4a4e-92cb-db38920f6269",
+        "group_id": "1e1ab598-088e-4925-b7c6-c9fc92377339"
+      },
+      {
+        "inv_id": "8f9230e9-d572-4ca6-ade5-b6a83403f462",
+        "group_id": "2b0b506c-52e8-4e02-8720-ebc5baa6068d"
+      }
+    ],
+    "created_at": "2024-12-03T08:30:50.627581",
+    "updated_at": "2024-12-03T08:30:50.627581"
+  },
+  {
+    "id": "5399379b-ef49-44cf-9285-72b61b9a1f6d",
+    "order_id": "LUC06KA5464CHRO769686SI270724123150",
+    "branch_id": "e7a43b0a-e6fc-4a32-a2e9-18c6ccaada24",
+    "staff_id": "3b58c8ac-4894-488e-a300-0f9e660192b8",
+    "user_id": "98115a37-f356-4cce-bce7-738e60a5b928",
+    "investigations": [
+      {
+        "inv_id": "cade4034-0f72-4cf1-984e-854c791bb13b",
+        "group_id": "22ae8b08-64c8-413e-a7d6-a2d9f876889a"
+      },
+      {
+        "inv_id": "e725f70c-0f1d-47e2-b610-0534d9c30cee",
+        "group_id": "b9c3dadc-cf15-489a-a9ac-1f61228f8cad"
+      }
+    ],
+    "created_at": "2024-07-27T12:31:50.627581",
+    "updated_at": "2024-07-27T12:31:50.627581"
+  },
+  {
+    "id": "0422cccb-0e69-4c3e-94ce-3ef4d2291ad9",
+    "order_id": "THA08NE3613SAAN444659DA130525185350",
+    "branch_id": "0cbf98b3-4e64-42f6-a528-5904de0a18d0",
+    "staff_id": "f4291384-92c3-4621-9229-69809dbc2bd2",
+    "user_id": "ba5f3d6f-54f3-429a-b512-c0844ed14711",
+    "investigations": [
+      {
+        "inv_id": "cade4034-0f72-4cf1-984e-854c791bb13b",
+        "group_id": "22ae8b08-64c8-413e-a7d6-a2d9f876889a"
+      },
+      {
+        "inv_id": "225bfe48-0586-406c-8b48-bfbc491b24ba",
+        "group_id": "8b706525-5b46-4bc1-9415-c7e138e7c99f"
+      },
+      {
+        "inv_id": "c1459be7-2924-4f1b-bc98-7928af019e8b",
+        "group_id": "723c04b9-625e-4e84-b76a-1b79a0046770"
+      },
+      {
+        "inv_id": "7ecee35c-2f66-4a98-b4e7-87a6f8ed2c5c",
+        "group_id": "40b75cd7-4a26-41ba-8595-83be583deacd"
+      },
+      {
+        "inv_id": "f98329f9-713f-454e-9631-cf35d361da5f",
+        "group_id": "ea3cf07e-a2e9-4dd6-9dd6-f36d2602eba2"
+      }
+    ],
+    "created_at": "2025-05-13T18:53:50.627581",
+    "updated_at": "2025-05-13T18:53:50.627581"
+  },
+  {
+    "id": "d5e037ac-b734-4bf9-877b-9a1906b58be0",
+    "order_id": "THA01KA2877MUAN946404GH031124190450",
+    "branch_id": "7e322b94-303a-49fb-ad88-b0adfbc2473a",
+    "staff_id": "314b7a7e-3640-4399-bff4-f489e58d357c",
+    "user_id": "3bce8ed2-101c-4f0c-a04c-d194edcf77f1",
+    "investigations": [
+      {
+        "inv_id": "9599d270-b272-42eb-b59e-03ae07627166",
+        "group_id": "22ae8b08-64c8-413e-a7d6-a2d9f876889a"
+      }
+    ],
+    "created_at": "2024-11-03T19:04:50.627581",
+    "updated_at": "2024-11-03T19:04:50.627581"
+  },
+  {
+    "id": "e09d3200-50da-4a1b-8702-1d77953ff4e5",
+    "order_id": "AHM09RO8098MAVI848686KA190425210150",
+    "branch_id": "1fed029d-2b25-4010-a29a-99e37636ab6f",
+    "staff_id": "514f2784-3fbe-4ec9-8124-6445b364e9fb",
+    "user_id": "26022d2d-262b-49a4-9437-aca3f901a213",
+    "investigations": [
+      {
+        "inv_id": "974c5100-1751-46f3-aa46-83d0b2624552",
+        "group_id": "5035ef6e-ab44-4822-b0bc-c4b58a2f9b50"
+      },
+      {
+        "inv_id": "50898c5a-ba1e-40b7-9eba-b7c539ed231c",
+        "group_id": "a9168645-ab4a-48ea-b1a3-bd904432ebf3"
+      }
+    ],
+    "created_at": "2025-04-19T21:01:50.627581",
+    "updated_at": "2025-04-19T21:01:50.627581"
+  },
+  {
+    "id": "5e3219de-e551-489f-b7b5-7de1e9ab7045",
+    "order_id": "THA01AR5717KAKA864551BH071224180150",
+    "branch_id": "7e322b94-303a-49fb-ad88-b0adfbc2473a",
+    "staff_id": "7e3819c5-2907-487f-a48f-cce3709b8776",
+    "user_id": "d140038d-14b4-44dd-923e-758319a7a593",
+    "investigations": [
+      {
+        "inv_id": "fa2d07b5-1920-4c99-901a-4d80ed981a64",
+        "group_id": "1e1ab598-088e-4925-b7c6-c9fc92377339"
+      }
+    ],
+    "created_at": "2024-12-07T18:01:50.627581",
+    "updated_at": "2024-12-07T18:01:50.627581"
+  },
+  {
+    "id": "afe90eee-b3f6-4d87-bf36-6d871de4b134",
+    "order_id": "LUC10NA1692SIRI663244GU031024114850",
+    "branch_id": "9293d569-1a0c-45cf-b3e8-49d88423ea24",
+    "staff_id": "63e49c2c-8d07-43c4-9512-5cb23e9dad39",
+    "user_id": "13f87d4d-3474-44d1-8afe-a582c5a48813",
+    "investigations": [
+      {
+        "inv_id": "c1459be7-2924-4f1b-bc98-7928af019e8b",
+        "group_id": "b013583c-0f64-4780-8046-85bf17741e55"
+      },
+      {
+        "inv_id": "f98329f9-713f-454e-9631-cf35d361da5f",
+        "group_id": "ea3cf07e-a2e9-4dd6-9dd6-f36d2602eba2"
+      },
+      {
+        "inv_id": "1424e6b2-d033-4080-bd3b-7009f1c2510f",
+        "group_id": "5035ef6e-ab44-4822-b0bc-c4b58a2f9b50"
+      }
+    ],
+    "created_at": "2024-10-03T11:48:50.627581",
+    "updated_at": "2024-10-03T11:48:50.627581"
+  },
+  {
+    "id": "c7a7f853-9e0d-48b0-9db3-8d30ac0807ef",
+    "order_id": "AHM09KA2877MUKA543108NA040625094450",
+    "branch_id": "1fed029d-2b25-4010-a29a-99e37636ab6f",
+    "staff_id": "314b7a7e-3640-4399-bff4-f489e58d357c",
+    "user_id": "c647b7a0-a928-4065-95b4-9fc7894384f8",
+    "investigations": [
+      {
+        "inv_id": "7ce58ee1-4184-48b7-bd35-c6f6c82e70c3",
+        "group_id": "d0d05f85-11b2-41bb-990d-e72f8f5d22dc"
+      }
+    ],
+    "created_at": "2025-06-04T09:44:50.627581",
+    "updated_at": "2025-06-04T09:44:50.627581"
+  },
+  {
+    "id": "c020011c-e0e2-4d48-bba2-e76a0e924a5c",
+    "order_id": "THA04KA2877MURE818012RA280225133950",
+    "branch_id": "fc475d95-6582-4e32-bc76-3586daad0daa",
+    "staff_id": "314b7a7e-3640-4399-bff4-f489e58d357c",
+    "user_id": "e5a13f8d-fd2a-4e5d-a813-2e6812d320bf",
+    "investigations": [
+      {
+        "inv_id": "3ff25384-613e-44da-912c-e9766a4b68c3",
+        "group_id": "ea3cf07e-a2e9-4dd6-9dd6-f36d2602eba2"
+      },
+      {
+        "inv_id": "77e67b36-74c8-4054-90af-e85201b4b86b",
+        "group_id": "22ae8b08-64c8-413e-a7d6-a2d9f876889a"
+      },
+      {
+        "inv_id": "974c5100-1751-46f3-aa46-83d0b2624552",
+        "group_id": "5035ef6e-ab44-4822-b0bc-c4b58a2f9b50"
+      }
+    ],
+    "created_at": "2025-02-28T13:39:50.627581",
+    "updated_at": "2025-02-28T13:39:50.627581"
+  },
+  {
+    "id": "c109ce5c-cbfe-442d-93d3-de47a021cf6f",
+    "order_id": "LUC02AN4695KHKA830360VE020325081850",
+    "branch_id": "43a99605-d8a9-40bf-a78b-965336db088a",
+    "staff_id": "720d9e02-02fa-424e-83d7-97966343cd66",
+    "user_id": "810b6358-5f2c-4218-8339-5f8b62c9798b",
+    "investigations": [
+      {
+        "inv_id": "50e7ede0-9ff1-4eee-8561-f48ede14e134",
+        "group_id": "96c4818f-5319-4c48-ad65-b7687b2e0a81"
+      },
+      {
+        "inv_id": "7ce58ee1-4184-48b7-bd35-c6f6c82e70c3",
+        "group_id": "d0d05f85-11b2-41bb-990d-e72f8f5d22dc"
+      }
+    ],
+    "created_at": "2025-03-02T08:18:50.627581",
+    "updated_at": "2025-03-02T08:18:50.627581"
+  },
+  {
+    "id": "e68a1e17-4e30-4618-8261-8a9dab50dae9",
+    "order_id": "LUC06AN4695KHRE988186KU301024015650",
+    "branch_id": "e7a43b0a-e6fc-4a32-a2e9-18c6ccaada24",
+    "staff_id": "720d9e02-02fa-424e-83d7-97966343cd66",
+    "user_id": "6e50698d-8099-4e2a-b134-9ce9bd31cb97",
+    "investigations": [
+      {
+        "inv_id": "a33a0276-fed1-40ca-a8d5-addcca992f7f",
+        "group_id": "a9168645-ab4a-48ea-b1a3-bd904432ebf3"
+      }
+    ],
+    "created_at": "2024-10-30T01:56:50.627581",
+    "updated_at": "2024-10-30T01:56:50.627581"
+  },
+  {
+    "id": "cf747c13-b62b-4d9b-93e1-bf6110a9fd1b",
+    "order_id": "JAI05SI3728TRKA864551BH010525222150",
+    "branch_id": "90fe4d02-9a0b-4108-b788-cb1e94077c67",
+    "staff_id": "8e017669-74b5-4ac8-af13-544904400e9c",
+    "user_id": "d140038d-14b4-44dd-923e-758319a7a593",
+    "investigations": [
+      {
+        "inv_id": "ec22f37a-d9e6-42cc-a3e2-b1d752c6eb53",
+        "group_id": "96c4818f-5319-4c48-ad65-b7687b2e0a81"
+      },
+      {
+        "inv_id": "9f02d97c-d58f-4300-9373-c28616ef0852",
+        "group_id": "b9c3dadc-cf15-489a-a9ac-1f61228f8cad"
+      }
+    ],
+    "created_at": "2025-05-01T22:21:50.627581",
+    "updated_at": "2025-05-01T22:21:50.627581"
+  },
+  {
+    "id": "28be4ece-2def-41bb-b23a-57af2b8bf788",
+    "order_id": "LUC02IR5704VETA660069MU060325040550",
+    "branch_id": "43a99605-d8a9-40bf-a78b-965336db088a",
+    "staff_id": "86fe7053-810f-4957-b289-8612202e8978",
+    "user_id": "e9a75238-946e-4169-8b23-261c36d987e0",
+    "investigations": [
+      {
+        "inv_id": "e30db047-1a1e-4009-ba11-e0f10650e97e",
+        "group_id": "1238fc3b-6f63-45fb-8a95-9479829e7bbd"
+      },
+      {
+        "inv_id": "eaed6b1c-ceda-4706-8e0d-3931693d8cd2",
+        "group_id": "ea3cf07e-a2e9-4dd6-9dd6-f36d2602eba2"
+      },
+      {
+        "inv_id": "3bab88b2-7470-40ab-99e6-fc8acf8a7d41",
+        "group_id": "96c4818f-5319-4c48-ad65-b7687b2e0a81"
+      },
+      {
+        "inv_id": "225bfe48-0586-406c-8b48-bfbc491b24ba",
+        "group_id": "8b706525-5b46-4bc1-9415-c7e138e7c99f"
+      },
+      {
+        "inv_id": "a9c6d77a-5ebe-4f6f-b0ae-5bbaf6c78601",
+        "group_id": "c1928945-5a3a-41b6-b691-52f6661d82ad"
+      }
+    ],
+    "created_at": "2025-03-06T04:05:50.627581",
+    "updated_at": "2025-03-06T04:05:50.627581"
+  },
+  {
+    "id": "0b12492d-b94c-4ecc-a355-110c8af537d9",
+    "order_id": "JAI05AN7752SHAN444659DA260525120550",
+    "branch_id": "90fe4d02-9a0b-4108-b788-cb1e94077c67",
+    "staff_id": "20194af4-12b5-4e79-b53d-1d3ecc52f26f",
+    "user_id": "ba5f3d6f-54f3-429a-b512-c0844ed14711",
+    "investigations": [
+      {
+        "inv_id": "1424e6b2-d033-4080-bd3b-7009f1c2510f",
+        "group_id": "5035ef6e-ab44-4822-b0bc-c4b58a2f9b50"
+      }
+    ],
+    "created_at": "2025-05-26T12:05:50.627581",
+    "updated_at": "2025-05-26T12:05:50.627581"
+  },
+  {
+    "id": "995ee6f9-3133-4a3a-985a-0b8c8921ca57",
+    "order_id": "THA04RO8098MAAA516370GH110525102750",
+    "branch_id": "fc475d95-6582-4e32-bc76-3586daad0daa",
+    "staff_id": "514f2784-3fbe-4ec9-8124-6445b364e9fb",
+    "user_id": "535b4a6f-32cb-46af-9035-3ccaa1f85d9f",
+    "investigations": [
+      {
+        "inv_id": "50898c5a-ba1e-40b7-9eba-b7c539ed231c",
+        "group_id": "a9168645-ab4a-48ea-b1a3-bd904432ebf3"
+      }
+    ],
+    "created_at": "2025-05-11T10:27:50.627581",
+    "updated_at": "2025-05-11T10:27:50.627581"
+  },
+  {
+    "id": "dca92095-52a5-4239-8ccd-946396421d65",
+    "order_id": "THA04AR5717KAAN946404GH040325144850",
+    "branch_id": "fc475d95-6582-4e32-bc76-3586daad0daa",
+    "staff_id": "7e3819c5-2907-487f-a48f-cce3709b8776",
+    "user_id": "3bce8ed2-101c-4f0c-a04c-d194edcf77f1",
+    "investigations": [
+      {
+        "inv_id": "a2214b42-92f6-4a32-be8f-933cc1381c1e",
+        "group_id": "c1928945-5a3a-41b6-b691-52f6661d82ad"
+      },
+      {
+        "inv_id": "fa2d07b5-1920-4c99-901a-4d80ed981a64",
+        "group_id": "b9c3dadc-cf15-489a-a9ac-1f61228f8cad"
+      },
+      {
+        "inv_id": "a8c4f6ef-69f9-4aeb-815d-6c946c592136",
+        "group_id": "8b706525-5b46-4bc1-9415-c7e138e7c99f"
+      },
+      {
+        "inv_id": "e17c514c-e162-4c04-824a-4067505c4903",
+        "group_id": "5035ef6e-ab44-4822-b0bc-c4b58a2f9b50"
+      }
+    ],
+    "created_at": "2025-03-04T14:48:50.627581",
+    "updated_at": "2025-03-04T14:48:50.627581"
+  },
+  {
+    "id": "aa7c8239-40bb-409b-af15-3cc13c664422",
+    "order_id": "THA08IR5704VEKR320351AG231224150650",
+    "branch_id": "0cbf98b3-4e64-42f6-a528-5904de0a18d0",
+    "staff_id": "86fe7053-810f-4957-b289-8612202e8978",
+    "user_id": "689b678e-3534-41fd-832f-a087775e66ff",
+    "investigations": [
+      {
+        "inv_id": "a12e5218-bb68-4985-8ba0-ca689ca59dd8",
+        "group_id": "b013583c-0f64-4780-8046-85bf17741e55"
+      },
+      {
+        "inv_id": "96de27cf-af32-485f-b2f6-770cf15b9c48",
+        "group_id": "c1928945-5a3a-41b6-b691-52f6661d82ad"
+      }
+    ],
+    "created_at": "2024-12-23T15:06:50.627581",
+    "updated_at": "2024-12-23T15:06:50.627581"
+  },
+  {
+    "id": "d6f23104-1469-4b98-afe1-df9a98d8cd91",
+    "order_id": "LUC10AN7971NASI690850RE200325062750",
+    "branch_id": "9293d569-1a0c-45cf-b3e8-49d88423ea24",
+    "staff_id": "9f3645ee-0f3f-4923-b834-d31827c64779",
+    "user_id": "4c4817f7-5c20-4fb8-a340-f004c8ddbc07",
+    "investigations": [
+      {
+        "inv_id": "7ce58ee1-4184-48b7-bd35-c6f6c82e70c3",
+        "group_id": "d0d05f85-11b2-41bb-990d-e72f8f5d22dc"
+      },
+      {
+        "inv_id": "9f02d97c-d58f-4300-9373-c28616ef0852",
+        "group_id": "1238fc3b-6f63-45fb-8a95-9479829e7bbd"
+      },
+      {
+        "inv_id": "0f5cb1cc-e032-4dc0-9b83-34472c27c259",
+        "group_id": "a44b1931-6bc8-4734-851e-475245cb911e"
+      },
+      {
+        "inv_id": "974c5100-1751-46f3-aa46-83d0b2624552",
+        "group_id": "a9168645-ab4a-48ea-b1a3-bd904432ebf3"
+      }
+    ],
+    "created_at": "2025-03-20T06:27:50.627581",
+    "updated_at": "2025-03-20T06:27:50.627581"
+  },
+  {
+    "id": "01e48934-f4ab-478d-bab7-593c6788ec19",
+    "order_id": "LUC06NA4470KUPR279369GH110225124850",
+    "branch_id": "e7a43b0a-e6fc-4a32-a2e9-18c6ccaada24",
+    "staff_id": "196a130f-b4f1-4c38-ae08-492bcc71c5d9",
+    "user_id": "1e3383ba-b53c-4dd4-b31c-8f5d65084aca",
+    "investigations": [
+      {
+        "inv_id": "77e67b36-74c8-4054-90af-e85201b4b86b",
+        "group_id": "22ae8b08-64c8-413e-a7d6-a2d9f876889a"
+      },
+      {
+        "inv_id": "0296ab89-8577-4afe-ad31-d9ba332f5569",
+        "group_id": "51028b81-6ac5-483a-940b-5c8ff29c11ca"
+      },
+      {
+        "inv_id": "9f02d97c-d58f-4300-9373-c28616ef0852",
+        "group_id": "1238fc3b-6f63-45fb-8a95-9479829e7bbd"
+      }
+    ],
+    "created_at": "2025-02-11T12:48:50.627581",
+    "updated_at": "2025-02-11T12:48:50.627581"
+  },
+  {
+    "id": "5e86b51f-c29d-42bd-aa2c-e8118f3af348",
+    "order_id": "LUC06IR2387RAPR279369GH090625132450",
+    "branch_id": "e7a43b0a-e6fc-4a32-a2e9-18c6ccaada24",
+    "staff_id": "e3d31d02-d01c-47e3-acb4-9d8808e6f430",
+    "user_id": "1e3383ba-b53c-4dd4-b31c-8f5d65084aca",
+    "investigations": [
+      {
+        "inv_id": "f2b57adc-4566-43f4-bd2a-765ed16966ae",
+        "group_id": "96c4818f-5319-4c48-ad65-b7687b2e0a81"
+      },
+      {
+        "inv_id": "2c2204a8-51c8-4aef-aa46-0e570824fcae",
+        "group_id": "51028b81-6ac5-483a-940b-5c8ff29c11ca"
+      },
+      {
+        "inv_id": "1c05468a-84e2-49e1-b767-db65678ca658",
+        "group_id": "c1928945-5a3a-41b6-b691-52f6661d82ad"
+      },
+      {
+        "inv_id": "a2214b42-92f6-4a32-be8f-933cc1381c1e",
+        "group_id": "40b75cd7-4a26-41ba-8595-83be583deacd"
+      }
+    ],
+    "created_at": "2025-06-09T13:24:50.627581",
+    "updated_at": "2025-06-09T13:24:50.627581"
+  },
+  {
+    "id": "bf310f4a-83c0-4993-8497-9b05edaad1a7",
+    "order_id": "AHM09IS5522VERE478023DE210924123450",
+    "branch_id": "1fed029d-2b25-4010-a29a-99e37636ab6f",
+    "staff_id": "70e24b47-8ce1-4046-a5fa-cca7a4a1bc9a",
+    "user_id": "a59cc368-6d51-4129-8d63-7043b7df0c9d",
+    "investigations": [
+      {
+        "inv_id": "9f02d97c-d58f-4300-9373-c28616ef0852",
+        "group_id": "1238fc3b-6f63-45fb-8a95-9479829e7bbd"
+      },
+      {
+        "inv_id": "d35baf6c-5a4e-44e5-817d-be9365ac94db",
+        "group_id": "b3061560-bc97-438a-bfe3-e1725511d395"
+      },
+      {
+        "inv_id": "e17c514c-e162-4c04-824a-4067505c4903",
+        "group_id": "d0d05f85-11b2-41bb-990d-e72f8f5d22dc"
+      },
+      {
+        "inv_id": "e30db047-1a1e-4009-ba11-e0f10650e97e",
+        "group_id": "1238fc3b-6f63-45fb-8a95-9479829e7bbd"
+      }
+    ],
+    "created_at": "2024-09-21T12:34:50.627581",
+    "updated_at": "2024-09-21T12:34:50.627581"
+  },
+  {
+    "id": "6993e54b-5148-4c53-89a5-226c5b3ac67c",
+    "order_id": "HYD03VI3928KAKA543108NA250225055850",
+    "branch_id": "e1143459-5d19-46d9-a5ce-9d0d1606b19d",
+    "staff_id": "c1a10ab4-33ce-408f-ad53-ab2202622d71",
+    "user_id": "c647b7a0-a928-4065-95b4-9fc7894384f8",
+    "investigations": [
+      {
+        "inv_id": "3bab88b2-7470-40ab-99e6-fc8acf8a7d41",
+        "group_id": "96c4818f-5319-4c48-ad65-b7687b2e0a81"
+      },
+      {
+        "inv_id": "974c5100-1751-46f3-aa46-83d0b2624552",
+        "group_id": "a9168645-ab4a-48ea-b1a3-bd904432ebf3"
+      },
+      {
+        "inv_id": "73a3171b-b63e-4288-af50-c74ef607a2d3",
+        "group_id": "b9c3dadc-cf15-489a-a9ac-1f61228f8cad"
+      }
+    ],
+    "created_at": "2025-02-25T05:58:50.627581",
+    "updated_at": "2025-02-25T05:58:50.627581"
+  },
+  {
+    "id": "0ade2480-9fdf-4b2f-a15a-74c19c176dd5",
+    "order_id": "JAI05RO8098MAPA496826BH250125201250",
+    "branch_id": "90fe4d02-9a0b-4108-b788-cb1e94077c67",
+    "staff_id": "514f2784-3fbe-4ec9-8124-6445b364e9fb",
+    "user_id": "b723f2a6-f865-4dc0-a2f0-3a9339c5bf87",
+    "investigations": [
+      {
+        "inv_id": "49af7800-5a3b-4b97-b31c-d6ca5a3f5f9f",
+        "group_id": "b8f888cd-ed5a-4a78-a8b3-975a8cb5927c"
+      },
+      {
+        "inv_id": "775055da-1823-4a4e-92cb-db38920f6269",
+        "group_id": "1e1ab598-088e-4925-b7c6-c9fc92377339"
+      },
+      {
+        "inv_id": "fa25a2c8-7149-46b9-b006-3778d1537c3e",
+        "group_id": "c1928945-5a3a-41b6-b691-52f6661d82ad"
+      }
+    ],
+    "created_at": "2025-01-25T20:12:50.627581",
+    "updated_at": "2025-01-25T20:12:50.627581"
+  },
+  {
+    "id": "735872c2-e746-4157-9633-28e4ae793657",
+    "order_id": "LUC02KR1191BHRE691033IY080724082450",
+    "branch_id": "43a99605-d8a9-40bf-a78b-965336db088a",
+    "staff_id": "0fc4d845-9657-4e55-af74-7633b83f9443",
+    "user_id": "734b5e59-43f2-46b1-bf57-b41bf7e949e4",
+    "investigations": [
+      {
+        "inv_id": "7ecee35c-2f66-4a98-b4e7-87a6f8ed2c5c",
+        "group_id": "c1928945-5a3a-41b6-b691-52f6661d82ad"
+      },
+      {
+        "inv_id": "8e0b1aaa-4867-4cca-80a6-cd9552a11c7c",
+        "group_id": "51028b81-6ac5-483a-940b-5c8ff29c11ca"
+      },
+      {
+        "inv_id": "975a370f-4a64-49df-8b7f-a9a40651c3b3",
+        "group_id": "5035ef6e-ab44-4822-b0bc-c4b58a2f9b50"
+      },
+      {
+        "inv_id": "fa25a2c8-7149-46b9-b006-3778d1537c3e",
+        "group_id": "c1928945-5a3a-41b6-b691-52f6661d82ad"
+      },
+      {
+        "inv_id": "775055da-1823-4a4e-92cb-db38920f6269",
+        "group_id": "1e1ab598-088e-4925-b7c6-c9fc92377339"
+      }
+    ],
+    "created_at": "2024-07-08T08:24:50.627581",
+    "updated_at": "2024-07-08T08:24:50.627581"
+  },
+  {
+    "id": "459715d1-b1bc-4e7a-aa27-e42780585954",
+    "order_id": "HYD03PA6852KHRI804581SH030924140550",
+    "branch_id": "e1143459-5d19-46d9-a5ce-9d0d1606b19d",
+    "staff_id": "8957c167-c09f-4d18-99eb-ed0edca67b35",
+    "user_id": "b1eaa42e-0bbc-462a-9fc7-2a460b9fa5a5",
+    "investigations": [
+      {
+        "inv_id": "a8c4f6ef-69f9-4aeb-815d-6c946c592136",
+        "group_id": "8b706525-5b46-4bc1-9415-c7e138e7c99f"
+      },
+      {
+        "inv_id": "16187771-714f-4a51-a305-4fede4683d09",
+        "group_id": "b3061560-bc97-438a-bfe3-e1725511d395"
+      }
+    ],
+    "created_at": "2024-09-03T14:05:50.627581",
+    "updated_at": "2024-09-03T14:05:50.627581"
+  },
+  {
+    "id": "17a7bff5-895d-4a1c-8f3d-a88becaaaa13",
+    "order_id": "JAI05RO8098MAAN408232RA020325042450",
+    "branch_id": "90fe4d02-9a0b-4108-b788-cb1e94077c67",
+    "staff_id": "514f2784-3fbe-4ec9-8124-6445b364e9fb",
+    "user_id": "48d5b811-869b-4e5e-ab91-0b0e72641903",
+    "investigations": [
+      {
+        "inv_id": "2c2204a8-51c8-4aef-aa46-0e570824fcae",
+        "group_id": "51028b81-6ac5-483a-940b-5c8ff29c11ca"
+      },
+      {
+        "inv_id": "1c05468a-84e2-49e1-b767-db65678ca658",
+        "group_id": "ea3cf07e-a2e9-4dd6-9dd6-f36d2602eba2"
+      },
+      {
+        "inv_id": "e17c514c-e162-4c04-824a-4067505c4903",
+        "group_id": "5035ef6e-ab44-4822-b0bc-c4b58a2f9b50"
+      }
+    ],
+    "created_at": "2025-03-02T04:24:50.627581",
+    "updated_at": "2025-03-02T04:24:50.627581"
+  },
+  {
+    "id": "844a4743-5a39-49c8-821a-21401d31d35e",
+    "order_id": "THA04KA1080MUNA124479VE040824165650",
+    "branch_id": "fc475d95-6582-4e32-bc76-3586daad0daa",
+    "staff_id": "e629f3cb-9e0f-4545-a0e3-2c0fbbcea95f",
+    "user_id": "7b075f6d-98cb-4bd0-9d57-3ecfd11cd6be",
+    "investigations": [
+      {
+        "inv_id": "76799196-137d-42d0-b1ce-21c0b7eaf03e",
+        "group_id": "01c25269-4193-41b9-afc9-f509ae85f7bc"
+      },
+      {
+        "inv_id": "a9c6d77a-5ebe-4f6f-b0ae-5bbaf6c78601",
+        "group_id": "c1928945-5a3a-41b6-b691-52f6661d82ad"
+      },
+      {
+        "inv_id": "1e990e56-1b13-4fcd-a56b-6a557794b4bd",
+        "group_id": "d0d05f85-11b2-41bb-990d-e72f8f5d22dc"
+      },
+      {
+        "inv_id": "0e68cdf3-ab89-4b5e-a393-5998e8781b4e",
+        "group_id": "b8f888cd-ed5a-4a78-a8b3-975a8cb5927c"
+      },
+      {
+        "inv_id": "c1459be7-2924-4f1b-bc98-7928af019e8b",
+        "group_id": "723c04b9-625e-4e84-b76a-1b79a0046770"
+      }
+    ],
+    "created_at": "2024-08-04T16:56:50.627581",
+    "updated_at": "2024-08-04T16:56:50.627581"
+  },
+  {
+    "id": "beef5a4b-ce1a-4029-9fa0-3d36e60efcf5",
+    "order_id": "LUC10AN7971NARO700878VE110325020950",
+    "branch_id": "9293d569-1a0c-45cf-b3e8-49d88423ea24",
+    "staff_id": "9f3645ee-0f3f-4923-b834-d31827c64779",
+    "user_id": "59d624bb-bdf6-4ea6-be6a-f273a9c1dc08",
+    "investigations": [
+      {
+        "inv_id": "9102385c-c92a-4339-922a-dae7e573eeef",
+        "group_id": "723c04b9-625e-4e84-b76a-1b79a0046770"
+      },
+      {
+        "inv_id": "2c2204a8-51c8-4aef-aa46-0e570824fcae",
+        "group_id": "51028b81-6ac5-483a-940b-5c8ff29c11ca"
+      }
+    ],
+    "created_at": "2025-03-11T02:09:50.627581",
+    "updated_at": "2025-03-11T02:09:50.627581"
+  },
+  {
+    "id": "ca6c5ab2-088f-4e6a-8366-9df321b80e63",
+    "order_id": "THA04AR8443BORE818012RA120225214050",
+    "branch_id": "fc475d95-6582-4e32-bc76-3586daad0daa",
+    "staff_id": "a4ce3967-c566-4f31-a64a-11da8bb0f763",
+    "user_id": "e5a13f8d-fd2a-4e5d-a813-2e6812d320bf",
+    "investigations": [
+      {
+        "inv_id": "49af7800-5a3b-4b97-b31c-d6ca5a3f5f9f",
+        "group_id": "b8f888cd-ed5a-4a78-a8b3-975a8cb5927c"
+      },
+      {
+        "inv_id": "7d27db6b-e565-4421-b25c-a8cbd9ecabbf",
+        "group_id": "b013583c-0f64-4780-8046-85bf17741e55"
+      },
+      {
+        "inv_id": "7ecee35c-2f66-4a98-b4e7-87a6f8ed2c5c",
+        "group_id": "40b75cd7-4a26-41ba-8595-83be583deacd"
+      },
+      {
+        "inv_id": "eacd815b-52f6-414b-9814-6e1214d73bc0",
+        "group_id": "d0d05f85-11b2-41bb-990d-e72f8f5d22dc"
+      },
+      {
+        "inv_id": "e30db047-1a1e-4009-ba11-e0f10650e97e",
+        "group_id": "1238fc3b-6f63-45fb-8a95-9479829e7bbd"
+      }
+    ],
+    "created_at": "2025-02-12T21:40:50.627581",
+    "updated_at": "2025-02-12T21:40:50.627581"
+  }
+]

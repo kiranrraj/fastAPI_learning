@@ -1,902 +1,102 @@
 [
   {
-    "id": "d60e5a7d-3f88-47a2-a58f-c98aaf0ab828",
-    "name": "New York Medical Center",
-    "location": "Houston",
-    "address": "913 Pine Rd",
-    "phone": "+1-606-358-3884",
-    "branch_code": "BR001",
-    "created_at": "2025-05-18T18:20:03.877533"
-  },
-  {
-    "id": "edb00b36-417d-4782-a0c8-d650cb361c18",
-    "name": "Phoenix Medical Center",
-    "location": "Philadelphia",
-    "address": "355 Maple Blvd",
-    "phone": "+1-332-844-6305",
-    "branch_code": "BR002",
-    "created_at": "2024-06-15T18:20:03.877533"
-  },
-  {
-    "id": "e8d2b875-a89c-4b37-bcc6-9a6858d9516e",
-    "name": "Houston Medical Center",
-    "location": "Phoenix",
-    "address": "537 Main St",
-    "phone": "+1-340-234-9852",
-    "branch_code": "BR003",
-    "created_at": "2025-02-19T18:20:03.877533"
-  },
-  {
-    "id": "913780fc-71b5-4fc0-bb42-9c6037bbd684",
-    "name": "New York Medical Center",
-    "location": "San Antonio",
-    "address": "223 Main St",
-    "phone": "+1-372-380-7870",
-    "branch_code": "BR004",
-    "created_at": "2025-03-27T18:20:03.877533"
-  },
-  {
-    "id": "7c5515f3-1cb4-4046-af7d-2c6891dbb98d",
-    "name": "Chicago Medical Center",
-    "location": "New York",
-    "address": "677 Oak Ave",
-    "phone": "+1-825-216-8984",
-    "branch_code": "BR005",
-    "created_at": "2025-03-18T18:20:03.877533"
-  },
-  {
-    "id": "6648f9f1-46f4-45a6-a3d6-81a3df760533",
-    "name": "Phoenix Medical Center",
-    "location": "New York",
-    "address": "670 Maple Blvd",
-    "phone": "+1-434-269-2389",
-    "branch_code": "BR006",
-    "created_at": "2025-02-18T18:20:03.877533"
-  },
-  {
-    "id": "bfcbce83-6cc9-470f-8142-58ca010f7089",
-    "name": "San Diego Medical Center",
-    "location": "Dallas",
-    "address": "810 Main St",
-    "phone": "+1-771-140-3657",
-    "branch_code": "BR007",
-    "created_at": "2025-03-29T18:20:03.877533"
-  },
-  {
-    "id": "ce5b9273-aae4-40af-9899-0b30cc0f2f89",
-    "name": "Phoenix Medical Center",
-    "location": "Los Angeles",
-    "address": "824 Oak Ave",
-    "phone": "+1-350-507-2099",
-    "branch_code": "BR008",
-    "created_at": "2024-12-30T18:20:03.877533"
-  },
-  {
-    "id": "245f0cb7-74e3-4763-a634-8a6ae09a025a",
-    "name": "San Jose Medical Center",
-    "location": "San Antonio",
-    "address": "903 Pine Rd",
-    "phone": "+1-881-177-2190",
-    "branch_code": "BR009",
-    "created_at": "2024-07-22T18:20:03.877533"
-  },
-  {
-    "id": "60163865-2e73-4d64-9a73-d3fd5af19deb",
-    "name": "New York Medical Center",
-    "location": "San Diego",
-    "address": "620 Oak Ave",
-    "phone": "+1-298-606-8054",
-    "branch_code": "BR010",
-    "created_at": "2025-05-30T18:20:03.877533"
-  },
-  {
-    "id": "c7ca33f3-0fd2-4003-be96-c479af289087",
-    "name": "Los Angeles Medical Center",
-    "location": "San Antonio",
-    "address": "365 Maple Blvd",
-    "phone": "+1-279-728-1386",
-    "branch_code": "BR011",
-    "created_at": "2025-01-21T18:20:03.877533"
-  },
-  {
-    "id": "a562c44c-042c-43e3-a433-d1004d946c8b",
-    "name": "San Jose Medical Center",
-    "location": "Chicago",
-    "address": "400 Oak Ave",
-    "phone": "+1-277-277-2911",
-    "branch_code": "BR012",
-    "created_at": "2025-02-01T18:20:03.877533"
-  },
-  {
-    "id": "259a0d2a-bc2d-47b2-acec-5544a189e122",
-    "name": "New York Medical Center",
-    "location": "Los Angeles",
-    "address": "640 Maple Blvd",
-    "phone": "+1-590-394-2720",
-    "branch_code": "BR013",
-    "created_at": "2025-03-21T18:20:03.877533"
-  },
-  {
-    "id": "3a199074-4aae-4763-933a-8a2d3dcdbd82",
-    "name": "San Antonio Medical Center",
-    "location": "Chicago",
-    "address": "459 Oak Ave",
-    "phone": "+1-864-761-3313",
-    "branch_code": "BR014",
-    "created_at": "2024-08-06T18:20:03.877533"
-  },
-  {
-    "id": "c2c73bde-1c9f-4d36-a11a-174ca99e0a2f",
-    "name": "New York Medical Center",
-    "location": "Philadelphia",
-    "address": "733 Pine Rd",
-    "phone": "+1-947-824-7382",
-    "branch_code": "BR015",
-    "created_at": "2025-01-08T18:20:03.877533"
-  },
-  {
-    "id": "5a8a205b-2f14-42f9-9990-17f4a67e284a",
-    "name": "San Antonio Medical Center",
-    "location": "Houston",
-    "address": "681 Main St",
-    "phone": "+1-649-175-1853",
-    "branch_code": "BR016",
-    "created_at": "2025-03-01T18:20:03.877533"
-  },
-  {
-    "id": "42e61777-43f9-402b-8c4c-6414a4e443c2",
-    "name": "Chicago Medical Center",
-    "location": "Houston",
-    "address": "657 Pine Rd",
-    "phone": "+1-353-783-9919",
-    "branch_code": "BR017",
-    "created_at": "2024-07-26T18:20:03.877533"
-  },
-  {
-    "id": "656c0236-d366-4837-a6a7-4e29019d112c",
-    "name": "Dallas Medical Center",
-    "location": "Houston",
-    "address": "687 Oak Ave",
-    "phone": "+1-283-552-5570",
-    "branch_code": "BR018",
-    "created_at": "2025-05-14T18:20:03.877533"
-  },
-  {
-    "id": "1be56fcd-f6de-437d-9bb9-12442295c823",
-    "name": "Chicago Medical Center",
-    "location": "Philadelphia",
-    "address": "563 Pine Rd",
-    "phone": "+1-824-869-5353",
-    "branch_code": "BR019",
-    "created_at": "2024-06-12T18:20:03.877533"
-  },
-  {
-    "id": "443d2cd7-1073-4ff5-bd06-4934e7ef6ec8",
-    "name": "San Antonio Medical Center",
-    "location": "Philadelphia",
-    "address": "368 Pine Rd",
-    "phone": "+1-992-741-5660",
-    "branch_code": "BR020",
-    "created_at": "2025-04-06T18:20:03.877533"
-  },
-  {
-    "id": "600fdc54-b19f-44f5-b723-9eabf0ca3a33",
-    "name": "Phoenix Medical Center",
-    "location": "Dallas",
-    "address": "691 Oak Ave",
-    "phone": "+1-305-576-5496",
-    "branch_code": "BR021",
-    "created_at": "2025-01-29T18:20:03.877533"
-  },
-  {
-    "id": "5783bbd1-46da-42a1-83e0-ff38e90c2c7d",
-    "name": "San Jose Medical Center",
-    "location": "San Jose",
-    "address": "711 Oak Ave",
-    "phone": "+1-623-475-3144",
-    "branch_code": "BR022",
-    "created_at": "2024-10-17T18:20:03.877533"
-  },
-  {
-    "id": "82cee154-8b15-487f-b95b-271862f34ce0",
-    "name": "San Jose Medical Center",
-    "location": "San Diego",
-    "address": "241 Oak Ave",
-    "phone": "+1-421-841-4847",
-    "branch_code": "BR023",
-    "created_at": "2024-09-20T18:20:03.877533"
-  },
-  {
-    "id": "41476585-3a67-4f33-a6b5-eee404261d73",
-    "name": "New York Medical Center",
-    "location": "Dallas",
-    "address": "639 Oak Ave",
-    "phone": "+1-709-390-2133",
-    "branch_code": "BR024",
-    "created_at": "2024-11-02T18:20:03.877533"
-  },
-  {
-    "id": "66c886c3-5fcf-4b87-bbf2-9a855118c2fa",
-    "name": "Chicago Medical Center",
-    "location": "Los Angeles",
-    "address": "873 Pine Rd",
-    "phone": "+1-760-345-4113",
-    "branch_code": "BR025",
-    "created_at": "2024-08-01T18:20:03.877533"
-  },
-  {
-    "id": "f2edec7a-6ad5-4672-83af-4bdf0a73bf32",
-    "name": "Phoenix Medical Center",
-    "location": "Philadelphia",
-    "address": "709 Pine Rd",
-    "phone": "+1-879-859-3362",
-    "branch_code": "BR026",
-    "created_at": "2024-12-22T18:20:03.877533"
-  },
-  {
-    "id": "64bb086d-9a59-4bcf-a871-ff3b14dca1d1",
-    "name": "Dallas Medical Center",
-    "location": "Philadelphia",
-    "address": "940 Pine Rd",
-    "phone": "+1-592-792-7392",
-    "branch_code": "BR027",
-    "created_at": "2024-10-31T18:20:03.877533"
-  },
-  {
-    "id": "67c5fee9-ff90-4b27-81e3-7c5fd77cb538",
-    "name": "Los Angeles Medical Center",
-    "location": "Philadelphia",
-    "address": "920 Maple Blvd",
-    "phone": "+1-311-489-3405",
-    "branch_code": "BR028",
-    "created_at": "2024-06-20T18:20:03.877533"
-  },
-  {
-    "id": "44553078-1a3b-4d25-aec9-b284125d5b23",
-    "name": "Phoenix Medical Center",
-    "location": "Phoenix",
-    "address": "944 Maple Blvd",
-    "phone": "+1-394-160-7783",
-    "branch_code": "BR029",
-    "created_at": "2024-08-10T18:20:03.877533"
-  },
-  {
-    "id": "df193293-0f29-41a1-84ae-6cea85491d21",
-    "name": "New York Medical Center",
-    "location": "Los Angeles",
-    "address": "600 Oak Ave",
-    "phone": "+1-936-150-1232",
-    "branch_code": "BR030",
-    "created_at": "2024-08-03T18:20:03.877533"
-  },
-  {
-    "id": "f34ba081-747e-4bcf-93f7-7de6899683d7",
-    "name": "New York Medical Center",
-    "location": "San Jose",
-    "address": "996 Oak Ave",
-    "phone": "+1-836-667-2688",
-    "branch_code": "BR031",
-    "created_at": "2025-01-05T18:20:03.877533"
-  },
-  {
-    "id": "b5807c16-f78c-414d-92f2-fde092097304",
-    "name": "San Diego Medical Center",
-    "location": "Phoenix",
-    "address": "654 Pine Rd",
-    "phone": "+1-644-779-3644",
-    "branch_code": "BR032",
-    "created_at": "2025-03-01T18:20:03.877533"
-  },
-  {
-    "id": "3a1f6dd8-a030-4199-84ca-cbc48938ecb2",
-    "name": "Los Angeles Medical Center",
-    "location": "San Jose",
-    "address": "421 Maple Blvd",
-    "phone": "+1-823-922-8361",
-    "branch_code": "BR033",
-    "created_at": "2024-12-21T18:20:03.877533"
-  },
-  {
-    "id": "51db944e-2644-4c15-8f04-ec6920dfb089",
-    "name": "San Jose Medical Center",
-    "location": "New York",
-    "address": "352 Maple Blvd",
-    "phone": "+1-810-793-1115",
-    "branch_code": "BR034",
-    "created_at": "2024-07-23T18:20:03.877533"
-  },
-  {
-    "id": "350d8492-f720-4682-9c41-b6f1c9cf9956",
-    "name": "San Antonio Medical Center",
-    "location": "New York",
-    "address": "380 Pine Rd",
-    "phone": "+1-569-615-2709",
-    "branch_code": "BR035",
-    "created_at": "2025-01-01T18:20:03.877533"
-  },
-  {
-    "id": "7cdea209-f19e-4849-bac3-a35e32e1d36a",
-    "name": "New York Medical Center",
-    "location": "Philadelphia",
-    "address": "812 Oak Ave",
-    "phone": "+1-659-535-6929",
-    "branch_code": "BR036",
-    "created_at": "2024-11-27T18:20:03.877533"
-  },
-  {
-    "id": "a93246e5-4fa3-4311-8bbc-7a4a4f31e2dc",
-    "name": "Dallas Medical Center",
-    "location": "Houston",
-    "address": "414 Maple Blvd",
-    "phone": "+1-275-171-8909",
-    "branch_code": "BR037",
-    "created_at": "2025-01-08T18:20:03.877533"
-  },
-  {
-    "id": "2882b513-1ba9-4eaa-b026-7dfb7698baa1",
-    "name": "Philadelphia Medical Center",
-    "location": "Los Angeles",
-    "address": "998 Pine Rd",
-    "phone": "+1-273-500-4950",
-    "branch_code": "BR038",
-    "created_at": "2025-05-03T18:20:03.877533"
-  },
-  {
-    "id": "73b9becd-4ddb-41d7-a31a-a096bac36f15",
-    "name": "Philadelphia Medical Center",
-    "location": "Dallas",
-    "address": "895 Maple Blvd",
-    "phone": "+1-527-205-2095",
-    "branch_code": "BR039",
-    "created_at": "2025-01-27T18:20:03.877533"
-  },
-  {
-    "id": "3ae1343a-b3de-4724-9c3e-8560205aca07",
-    "name": "Phoenix Medical Center",
-    "location": "New York",
-    "address": "878 Maple Blvd",
-    "phone": "+1-633-961-1422",
-    "branch_code": "BR040",
-    "created_at": "2025-04-19T18:20:03.877533"
-  },
-  {
-    "id": "c7f29dde-6f9f-4e87-8689-8b1a73a24a20",
-    "name": "Chicago Medical Center",
-    "location": "San Diego",
-    "address": "790 Main St",
-    "phone": "+1-277-444-6736",
-    "branch_code": "BR041",
-    "created_at": "2025-04-17T18:20:03.877533"
-  },
-  {
-    "id": "43e03ea5-df25-4e5d-afae-a33db57be2f4",
-    "name": "Philadelphia Medical Center",
-    "location": "San Jose",
-    "address": "336 Oak Ave",
-    "phone": "+1-628-104-7131",
-    "branch_code": "BR042",
-    "created_at": "2024-10-15T18:20:03.877533"
-  },
-  {
-    "id": "9130755c-3d26-418b-9f2e-a4ff6669e292",
-    "name": "San Diego Medical Center",
-    "location": "Philadelphia",
-    "address": "522 Main St",
-    "phone": "+1-430-211-2318",
-    "branch_code": "BR043",
-    "created_at": "2025-01-30T18:20:03.877533"
-  },
-  {
-    "id": "c9a3f0e7-dd8b-4e68-ad85-29899b7ce6a1",
-    "name": "Phoenix Medical Center",
-    "location": "Los Angeles",
-    "address": "987 Main St",
-    "phone": "+1-258-900-6941",
-    "branch_code": "BR044",
-    "created_at": "2024-08-31T18:20:03.877533"
-  },
-  {
-    "id": "a674d012-d701-43ae-bcf9-1db1efe860aa",
-    "name": "Houston Medical Center",
-    "location": "Phoenix",
-    "address": "587 Main St",
-    "phone": "+1-284-247-8875",
-    "branch_code": "BR045",
-    "created_at": "2024-11-01T18:20:03.877533"
-  },
-  {
-    "id": "304a1ed2-235b-45f8-9e34-42b3a835ade1",
-    "name": "San Jose Medical Center",
-    "location": "Phoenix",
-    "address": "396 Oak Ave",
-    "phone": "+1-650-198-9426",
-    "branch_code": "BR046",
-    "created_at": "2025-03-15T18:20:03.877533"
-  },
-  {
-    "id": "8a8f303b-af7c-4223-9c61-0833a21b733d",
-    "name": "San Diego Medical Center",
-    "location": "New York",
-    "address": "827 Main St",
-    "phone": "+1-975-372-2221",
-    "branch_code": "BR047",
-    "created_at": "2024-06-30T18:20:03.877533"
-  },
-  {
-    "id": "d808bdd2-232b-4fd6-8721-246d8e417c6b",
-    "name": "Phoenix Medical Center",
-    "location": "New York",
-    "address": "584 Pine Rd",
-    "phone": "+1-775-177-8298",
-    "branch_code": "BR048",
-    "created_at": "2024-07-18T18:20:03.877533"
-  },
-  {
-    "id": "c9964292-1ab6-4192-88bc-269a7010f930",
-    "name": "Los Angeles Medical Center",
-    "location": "Los Angeles",
-    "address": "409 Main St",
-    "phone": "+1-906-559-8114",
-    "branch_code": "BR049",
-    "created_at": "2025-05-01T18:20:03.877533"
-  },
-  {
-    "id": "e34ed8f9-7c99-4dbe-ad08-ae9ba26bed7b",
-    "name": "San Antonio Medical Center",
-    "location": "New York",
-    "address": "156 Oak Ave",
-    "phone": "+1-889-897-2108",
-    "branch_code": "BR050",
-    "created_at": "2024-10-13T18:20:03.877533"
-  },
-  {
-    "id": "aae000a2-d9f1-47e1-b0a9-80307a0f940e",
-    "name": "Philadelphia Medical Center",
-    "location": "San Jose",
-    "address": "921 Maple Blvd",
-    "phone": "+1-469-607-9603",
-    "branch_code": "BR051",
-    "created_at": "2024-10-14T18:20:03.877533"
-  },
-  {
-    "id": "edbd5059-2d9c-4e5d-90cf-aa7a812bb871",
-    "name": "Chicago Medical Center",
-    "location": "Los Angeles",
-    "address": "816 Oak Ave",
-    "phone": "+1-375-441-4182",
-    "branch_code": "BR052",
-    "created_at": "2024-07-04T18:20:03.877533"
-  },
-  {
-    "id": "ccead237-6c20-4776-a215-2df1f06e8923",
-    "name": "San Jose Medical Center",
-    "location": "Philadelphia",
-    "address": "164 Maple Blvd",
-    "phone": "+1-994-426-6611",
-    "branch_code": "BR053",
-    "created_at": "2024-11-26T18:20:03.877533"
-  },
-  {
-    "id": "ad6ef822-7d20-405b-80ec-aeda48cad902",
-    "name": "Philadelphia Medical Center",
-    "location": "Houston",
-    "address": "292 Oak Ave",
-    "phone": "+1-991-225-2489",
-    "branch_code": "BR054",
-    "created_at": "2024-10-12T18:20:03.877533"
-  },
-  {
-    "id": "3f34cb97-10fe-4a58-a823-82d28ecead3e",
-    "name": "San Diego Medical Center",
-    "location": "Dallas",
-    "address": "672 Main St",
-    "phone": "+1-720-162-1988",
-    "branch_code": "BR055",
-    "created_at": "2025-04-14T18:20:03.877533"
-  },
-  {
-    "id": "62e13975-74f3-4bd9-a0b5-36bfc1b60fc6",
-    "name": "San Jose Medical Center",
-    "location": "Chicago",
-    "address": "727 Oak Ave",
-    "phone": "+1-550-385-8604",
-    "branch_code": "BR056",
-    "created_at": "2024-08-18T18:20:03.877533"
-  },
-  {
-    "id": "3df7b04d-119c-4470-b46d-744e0d9526ff",
-    "name": "San Jose Medical Center",
-    "location": "Phoenix",
-    "address": "326 Maple Blvd",
-    "phone": "+1-780-127-2749",
-    "branch_code": "BR057",
-    "created_at": "2024-08-19T18:20:03.877533"
-  },
-  {
-    "id": "ced1902b-6512-4345-8551-df97df6f4d83",
-    "name": "Los Angeles Medical Center",
-    "location": "Phoenix",
-    "address": "959 Main St",
-    "phone": "+1-326-707-2305",
-    "branch_code": "BR058",
-    "created_at": "2024-11-14T18:20:03.877533"
-  },
-  {
-    "id": "0c852be4-494e-4636-aecc-a559a7e9b736",
-    "name": "Houston Medical Center",
-    "location": "Houston",
-    "address": "841 Maple Blvd",
-    "phone": "+1-988-310-5420",
-    "branch_code": "BR059",
-    "created_at": "2024-12-13T18:20:03.877533"
-  },
-  {
-    "id": "e200c456-a31c-4e6f-a6e1-bcabdd7b2d31",
-    "name": "San Diego Medical Center",
-    "location": "Chicago",
-    "address": "731 Main St",
-    "phone": "+1-212-257-5899",
-    "branch_code": "BR060",
-    "created_at": "2024-07-08T18:20:03.877533"
-  },
-  {
-    "id": "c3501ba5-18cb-430e-a2f0-f9d4abef646e",
-    "name": "Philadelphia Medical Center",
-    "location": "Los Angeles",
-    "address": "705 Pine Rd",
-    "phone": "+1-440-181-5430",
-    "branch_code": "BR061",
-    "created_at": "2025-05-31T18:20:03.877533"
-  },
-  {
-    "id": "4f46ef13-d9d5-4d6a-8b73-bf021413dfc0",
-    "name": "New York Medical Center",
-    "location": "San Diego",
-    "address": "872 Oak Ave",
-    "phone": "+1-850-927-5952",
-    "branch_code": "BR062",
-    "created_at": "2024-12-05T18:20:03.877533"
-  },
-  {
-    "id": "17edffb7-acdb-4268-bfe7-6a3d19ef02bf",
-    "name": "San Diego Medical Center",
-    "location": "San Jose",
-    "address": "214 Maple Blvd",
-    "phone": "+1-954-919-7999",
-    "branch_code": "BR063",
-    "created_at": "2024-08-24T18:20:03.877533"
-  },
-  {
-    "id": "71080b87-1d85-42dc-817a-05e9a076e53e",
-    "name": "Phoenix Medical Center",
-    "location": "New York",
-    "address": "355 Pine Rd",
-    "phone": "+1-554-453-4469",
-    "branch_code": "BR064",
-    "created_at": "2024-08-09T18:20:03.877533"
-  },
-  {
-    "id": "44dfdf1a-5217-4c7e-8a8c-bef62b212a23",
-    "name": "Houston Medical Center",
-    "location": "Dallas",
-    "address": "268 Maple Blvd",
-    "phone": "+1-632-643-7329",
-    "branch_code": "BR065",
-    "created_at": "2025-01-05T18:20:03.877533"
-  },
-  {
-    "id": "cd256a7d-e8c7-4653-9c98-a3527d5e8937",
-    "name": "San Jose Medical Center",
-    "location": "Phoenix",
-    "address": "310 Pine Rd",
-    "phone": "+1-776-898-9675",
-    "branch_code": "BR066",
-    "created_at": "2024-08-15T18:20:03.877533"
-  },
-  {
-    "id": "b29e95ef-c153-4c05-9a59-24427f4bef46",
-    "name": "Philadelphia Medical Center",
-    "location": "San Diego",
-    "address": "412 Oak Ave",
-    "phone": "+1-310-955-6899",
-    "branch_code": "BR067",
-    "created_at": "2024-06-13T18:20:03.877533"
-  },
-  {
-    "id": "d78cca2f-53e1-4e08-bc6d-b73f96738f59",
-    "name": "San Jose Medical Center",
-    "location": "Houston",
-    "address": "580 Pine Rd",
-    "phone": "+1-727-931-4828",
-    "branch_code": "BR068",
-    "created_at": "2025-04-12T18:20:03.877533"
-  },
-  {
-    "id": "aae0c9e8-14dc-4045-81a4-509c8be8fc70",
-    "name": "Dallas Medical Center",
-    "location": "Houston",
-    "address": "509 Pine Rd",
-    "phone": "+1-310-677-3773",
-    "branch_code": "BR069",
-    "created_at": "2024-12-24T18:20:03.877533"
-  },
-  {
-    "id": "d0a5e4be-138a-4ced-9a48-ef0116d748fb",
-    "name": "San Antonio Medical Center",
-    "location": "San Antonio",
-    "address": "333 Oak Ave",
-    "phone": "+1-608-771-2726",
-    "branch_code": "BR070",
-    "created_at": "2024-12-13T18:20:03.877533"
-  },
-  {
-    "id": "780ca8e2-13a2-4605-97e6-a8149450dde5",
-    "name": "Dallas Medical Center",
-    "location": "Houston",
-    "address": "203 Main St",
-    "phone": "+1-760-961-1287",
-    "branch_code": "BR071",
-    "created_at": "2025-01-03T18:20:03.877533"
-  },
-  {
-    "id": "c887a5fd-2743-4c8d-b0e4-69f35519294f",
-    "name": "Philadelphia Medical Center",
-    "location": "Dallas",
-    "address": "178 Maple Blvd",
-    "phone": "+1-532-896-6629",
-    "branch_code": "BR072",
-    "created_at": "2025-04-23T18:20:03.877533"
-  },
-  {
-    "id": "df5633e6-62f2-48be-aa13-ddcb5b98c252",
-    "name": "Dallas Medical Center",
-    "location": "New York",
-    "address": "402 Main St",
-    "phone": "+1-411-231-9238",
-    "branch_code": "BR073",
-    "created_at": "2024-07-21T18:20:03.877533"
-  },
-  {
-    "id": "4ced0873-7698-4cab-9f28-a24cae621108",
-    "name": "San Antonio Medical Center",
-    "location": "New York",
-    "address": "680 Main St",
-    "phone": "+1-884-876-5754",
-    "branch_code": "BR074",
-    "created_at": "2024-09-04T18:20:03.877533"
-  },
-  {
-    "id": "4adea6d6-06ec-4dfb-8bf4-3964f4375300",
-    "name": "New York Medical Center",
-    "location": "Houston",
-    "address": "277 Oak Ave",
-    "phone": "+1-436-300-3318",
-    "branch_code": "BR075",
-    "created_at": "2025-02-16T18:20:03.877533"
-  },
-  {
-    "id": "fc8fa26c-3fc3-449a-a6b3-eb7a449aba2c",
-    "name": "Los Angeles Medical Center",
-    "location": "San Jose",
-    "address": "541 Maple Blvd",
-    "phone": "+1-506-485-5372",
-    "branch_code": "BR076",
-    "created_at": "2025-01-26T18:20:03.877533"
-  },
-  {
-    "id": "942adc5c-2a4d-4ec9-94e3-eda8c2cf25c7",
-    "name": "Los Angeles Medical Center",
-    "location": "Houston",
-    "address": "345 Maple Blvd",
-    "phone": "+1-499-287-8283",
-    "branch_code": "BR077",
-    "created_at": "2024-06-16T18:20:03.877533"
-  },
-  {
-    "id": "883a45f0-86ed-46bb-aab9-67b8981d2682",
-    "name": "Houston Medical Center",
-    "location": "San Jose",
-    "address": "181 Maple Blvd",
-    "phone": "+1-348-707-8421",
-    "branch_code": "BR078",
-    "created_at": "2025-02-07T18:20:03.877533"
-  },
-  {
-    "id": "b3bfe060-2c4f-466e-9191-6d85e3c131cc",
-    "name": "Los Angeles Medical Center",
-    "location": "Dallas",
-    "address": "843 Maple Blvd",
-    "phone": "+1-510-401-1274",
-    "branch_code": "BR079",
-    "created_at": "2025-03-12T18:20:03.877533"
-  },
-  {
-    "id": "dc51b806-5b82-4791-9f6a-720a1d55cea3",
-    "name": "Los Angeles Medical Center",
-    "location": "New York",
-    "address": "249 Main St",
-    "phone": "+1-619-364-9640",
-    "branch_code": "BR080",
-    "created_at": "2024-10-02T18:20:03.877533"
-  },
-  {
-    "id": "83ba2a57-b6f4-46f2-806e-ae278a118108",
-    "name": "San Jose Medical Center",
-    "location": "Philadelphia",
-    "address": "688 Main St",
-    "phone": "+1-434-327-1339",
-    "branch_code": "BR081",
-    "created_at": "2025-06-05T18:20:03.877533"
-  },
-  {
-    "id": "0164d9e8-511e-403e-9b96-095aadddc827",
-    "name": "San Jose Medical Center",
-    "location": "New York",
-    "address": "838 Main St",
-    "phone": "+1-603-728-4233",
-    "branch_code": "BR082",
-    "created_at": "2024-12-22T18:20:03.877533"
-  },
-  {
-    "id": "0f9c01aa-79aa-4c70-b9ab-ab3300ede8b0",
-    "name": "Houston Medical Center",
-    "location": "San Antonio",
-    "address": "361 Main St",
-    "phone": "+1-349-475-4795",
-    "branch_code": "BR083",
-    "created_at": "2024-08-08T18:20:03.877533"
-  },
-  {
-    "id": "d3969d4a-5ba3-4ee7-bace-61dc75dfc824",
-    "name": "Los Angeles Medical Center",
-    "location": "Phoenix",
-    "address": "409 Maple Blvd",
-    "phone": "+1-441-651-3948",
-    "branch_code": "BR084",
-    "created_at": "2024-10-26T18:20:03.877533"
-  },
-  {
-    "id": "d9a30787-ee91-48f5-961c-80012a47e4a3",
-    "name": "Chicago Medical Center",
-    "location": "New York",
-    "address": "317 Pine Rd",
-    "phone": "+1-307-147-3996",
-    "branch_code": "BR085",
-    "created_at": "2025-06-03T18:20:03.877533"
-  },
-  {
-    "id": "ea429311-1f30-4cc1-bb78-cbe4f6970fd4",
-    "name": "New York Medical Center",
-    "location": "Dallas",
-    "address": "903 Pine Rd",
-    "phone": "+1-262-148-4977",
-    "branch_code": "BR086",
-    "created_at": "2025-02-10T18:20:03.877533"
-  },
-  {
-    "id": "a59365d9-11ab-4329-b4d9-dd13c72151b4",
-    "name": "Dallas Medical Center",
-    "location": "Los Angeles",
-    "address": "586 Pine Rd",
-    "phone": "+1-334-256-7700",
-    "branch_code": "BR087",
-    "created_at": "2025-02-24T18:20:03.877533"
-  },
-  {
-    "id": "0387c0f5-b07b-4933-8b2f-4aaf07c879fe",
-    "name": "New York Medical Center",
-    "location": "San Jose",
-    "address": "531 Oak Ave",
-    "phone": "+1-227-936-2740",
-    "branch_code": "BR088",
-    "created_at": "2024-09-10T18:20:03.877533"
-  },
-  {
-    "id": "7b893c61-7d61-4f6c-a90b-f0313af1baee",
-    "name": "Los Angeles Medical Center",
-    "location": "Houston",
-    "address": "973 Maple Blvd",
-    "phone": "+1-470-662-9437",
-    "branch_code": "BR089",
-    "created_at": "2025-02-25T18:20:03.877533"
-  },
-  {
-    "id": "1ad83cbe-166c-4f57-be93-6407eddfec35",
-    "name": "Chicago Medical Center",
-    "location": "Philadelphia",
-    "address": "255 Maple Blvd",
-    "phone": "+1-326-567-3193",
-    "branch_code": "BR090",
-    "created_at": "2024-09-20T18:20:03.877533"
-  },
-  {
-    "id": "436e712a-3cb6-4ce2-a29a-45f52d0fad36",
-    "name": "San Diego Medical Center",
-    "location": "Phoenix",
-    "address": "885 Pine Rd",
-    "phone": "+1-278-568-1580",
-    "branch_code": "BR091",
-    "created_at": "2024-07-13T18:20:03.877533"
-  },
-  {
-    "id": "9e0d3b8c-02a8-4639-9e27-62ce917a5251",
-    "name": "San Antonio Medical Center",
-    "location": "Los Angeles",
-    "address": "590 Maple Blvd",
-    "phone": "+1-696-402-9324",
-    "branch_code": "BR092",
-    "created_at": "2024-10-28T18:20:03.877533"
-  },
-  {
-    "id": "346d4ca5-67ea-4ba0-b2e2-22a707e79d6f",
-    "name": "Houston Medical Center",
-    "location": "San Antonio",
-    "address": "722 Pine Rd",
-    "phone": "+1-420-516-1334",
-    "branch_code": "BR093",
-    "created_at": "2025-01-15T18:20:03.877533"
-  },
-  {
-    "id": "2776af69-7690-4247-b93a-0989e0586ba6",
-    "name": "San Antonio Medical Center",
-    "location": "San Antonio",
-    "address": "404 Main St",
-    "phone": "+1-363-952-4557",
-    "branch_code": "BR094",
-    "created_at": "2024-09-07T18:20:03.877533"
-  },
-  {
-    "id": "abc3f80c-38bc-46eb-8444-130fce6b0e55",
-    "name": "Dallas Medical Center",
-    "location": "Philadelphia",
-    "address": "513 Oak Ave",
-    "phone": "+1-334-258-8645",
-    "branch_code": "BR095",
-    "created_at": "2024-09-29T18:20:03.877533"
-  },
-  {
-    "id": "3087654c-a6e6-4cef-9a9d-174c36426631",
-    "name": "New York Medical Center",
-    "location": "New York",
-    "address": "829 Main St",
-    "phone": "+1-770-393-5513",
-    "branch_code": "BR096",
-    "created_at": "2024-07-23T18:20:03.877533"
-  },
-  {
-    "id": "845c8853-7ba9-471b-b623-1c50593701a7",
-    "name": "New York Medical Center",
-    "location": "Philadelphia",
-    "address": "519 Main St",
-    "phone": "+1-247-597-4891",
-    "branch_code": "BR097",
-    "created_at": "2025-01-11T18:20:03.877533"
-  },
-  {
-    "id": "73fe92da-b21f-4cdb-ab24-95bd658995ec",
-    "name": "San Jose Medical Center",
-    "location": "Philadelphia",
-    "address": "243 Pine Rd",
-    "phone": "+1-622-819-8003",
-    "branch_code": "BR098",
-    "created_at": "2025-06-03T18:20:03.877533"
-  },
-  {
-    "id": "cef7ae07-a18d-4dd0-b8d4-dcd2f38d123b",
-    "name": "Los Angeles Medical Center",
-    "location": "Houston",
-    "address": "750 Maple Blvd",
-    "phone": "+1-858-845-8494",
-    "branch_code": "BR099",
-    "created_at": "2025-02-12T18:20:03.877533"
-  },
-  {
-    "id": "7ca8718d-4121-4e60-a31a-f8baae26db6f",
-    "name": "Philadelphia Medical Center",
-    "location": "San Diego",
-    "address": "374 Main St",
-    "phone": "+1-497-436-6014",
-    "branch_code": "BR100",
-    "created_at": "2025-03-06T18:20:03.877533"
+    "id": "7e322b94-303a-49fb-ad88-b0adfbc2473a",
+    "branch_code": "THA01",
+    "name": "Thane Medical Center",
+    "location": "Thane",
+    "address": "558 Brigade Road",
+    "phone": "9412796981",
+    "created_at": "2024-07-03T05:23:50.627581",
+    "updated_at": "2025-03-14T07:57:50.627581"
+  },
+  {
+    "id": "43a99605-d8a9-40bf-a78b-965336db088a",
+    "branch_code": "LUC02",
+    "name": "Lucknow Medical Center",
+    "location": "Lucknow",
+    "address": "174 Park Street",
+    "phone": "7070264450",
+    "created_at": "2024-07-07T10:16:50.627581",
+    "updated_at": "2024-09-12T08:25:50.627581"
+  },
+  {
+    "id": "e1143459-5d19-46d9-a5ce-9d0d1606b19d",
+    "branch_code": "HYD03",
+    "name": "Hyderabad Medical Center",
+    "location": "Hyderabad",
+    "address": "132 Jubilee Hills",
+    "phone": "8078729089",
+    "created_at": "2024-07-17T21:25:50.627581",
+    "updated_at": "2025-01-10T10:12:50.627581"
+  },
+  {
+    "id": "fc475d95-6582-4e32-bc76-3586daad0daa",
+    "branch_code": "THA04",
+    "name": "Thane Medical Center",
+    "location": "Thane",
+    "address": "872 Linking Road",
+    "phone": "6434748599",
+    "created_at": "2024-09-23T08:16:50.627581",
+    "updated_at": "2025-05-02T19:02:50.627581"
+  },
+  {
+    "id": "90fe4d02-9a0b-4108-b788-cb1e94077c67",
+    "branch_code": "JAI05",
+    "name": "Jaipur Medical Center",
+    "location": "Jaipur",
+    "address": "971 Zakaria Street",
+    "phone": "9425455738",
+    "created_at": "2024-10-16T21:35:50.627581",
+    "updated_at": "2024-10-13T14:24:50.627581"
+  },
+  {
+    "id": "e7a43b0a-e6fc-4a32-a2e9-18c6ccaada24",
+    "branch_code": "LUC06",
+    "name": "Lucknow Medical Center",
+    "location": "Lucknow",
+    "address": "265 Mount Road",
+    "phone": "7814891467",
+    "created_at": "2025-06-12T20:16:50.627581",
+    "updated_at": "2024-09-01T01:02:50.627581"
+  },
+  {
+    "id": "75b27ac3-ca6b-4df9-a16b-8e6836976563",
+    "branch_code": "NAG07",
+    "name": "Nagpur Medical Center",
+    "location": "Nagpur",
+    "address": "296 Anna Salai",
+    "phone": "6517133932",
+    "created_at": "2024-06-30T05:31:50.627581",
+    "updated_at": "2025-02-26T18:40:50.627581"
+  },
+  {
+    "id": "0cbf98b3-4e64-42f6-a528-5904de0a18d0",
+    "branch_code": "THA08",
+    "name": "Thane Medical Center",
+    "location": "Thane",
+    "address": "108 Zakaria Street",
+    "phone": "6219146994",
+    "created_at": "2024-11-20T17:25:50.627581",
+    "updated_at": "2025-03-11T23:10:50.627581"
+  },
+  {
+    "id": "1fed029d-2b25-4010-a29a-99e37636ab6f",
+    "branch_code": "AHM09",
+    "name": "Ahmedabad Medical Center",
+    "location": "Ahmedabad",
+    "address": "363 Mount Road",
+    "phone": "6605035178",
+    "created_at": "2024-08-24T14:47:50.627581",
+    "updated_at": "2024-10-03T23:33:50.627581"
+  },
+  {
+    "id": "9293d569-1a0c-45cf-b3e8-49d88423ea24",
+    "branch_code": "LUC10",
+    "name": "Lucknow Medical Center",
+    "location": "Lucknow",
+    "address": "283 Connaught Place",
+    "phone": "7540939999",
+    "created_at": "2025-02-17T13:50:50.627581",
+    "updated_at": "2025-06-08T19:50:50.627581"
   }
 ]

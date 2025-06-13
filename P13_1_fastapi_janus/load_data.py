@@ -8,31 +8,28 @@ from typing import Dict, Optional
 from gremlin_python.structure.graph import Graph
 from gremlin_python.driver.driver_remote_connection import DriverRemoteConnection
 from gremlin_python.driver.protocol import GremlinServerError
+from gremlin_python.process.graph_traversal import __
 
+# ─── Windows asyncio fix ────────────────────────────────────────────────────────
 if os.name == "nt":
     import asyncio
     asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
 
-# ─── Configuration ─────────────────────────────────────────────────────────────
-
-# Gremlin endpoint, e.g. "ws://localhost:8182/gremlin"
+# ─── CONFIGURATION ──────────────────────────────────────────────────────────────
 GREMLIN_ENDPOINT = os.getenv("GREMLIN_ENDPOINT", "ws://localhost:8182/gremlin")
+DATA_DIR         = os.path.join(os.path.dirname(__file__), "app", "data")
 
-# Directory where your JSON files live, relative to this script
-DATA_DIR = os.path.join(os.path.dirname(__file__), "app", "data")
-
-# The labels and filenames to process
 ENTITIES = [
-    ("Patient",               "patients.json"),
-    ("Staff",                 "staff.json"),
-    ("Branch",                "branches.json"),
-    ("InvestigationGroup",    "investigation_groups.json"),
-    ("Investigation",         "investigations.json"),
-    ("InvestigationResult",   "investigation_results.json"),
+    ("Branch",               "branches.json"),
+    ("Staff",                "staff.json"),
+    ("Patient",              "patients.json"),
+    ("InvestigationGroup",   "investigation_groups.json"),
+    ("Investigation",        "investigations.json"),
+    ("Order",                "orders.json"),
+    ("Result",               "results.json"),
 ]
 
-# ─── Logging Setup ─────────────────────────────────────────────────────────────
-
+# ─── LOGGING SETUP ──────────────────────────────────────────────────────────────
 logger = logging.getLogger("janusgraph-loader")
 logger.setLevel(logging.INFO)
 handler = logging.StreamHandler(sys.stdout)
@@ -40,12 +37,9 @@ handler.setFormatter(logging.Formatter("[%(asctime)s] %(levelname)s: %(message)s
                                        datefmt="%Y-%m-%d %H:%M:%S"))
 logger.addHandler(handler)
 
-# ─── JanusGraph Client Helpers ─────────────────────────────────────────────────
+# ─── JANUSGRAPH HELPERS ─────────────────────────────────────────────────────────
 
 def make_traversal_source() -> Graph:
-    """
-    Connect to JanusGraph via Gremlin Server and return a traversal source.
-    """
     graph = Graph()
     try:
         conn = DriverRemoteConnection(GREMLIN_ENDPOINT, "g")
@@ -53,155 +47,176 @@ def make_traversal_source() -> Graph:
         logger.info(f"Connected to Gremlin at {GREMLIN_ENDPOINT}")
         return g
     except Exception as e:
-        logger.error(f"Failed to connect to Gremlin endpoint: {e}")
+        logger.error(f"Could not connect to Gremlin server: {e}")
         sys.exit(1)
 
 def get_vertex_count(g, label: str) -> Optional[int]:
-    """
-    Return the number of vertices with the given label, or None on error.
-    """
     try:
-        count = g.V().hasLabel(label).count().next()
-        return int(count)
+        return int(g.V().hasLabel(label).count().next())
     except Exception as e:
-        logger.warning(f"Could not fetch count for '{label}': {e}")
+        logger.warning(f"Failed to fetch count for {label}: {e}")
         return None
 
 def clear_graph(g) -> None:
-    """
-    Drop all vertices (and edges) from the graph.
-    """
     try:
         g.V().drop().iterate()
-        logger.info("Graph cleared successfully.")
+        logger.info("Graph cleared (all vertices & edges dropped).")
     except Exception as e:
         logger.error(f"Failed to clear graph: {e}")
         sys.exit(1)
 
-# ─── Updated load_vertices with numeric conversion for `value` ───────────────────
-
-# Properties that your JanusGraph schema expects as doubles
-NUMERIC_PROPS = {"value"}
-
-# Map the JSON strings to floats instead of skipping
-VALUE_MAP = {
-    "Positive": 1.0,
-    "Negative": 0.0
-}
+# ─── VERTEX LOADER ──────────────────────────────────────────────────────────────
+NUMERIC_PROPS = {"value"}  # if you expect numeric‐only props
 
 def load_vertices(g, label: str, records: list) -> int:
     """
-    Insert the given records as vertices with the specified label.
-    Returns the number of successful inserts.
+    Create one vertex per record, skipping any list‐valued fields
+    (those will become edges later).
     """
-    success = 0
+    inserted = 0
     for rec in records:
         vid = rec.get("id", "<no-id>")
         trav = g.addV(label).property("id", vid)
         for k, v in rec.items():
-            if k == "id":
+            if k == "id" or isinstance(v, list):
                 continue
-
-            # Handle numeric props, mapping or casting as needed
             if k in NUMERIC_PROPS:
-                if isinstance(v, str) and v in VALUE_MAP:
-                    v = VALUE_MAP[v]
-                else:
-                    try:
-                        v = float(v)
-                    except (ValueError, TypeError):
-                        logger.warning(
-                            f"Skipping property '{k}' on {label} {vid}: "
-                            f"cannot convert '{rec[k]}' to float"
-                        )
-                        continue
-
-            # Attach the property, catching schema violations
+                try:
+                    v = float(v)
+                except Exception:
+                    logger.warning(f"  • [skip] non-numeric {k} on {label} {vid}")
+                    continue
             try:
                 trav = trav.property(k, v)
             except GremlinServerError as e:
-                if "SchemaViolationException" in str(e):
-                    logger.warning(
-                        f"Schema mismatch on {label} {vid} prop '{k}': {e.status['message']}"
-                    )
+                msg = str(e)
+                if "SchemaViolationException" in msg:
+                    logger.warning(f"  • [schema mismatch] {label}.{k} on {vid}: {e.status['message']}")
                     continue
                 else:
                     raise
-
-        # Finally iterate the traversal to perform the insert
         try:
             trav.iterate()
-            success += 1
+            inserted += 1
         except Exception as e:
-            logger.error(f"Failed to insert {label} {vid}: {e}")
+            logger.error(f"  ✗ Failed to insert {label} {vid}: {e}")
+    return inserted
 
-    return success
+# ─── EDGE “UPSERT” LOADER ───────────────────────────────────────────────────────
 
-# ─── Main Execution ─────────────────────────────────────────────────────────────
+def upsert_edge(g, src_id: str, dst_id: str, label: str, edge_prop: Dict[str, any] = None) -> bool:
+    """
+    Idempotently add an edge of type label from the vertex whose 'id' property=src_id
+    to the one whose 'id' property=dst_id, attaching any edge_prop.
+    """
+    edge_prop = edge_prop or {}
+    # Start from the source vertex by property('id', src_id)
+    step = g.V().has('id', src_id).coalesce(
+        # 1) if this edge already exists, no-op
+        __.outE(label).where(__.inV().has('id', dst_id)),
+        # 2) otherwise add the edge via anonymous traversal
+        __.addE(label).to(
+            __.V().has('id', dst_id)
+        )
+    )
+    # attach any edge properties
+    for k, v in edge_prop.items():
+        step = step.property(k, v)
+
+    try:
+        step.iterate()
+        return True
+    except Exception as e:
+        logger.error(f"  ✗ Failed to upsert edge {label} {src_id}→{dst_id}: {e}")
+        return False
+
+# ─── MAIN ───────────────────────────────────────────────────────────────────────
 
 def main():
-    # 1) Connect
     g = make_traversal_source()
 
-    # 2) PREVIOUS COUNTS
-    prev_counts: Dict[str, Optional[int]] = {}
-    logger.info("Fetching existing vertex counts…")
+    # 1) PREVIOUS COUNTS
+    prev_counts = {}
+    logger.info("Fetching existing counts…")
     for label, _ in ENTITIES:
-        cnt = get_vertex_count(g, label)
-        prev_counts[label] = cnt
-        logger.info(f"  {label:20} : {cnt if cnt is not None else '?'}")
+        prev_counts[label] = get_vertex_count(g, label)
+        logger.info(f"  • {label:20} : {prev_counts[label]}")
 
-    # 3) CLEAR GRAPH
-    logger.info("Dropping all existing vertices and edges…")
+    # 2) CLEAR GRAPH
+    logger.info("Clearing graph…")
     clear_graph(g)
 
-    # 4) LOAD NEW DATA
-    inserted_counts: Dict[str, int] = {}
-    for label, filename in ENTITIES:
-        path = os.path.join(DATA_DIR, filename)
+    # 3) LOAD VERTICES
+    inserted = {}
+    raw_data = {}
+    for label, fname in ENTITIES:
+        path = os.path.join(DATA_DIR, fname)
         if not os.path.isfile(path):
-            logger.warning(f"Skipping missing file: {filename}")
-            inserted_counts[label] = 0
+            logger.warning(f"Missing file {fname}, skipping {label}")
+            inserted[label] = 0
             continue
+        with open(path, encoding="utf-8") as f:
+            recs = json.load(f)
+        raw_data[label] = recs
+        logger.info(f"Loading {len(recs)} × {label}…")
+        ok = load_vertices(g, label, recs)
+        inserted[label] = ok
+        logger.info(f"  → {label:20} inserted {ok}/{len(recs)}")
 
-        # Read JSON
-        try:
-            with open(path, encoding="utf-8") as f:
-                records = json.load(f)
-        except Exception as e:
-            logger.error(f"Error reading {filename}: {e}")
-            inserted_counts[label] = 0
-            continue
+    # 4) UPSERT Investigation→InvestigationGroup edges
+    logger.info("Upserting Investigation→Group edges…")
+    for inv in raw_data.get("Investigation", []):
+        for gid in inv.get("group_ids", []):
+            upsert_edge(g, inv["id"], gid, "inGroup")
 
-        total = len(records)
-        logger.info(f"Loading {total} records for '{label}' from '{filename}'…")
-        inserted = load_vertices(g, label, records)
-        inserted_counts[label] = inserted
-        logger.info(f"  → Successfully inserted {inserted}/{total} {label} vertices")
+    # 5) UPSERT Order→Investigation edges (attach group_id)
+    logger.info("Upserting Order→Investigation edges…")
+    for order in raw_data.get("Order", []):
+        for link in order.get("investigations", []):
+            upsert_edge(
+                g,
+                order["id"],
+                link["inv_id"],
+                "includesInvestigation",
+                {"group_id": link.get("group_id")}
+            )
 
-    # 5) POST-LOAD COUNTS
-    post_counts: Dict[str, Optional[int]] = {}
-    logger.info("Fetching post-load vertex counts…")
+    # 6) UPSERT Result→Order edges
+    logger.info("Upserting Result→Order edges…")
+    for result in raw_data.get("Result", []):
+        upsert_edge(g, result["id"], result["order_id"], "ofOrder")
+
+    # 7) UPSERT Result→Investigation edges (attach value)
+    logger.info("Upserting Result→Investigation edges…")
+    for result in raw_data.get("Result", []):
+        for val in result.get("values", []):
+            upsert_edge(
+                g,
+                result["id"],
+                val["inv_id"],
+                "forInvestigation",
+                {"value": float(val["value"])}
+            )
+
+    # 8) POST-LOAD COUNTS
+    post_counts = {}
+    logger.info("Fetching post-load counts…")
     for label, _ in ENTITIES:
-        cnt = get_vertex_count(g, label)
-        post_counts[label] = cnt
-        logger.info(f"  {label:20} : {cnt if cnt is not None else '?'}")
+        post_counts[label] = get_vertex_count(g, label)
+        logger.info(f"  • {label:20} : {post_counts[label]}")
 
-    # 6) SUMMARY
-    logger.info("Summary (previous → inserted → current):")
+    # 9) SUMMARY
+    logger.info("Summary (before → inserted → after):")
     for label, _ in ENTITIES:
-        prev = prev_counts.get(label, "?")
-        ins  = inserted_counts.get(label, 0)
-        post = post_counts.get(label, "?")
-        logger.info(f"  {label:20} : {prev} → {ins} → {post}")
+        logger.info(f"  • {label:20} : "
+                    f"{prev_counts[label]} → {inserted[label]} → {post_counts[label]}")
 
-    # 7) Close connection
+    # 10) CLEANUP
     try:
         g.remote_connection.close()
-    except Exception:
+    except:
         pass
-
-    logger.info("Data load operation complete.")
+    logger.info("Data load complete.")
 
 if __name__ == "__main__":
     main()

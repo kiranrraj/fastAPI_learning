@@ -1,1002 +1,798 @@
 [
   {
-    "id": "829a07c8-8c79-44e3-89cc-2b1d346b9697",
-    "name": "Complete Blood Count 1",
-    "unit": "g/L",
-    "reference_range": "32-94",
-    "group_id": "4697d60a-5e51-4596-b16f-e9f81a1d312c",
-    "ordered_by": "09fc91df-1f3e-4c90-95a6-54909aa228f7",
-    "investigation_id": "INV0001",
-    "created_at": "2024-09-25T18:20:03.877533"
+    "id": "3d37e77b-7e42-4818-9bfa-663d7f9e2f40",
+    "investigation_id": "THYR44894",
+    "name": "Thyroid Panel 1",
+    "unit": "\u00b5mol/L",
+    "reference_range": "23-52",
+    "group_ids": [
+      "b8f888cd-ed5a-4a78-a8b3-975a8cb5927c"
+    ],
+    "created_at": "2024-06-30T02:10:50.627581",
+    "updated_at": "2024-07-15T21:56:50.627581"
   },
   {
-    "id": "c2d22b4b-02af-44e7-bb82-7cea356874b5",
-    "name": "Lipid Panel 2",
-    "unit": "mmol/L",
-    "reference_range": "28-86",
-    "group_id": "10daac3e-bf66-4009-801d-550f568c976a",
-    "ordered_by": "79b723b4-1cd9-4dbc-b38b-b0dddc39db98",
-    "investigation_id": "INV0002",
-    "created_at": "2025-01-12T18:20:03.877533"
+    "id": "fa25a2c8-7149-46b9-b006-3778d1537c3e",
+    "investigation_id": "THYR97621",
+    "name": "Thyroid Panel 2",
+    "unit": "cells/\u00b5L",
+    "reference_range": "35-66",
+    "group_ids": [
+      "5035ef6e-ab44-4822-b0bc-c4b58a2f9b50",
+      "d0d05f85-11b2-41bb-990d-e72f8f5d22dc",
+      "c1928945-5a3a-41b6-b691-52f6661d82ad"
+    ],
+    "created_at": "2025-04-01T22:15:50.627581",
+    "updated_at": "2024-11-23T16:28:50.627581"
   },
   {
-    "id": "7eab90f5-0a02-4936-b5ff-04d64f6217a4",
-    "name": "Glucose Test 3",
-    "unit": "mmol/L",
-    "reference_range": null,
-    "group_id": "f9ad5c6a-9cb1-44cd-8682-55db166277ba",
-    "ordered_by": "cd8fdc68-01eb-4bcb-9352-7b49cdd8f75b",
-    "investigation_id": "INV0003",
-    "created_at": "2024-07-20T18:20:03.877533"
-  },
-  {
-    "id": "c3bb1f61-979d-4107-9ef1-6f2f60ced54c",
-    "name": "Liver Function 4",
+    "id": "57d84ca9-a3ad-485e-bf0c-e3af2c603ba0",
+    "investigation_id": "ANAS19082",
+    "name": "ANA Screen 3",
     "unit": "mg/dL",
-    "reference_range": "46-93",
-    "group_id": "132b4f6e-1418-4032-b9d9-85e8dd6d976a",
-    "ordered_by": "226793fe-8ddb-480b-8803-2cd1629e6649",
-    "investigation_id": "INV0004",
-    "created_at": "2024-08-22T18:20:03.877533"
+    "reference_range": "37-51",
+    "group_ids": [
+      "8b706525-5b46-4bc1-9415-c7e138e7c99f",
+      "b013583c-0f64-4780-8046-85bf17741e55",
+      "723c04b9-625e-4e84-b76a-1b79a0046770"
+    ],
+    "created_at": "2025-04-26T13:05:50.627581",
+    "updated_at": "2024-10-01T21:52:50.627581"
   },
   {
-    "id": "cd82a32b-85ef-49a3-937b-b421a6b2c13b",
-    "name": "Thyroid Panel 5",
-    "unit": "cells/mcL",
-    "reference_range": null,
-    "group_id": "ee846d9c-16cf-4b44-b5ff-857ed6d5a3db",
-    "ordered_by": null,
-    "investigation_id": "INV0005",
-    "created_at": "2024-08-03T18:20:03.877533"
+    "id": "50e7ede0-9ff1-4eee-8561-f48ede14e134",
+    "investigation_id": "ANAS48245",
+    "name": "ANA Screen 4",
+    "unit": "pg/mL",
+    "reference_range": "20-59",
+    "group_ids": [
+      "5035ef6e-ab44-4822-b0bc-c4b58a2f9b50",
+      "b9c3dadc-cf15-489a-a9ac-1f61228f8cad",
+      "96c4818f-5319-4c48-ad65-b7687b2e0a81"
+    ],
+    "created_at": "2024-07-15T19:48:50.627581",
+    "updated_at": "2024-10-20T21:33:50.627581"
   },
   {
-    "id": "57def83a-b727-415e-9082-e76c880e189a",
-    "name": "Thyroid Panel 6",
+    "id": "03cba0ee-987b-47e8-8cdb-99dd5fe23366",
+    "investigation_id": "ANAS13217",
+    "name": "ANA Screen 5",
+    "unit": "mEq/L",
+    "reference_range": "46-63",
+    "group_ids": [
+      "01c25269-4193-41b9-afc9-f509ae85f7bc",
+      "d0d05f85-11b2-41bb-990d-e72f8f5d22dc",
+      "b3061560-bc97-438a-bfe3-e1725511d395"
+    ],
+    "created_at": "2025-04-15T10:38:50.627581",
+    "updated_at": "2025-01-25T02:41:50.627581"
+  },
+  {
+    "id": "7d27db6b-e565-4421-b25c-a8cbd9ecabbf",
+    "investigation_id": "D-DI02113",
+    "name": "D-Dimer 6",
+    "unit": "pg/mL",
+    "reference_range": "41-62",
+    "group_ids": [
+      "b013583c-0f64-4780-8046-85bf17741e55",
+      "723c04b9-625e-4e84-b76a-1b79a0046770"
+    ],
+    "created_at": "2025-01-31T00:51:50.627581",
+    "updated_at": "2024-08-15T15:17:50.627581"
+  },
+  {
+    "id": "fa2d07b5-1920-4c99-901a-4d80ed981a64",
+    "investigation_id": "FREE43201",
+    "name": "Free T4 7",
+    "unit": "cells/mm\u00b3",
+    "reference_range": "18-87",
+    "group_ids": [
+      "b9c3dadc-cf15-489a-a9ac-1f61228f8cad",
+      "1e1ab598-088e-4925-b7c6-c9fc92377339",
+      "b013583c-0f64-4780-8046-85bf17741e55"
+    ],
+    "created_at": "2025-02-18T21:19:50.627581",
+    "updated_at": "2024-10-04T11:42:50.627581"
+  },
+  {
+    "id": "f2b57adc-4566-43f4-bd2a-765ed16966ae",
+    "investigation_id": "CALC58041",
+    "name": "Calcium Panel 8",
+    "unit": "pg/mL",
+    "reference_range": "11-91",
+    "group_ids": [
+      "40b75cd7-4a26-41ba-8595-83be583deacd",
+      "ea3cf07e-a2e9-4dd6-9dd6-f36d2602eba2",
+      "96c4818f-5319-4c48-ad65-b7687b2e0a81"
+    ],
+    "created_at": "2025-06-11T07:45:50.627581",
+    "updated_at": "2025-01-08T10:35:50.627581"
+  },
+  {
+    "id": "e725f70c-0f1d-47e2-b610-0534d9c30cee",
+    "investigation_id": "THYR02392",
+    "name": "Thyroid Panel 9",
+    "unit": "U/L",
+    "reference_range": "22-80",
+    "group_ids": [
+      "1e1ab598-088e-4925-b7c6-c9fc92377339",
+      "b9c3dadc-cf15-489a-a9ac-1f61228f8cad",
+      "2b0b506c-52e8-4e02-8720-ebc5baa6068d"
+    ],
+    "created_at": "2024-11-30T15:10:50.627581",
+    "updated_at": "2025-05-11T03:32:50.627581"
+  },
+  {
+    "id": "1c05468a-84e2-49e1-b767-db65678ca658",
+    "investigation_id": "BLOO57634",
+    "name": "Blood Culture 10",
+    "unit": "ng/dL",
+    "reference_range": "12-83",
+    "group_ids": [
+      "ea3cf07e-a2e9-4dd6-9dd6-f36d2602eba2",
+      "8b706525-5b46-4bc1-9415-c7e138e7c99f",
+      "c1928945-5a3a-41b6-b691-52f6661d82ad"
+    ],
+    "created_at": "2025-05-29T08:49:50.627581",
+    "updated_at": "2025-04-03T14:57:50.627581"
+  },
+  {
+    "id": "7ecee35c-2f66-4a98-b4e7-87a6f8ed2c5c",
+    "investigation_id": "PROC01076",
+    "name": "Procalcitonin 11",
+    "unit": "cells/mm\u00b3",
+    "reference_range": "36-76",
+    "group_ids": [
+      "40b75cd7-4a26-41ba-8595-83be583deacd",
+      "b9c3dadc-cf15-489a-a9ac-1f61228f8cad",
+      "c1928945-5a3a-41b6-b691-52f6661d82ad"
+    ],
+    "created_at": "2024-11-24T11:55:50.627581",
+    "updated_at": "2025-02-21T13:59:50.627581"
+  },
+  {
+    "id": "1424e6b2-d033-4080-bd3b-7009f1c2510f",
+    "investigation_id": "RENA32597",
+    "name": "Renal Function Test 12",
+    "unit": "CFU/mL",
+    "reference_range": "39-60",
+    "group_ids": [
+      "1238fc3b-6f63-45fb-8a95-9479829e7bbd",
+      "51028b81-6ac5-483a-940b-5c8ff29c11ca",
+      "5035ef6e-ab44-4822-b0bc-c4b58a2f9b50"
+    ],
+    "created_at": "2024-07-18T22:28:50.627581",
+    "updated_at": "2025-01-26T10:18:50.627581"
+  },
+  {
+    "id": "77561ef8-52a4-426c-8e64-85cecb4b02fe",
+    "investigation_id": "GLUC67172",
+    "name": "Glucose Tolerance Test 13",
+    "unit": "g/dL",
+    "reference_range": "23-97",
+    "group_ids": [
+      "5035ef6e-ab44-4822-b0bc-c4b58a2f9b50",
+      "b013583c-0f64-4780-8046-85bf17741e55",
+      "c1928945-5a3a-41b6-b691-52f6661d82ad"
+    ],
+    "created_at": "2025-05-08T08:22:50.627581",
+    "updated_at": "2025-01-07T18:15:50.627581"
+  },
+  {
+    "id": "225bfe48-0586-406c-8b48-bfbc491b24ba",
+    "investigation_id": "LIVE18358",
+    "name": "Liver Function Panel 14",
+    "unit": "pg/\u00b5L",
+    "reference_range": "34-96",
+    "group_ids": [
+      "8b706525-5b46-4bc1-9415-c7e138e7c99f",
+      "723c04b9-625e-4e84-b76a-1b79a0046770",
+      "01c25269-4193-41b9-afc9-f509ae85f7bc"
+    ],
+    "created_at": "2024-12-01T07:24:50.627581",
+    "updated_at": "2025-01-06T11:07:50.627581"
+  },
+  {
+    "id": "c8d2ce34-6bab-4be5-87d0-906c28f59080",
+    "investigation_id": "LIPI56350",
+    "name": "Lipid Profile 15",
+    "unit": "cells/mm\u00b3",
+    "reference_range": "35-67",
+    "group_ids": [
+      "723c04b9-625e-4e84-b76a-1b79a0046770",
+      "a44b1931-6bc8-4734-851e-475245cb911e",
+      "40b75cd7-4a26-41ba-8595-83be583deacd"
+    ],
+    "created_at": "2025-06-09T23:29:50.627581",
+    "updated_at": "2025-04-05T15:17:50.627581"
+  },
+  {
+    "id": "8e0b1aaa-4867-4cca-80a6-cd9552a11c7c",
+    "investigation_id": "CREA91213",
+    "name": "Creatine Kinase 16",
+    "unit": "\u00b5mol/L",
+    "reference_range": "32-67",
+    "group_ids": [
+      "51028b81-6ac5-483a-940b-5c8ff29c11ca",
+      "40b75cd7-4a26-41ba-8595-83be583deacd"
+    ],
+    "created_at": "2024-11-16T05:45:50.627581",
+    "updated_at": "2024-10-29T23:17:50.627581"
+  },
+  {
+    "id": "32d53eb9-a3ee-476d-9e72-f303df733c67",
+    "investigation_id": "HIVA22404",
+    "name": "HIV Antibody 17",
+    "unit": "cells/\u00b5L",
+    "reference_range": "42-71",
+    "group_ids": [
+      "1e1ab598-088e-4925-b7c6-c9fc92377339",
+      "b3061560-bc97-438a-bfe3-e1725511d395"
+    ],
+    "created_at": "2024-12-02T01:30:50.627581",
+    "updated_at": "2024-10-24T16:59:50.627581"
+  },
+  {
+    "id": "d35baf6c-5a4e-44e5-817d-be9365ac94db",
+    "investigation_id": "CRPQ97120",
+    "name": "CRP Quantitative 18",
+    "unit": "ng/dL",
+    "reference_range": "18-72",
+    "group_ids": [
+      "b3061560-bc97-438a-bfe3-e1725511d395",
+      "01c25269-4193-41b9-afc9-f509ae85f7bc",
+      "a9168645-ab4a-48ea-b1a3-bd904432ebf3"
+    ],
+    "created_at": "2024-09-11T05:32:50.627581",
+    "updated_at": "2024-12-28T18:56:50.627581"
+  },
+  {
+    "id": "0f5cb1cc-e032-4dc0-9b83-34472c27c259",
+    "investigation_id": "ELEC27612",
+    "name": "Electrolyte Panel 19",
     "unit": "mmol/L",
-    "reference_range": "10-55",
-    "group_id": "ab89a423-d261-48ae-9f52-7e04663b2e58",
-    "ordered_by": "33341cfd-2f51-4589-8620-034cdc1e43f2",
-    "investigation_id": "INV0006",
-    "created_at": "2024-10-20T18:20:03.877533"
+    "reference_range": "10-83",
+    "group_ids": [
+      "a44b1931-6bc8-4734-851e-475245cb911e",
+      "b8f888cd-ed5a-4a78-a8b3-975a8cb5927c",
+      "a9168645-ab4a-48ea-b1a3-bd904432ebf3"
+    ],
+    "created_at": "2025-04-19T19:22:50.627581",
+    "updated_at": "2024-08-30T02:30:50.627581"
   },
   {
-    "id": "50c958d3-ef80-4870-8461-a49d2f7c36c7",
-    "name": "Complete Blood Count 7",
-    "unit": "IU/L",
-    "reference_range": "16-98",
-    "group_id": "75c02e71-a29b-439f-a3a9-49eac5fad321",
-    "ordered_by": "189beabb-a362-4ba2-90af-60dee63f50c2",
-    "investigation_id": "INV0007",
-    "created_at": "2024-11-23T18:20:03.877533"
-  },
-  {
-    "id": "282e9866-67df-4495-ad87-66fcc11f7316",
-    "name": "Liver Function 8",
+    "id": "cade4034-0f72-4cf1-984e-854c791bb13b",
+    "investigation_id": "HIVA41559",
+    "name": "HIV Antibody 20",
     "unit": "mmol/L",
-    "reference_range": null,
-    "group_id": "c67a0f25-6c8c-40d8-aa42-d78361fe6a38",
-    "ordered_by": "0b10a0b4-4df9-4720-b719-e5902be344ea",
-    "investigation_id": "INV0008",
-    "created_at": "2025-04-01T18:20:03.877533"
+    "reference_range": "39-78",
+    "group_ids": [
+      "22ae8b08-64c8-413e-a7d6-a2d9f876889a",
+      "2b0b506c-52e8-4e02-8720-ebc5baa6068d",
+      "ea3cf07e-a2e9-4dd6-9dd6-f36d2602eba2"
+    ],
+    "created_at": "2025-01-16T03:25:50.627581",
+    "updated_at": "2024-08-28T23:00:50.627581"
   },
   {
-    "id": "22a0dc6d-d8f4-4525-8867-524717415042",
-    "name": "Lipid Panel 9",
+    "id": "e17c514c-e162-4c04-824a-4067505c4903",
+    "investigation_id": "BLOO64727",
+    "name": "Blood Culture 21",
+    "unit": "cells/\u00b5L",
+    "reference_range": "44-99",
+    "group_ids": [
+      "5035ef6e-ab44-4822-b0bc-c4b58a2f9b50",
+      "d0d05f85-11b2-41bb-990d-e72f8f5d22dc"
+    ],
+    "created_at": "2024-08-28T10:56:50.627581",
+    "updated_at": "2024-08-22T00:44:50.627581"
+  },
+  {
+    "id": "3ff25384-613e-44da-912c-e9766a4b68c3",
+    "investigation_id": "CREA42326",
+    "name": "Creatine Kinase 22",
+    "unit": "ng/dL",
+    "reference_range": "10-84",
+    "group_ids": [
+      "1238fc3b-6f63-45fb-8a95-9479829e7bbd",
+      "ea3cf07e-a2e9-4dd6-9dd6-f36d2602eba2"
+    ],
+    "created_at": "2025-02-06T00:51:50.627581",
+    "updated_at": "2024-12-30T11:44:50.627581"
+  },
+  {
+    "id": "a9c6d77a-5ebe-4f6f-b0ae-5bbaf6c78601",
+    "investigation_id": "ELEC06829",
+    "name": "Electrolyte Panel 23",
+    "unit": "cells/mm\u00b3",
+    "reference_range": "18-73",
+    "group_ids": [
+      "c1928945-5a3a-41b6-b691-52f6661d82ad"
+    ],
+    "created_at": "2024-11-03T17:20:50.627581",
+    "updated_at": "2024-07-15T21:12:50.627581"
+  },
+  {
+    "id": "c1459be7-2924-4f1b-bc98-7928af019e8b",
+    "investigation_id": "FREE37472",
+    "name": "Free T4 24",
+    "unit": "CFU/mL",
+    "reference_range": "24-80",
+    "group_ids": [
+      "b013583c-0f64-4780-8046-85bf17741e55",
+      "723c04b9-625e-4e84-b76a-1b79a0046770"
+    ],
+    "created_at": "2025-02-17T13:13:50.627581",
+    "updated_at": "2024-07-27T00:31:50.627581"
+  },
+  {
+    "id": "9102385c-c92a-4339-922a-dae7e573eeef",
+    "investigation_id": "IRON09792",
+    "name": "Iron Studies 25",
+    "unit": "CFU/mL",
+    "reference_range": "11-76",
+    "group_ids": [
+      "b3061560-bc97-438a-bfe3-e1725511d395",
+      "ea3cf07e-a2e9-4dd6-9dd6-f36d2602eba2",
+      "723c04b9-625e-4e84-b76a-1b79a0046770"
+    ],
+    "created_at": "2024-10-20T00:26:50.627581",
+    "updated_at": "2024-10-11T01:56:50.627581"
+  },
+  {
+    "id": "a8c4f6ef-69f9-4aeb-815d-6c946c592136",
+    "investigation_id": "COMP55114",
+    "name": "Complete Blood Count 26",
     "unit": "IU/L",
-    "reference_range": null,
-    "group_id": "f9ad5c6a-9cb1-44cd-8682-55db166277ba",
-    "ordered_by": "52c1d630-7b04-4c9b-8015-7bfe90a64dd2",
-    "investigation_id": "INV0009",
-    "created_at": "2024-08-15T18:20:03.877533"
+    "reference_range": "40-63",
+    "group_ids": [
+      "8b706525-5b46-4bc1-9415-c7e138e7c99f"
+    ],
+    "created_at": "2024-07-20T21:52:50.627581",
+    "updated_at": "2024-11-27T00:09:50.627581"
   },
   {
-    "id": "bdba11b1-9f41-4307-a841-1f70c322dc37",
-    "name": "Thyroid Panel 10",
+    "id": "73a3171b-b63e-4288-af50-c74ef607a2d3",
+    "investigation_id": "HEPA98667",
+    "name": "Hepatitis B Surface Antigen 27",
+    "unit": "g/dL",
+    "reference_range": "27-74",
+    "group_ids": [
+      "ea3cf07e-a2e9-4dd6-9dd6-f36d2602eba2",
+      "a44b1931-6bc8-4734-851e-475245cb911e",
+      "b9c3dadc-cf15-489a-a9ac-1f61228f8cad"
+    ],
+    "created_at": "2025-01-11T18:29:50.627581",
+    "updated_at": "2025-03-05T14:36:50.627581"
+  },
+  {
+    "id": "49af7800-5a3b-4b97-b31c-d6ca5a3f5f9f",
+    "investigation_id": "PROT80563",
+    "name": "Prothrombin Time 28",
+    "unit": "ng/dL",
+    "reference_range": "23-59",
+    "group_ids": [
+      "b9c3dadc-cf15-489a-a9ac-1f61228f8cad",
+      "b013583c-0f64-4780-8046-85bf17741e55",
+      "b8f888cd-ed5a-4a78-a8b3-975a8cb5927c"
+    ],
+    "created_at": "2024-09-30T23:52:50.627581",
+    "updated_at": "2025-01-02T21:28:50.627581"
+  },
+  {
+    "id": "eacd815b-52f6-414b-9814-6e1214d73bc0",
+    "investigation_id": "RENA53678",
+    "name": "Renal Function Test 29",
+    "unit": "CFU/mL",
+    "reference_range": "15-62",
+    "group_ids": [
+      "1e1ab598-088e-4925-b7c6-c9fc92377339",
+      "d0d05f85-11b2-41bb-990d-e72f8f5d22dc"
+    ],
+    "created_at": "2024-07-19T05:40:50.627581",
+    "updated_at": "2025-02-27T03:26:50.627581"
+  },
+  {
+    "id": "77e67b36-74c8-4054-90af-e85201b4b86b",
+    "investigation_id": "BLOO53219",
+    "name": "Blood Culture 30",
+    "unit": "pg/mL",
+    "reference_range": "13-68",
+    "group_ids": [
+      "22ae8b08-64c8-413e-a7d6-a2d9f876889a"
+    ],
+    "created_at": "2025-04-05T06:29:50.627581",
+    "updated_at": "2024-11-08T18:30:50.627581"
+  },
+  {
+    "id": "9f02d97c-d58f-4300-9373-c28616ef0852",
+    "investigation_id": "BLOO62582",
+    "name": "Blood Gas Analysis 31",
+    "unit": "cells/\u00b5L",
+    "reference_range": "10-64",
+    "group_ids": [
+      "1238fc3b-6f63-45fb-8a95-9479829e7bbd",
+      "b9c3dadc-cf15-489a-a9ac-1f61228f8cad"
+    ],
+    "created_at": "2025-02-22T10:33:50.627581",
+    "updated_at": "2024-09-23T00:19:50.627581"
+  },
+  {
+    "id": "69736a18-f751-4ddc-99ae-c04a665c92d3",
+    "investigation_id": "VITA95603",
+    "name": "Vitamin D Assay 32",
+    "unit": "IU/L",
+    "reference_range": "17-55",
+    "group_ids": [
+      "723c04b9-625e-4e84-b76a-1b79a0046770",
+      "b013583c-0f64-4780-8046-85bf17741e55",
+      "5035ef6e-ab44-4822-b0bc-c4b58a2f9b50"
+    ],
+    "created_at": "2025-04-07T13:57:50.627581",
+    "updated_at": "2025-02-01T09:47:50.627581"
+  },
+  {
+    "id": "3bab88b2-7470-40ab-99e6-fc8acf8a7d41",
+    "investigation_id": "LIVE70825",
+    "name": "Liver Function Panel 33",
+    "unit": "mEq/L",
+    "reference_range": "11-70",
+    "group_ids": [
+      "96c4818f-5319-4c48-ad65-b7687b2e0a81",
+      "1e1ab598-088e-4925-b7c6-c9fc92377339",
+      "51028b81-6ac5-483a-940b-5c8ff29c11ca"
+    ],
+    "created_at": "2025-01-04T21:05:50.627581",
+    "updated_at": "2024-10-16T13:16:50.627581"
+  },
+  {
+    "id": "cf674d47-bbf0-4573-8ee7-f75f01a4f112",
+    "investigation_id": "LIPA13387",
+    "name": "Lipase 34",
+    "unit": "cells/\u00b5L",
+    "reference_range": "42-98",
+    "group_ids": [
+      "c1928945-5a3a-41b6-b691-52f6661d82ad",
+      "01c25269-4193-41b9-afc9-f509ae85f7bc",
+      "ea3cf07e-a2e9-4dd6-9dd6-f36d2602eba2"
+    ],
+    "created_at": "2025-06-01T08:18:50.627581",
+    "updated_at": "2024-07-20T00:39:50.627581"
+  },
+  {
+    "id": "a12e5218-bb68-4985-8ba0-ca689ca59dd8",
+    "investigation_id": "CALC20968",
+    "name": "Calcium Panel 35",
+    "unit": "cells/\u00b5L",
+    "reference_range": "10-98",
+    "group_ids": [
+      "b013583c-0f64-4780-8046-85bf17741e55"
+    ],
+    "created_at": "2024-09-15T16:18:50.627581",
+    "updated_at": "2024-06-28T19:25:50.627581"
+  },
+  {
+    "id": "50898c5a-ba1e-40b7-9eba-b7c539ed231c",
+    "investigation_id": "GLUC39645",
+    "name": "Glucose Tolerance Test 36",
+    "unit": "ng/dL",
+    "reference_range": "34-57",
+    "group_ids": [
+      "a9168645-ab4a-48ea-b1a3-bd904432ebf3"
+    ],
+    "created_at": "2025-05-19T00:45:50.627581",
+    "updated_at": "2024-08-13T23:39:50.627581"
+  },
+  {
+    "id": "b775ffde-ec54-4ff3-8ada-7e00c249b786",
+    "investigation_id": "LIPA08202",
+    "name": "Lipase 37",
+    "unit": "cells/mm\u00b3",
+    "reference_range": "41-94",
+    "group_ids": [
+      "96c4818f-5319-4c48-ad65-b7687b2e0a81",
+      "a44b1931-6bc8-4734-851e-475245cb911e"
+    ],
+    "created_at": "2024-12-05T00:36:50.627581",
+    "updated_at": "2024-09-25T12:04:50.627581"
+  },
+  {
+    "id": "a2214b42-92f6-4a32-be8f-933cc1381c1e",
+    "investigation_id": "D-DI82081",
+    "name": "D-Dimer 38",
+    "unit": "cells/mm\u00b3",
+    "reference_range": "39-59",
+    "group_ids": [
+      "a9168645-ab4a-48ea-b1a3-bd904432ebf3",
+      "c1928945-5a3a-41b6-b691-52f6661d82ad",
+      "40b75cd7-4a26-41ba-8595-83be583deacd"
+    ],
+    "created_at": "2024-06-16T03:28:50.627581",
+    "updated_at": "2025-04-13T20:01:50.627581"
+  },
+  {
+    "id": "ec22f37a-d9e6-42cc-a3e2-b1d752c6eb53",
+    "investigation_id": "CALC30813",
+    "name": "Calcium Panel 39",
+    "unit": "IU/L",
+    "reference_range": "48-60",
+    "group_ids": [
+      "96c4818f-5319-4c48-ad65-b7687b2e0a81"
+    ],
+    "created_at": "2025-02-13T00:43:50.627581",
+    "updated_at": "2025-02-04T01:28:50.627581"
+  },
+  {
+    "id": "eaed6b1c-ceda-4706-8e0d-3931693d8cd2",
+    "investigation_id": "PROT49811",
+    "name": "Prothrombin Time 40",
     "unit": "mg/dL",
-    "reference_range": "35-82",
-    "group_id": "203f0e04-e717-4f85-a1e8-52afad35d959",
-    "ordered_by": "c78d4d04-1f1c-415c-ad61-d590b1c9a7c0",
-    "investigation_id": "INV0010",
-    "created_at": "2024-09-27T18:20:03.877533"
-  },
-  {
-    "id": "42a2f3c2-a7d8-4c1f-a3a7-d4837bedd57e",
-    "name": "Liver Function 11",
-    "unit": "g/L",
-    "reference_range": "34-58",
-    "group_id": "0f97b994-5a55-44e8-98f2-41a50b283f94",
-    "ordered_by": "45bfd2af-0106-49f3-aec6-b119dc2b672b",
-    "investigation_id": "INV0011",
-    "created_at": "2025-02-27T18:20:03.877533"
-  },
-  {
-    "id": "9ec87733-6cb0-4be0-8109-e8b04de4fada",
-    "name": "Complete Blood Count 12",
-    "unit": "IU/L",
-    "reference_range": "44-70",
-    "group_id": "203f0e04-e717-4f85-a1e8-52afad35d959",
-    "ordered_by": null,
-    "investigation_id": "INV0012",
-    "created_at": "2024-12-28T18:20:03.877533"
-  },
-  {
-    "id": "80457a94-d353-4a7e-bd12-e873cac8a7c5",
-    "name": "Thyroid Panel 13",
-    "unit": "cells/mcL",
-    "reference_range": null,
-    "group_id": "ab89a423-d261-48ae-9f52-7e04663b2e58",
-    "ordered_by": null,
-    "investigation_id": "INV0013",
-    "created_at": "2025-05-29T18:20:03.877533"
-  },
-  {
-    "id": "9c381665-c474-4ea8-9d5d-edebe98e577d",
-    "name": "Liver Function 14",
-    "unit": "mmol/L",
-    "reference_range": "25-96",
-    "group_id": "eaa4908a-3099-4fe6-b74e-1504a64f5350",
-    "ordered_by": "722d56b6-7ffe-4520-ad4a-26c74ef0940d",
-    "investigation_id": "INV0014",
-    "created_at": "2024-07-24T18:20:03.877533"
-  },
-  {
-    "id": "3fe366c9-950b-42b9-9aaf-62a46104bb40",
-    "name": "Liver Function 15",
-    "unit": "mmol/L",
-    "reference_range": "49-70",
-    "group_id": "4697d60a-5e51-4596-b16f-e9f81a1d312c",
-    "ordered_by": null,
-    "investigation_id": "INV0015",
-    "created_at": "2025-01-14T18:20:03.877533"
-  },
-  {
-    "id": "45316f1e-d9ef-4873-b2f4-93e8f774144b",
-    "name": "Complete Blood Count 16",
-    "unit": "IU/L",
-    "reference_range": "47-83",
-    "group_id": "31aefe36-4c2e-4a39-bc9b-9ea5d59827a2",
-    "ordered_by": "0b10a0b4-4df9-4720-b719-e5902be344ea",
-    "investigation_id": "INV0016",
-    "created_at": "2024-12-19T18:20:03.877533"
-  },
-  {
-    "id": "dfd82ab4-b209-490e-8aa3-d8c6caa671d7",
-    "name": "Liver Function 17",
-    "unit": "g/L",
-    "reference_range": "47-69",
-    "group_id": "82edb966-ca43-43e4-956e-51b619ea6ba4",
-    "ordered_by": "54f7ac70-9f08-44de-9ce2-d25638d9a72c",
-    "investigation_id": "INV0017",
-    "created_at": "2024-07-05T18:20:03.877533"
-  },
-  {
-    "id": "cb2527fc-e923-4038-8755-ffd1359fdd1e",
-    "name": "Lipid Panel 18",
-    "unit": "IU/L",
-    "reference_range": "46-89",
-    "group_id": "163b71b9-a5c3-4bb5-b8a0-406af726d082",
-    "ordered_by": null,
-    "investigation_id": "INV0018",
-    "created_at": "2025-01-31T18:20:03.877533"
-  },
-  {
-    "id": "1d6b66fe-f62b-4008-b8fd-29ce68524399",
-    "name": "Lipid Panel 19",
-    "unit": "IU/L",
-    "reference_range": "37-90",
-    "group_id": "3b25cbb5-8c1b-4b45-bbe7-e9ec80115b15",
-    "ordered_by": "c45e787d-fb9a-41fe-a1cf-49e76fa78517",
-    "investigation_id": "INV0019",
-    "created_at": "2025-02-01T18:20:03.877533"
-  },
-  {
-    "id": "aa264100-a7c1-4f1b-9e64-c42aa768ab0c",
-    "name": "Glucose Test 20",
-    "unit": "mmol/L",
-    "reference_range": "48-85",
-    "group_id": "eaa4908a-3099-4fe6-b74e-1504a64f5350",
-    "ordered_by": "9dfa7ba4-3c37-40ed-a5d3-89874c6f2665",
-    "investigation_id": "INV0020",
-    "created_at": "2024-08-09T18:20:03.877533"
-  },
-  {
-    "id": "bb7c699e-7b05-4f64-8c8d-5290a2abb989",
-    "name": "Lipid Panel 21",
-    "unit": "mg/dL",
-    "reference_range": "35-95",
-    "group_id": "55df3f7d-1fbd-4b95-8f01-a053c3101b49",
-    "ordered_by": "f56e01d7-f147-46c4-a1e2-831ff5547d2a",
-    "investigation_id": "INV0021",
-    "created_at": "2024-06-16T18:20:03.877533"
-  },
-  {
-    "id": "2d8a2757-524f-4c7d-a33a-b636f6f1b80c",
-    "name": "Liver Function 22",
-    "unit": "IU/L",
-    "reference_range": "27-80",
-    "group_id": "172a80ed-a103-4936-908d-65d7ee9d0219",
-    "ordered_by": "54f7ac70-9f08-44de-9ce2-d25638d9a72c",
-    "investigation_id": "INV0022",
-    "created_at": "2025-03-02T18:20:03.877533"
-  },
-  {
-    "id": "de299bdc-e8ac-4fa6-b723-e4be17b68b03",
-    "name": "Glucose Test 23",
-    "unit": "cells/mcL",
-    "reference_range": "31-96",
-    "group_id": "ab89a423-d261-48ae-9f52-7e04663b2e58",
-    "ordered_by": null,
-    "investigation_id": "INV0023",
-    "created_at": "2025-05-31T18:20:03.877533"
-  },
-  {
-    "id": "39dcb4e7-57ec-49dd-9615-b2d5ef8593a7",
-    "name": "Lipid Panel 24",
-    "unit": "mg/dL",
-    "reference_range": null,
-    "group_id": "2ca137b6-c4a5-4cf9-9e76-4125bc659ec5",
-    "ordered_by": "682a89c4-ce76-40dd-a402-428458d29f8f",
-    "investigation_id": "INV0024",
-    "created_at": "2024-06-18T18:20:03.877533"
-  },
-  {
-    "id": "5563007f-e8e4-411a-ab34-7a16c012a59d",
-    "name": "Glucose Test 25",
-    "unit": "mmol/L",
-    "reference_range": "40-52",
-    "group_id": "c5c44269-7212-4296-9e24-2b1a118d6020",
-    "ordered_by": "68fe2737-1f8b-44fe-91dd-d2e0ce522b78",
-    "investigation_id": "INV0025",
-    "created_at": "2025-01-02T18:20:03.877533"
-  },
-  {
-    "id": "c622c585-3203-4648-ae70-6b2b9e283d98",
-    "name": "Thyroid Panel 26",
-    "unit": "g/L",
-    "reference_range": "26-76",
-    "group_id": "4c7814e9-148c-4931-903a-b251c6631380",
-    "ordered_by": "e4cbabef-4ec8-4533-9150-4e869c54b06d",
-    "investigation_id": "INV0026",
-    "created_at": "2025-06-09T18:20:03.877533"
-  },
-  {
-    "id": "50c1ee92-5b03-4294-b3de-d8d7862321a8",
-    "name": "Liver Function 27",
-    "unit": "mmol/L",
-    "reference_range": "32-60",
-    "group_id": "d9533fdd-2743-449a-be72-3bcb9c92e401",
-    "ordered_by": "682a89c4-ce76-40dd-a402-428458d29f8f",
-    "investigation_id": "INV0027",
-    "created_at": "2025-05-22T18:20:03.877533"
-  },
-  {
-    "id": "3628c2e6-54a4-462d-bb27-b9ed600f6030",
-    "name": "Complete Blood Count 28",
-    "unit": "cells/mcL",
-    "reference_range": null,
-    "group_id": "f297714e-6622-4a0a-aa99-3464d76001c3",
-    "ordered_by": "fc3628f9-1f80-470c-98fc-41264a9af8ed",
-    "investigation_id": "INV0028",
-    "created_at": "2024-08-27T18:20:03.877533"
-  },
-  {
-    "id": "4413baf6-1077-4894-bb84-389f5ac3f98f",
-    "name": "Glucose Test 29",
-    "unit": "cells/mcL",
-    "reference_range": "34-79",
-    "group_id": "fcb7e70c-d2f9-487e-9e3c-400bdfffc9c1",
-    "ordered_by": "b3e05e46-5bea-4ec7-b9e1-24b4fd25539d",
-    "investigation_id": "INV0029",
-    "created_at": "2025-05-09T18:20:03.877533"
-  },
-  {
-    "id": "75092041-df22-42f0-89ad-b1c5cb13d77a",
-    "name": "Thyroid Panel 30",
-    "unit": "IU/L",
-    "reference_range": "16-57",
-    "group_id": "09bae5f6-0e60-4c02-a626-3aa205f3cf8b",
-    "ordered_by": "fcfce7f0-1635-4ea8-a016-aee52a83c701",
-    "investigation_id": "INV0030",
-    "created_at": "2024-11-21T18:20:03.877533"
-  },
-  {
-    "id": "f151fab2-91f6-4825-8fb0-bd63e189c907",
-    "name": "Glucose Test 31",
-    "unit": "g/L",
-    "reference_range": null,
-    "group_id": "71d68281-84f1-44cd-918e-e80988db4ec5",
-    "ordered_by": "57eddff3-1c06-41f6-aa24-d3ec70125b34",
-    "investigation_id": "INV0031",
-    "created_at": "2025-02-03T18:20:03.877533"
-  },
-  {
-    "id": "494b909f-5574-4881-bf23-68f02c7d590d",
-    "name": "Lipid Panel 32",
-    "unit": "mg/dL",
-    "reference_range": "47-69",
-    "group_id": "54fa16fb-e2cf-4fd7-aab2-f52b4db9a7c1",
-    "ordered_by": "ac1018a3-81df-487e-89a7-cd5ef2cf4eb3",
-    "investigation_id": "INV0032",
-    "created_at": "2024-07-13T18:20:03.877533"
-  },
-  {
-    "id": "062aad4e-30de-4710-96f4-c65441b756b0",
-    "name": "Glucose Test 33",
-    "unit": "mmol/L",
-    "reference_range": "40-77",
-    "group_id": "bf57c488-6f0e-40d9-b739-3f6c4d42c760",
-    "ordered_by": "45bfd2af-0106-49f3-aec6-b119dc2b672b",
-    "investigation_id": "INV0033",
-    "created_at": "2025-05-03T18:20:03.877533"
-  },
-  {
-    "id": "ad810e1d-e463-423d-bfcd-9ec3cadfc009",
-    "name": "Glucose Test 34",
-    "unit": "cells/mcL",
-    "reference_range": "43-72",
-    "group_id": "e813f70b-47c8-4a62-85fd-44c18320cbb4",
-    "ordered_by": "e296f37c-2492-4685-af53-5803cdf8f58d",
-    "investigation_id": "INV0034",
-    "created_at": "2025-03-03T18:20:03.877533"
-  },
-  {
-    "id": "bb85b5ff-48fc-40ca-ad4c-408ddcf5fe99",
-    "name": "Lipid Panel 35",
-    "unit": "mg/dL",
-    "reference_range": "13-70",
-    "group_id": "75c02e71-a29b-439f-a3a9-49eac5fad321",
-    "ordered_by": "a2bb207e-2bc8-483f-9672-58bc3fbee510",
-    "investigation_id": "INV0035",
-    "created_at": "2024-08-25T18:20:03.877533"
-  },
-  {
-    "id": "ab0af0d7-1f2f-4f8b-8513-d64b56df8bed",
-    "name": "Glucose Test 36",
-    "unit": "mg/dL",
-    "reference_range": "42-78",
-    "group_id": "f406645e-eb36-465b-b9cb-ad8ca78dc39d",
-    "ordered_by": null,
-    "investigation_id": "INV0036",
-    "created_at": "2025-01-03T18:20:03.877533"
-  },
-  {
-    "id": "31a35be9-6a7e-4686-9ed9-7e5e2e0a70a1",
-    "name": "Complete Blood Count 37",
-    "unit": "cells/mcL",
-    "reference_range": "14-67",
-    "group_id": "d47d5246-597c-45dc-bbfd-c0e74b49c909",
-    "ordered_by": "c866534c-3dde-41e7-878b-a0a83446388d",
-    "investigation_id": "INV0037",
-    "created_at": "2024-10-29T18:20:03.877533"
-  },
-  {
-    "id": "8a86570c-1976-4eed-9d53-3ed82b95b3a7",
-    "name": "Glucose Test 38",
-    "unit": "mmol/L",
-    "reference_range": "32-63",
-    "group_id": "bf57c488-6f0e-40d9-b739-3f6c4d42c760",
-    "ordered_by": "e50debd1-5b80-4581-b401-6860d5d5a3bd",
-    "investigation_id": "INV0038",
-    "created_at": "2025-02-23T18:20:03.877533"
-  },
-  {
-    "id": "59201e1b-c6e9-4dee-a61d-c308a4d57b0d",
-    "name": "Glucose Test 39",
-    "unit": "IU/L",
-    "reference_range": "41-78",
-    "group_id": "d20e1d2c-0fd6-428d-9970-2ded80816767",
-    "ordered_by": "66e28b62-9bea-45a8-9626-ec2bf0632d81",
-    "investigation_id": "INV0039",
-    "created_at": "2024-11-23T18:20:03.877533"
-  },
-  {
-    "id": "a5dad69e-251a-4da7-b468-b11f2fb5d116",
-    "name": "Complete Blood Count 40",
-    "unit": "mmol/L",
-    "reference_range": null,
-    "group_id": "54fa16fb-e2cf-4fd7-aab2-f52b4db9a7c1",
-    "ordered_by": "66e28b62-9bea-45a8-9626-ec2bf0632d81",
-    "investigation_id": "INV0040",
-    "created_at": "2024-10-19T18:20:03.877533"
-  },
-  {
-    "id": "a63461c2-125a-4938-b522-082916ba0c3f",
-    "name": "Liver Function 41",
-    "unit": "mg/dL",
-    "reference_range": "24-99",
-    "group_id": "9b3e41da-418d-4b4d-8a91-d6e20027ee5f",
-    "ordered_by": "05cf0d2e-56a5-497e-ba01-bb6df9006271",
-    "investigation_id": "INV0041",
-    "created_at": "2025-01-04T18:20:03.877533"
-  },
-  {
-    "id": "ec5baa6e-a09e-4c6b-9050-c98caa094bba",
-    "name": "Lipid Panel 42",
-    "unit": "cells/mcL",
-    "reference_range": "14-58",
-    "group_id": "0b53f62f-c8a3-4e35-b14a-950a76d8679a",
-    "ordered_by": "b8fe855f-a696-4731-b33c-efdcfb00fc7c",
-    "investigation_id": "INV0042",
-    "created_at": "2024-11-27T18:20:03.877533"
-  },
-  {
-    "id": "65b842fc-96cf-40b8-b274-212bb0908a32",
-    "name": "Complete Blood Count 43",
-    "unit": "mg/dL",
-    "reference_range": "16-84",
-    "group_id": "d55d1010-4482-4969-b77d-aa8012a6d85c",
-    "ordered_by": "9f1e0d8b-21af-488a-baee-e66c0b0e5e11",
-    "investigation_id": "INV0043",
-    "created_at": "2024-09-09T18:20:03.877533"
-  },
-  {
-    "id": "af3d6c5f-3142-422f-afe0-ae2fe203968f",
-    "name": "Complete Blood Count 44",
-    "unit": "mmol/L",
-    "reference_range": "44-79",
-    "group_id": "ab89a423-d261-48ae-9f52-7e04663b2e58",
-    "ordered_by": null,
-    "investigation_id": "INV0044",
-    "created_at": "2025-05-01T18:20:03.877533"
-  },
-  {
-    "id": "65bee01c-1872-4545-b3ea-2adcff8c4c79",
-    "name": "Lipid Panel 45",
-    "unit": "cells/mcL",
-    "reference_range": "47-75",
-    "group_id": "ab89a423-d261-48ae-9f52-7e04663b2e58",
-    "ordered_by": "c8fe5555-d7c9-40d0-ae84-3b4444e64495",
-    "investigation_id": "INV0045",
-    "created_at": "2025-03-19T18:20:03.877533"
-  },
-  {
-    "id": "4a451010-3bd9-4161-8e01-65afa75e629f",
-    "name": "Lipid Panel 46",
-    "unit": "mmol/L",
-    "reference_range": "48-88",
-    "group_id": "fcb7e70c-d2f9-487e-9e3c-400bdfffc9c1",
-    "ordered_by": "e9b7a925-4917-4175-9532-e01a53eb3924",
-    "investigation_id": "INV0046",
-    "created_at": "2025-05-31T18:20:03.877533"
-  },
-  {
-    "id": "19d517b7-e6b1-44ee-9fcc-932b6440030b",
-    "name": "Thyroid Panel 47",
-    "unit": "g/L",
-    "reference_range": null,
-    "group_id": "09bae5f6-0e60-4c02-a626-3aa205f3cf8b",
-    "ordered_by": "448f8576-e684-4bb0-a8b7-2357d11cee28",
-    "investigation_id": "INV0047",
-    "created_at": "2025-02-11T18:20:03.877533"
-  },
-  {
-    "id": "1a45526d-5166-40e0-9e6f-2c4de85afb79",
-    "name": "Complete Blood Count 48",
-    "unit": "mmol/L",
-    "reference_range": "29-84",
-    "group_id": "c5c44269-7212-4296-9e24-2b1a118d6020",
-    "ordered_by": "9e78425f-7380-4dd7-8634-5f0f274b3410",
-    "investigation_id": "INV0048",
-    "created_at": "2024-11-03T18:20:03.877533"
-  },
-  {
-    "id": "bd060151-9bdd-4650-b964-5184fdb75a1d",
-    "name": "Lipid Panel 49",
-    "unit": "g/L",
-    "reference_range": "10-97",
-    "group_id": "7087d5cc-cd5d-4349-ba1e-c804138369fa",
-    "ordered_by": "f6c61a4a-042b-42e5-8495-f0dbe88b1e01",
-    "investigation_id": "INV0049",
-    "created_at": "2024-12-09T18:20:03.877533"
-  },
-  {
-    "id": "aba06471-f3d4-46be-af37-65aca8c72277",
-    "name": "Thyroid Panel 50",
-    "unit": "IU/L",
-    "reference_range": "15-73",
-    "group_id": "6a4ec59d-3d85-400f-8777-9f8c17570dd5",
-    "ordered_by": "a4b15f5d-1185-4207-ab7a-ecf93550bf2e",
-    "investigation_id": "INV0050",
-    "created_at": "2025-04-19T18:20:03.877533"
-  },
-  {
-    "id": "dffc4813-d326-48c1-830d-49a72ec59b5d",
-    "name": "Liver Function 51",
-    "unit": "g/L",
-    "reference_range": "13-95",
-    "group_id": "d20e1d2c-0fd6-428d-9970-2ded80816767",
-    "ordered_by": "e9062262-7222-48ac-92ed-d45e3cf25b45",
-    "investigation_id": "INV0051",
-    "created_at": "2024-09-03T18:20:03.877533"
-  },
-  {
-    "id": "0d3cb960-2ff6-4f17-a405-3a112cb20ad5",
-    "name": "Glucose Test 52",
-    "unit": "IU/L",
-    "reference_range": "48-62",
-    "group_id": "0d102226-6971-4d20-a7e7-16986d705b87",
-    "ordered_by": "a4b15f5d-1185-4207-ab7a-ecf93550bf2e",
-    "investigation_id": "INV0052",
-    "created_at": "2024-10-06T18:20:03.877533"
-  },
-  {
-    "id": "bf6a593d-82eb-4ebe-810a-b28514b66913",
-    "name": "Glucose Test 53",
-    "unit": "mg/dL",
-    "reference_range": "15-88",
-    "group_id": "7e270c0f-d822-4ef5-8c32-ff7386b04348",
-    "ordered_by": "09fc91df-1f3e-4c90-95a6-54909aa228f7",
-    "investigation_id": "INV0053",
-    "created_at": "2024-08-11T18:20:03.877533"
-  },
-  {
-    "id": "d732efb6-7151-47ef-9baa-dfd7d6bdfb7b",
-    "name": "Glucose Test 54",
-    "unit": "mg/dL",
-    "reference_range": null,
-    "group_id": "f1c0beea-02b7-4b49-8f24-29267d7fc4f8",
-    "ordered_by": "ca63a671-51a3-4080-9e51-13c85a5d32eb",
-    "investigation_id": "INV0054",
-    "created_at": "2024-07-21T18:20:03.877533"
-  },
-  {
-    "id": "133217b3-5854-4aae-bc49-18a510a86e13",
-    "name": "Thyroid Panel 55",
-    "unit": "mmol/L",
-    "reference_range": "42-70",
-    "group_id": "132b4f6e-1418-4032-b9d9-85e8dd6d976a",
-    "ordered_by": "cd8fdc68-01eb-4bcb-9352-7b49cdd8f75b",
-    "investigation_id": "INV0055",
-    "created_at": "2025-05-16T18:20:03.877533"
-  },
-  {
-    "id": "210ce4ad-4bef-4f34-bf59-849143a2a19a",
-    "name": "Thyroid Panel 56",
-    "unit": "cells/mcL",
-    "reference_range": "41-68",
-    "group_id": "172a80ed-a103-4936-908d-65d7ee9d0219",
-    "ordered_by": "5ff4021c-b1b3-44a5-b23e-be93e188f7c0",
-    "investigation_id": "INV0056",
-    "created_at": "2024-07-15T18:20:03.877533"
-  },
-  {
-    "id": "d61fcdd8-db6d-481e-a317-8e8629794df2",
-    "name": "Lipid Panel 57",
-    "unit": "g/L",
-    "reference_range": "34-54",
-    "group_id": "69b4c7ca-3b8e-4a19-9828-0f1304b2b5e9",
-    "ordered_by": null,
-    "investigation_id": "INV0057",
-    "created_at": "2024-07-29T18:20:03.877533"
-  },
-  {
-    "id": "402c52b2-1234-466e-8c98-e5eaaeb305f1",
-    "name": "Liver Function 58",
-    "unit": "mg/dL",
-    "reference_range": null,
-    "group_id": "e813f70b-47c8-4a62-85fd-44c18320cbb4",
-    "ordered_by": "537781cb-2486-42c2-a6d2-0d8f9d8b7695",
-    "investigation_id": "INV0058",
-    "created_at": "2024-09-23T18:20:03.877533"
-  },
-  {
-    "id": "a5062170-1979-4a50-95f3-4e53443f7b48",
-    "name": "Glucose Test 59",
-    "unit": "mg/dL",
-    "reference_range": "44-85",
-    "group_id": "bfc5c4cd-c4c8-42e6-b372-c5fef065bc5c",
-    "ordered_by": "aff1073a-65ad-464e-bedc-7c3b855cbd66",
-    "investigation_id": "INV0059",
-    "created_at": "2025-01-08T18:20:03.877533"
-  },
-  {
-    "id": "68ccd870-c357-4c21-bb2e-0ea77990e09f",
-    "name": "Thyroid Panel 60",
-    "unit": "g/L",
-    "reference_range": "13-77",
-    "group_id": "7e295b58-9ad3-4689-a6b5-f9e17cc0c4c2",
-    "ordered_by": "c78d4d04-1f1c-415c-ad61-d590b1c9a7c0",
-    "investigation_id": "INV0060",
-    "created_at": "2024-08-26T18:20:03.877533"
-  },
-  {
-    "id": "3b70e418-0bfe-4c87-bf50-fe350c9c68d5",
-    "name": "Thyroid Panel 61",
-    "unit": "IU/L",
-    "reference_range": "33-51",
-    "group_id": "b3248b6e-8f1e-409e-adb8-afc6409a19c8",
-    "ordered_by": "cbe04e69-aa83-496a-8623-deed86132352",
-    "investigation_id": "INV0061",
-    "created_at": "2024-09-25T18:20:03.877533"
-  },
-  {
-    "id": "72a67744-0789-42fc-98c7-693c224a0181",
-    "name": "Liver Function 62",
-    "unit": "g/L",
-    "reference_range": "35-89",
-    "group_id": "31aefe36-4c2e-4a39-bc9b-9ea5d59827a2",
-    "ordered_by": "d16eb833-0e97-4eaa-b021-633af027b545",
-    "investigation_id": "INV0062",
-    "created_at": "2025-04-11T18:20:03.877533"
-  },
-  {
-    "id": "95a2bfc5-16db-456d-beba-63914da0d5e0",
-    "name": "Thyroid Panel 63",
-    "unit": "IU/L",
-    "reference_range": "13-90",
-    "group_id": "7e295b58-9ad3-4689-a6b5-f9e17cc0c4c2",
-    "ordered_by": "73d92457-b3fe-4aeb-ba65-7860fe56b374",
-    "investigation_id": "INV0063",
-    "created_at": "2024-09-01T18:20:03.877533"
-  },
-  {
-    "id": "0d174db4-8740-4c46-ab20-927997910ea8",
-    "name": "Liver Function 64",
-    "unit": "mmol/L",
-    "reference_range": "24-56",
-    "group_id": "8db57f09-cc2a-4d93-9047-a3c999ba3972",
-    "ordered_by": null,
-    "investigation_id": "INV0064",
-    "created_at": "2024-11-11T18:20:03.877533"
-  },
-  {
-    "id": "13a3e66c-abdc-478b-9c1e-7e34c0be388d",
-    "name": "Glucose Test 65",
-    "unit": "mmol/L",
-    "reference_range": "16-80",
-    "group_id": "d9533fdd-2743-449a-be72-3bcb9c92e401",
-    "ordered_by": "e50debd1-5b80-4581-b401-6860d5d5a3bd",
-    "investigation_id": "INV0065",
-    "created_at": "2024-09-15T18:20:03.877533"
-  },
-  {
-    "id": "6c76d8bf-6494-4e96-be06-d437c68835ca",
-    "name": "Glucose Test 66",
-    "unit": "mmol/L",
-    "reference_range": "32-75",
-    "group_id": "4c7814e9-148c-4931-903a-b251c6631380",
-    "ordered_by": "ba2a7f0d-87dc-4577-8279-751c51f21182",
-    "investigation_id": "INV0066",
-    "created_at": "2024-11-03T18:20:03.877533"
-  },
-  {
-    "id": "475e7f59-4a67-498c-ad7c-322e1aa5c013",
-    "name": "Glucose Test 67",
-    "unit": "mg/dL",
-    "reference_range": "42-79",
-    "group_id": "0d90811d-665f-46ee-8a5d-d4ab05726098",
-    "ordered_by": null,
-    "investigation_id": "INV0067",
-    "created_at": "2024-08-25T18:20:03.877533"
-  },
-  {
-    "id": "6af0e6be-b56e-4c6b-a1c3-84dbc79e01ce",
-    "name": "Glucose Test 68",
-    "unit": "IU/L",
-    "reference_range": "10-52",
-    "group_id": "d55d1010-4482-4969-b77d-aa8012a6d85c",
-    "ordered_by": "189beabb-a362-4ba2-90af-60dee63f50c2",
-    "investigation_id": "INV0068",
-    "created_at": "2025-04-05T18:20:03.877533"
-  },
-  {
-    "id": "d8f980fb-0eda-4466-a246-11a2015e75a4",
-    "name": "Thyroid Panel 69",
-    "unit": "IU/L",
-    "reference_range": "12-76",
-    "group_id": "55df3f7d-1fbd-4b95-8f01-a053c3101b49",
-    "ordered_by": null,
-    "investigation_id": "INV0069",
-    "created_at": "2024-09-05T18:20:03.877533"
-  },
-  {
-    "id": "054530fe-4f54-4d26-b629-dc5b820802d5",
-    "name": "Lipid Panel 70",
-    "unit": "mmol/L",
-    "reference_range": "12-76",
-    "group_id": "a4affed3-f760-44cc-bcb4-479eae730eaa",
-    "ordered_by": null,
-    "investigation_id": "INV0070",
-    "created_at": "2024-08-18T18:20:03.877533"
-  },
-  {
-    "id": "fa1f71ee-032c-43c5-851c-8593875e2206",
-    "name": "Glucose Test 71",
-    "unit": "cells/mcL",
-    "reference_range": "11-97",
-    "group_id": "d9945bec-b533-4b25-b7f0-a845b5af5021",
-    "ordered_by": "97d0f718-4310-4e82-a393-6d595fca7d69",
-    "investigation_id": "INV0071",
-    "created_at": "2025-05-03T18:20:03.877533"
-  },
-  {
-    "id": "f69ca19e-f8b7-4aa1-9ec6-09a43f141331",
-    "name": "Thyroid Panel 72",
-    "unit": "mmol/L",
-    "reference_range": "35-85",
-    "group_id": "3c088608-dbea-4de8-9402-df275667aef7",
-    "ordered_by": "c7a0a6ec-f562-462c-aa3b-60b659380796",
-    "investigation_id": "INV0072",
-    "created_at": "2024-06-30T18:20:03.877533"
-  },
-  {
-    "id": "3304c416-09f1-466e-82da-ef135d3c6700",
-    "name": "Complete Blood Count 73",
-    "unit": "mmol/L",
-    "reference_range": null,
-    "group_id": "0073f3c4-28f1-4ac8-a953-6656b0c78c49",
-    "ordered_by": "f563e539-bf79-45cc-ae2d-25b34496d8e8",
-    "investigation_id": "INV0073",
-    "created_at": "2025-03-30T18:20:03.877533"
-  },
-  {
-    "id": "c44db287-67fb-420c-b393-de8095b784f4",
-    "name": "Liver Function 74",
-    "unit": "g/L",
-    "reference_range": null,
-    "group_id": "0d90811d-665f-46ee-8a5d-d4ab05726098",
-    "ordered_by": "fc3628f9-1f80-470c-98fc-41264a9af8ed",
-    "investigation_id": "INV0074",
-    "created_at": "2024-08-01T18:20:03.877533"
-  },
-  {
-    "id": "24fc214b-cab5-44d2-a8c9-89bcfc90ce2e",
-    "name": "Thyroid Panel 75",
-    "unit": "mg/dL",
-    "reference_range": null,
-    "group_id": "304705d7-2160-4d3f-8aad-b67019c4f2fd",
-    "ordered_by": "57eddff3-1c06-41f6-aa24-d3ec70125b34",
-    "investigation_id": "INV0075",
-    "created_at": "2025-02-28T18:20:03.877533"
-  },
-  {
-    "id": "776f391f-2bb7-4e37-bff0-5ffc0cad1aab",
-    "name": "Lipid Panel 76",
-    "unit": "IU/L",
-    "reference_range": null,
-    "group_id": "e1a6e92c-980c-4de2-a0be-e6b0ff281f37",
-    "ordered_by": "34f58713-963f-4190-92b8-867c71dd8d83",
-    "investigation_id": "INV0076",
-    "created_at": "2025-04-11T18:20:03.877533"
-  },
-  {
-    "id": "8773f680-b056-48ee-b758-f307325869dc",
-    "name": "Thyroid Panel 77",
-    "unit": "mg/dL",
-    "reference_range": "32-84",
-    "group_id": "e1a6e92c-980c-4de2-a0be-e6b0ff281f37",
-    "ordered_by": "45bfd2af-0106-49f3-aec6-b119dc2b672b",
-    "investigation_id": "INV0077",
-    "created_at": "2025-04-17T18:20:03.877533"
-  },
-  {
-    "id": "4241a87e-ad21-43d6-9690-ef54612bdd84",
-    "name": "Liver Function 78",
-    "unit": "mmol/L",
-    "reference_range": "47-85",
-    "group_id": "203f0e04-e717-4f85-a1e8-52afad35d959",
-    "ordered_by": "ac1018a3-81df-487e-89a7-cd5ef2cf4eb3",
-    "investigation_id": "INV0078",
-    "created_at": "2025-04-27T18:20:03.877533"
-  },
-  {
-    "id": "4b47063a-11c2-4251-b886-bb583bc92873",
-    "name": "Glucose Test 79",
-    "unit": "cells/mcL",
-    "reference_range": "13-80",
-    "group_id": "e1a6e92c-980c-4de2-a0be-e6b0ff281f37",
-    "ordered_by": "fad4b80e-a28d-4741-bc2b-e661babf9122",
-    "investigation_id": "INV0079",
-    "created_at": "2025-03-03T18:20:03.877533"
-  },
-  {
-    "id": "c49d6551-7aea-4a85-9d02-fe9c9e3535b1",
-    "name": "Liver Function 80",
-    "unit": "mmol/L",
-    "reference_range": "11-65",
-    "group_id": "c67a0f25-6c8c-40d8-aa42-d78361fe6a38",
-    "ordered_by": "7147d0ab-ff30-4435-82f0-e6ea33b9c233",
-    "investigation_id": "INV0080",
-    "created_at": "2024-08-23T18:20:03.877533"
-  },
-  {
-    "id": "fc854b10-b27b-48ce-8c2b-2751fa87fb57",
-    "name": "Lipid Panel 81",
-    "unit": "cells/mcL",
     "reference_range": "10-74",
-    "group_id": "0a1b331e-08d1-46e0-8243-7532d51d0b22",
-    "ordered_by": "81a3141c-9f6a-4563-924b-dcd0de2f58a0",
-    "investigation_id": "INV0081",
-    "created_at": "2025-06-05T18:20:03.877533"
+    "group_ids": [
+      "ea3cf07e-a2e9-4dd6-9dd6-f36d2602eba2",
+      "51028b81-6ac5-483a-940b-5c8ff29c11ca"
+    ],
+    "created_at": "2024-09-20T08:40:50.627581",
+    "updated_at": "2025-04-18T20:10:50.627581"
   },
   {
-    "id": "dc28a022-c26e-4f83-ae14-1e26f3053cd2",
-    "name": "Lipid Panel 82",
-    "unit": "mg/dL",
-    "reference_range": null,
-    "group_id": "04f54a56-dfbd-4260-b1aa-759dbcc492f4",
-    "ordered_by": null,
-    "investigation_id": "INV0082",
-    "created_at": "2024-08-01T18:20:03.877533"
-  },
-  {
-    "id": "61b23ed2-7bb5-4a47-9ac1-4af50947634c",
-    "name": "Glucose Test 83",
-    "unit": "g/L",
-    "reference_range": "50-92",
-    "group_id": "3be55ad6-a537-426c-8b2b-989d0d409a09",
-    "ordered_by": "c8fe5555-d7c9-40d0-ae84-3b4444e64495",
-    "investigation_id": "INV0083",
-    "created_at": "2025-02-09T18:20:03.877533"
-  },
-  {
-    "id": "bd76f64d-e66e-49ea-b8e0-150fed5a54ad",
-    "name": "Liver Function 84",
-    "unit": "g/L",
-    "reference_range": null,
-    "group_id": "04cdcbf1-b3d1-43ce-8b3f-a971d7881d79",
-    "ordered_by": "34f58713-963f-4190-92b8-867c71dd8d83",
-    "investigation_id": "INV0084",
-    "created_at": "2025-05-27T18:20:03.877533"
-  },
-  {
-    "id": "b04f1051-3e47-4b84-8395-59942d3d8a1c",
-    "name": "Glucose Test 85",
-    "unit": "g/L",
-    "reference_range": "28-55",
-    "group_id": "9784943f-0c68-4fe3-a9e1-e0e2caccdeae",
-    "ordered_by": "c45e787d-fb9a-41fe-a1cf-49e76fa78517",
-    "investigation_id": "INV0085",
-    "created_at": "2024-09-22T18:20:03.877533"
-  },
-  {
-    "id": "74650c43-5dfd-4f2e-a7b7-48d8d434bb2b",
-    "name": "Thyroid Panel 86",
-    "unit": "g/L",
-    "reference_range": null,
-    "group_id": "902c7de6-737e-4f3f-b1d6-f627393dd08b",
-    "ordered_by": "98bfb57e-6904-4bd2-8a98-7bfdaa27bd5d",
-    "investigation_id": "INV0086",
-    "created_at": "2024-07-27T18:20:03.877533"
-  },
-  {
-    "id": "e141a25a-8d25-43d2-ac8e-b20a94f6921a",
-    "name": "Liver Function 87",
+    "id": "a33a0276-fed1-40ca-a8d5-addcca992f7f",
+    "investigation_id": "RENA48829",
+    "name": "Renal Function Test 41",
     "unit": "mmol/L",
-    "reference_range": "46-62",
-    "group_id": "e4b0680b-133e-4ca6-9136-3ea4cabf4eee",
-    "ordered_by": "e296f37c-2492-4685-af53-5803cdf8f58d",
-    "investigation_id": "INV0087",
-    "created_at": "2024-11-29T18:20:03.877533"
+    "reference_range": "41-62",
+    "group_ids": [
+      "a9168645-ab4a-48ea-b1a3-bd904432ebf3",
+      "1238fc3b-6f63-45fb-8a95-9479829e7bbd"
+    ],
+    "created_at": "2024-12-18T06:49:50.627581",
+    "updated_at": "2024-09-30T17:56:50.627581"
   },
   {
-    "id": "087a07e3-4b75-4194-a586-edb6eab4a502",
-    "name": "Thyroid Panel 88",
+    "id": "975a370f-4a64-49df-8b7f-a9a40651c3b3",
+    "investigation_id": "BLOO56737",
+    "name": "Blood Culture 42",
+    "unit": "cells/\u00b5L",
+    "reference_range": "35-67",
+    "group_ids": [
+      "5035ef6e-ab44-4822-b0bc-c4b58a2f9b50",
+      "b9c3dadc-cf15-489a-a9ac-1f61228f8cad"
+    ],
+    "created_at": "2025-04-20T03:46:50.627581",
+    "updated_at": "2025-02-04T21:11:50.627581"
+  },
+  {
+    "id": "9599d270-b272-42eb-b59e-03ae07627166",
+    "investigation_id": "URIN32923",
+    "name": "Urinalysis 43",
+    "unit": "cells/mm\u00b3",
+    "reference_range": "27-90",
+    "group_ids": [
+      "22ae8b08-64c8-413e-a7d6-a2d9f876889a",
+      "96c4818f-5319-4c48-ad65-b7687b2e0a81"
+    ],
+    "created_at": "2024-09-20T10:09:50.627581",
+    "updated_at": "2025-01-08T18:19:50.627581"
+  },
+  {
+    "id": "6021e149-cd4d-45ca-8930-88d742e294ec",
+    "investigation_id": "PROC74121",
+    "name": "Procalcitonin 44",
+    "unit": "IU/L",
+    "reference_range": "33-52",
+    "group_ids": [
+      "1e1ab598-088e-4925-b7c6-c9fc92377339",
+      "1238fc3b-6f63-45fb-8a95-9479829e7bbd"
+    ],
+    "created_at": "2024-11-05T20:35:50.627581",
+    "updated_at": "2025-06-10T07:14:50.627581"
+  },
+  {
+    "id": "e9c737dc-e788-4b1b-b972-9add8ee4fdc5",
+    "investigation_id": "LIPA90273",
+    "name": "Lipase 45",
+    "unit": "IU/L",
+    "reference_range": "16-52",
+    "group_ids": [
+      "723c04b9-625e-4e84-b76a-1b79a0046770",
+      "b013583c-0f64-4780-8046-85bf17741e55",
+      "40b75cd7-4a26-41ba-8595-83be583deacd"
+    ],
+    "created_at": "2024-12-12T00:36:50.627581",
+    "updated_at": "2025-01-13T23:45:50.627581"
+  },
+  {
+    "id": "775055da-1823-4a4e-92cb-db38920f6269",
+    "investigation_id": "COMP17835",
+    "name": "Complete Blood Count 46",
     "unit": "mmol/L",
-    "reference_range": "19-94",
-    "group_id": "304705d7-2160-4d3f-8aad-b67019c4f2fd",
-    "ordered_by": "a229f541-3364-43c6-8221-abecde7518dc",
-    "investigation_id": "INV0088",
-    "created_at": "2025-03-10T18:20:03.877533"
+    "reference_range": "39-62",
+    "group_ids": [
+      "1e1ab598-088e-4925-b7c6-c9fc92377339"
+    ],
+    "created_at": "2024-12-24T05:17:50.627581",
+    "updated_at": "2025-03-27T02:40:50.627581"
   },
   {
-    "id": "a6c18f03-e9a1-4e4f-bb52-33b9685182d7",
-    "name": "Glucose Test 89",
-    "unit": "g/L",
-    "reference_range": null,
-    "group_id": "d47d5246-597c-45dc-bbfd-c0e74b49c909",
-    "ordered_by": "33341cfd-2f51-4589-8620-034cdc1e43f2",
-    "investigation_id": "INV0089",
-    "created_at": "2024-10-15T18:20:03.877533"
+    "id": "8f9230e9-d572-4ca6-ade5-b6a83403f462",
+    "investigation_id": "COMP13224",
+    "name": "Complete Blood Count 47",
+    "unit": "\u00b5mol/L",
+    "reference_range": "34-88",
+    "group_ids": [
+      "2b0b506c-52e8-4e02-8720-ebc5baa6068d",
+      "ea3cf07e-a2e9-4dd6-9dd6-f36d2602eba2",
+      "96c4818f-5319-4c48-ad65-b7687b2e0a81"
+    ],
+    "created_at": "2024-07-19T13:15:50.627581",
+    "updated_at": "2024-11-16T07:54:50.627581"
   },
   {
-    "id": "bde2864c-5e89-4b83-ae75-a32d9c473c85",
-    "name": "Lipid Panel 90",
-    "unit": "cells/mcL",
-    "reference_range": null,
-    "group_id": "f915f0cd-37a8-4d0a-b470-d328665a4f93",
-    "ordered_by": "a4b15f5d-1185-4207-ab7a-ecf93550bf2e",
-    "investigation_id": "INV0090",
-    "created_at": "2025-03-07T18:20:03.877533"
+    "id": "7ce58ee1-4184-48b7-bd35-c6f6c82e70c3",
+    "investigation_id": "HBA110125",
+    "name": "HbA1c 48",
+    "unit": "U/L",
+    "reference_range": "41-60",
+    "group_ids": [
+      "96c4818f-5319-4c48-ad65-b7687b2e0a81",
+      "d0d05f85-11b2-41bb-990d-e72f8f5d22dc"
+    ],
+    "created_at": "2025-05-15T19:54:50.627581",
+    "updated_at": "2024-06-24T03:31:50.627581"
   },
   {
-    "id": "0e6c2b26-15c2-43a2-876b-73821f551e97",
-    "name": "Lipid Panel 91",
-    "unit": "mmol/L",
-    "reference_range": "15-68",
-    "group_id": "f406645e-eb36-465b-b9cb-ad8ca78dc39d",
-    "ordered_by": "ac1018a3-81df-487e-89a7-cd5ef2cf4eb3",
-    "investigation_id": "INV0091",
-    "created_at": "2025-01-07T18:20:03.877533"
+    "id": "0296ab89-8577-4afe-ad31-d9ba332f5569",
+    "investigation_id": "LIPA88764",
+    "name": "Lipase 49",
+    "unit": "IU/L",
+    "reference_range": "44-77",
+    "group_ids": [
+      "b013583c-0f64-4780-8046-85bf17741e55",
+      "51028b81-6ac5-483a-940b-5c8ff29c11ca"
+    ],
+    "created_at": "2024-11-28T17:06:50.627581",
+    "updated_at": "2024-12-04T02:30:50.627581"
   },
   {
-    "id": "84eb6570-420b-4bdf-8e92-b16a4933bc4a",
-    "name": "Glucose Test 92",
-    "unit": "mg/dL",
-    "reference_range": "40-57",
-    "group_id": "d55d1010-4482-4969-b77d-aa8012a6d85c",
-    "ordered_by": null,
-    "investigation_id": "INV0092",
-    "created_at": "2025-03-04T18:20:03.877533"
+    "id": "76799196-137d-42d0-b1ce-21c0b7eaf03e",
+    "investigation_id": "LIPA97018",
+    "name": "Lipase 50",
+    "unit": "cells/mm\u00b3",
+    "reference_range": "16-56",
+    "group_ids": [
+      "b8f888cd-ed5a-4a78-a8b3-975a8cb5927c",
+      "01c25269-4193-41b9-afc9-f509ae85f7bc"
+    ],
+    "created_at": "2024-11-29T21:56:50.627581",
+    "updated_at": "2024-07-17T13:43:50.627581"
   },
   {
-    "id": "253c971d-8e6d-4df5-aa8c-cc50606eecd7",
-    "name": "Thyroid Panel 93",
-    "unit": "g/L",
-    "reference_range": null,
-    "group_id": "0073f3c4-28f1-4ac8-a953-6656b0c78c49",
-    "ordered_by": "66e28b62-9bea-45a8-9626-ec2bf0632d81",
-    "investigation_id": "INV0093",
-    "created_at": "2025-05-05T18:20:03.877533"
+    "id": "f98329f9-713f-454e-9631-cf35d361da5f",
+    "investigation_id": "HBA114505",
+    "name": "HbA1c 51",
+    "unit": "IU/L",
+    "reference_range": "42-75",
+    "group_ids": [
+      "ea3cf07e-a2e9-4dd6-9dd6-f36d2602eba2"
+    ],
+    "created_at": "2025-01-07T04:59:50.627581",
+    "updated_at": "2024-11-11T22:55:50.627581"
   },
   {
-    "id": "edb9fdb9-3eb6-49eb-bdd7-0afea98146d7",
-    "name": "Thyroid Panel 94",
-    "unit": "mg/dL",
-    "reference_range": "12-56",
-    "group_id": "bfc5c4cd-c4c8-42e6-b372-c5fef065bc5c",
-    "ordered_by": "e3c019fd-2232-43a1-93ac-30f290ab0357",
-    "investigation_id": "INV0094",
-    "created_at": "2024-08-23T18:20:03.877533"
+    "id": "16187771-714f-4a51-a305-4fede4683d09",
+    "investigation_id": "RENA78046",
+    "name": "Renal Function Test 52",
+    "unit": "\u00b5mol/L",
+    "reference_range": "50-88",
+    "group_ids": [
+      "b3061560-bc97-438a-bfe3-e1725511d395"
+    ],
+    "created_at": "2024-08-13T09:23:50.627581",
+    "updated_at": "2024-07-26T22:14:50.627581"
   },
   {
-    "id": "1af6b077-fb8c-40a2-bae2-5d30f7b2ab8a",
-    "name": "Liver Function 95",
-    "unit": "g/L",
-    "reference_range": "33-62",
-    "group_id": "fcb7e70c-d2f9-487e-9e3c-400bdfffc9c1",
-    "ordered_by": "9f1e0d8b-21af-488a-baee-e66c0b0e5e11",
-    "investigation_id": "INV0095",
-    "created_at": "2024-08-04T18:20:03.877533"
+    "id": "e30db047-1a1e-4009-ba11-e0f10650e97e",
+    "investigation_id": "GLUC03827",
+    "name": "Glucose Tolerance Test 53",
+    "unit": "pg/mL",
+    "reference_range": "35-96",
+    "group_ids": [
+      "1238fc3b-6f63-45fb-8a95-9479829e7bbd"
+    ],
+    "created_at": "2025-02-23T05:02:50.627581",
+    "updated_at": "2025-04-14T22:34:50.627581"
   },
   {
-    "id": "49191aff-0965-4713-9822-0c2bd414ce5d",
-    "name": "Lipid Panel 96",
-    "unit": "g/L",
-    "reference_range": null,
-    "group_id": "92bcdfeb-cd82-4cdc-9f41-9a09b442af9f",
-    "ordered_by": "cd8fdc68-01eb-4bcb-9352-7b49cdd8f75b",
-    "investigation_id": "INV0096",
-    "created_at": "2025-06-07T18:20:03.877533"
+    "id": "96de27cf-af32-485f-b2f6-770cf15b9c48",
+    "investigation_id": "CREA70546",
+    "name": "Creatine Kinase 54",
+    "unit": "IU/L",
+    "reference_range": "36-59",
+    "group_ids": [
+      "40b75cd7-4a26-41ba-8595-83be583deacd",
+      "c1928945-5a3a-41b6-b691-52f6661d82ad"
+    ],
+    "created_at": "2024-08-15T10:42:50.627581",
+    "updated_at": "2024-10-16T10:41:50.627581"
   },
   {
-    "id": "645ced73-c531-4c06-9d0e-d6b19efdc280",
-    "name": "Liver Function 97",
-    "unit": "mg/dL",
-    "reference_range": "30-99",
-    "group_id": "b48ffadb-9852-46d9-a6ce-ab7c1d56e708",
-    "ordered_by": "57eddff3-1c06-41f6-aa24-d3ec70125b34",
-    "investigation_id": "INV0097",
-    "created_at": "2025-04-25T18:20:03.877533"
+    "id": "1e990e56-1b13-4fcd-a56b-6a557794b4bd",
+    "investigation_id": "PROC11667",
+    "name": "Procalcitonin 55",
+    "unit": "pg/\u00b5L",
+    "reference_range": "12-92",
+    "group_ids": [
+      "40b75cd7-4a26-41ba-8595-83be583deacd",
+      "d0d05f85-11b2-41bb-990d-e72f8f5d22dc",
+      "b013583c-0f64-4780-8046-85bf17741e55"
+    ],
+    "created_at": "2024-11-10T05:59:50.627581",
+    "updated_at": "2024-10-10T17:53:50.627581"
   },
   {
-    "id": "0ca2bbca-89f1-4d2e-9d9e-c32ac3a02730",
-    "name": "Lipid Panel 98",
-    "unit": "mmol/L",
-    "reference_range": "28-53",
-    "group_id": "89abc929-53d0-4ee0-9fe7-8f9381234c16",
-    "ordered_by": "8aa8cf8d-4f8d-4e05-916f-2d256f760497",
-    "investigation_id": "INV0098",
-    "created_at": "2024-10-19T18:20:03.877533"
+    "id": "99035c8e-8dfd-46cf-af92-44446667f8f9",
+    "investigation_id": "BLOO83488",
+    "name": "Blood Gas Analysis 56",
+    "unit": "pg/\u00b5L",
+    "reference_range": "21-91",
+    "group_ids": [
+      "40b75cd7-4a26-41ba-8595-83be583deacd",
+      "c1928945-5a3a-41b6-b691-52f6661d82ad"
+    ],
+    "created_at": "2024-07-10T19:03:50.627581",
+    "updated_at": "2024-10-27T19:19:50.627581"
   },
   {
-    "id": "4f94dfdf-e725-4289-94c8-7e80cacd7683",
-    "name": "Liver Function 99",
-    "unit": "g/L",
-    "reference_range": "45-59",
-    "group_id": "d9533fdd-2743-449a-be72-3bcb9c92e401",
-    "ordered_by": "682a89c4-ce76-40dd-a402-428458d29f8f",
-    "investigation_id": "INV0099",
-    "created_at": "2024-12-22T18:20:03.877533"
+    "id": "e602525f-65d1-49d2-90fb-bb8c9700ffa1",
+    "investigation_id": "COMP69268",
+    "name": "Complete Blood Count 57",
+    "unit": "\u00b5mol/L",
+    "reference_range": "25-97",
+    "group_ids": [
+      "ea3cf07e-a2e9-4dd6-9dd6-f36d2602eba2",
+      "b013583c-0f64-4780-8046-85bf17741e55",
+      "a44b1931-6bc8-4734-851e-475245cb911e"
+    ],
+    "created_at": "2025-06-04T06:23:50.627581",
+    "updated_at": "2024-07-26T23:37:50.627581"
   },
   {
-    "id": "5e473a88-97fd-4a25-a557-d20b857eac6a",
-    "name": "Complete Blood Count 100",
-    "unit": "g/L",
-    "reference_range": "10-66",
-    "group_id": "5f76db74-ca9c-44eb-ad26-e7c6e9310dd6",
-    "ordered_by": "502a714c-f8a4-44d4-8ae2-043ed03e629c",
-    "investigation_id": "INV0100",
-    "created_at": "2024-08-22T18:20:03.877533"
+    "id": "974c5100-1751-46f3-aa46-83d0b2624552",
+    "investigation_id": "AMYL72092",
+    "name": "Amylase 58",
+    "unit": "pg/mL",
+    "reference_range": "13-62",
+    "group_ids": [
+      "a9168645-ab4a-48ea-b1a3-bd904432ebf3",
+      "5035ef6e-ab44-4822-b0bc-c4b58a2f9b50"
+    ],
+    "created_at": "2025-03-07T00:41:50.627581",
+    "updated_at": "2025-05-10T10:21:50.627581"
+  },
+  {
+    "id": "2c2204a8-51c8-4aef-aa46-0e570824fcae",
+    "investigation_id": "FERR63147",
+    "name": "Ferritin 59",
+    "unit": "pg/\u00b5L",
+    "reference_range": "16-92",
+    "group_ids": [
+      "51028b81-6ac5-483a-940b-5c8ff29c11ca"
+    ],
+    "created_at": "2024-12-16T22:56:50.627581",
+    "updated_at": "2024-10-30T18:18:50.627581"
+  },
+  {
+    "id": "0e68cdf3-ab89-4b5e-a393-5998e8781b4e",
+    "investigation_id": "CALC76894",
+    "name": "Calcium Panel 60",
+    "unit": "ng/mL",
+    "reference_range": "19-98",
+    "group_ids": [
+      "b8f888cd-ed5a-4a78-a8b3-975a8cb5927c",
+      "b013583c-0f64-4780-8046-85bf17741e55",
+      "01c25269-4193-41b9-afc9-f509ae85f7bc"
+    ],
+    "created_at": "2024-09-20T18:54:50.627581",
+    "updated_at": "2025-01-18T13:34:50.627581"
   }
 ]
