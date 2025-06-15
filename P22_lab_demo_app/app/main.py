@@ -3,6 +3,7 @@ from contextlib import asynccontextmanager
 from fastapi import FastAPI
 from app.routes.graph import router as graph_router
 from app.gremlin_client import start_gremlin, shutdown_gremlin
+from app.routes.health import router as health_router
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
@@ -23,3 +24,4 @@ app = FastAPI(
 )
 
 app.include_router(graph_router)
+app.include_router(health_router)

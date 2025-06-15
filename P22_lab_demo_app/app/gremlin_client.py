@@ -1,5 +1,6 @@
 # app/gremlin_client.py
 
+import asyncio
 from gremlin_python.driver import client, serializer
 from app.config import settings
 from app.logger import logger
@@ -20,12 +21,23 @@ async def start_gremlin():
     )
     logger.info("Connected to Gremlin.")
 
+async def ping_gremlin():
+    try:
+        result = await asyncio.to_thread(
+            lambda: gremlin_client.submit("g.V().limit(1)").all().result()
+        )
+        return True
+    except Exception as e:
+        logger.error(f"Gremlin health check failed: {e}")
+        return False
+
+
 async def shutdown_gremlin():
     global gremlin_client 
     if gremlin_client:
         logger.info("Closing connection to gremlin.")
         try:
-            await gremlin_client.close()
+            gremlin_client.close()
         except Exception as e:
             logger.error(f"Error during Gremlin shutdown: {e}")
         finally:

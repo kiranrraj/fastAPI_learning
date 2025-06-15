@@ -12,6 +12,14 @@ def _fetch_vertices():
     result_set = g.submit("g.V().elementMap()")
     return [r for r in result_set]  # list of dicts
 
+def _fetch_vertex_schema():
+    g = get_gremlin_client()
+    result_set = g.submit(
+        "g.V().group().by(label).by(project('keys').by(properties().key().dedup().fold()))"
+    )
+    results = result_set.all().result()
+    return results[0] if results else {}
+
 def _group_vertices_by_label():
     """Group vertex count by label."""
     g = get_gremlin_client()
@@ -24,3 +32,6 @@ async def get_all_vertices():
 
 async def count_vertices_by_label():
     return await asyncio.to_thread(_group_vertices_by_label)
+
+async def get_vertex_schema_by_label():
+    return await asyncio.to_thread(_fetch_vertex_schema)
