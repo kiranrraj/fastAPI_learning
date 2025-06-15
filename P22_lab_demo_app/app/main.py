@@ -1,7 +1,8 @@
 import os
-import logger
 from contextlib import asynccontextmanager
 from fastapi import FastAPI
+from app.routes.graph import router as graph_router
+from app.gremlin_client import start_gremlin, shutdown_gremlin
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
@@ -20,3 +21,5 @@ app = FastAPI(
     openapi_url="/labx/openapi.json",
     docs_url="/labx/docs"
 )
+
+app.include_router(graph_router)
