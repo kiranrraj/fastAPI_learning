@@ -1,102 +1,102 @@
 [
   {
-    "id": "7e322b94-303a-49fb-ad88-b0adfbc2473a",
-    "branch_code": "THA01",
-    "name": "Thane Medical Center",
-    "location": "Thane",
-    "address": "558 Brigade Road",
-    "phone": "9412796981",
-    "created_at": "2024-07-03T05:23:50.627581",
-    "updated_at": "2025-03-14T07:57:50.627581"
-  },
-  {
-    "id": "43a99605-d8a9-40bf-a78b-965336db088a",
-    "branch_code": "LUC02",
-    "name": "Lucknow Medical Center",
-    "location": "Lucknow",
-    "address": "174 Park Street",
-    "phone": "7070264450",
-    "created_at": "2024-07-07T10:16:50.627581",
-    "updated_at": "2024-09-12T08:25:50.627581"
-  },
-  {
-    "id": "e1143459-5d19-46d9-a5ce-9d0d1606b19d",
-    "branch_code": "HYD03",
+    "id": "HYDE0122",
+    "branch_code": "BR548",
     "name": "Hyderabad Medical Center",
     "location": "Hyderabad",
-    "address": "132 Jubilee Hills",
-    "phone": "8078729089",
-    "created_at": "2024-07-17T21:25:50.627581",
-    "updated_at": "2025-01-10T10:12:50.627581"
+    "address": "60, Link Road",
+    "phone": "+91-82886-91000",
+    "created_at": "2025-06-16T15:00:17.217346",
+    "updated_at": "2025-06-16T15:00:17.217346"
   },
   {
-    "id": "fc475d95-6582-4e32-bc76-3586daad0daa",
-    "branch_code": "THA04",
-    "name": "Thane Medical Center",
-    "location": "Thane",
-    "address": "872 Linking Road",
-    "phone": "6434748599",
-    "created_at": "2024-09-23T08:16:50.627581",
-    "updated_at": "2025-05-02T19:02:50.627581"
+    "id": "MUMB7911",
+    "branch_code": "BR092",
+    "name": "Mumbai Medical Center",
+    "location": "Mumbai",
+    "address": "171, MG Road",
+    "phone": "+91-78609-69583",
+    "created_at": "2025-06-16T15:00:17.217346",
+    "updated_at": "2025-06-16T15:00:17.217346"
   },
   {
-    "id": "90fe4d02-9a0b-4108-b788-cb1e94077c67",
-    "branch_code": "JAI05",
+    "id": "CHEN2967",
+    "branch_code": "BR987",
+    "name": "Chennai Medical Center",
+    "location": "Chennai",
+    "address": "156, Nehru Street",
+    "phone": "+91-68036-67754",
+    "created_at": "2025-06-16T15:00:17.217346",
+    "updated_at": "2025-06-16T15:00:17.217346"
+  },
+  {
+    "id": "DELH5069",
+    "branch_code": "BR303",
+    "name": "Delhi Medical Center",
+    "location": "Delhi",
+    "address": "150, Link Road",
+    "phone": "+91-80324-20296",
+    "created_at": "2025-06-16T15:00:17.217346",
+    "updated_at": "2025-06-16T15:00:17.217346"
+  },
+  {
+    "id": "JAIP7830",
+    "branch_code": "BR930",
     "name": "Jaipur Medical Center",
     "location": "Jaipur",
-    "address": "971 Zakaria Street",
-    "phone": "9425455738",
-    "created_at": "2024-10-16T21:35:50.627581",
-    "updated_at": "2024-10-13T14:24:50.627581"
+    "address": "71, MG Road",
+    "phone": "+91-84299-80940",
+    "created_at": "2025-06-16T15:00:17.217346",
+    "updated_at": "2025-06-16T15:00:17.217346"
   },
   {
-    "id": "e7a43b0a-e6fc-4a32-a2e9-18c6ccaada24",
-    "branch_code": "LUC06",
-    "name": "Lucknow Medical Center",
-    "location": "Lucknow",
-    "address": "265 Mount Road",
-    "phone": "7814891467",
-    "created_at": "2025-06-12T20:16:50.627581",
-    "updated_at": "2024-09-01T01:02:50.627581"
+    "id": "HYDE4708",
+    "branch_code": "BR365",
+    "name": "Hyderabad Medical Center",
+    "location": "Hyderabad",
+    "address": "176, Nehru Street",
+    "phone": "+91-94480-39813",
+    "created_at": "2025-06-16T15:00:17.217346",
+    "updated_at": "2025-06-16T15:00:17.217346"
   },
   {
-    "id": "75b27ac3-ca6b-4df9-a16b-8e6836976563",
-    "branch_code": "NAG07",
-    "name": "Nagpur Medical Center",
-    "location": "Nagpur",
-    "address": "296 Anna Salai",
-    "phone": "6517133932",
-    "created_at": "2024-06-30T05:31:50.627581",
-    "updated_at": "2025-02-26T18:40:50.627581"
+    "id": "PUNE4981",
+    "branch_code": "BR756",
+    "name": "Pune Medical Center",
+    "location": "Pune",
+    "address": "18, Park Avenue",
+    "phone": "+91-87627-22564",
+    "created_at": "2025-06-16T15:00:17.217346",
+    "updated_at": "2025-06-16T15:00:17.217346"
   },
   {
-    "id": "0cbf98b3-4e64-42f6-a528-5904de0a18d0",
-    "branch_code": "THA08",
-    "name": "Thane Medical Center",
-    "location": "Thane",
-    "address": "108 Zakaria Street",
-    "phone": "6219146994",
-    "created_at": "2024-11-20T17:25:50.627581",
-    "updated_at": "2025-03-11T23:10:50.627581"
+    "id": "JAIP5963",
+    "branch_code": "BR866",
+    "name": "Jaipur Medical Center",
+    "location": "Jaipur",
+    "address": "21, Link Road",
+    "phone": "+91-61682-96996",
+    "created_at": "2025-06-16T15:00:17.217346",
+    "updated_at": "2025-06-16T15:00:17.217346"
   },
   {
-    "id": "1fed029d-2b25-4010-a29a-99e37636ab6f",
-    "branch_code": "AHM09",
-    "name": "Ahmedabad Medical Center",
-    "location": "Ahmedabad",
-    "address": "363 Mount Road",
-    "phone": "6605035178",
-    "created_at": "2024-08-24T14:47:50.627581",
-    "updated_at": "2024-10-03T23:33:50.627581"
+    "id": "BANG9690",
+    "branch_code": "BR704",
+    "name": "Bangalore Medical Center",
+    "location": "Bangalore",
+    "address": "125, MG Road",
+    "phone": "+91-69003-90612",
+    "created_at": "2025-06-16T15:00:17.217346",
+    "updated_at": "2025-06-16T15:00:17.217346"
   },
   {
-    "id": "9293d569-1a0c-45cf-b3e8-49d88423ea24",
-    "branch_code": "LUC10",
-    "name": "Lucknow Medical Center",
-    "location": "Lucknow",
-    "address": "283 Connaught Place",
-    "phone": "7540939999",
-    "created_at": "2025-02-17T13:50:50.627581",
-    "updated_at": "2025-06-08T19:50:50.627581"
+    "id": "MUMB2602",
+    "branch_code": "BR325",
+    "name": "Mumbai Medical Center",
+    "location": "Mumbai",
+    "address": "154, Link Road",
+    "phone": "+91-87395-56812",
+    "created_at": "2025-06-16T15:00:17.217346",
+    "updated_at": "2025-06-16T15:00:17.217346"
   }
 ]

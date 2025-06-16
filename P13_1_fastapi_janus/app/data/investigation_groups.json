@@ -1,202 +1,92 @@
 [
   {
-    "id": "a9168645-ab4a-48ea-b1a3-bd904432ebf3",
-    "group_id": "BIOC9494",
-    "name": "Biochemistry - Lipid Group 1",
-    "description": "Handles biochemistry tests",
-    "parent_group_id": null,
-    "created_by": "86fe7053-810f-4957-b289-8612202e8978",
-    "created_at": "2024-11-23T08:17:50.627581",
-    "updated_at": "2025-06-02T00:37:50.627581"
+    "id": "BIOCHE93514600",
+    "group_id": "BIOCHE93514600",
+    "name": "Biochemistry",
+    "description": "Handles biochemistry related tests",
+    "parent_group_id": "DIABET66692383",
+    "created_at": "2025-06-16T15:00:17.217346",
+    "updated_at": "2025-06-16T15:00:17.217346"
   },
   {
-    "id": "96c4818f-5319-4c48-ad65-b7687b2e0a81",
-    "group_id": "PATH0708",
-    "name": "Pathology Group 2",
-    "description": "Handles pathology tests",
-    "parent_group_id": null,
-    "created_by": "c1a10ab4-33ce-408f-ad53-ab2202622d71",
-    "created_at": "2024-07-22T16:15:50.627581",
-    "updated_at": "2025-04-03T14:21:50.627581"
+    "id": "LIVER 48300370",
+    "group_id": "LIVER 48300370",
+    "name": "Liver Function",
+    "description": "Handles liver function related tests",
+    "parent_group_id": "DIABET66692383",
+    "created_at": "2025-06-16T15:00:17.217346",
+    "updated_at": "2025-06-16T15:00:17.217346"
   },
   {
-    "id": "1e1ab598-088e-4925-b7c6-c9fc92377339",
-    "group_id": "IMMU6593",
-    "name": "Immunology - Serology Group 3",
-    "description": "Handles immunology tests",
-    "parent_group_id": null,
-    "created_by": "55145cf8-44c8-4862-b725-089c84a6b2fc",
-    "created_at": "2024-12-21T22:53:50.627581",
-    "updated_at": "2024-07-20T23:27:50.627581"
+    "id": "THYROI19280510",
+    "group_id": "THYROI19280510",
+    "name": "Thyroid Profile",
+    "description": "Handles thyroid profile related tests",
+    "parent_group_id": "BIOCHE93514600",
+    "created_at": "2025-06-16T15:00:17.217346",
+    "updated_at": "2025-06-16T15:00:17.217346"
   },
   {
-    "id": "ea3cf07e-a2e9-4dd6-9dd6-f36d2602eba2",
-    "group_id": "BIOC8639",
-    "name": "Biochemistry - Lipid Group 4",
-    "description": "Handles biochemistry tests",
-    "parent_group_id": null,
-    "created_by": "7e7adf15-ea32-4fa1-97f1-3b863f5d0d5a",
-    "created_at": "2025-04-30T17:30:50.627581",
-    "updated_at": "2025-03-04T18:05:50.627581"
+    "id": "LIPID 34137410",
+    "group_id": "LIPID 34137410",
+    "name": "Lipid Profile",
+    "description": "Handles lipid profile related tests",
+    "parent_group_id": "",
+    "created_at": "2025-06-16T15:00:17.217346",
+    "updated_at": "2025-06-16T15:00:17.217346"
   },
   {
-    "id": "01c25269-4193-41b9-afc9-f509ae85f7bc",
-    "group_id": "IMMU0811",
-    "name": "Immunology Group 5",
-    "description": "Handles immunology tests",
-    "parent_group_id": null,
-    "created_by": "a4ce3967-c566-4f31-a64a-11da8bb0f763",
-    "created_at": "2024-11-02T18:54:50.627581",
-    "updated_at": "2025-02-03T07:56:50.627581"
+    "id": "RENAL 13713338",
+    "group_id": "RENAL 13713338",
+    "name": "Renal Profile",
+    "description": "Handles renal profile related tests",
+    "parent_group_id": "",
+    "created_at": "2025-06-16T15:00:17.217346",
+    "updated_at": "2025-06-16T15:00:17.217346"
   },
   {
-    "id": "22ae8b08-64c8-413e-a7d6-a2d9f876889a",
-    "group_id": "PATH9978",
-    "name": "Pathology Group 6",
-    "description": "Handles pathology tests",
-    "parent_group_id": null,
-    "created_by": "0dbd9a4c-d7ec-4448-8d07-b899db53226a",
-    "created_at": "2024-11-13T11:12:50.627581",
-    "updated_at": "2024-09-24T13:59:50.627581"
+    "id": "HEMATO42044055",
+    "group_id": "HEMATO42044055",
+    "name": "Hematology",
+    "description": "Handles hematology related tests",
+    "parent_group_id": "",
+    "created_at": "2025-06-16T15:00:17.217346",
+    "updated_at": "2025-06-16T15:00:17.217346"
   },
   {
-    "id": "723c04b9-625e-4e84-b76a-1b79a0046770",
-    "group_id": "BIOC2600",
-    "name": "Biochemistry Group 7",
-    "description": "Handles biochemistry tests",
-    "parent_group_id": "a9168645-ab4a-48ea-b1a3-bd904432ebf3",
-    "created_by": "8957c167-c09f-4d18-99eb-ed0edca67b35",
-    "created_at": "2024-08-05T06:56:50.627581",
-    "updated_at": "2025-04-25T05:59:50.627581"
+    "id": "DIABET66692383",
+    "group_id": "DIABET66692383",
+    "name": "Diabetes Panel",
+    "description": "Handles diabetes panel related tests",
+    "parent_group_id": "HORMON32344012",
+    "created_at": "2025-06-16T15:00:17.217346",
+    "updated_at": "2025-06-16T15:00:17.217346"
   },
   {
-    "id": "b8f888cd-ed5a-4a78-a8b3-975a8cb5927c",
-    "group_id": "MICR3511",
-    "name": "Microbiology Group 8",
-    "description": "Handles microbiology tests",
-    "parent_group_id": null,
-    "created_by": "38c1567b-cb38-4e2e-88d0-4e18b52a2a69",
-    "created_at": "2024-11-05T13:26:50.627581",
-    "updated_at": "2025-01-13T04:38:50.627581"
+    "id": "CARDIA44712321",
+    "group_id": "CARDIA44712321",
+    "name": "Cardiac Markers",
+    "description": "Handles cardiac markers related tests",
+    "parent_group_id": "RENAL 13713338",
+    "created_at": "2025-06-16T15:00:17.217346",
+    "updated_at": "2025-06-16T15:00:17.217346"
   },
   {
-    "id": "b013583c-0f64-4780-8046-85bf17741e55",
-    "group_id": "IMMU7392",
-    "name": "Immunology Group 9",
-    "description": "Handles immunology tests",
-    "parent_group_id": null,
-    "created_by": "e3d31d02-d01c-47e3-acb4-9d8808e6f430",
-    "created_at": "2025-04-25T03:29:50.627581",
-    "updated_at": "2025-05-13T22:18:50.627581"
+    "id": "INFECT13131338",
+    "group_id": "INFECT13131338",
+    "name": "Infectious Diseases",
+    "description": "Handles infectious diseases related tests",
+    "parent_group_id": "THYROI19280510",
+    "created_at": "2025-06-16T15:00:17.217346",
+    "updated_at": "2025-06-16T15:00:17.217346"
   },
   {
-    "id": "40b75cd7-4a26-41ba-8595-83be583deacd",
-    "group_id": "BIOC7611",
-    "name": "Biochemistry Group 10",
-    "description": "Handles biochemistry tests",
-    "parent_group_id": null,
-    "created_by": "70e24b47-8ce1-4046-a5fa-cca7a4a1bc9a",
-    "created_at": "2024-08-31T11:06:50.627581",
-    "updated_at": "2025-03-21T23:42:50.627581"
-  },
-  {
-    "id": "a44b1931-6bc8-4734-851e-475245cb911e",
-    "group_id": "IMMU3926",
-    "name": "Immunology - Serology Group 11",
-    "description": "Handles immunology tests",
-    "parent_group_id": null,
-    "created_by": "f5b4c7f4-a30d-48db-a381-a240128698f4",
-    "created_at": "2025-05-15T21:49:50.627581",
-    "updated_at": "2024-11-03T13:29:50.627581"
-  },
-  {
-    "id": "d0d05f85-11b2-41bb-990d-e72f8f5d22dc",
-    "group_id": "IMMU1236",
-    "name": "Immunology Group 12",
-    "description": "Handles immunology tests",
-    "parent_group_id": null,
-    "created_by": "54254c5f-8347-4734-9eb3-b40b5bba3e41",
-    "created_at": "2024-09-16T23:25:50.627581",
-    "updated_at": "2024-06-22T05:26:50.627581"
-  },
-  {
-    "id": "1238fc3b-6f63-45fb-8a95-9479829e7bbd",
-    "group_id": "PATH3704",
-    "name": "Pathology Group 13",
-    "description": "Handles pathology tests",
-    "parent_group_id": "b8f888cd-ed5a-4a78-a8b3-975a8cb5927c",
-    "created_by": "f4291384-92c3-4621-9229-69809dbc2bd2",
-    "created_at": "2025-05-01T21:15:50.627581",
-    "updated_at": "2024-10-18T09:33:50.627581"
-  },
-  {
-    "id": "c1928945-5a3a-41b6-b691-52f6661d82ad",
-    "group_id": "HEMA0448",
-    "name": "Hematology - Morphology Group 14",
-    "description": "Handles hematology tests",
-    "parent_group_id": "a9168645-ab4a-48ea-b1a3-bd904432ebf3",
-    "created_by": "54254c5f-8347-4734-9eb3-b40b5bba3e41",
-    "created_at": "2025-05-21T13:03:50.627581",
-    "updated_at": "2025-04-23T18:23:50.627581"
-  },
-  {
-    "id": "b3061560-bc97-438a-bfe3-e1725511d395",
-    "group_id": "HEMA5884",
-    "name": "Hematology - Morphology Group 15",
-    "description": "Handles hematology tests",
-    "parent_group_id": "a44b1931-6bc8-4734-851e-475245cb911e",
-    "created_by": "720d9e02-02fa-424e-83d7-97966343cd66",
-    "created_at": "2024-06-21T23:12:50.627581",
-    "updated_at": "2024-07-27T17:21:50.627581"
-  },
-  {
-    "id": "b9c3dadc-cf15-489a-a9ac-1f61228f8cad",
-    "group_id": "PATH1804",
-    "name": "Pathology - Histology Group 16",
-    "description": "Handles pathology tests",
-    "parent_group_id": "c1928945-5a3a-41b6-b691-52f6661d82ad",
-    "created_by": "196a130f-b4f1-4c38-ae08-492bcc71c5d9",
-    "created_at": "2024-07-29T22:34:50.627581",
-    "updated_at": "2024-12-09T15:11:50.627581"
-  },
-  {
-    "id": "8b706525-5b46-4bc1-9415-c7e138e7c99f",
-    "group_id": "MICR1431",
-    "name": "Microbiology - Bacteriology Group 17",
-    "description": "Handles microbiology tests",
-    "parent_group_id": null,
-    "created_by": "20194af4-12b5-4e79-b53d-1d3ecc52f26f",
-    "created_at": "2024-08-29T04:30:50.627581",
-    "updated_at": "2024-10-25T12:38:50.627581"
-  },
-  {
-    "id": "5035ef6e-ab44-4822-b0bc-c4b58a2f9b50",
-    "group_id": "HEMA7261",
-    "name": "Hematology Group 18",
-    "description": "Handles hematology tests",
-    "parent_group_id": null,
-    "created_by": "a4ce3967-c566-4f31-a64a-11da8bb0f763",
-    "created_at": "2024-08-20T18:35:50.627581",
-    "updated_at": "2025-04-27T16:20:50.627581"
-  },
-  {
-    "id": "51028b81-6ac5-483a-940b-5c8ff29c11ca",
-    "group_id": "HEMA3732",
-    "name": "Hematology Group 19",
-    "description": "Handles hematology tests",
-    "parent_group_id": "1238fc3b-6f63-45fb-8a95-9479829e7bbd",
-    "created_by": "86fe7053-810f-4957-b289-8612202e8978",
-    "created_at": "2024-11-07T06:27:50.627581",
-    "updated_at": "2025-03-06T20:35:50.627581"
-  },
-  {
-    "id": "2b0b506c-52e8-4e02-8720-ebc5baa6068d",
-    "group_id": "HEMA4790",
-    "name": "Hematology - Coagulation Group 20",
-    "description": "Handles hematology tests",
-    "parent_group_id": null,
-    "created_by": "a4ce3967-c566-4f31-a64a-11da8bb0f763",
-    "created_at": "2024-06-29T13:24:50.627581",
-    "updated_at": "2024-11-25T14:39:50.627581"
+    "id": "HORMON32344012",
+    "group_id": "HORMON32344012",
+    "name": "Hormonal Assays",
+    "description": "Handles hormonal assays related tests",
+    "parent_group_id": "",
+    "created_at": "2025-06-16T15:00:17.217346",
+    "updated_at": "2025-06-16T15:00:17.217346"
   }
 ]

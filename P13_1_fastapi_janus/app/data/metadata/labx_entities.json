@@ -1,0 +1,37 @@
+[
+  {
+    "id": "e6b9f0d3-1427-41b3-a965-369f3b7d420e",
+    "name": "Branch",
+    "desc": "Branch entity"
+  },
+  {
+    "id": "6dd9451b-6885-4f59-9493-09ade2a4b315",
+    "name": "Staff",
+    "desc": "Staff entity"
+  },
+  {
+    "id": "758f0da4-4e00-4b18-9d37-9cf5bf0a1709",
+    "name": "Patient",
+    "desc": "Patient entity"
+  },
+  {
+    "id": "40393042-b9c9-4e08-be9b-df8d7cf92af0",
+    "name": "InvestigationGroup",
+    "desc": "InvestigationGroup entity"
+  },
+  {
+    "id": "8d2223de-4cb6-47dd-b1e3-1a24eb3eef3f",
+    "name": "Investigation",
+    "desc": "Investigation entity"
+  },
+  {
+    "id": "e87d8912-630f-4bda-b3ad-4275c19644f5",
+    "name": "Order",
+    "desc": "Order entity"
+  },
+  {
+    "id": "985f8980-4055-46d2-ae21-ee4b59798ee0",
+    "name": "Result",
+    "desc": "Result entity"
+  }
+]

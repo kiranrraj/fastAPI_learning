@@ -1,18 +1,15 @@
-# generate_json.pt
-
 import os
 import json
 import random
 import uuid
-from datetime import datetime
+from datetime import datetime, timedelta
 from pathlib import Path
 
 # ─── Setup Paths ────────────────────────────────────────────────────────────────
-PROJECT_ROOT = Path("D:/fast_api/fastAPI_learning/P22_lab_demo_app")
-DATA_DIR = PROJECT_ROOT / "data"
-META_DIR = DATA_DIR / "metadata"
-CONSTANTS_FILE = PROJECT_ROOT / "scripts" / "generation_data" / "constants.json"
-INVESTIGATION_FILE = PROJECT_ROOT / "scripts" / "generation_data" / "investigations.json"
+PROJECT_ROOT = Path("D:/fast_api/fastAPI_learning/P13_1_fastapi_janus")
+DATA_DIR     = PROJECT_ROOT / "app" / "data"
+META_DIR     = DATA_DIR / "metadata"
+CONSTANTS_FILE = PROJECT_ROOT / "constants.json"
 
 DATA_DIR.mkdir(parents=True, exist_ok=True)
 META_DIR.mkdir(parents=True, exist_ok=True)
@@ -23,14 +20,11 @@ def write_json_file(path, data):
         path.unlink()
     with open(path, "w", encoding="utf-8") as f:
         json.dump(data, f, indent=2)
-    print(f"Written {path.name}")
+    print(f"✔ Written {path.name}")
 
 # ─── Load Constants ─────────────────────────────────────────────────────────────
 with open(CONSTANTS_FILE, "r", encoding="utf-8") as f:
     CONST = json.load(f)
-
-with open(INVESTIGATION_FILE, "r", encoding="utf-8") as f:
-    INVESTIGATION_DATA = json.load(f)
 
 now = datetime.now()
 
@@ -39,6 +33,8 @@ COUNTS = {
     "branches": 10,
     "staff": 25,
     "patients": 80,
+    "investigation_groups": 15,
+    "investigations": 60,
     "orders": 100,
     "results": 100
 }
@@ -77,13 +73,12 @@ for _ in range(COUNTS["branches"]):
     location = random.choice(CONST["locations"])
     branch = {
         "id": generate_branch_id(location),
-        "branch_code": f"BR{rand_digits(3)}",
         "name": f"{location} Medical Center",
         "location": location,
         "address": random_address(),
         "phone": f"+91-{random.randint(60000,99999)}-{random.randint(10000,99999)}",
-        "created_at": now.isoformat(),
-        "updated_at": now.isoformat()
+        "branch_code": f"BR{rand_digits(3)}",
+        "created_at": now.isoformat()
     }
     branches.append(branch)
 
@@ -95,13 +90,12 @@ for _ in range(COUNTS["staff"]):
     staff_id = generate_staff_id(first, last, role)
     staff.append({
         "id": staff_id,
-        "staff_id": staff_id,
         "first_name": first,
         "last_name": last,
         "role": role,
         "branch_id": random.choice(branches)["id"],
-        "created_at": now.isoformat(),
-        "updated_at": now.isoformat()
+        "emp_id": f"EMP{rand_digits(5)}",
+        "created_at": now.isoformat()
     })
 
 patients = []
@@ -111,45 +105,41 @@ for _ in range(COUNTS["patients"]):
     user_id = generate_user_id(first, last)
     patients.append({
         "id": user_id,
-        "user_id": user_id,
         "first_name": first,
         "last_name": last,
+        "phone": f"+91-{random.randint(70000,99999)}-{random.randint(10000,99999)}",
         "gender": random.choice(CONST["genders"]),
         "age": random.randint(1, 90),
-        "phone": f"+91-{random.randint(70000,99999)}-{random.randint(10000,99999)}",
-        "created_at": now.isoformat(),
-        "updated_at": now.isoformat()
+        "created_at": now.isoformat()
     })
 
 investigation_groups = []
-investigations = []
-
-for group in INVESTIGATION_DATA:
-    group_id = generate_group_id(group["group_name"])
+for name in CONST["group_names"][:COUNTS["investigation_groups"]]:
+    igid = generate_group_id(name)
     investigation_groups.append({
-        "id": group_id,
-        "group_id": group_id,
-        "name": group["group_name"],
-        "description": f"Handles {group['group_name'].lower()} related tests",
-        "parent_group_id": "",
-        "created_at": now.isoformat(),
-        "updated_at": now.isoformat()
+        "id": igid,
+        "name": f"{name} Group",
+        "description": f"Handles {name.lower()} related tests",
+        "created_by": random.choice(staff)["id"],
+        "group_code": f"GRP{rand_digits(3)}",
+        "created_at": now.isoformat()
     })
-    for test in group["tests"]:
-        inv_id = generate_investigation_id(test["name"], group_id)
-        investigations.append({
-            "id": inv_id,
-            "investigation_id": inv_id,
-            "name": test["name"],
-            "unit": test["unit"],
-            "reference_range": {
-                "lower": test["lower"],
-                "upper": test["upper"]
-            },
-            "group_ids": [],
-            "created_at": now.isoformat(),
-            "updated_at": now.isoformat()
-        })
+
+investigations = []
+for i in range(COUNTS["investigations"]):
+    test_name = CONST["test_names"][i % len(CONST["test_names"])]
+    group = random.choice(investigation_groups)
+    inv_id = generate_investigation_id(test_name, group["id"])
+    investigations.append({
+        "id": inv_id,
+        "name": test_name,
+        "unit": random.choice(["mg/dL", "mmol/L", "IU/L"]),
+        "reference_range": f"{random.randint(10, 50)}-{random.randint(51, 100)}",
+        "group_id": group["id"],
+        "ordered_by": random.choice(staff)["id"],
+        "investigation_id": inv_id,
+        "created_at": now.isoformat()
+    })
 
 orders = []
 for _ in range(COUNTS["orders"]):
@@ -160,12 +150,11 @@ for _ in range(COUNTS["orders"]):
     orders.append({
         "id": oid,
         "order_id": oid.upper(),
+        "user_id": patient["id"],
         "branch_id": branch["id"],
         "staff_id": doc["id"],
-        "user_id": patient["id"],
         "created_at": now.isoformat(),
-        "updated_at": now.isoformat(),
-        "investigations": None
+        "updated_at": now.isoformat()
     })
 
 results = []
@@ -176,12 +165,11 @@ for _ in range(COUNTS["results"]):
         "id": res_id,
         "result_id": res_id,
         "order_id": order["id"],
+        "user_id": order["user_id"],
         "staff_id": order["staff_id"],
         "branch_id": order["branch_id"],
-        "user_id": order["user_id"],
-        "recorded_at": now.isoformat(),
         "updated_at": now.isoformat(),
-        "report": None
+        "recorded_at": now.isoformat()
     })
 
 # ─── Write Business Data ────────────────────────────────────────────────────────
@@ -199,34 +187,13 @@ for filename, data in data_files.items():
 
 # ─── Metadata Generation ────────────────────────────────────────────────────────
 schema = {
-    "Branch": [
-        "id", "branch_code", "name", "location", "address", "phone", 
-        "created_at", "updated_at"
-    ],
-    "Staff": [
-        "id", "staff_id", "first_name", "last_name", "role", "branch_id",
-        "created_at", "updated_at"
-    ],
-    "Patient": [
-        "id", "user_id", "first_name", "last_name", "gender", "age", "phone",
-        "created_at", "updated_at"
-    ],
-    "InvestigationGroup": [
-        "id", "group_id", "name", "description", "parent_group_id",
-        "created_at", "updated_at"
-    ],
-    "Investigation": [
-        "id", "investigation_id", "name", "unit", "reference_range", "group_ids",
-        "created_at", "updated_at"
-    ],
-    "Order": [
-        "id", "order_id", "branch_id", "staff_id", "user_id",
-        "created_at", "updated_at", "investigations"
-    ],
-    "Result": [
-        "id", "result_id", "order_id", "staff_id", "branch_id", "user_id",
-        "recorded_at", "updated_at", "report"
-    ]
+    "InvestigationGroup": ["group_code", "name", "created_at", "id", "description", "created_by"],
+    "Order": ["updated_at", "created_at", "id", "branch_id", "staff_id", "user_id", "order_id"],
+    "Branch": ["branch_code", "address", "phone", "name", "created_at", "location", "id"],
+    "Staff": ["emp_id", "created_at", "id", "role", "branch_id", "last_name", "first_name"],
+    "Investigation": ["ordered_by", "name", "created_at", "id", "group_id", "unit", "investigation_id", "reference_range"],
+    "Patient": ["phone", "created_at", "id", "last_name", "first_name", "gender", "age"],
+    "Result": ["updated_at", "id", "branch_id", "staff_id", "user_id", "order_id", "recorded_at", "result_id"]
 }
 entities, attrs, edges = [], [], []
 for label, keys in schema.items():

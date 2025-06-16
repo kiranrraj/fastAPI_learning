@@ -1,302 +1,252 @@
 [
   {
-    "id": "9d6b9e27-5975-48dd-bdcf-b7a19b3c8b01",
-    "staff_id": "AA4737SH",
-    "first_name": "Aarav",
-    "last_name": "Sharma",
-    "role": "Radiologist",
-    "branch_id": "e7a43b0a-e6fc-4a32-a2e9-18c6ccaada24",
-    "created_at": "2024-06-13T06:42:50.627581",
-    "updated_at": "2025-03-31T16:11:50.627581"
-  },
-  {
-    "id": "3b58c8ac-4894-488e-a300-0f9e660192b8",
-    "staff_id": "KA5464CH",
+    "id": "KADO250616NA488",
+    "staff_id": "KADO250616NA488",
     "first_name": "Kavya",
-    "last_name": "Chowdhury",
-    "role": "Receptionist",
-    "branch_id": "7e322b94-303a-49fb-ad88-b0adfbc2473a",
-    "created_at": "2025-03-17T15:09:50.627581",
-    "updated_at": "2025-03-28T05:08:50.627581"
-  },
-  {
-    "id": "a4ce3967-c566-4f31-a64a-11da8bb0f763",
-    "staff_id": "AR8443BO",
-    "first_name": "Arjun",
-    "last_name": "Bose",
-    "role": "Receptionist",
-    "branch_id": "90fe4d02-9a0b-4108-b788-cb1e94077c67",
-    "created_at": "2024-12-22T07:46:50.627581",
-    "updated_at": "2024-11-07T05:05:50.627581"
-  },
-  {
-    "id": "196a130f-b4f1-4c38-ae08-492bcc71c5d9",
-    "staff_id": "NA4470KU",
-    "first_name": "Navya",
-    "last_name": "Kumar",
-    "role": "Admin",
-    "branch_id": "90fe4d02-9a0b-4108-b788-cb1e94077c67",
-    "created_at": "2024-06-17T20:53:50.627581",
-    "updated_at": "2024-07-31T09:06:50.627581"
-  },
-  {
-    "id": "8c534f0f-52c3-4951-9c35-629bd2b00e17",
-    "staff_id": "VI4422SH",
-    "first_name": "Vivaan",
-    "last_name": "Shah",
-    "role": "Doctor",
-    "branch_id": "e1143459-5d19-46d9-a5ce-9d0d1606b19d",
-    "created_at": "2024-11-19T05:36:50.627581",
-    "updated_at": "2025-04-26T11:03:50.627581"
-  },
-  {
-    "id": "bed6628e-ecb5-4217-b33f-fe5eb6adf33f",
-    "staff_id": "NA8349SA",
-    "first_name": "Navya",
-    "last_name": "Saxena",
-    "role": "Admin",
-    "branch_id": "e7a43b0a-e6fc-4a32-a2e9-18c6ccaada24",
-    "created_at": "2024-11-07T16:40:50.627581",
-    "updated_at": "2025-06-11T09:57:50.627581"
-  },
-  {
-    "id": "0dbd9a4c-d7ec-4448-8d07-b899db53226a",
-    "staff_id": "PA6401PA",
-    "first_name": "Parth",
-    "last_name": "Patel",
-    "role": "Radiologist",
-    "branch_id": "7e322b94-303a-49fb-ad88-b0adfbc2473a",
-    "created_at": "2024-11-13T17:30:50.627581",
-    "updated_at": "2025-02-08T13:29:50.627581"
-  },
-  {
-    "id": "20194af4-12b5-4e79-b53d-1d3ecc52f26f",
-    "staff_id": "AN7752SH",
-    "first_name": "Anika",
-    "last_name": "Sharma",
-    "role": "Phlebotomist",
-    "branch_id": "e7a43b0a-e6fc-4a32-a2e9-18c6ccaada24",
-    "created_at": "2024-12-09T09:49:50.627581",
-    "updated_at": "2025-04-07T10:40:50.627581"
-  },
-  {
-    "id": "c1a10ab4-33ce-408f-ad53-ab2202622d71",
-    "staff_id": "VI3928KA",
-    "first_name": "Vivaan",
-    "last_name": "Kapoor",
-    "role": "Admin",
-    "branch_id": "e1143459-5d19-46d9-a5ce-9d0d1606b19d",
-    "created_at": "2025-03-16T20:47:50.627581",
-    "updated_at": "2024-12-08T01:40:50.627581"
-  },
-  {
-    "id": "70e24b47-8ce1-4046-a5fa-cca7a4a1bc9a",
-    "staff_id": "IS5522VE",
-    "first_name": "Ishaan",
-    "last_name": "Verma",
-    "role": "Radiologist",
-    "branch_id": "e1143459-5d19-46d9-a5ce-9d0d1606b19d",
-    "created_at": "2024-11-21T20:11:50.627581",
-    "updated_at": "2025-06-10T00:41:50.627581"
-  },
-  {
-    "id": "0fc4d845-9657-4e55-af74-7633b83f9443",
-    "staff_id": "KR1191BH",
-    "first_name": "Krishna",
-    "last_name": "Bhardwaj",
-    "role": "Radiologist",
-    "branch_id": "9293d569-1a0c-45cf-b3e8-49d88423ea24",
-    "created_at": "2025-06-13T04:07:50.627581",
-    "updated_at": "2025-06-01T11:42:50.627581"
-  },
-  {
-    "id": "8957c167-c09f-4d18-99eb-ed0edca67b35",
-    "staff_id": "PA6852KH",
-    "first_name": "Parth",
-    "last_name": "Khan",
-    "role": "Phlebotomist",
-    "branch_id": "fc475d95-6582-4e32-bc76-3586daad0daa",
-    "created_at": "2024-08-18T09:42:50.627581",
-    "updated_at": "2024-09-19T06:46:50.627581"
-  },
-  {
-    "id": "514f2784-3fbe-4ec9-8124-6445b364e9fb",
-    "staff_id": "RO8098MA",
-    "first_name": "Rohan",
-    "last_name": "Malhotra",
-    "role": "Receptionist",
-    "branch_id": "7e322b94-303a-49fb-ad88-b0adfbc2473a",
-    "created_at": "2024-07-17T04:46:50.627581",
-    "updated_at": "2024-07-11T18:00:50.627581"
-  },
-  {
-    "id": "8e017669-74b5-4ac8-af13-544904400e9c",
-    "staff_id": "SI3728TR",
-    "first_name": "Siddharth",
-    "last_name": "Trivedi",
-    "role": "Nurse",
-    "branch_id": "fc475d95-6582-4e32-bc76-3586daad0daa",
-    "created_at": "2024-08-14T19:10:50.627581",
-    "updated_at": "2024-07-10T14:03:50.627581"
-  },
-  {
-    "id": "38c1567b-cb38-4e2e-88d0-4e18b52a2a69",
-    "staff_id": "AD8819TR",
-    "first_name": "Aditya",
-    "last_name": "Trivedi",
-    "role": "Technician",
-    "branch_id": "e1143459-5d19-46d9-a5ce-9d0d1606b19d",
-    "created_at": "2025-01-30T10:27:50.627581",
-    "updated_at": "2025-01-19T19:36:50.627581"
-  },
-  {
-    "id": "7e7adf15-ea32-4fa1-97f1-3b863f5d0d5a",
-    "staff_id": "MY6133CH",
-    "first_name": "Myra",
-    "last_name": "Chowdhury",
-    "role": "Radiologist",
-    "branch_id": "e1143459-5d19-46d9-a5ce-9d0d1606b19d",
-    "created_at": "2024-07-04T02:36:50.627581",
-    "updated_at": "2024-10-17T23:53:50.627581"
-  },
-  {
-    "id": "314b7a7e-3640-4399-bff4-f489e58d357c",
-    "staff_id": "KA2877MU",
-    "first_name": "Karan",
-    "last_name": "Mukherjee",
-    "role": "Lab Assistant",
-    "branch_id": "7e322b94-303a-49fb-ad88-b0adfbc2473a",
-    "created_at": "2024-12-23T13:50:50.627581",
-    "updated_at": "2024-11-06T19:37:50.627581"
-  },
-  {
-    "id": "55145cf8-44c8-4862-b725-089c84a6b2fc",
-    "staff_id": "RI2489BH",
-    "first_name": "Ridhi",
-    "last_name": "Bhattacharya",
-    "role": "Admin",
-    "branch_id": "43a99605-d8a9-40bf-a78b-965336db088a",
-    "created_at": "2025-02-15T14:11:50.627581",
-    "updated_at": "2025-04-26T23:28:50.627581"
-  },
-  {
-    "id": "f5b4c7f4-a30d-48db-a381-a240128698f4",
-    "staff_id": "PR2812DA",
-    "first_name": "Prisha",
-    "last_name": "Das",
-    "role": "Doctor",
-    "branch_id": "1fed029d-2b25-4010-a29a-99e37636ab6f",
-    "created_at": "2024-09-05T03:54:50.627581",
-    "updated_at": "2025-02-07T23:17:50.627581"
-  },
-  {
-    "id": "9f3645ee-0f3f-4923-b834-d31827c64779",
-    "staff_id": "AN7971NA",
-    "first_name": "Ananya",
     "last_name": "Nair",
-    "role": "Technician",
-    "branch_id": "90fe4d02-9a0b-4108-b788-cb1e94077c67",
-    "created_at": "2024-10-25T08:59:50.627581",
-    "updated_at": "2024-11-02T06:11:50.627581"
+    "role": "doctor",
+    "branch_id": "JAIP5963",
+    "created_at": "2025-06-16T15:00:17.217346",
+    "updated_at": "2025-06-16T15:00:17.217346"
   },
   {
-    "id": "86fe7053-810f-4957-b289-8612202e8978",
-    "staff_id": "IR5704VE",
-    "first_name": "Ira",
-    "last_name": "Verma",
-    "role": "Technician",
-    "branch_id": "43a99605-d8a9-40bf-a78b-965336db088a",
-    "created_at": "2024-09-12T00:19:50.627581",
-    "updated_at": "2024-08-04T05:23:50.627581"
-  },
-  {
-    "id": "e3d31d02-d01c-47e3-acb4-9d8808e6f430",
-    "staff_id": "IR2387RA",
-    "first_name": "Ira",
+    "id": "PISU250616RA330",
+    "staff_id": "PISU250616RA330",
+    "first_name": "Pihu",
     "last_name": "Rao",
-    "role": "Radiologist",
-    "branch_id": "90fe4d02-9a0b-4108-b788-cb1e94077c67",
-    "created_at": "2024-06-29T08:11:50.627581",
-    "updated_at": "2024-07-31T00:58:50.627581"
+    "role": "supervisor",
+    "branch_id": "HYDE0122",
+    "created_at": "2025-06-16T15:00:17.217346",
+    "updated_at": "2025-06-16T15:00:17.217346"
   },
   {
-    "id": "720d9e02-02fa-424e-83d7-97966343cd66",
-    "staff_id": "AN4695KH",
-    "first_name": "Ananya",
-    "last_name": "Khan",
-    "role": "Nurse",
-    "branch_id": "e1143459-5d19-46d9-a5ce-9d0d1606b19d",
-    "created_at": "2025-01-25T05:00:50.627581",
-    "updated_at": "2025-01-17T09:21:50.627581"
-  },
-  {
-    "id": "54254c5f-8347-4734-9eb3-b40b5bba3e41",
-    "staff_id": "DI8915RE",
-    "first_name": "Diya",
-    "last_name": "Reddy",
-    "role": "Technician",
-    "branch_id": "90fe4d02-9a0b-4108-b788-cb1e94077c67",
-    "created_at": "2024-08-27T05:36:50.627581",
-    "updated_at": "2025-06-13T15:15:50.627581"
-  },
-  {
-    "id": "fbd50ed3-6caa-4279-84a0-9e4906a91cdf",
-    "staff_id": "AN7234SA",
-    "first_name": "Anika",
-    "last_name": "Saxena",
-    "role": "Nurse",
-    "branch_id": "0cbf98b3-4e64-42f6-a528-5904de0a18d0",
-    "created_at": "2025-03-05T08:48:50.627581",
-    "updated_at": "2025-05-29T04:12:50.627581"
-  },
-  {
-    "id": "144325df-695f-40c9-8cf5-69a0735a21ba",
-    "staff_id": "VI5114RA",
-    "first_name": "Vihaan",
-    "last_name": "Rao",
-    "role": "Doctor",
-    "branch_id": "43a99605-d8a9-40bf-a78b-965336db088a",
-    "created_at": "2025-05-01T17:23:50.627581",
-    "updated_at": "2024-10-30T00:09:50.627581"
-  },
-  {
-    "id": "e629f3cb-9e0f-4545-a0e3-2c0fbbcea95f",
-    "staff_id": "KA1080MU",
-    "first_name": "Karan",
-    "last_name": "Mukherjee",
-    "role": "Admin",
-    "branch_id": "0cbf98b3-4e64-42f6-a528-5904de0a18d0",
-    "created_at": "2025-02-26T22:48:50.627581",
-    "updated_at": "2025-01-11T23:40:50.627581"
-  },
-  {
-    "id": "63e49c2c-8d07-43c4-9512-5cb23e9dad39",
-    "staff_id": "NA1692SI",
-    "first_name": "Navya",
+    "id": "MECL250616SI418",
+    "staff_id": "MECL250616SI418",
+    "first_name": "Meera",
     "last_name": "Singh",
-    "role": "Lab Assistant",
-    "branch_id": "e7a43b0a-e6fc-4a32-a2e9-18c6ccaada24",
-    "created_at": "2025-02-10T13:54:50.627581",
-    "updated_at": "2024-11-23T12:58:50.627581"
+    "role": "cleaning",
+    "branch_id": "MUMB2602",
+    "created_at": "2025-06-16T15:00:17.217346",
+    "updated_at": "2025-06-16T15:00:17.217346"
   },
   {
-    "id": "f4291384-92c3-4621-9229-69809dbc2bd2",
-    "staff_id": "NE3613SA",
-    "first_name": "Neha",
-    "last_name": "Saxena",
-    "role": "Doctor",
-    "branch_id": "fc475d95-6582-4e32-bc76-3586daad0daa",
-    "created_at": "2025-01-14T04:32:50.627581",
-    "updated_at": "2024-11-08T19:07:50.627581"
+    "id": "SAOT250616SH753",
+    "staff_id": "SAOT250616SH753",
+    "first_name": "Sai",
+    "last_name": "Shetty",
+    "role": "other",
+    "branch_id": "JAIP7830",
+    "created_at": "2025-06-16T15:00:17.217346",
+    "updated_at": "2025-06-16T15:00:17.217346"
   },
   {
-    "id": "7e3819c5-2907-487f-a48f-cce3709b8776",
-    "staff_id": "AR5717KA",
-    "first_name": "Aryan",
+    "id": "SAOT250616IY270",
+    "staff_id": "SAOT250616IY270",
+    "first_name": "Sai",
+    "last_name": "Iyer",
+    "role": "other",
+    "branch_id": "DELH5069",
+    "created_at": "2025-06-16T15:00:17.217346",
+    "updated_at": "2025-06-16T15:00:17.217346"
+  },
+  {
+    "id": "MEDO250616MI294",
+    "staff_id": "MEDO250616MI294",
+    "first_name": "Meera",
+    "last_name": "Mishra",
+    "role": "doctor",
+    "branch_id": "MUMB2602",
+    "created_at": "2025-06-16T15:00:17.217346",
+    "updated_at": "2025-06-16T15:00:17.217346"
+  },
+  {
+    "id": "KADO250616GH230",
+    "staff_id": "KADO250616GH230",
+    "first_name": "Kavya",
+    "last_name": "Ghosh",
+    "role": "doctor",
+    "branch_id": "CHEN2967",
+    "created_at": "2025-06-16T15:00:17.217346",
+    "updated_at": "2025-06-16T15:00:17.217346"
+  },
+  {
+    "id": "AYOT250616ME308",
+    "staff_id": "AYOT250616ME308",
+    "first_name": "Ayaan",
+    "last_name": "Menon",
+    "role": "other",
+    "branch_id": "CHEN2967",
+    "created_at": "2025-06-16T15:00:17.217346",
+    "updated_at": "2025-06-16T15:00:17.217346"
+  },
+  {
+    "id": "IRDO250616KA194",
+    "staff_id": "IRDO250616KA194",
+    "first_name": "Ira",
     "last_name": "Kapoor",
-    "role": "Receptionist",
-    "branch_id": "e1143459-5d19-46d9-a5ce-9d0d1606b19d",
-    "created_at": "2025-01-20T07:24:50.627581",
-    "updated_at": "2024-08-02T07:36:50.627581"
+    "role": "doctor",
+    "branch_id": "HYDE4708",
+    "created_at": "2025-06-16T15:00:17.217346",
+    "updated_at": "2025-06-16T15:00:17.217346"
+  },
+  {
+    "id": "ISSU250616AG839",
+    "staff_id": "ISSU250616AG839",
+    "first_name": "Ishaan",
+    "last_name": "Agarwal",
+    "role": "supervisor",
+    "branch_id": "BANG9690",
+    "created_at": "2025-06-16T15:00:17.217346",
+    "updated_at": "2025-06-16T15:00:17.217346"
+  },
+  {
+    "id": "AYOT250616IY622",
+    "staff_id": "AYOT250616IY622",
+    "first_name": "Ayaan",
+    "last_name": "Iyer",
+    "role": "other",
+    "branch_id": "CHEN2967",
+    "created_at": "2025-06-16T15:00:17.217346",
+    "updated_at": "2025-06-16T15:00:17.217346"
+  },
+  {
+    "id": "SATE250616DA667",
+    "staff_id": "SATE250616DA667",
+    "first_name": "Saanvi",
+    "last_name": "Das",
+    "role": "technician",
+    "branch_id": "HYDE4708",
+    "created_at": "2025-06-16T15:00:17.217346",
+    "updated_at": "2025-06-16T15:00:17.217346"
+  },
+  {
+    "id": "AVTE250616IY469",
+    "staff_id": "AVTE250616IY469",
+    "first_name": "Avni",
+    "last_name": "Iyer",
+    "role": "technician",
+    "branch_id": "MUMB2602",
+    "created_at": "2025-06-16T15:00:17.217346",
+    "updated_at": "2025-06-16T15:00:17.217346"
+  },
+  {
+    "id": "MYTE250616NA458",
+    "staff_id": "MYTE250616NA458",
+    "first_name": "Myra",
+    "last_name": "Nair",
+    "role": "technician",
+    "branch_id": "BANG9690",
+    "created_at": "2025-06-16T15:00:17.217346",
+    "updated_at": "2025-06-16T15:00:17.217346"
+  },
+  {
+    "id": "AAOT250616TH105",
+    "staff_id": "AAOT250616TH105",
+    "first_name": "Aadhya",
+    "last_name": "Thakur",
+    "role": "other",
+    "branch_id": "PUNE4981",
+    "created_at": "2025-06-16T15:00:17.217346",
+    "updated_at": "2025-06-16T15:00:17.217346"
+  },
+  {
+    "id": "RIDO250616RE175",
+    "staff_id": "RIDO250616RE175",
+    "first_name": "Riya",
+    "last_name": "Reddy",
+    "role": "doctor",
+    "branch_id": "PUNE4981",
+    "created_at": "2025-06-16T15:00:17.217346",
+    "updated_at": "2025-06-16T15:00:17.217346"
+  },
+  {
+    "id": "KRTE250616GH279",
+    "staff_id": "KRTE250616GH279",
+    "first_name": "Krishna",
+    "last_name": "Ghosh",
+    "role": "technician",
+    "branch_id": "HYDE4708",
+    "created_at": "2025-06-16T15:00:17.217346",
+    "updated_at": "2025-06-16T15:00:17.217346"
+  },
+  {
+    "id": "RICL250616PA273",
+    "staff_id": "RICL250616PA273",
+    "first_name": "Riya",
+    "last_name": "Patel",
+    "role": "cleaning",
+    "branch_id": "HYDE4708",
+    "created_at": "2025-06-16T15:00:17.217346",
+    "updated_at": "2025-06-16T15:00:17.217346"
+  },
+  {
+    "id": "VIAD250616MI905",
+    "staff_id": "VIAD250616MI905",
+    "first_name": "Vihaan",
+    "last_name": "Mishra",
+    "role": "admin",
+    "branch_id": "MUMB2602",
+    "created_at": "2025-06-16T15:00:17.217346",
+    "updated_at": "2025-06-16T15:00:17.217346"
+  },
+  {
+    "id": "MYCL250616BH244",
+    "staff_id": "MYCL250616BH244",
+    "first_name": "Myra",
+    "last_name": "Bhat",
+    "role": "cleaning",
+    "branch_id": "JAIP5963",
+    "created_at": "2025-06-16T15:00:17.217346",
+    "updated_at": "2025-06-16T15:00:17.217346"
+  },
+  {
+    "id": "KRDO250616KA362",
+    "staff_id": "KRDO250616KA362",
+    "first_name": "Krishna",
+    "last_name": "Kapoor",
+    "role": "doctor",
+    "branch_id": "CHEN2967",
+    "created_at": "2025-06-16T15:00:17.217346",
+    "updated_at": "2025-06-16T15:00:17.217346"
+  },
+  {
+    "id": "ANTE250616PA450",
+    "staff_id": "ANTE250616PA450",
+    "first_name": "Anaya",
+    "last_name": "Patel",
+    "role": "technician",
+    "branch_id": "HYDE0122",
+    "created_at": "2025-06-16T15:00:17.217346",
+    "updated_at": "2025-06-16T15:00:17.217346"
+  },
+  {
+    "id": "TACL250616IY581",
+    "staff_id": "TACL250616IY581",
+    "first_name": "Tara",
+    "last_name": "Iyer",
+    "role": "clerical",
+    "branch_id": "HYDE0122",
+    "created_at": "2025-06-16T15:00:17.217346",
+    "updated_at": "2025-06-16T15:00:17.217346"
+  },
+  {
+    "id": "VIOT250616BH591",
+    "staff_id": "VIOT250616BH591",
+    "first_name": "Vihaan",
+    "last_name": "Bhat",
+    "role": "other",
+    "branch_id": "DELH5069",
+    "created_at": "2025-06-16T15:00:17.217346",
+    "updated_at": "2025-06-16T15:00:17.217346"
+  },
+  {
+    "id": "MYAD250616AG507",
+    "staff_id": "MYAD250616AG507",
+    "first_name": "Myra",
+    "last_name": "Agarwal",
+    "role": "admin",
+    "branch_id": "HYDE0122",
+    "created_at": "2025-06-16T15:00:17.217346",
+    "updated_at": "2025-06-16T15:00:17.217346"
   }
 ]
