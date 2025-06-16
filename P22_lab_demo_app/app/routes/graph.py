@@ -2,7 +2,7 @@ from fastapi import APIRouter, HTTPException
 from app.logger import logger
 from app.gpc_service import get_all_vertices, count_vertices_by_label, get_vertex_schema_by_label
 
-router = APIRouter(prefix="/graph", tags=["Graph"])
+router = APIRouter(prefix="/labx", tags=["Graph"])
 
 @router.get("/vertices")
 async def fetch_vertices():

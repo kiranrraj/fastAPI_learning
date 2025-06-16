@@ -2,7 +2,7 @@ from fastapi import APIRouter, status
 from fastapi.responses import JSONResponse
 from app.gremlin_client import ping_gremlin
 
-router = APIRouter()
+router = APIRouter(prefix="/labx")
 
 @router.get("/health", summary="Check Gremlin connection")
 async def health_check():
