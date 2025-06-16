@@ -1,339 +1,17 @@
 [
   {
-    "id": "ANBAPI2506161517911",
-    "result_id": "ANBAPI2506161517911",
-    "order_id": "ANBAPI2506161517",
-    "staff_id": "PISU250616RA330",
-    "branch_id": "BANG9690",
-    "user_id": "AN2506161500KA",
-    "recorded_at": "2025-06-16T15:00:17.217346",
-    "updated_at": "2025-06-16T15:00:17.217346",
+    "id": "KRMURE2506162202430",
+    "result_id": "KRMURE2506162202430",
+    "order_id": "KRMURE2506162202",
+    "staff_id": "RESU250616BA024",
+    "branch_id": "MUMB4102",
+    "user_id": "KR2506162249PA",
+    "recorded_at": "2025-06-16T22:49:02.702580",
+    "updated_at": "2025-06-16T22:49:02.702580",
     "report": [
       {
-        "inv_id": "TOTA177259LIVE",
-        "value": 0.23,
-        "range": [
-          0.3,
-          1.2
-        ],
-        "observation": "abnormal",
-        "status": "+ve"
-      },
-      {
-        "inv_id": "C-PE854137DIAB",
-        "value": 2.44,
-        "range": [
-          0.78,
-          1.89
-        ],
-        "observation": "abnormal",
-        "status": "+ve"
-      }
-    ]
-  },
-  {
-    "id": "KAMUSA2506161517401",
-    "result_id": "KAMUSA2506161517401",
-    "order_id": "KAMUSA2506161517",
-    "staff_id": "SAOT250616IY270",
-    "branch_id": "MUMB7911",
-    "user_id": "KA2506161500PA",
-    "recorded_at": "2025-06-16T15:00:17.217346",
-    "updated_at": "2025-06-16T15:00:17.217346",
-    "report": [
-      {
-        "inv_id": "HEMO133600HEMA",
-        "value": 18.18,
-        "range": [
-          13.5,
-          17.5
-        ],
-        "observation": "abnormal",
-        "status": "+ve"
-      }
-    ]
-  },
-  {
-    "id": "ISMUPI2506161517947",
-    "result_id": "ISMUPI2506161517947",
-    "order_id": "ISMUPI2506161517",
-    "staff_id": "PISU250616RA330",
-    "branch_id": "MUMB7911",
-    "user_id": "IS2506161500BA",
-    "recorded_at": "2025-06-16T15:00:17.217346",
-    "updated_at": "2025-06-16T15:00:17.217346",
-    "report": [
-      {
-        "inv_id": "VLDL044726LIPI",
-        "value": 9.29,
-        "range": [
-          5,
-          40
-        ],
-        "observation": "normal",
-        "status": "-ve"
-      }
-    ]
-  },
-  {
-    "id": "MEJAVI2506161517395",
-    "result_id": "MEJAVI2506161517395",
-    "order_id": "MEJAVI2506161517",
-    "staff_id": "VIOT250616BH591",
-    "branch_id": "JAIP5963",
-    "user_id": "ME2506161500BA",
-    "recorded_at": "2025-06-16T15:00:17.217346",
-    "updated_at": "2025-06-16T15:00:17.217346",
-    "report": [
-      {
-        "inv_id": "TROP578035CARD",
-        "value": 0.05,
-        "range": [
-          0,
-          0.04
-        ],
-        "observation": "abnormal",
-        "status": "+ve"
-      },
-      {
-        "inv_id": "LDH479802CARD",
-        "value": 98.78,
-        "range": [
-          140,
-          280
-        ],
-        "observation": "abnormal",
-        "status": "+ve"
-      },
-      {
-        "inv_id": "CHLO585128RENA",
-        "value": 125.08,
-        "range": [
-          96,
-          106
-        ],
-        "observation": "abnormal",
-        "status": "+ve"
-      }
-    ]
-  },
-  {
-    "id": "AYMUAA2506161517141",
-    "result_id": "AYMUAA2506161517141",
-    "order_id": "AYMUAA2506161517",
-    "staff_id": "AAOT250616TH105",
-    "branch_id": "MUMB2602",
-    "user_id": "AY2506161500TH",
-    "recorded_at": "2025-06-16T15:00:17.217346",
-    "updated_at": "2025-06-16T15:00:17.217346",
-    "report": [
-      {
-        "inv_id": "FSH467356HORM",
-        "value": 5.07,
-        "range": [
-          1.5,
-          12.4
-        ],
-        "observation": "normal",
-        "status": "-ve"
-      },
-      {
-        "inv_id": "HBA1866497DIAB",
-        "value": 3.86,
-        "range": [
-          4.0,
-          5.6
-        ],
-        "observation": "abnormal",
-        "status": "+ve"
-      },
-      {
-        "inv_id": "BICA679650RENA",
-        "value": 22.25,
-        "range": [
-          22,
-          29
-        ],
-        "observation": "normal",
-        "status": "-ve"
-      }
-    ]
-  },
-  {
-    "id": "VIHYAY2506161517038",
-    "result_id": "VIHYAY2506161517038",
-    "order_id": "VIHYAY2506161517",
-    "staff_id": "AYOT250616IY622",
-    "branch_id": "HYDE0122",
-    "user_id": "VI2506161500BA",
-    "recorded_at": "2025-06-16T15:00:17.217346",
-    "updated_at": "2025-06-16T15:00:17.217346",
-    "report": [
-      {
-        "inv_id": "HIV 234496INFE",
-        "value": 1.14,
-        "range": [
-          0,
-          1
-        ],
-        "observation": "abnormal",
-        "status": "+ve"
-      },
-      {
-        "inv_id": "HBA1866497DIAB",
-        "value": 3.08,
-        "range": [
-          4.0,
-          5.6
-        ],
-        "observation": "abnormal",
-        "status": "+ve"
-      }
-    ]
-  },
-  {
-    "id": "SABAVI2506161517486",
-    "result_id": "SABAVI2506161517486",
-    "order_id": "SABAVI2506161517",
-    "staff_id": "VIAD250616MI905",
-    "branch_id": "BANG9690",
-    "user_id": "SA2506161500KA",
-    "recorded_at": "2025-06-16T15:00:17.217346",
-    "updated_at": "2025-06-16T15:00:17.217346",
-    "report": [
-      {
-        "inv_id": "CALC409446RENA",
-        "value": 12.34,
-        "range": [
-          8.5,
-          10.5
-        ],
-        "observation": "abnormal",
-        "status": "+ve"
-      },
-      {
-        "inv_id": "C-PE854137DIAB",
-        "value": 2.37,
-        "range": [
-          0.78,
-          1.89
-        ],
-        "observation": "abnormal",
-        "status": "+ve"
-      }
-    ]
-  },
-  {
-    "id": "ISMUVI2506161517173",
-    "result_id": "ISMUVI2506161517173",
-    "order_id": "ISMUVI2506161517",
-    "staff_id": "VIAD250616MI905",
-    "branch_id": "MUMB7911",
-    "user_id": "IS2506161500SH",
-    "recorded_at": "2025-06-16T15:00:17.217346",
-    "updated_at": "2025-06-16T15:00:17.217346",
-    "report": [
-      {
-        "inv_id": "TOTA177259LIVE",
-        "value": 0.55,
-        "range": [
-          0.3,
-          1.2
-        ],
-        "observation": "normal",
-        "status": "-ve"
-      },
-      {
-        "inv_id": "HBA1866497DIAB",
-        "value": 4.88,
-        "range": [
-          4.0,
-          5.6
-        ],
-        "observation": "normal",
-        "status": "-ve"
-      }
-    ]
-  },
-  {
-    "id": "SAJASA2506161517995",
-    "result_id": "SAJASA2506161517995",
-    "order_id": "SAJASA2506161517",
-    "staff_id": "SATE250616DA667",
-    "branch_id": "JAIP7830",
-    "user_id": "SA2506161500KA",
-    "recorded_at": "2025-06-16T15:00:17.217346",
-    "updated_at": "2025-06-16T15:00:17.217346",
-    "report": [
-      {
-        "inv_id": "INSU076168DIAB",
-        "value": 26.75,
-        "range": [
-          2.0,
-          25.0
-        ],
-        "observation": "abnormal",
-        "status": "+ve"
-      }
-    ]
-  },
-  {
-    "id": "REJARI2506161517548",
-    "result_id": "REJARI2506161517548",
-    "order_id": "REJARI2506161517",
-    "staff_id": "RIDO250616RE175",
-    "branch_id": "JAIP5963",
-    "user_id": "RE2506161500JO",
-    "recorded_at": "2025-06-16T15:00:17.217346",
-    "updated_at": "2025-06-16T15:00:17.217346",
-    "report": [
-      {
-        "inv_id": "HEMO133600HEMA",
-        "value": 22.63,
-        "range": [
-          13.5,
-          17.5
-        ],
-        "observation": "abnormal",
-        "status": "+ve"
-      }
-    ]
-  },
-  {
-    "id": "PIMUKR2506161517849",
-    "result_id": "PIMUKR2506161517849",
-    "order_id": "PIMUKR2506161517",
-    "staff_id": "KRDO250616KA362",
-    "branch_id": "MUMB2602",
-    "user_id": "PI2506161500ME",
-    "recorded_at": "2025-06-16T15:00:17.217346",
-    "updated_at": "2025-06-16T15:00:17.217346",
-    "report": [
-      {
-        "inv_id": "LH271813HORM",
-        "value": 5.84,
-        "range": [
-          1.7,
-          8.6
-        ],
-        "observation": "normal",
-        "status": "-ve"
-      }
-    ]
-  },
-  {
-    "id": "ARJAMY2506161517074",
-    "result_id": "ARJAMY2506161517074",
-    "order_id": "ARJAMY2506161517",
-    "staff_id": "MYTE250616NA458",
-    "branch_id": "JAIP7830",
-    "user_id": "AR2506161500MI",
-    "recorded_at": "2025-06-16T15:00:17.217346",
-    "updated_at": "2025-06-16T15:00:17.217346",
-    "report": [
-      {
-        "inv_id": "BLOO680456BIOC",
-        "value": 63.37,
+        "inv_id": "BLOO213437BIOC",
+        "value": 52.14,
         "range": [
           10,
           50
@@ -342,320 +20,18 @@
         "status": "+ve"
       },
       {
-        "inv_id": "SERU388492RENA",
-        "value": 4.7,
-        "range": [
-          3.5,
-          7.2
-        ],
-        "observation": "normal",
-        "status": "-ve"
-      },
-      {
-        "inv_id": "SGPT490084LIVE",
-        "value": 65.46,
-        "range": [
-          7,
-          56
-        ],
-        "observation": "abnormal",
-        "status": "+ve"
-      }
-    ]
-  },
-  {
-    "id": "REMUSA2506161517229",
-    "result_id": "REMUSA2506161517229",
-    "order_id": "REMUSA2506161517",
-    "staff_id": "SAOT250616IY270",
-    "branch_id": "MUMB7911",
-    "user_id": "RE2506161500JO",
-    "recorded_at": "2025-06-16T15:00:17.217346",
-    "updated_at": "2025-06-16T15:00:17.217346",
-    "report": [
-      {
-        "inv_id": "SERU337646BIOC",
-        "value": 119.61,
-        "range": [
-          135,
-          145
-        ],
-        "observation": "abnormal",
-        "status": "+ve"
-      }
-    ]
-  },
-  {
-    "id": "REHYIR2506161517535",
-    "result_id": "REHYIR2506161517535",
-    "order_id": "REHYIR2506161517",
-    "staff_id": "IRDO250616KA194",
-    "branch_id": "HYDE4708",
-    "user_id": "RE2506161500RA",
-    "recorded_at": "2025-06-16T15:00:17.217346",
-    "updated_at": "2025-06-16T15:00:17.217346",
-    "report": [
-      {
-        "inv_id": "HEMA652071HEMA",
-        "value": 37.34,
+        "inv_id": "HEMA820698HEMA",
+        "value": 61.25,
         "range": [
           38.8,
           50
         ],
         "observation": "abnormal",
         "status": "+ve"
-      }
-    ]
-  },
-  {
-    "id": "KRPUAN2506161517210",
-    "result_id": "KRPUAN2506161517210",
-    "order_id": "KRPUAN2506161517",
-    "staff_id": "ANTE250616PA450",
-    "branch_id": "PUNE4981",
-    "user_id": "KR2506161500ME",
-    "recorded_at": "2025-06-16T15:00:17.217346",
-    "updated_at": "2025-06-16T15:00:17.217346",
-    "report": [
-      {
-        "inv_id": "SERU388492RENA",
-        "value": 6.96,
-        "range": [
-          3.5,
-          7.2
-        ],
-        "observation": "normal",
-        "status": "-ve"
       },
       {
-        "inv_id": "DENG527247INFE",
-        "value": 0.21,
-        "range": [
-          0,
-          1
-        ],
-        "observation": "normal",
-        "status": "-ve"
-      },
-      {
-        "inv_id": "PROL463148HORM",
-        "value": 11.03,
-        "range": [
-          4.8,
-          23.3
-        ],
-        "observation": "normal",
-        "status": "-ve"
-      }
-    ]
-  },
-  {
-    "id": "REMUSA2506161517642",
-    "result_id": "REMUSA2506161517642",
-    "order_id": "REMUSA2506161517",
-    "staff_id": "SAOT250616IY270",
-    "branch_id": "MUMB7911",
-    "user_id": "RE2506161500JO",
-    "recorded_at": "2025-06-16T15:00:17.217346",
-    "updated_at": "2025-06-16T15:00:17.217346",
-    "report": [
-      {
-        "inv_id": "SERU337646BIOC",
-        "value": 147.03,
-        "range": [
-          135,
-          145
-        ],
-        "observation": "abnormal",
-        "status": "+ve"
-      }
-    ]
-  },
-  {
-    "id": "VICHMY2506161517156",
-    "result_id": "VICHMY2506161517156",
-    "order_id": "VICHMY2506161517",
-    "staff_id": "MYTE250616NA458",
-    "branch_id": "CHEN2967",
-    "user_id": "VI2506161500BA",
-    "recorded_at": "2025-06-16T15:00:17.217346",
-    "updated_at": "2025-06-16T15:00:17.217346",
-    "report": [
-      {
-        "inv_id": "BLOO888223BIOC",
-        "value": 86.39,
-        "range": [
-          70,
-          100
-        ],
-        "observation": "normal",
-        "status": "-ve"
-      }
-    ]
-  },
-  {
-    "id": "KRMUVI2506161517694",
-    "result_id": "KRMUVI2506161517694",
-    "order_id": "KRMUVI2506161517",
-    "staff_id": "VIAD250616MI905",
-    "branch_id": "MUMB7911",
-    "user_id": "KR2506161500CH",
-    "recorded_at": "2025-06-16T15:00:17.217346",
-    "updated_at": "2025-06-16T15:00:17.217346",
-    "report": [
-      {
-        "inv_id": "WIDA004844INFE",
-        "value": 144.59,
-        "range": [
-          0,
-          160
-        ],
-        "observation": "normal",
-        "status": "-ve"
-      }
-    ]
-  },
-  {
-    "id": "ISHYRI2506161517620",
-    "result_id": "ISHYRI2506161517620",
-    "order_id": "ISHYRI2506161517",
-    "staff_id": "RIDO250616RE175",
-    "branch_id": "HYDE0122",
-    "user_id": "IS2506161500BA",
-    "recorded_at": "2025-06-16T15:00:17.217346",
-    "updated_at": "2025-06-16T15:00:17.217346",
-    "report": [
-      {
-        "inv_id": "RBC 695285HEMA",
-        "value": 5.1,
-        "range": [
-          4.7,
-          6.1
-        ],
-        "observation": "normal",
-        "status": "-ve"
-      },
-      {
-        "inv_id": "HIV 234496INFE",
-        "value": 0.15,
-        "range": [
-          0,
-          1
-        ],
-        "observation": "normal",
-        "status": "-ve"
-      }
-    ]
-  },
-  {
-    "id": "ISHYKR2506161517388",
-    "result_id": "ISHYKR2506161517388",
-    "order_id": "ISHYKR2506161517",
-    "staff_id": "KRDO250616KA362",
-    "branch_id": "HYDE4708",
-    "user_id": "IS2506161500JA",
-    "recorded_at": "2025-06-16T15:00:17.217346",
-    "updated_at": "2025-06-16T15:00:17.217346",
-    "report": [
-      {
-        "inv_id": "RBC 695285HEMA",
-        "value": 7.74,
-        "range": [
-          4.7,
-          6.1
-        ],
-        "observation": "abnormal",
-        "status": "+ve"
-      },
-      {
-        "inv_id": "FREE284255THYR",
-        "value": 2.25,
-        "range": [
-          0.8,
-          1.8
-        ],
-        "observation": "abnormal",
-        "status": "+ve"
-      },
-      {
-        "inv_id": "SERU680545BIOC",
-        "value": 2.47,
-        "range": [
-          3.5,
-          5.1
-        ],
-        "observation": "abnormal",
-        "status": "+ve"
-      }
-    ]
-  },
-  {
-    "id": "SIJAMY2506161517806",
-    "result_id": "SIJAMY2506161517806",
-    "order_id": "SIJAMY2506161517",
-    "staff_id": "MYCL250616BH244",
-    "branch_id": "JAIP7830",
-    "user_id": "SI2506161500SH",
-    "recorded_at": "2025-06-16T15:00:17.217346",
-    "updated_at": "2025-06-16T15:00:17.217346",
-    "report": [
-      {
-        "inv_id": "LDL 169758LIPI",
-        "value": 13.96,
-        "range": [
-          0,
-          130
-        ],
-        "observation": "normal",
-        "status": "-ve"
-      },
-      {
-        "inv_id": "TSH657926THYR",
-        "value": 3.36,
-        "range": [
-          0.4,
-          4.0
-        ],
-        "observation": "normal",
-        "status": "-ve"
-      }
-    ]
-  },
-  {
-    "id": "ISBAVI2506161517650",
-    "result_id": "ISBAVI2506161517650",
-    "order_id": "ISBAVI2506161517",
-    "staff_id": "VIAD250616MI905",
-    "branch_id": "BANG9690",
-    "user_id": "IS2506161500VE",
-    "recorded_at": "2025-06-16T15:00:17.217346",
-    "updated_at": "2025-06-16T15:00:17.217346",
-    "report": [
-      {
-        "inv_id": "DIRE481862LIVE",
-        "value": 0.28,
-        "range": [
-          0.0,
-          0.3
-        ],
-        "observation": "normal",
-        "status": "-ve"
-      }
-    ]
-  },
-  {
-    "id": "VICHRI2506161517902",
-    "result_id": "VICHRI2506161517902",
-    "order_id": "VICHRI2506161517",
-    "staff_id": "RICL250616PA273",
-    "branch_id": "CHEN2967",
-    "user_id": "VI2506161500BA",
-    "recorded_at": "2025-06-16T15:00:17.217346",
-    "updated_at": "2025-06-16T15:00:17.217346",
-    "report": [
-      {
-        "inv_id": "FAST335622DIAB",
-        "value": 54.85,
+        "inv_id": "FAST671656DIAB",
+        "value": 125.36,
         "range": [
           70,
           100
@@ -666,309 +42,63 @@
     ]
   },
   {
-    "id": "AVPUSA2506161517524",
-    "result_id": "AVPUSA2506161517524",
-    "order_id": "AVPUSA2506161517",
-    "staff_id": "SAOT250616IY270",
-    "branch_id": "PUNE4981",
-    "user_id": "AV2506161500NA",
-    "recorded_at": "2025-06-16T15:00:17.217346",
-    "updated_at": "2025-06-16T15:00:17.217346",
+    "id": "ANCHSA2506162202790",
+    "result_id": "ANCHSA2506162202790",
+    "order_id": "ANCHSA2506162202",
+    "staff_id": "SACL250616BA737",
+    "branch_id": "CHEN3403",
+    "user_id": "AN2506162249PA",
+    "recorded_at": "2025-06-16T22:49:02.702580",
+    "updated_at": "2025-06-16T22:49:02.702580",
     "report": [
       {
-        "inv_id": "WIDA004844INFE",
-        "value": 177.44,
+        "inv_id": "INSU725316DIAB",
+        "value": 8.79,
         "range": [
-          0,
-          160
-        ],
-        "observation": "abnormal",
-        "status": "+ve"
-      },
-      {
-        "inv_id": "FREE899007THYR",
-        "value": 4.2,
-        "range": [
-          2.3,
-          4.2
+          2.0,
+          25.0
         ],
         "observation": "normal",
         "status": "-ve"
       },
       {
-        "inv_id": "PLAT279748HEMA",
-        "value": 373013.86,
-        "range": [
-          150000,
-          450000
-        ],
-        "observation": "normal",
-        "status": "-ve"
-      }
-    ]
-  },
-  {
-    "id": "KRPUKR2506161517534",
-    "result_id": "KRPUKR2506161517534",
-    "order_id": "KRPUKR2506161517",
-    "staff_id": "KRTE250616GH279",
-    "branch_id": "PUNE4981",
-    "user_id": "KR2506161500CH",
-    "recorded_at": "2025-06-16T15:00:17.217346",
-    "updated_at": "2025-06-16T15:00:17.217346",
-    "report": [
-      {
-        "inv_id": "CALC409446RENA",
-        "value": 11.48,
-        "range": [
-          8.5,
-          10.5
-        ],
-        "observation": "abnormal",
-        "status": "+ve"
-      },
-      {
-        "inv_id": "ALKA749549LIVE",
-        "value": 138.78,
-        "range": [
-          40,
-          129
-        ],
-        "observation": "abnormal",
-        "status": "+ve"
-      }
-    ]
-  },
-  {
-    "id": "ISPUIR2506161517250",
-    "result_id": "ISPUIR2506161517250",
-    "order_id": "ISPUIR2506161517",
-    "staff_id": "IRDO250616KA194",
-    "branch_id": "PUNE4981",
-    "user_id": "IS2506161500JA",
-    "recorded_at": "2025-06-16T15:00:17.217346",
-    "updated_at": "2025-06-16T15:00:17.217346",
-    "report": [
-      {
-        "inv_id": "WBC 880466HEMA",
-        "value": 5820.09,
-        "range": [
-          4500,
-          11000
-        ],
-        "observation": "normal",
-        "status": "-ve"
-      },
-      {
-        "inv_id": "RBC 695285HEMA",
-        "value": 5.99,
-        "range": [
-          4.7,
-          6.1
-        ],
-        "observation": "normal",
-        "status": "-ve"
-      }
-    ]
-  },
-  {
-    "id": "ANBAPI2506161517860",
-    "result_id": "ANBAPI2506161517860",
-    "order_id": "ANBAPI2506161517",
-    "staff_id": "PISU250616RA330",
-    "branch_id": "BANG9690",
-    "user_id": "AN2506161500KA",
-    "recorded_at": "2025-06-16T15:00:17.217346",
-    "updated_at": "2025-06-16T15:00:17.217346",
-    "report": [
-      {
-        "inv_id": "TOTA177259LIVE",
-        "value": 1.06,
-        "range": [
-          0.3,
-          1.2
-        ],
-        "observation": "normal",
-        "status": "-ve"
-      },
-      {
-        "inv_id": "C-PE854137DIAB",
-        "value": 1.16,
-        "range": [
-          0.78,
-          1.89
-        ],
-        "observation": "normal",
-        "status": "-ve"
-      }
-    ]
-  },
-  {
-    "id": "VIJAME2506161517921",
-    "result_id": "VIJAME2506161517921",
-    "order_id": "VIJAME2506161517",
-    "staff_id": "MEDO250616MI294",
-    "branch_id": "JAIP7830",
-    "user_id": "VI2506161500SH",
-    "recorded_at": "2025-06-16T15:00:17.217346",
-    "updated_at": "2025-06-16T15:00:17.217346",
-    "report": [
-      {
-        "inv_id": "DIRE481862LIVE",
-        "value": 0.33,
-        "range": [
-          0.0,
-          0.3
-        ],
-        "observation": "abnormal",
-        "status": "+ve"
-      }
-    ]
-  },
-  {
-    "id": "KRJARI2506161517129",
-    "result_id": "KRJARI2506161517129",
-    "order_id": "KRJARI2506161517",
-    "staff_id": "RICL250616PA273",
-    "branch_id": "JAIP7830",
-    "user_id": "KR2506161500ME",
-    "recorded_at": "2025-06-16T15:00:17.217346",
-    "updated_at": "2025-06-16T15:00:17.217346",
-    "report": [
-      {
-        "inv_id": "TROP578035CARD",
-        "value": 0.04,
-        "range": [
-          0,
-          0.04
-        ],
-        "observation": "normal",
-        "status": "-ve"
-      }
-    ]
-  },
-  {
-    "id": "ISPUIR2506161517471",
-    "result_id": "ISPUIR2506161517471",
-    "order_id": "ISPUIR2506161517",
-    "staff_id": "IRDO250616KA194",
-    "branch_id": "PUNE4981",
-    "user_id": "IS2506161500JA",
-    "recorded_at": "2025-06-16T15:00:17.217346",
-    "updated_at": "2025-06-16T15:00:17.217346",
-    "report": [
-      {
-        "inv_id": "WBC 880466HEMA",
-        "value": 9105.08,
-        "range": [
-          4500,
-          11000
-        ],
-        "observation": "normal",
-        "status": "-ve"
-      },
-      {
-        "inv_id": "RBC 695285HEMA",
-        "value": 7.37,
-        "range": [
-          4.7,
-          6.1
-        ],
-        "observation": "abnormal",
-        "status": "+ve"
-      }
-    ]
-  },
-  {
-    "id": "ADHYAV2506161517079",
-    "result_id": "ADHYAV2506161517079",
-    "order_id": "ADHYAV2506161517",
-    "staff_id": "AVTE250616IY469",
-    "branch_id": "HYDE0122",
-    "user_id": "AD2506161500JO",
-    "recorded_at": "2025-06-16T15:00:17.217346",
-    "updated_at": "2025-06-16T15:00:17.217346",
-    "report": [
-      {
-        "inv_id": "FREE899007THYR",
-        "value": 5.17,
-        "range": [
-          2.3,
-          4.2
-        ],
-        "observation": "abnormal",
-        "status": "+ve"
-      },
-      {
-        "inv_id": "PLAT279748HEMA",
-        "value": 351249.87,
-        "range": [
-          150000,
-          450000
-        ],
-        "observation": "normal",
-        "status": "-ve"
-      }
-    ]
-  },
-  {
-    "id": "ANJAAY2506161517133",
-    "result_id": "ANJAAY2506161517133",
-    "order_id": "ANJAAY2506161517",
-    "staff_id": "AYOT250616IY622",
-    "branch_id": "JAIP7830",
-    "user_id": "AN2506161500GU",
-    "recorded_at": "2025-06-16T15:00:17.217346",
-    "updated_at": "2025-06-16T15:00:17.217346",
-    "report": [
-      {
-        "inv_id": "T4584050THYR",
-        "value": 12.16,
-        "range": [
-          5.0,
-          12.0
-        ],
-        "observation": "abnormal",
-        "status": "+ve"
-      }
-    ]
-  },
-  {
-    "id": "ISJASA2506161517561",
-    "result_id": "ISJASA2506161517561",
-    "order_id": "ISJASA2506161517",
-    "staff_id": "SAOT250616IY270",
-    "branch_id": "JAIP7830",
-    "user_id": "IS2506161500JA",
-    "recorded_at": "2025-06-16T15:00:17.217346",
-    "updated_at": "2025-06-16T15:00:17.217346",
-    "report": [
-      {
-        "inv_id": "C-PE854137DIAB",
-        "value": 1.01,
-        "range": [
-          0.78,
-          1.89
-        ],
-        "observation": "normal",
-        "status": "-ve"
-      },
-      {
-        "inv_id": "HEPA279915INFE",
-        "value": 0.03,
+        "inv_id": "HEPA071248INFE",
+        "value": 0.01,
         "range": [
           0,
           0.05
         ],
         "observation": "normal",
         "status": "-ve"
+      }
+    ]
+  },
+  {
+    "id": "ANCHSA2506162202195",
+    "result_id": "ANCHSA2506162202195",
+    "order_id": "ANCHSA2506162202",
+    "staff_id": "SACL250616BA737",
+    "branch_id": "CHEN3403",
+    "user_id": "AN2506162249PA",
+    "recorded_at": "2025-06-16T22:49:02.702580",
+    "updated_at": "2025-06-16T22:49:02.702580",
+    "report": [
+      {
+        "inv_id": "INSU725316DIAB",
+        "value": 15.31,
+        "range": [
+          2.0,
+          25.0
+        ],
+        "observation": "normal",
+        "status": "-ve"
       },
       {
-        "inv_id": "SERU388492RENA",
-        "value": 6.13,
+        "inv_id": "HEPA071248INFE",
+        "value": 0.05,
         "range": [
-          3.5,
-          7.2
+          0,
+          0.05
         ],
         "observation": "normal",
         "status": "-ve"
@@ -976,1175 +106,95 @@
     ]
   },
   {
-    "id": "KRJAME2506161517569",
-    "result_id": "KRJAME2506161517569",
-    "order_id": "KRJAME2506161517",
-    "staff_id": "MEDO250616MI294",
-    "branch_id": "JAIP5963",
-    "user_id": "KR2506161500CH",
-    "recorded_at": "2025-06-16T15:00:17.217346",
-    "updated_at": "2025-06-16T15:00:17.217346",
+    "id": "AAHYAN2506162202118",
+    "result_id": "AAHYAN2506162202118",
+    "order_id": "AAHYAN2506162202",
+    "staff_id": "ANCL250616DA335",
+    "branch_id": "HYDE6128",
+    "user_id": "AA2506162249RA",
+    "recorded_at": "2025-06-16T22:49:02.702580",
+    "updated_at": "2025-06-16T22:49:02.702580",
     "report": [
       {
-        "inv_id": "TRIG835644LIPI",
-        "value": 116.26,
+        "inv_id": "TRIG559811LIPI",
+        "value": 187.97,
         "range": [
           0,
           150
         ],
-        "observation": "normal",
-        "status": "-ve"
-      },
-      {
-        "inv_id": "DIRE481862LIVE",
-        "value": 0.17,
-        "range": [
-          0.0,
-          0.3
-        ],
-        "observation": "normal",
-        "status": "-ve"
-      }
-    ]
-  },
-  {
-    "id": "VIMUAY2506161517264",
-    "result_id": "VIMUAY2506161517264",
-    "order_id": "VIMUAY2506161517",
-    "staff_id": "AYOT250616ME308",
-    "branch_id": "MUMB7911",
-    "user_id": "VI2506161500JA",
-    "recorded_at": "2025-06-16T15:00:17.217346",
-    "updated_at": "2025-06-16T15:00:17.217346",
-    "report": [
-      {
-        "inv_id": "HIV 234496INFE",
-        "value": 0.77,
-        "range": [
-          0,
-          1
-        ],
-        "observation": "normal",
-        "status": "-ve"
-      },
-      {
-        "inv_id": "TEST152169HORM",
-        "value": 396.06,
-        "range": [
-          300,
-          1000
-        ],
-        "observation": "normal",
-        "status": "-ve"
-      }
-    ]
-  },
-  {
-    "id": "REMUSA2506161517524",
-    "result_id": "REMUSA2506161517524",
-    "order_id": "REMUSA2506161517",
-    "staff_id": "SAOT250616IY270",
-    "branch_id": "MUMB7911",
-    "user_id": "RE2506161500JO",
-    "recorded_at": "2025-06-16T15:00:17.217346",
-    "updated_at": "2025-06-16T15:00:17.217346",
-    "report": [
-      {
-        "inv_id": "SERU337646BIOC",
-        "value": 145.54,
-        "range": [
-          135,
-          145
-        ],
-        "observation": "abnormal",
-        "status": "+ve"
-      }
-    ]
-  },
-  {
-    "id": "KAMUSA2506161517152",
-    "result_id": "KAMUSA2506161517152",
-    "order_id": "KAMUSA2506161517",
-    "staff_id": "SAOT250616IY270",
-    "branch_id": "MUMB7911",
-    "user_id": "KA2506161500PA",
-    "recorded_at": "2025-06-16T15:00:17.217346",
-    "updated_at": "2025-06-16T15:00:17.217346",
-    "report": [
-      {
-        "inv_id": "HEMO133600HEMA",
-        "value": 20.47,
-        "range": [
-          13.5,
-          17.5
-        ],
-        "observation": "abnormal",
-        "status": "+ve"
-      }
-    ]
-  },
-  {
-    "id": "AVHYVI2506161517991",
-    "result_id": "AVHYVI2506161517991",
-    "order_id": "AVHYVI2506161517",
-    "staff_id": "VIOT250616BH591",
-    "branch_id": "HYDE4708",
-    "user_id": "AV2506161500NA",
-    "recorded_at": "2025-06-16T15:00:17.217346",
-    "updated_at": "2025-06-16T15:00:17.217346",
-    "report": [
-      {
-        "inv_id": "HEMA652071HEMA",
-        "value": 28.79,
-        "range": [
-          38.8,
-          50
-        ],
-        "observation": "abnormal",
-        "status": "+ve"
-      }
-    ]
-  },
-  {
-    "id": "KAJAAV2506161517522",
-    "result_id": "KAJAAV2506161517522",
-    "order_id": "KAJAAV2506161517",
-    "staff_id": "AVTE250616IY469",
-    "branch_id": "JAIP7830",
-    "user_id": "KA2506161500PA",
-    "recorded_at": "2025-06-16T15:00:17.217346",
-    "updated_at": "2025-06-16T15:00:17.217346",
-    "report": [
-      {
-        "inv_id": "VLDL044726LIPI",
-        "value": 16.63,
-        "range": [
-          5,
-          40
-        ],
-        "observation": "normal",
-        "status": "-ve"
-      }
-    ]
-  },
-  {
-    "id": "NIPUIR2506161517142",
-    "result_id": "NIPUIR2506161517142",
-    "order_id": "NIPUIR2506161517",
-    "staff_id": "IRDO250616KA194",
-    "branch_id": "PUNE4981",
-    "user_id": "NI2506161500JO",
-    "recorded_at": "2025-06-16T15:00:17.217346",
-    "updated_at": "2025-06-16T15:00:17.217346",
-    "report": [
-      {
-        "inv_id": "WIDA004844INFE",
-        "value": 131.89,
-        "range": [
-          0,
-          160
-        ],
-        "observation": "normal",
-        "status": "-ve"
-      }
-    ]
-  },
-  {
-    "id": "TAJASA2506161517901",
-    "result_id": "TAJASA2506161517901",
-    "order_id": "TAJASA2506161517",
-    "staff_id": "SATE250616DA667",
-    "branch_id": "JAIP7830",
-    "user_id": "TA2506161500GH",
-    "recorded_at": "2025-06-16T15:00:17.217346",
-    "updated_at": "2025-06-16T15:00:17.217346",
-    "report": [
-      {
-        "inv_id": "INSU076168DIAB",
-        "value": 21.8,
-        "range": [
-          2.0,
-          25.0
-        ],
-        "observation": "normal",
-        "status": "-ve"
-      },
-      {
-        "inv_id": "TEST152169HORM",
-        "value": 1045.44,
-        "range": [
-          300,
-          1000
-        ],
         "observation": "abnormal",
         "status": "+ve"
       },
       {
-        "inv_id": "SERU337646BIOC",
-        "value": 157.81,
-        "range": [
-          135,
-          145
-        ],
-        "observation": "abnormal",
-        "status": "+ve"
-      }
-    ]
-  },
-  {
-    "id": "KRJARI2506161517716",
-    "result_id": "KRJARI2506161517716",
-    "order_id": "KRJARI2506161517",
-    "staff_id": "RICL250616PA273",
-    "branch_id": "JAIP7830",
-    "user_id": "KR2506161500ME",
-    "recorded_at": "2025-06-16T15:00:17.217346",
-    "updated_at": "2025-06-16T15:00:17.217346",
-    "report": [
-      {
-        "inv_id": "TROP578035CARD",
-        "value": 0.04,
-        "range": [
-          0,
-          0.04
-        ],
-        "observation": "normal",
-        "status": "-ve"
-      }
-    ]
-  },
-  {
-    "id": "VIMUSA2506161517966",
-    "result_id": "VIMUSA2506161517966",
-    "order_id": "VIMUSA2506161517",
-    "staff_id": "SAOT250616IY270",
-    "branch_id": "MUMB2602",
-    "user_id": "VI2506161500JA",
-    "recorded_at": "2025-06-16T15:00:17.217346",
-    "updated_at": "2025-06-16T15:00:17.217346",
-    "report": [
-      {
-        "inv_id": "ALBU333088LIVE",
-        "value": 4.73,
-        "range": [
-          3.4,
-          5.4
-        ],
-        "observation": "normal",
-        "status": "-ve"
-      },
-      {
-        "inv_id": "LH271813HORM",
-        "value": 11.1,
-        "range": [
-          1.7,
-          8.6
-        ],
-        "observation": "abnormal",
-        "status": "+ve"
-      }
-    ]
-  },
-  {
-    "id": "ANBAVI2506161517948",
-    "result_id": "ANBAVI2506161517948",
-    "order_id": "ANBAVI2506161517",
-    "staff_id": "VIOT250616BH591",
-    "branch_id": "BANG9690",
-    "user_id": "AN2506161500ME",
-    "recorded_at": "2025-06-16T15:00:17.217346",
-    "updated_at": "2025-06-16T15:00:17.217346",
-    "report": [
-      {
-        "inv_id": "WIDA004844INFE",
-        "value": 170.86,
-        "range": [
-          0,
-          160
-        ],
-        "observation": "abnormal",
-        "status": "+ve"
-      },
-      {
-        "inv_id": "LDH479802CARD",
-        "value": 351.56,
-        "range": [
-          140,
-          280
-        ],
-        "observation": "abnormal",
-        "status": "+ve"
-      }
-    ]
-  },
-  {
-    "id": "ARJAMY2506161517159",
-    "result_id": "ARJAMY2506161517159",
-    "order_id": "ARJAMY2506161517",
-    "staff_id": "MYTE250616NA458",
-    "branch_id": "JAIP7830",
-    "user_id": "AR2506161500MI",
-    "recorded_at": "2025-06-16T15:00:17.217346",
-    "updated_at": "2025-06-16T15:00:17.217346",
-    "report": [
-      {
-        "inv_id": "BLOO680456BIOC",
-        "value": 40.57,
-        "range": [
-          10,
-          50
-        ],
-        "observation": "normal",
-        "status": "-ve"
-      },
-      {
-        "inv_id": "SERU388492RENA",
-        "value": 5.8,
-        "range": [
-          3.5,
-          7.2
-        ],
-        "observation": "normal",
-        "status": "-ve"
-      },
-      {
-        "inv_id": "SGPT490084LIVE",
-        "value": 72.34,
-        "range": [
-          7,
-          56
-        ],
-        "observation": "abnormal",
-        "status": "+ve"
-      }
-    ]
-  },
-  {
-    "id": "AAPUME2506161517399",
-    "result_id": "AAPUME2506161517399",
-    "order_id": "AAPUME2506161517",
-    "staff_id": "MEDO250616MI294",
-    "branch_id": "PUNE4981",
-    "user_id": "AA2506161500BH",
-    "recorded_at": "2025-06-16T15:00:17.217346",
-    "updated_at": "2025-06-16T15:00:17.217346",
-    "report": [
-      {
-        "inv_id": "BICA679650RENA",
-        "value": 17.52,
-        "range": [
-          22,
-          29
-        ],
-        "observation": "abnormal",
-        "status": "+ve"
-      },
-      {
-        "inv_id": "PROL463148HORM",
-        "value": 8.28,
-        "range": [
-          4.8,
-          23.3
-        ],
-        "observation": "normal",
-        "status": "-ve"
-      }
-    ]
-  },
-  {
-    "id": "KRJASA2506161517176",
-    "result_id": "KRJASA2506161517176",
-    "order_id": "KRJASA2506161517",
-    "staff_id": "SAOT250616IY270",
-    "branch_id": "JAIP5963",
-    "user_id": "KR2506161500NA",
-    "recorded_at": "2025-06-16T15:00:17.217346",
-    "updated_at": "2025-06-16T15:00:17.217346",
-    "report": [
-      {
-        "inv_id": "SERU388492RENA",
-        "value": 4.17,
-        "range": [
-          3.5,
-          7.2
-        ],
-        "observation": "normal",
-        "status": "-ve"
-      },
-      {
-        "inv_id": "HBA1866497DIAB",
-        "value": 4.03,
-        "range": [
-          4.0,
-          5.6
-        ],
-        "observation": "normal",
-        "status": "-ve"
-      },
-      {
-        "inv_id": "PLAT279748HEMA",
-        "value": 353312.52,
-        "range": [
-          150000,
-          450000
-        ],
-        "observation": "normal",
-        "status": "-ve"
-      }
-    ]
-  },
-  {
-    "id": "KRJASA2506161517635",
-    "result_id": "KRJASA2506161517635",
-    "order_id": "KRJASA2506161517",
-    "staff_id": "SAOT250616IY270",
-    "branch_id": "JAIP5963",
-    "user_id": "KR2506161500NA",
-    "recorded_at": "2025-06-16T15:00:17.217346",
-    "updated_at": "2025-06-16T15:00:17.217346",
-    "report": [
-      {
-        "inv_id": "SERU388492RENA",
-        "value": 8.46,
-        "range": [
-          3.5,
-          7.2
-        ],
-        "observation": "abnormal",
-        "status": "+ve"
-      },
-      {
-        "inv_id": "HBA1866497DIAB",
-        "value": 6.92,
-        "range": [
-          4.0,
-          5.6
-        ],
-        "observation": "abnormal",
-        "status": "+ve"
-      },
-      {
-        "inv_id": "PLAT279748HEMA",
-        "value": 177656.59,
-        "range": [
-          150000,
-          450000
-        ],
-        "observation": "normal",
-        "status": "-ve"
-      }
-    ]
-  },
-  {
-    "id": "ISPUVI2506161517815",
-    "result_id": "ISPUVI2506161517815",
-    "order_id": "ISPUVI2506161517",
-    "staff_id": "VIOT250616BH591",
-    "branch_id": "PUNE4981",
-    "user_id": "IS2506161500JA",
-    "recorded_at": "2025-06-16T15:00:17.217346",
-    "updated_at": "2025-06-16T15:00:17.217346",
-    "report": [
-      {
-        "inv_id": "BLOO680456BIOC",
-        "value": 60.6,
-        "range": [
-          10,
-          50
-        ],
-        "observation": "abnormal",
-        "status": "+ve"
-      },
-      {
-        "inv_id": "WBC 880466HEMA",
-        "value": 13791.13,
-        "range": [
-          4500,
-          11000
-        ],
-        "observation": "abnormal",
-        "status": "+ve"
-      }
-    ]
-  },
-  {
-    "id": "ANCHAY2506161517367",
-    "result_id": "ANCHAY2506161517367",
-    "order_id": "ANCHAY2506161517",
-    "staff_id": "AYOT250616IY622",
-    "branch_id": "CHEN2967",
-    "user_id": "AN2506161500KA",
-    "recorded_at": "2025-06-16T15:00:17.217346",
-    "updated_at": "2025-06-16T15:00:17.217346",
-    "report": [
-      {
-        "inv_id": "ALKA749549LIVE",
-        "value": 84.97,
-        "range": [
-          40,
-          129
-        ],
-        "observation": "normal",
-        "status": "-ve"
-      }
-    ]
-  },
-  {
-    "id": "VICHMY2506161517289",
-    "result_id": "VICHMY2506161517289",
-    "order_id": "VICHMY2506161517",
-    "staff_id": "MYTE250616NA458",
-    "branch_id": "CHEN2967",
-    "user_id": "VI2506161500BA",
-    "recorded_at": "2025-06-16T15:00:17.217346",
-    "updated_at": "2025-06-16T15:00:17.217346",
-    "report": [
-      {
-        "inv_id": "BLOO888223BIOC",
-        "value": 100.25,
-        "range": [
-          70,
-          100
-        ],
-        "observation": "abnormal",
-        "status": "+ve"
-      }
-    ]
-  },
-  {
-    "id": "PIMUKR2506161517263",
-    "result_id": "PIMUKR2506161517263",
-    "order_id": "PIMUKR2506161517",
-    "staff_id": "KRDO250616KA362",
-    "branch_id": "MUMB2602",
-    "user_id": "PI2506161500ME",
-    "recorded_at": "2025-06-16T15:00:17.217346",
-    "updated_at": "2025-06-16T15:00:17.217346",
-    "report": [
-      {
-        "inv_id": "LH271813HORM",
-        "value": 7.26,
-        "range": [
-          1.7,
-          8.6
-        ],
-        "observation": "normal",
-        "status": "-ve"
-      }
-    ]
-  },
-  {
-    "id": "AVMUSA2506161517198",
-    "result_id": "AVMUSA2506161517198",
-    "order_id": "AVMUSA2506161517",
-    "staff_id": "SAOT250616IY270",
-    "branch_id": "MUMB2602",
-    "user_id": "AV2506161500NA",
-    "recorded_at": "2025-06-16T15:00:17.217346",
-    "updated_at": "2025-06-16T15:00:17.217346",
-    "report": [
-      {
-        "inv_id": "SERU680545BIOC",
-        "value": 4.03,
-        "range": [
-          3.5,
-          5.1
-        ],
-        "observation": "normal",
-        "status": "-ve"
-      },
-      {
-        "inv_id": "SGPT490084LIVE",
-        "value": 47.89,
-        "range": [
-          7,
-          56
-        ],
-        "observation": "normal",
-        "status": "-ve"
-      },
-      {
-        "inv_id": "HEMA652071HEMA",
-        "value": 43.07,
-        "range": [
-          38.8,
-          50
-        ],
-        "observation": "normal",
-        "status": "-ve"
-      }
-    ]
-  },
-  {
-    "id": "SIJATA2506161517116",
-    "result_id": "SIJATA2506161517116",
-    "order_id": "SIJATA2506161517",
-    "staff_id": "TACL250616IY581",
-    "branch_id": "JAIP7830",
-    "user_id": "SI2506161500RE",
-    "recorded_at": "2025-06-16T15:00:17.217346",
-    "updated_at": "2025-06-16T15:00:17.217346",
-    "report": [
-      {
-        "inv_id": "BLOO484797BIOC",
-        "value": 177.07,
-        "range": [
-          70,
-          140
-        ],
-        "observation": "abnormal",
-        "status": "+ve"
-      },
-      {
-        "inv_id": "BLOO888223BIOC",
-        "value": 87.75,
-        "range": [
-          70,
-          100
-        ],
-        "observation": "normal",
-        "status": "-ve"
-      }
-    ]
-  },
-  {
-    "id": "ISMUIR2506161517789",
-    "result_id": "ISMUIR2506161517789",
-    "order_id": "ISMUIR2506161517",
-    "staff_id": "IRDO250616KA194",
-    "branch_id": "MUMB7911",
-    "user_id": "IS2506161500BA",
-    "recorded_at": "2025-06-16T15:00:17.217346",
-    "updated_at": "2025-06-16T15:00:17.217346",
-    "report": [
-      {
-        "inv_id": "BICA679650RENA",
-        "value": 31.61,
-        "range": [
-          22,
-          29
-        ],
-        "observation": "abnormal",
-        "status": "+ve"
-      }
-    ]
-  },
-  {
-    "id": "ISPUIR2506161517781",
-    "result_id": "ISPUIR2506161517781",
-    "order_id": "ISPUIR2506161517",
-    "staff_id": "IRDO250616KA194",
-    "branch_id": "PUNE4981",
-    "user_id": "IS2506161500JA",
-    "recorded_at": "2025-06-16T15:00:17.217346",
-    "updated_at": "2025-06-16T15:00:17.217346",
-    "report": [
-      {
-        "inv_id": "WBC 880466HEMA",
-        "value": 10013.48,
-        "range": [
-          4500,
-          11000
-        ],
-        "observation": "normal",
-        "status": "-ve"
-      },
-      {
-        "inv_id": "RBC 695285HEMA",
-        "value": 3.35,
-        "range": [
-          4.7,
-          6.1
-        ],
-        "observation": "abnormal",
-        "status": "+ve"
-      }
-    ]
-  },
-  {
-    "id": "AYDEKA2506161517697",
-    "result_id": "AYDEKA2506161517697",
-    "order_id": "AYDEKA2506161517",
-    "staff_id": "KADO250616NA488",
-    "branch_id": "DELH5069",
-    "user_id": "AY2506161500TH",
-    "recorded_at": "2025-06-16T15:00:17.217346",
-    "updated_at": "2025-06-16T15:00:17.217346",
-    "report": [
-      {
-        "inv_id": "PHOS916368RENA",
-        "value": 2.61,
-        "range": [
-          2.5,
-          4.5
-        ],
-        "observation": "normal",
-        "status": "-ve"
-      },
-      {
-        "inv_id": "SERU017895BIOC",
-        "value": 0.56,
-        "range": [
-          0.6,
-          1.3
-        ],
-        "observation": "abnormal",
-        "status": "+ve"
-      }
-    ]
-  },
-  {
-    "id": "PIBASA2506161517722",
-    "result_id": "PIBASA2506161517722",
-    "order_id": "PIBASA2506161517",
-    "staff_id": "SAOT250616IY270",
-    "branch_id": "BANG9690",
-    "user_id": "PI2506161500GU",
-    "recorded_at": "2025-06-16T15:00:17.217346",
-    "updated_at": "2025-06-16T15:00:17.217346",
-    "report": [
-      {
-        "inv_id": "VLDL044726LIPI",
-        "value": 22.63,
-        "range": [
-          5,
-          40
-        ],
-        "observation": "normal",
-        "status": "-ve"
-      },
-      {
-        "inv_id": "BLOO680456BIOC",
-        "value": 43.97,
-        "range": [
-          10,
-          50
-        ],
-        "observation": "normal",
-        "status": "-ve"
-      }
-    ]
-  },
-  {
-    "id": "ANBASA2506161517062",
-    "result_id": "ANBASA2506161517062",
-    "order_id": "ANBASA2506161517",
-    "staff_id": "SAOT250616IY270",
-    "branch_id": "BANG9690",
-    "user_id": "AN2506161500JA",
-    "recorded_at": "2025-06-16T15:00:17.217346",
-    "updated_at": "2025-06-16T15:00:17.217346",
-    "report": [
-      {
-        "inv_id": "LH271813HORM",
-        "value": 5.13,
-        "range": [
-          1.7,
-          8.6
-        ],
-        "observation": "normal",
-        "status": "-ve"
-      }
-    ]
-  },
-  {
-    "id": "PIJAAY2506161517423",
-    "result_id": "PIJAAY2506161517423",
-    "order_id": "PIJAAY2506161517",
-    "staff_id": "AYOT250616IY622",
-    "branch_id": "JAIP5963",
-    "user_id": "PI2506161500GU",
-    "recorded_at": "2025-06-16T15:00:17.217346",
-    "updated_at": "2025-06-16T15:00:17.217346",
-    "report": [
-      {
-        "inv_id": "BNP018857CARD",
-        "value": 89.88,
-        "range": [
-          0,
-          100
-        ],
-        "observation": "normal",
-        "status": "-ve"
-      },
-      {
-        "inv_id": "LDH479802CARD",
-        "value": 268.85,
-        "range": [
-          140,
-          280
-        ],
-        "observation": "normal",
-        "status": "-ve"
-      }
-    ]
-  },
-  {
-    "id": "SIJATA2506161517134",
-    "result_id": "SIJATA2506161517134",
-    "order_id": "SIJATA2506161517",
-    "staff_id": "TACL250616IY581",
-    "branch_id": "JAIP7830",
-    "user_id": "SI2506161500RE",
-    "recorded_at": "2025-06-16T15:00:17.217346",
-    "updated_at": "2025-06-16T15:00:17.217346",
-    "report": [
-      {
-        "inv_id": "BLOO484797BIOC",
-        "value": 78.52,
-        "range": [
-          70,
-          140
-        ],
-        "observation": "normal",
-        "status": "-ve"
-      },
-      {
-        "inv_id": "BLOO888223BIOC",
-        "value": 77.67,
-        "range": [
-          70,
-          100
-        ],
-        "observation": "normal",
-        "status": "-ve"
-      }
-    ]
-  },
-  {
-    "id": "ANBAAY2506161517967",
-    "result_id": "ANBAAY2506161517967",
-    "order_id": "ANBAAY2506161517",
-    "staff_id": "AYOT250616IY622",
-    "branch_id": "BANG9690",
-    "user_id": "AN2506161500CH",
-    "recorded_at": "2025-06-16T15:00:17.217346",
-    "updated_at": "2025-06-16T15:00:17.217346",
-    "report": [
-      {
-        "inv_id": "RBC 695285HEMA",
-        "value": 3.41,
-        "range": [
-          4.7,
-          6.1
-        ],
-        "observation": "abnormal",
-        "status": "+ve"
-      },
-      {
-        "inv_id": "BLOO888223BIOC",
-        "value": 100.31,
-        "range": [
-          70,
-          100
-        ],
-        "observation": "abnormal",
-        "status": "+ve"
-      }
-    ]
-  },
-  {
-    "id": "KAJAKR2506161517459",
-    "result_id": "KAJAKR2506161517459",
-    "order_id": "KAJAKR2506161517",
-    "staff_id": "KRTE250616GH279",
-    "branch_id": "JAIP7830",
-    "user_id": "KA2506161500RA",
-    "recorded_at": "2025-06-16T15:00:17.217346",
-    "updated_at": "2025-06-16T15:00:17.217346",
-    "report": [
-      {
-        "inv_id": "BLOO484797BIOC",
-        "value": 152.83,
-        "range": [
-          70,
-          140
-        ],
-        "observation": "abnormal",
-        "status": "+ve"
-      },
-      {
-        "inv_id": "TOTA177259LIVE",
-        "value": 0.42,
-        "range": [
-          0.3,
-          1.2
-        ],
-        "observation": "normal",
-        "status": "-ve"
-      },
-      {
-        "inv_id": "BICA679650RENA",
-        "value": 19.68,
-        "range": [
-          22,
-          29
-        ],
-        "observation": "abnormal",
-        "status": "+ve"
-      }
-    ]
-  },
-  {
-    "id": "ANBASA2506161517395",
-    "result_id": "ANBASA2506161517395",
-    "order_id": "ANBASA2506161517",
-    "staff_id": "SAOT250616IY270",
-    "branch_id": "BANG9690",
-    "user_id": "AN2506161500JA",
-    "recorded_at": "2025-06-16T15:00:17.217346",
-    "updated_at": "2025-06-16T15:00:17.217346",
-    "report": [
-      {
-        "inv_id": "LH271813HORM",
-        "value": 4.24,
-        "range": [
-          1.7,
-          8.6
-        ],
-        "observation": "normal",
-        "status": "-ve"
-      }
-    ]
-  },
-  {
-    "id": "ANCHAY2506161517671",
-    "result_id": "ANCHAY2506161517671",
-    "order_id": "ANCHAY2506161517",
-    "staff_id": "AYOT250616IY622",
-    "branch_id": "CHEN2967",
-    "user_id": "AN2506161500KA",
-    "recorded_at": "2025-06-16T15:00:17.217346",
-    "updated_at": "2025-06-16T15:00:17.217346",
-    "report": [
-      {
-        "inv_id": "ALKA749549LIVE",
-        "value": 149.98,
-        "range": [
-          40,
-          129
-        ],
-        "observation": "abnormal",
-        "status": "+ve"
-      }
-    ]
-  },
-  {
-    "id": "ANMUIR2506161517991",
-    "result_id": "ANMUIR2506161517991",
-    "order_id": "ANMUIR2506161517",
-    "staff_id": "IRDO250616KA194",
-    "branch_id": "MUMB7911",
-    "user_id": "AN2506161500GU",
-    "recorded_at": "2025-06-16T15:00:17.217346",
-    "updated_at": "2025-06-16T15:00:17.217346",
-    "report": [
-      {
-        "inv_id": "BNP018857CARD",
-        "value": 115.73,
-        "range": [
-          0,
-          100
-        ],
-        "observation": "abnormal",
-        "status": "+ve"
-      },
-      {
-        "inv_id": "HIV 234496INFE",
-        "value": 0.21,
-        "range": [
-          0,
-          1
-        ],
-        "observation": "normal",
-        "status": "-ve"
-      },
-      {
-        "inv_id": "WIDA004844INFE",
-        "value": 165.36,
-        "range": [
-          0,
-          160
-        ],
-        "observation": "abnormal",
-        "status": "+ve"
-      }
-    ]
-  },
-  {
-    "id": "KAPURI2506161517087",
-    "result_id": "KAPURI2506161517087",
-    "order_id": "KAPURI2506161517",
-    "staff_id": "RIDO250616RE175",
-    "branch_id": "PUNE4981",
-    "user_id": "KA2506161500PA",
-    "recorded_at": "2025-06-16T15:00:17.217346",
-    "updated_at": "2025-06-16T15:00:17.217346",
-    "report": [
-      {
-        "inv_id": "TSH657926THYR",
-        "value": 3.74,
-        "range": [
-          0.4,
-          4.0
-        ],
-        "observation": "normal",
-        "status": "-ve"
-      }
-    ]
-  },
-  {
-    "id": "ISJASA2506161517021",
-    "result_id": "ISJASA2506161517021",
-    "order_id": "ISJASA2506161517",
-    "staff_id": "SAOT250616IY270",
-    "branch_id": "JAIP7830",
-    "user_id": "IS2506161500JA",
-    "recorded_at": "2025-06-16T15:00:17.217346",
-    "updated_at": "2025-06-16T15:00:17.217346",
-    "report": [
-      {
-        "inv_id": "C-PE854137DIAB",
-        "value": 1.58,
-        "range": [
-          0.78,
-          1.89
-        ],
-        "observation": "normal",
-        "status": "-ve"
-      },
-      {
-        "inv_id": "HEPA279915INFE",
-        "value": 0.04,
-        "range": [
-          0,
-          0.05
-        ],
-        "observation": "normal",
-        "status": "-ve"
-      },
-      {
-        "inv_id": "SERU388492RENA",
-        "value": 2.48,
-        "range": [
-          3.5,
-          7.2
-        ],
-        "observation": "abnormal",
-        "status": "+ve"
-      }
-    ]
-  },
-  {
-    "id": "ADJAAV2506161517820",
-    "result_id": "ADJAAV2506161517820",
-    "order_id": "ADJAAV2506161517",
-    "staff_id": "AVTE250616IY469",
-    "branch_id": "JAIP7830",
-    "user_id": "AD2506161500SH",
-    "recorded_at": "2025-06-16T15:00:17.217346",
-    "updated_at": "2025-06-16T15:00:17.217346",
-    "report": [
-      {
-        "inv_id": "ALBU333088LIVE",
-        "value": 5.88,
-        "range": [
-          3.4,
-          5.4
-        ],
-        "observation": "abnormal",
-        "status": "+ve"
-      },
-      {
-        "inv_id": "WBC 880466HEMA",
-        "value": 8172.46,
-        "range": [
-          4500,
-          11000
-        ],
-        "observation": "normal",
-        "status": "-ve"
-      },
-      {
-        "inv_id": "TROP578035CARD",
-        "value": 0.01,
-        "range": [
-          0,
-          0.04
-        ],
-        "observation": "normal",
-        "status": "-ve"
-      }
-    ]
-  },
-  {
-    "id": "MEJAVI2506161517784",
-    "result_id": "MEJAVI2506161517784",
-    "order_id": "MEJAVI2506161517",
-    "staff_id": "VIOT250616BH591",
-    "branch_id": "JAIP5963",
-    "user_id": "ME2506161500BA",
-    "recorded_at": "2025-06-16T15:00:17.217346",
-    "updated_at": "2025-06-16T15:00:17.217346",
-    "report": [
-      {
-        "inv_id": "TROP578035CARD",
-        "value": 0.01,
-        "range": [
-          0,
-          0.04
-        ],
-        "observation": "normal",
-        "status": "-ve"
-      },
-      {
-        "inv_id": "LDH479802CARD",
-        "value": 128.09,
-        "range": [
-          140,
-          280
-        ],
-        "observation": "abnormal",
-        "status": "+ve"
-      },
-      {
-        "inv_id": "CHLO585128RENA",
-        "value": 124.4,
+        "inv_id": "CHLO755476RENA",
+        "value": 97.93,
         "range": [
           96,
           106
         ],
-        "observation": "abnormal",
-        "status": "+ve"
+        "observation": "normal",
+        "status": "-ve"
       }
     ]
   },
   {
-    "id": "KRPUKR2506161517879",
-    "result_id": "KRPUKR2506161517879",
-    "order_id": "KRPUKR2506161517",
-    "staff_id": "KRTE250616GH279",
-    "branch_id": "PUNE4981",
-    "user_id": "KR2506161500CH",
-    "recorded_at": "2025-06-16T15:00:17.217346",
-    "updated_at": "2025-06-16T15:00:17.217346",
+    "id": "DIKOAR2506162202503",
+    "result_id": "DIKOAR2506162202503",
+    "order_id": "DIKOAR2506162202",
+    "staff_id": "ARSU250616SI707",
+    "branch_id": "KOLK7793",
+    "user_id": "DI2506162249RE",
+    "recorded_at": "2025-06-16T22:49:02.702580",
+    "updated_at": "2025-06-16T22:49:02.702580",
     "report": [
       {
-        "inv_id": "CALC409446RENA",
-        "value": 11.53,
+        "inv_id": "VLDL261008LIPI",
+        "value": 30.4,
+        "range": [
+          5,
+          40
+        ],
+        "observation": "normal",
+        "status": "-ve"
+      }
+    ]
+  },
+  {
+    "id": "MYLUVI2506162202986",
+    "result_id": "MYLUVI2506162202986",
+    "order_id": "MYLUVI2506162202",
+    "staff_id": "VISU250616RE233",
+    "branch_id": "LUCK1487",
+    "user_id": "MY2506162249SH",
+    "recorded_at": "2025-06-16T22:49:02.702580",
+    "updated_at": "2025-06-16T22:49:02.702580",
+    "report": [
+      {
+        "inv_id": "CALC114914RENA",
+        "value": 10.46,
         "range": [
           8.5,
           10.5
         ],
-        "observation": "abnormal",
-        "status": "+ve"
+        "observation": "normal",
+        "status": "-ve"
       },
       {
-        "inv_id": "ALKA749549LIVE",
-        "value": 85.44,
+        "inv_id": "SERU872948BIOC",
+        "value": 0.9,
         "range": [
-          40,
-          129
+          0.6,
+          1.3
+        ],
+        "observation": "normal",
+        "status": "-ve"
+      },
+      {
+        "inv_id": "HEMO906459HEMA",
+        "value": 13.59,
+        "range": [
+          13.5,
+          17.5
         ],
         "observation": "normal",
         "status": "-ve"
@@ -2152,60 +202,18 @@
     ]
   },
   {
-    "id": "ISHYKR2506161517196",
-    "result_id": "ISHYKR2506161517196",
-    "order_id": "ISHYKR2506161517",
-    "staff_id": "KRDO250616KA362",
-    "branch_id": "HYDE4708",
-    "user_id": "IS2506161500JA",
-    "recorded_at": "2025-06-16T15:00:17.217346",
-    "updated_at": "2025-06-16T15:00:17.217346",
+    "id": "MECHIR2506162202692",
+    "result_id": "MECHIR2506162202692",
+    "order_id": "MECHIR2506162202",
+    "staff_id": "IRDO250616JA260",
+    "branch_id": "CHEN3403",
+    "user_id": "ME2506162249SI",
+    "recorded_at": "2025-06-16T22:49:02.702580",
+    "updated_at": "2025-06-16T22:49:02.702580",
     "report": [
       {
-        "inv_id": "RBC 695285HEMA",
-        "value": 7.56,
-        "range": [
-          4.7,
-          6.1
-        ],
-        "observation": "abnormal",
-        "status": "+ve"
-      },
-      {
-        "inv_id": "FREE284255THYR",
-        "value": 2.1,
-        "range": [
-          0.8,
-          1.8
-        ],
-        "observation": "abnormal",
-        "status": "+ve"
-      },
-      {
-        "inv_id": "SERU680545BIOC",
-        "value": 3.76,
-        "range": [
-          3.5,
-          5.1
-        ],
-        "observation": "normal",
-        "status": "-ve"
-      }
-    ]
-  },
-  {
-    "id": "ARJAME2506161517767",
-    "result_id": "ARJAME2506161517767",
-    "order_id": "ARJAME2506161517",
-    "staff_id": "MECL250616SI418",
-    "branch_id": "JAIP5963",
-    "user_id": "AR2506161500MI",
-    "recorded_at": "2025-06-16T15:00:17.217346",
-    "updated_at": "2025-06-16T15:00:17.217346",
-    "report": [
-      {
-        "inv_id": "HDL 359533LIPI",
-        "value": 55.34,
+        "inv_id": "HDL 078637LIPI",
+        "value": 57.39,
         "range": [
           40,
           60
@@ -2216,41 +224,21 @@
     ]
   },
   {
-    "id": "KRPUAN2506161517033",
-    "result_id": "KRPUAN2506161517033",
-    "order_id": "KRPUAN2506161517",
-    "staff_id": "ANTE250616PA450",
-    "branch_id": "PUNE4981",
-    "user_id": "KR2506161500ME",
-    "recorded_at": "2025-06-16T15:00:17.217346",
-    "updated_at": "2025-06-16T15:00:17.217346",
+    "id": "SABAKA2506162202516",
+    "result_id": "SABAKA2506162202516",
+    "order_id": "SABAKA2506162202",
+    "staff_id": "KAOT250616JA263",
+    "branch_id": "BANG2794",
+    "user_id": "SA2506162249KA",
+    "recorded_at": "2025-06-16T22:49:02.702580",
+    "updated_at": "2025-06-16T22:49:02.702580",
     "report": [
       {
-        "inv_id": "SERU388492RENA",
-        "value": 6.75,
+        "inv_id": "HDL 078637LIPI",
+        "value": 61.93,
         "range": [
-          3.5,
-          7.2
-        ],
-        "observation": "normal",
-        "status": "-ve"
-      },
-      {
-        "inv_id": "DENG527247INFE",
-        "value": 1.25,
-        "range": [
-          0,
-          1
-        ],
-        "observation": "abnormal",
-        "status": "+ve"
-      },
-      {
-        "inv_id": "PROL463148HORM",
-        "value": 3.41,
-        "range": [
-          4.8,
-          23.3
+          40,
+          60
         ],
         "observation": "abnormal",
         "status": "+ve"
@@ -2258,104 +246,124 @@
     ]
   },
   {
-    "id": "ADDERI2506161517105",
-    "result_id": "ADDERI2506161517105",
-    "order_id": "ADDERI2506161517",
-    "staff_id": "RICL250616PA273",
-    "branch_id": "DELH5069",
-    "user_id": "AD2506161500SH",
-    "recorded_at": "2025-06-16T15:00:17.217346",
-    "updated_at": "2025-06-16T15:00:17.217346",
+    "id": "KAPUAN2506162202886",
+    "result_id": "KAPUAN2506162202886",
+    "order_id": "KAPUAN2506162202",
+    "staff_id": "ANAD250616ME641",
+    "branch_id": "PUNE6559",
+    "user_id": "KA2506162249GH",
+    "recorded_at": "2025-06-16T22:49:02.702580",
+    "updated_at": "2025-06-16T22:49:02.702580",
     "report": [
       {
-        "inv_id": "HIV 234496INFE",
-        "value": 0.33,
+        "inv_id": "TOTA294279LIVE",
+        "value": 0.8,
         "range": [
-          0,
-          1
+          0.3,
+          1.2
         ],
         "observation": "normal",
         "status": "-ve"
-      }
-    ]
-  },
-  {
-    "id": "AYMUVI2506161517736",
-    "result_id": "AYMUVI2506161517736",
-    "order_id": "AYMUVI2506161517",
-    "staff_id": "VIOT250616BH591",
-    "branch_id": "MUMB7911",
-    "user_id": "AY2506161500SI",
-    "recorded_at": "2025-06-16T15:00:17.217346",
-    "updated_at": "2025-06-16T15:00:17.217346",
-    "report": [
+      },
       {
-        "inv_id": "SGOT035369LIVE",
-        "value": 16.89,
+        "inv_id": "SGOT060392LIVE",
+        "value": 48.37,
         "range": [
           5,
           40
         ],
-        "observation": "normal",
-        "status": "-ve"
-      },
+        "observation": "abnormal",
+        "status": "+ve"
+      }
+    ]
+  },
+  {
+    "id": "AABAAN2506162202483",
+    "result_id": "AABAAN2506162202483",
+    "order_id": "AABAAN2506162202",
+    "staff_id": "ANCL250616DA335",
+    "branch_id": "BANG2794",
+    "user_id": "AA2506162249SI",
+    "recorded_at": "2025-06-16T22:49:02.702580",
+    "updated_at": "2025-06-16T22:49:02.702580",
+    "report": [
       {
-        "inv_id": "ALKA749549LIVE",
-        "value": 33.32,
+        "inv_id": "ALKA592130LIVE",
+        "value": 76.6,
         "range": [
           40,
           129
         ],
-        "observation": "abnormal",
-        "status": "+ve"
-      }
-    ]
-  },
-  {
-    "id": "VICHMY2506161517244",
-    "result_id": "VICHMY2506161517244",
-    "order_id": "VICHMY2506161517",
-    "staff_id": "MYTE250616NA458",
-    "branch_id": "CHEN2967",
-    "user_id": "VI2506161500BA",
-    "recorded_at": "2025-06-16T15:00:17.217346",
-    "updated_at": "2025-06-16T15:00:17.217346",
-    "report": [
-      {
-        "inv_id": "BLOO888223BIOC",
-        "value": 119.41,
-        "range": [
-          70,
-          100
-        ],
-        "observation": "abnormal",
-        "status": "+ve"
-      }
-    ]
-  },
-  {
-    "id": "ANBAVI2506161517185",
-    "result_id": "ANBAVI2506161517185",
-    "order_id": "ANBAVI2506161517",
-    "staff_id": "VIOT250616BH591",
-    "branch_id": "BANG9690",
-    "user_id": "AN2506161500ME",
-    "recorded_at": "2025-06-16T15:00:17.217346",
-    "updated_at": "2025-06-16T15:00:17.217346",
-    "report": [
-      {
-        "inv_id": "WIDA004844INFE",
-        "value": 173.73,
-        "range": [
-          0,
-          160
-        ],
-        "observation": "abnormal",
-        "status": "+ve"
+        "observation": "normal",
+        "status": "-ve"
       },
       {
-        "inv_id": "LDH479802CARD",
-        "value": 295.82,
+        "inv_id": "PHOS648895RENA",
+        "value": 4.96,
+        "range": [
+          2.5,
+          4.5
+        ],
+        "observation": "abnormal",
+        "status": "+ve"
+      }
+    ]
+  },
+  {
+    "id": "RIDEAD2506162202020",
+    "result_id": "RIDEAD2506162202020",
+    "order_id": "RIDEAD2506162202",
+    "staff_id": "ADCL250616SI853",
+    "branch_id": "DELH7407",
+    "user_id": "RI2506162249MI",
+    "recorded_at": "2025-06-16T22:49:02.702580",
+    "updated_at": "2025-06-16T22:49:02.702580",
+    "report": [
+      {
+        "inv_id": "DIRE179856LIVE",
+        "value": 0.26,
+        "range": [
+          0.0,
+          0.3
+        ],
+        "observation": "normal",
+        "status": "-ve"
+      }
+    ]
+  },
+  {
+    "id": "RICHDI2506162202731",
+    "result_id": "RICHDI2506162202731",
+    "order_id": "RICHDI2506162202",
+    "staff_id": "DIDO250616PA777",
+    "branch_id": "CHEN3403",
+    "user_id": "RI2506162249MI",
+    "recorded_at": "2025-06-16T22:49:02.702580",
+    "updated_at": "2025-06-16T22:49:02.702580",
+    "report": [
+      {
+        "inv_id": "FSH957002HORM",
+        "value": 1.79,
+        "range": [
+          1.5,
+          12.4
+        ],
+        "observation": "normal",
+        "status": "-ve"
+      },
+      {
+        "inv_id": "HEMO906459HEMA",
+        "value": 14.63,
+        "range": [
+          13.5,
+          17.5
+        ],
+        "observation": "normal",
+        "status": "-ve"
+      },
+      {
+        "inv_id": "LDH373892CARD",
+        "value": 135.06,
         "range": [
           140,
           280
@@ -2366,38 +374,792 @@
     ]
   },
   {
-    "id": "ADJAAV2506161517786",
-    "result_id": "ADJAAV2506161517786",
-    "order_id": "ADJAAV2506161517",
-    "staff_id": "AVTE250616IY469",
-    "branch_id": "JAIP7830",
-    "user_id": "AD2506161500SH",
-    "recorded_at": "2025-06-16T15:00:17.217346",
-    "updated_at": "2025-06-16T15:00:17.217346",
+    "id": "ISKOKA2506162202935",
+    "result_id": "ISKOKA2506162202935",
+    "order_id": "ISKOKA2506162202",
+    "staff_id": "KAOT250616JA263",
+    "branch_id": "KOLK7793",
+    "user_id": "IS2506162249GH",
+    "recorded_at": "2025-06-16T22:49:02.702580",
+    "updated_at": "2025-06-16T22:49:02.702580",
     "report": [
       {
-        "inv_id": "ALBU333088LIVE",
-        "value": 2.67,
+        "inv_id": "ALKA592130LIVE",
+        "value": 148.42,
+        "range": [
+          40,
+          129
+        ],
+        "observation": "abnormal",
+        "status": "+ve"
+      }
+    ]
+  },
+  {
+    "id": "RILUMY2506162202773",
+    "result_id": "RILUMY2506162202773",
+    "order_id": "RILUMY2506162202",
+    "staff_id": "MYSU250616AG368",
+    "branch_id": "LUCK0045",
+    "user_id": "RI2506162249KU",
+    "recorded_at": "2025-06-16T22:49:02.702580",
+    "updated_at": "2025-06-16T22:49:02.702580",
+    "report": [
+      {
+        "inv_id": "BNP053367CARD",
+        "value": 35.75,
+        "range": [
+          0,
+          100
+        ],
+        "observation": "normal",
+        "status": "-ve"
+      }
+    ]
+  },
+  {
+    "id": "PIBAPI2506162202269",
+    "result_id": "PIBAPI2506162202269",
+    "order_id": "PIBAPI2506162202",
+    "staff_id": "PIAD250616SH507",
+    "branch_id": "BANG6477",
+    "user_id": "PI2506162249SH",
+    "recorded_at": "2025-06-16T22:49:02.702580",
+    "updated_at": "2025-06-16T22:49:02.702580",
+    "report": [
+      {
+        "inv_id": "HBA1897551DIAB",
+        "value": 6.72,
+        "range": [
+          4.0,
+          5.6
+        ],
+        "observation": "abnormal",
+        "status": "+ve"
+      }
+    ]
+  },
+  {
+    "id": "MYDEKA2506162202362",
+    "result_id": "MYDEKA2506162202362",
+    "order_id": "MYDEKA2506162202",
+    "staff_id": "KAOT250616JA263",
+    "branch_id": "DELH7407",
+    "user_id": "MY2506162249MI",
+    "recorded_at": "2025-06-16T22:49:02.702580",
+    "updated_at": "2025-06-16T22:49:02.702580",
+    "report": [
+      {
+        "inv_id": "HBA1897551DIAB",
+        "value": 5.29,
+        "range": [
+          4.0,
+          5.6
+        ],
+        "observation": "normal",
+        "status": "-ve"
+      }
+    ]
+  },
+  {
+    "id": "ISPUPI2506162202191",
+    "result_id": "ISPUPI2506162202191",
+    "order_id": "ISPUPI2506162202",
+    "staff_id": "PIOT250616DA007",
+    "branch_id": "PUNE6559",
+    "user_id": "IS2506162249RE",
+    "recorded_at": "2025-06-16T22:49:02.702580",
+    "updated_at": "2025-06-16T22:49:02.702580",
+    "report": [
+      {
+        "inv_id": "DIRE179856LIVE",
+        "value": 0.26,
+        "range": [
+          0.0,
+          0.3
+        ],
+        "observation": "normal",
+        "status": "-ve"
+      },
+      {
+        "inv_id": "CHLO755476RENA",
+        "value": 118.71,
+        "range": [
+          96,
+          106
+        ],
+        "observation": "abnormal",
+        "status": "+ve"
+      }
+    ]
+  },
+  {
+    "id": "SABAKA2506162202003",
+    "result_id": "SABAKA2506162202003",
+    "order_id": "SABAKA2506162202",
+    "staff_id": "KAOT250616JA263",
+    "branch_id": "BANG2794",
+    "user_id": "SA2506162249KA",
+    "recorded_at": "2025-06-16T22:49:02.702580",
+    "updated_at": "2025-06-16T22:49:02.702580",
+    "report": [
+      {
+        "inv_id": "HDL 078637LIPI",
+        "value": 69.45,
+        "range": [
+          40,
+          60
+        ],
+        "observation": "abnormal",
+        "status": "+ve"
+      }
+    ]
+  },
+  {
+    "id": "KACHKR2506162202398",
+    "result_id": "KACHKR2506162202398",
+    "order_id": "KACHKR2506162202",
+    "staff_id": "KROT250616BH496",
+    "branch_id": "CHEN3403",
+    "user_id": "KA2506162249ME",
+    "recorded_at": "2025-06-16T22:49:02.702580",
+    "updated_at": "2025-06-16T22:49:02.702580",
+    "report": [
+      {
+        "inv_id": "INSU725316DIAB",
+        "value": 26.98,
+        "range": [
+          2.0,
+          25.0
+        ],
+        "observation": "abnormal",
+        "status": "+ve"
+      }
+    ]
+  },
+  {
+    "id": "TADESA2506162202435",
+    "result_id": "TADESA2506162202435",
+    "order_id": "TADESA2506162202",
+    "staff_id": "SACL250616BA737",
+    "branch_id": "DELH7407",
+    "user_id": "TA2506162249AG",
+    "recorded_at": "2025-06-16T22:49:02.702580",
+    "updated_at": "2025-06-16T22:49:02.702580",
+    "report": [
+      {
+        "inv_id": "LDL 642625LIPI",
+        "value": 79.49,
+        "range": [
+          0,
+          130
+        ],
+        "observation": "normal",
+        "status": "-ve"
+      }
+    ]
+  },
+  {
+    "id": "PILUNI2506162202372",
+    "result_id": "PILUNI2506162202372",
+    "order_id": "PILUNI2506162202",
+    "staff_id": "NIAD250616AG738",
+    "branch_id": "LUCK1487",
+    "user_id": "PI2506162249GH",
+    "recorded_at": "2025-06-16T22:49:02.702580",
+    "updated_at": "2025-06-16T22:49:02.702580",
+    "report": [
+      {
+        "inv_id": "BNP053367CARD",
+        "value": 8.52,
+        "range": [
+          0,
+          100
+        ],
+        "observation": "normal",
+        "status": "-ve"
+      },
+      {
+        "inv_id": "HBA1897551DIAB",
+        "value": 6.72,
+        "range": [
+          4.0,
+          5.6
+        ],
+        "observation": "abnormal",
+        "status": "+ve"
+      },
+      {
+        "inv_id": "FAST671656DIAB",
+        "value": 65.95,
+        "range": [
+          70,
+          100
+        ],
+        "observation": "abnormal",
+        "status": "+ve"
+      }
+    ]
+  },
+  {
+    "id": "TALUNI2506162202129",
+    "result_id": "TALUNI2506162202129",
+    "order_id": "TALUNI2506162202",
+    "staff_id": "NIAD250616AG738",
+    "branch_id": "LUCK1487",
+    "user_id": "TA2506162249SH",
+    "recorded_at": "2025-06-16T22:49:02.702580",
+    "updated_at": "2025-06-16T22:49:02.702580",
+    "report": [
+      {
+        "inv_id": "HDL 078637LIPI",
+        "value": 47.43,
+        "range": [
+          40,
+          60
+        ],
+        "observation": "normal",
+        "status": "-ve"
+      }
+    ]
+  },
+  {
+    "id": "MYDEKA2506162202627",
+    "result_id": "MYDEKA2506162202627",
+    "order_id": "MYDEKA2506162202",
+    "staff_id": "KAOT250616JA263",
+    "branch_id": "DELH7407",
+    "user_id": "MY2506162249MI",
+    "recorded_at": "2025-06-16T22:49:02.702580",
+    "updated_at": "2025-06-16T22:49:02.702580",
+    "report": [
+      {
+        "inv_id": "HBA1897551DIAB",
+        "value": 4.66,
+        "range": [
+          4.0,
+          5.6
+        ],
+        "observation": "normal",
+        "status": "-ve"
+      }
+    ]
+  },
+  {
+    "id": "MYHYSI2506162202897",
+    "result_id": "MYHYSI2506162202897",
+    "order_id": "MYHYSI2506162202",
+    "staff_id": "SITE250616CH287",
+    "branch_id": "HYDE6128",
+    "user_id": "MY2506162249NA",
+    "recorded_at": "2025-06-16T22:49:02.702580",
+    "updated_at": "2025-06-16T22:49:02.702580",
+    "report": [
+      {
+        "inv_id": "CALC114914RENA",
+        "value": 10.13,
+        "range": [
+          8.5,
+          10.5
+        ],
+        "observation": "normal",
+        "status": "-ve"
+      },
+      {
+        "inv_id": "WBC 118449HEMA",
+        "value": 8012.05,
+        "range": [
+          4500,
+          11000
+        ],
+        "observation": "normal",
+        "status": "-ve"
+      }
+    ]
+  },
+  {
+    "id": "ANLURE2506162202513",
+    "result_id": "ANLURE2506162202513",
+    "order_id": "ANLURE2506162202",
+    "staff_id": "REDO250616KU150",
+    "branch_id": "LUCK0045",
+    "user_id": "AN2506162249PA",
+    "recorded_at": "2025-06-16T22:49:02.702580",
+    "updated_at": "2025-06-16T22:49:02.702580",
+    "report": [
+      {
+        "inv_id": "HEMO906459HEMA",
+        "value": 13.04,
+        "range": [
+          13.5,
+          17.5
+        ],
+        "observation": "abnormal",
+        "status": "+ve"
+      }
+    ]
+  },
+  {
+    "id": "SABAKA2506162202840",
+    "result_id": "SABAKA2506162202840",
+    "order_id": "SABAKA2506162202",
+    "staff_id": "KAOT250616JA263",
+    "branch_id": "BANG2794",
+    "user_id": "SA2506162249KA",
+    "recorded_at": "2025-06-16T22:49:02.702580",
+    "updated_at": "2025-06-16T22:49:02.702580",
+    "report": [
+      {
+        "inv_id": "HDL 078637LIPI",
+        "value": 66.62,
+        "range": [
+          40,
+          60
+        ],
+        "observation": "abnormal",
+        "status": "+ve"
+      }
+    ]
+  },
+  {
+    "id": "SIPUAN2506162202052",
+    "result_id": "SIPUAN2506162202052",
+    "order_id": "SIPUAN2506162202",
+    "staff_id": "ANCL250616DA335",
+    "branch_id": "PUNE6559",
+    "user_id": "SI2506162249BA",
+    "recorded_at": "2025-06-16T22:49:02.702580",
+    "updated_at": "2025-06-16T22:49:02.702580",
+    "report": [
+      {
+        "inv_id": "T3924486THYR",
+        "value": 222.41,
+        "range": [
+          80,
+          200
+        ],
+        "observation": "abnormal",
+        "status": "+ve"
+      },
+      {
+        "inv_id": "ALBU866882LIVE",
+        "value": 5.56,
         "range": [
           3.4,
           5.4
         ],
         "observation": "abnormal",
         "status": "+ve"
-      },
+      }
+    ]
+  },
+  {
+    "id": "ARLUNI2506162202596",
+    "result_id": "ARLUNI2506162202596",
+    "order_id": "ARLUNI2506162202",
+    "staff_id": "NIAD250616AG738",
+    "branch_id": "LUCK1487",
+    "user_id": "AR2506162249NA",
+    "recorded_at": "2025-06-16T22:49:02.702580",
+    "updated_at": "2025-06-16T22:49:02.702580",
+    "report": [
       {
-        "inv_id": "WBC 880466HEMA",
-        "value": 13477.95,
+        "inv_id": "T4309288THYR",
+        "value": 4.95,
         "range": [
-          4500,
-          11000
+          5.0,
+          12.0
         ],
         "observation": "abnormal",
         "status": "+ve"
       },
       {
-        "inv_id": "TROP578035CARD",
-        "value": 0.04,
+        "inv_id": "DIRE179856LIVE",
+        "value": 0.14,
+        "range": [
+          0.0,
+          0.3
+        ],
+        "observation": "normal",
+        "status": "-ve"
+      },
+      {
+        "inv_id": "SGOT060392LIVE",
+        "value": 18.47,
+        "range": [
+          5,
+          40
+        ],
+        "observation": "normal",
+        "status": "-ve"
+      }
+    ]
+  },
+  {
+    "id": "SABAKA2506162202953",
+    "result_id": "SABAKA2506162202953",
+    "order_id": "SABAKA2506162202",
+    "staff_id": "KAOT250616JA263",
+    "branch_id": "BANG2794",
+    "user_id": "SA2506162249KA",
+    "recorded_at": "2025-06-16T22:49:02.702580",
+    "updated_at": "2025-06-16T22:49:02.702580",
+    "report": [
+      {
+        "inv_id": "HDL 078637LIPI",
+        "value": 69.42,
+        "range": [
+          40,
+          60
+        ],
+        "observation": "abnormal",
+        "status": "+ve"
+      }
+    ]
+  },
+  {
+    "id": "ISPUPI2506162202481",
+    "result_id": "ISPUPI2506162202481",
+    "order_id": "ISPUPI2506162202",
+    "staff_id": "PIOT250616DA007",
+    "branch_id": "PUNE6559",
+    "user_id": "IS2506162249RE",
+    "recorded_at": "2025-06-16T22:49:02.702580",
+    "updated_at": "2025-06-16T22:49:02.702580",
+    "report": [
+      {
+        "inv_id": "DIRE179856LIVE",
+        "value": 0.25,
+        "range": [
+          0.0,
+          0.3
+        ],
+        "observation": "normal",
+        "status": "-ve"
+      },
+      {
+        "inv_id": "CHLO755476RENA",
+        "value": 90.09,
+        "range": [
+          96,
+          106
+        ],
+        "observation": "abnormal",
+        "status": "+ve"
+      }
+    ]
+  },
+  {
+    "id": "MELUAN2506162202187",
+    "result_id": "MELUAN2506162202187",
+    "order_id": "MELUAN2506162202",
+    "staff_id": "ANAD250616ME641",
+    "branch_id": "LUCK0045",
+    "user_id": "ME2506162249SI",
+    "recorded_at": "2025-06-16T22:49:02.702580",
+    "updated_at": "2025-06-16T22:49:02.702580",
+    "report": [
+      {
+        "inv_id": "SGOT060392LIVE",
+        "value": 14.54,
+        "range": [
+          5,
+          40
+        ],
+        "observation": "normal",
+        "status": "-ve"
+      },
+      {
+        "inv_id": "HDL 078637LIPI",
+        "value": 38.2,
+        "range": [
+          40,
+          60
+        ],
+        "observation": "abnormal",
+        "status": "+ve"
+      }
+    ]
+  },
+  {
+    "id": "SIPUAN2506162202907",
+    "result_id": "SIPUAN2506162202907",
+    "order_id": "SIPUAN2506162202",
+    "staff_id": "ANCL250616DA335",
+    "branch_id": "PUNE6559",
+    "user_id": "SI2506162249BA",
+    "recorded_at": "2025-06-16T22:49:02.702580",
+    "updated_at": "2025-06-16T22:49:02.702580",
+    "report": [
+      {
+        "inv_id": "T3924486THYR",
+        "value": 123.26,
+        "range": [
+          80,
+          200
+        ],
+        "observation": "normal",
+        "status": "-ve"
+      },
+      {
+        "inv_id": "ALBU866882LIVE",
+        "value": 3.18,
+        "range": [
+          3.4,
+          5.4
+        ],
+        "observation": "abnormal",
+        "status": "+ve"
+      }
+    ]
+  },
+  {
+    "id": "REHYNI2506162202439",
+    "result_id": "REHYNI2506162202439",
+    "order_id": "REHYNI2506162202",
+    "staff_id": "NIAD250616AG738",
+    "branch_id": "HYDE6128",
+    "user_id": "RE2506162249SI",
+    "recorded_at": "2025-06-16T22:49:02.702580",
+    "updated_at": "2025-06-16T22:49:02.702580",
+    "report": [
+      {
+        "inv_id": "SGOT060392LIVE",
+        "value": 4.35,
+        "range": [
+          5,
+          40
+        ],
+        "observation": "abnormal",
+        "status": "+ve"
+      }
+    ]
+  },
+  {
+    "id": "NIKODI2506162202075",
+    "result_id": "NIKODI2506162202075",
+    "order_id": "NIKODI2506162202",
+    "staff_id": "DIDO250616TH140",
+    "branch_id": "KOLK7793",
+    "user_id": "NI2506162249SH",
+    "recorded_at": "2025-06-16T22:49:02.702580",
+    "updated_at": "2025-06-16T22:49:02.702580",
+    "report": [
+      {
+        "inv_id": "LDL 642625LIPI",
+        "value": 7.17,
+        "range": [
+          0,
+          130
+        ],
+        "observation": "normal",
+        "status": "-ve"
+      },
+      {
+        "inv_id": "PROL257638HORM",
+        "value": 15.71,
+        "range": [
+          4.8,
+          23.3
+        ],
+        "observation": "normal",
+        "status": "-ve"
+      }
+    ]
+  },
+  {
+    "id": "ANHYMY2506162202363",
+    "result_id": "ANHYMY2506162202363",
+    "order_id": "ANHYMY2506162202",
+    "staff_id": "MYSU250616AG368",
+    "branch_id": "HYDE6128",
+    "user_id": "AN2506162249SH",
+    "recorded_at": "2025-06-16T22:49:02.702580",
+    "updated_at": "2025-06-16T22:49:02.702580",
+    "report": [
+      {
+        "inv_id": "SERU159195BIOC",
+        "value": 115.25,
+        "range": [
+          135,
+          145
+        ],
+        "observation": "abnormal",
+        "status": "+ve"
+      },
+      {
+        "inv_id": "C-PE778514DIAB",
+        "value": 1.98,
+        "range": [
+          0.78,
+          1.89
+        ],
+        "observation": "abnormal",
+        "status": "+ve"
+      },
+      {
+        "inv_id": "FAST671656DIAB",
+        "value": 124.47,
+        "range": [
+          70,
+          100
+        ],
+        "observation": "abnormal",
+        "status": "+ve"
+      }
+    ]
+  },
+  {
+    "id": "PIBAAN2506162202172",
+    "result_id": "PIBAAN2506162202172",
+    "order_id": "PIBAAN2506162202",
+    "staff_id": "ANAD250616ME641",
+    "branch_id": "BANG6477",
+    "user_id": "PI2506162249RE",
+    "recorded_at": "2025-06-16T22:49:02.702580",
+    "updated_at": "2025-06-16T22:49:02.702580",
+    "report": [
+      {
+        "inv_id": "FAST671656DIAB",
+        "value": 69.72,
+        "range": [
+          70,
+          100
+        ],
+        "observation": "abnormal",
+        "status": "+ve"
+      },
+      {
+        "inv_id": "HEPA071248INFE",
+        "value": 0.03,
+        "range": [
+          0,
+          0.05
+        ],
+        "observation": "normal",
+        "status": "-ve"
+      },
+      {
+        "inv_id": "SERU536223BIOC",
+        "value": 3.01,
+        "range": [
+          3.5,
+          5.1
+        ],
+        "observation": "abnormal",
+        "status": "+ve"
+      }
+    ]
+  },
+  {
+    "id": "SAKOAA2506162202963",
+    "result_id": "SAKOAA2506162202963",
+    "order_id": "SAKOAA2506162202",
+    "staff_id": "AATE250616SI214",
+    "branch_id": "KOLK7793",
+    "user_id": "SA2506162249GU",
+    "recorded_at": "2025-06-16T22:49:02.702580",
+    "updated_at": "2025-06-16T22:49:02.702580",
+    "report": [
+      {
+        "inv_id": "BLOO313107BIOC",
+        "value": 66.93,
+        "range": [
+          70,
+          100
+        ],
+        "observation": "abnormal",
+        "status": "+ve"
+      },
+      {
+        "inv_id": "TROP322032CARD",
+        "value": 0.03,
+        "range": [
+          0,
+          0.04
+        ],
+        "observation": "normal",
+        "status": "-ve"
+      },
+      {
+        "inv_id": "DIRE179856LIVE",
+        "value": 0.26,
+        "range": [
+          0.0,
+          0.3
+        ],
+        "observation": "normal",
+        "status": "-ve"
+      }
+    ]
+  },
+  {
+    "id": "MYHYMY2506162202217",
+    "result_id": "MYHYMY2506162202217",
+    "order_id": "MYHYMY2506162202",
+    "staff_id": "MYSU250616SH895",
+    "branch_id": "HYDE6128",
+    "user_id": "MY2506162249MI",
+    "recorded_at": "2025-06-16T22:49:02.702580",
+    "updated_at": "2025-06-16T22:49:02.702580",
+    "report": [
+      {
+        "inv_id": "SERU159195BIOC",
+        "value": 172.6,
+        "range": [
+          135,
+          145
+        ],
+        "observation": "abnormal",
+        "status": "+ve"
+      }
+    ]
+  },
+  {
+    "id": "ISBARE2506162202697",
+    "result_id": "ISBARE2506162202697",
+    "order_id": "ISBARE2506162202",
+    "staff_id": "RESU250616BA024",
+    "branch_id": "BANG2794",
+    "user_id": "IS2506162249NA",
+    "recorded_at": "2025-06-16T22:49:02.702580",
+    "updated_at": "2025-06-16T22:49:02.702580",
+    "report": [
+      {
+        "inv_id": "TEST167299HORM",
+        "value": 925.98,
+        "range": [
+          300,
+          1000
+        ],
+        "observation": "normal",
+        "status": "-ve"
+      },
+      {
+        "inv_id": "HEPA071248INFE",
+        "value": 0.06,
+        "range": [
+          0,
+          0.05
+        ],
+        "observation": "abnormal",
+        "status": "+ve"
+      }
+    ]
+  },
+  {
+    "id": "SALUPI2506162202562",
+    "result_id": "SALUPI2506162202562",
+    "order_id": "SALUPI2506162202",
+    "staff_id": "PIOT250616DA007",
+    "branch_id": "LUCK0045",
+    "user_id": "SA2506162249BA",
+    "recorded_at": "2025-06-16T22:49:02.702580",
+    "updated_at": "2025-06-16T22:49:02.702580",
+    "report": [
+      {
+        "inv_id": "TROP322032CARD",
+        "value": 0.01,
         "range": [
           0,
           0.04
@@ -2408,116 +1170,18 @@
     ]
   },
   {
-    "id": "ADCHRI2506161517909",
-    "result_id": "ADCHRI2506161517909",
-    "order_id": "ADCHRI2506161517",
-    "staff_id": "RICL250616PA273",
-    "branch_id": "CHEN2967",
-    "user_id": "AD2506161500SH",
-    "recorded_at": "2025-06-16T15:00:17.217346",
-    "updated_at": "2025-06-16T15:00:17.217346",
+    "id": "NIKODI2506162202704",
+    "result_id": "NIKODI2506162202704",
+    "order_id": "NIKODI2506162202",
+    "staff_id": "DIDO250616TH140",
+    "branch_id": "KOLK7793",
+    "user_id": "NI2506162249SH",
+    "recorded_at": "2025-06-16T22:49:02.702580",
+    "updated_at": "2025-06-16T22:49:02.702580",
     "report": [
       {
-        "inv_id": "BLOO484797BIOC",
-        "value": 142.72,
-        "range": [
-          70,
-          140
-        ],
-        "observation": "abnormal",
-        "status": "+ve"
-      }
-    ]
-  },
-  {
-    "id": "ANCHAY2506161517135",
-    "result_id": "ANCHAY2506161517135",
-    "order_id": "ANCHAY2506161517",
-    "staff_id": "AYOT250616IY622",
-    "branch_id": "CHEN2967",
-    "user_id": "AN2506161500KA",
-    "recorded_at": "2025-06-16T15:00:17.217346",
-    "updated_at": "2025-06-16T15:00:17.217346",
-    "report": [
-      {
-        "inv_id": "ALKA749549LIVE",
-        "value": 48.84,
-        "range": [
-          40,
-          129
-        ],
-        "observation": "normal",
-        "status": "-ve"
-      }
-    ]
-  },
-  {
-    "id": "ANHYKR2506161517971",
-    "result_id": "ANHYKR2506161517971",
-    "order_id": "ANHYKR2506161517",
-    "staff_id": "KRDO250616KA362",
-    "branch_id": "HYDE0122",
-    "user_id": "AN2506161500GU",
-    "recorded_at": "2025-06-16T15:00:17.217346",
-    "updated_at": "2025-06-16T15:00:17.217346",
-    "report": [
-      {
-        "inv_id": "VLDL044726LIPI",
-        "value": 46.52,
-        "range": [
-          5,
-          40
-        ],
-        "observation": "abnormal",
-        "status": "+ve"
-      },
-      {
-        "inv_id": "WIDA004844INFE",
-        "value": 100.83,
-        "range": [
-          0,
-          160
-        ],
-        "observation": "normal",
-        "status": "-ve"
-      }
-    ]
-  },
-  {
-    "id": "ANCHAY2506161517914",
-    "result_id": "ANCHAY2506161517914",
-    "order_id": "ANCHAY2506161517",
-    "staff_id": "AYOT250616IY622",
-    "branch_id": "CHEN2967",
-    "user_id": "AN2506161500KA",
-    "recorded_at": "2025-06-16T15:00:17.217346",
-    "updated_at": "2025-06-16T15:00:17.217346",
-    "report": [
-      {
-        "inv_id": "ALKA749549LIVE",
-        "value": 93.86,
-        "range": [
-          40,
-          129
-        ],
-        "observation": "normal",
-        "status": "-ve"
-      }
-    ]
-  },
-  {
-    "id": "VIDESA2506161517467",
-    "result_id": "VIDESA2506161517467",
-    "order_id": "VIDESA2506161517",
-    "staff_id": "SAOT250616SH753",
-    "branch_id": "DELH5069",
-    "user_id": "VI2506161500JO",
-    "recorded_at": "2025-06-16T15:00:17.217346",
-    "updated_at": "2025-06-16T15:00:17.217346",
-    "report": [
-      {
-        "inv_id": "LDL 169758LIPI",
-        "value": 29.8,
+        "inv_id": "LDL 642625LIPI",
+        "value": 31.56,
         "range": [
           0,
           130
@@ -2526,212 +1190,8 @@
         "status": "-ve"
       },
       {
-        "inv_id": "CK-M177145CARD",
-        "value": 5.73,
-        "range": [
-          0,
-          5
-        ],
-        "observation": "abnormal",
-        "status": "+ve"
-      }
-    ]
-  },
-  {
-    "id": "ANPUAA2506161517780",
-    "result_id": "ANPUAA2506161517780",
-    "order_id": "ANPUAA2506161517",
-    "staff_id": "AAOT250616TH105",
-    "branch_id": "PUNE4981",
-    "user_id": "AN2506161500CH",
-    "recorded_at": "2025-06-16T15:00:17.217346",
-    "updated_at": "2025-06-16T15:00:17.217346",
-    "report": [
-      {
-        "inv_id": "SERU017895BIOC",
-        "value": 1.64,
-        "range": [
-          0.6,
-          1.3
-        ],
-        "observation": "abnormal",
-        "status": "+ve"
-      },
-      {
-        "inv_id": "C-PE854137DIAB",
-        "value": 0.69,
-        "range": [
-          0.78,
-          1.89
-        ],
-        "observation": "abnormal",
-        "status": "+ve"
-      },
-      {
-        "inv_id": "FREE284255THYR",
-        "value": 0.74,
-        "range": [
-          0.8,
-          1.8
-        ],
-        "observation": "abnormal",
-        "status": "+ve"
-      }
-    ]
-  },
-  {
-    "id": "ADDERI2506161517423",
-    "result_id": "ADDERI2506161517423",
-    "order_id": "ADDERI2506161517",
-    "staff_id": "RICL250616PA273",
-    "branch_id": "DELH5069",
-    "user_id": "AD2506161500SH",
-    "recorded_at": "2025-06-16T15:00:17.217346",
-    "updated_at": "2025-06-16T15:00:17.217346",
-    "report": [
-      {
-        "inv_id": "HIV 234496INFE",
-        "value": 1.04,
-        "range": [
-          0,
-          1
-        ],
-        "observation": "abnormal",
-        "status": "+ve"
-      }
-    ]
-  },
-  {
-    "id": "SAMUVI2506161517858",
-    "result_id": "SAMUVI2506161517858",
-    "order_id": "SAMUVI2506161517",
-    "staff_id": "VIAD250616MI905",
-    "branch_id": "MUMB7911",
-    "user_id": "SA2506161500BH",
-    "recorded_at": "2025-06-16T15:00:17.217346",
-    "updated_at": "2025-06-16T15:00:17.217346",
-    "report": [
-      {
-        "inv_id": "RBC 695285HEMA",
-        "value": 3.53,
-        "range": [
-          4.7,
-          6.1
-        ],
-        "observation": "abnormal",
-        "status": "+ve"
-      },
-      {
-        "inv_id": "CK-M177145CARD",
-        "value": 5.34,
-        "range": [
-          0,
-          5
-        ],
-        "observation": "abnormal",
-        "status": "+ve"
-      }
-    ]
-  },
-  {
-    "id": "ANBASA2506161517765",
-    "result_id": "ANBASA2506161517765",
-    "order_id": "ANBASA2506161517",
-    "staff_id": "SAOT250616IY270",
-    "branch_id": "BANG9690",
-    "user_id": "AN2506161500JA",
-    "recorded_at": "2025-06-16T15:00:17.217346",
-    "updated_at": "2025-06-16T15:00:17.217346",
-    "report": [
-      {
-        "inv_id": "LH271813HORM",
-        "value": 10.7,
-        "range": [
-          1.7,
-          8.6
-        ],
-        "observation": "abnormal",
-        "status": "+ve"
-      }
-    ]
-  },
-  {
-    "id": "KRBAIR2506161517120",
-    "result_id": "KRBAIR2506161517120",
-    "order_id": "KRBAIR2506161517",
-    "staff_id": "IRDO250616KA194",
-    "branch_id": "BANG9690",
-    "user_id": "KR2506161500CH",
-    "recorded_at": "2025-06-16T15:00:17.217346",
-    "updated_at": "2025-06-16T15:00:17.217346",
-    "report": [
-      {
-        "inv_id": "BICA679650RENA",
-        "value": 27.74,
-        "range": [
-          22,
-          29
-        ],
-        "observation": "normal",
-        "status": "-ve"
-      }
-    ]
-  },
-  {
-    "id": "MEMUMY2506161517929",
-    "result_id": "MEMUMY2506161517929",
-    "order_id": "MEMUMY2506161517",
-    "staff_id": "MYAD250616AG507",
-    "branch_id": "MUMB2602",
-    "user_id": "ME2506161500ME",
-    "recorded_at": "2025-06-16T15:00:17.217346",
-    "updated_at": "2025-06-16T15:00:17.217346",
-    "report": [
-      {
-        "inv_id": "HIV 234496INFE",
-        "value": 0.93,
-        "range": [
-          0,
-          1
-        ],
-        "observation": "normal",
-        "status": "-ve"
-      },
-      {
-        "inv_id": "T4584050THYR",
-        "value": 3.75,
-        "range": [
-          5.0,
-          12.0
-        ],
-        "observation": "abnormal",
-        "status": "+ve"
-      }
-    ]
-  },
-  {
-    "id": "AAPUME2506161517186",
-    "result_id": "AAPUME2506161517186",
-    "order_id": "AAPUME2506161517",
-    "staff_id": "MEDO250616MI294",
-    "branch_id": "PUNE4981",
-    "user_id": "AA2506161500BH",
-    "recorded_at": "2025-06-16T15:00:17.217346",
-    "updated_at": "2025-06-16T15:00:17.217346",
-    "report": [
-      {
-        "inv_id": "BICA679650RENA",
-        "value": 30.91,
-        "range": [
-          22,
-          29
-        ],
-        "observation": "abnormal",
-        "status": "+ve"
-      },
-      {
-        "inv_id": "PROL463148HORM",
-        "value": 12.1,
+        "inv_id": "PROL257638HORM",
+        "value": 20.3,
         "range": [
           4.8,
           23.3
@@ -2742,31 +1202,21 @@
     ]
   },
   {
-    "id": "MEMUMY2506161517274",
-    "result_id": "MEMUMY2506161517274",
-    "order_id": "MEMUMY2506161517",
-    "staff_id": "MYAD250616AG507",
-    "branch_id": "MUMB2602",
-    "user_id": "ME2506161500ME",
-    "recorded_at": "2025-06-16T15:00:17.217346",
-    "updated_at": "2025-06-16T15:00:17.217346",
+    "id": "ISDESA2506162202846",
+    "result_id": "ISDESA2506162202846",
+    "order_id": "ISDESA2506162202",
+    "staff_id": "SACL250616ME648",
+    "branch_id": "DELH7407",
+    "user_id": "IS2506162249GH",
+    "recorded_at": "2025-06-16T22:49:02.702580",
+    "updated_at": "2025-06-16T22:49:02.702580",
     "report": [
       {
-        "inv_id": "HIV 234496INFE",
-        "value": 0.89,
+        "inv_id": "SGOT060392LIVE",
+        "value": 35.06,
         "range": [
-          0,
-          1
-        ],
-        "observation": "normal",
-        "status": "-ve"
-      },
-      {
-        "inv_id": "T4584050THYR",
-        "value": 5.79,
-        "range": [
-          5.0,
-          12.0
+          5,
+          40
         ],
         "observation": "normal",
         "status": "-ve"
@@ -2774,28 +1224,722 @@
     ]
   },
   {
-    "id": "SABAVI2506161517042",
-    "result_id": "SABAVI2506161517042",
-    "order_id": "SABAVI2506161517",
-    "staff_id": "VIAD250616MI905",
-    "branch_id": "BANG9690",
-    "user_id": "SA2506161500KA",
-    "recorded_at": "2025-06-16T15:00:17.217346",
-    "updated_at": "2025-06-16T15:00:17.217346",
+    "id": "AABAAN2506162202837",
+    "result_id": "AABAAN2506162202837",
+    "order_id": "AABAAN2506162202",
+    "staff_id": "ANCL250616DA335",
+    "branch_id": "BANG2794",
+    "user_id": "AA2506162249SI",
+    "recorded_at": "2025-06-16T22:49:02.702580",
+    "updated_at": "2025-06-16T22:49:02.702580",
     "report": [
       {
-        "inv_id": "CALC409446RENA",
-        "value": 8.28,
+        "inv_id": "ALKA592130LIVE",
+        "value": 86.4,
         "range": [
-          8.5,
-          10.5
+          40,
+          129
+        ],
+        "observation": "normal",
+        "status": "-ve"
+      },
+      {
+        "inv_id": "PHOS648895RENA",
+        "value": 3.42,
+        "range": [
+          2.5,
+          4.5
+        ],
+        "observation": "normal",
+        "status": "-ve"
+      }
+    ]
+  },
+  {
+    "id": "REHYNI2506162202307",
+    "result_id": "REHYNI2506162202307",
+    "order_id": "REHYNI2506162202",
+    "staff_id": "NIAD250616AG738",
+    "branch_id": "HYDE6128",
+    "user_id": "RE2506162249SI",
+    "recorded_at": "2025-06-16T22:49:02.702580",
+    "updated_at": "2025-06-16T22:49:02.702580",
+    "report": [
+      {
+        "inv_id": "SGOT060392LIVE",
+        "value": 33.67,
+        "range": [
+          5,
+          40
+        ],
+        "observation": "normal",
+        "status": "-ve"
+      }
+    ]
+  },
+  {
+    "id": "MYHYMY2506162202436",
+    "result_id": "MYHYMY2506162202436",
+    "order_id": "MYHYMY2506162202",
+    "staff_id": "MYSU250616AG368",
+    "branch_id": "HYDE6128",
+    "user_id": "MY2506162249NA",
+    "recorded_at": "2025-06-16T22:49:02.702580",
+    "updated_at": "2025-06-16T22:49:02.702580",
+    "report": [
+      {
+        "inv_id": "SERU159195BIOC",
+        "value": 184.62,
+        "range": [
+          135,
+          145
+        ],
+        "observation": "abnormal",
+        "status": "+ve"
+      }
+    ]
+  },
+  {
+    "id": "MYHYMY2506162202249",
+    "result_id": "MYHYMY2506162202249",
+    "order_id": "MYHYMY2506162202",
+    "staff_id": "MYSU250616AG368",
+    "branch_id": "HYDE6128",
+    "user_id": "MY2506162249NA",
+    "recorded_at": "2025-06-16T22:49:02.702580",
+    "updated_at": "2025-06-16T22:49:02.702580",
+    "report": [
+      {
+        "inv_id": "SERU159195BIOC",
+        "value": 161.57,
+        "range": [
+          135,
+          145
+        ],
+        "observation": "abnormal",
+        "status": "+ve"
+      }
+    ]
+  },
+  {
+    "id": "AAMUPI2506162202150",
+    "result_id": "AAMUPI2506162202150",
+    "order_id": "AAMUPI2506162202",
+    "staff_id": "PIOT250616DA007",
+    "branch_id": "MUMB4102",
+    "user_id": "AA2506162249JA",
+    "recorded_at": "2025-06-16T22:49:02.702580",
+    "updated_at": "2025-06-16T22:49:02.702580",
+    "report": [
+      {
+        "inv_id": "HEMO906459HEMA",
+        "value": 21.02,
+        "range": [
+          13.5,
+          17.5
         ],
         "observation": "abnormal",
         "status": "+ve"
       },
       {
-        "inv_id": "C-PE854137DIAB",
-        "value": 1.29,
+        "inv_id": "BNP053367CARD",
+        "value": 62.06,
+        "range": [
+          0,
+          100
+        ],
+        "observation": "normal",
+        "status": "-ve"
+      },
+      {
+        "inv_id": "TROP322032CARD",
+        "value": 0.01,
+        "range": [
+          0,
+          0.04
+        ],
+        "observation": "normal",
+        "status": "-ve"
+      }
+    ]
+  },
+  {
+    "id": "AABASI2506162202901",
+    "result_id": "AABASI2506162202901",
+    "order_id": "AABASI2506162202",
+    "staff_id": "SITE250616CH287",
+    "branch_id": "BANG2794",
+    "user_id": "AA2506162249AG",
+    "recorded_at": "2025-06-16T22:49:02.702580",
+    "updated_at": "2025-06-16T22:49:02.702580",
+    "report": [
+      {
+        "inv_id": "CHLO755476RENA",
+        "value": 84.83,
+        "range": [
+          96,
+          106
+        ],
+        "observation": "abnormal",
+        "status": "+ve"
+      },
+      {
+        "inv_id": "PHOS648895RENA",
+        "value": 3.02,
+        "range": [
+          2.5,
+          4.5
+        ],
+        "observation": "normal",
+        "status": "-ve"
+      }
+    ]
+  },
+  {
+    "id": "MELUAN2506162202410",
+    "result_id": "MELUAN2506162202410",
+    "order_id": "MELUAN2506162202",
+    "staff_id": "ANAD250616ME641",
+    "branch_id": "LUCK0045",
+    "user_id": "ME2506162249SI",
+    "recorded_at": "2025-06-16T22:49:02.702580",
+    "updated_at": "2025-06-16T22:49:02.702580",
+    "report": [
+      {
+        "inv_id": "SGOT060392LIVE",
+        "value": 10.33,
+        "range": [
+          5,
+          40
+        ],
+        "observation": "normal",
+        "status": "-ve"
+      },
+      {
+        "inv_id": "HDL 078637LIPI",
+        "value": 47.98,
+        "range": [
+          40,
+          60
+        ],
+        "observation": "normal",
+        "status": "-ve"
+      }
+    ]
+  },
+  {
+    "id": "AVDEKA2506162202288",
+    "result_id": "AVDEKA2506162202288",
+    "order_id": "AVDEKA2506162202",
+    "staff_id": "KAOT250616JA263",
+    "branch_id": "DELH7407",
+    "user_id": "AV2506162249NA",
+    "recorded_at": "2025-06-16T22:49:02.702580",
+    "updated_at": "2025-06-16T22:49:02.702580",
+    "report": [
+      {
+        "inv_id": "BLOO313107BIOC",
+        "value": 49.78,
+        "range": [
+          70,
+          100
+        ],
+        "observation": "abnormal",
+        "status": "+ve"
+      },
+      {
+        "inv_id": "SERU040973RENA",
+        "value": 3.43,
+        "range": [
+          3.5,
+          7.2
+        ],
+        "observation": "abnormal",
+        "status": "+ve"
+      },
+      {
+        "inv_id": "HIV 744325INFE",
+        "value": 0.76,
+        "range": [
+          0,
+          1
+        ],
+        "observation": "normal",
+        "status": "-ve"
+      }
+    ]
+  },
+  {
+    "id": "SABAKA2506162202223",
+    "result_id": "SABAKA2506162202223",
+    "order_id": "SABAKA2506162202",
+    "staff_id": "KAOT250616JA263",
+    "branch_id": "BANG2794",
+    "user_id": "SA2506162249KA",
+    "recorded_at": "2025-06-16T22:49:02.702580",
+    "updated_at": "2025-06-16T22:49:02.702580",
+    "report": [
+      {
+        "inv_id": "HDL 078637LIPI",
+        "value": 30.07,
+        "range": [
+          40,
+          60
+        ],
+        "observation": "abnormal",
+        "status": "+ve"
+      }
+    ]
+  },
+  {
+    "id": "KRBASA2506162202797",
+    "result_id": "KRBASA2506162202797",
+    "order_id": "KRBASA2506162202",
+    "staff_id": "SACL250616ME648",
+    "branch_id": "BANG6477",
+    "user_id": "KR2506162249PA",
+    "recorded_at": "2025-06-16T22:49:02.702580",
+    "updated_at": "2025-06-16T22:49:02.702580",
+    "report": [
+      {
+        "inv_id": "WBC 118449HEMA",
+        "value": 8269.77,
+        "range": [
+          4500,
+          11000
+        ],
+        "observation": "normal",
+        "status": "-ve"
+      }
+    ]
+  },
+  {
+    "id": "TAPUIR2506162202427",
+    "result_id": "TAPUIR2506162202427",
+    "order_id": "TAPUIR2506162202",
+    "staff_id": "IRDO250616JA260",
+    "branch_id": "PUNE6559",
+    "user_id": "TA2506162249SH",
+    "recorded_at": "2025-06-16T22:49:02.702580",
+    "updated_at": "2025-06-16T22:49:02.702580",
+    "report": [
+      {
+        "inv_id": "TOTA056230LIPI",
+        "value": 199.03,
+        "range": [
+          125,
+          200
+        ],
+        "observation": "normal",
+        "status": "-ve"
+      },
+      {
+        "inv_id": "TOTA294279LIVE",
+        "value": 0.33,
+        "range": [
+          0.3,
+          1.2
+        ],
+        "observation": "normal",
+        "status": "-ve"
+      }
+    ]
+  },
+  {
+    "id": "ANCHSA2506162202790",
+    "result_id": "ANCHSA2506162202790",
+    "order_id": "ANCHSA2506162202",
+    "staff_id": "SACL250616BA737",
+    "branch_id": "CHEN3403",
+    "user_id": "AN2506162249PA",
+    "recorded_at": "2025-06-16T22:49:02.702580",
+    "updated_at": "2025-06-16T22:49:02.702580",
+    "report": [
+      {
+        "inv_id": "INSU725316DIAB",
+        "value": 15.97,
+        "range": [
+          2.0,
+          25.0
+        ],
+        "observation": "normal",
+        "status": "-ve"
+      },
+      {
+        "inv_id": "HEPA071248INFE",
+        "value": 0.0,
+        "range": [
+          0,
+          0.05
+        ],
+        "observation": "normal",
+        "status": "-ve"
+      }
+    ]
+  },
+  {
+    "id": "SAMUAN2506162202790",
+    "result_id": "SAMUAN2506162202790",
+    "order_id": "SAMUAN2506162202",
+    "staff_id": "ANAD250616ME641",
+    "branch_id": "MUMB4102",
+    "user_id": "SA2506162249IY",
+    "recorded_at": "2025-06-16T22:49:02.702580",
+    "updated_at": "2025-06-16T22:49:02.702580",
+    "report": [
+      {
+        "inv_id": "WBC 118449HEMA",
+        "value": 8452.39,
+        "range": [
+          4500,
+          11000
+        ],
+        "observation": "normal",
+        "status": "-ve"
+      }
+    ]
+  },
+  {
+    "id": "SAMUAR2506162202467",
+    "result_id": "SAMUAR2506162202467",
+    "order_id": "SAMUAR2506162202",
+    "staff_id": "ARSU250616SI707",
+    "branch_id": "MUMB4102",
+    "user_id": "SA2506162249BA",
+    "recorded_at": "2025-06-16T22:49:02.702580",
+    "updated_at": "2025-06-16T22:49:02.702580",
+    "report": [
+      {
+        "inv_id": "LDL 642625LIPI",
+        "value": 99.46,
+        "range": [
+          0,
+          130
+        ],
+        "observation": "normal",
+        "status": "-ve"
+      },
+      {
+        "inv_id": "FSH957002HORM",
+        "value": 12.07,
+        "range": [
+          1.5,
+          12.4
+        ],
+        "observation": "normal",
+        "status": "-ve"
+      },
+      {
+        "inv_id": "SERU040973RENA",
+        "value": 7.73,
+        "range": [
+          3.5,
+          7.2
+        ],
+        "observation": "abnormal",
+        "status": "+ve"
+      }
+    ]
+  },
+  {
+    "id": "ANMUNI2506162202433",
+    "result_id": "ANMUNI2506162202433",
+    "order_id": "ANMUNI2506162202",
+    "staff_id": "NIOT250616IY770",
+    "branch_id": "MUMB4102",
+    "user_id": "AN2506162249KU",
+    "recorded_at": "2025-06-16T22:49:02.702580",
+    "updated_at": "2025-06-16T22:49:02.702580",
+    "report": [
+      {
+        "inv_id": "DENG202329INFE",
+        "value": 1.25,
+        "range": [
+          0,
+          1
+        ],
+        "observation": "abnormal",
+        "status": "+ve"
+      },
+      {
+        "inv_id": "HEMO906459HEMA",
+        "value": 13.34,
+        "range": [
+          13.5,
+          17.5
+        ],
+        "observation": "abnormal",
+        "status": "+ve"
+      }
+    ]
+  },
+  {
+    "id": "NIKODI2506162202073",
+    "result_id": "NIKODI2506162202073",
+    "order_id": "NIKODI2506162202",
+    "staff_id": "DIDO250616TH140",
+    "branch_id": "KOLK7793",
+    "user_id": "NI2506162249SH",
+    "recorded_at": "2025-06-16T22:49:02.702580",
+    "updated_at": "2025-06-16T22:49:02.702580",
+    "report": [
+      {
+        "inv_id": "LDL 642625LIPI",
+        "value": 103.4,
+        "range": [
+          0,
+          130
+        ],
+        "observation": "normal",
+        "status": "-ve"
+      },
+      {
+        "inv_id": "PROL257638HORM",
+        "value": 4.59,
+        "range": [
+          4.8,
+          23.3
+        ],
+        "observation": "abnormal",
+        "status": "+ve"
+      }
+    ]
+  },
+  {
+    "id": "AAKOAY2506162202835",
+    "result_id": "AAKOAY2506162202835",
+    "order_id": "AAKOAY2506162202",
+    "staff_id": "AYTE250616JO178",
+    "branch_id": "KOLK7793",
+    "user_id": "AA2506162249BH",
+    "recorded_at": "2025-06-16T22:49:02.702580",
+    "updated_at": "2025-06-16T22:49:02.702580",
+    "report": [
+      {
+        "inv_id": "FAST671656DIAB",
+        "value": 85.34,
+        "range": [
+          70,
+          100
+        ],
+        "observation": "normal",
+        "status": "-ve"
+      },
+      {
+        "inv_id": "ALKA592130LIVE",
+        "value": 107.25,
+        "range": [
+          40,
+          129
+        ],
+        "observation": "normal",
+        "status": "-ve"
+      },
+      {
+        "inv_id": "INSU725316DIAB",
+        "value": 17.6,
+        "range": [
+          2.0,
+          25.0
+        ],
+        "observation": "normal",
+        "status": "-ve"
+      }
+    ]
+  },
+  {
+    "id": "ARLUAN2506162202482",
+    "result_id": "ARLUAN2506162202482",
+    "order_id": "ARLUAN2506162202",
+    "staff_id": "ANAD250616ME641",
+    "branch_id": "LUCK0045",
+    "user_id": "AR2506162249NA",
+    "recorded_at": "2025-06-16T22:49:02.702580",
+    "updated_at": "2025-06-16T22:49:02.702580",
+    "report": [
+      {
+        "inv_id": "LDH373892CARD",
+        "value": 336.78,
+        "range": [
+          140,
+          280
+        ],
+        "observation": "abnormal",
+        "status": "+ve"
+      },
+      {
+        "inv_id": "FAST671656DIAB",
+        "value": 125.19,
+        "range": [
+          70,
+          100
+        ],
+        "observation": "abnormal",
+        "status": "+ve"
+      }
+    ]
+  },
+  {
+    "id": "TADEAY2506162202478",
+    "result_id": "TADEAY2506162202478",
+    "order_id": "TADEAY2506162202",
+    "staff_id": "AYTE250616JO178",
+    "branch_id": "DELH7407",
+    "user_id": "TA2506162249VE",
+    "recorded_at": "2025-06-16T22:49:02.702580",
+    "updated_at": "2025-06-16T22:49:02.702580",
+    "report": [
+      {
+        "inv_id": "SERU872948BIOC",
+        "value": 1.06,
+        "range": [
+          0.6,
+          1.3
+        ],
+        "observation": "normal",
+        "status": "-ve"
+      }
+    ]
+  },
+  {
+    "id": "RIDEVI2506162202885",
+    "result_id": "RIDEVI2506162202885",
+    "order_id": "RIDEVI2506162202",
+    "staff_id": "VISU250616RE233",
+    "branch_id": "DELH7407",
+    "user_id": "RI2506162249MI",
+    "recorded_at": "2025-06-16T22:49:02.702580",
+    "updated_at": "2025-06-16T22:49:02.702580",
+    "report": [
+      {
+        "inv_id": "PROL257638HORM",
+        "value": 12.77,
+        "range": [
+          4.8,
+          23.3
+        ],
+        "observation": "normal",
+        "status": "-ve"
+      },
+      {
+        "inv_id": "SGPT952838LIVE",
+        "value": 23.37,
+        "range": [
+          7,
+          56
+        ],
+        "observation": "normal",
+        "status": "-ve"
+      }
+    ]
+  },
+  {
+    "id": "ARLUAN2506162202893",
+    "result_id": "ARLUAN2506162202893",
+    "order_id": "ARLUAN2506162202",
+    "staff_id": "ANAD250616ME641",
+    "branch_id": "LUCK0045",
+    "user_id": "AR2506162249NA",
+    "recorded_at": "2025-06-16T22:49:02.702580",
+    "updated_at": "2025-06-16T22:49:02.702580",
+    "report": [
+      {
+        "inv_id": "LDH373892CARD",
+        "value": 184.05,
+        "range": [
+          140,
+          280
+        ],
+        "observation": "normal",
+        "status": "-ve"
+      },
+      {
+        "inv_id": "FAST671656DIAB",
+        "value": 88.79,
+        "range": [
+          70,
+          100
+        ],
+        "observation": "normal",
+        "status": "-ve"
+      }
+    ]
+  },
+  {
+    "id": "KRMURE2506162202655",
+    "result_id": "KRMURE2506162202655",
+    "order_id": "KRMURE2506162202",
+    "staff_id": "RESU250616BA024",
+    "branch_id": "MUMB4102",
+    "user_id": "KR2506162249PA",
+    "recorded_at": "2025-06-16T22:49:02.702580",
+    "updated_at": "2025-06-16T22:49:02.702580",
+    "report": [
+      {
+        "inv_id": "BLOO213437BIOC",
+        "value": 43.69,
+        "range": [
+          10,
+          50
+        ],
+        "observation": "normal",
+        "status": "-ve"
+      },
+      {
+        "inv_id": "HEMA820698HEMA",
+        "value": 38.25,
+        "range": [
+          38.8,
+          50
+        ],
+        "observation": "abnormal",
+        "status": "+ve"
+      },
+      {
+        "inv_id": "FAST671656DIAB",
+        "value": 118.16,
+        "range": [
+          70,
+          100
+        ],
+        "observation": "abnormal",
+        "status": "+ve"
+      }
+    ]
+  },
+  {
+    "id": "ISKOPI2506162202444",
+    "result_id": "ISKOPI2506162202444",
+    "order_id": "ISKOPI2506162202",
+    "staff_id": "PIAD250616SH507",
+    "branch_id": "KOLK7793",
+    "user_id": "IS2506162249RE",
+    "recorded_at": "2025-06-16T22:49:02.702580",
+    "updated_at": "2025-06-16T22:49:02.702580",
+    "report": [
+      {
+        "inv_id": "TOTA294279LIVE",
+        "value": 0.86,
+        "range": [
+          0.3,
+          1.2
+        ],
+        "observation": "normal",
+        "status": "-ve"
+      },
+      {
+        "inv_id": "BLOO313107BIOC",
+        "value": 98.53,
+        "range": [
+          70,
+          100
+        ],
+        "observation": "normal",
+        "status": "-ve"
+      },
+      {
+        "inv_id": "C-PE778514DIAB",
+        "value": 0.89,
         "range": [
           0.78,
           1.89
@@ -2806,21 +1950,31 @@
     ]
   },
   {
-    "id": "KAPURI2506161517302",
-    "result_id": "KAPURI2506161517302",
-    "order_id": "KAPURI2506161517",
-    "staff_id": "RIDO250616RE175",
-    "branch_id": "PUNE4981",
-    "user_id": "KA2506161500PA",
-    "recorded_at": "2025-06-16T15:00:17.217346",
-    "updated_at": "2025-06-16T15:00:17.217346",
+    "id": "RIDEVI2506162202749",
+    "result_id": "RIDEVI2506162202749",
+    "order_id": "RIDEVI2506162202",
+    "staff_id": "VISU250616RE233",
+    "branch_id": "DELH7407",
+    "user_id": "RI2506162249MI",
+    "recorded_at": "2025-06-16T22:49:02.702580",
+    "updated_at": "2025-06-16T22:49:02.702580",
     "report": [
       {
-        "inv_id": "TSH657926THYR",
-        "value": 4.08,
+        "inv_id": "PROL257638HORM",
+        "value": 22.82,
         "range": [
-          0.4,
-          4.0
+          4.8,
+          23.3
+        ],
+        "observation": "normal",
+        "status": "-ve"
+      },
+      {
+        "inv_id": "SGPT952838LIVE",
+        "value": 61.4,
+        "range": [
+          7,
+          56
         ],
         "observation": "abnormal",
         "status": "+ve"
@@ -2828,166 +1982,82 @@
     ]
   },
   {
-    "id": "ISMUSA2506161517725",
-    "result_id": "ISMUSA2506161517725",
-    "order_id": "ISMUSA2506161517",
-    "staff_id": "SAOT250616SH753",
-    "branch_id": "MUMB7911",
-    "user_id": "IS2506161500JA",
-    "recorded_at": "2025-06-16T15:00:17.217346",
-    "updated_at": "2025-06-16T15:00:17.217346",
+    "id": "KAPUDI2506162202981",
+    "result_id": "KAPUDI2506162202981",
+    "order_id": "KAPUDI2506162202",
+    "staff_id": "DIDO250616PA777",
+    "branch_id": "PUNE6559",
+    "user_id": "KA2506162249GU",
+    "recorded_at": "2025-06-16T22:49:02.702580",
+    "updated_at": "2025-06-16T22:49:02.702580",
     "report": [
       {
-        "inv_id": "FSH467356HORM",
-        "value": 13.56,
+        "inv_id": "BLOO941518BIOC",
+        "value": 77.8,
         "range": [
-          1.5,
-          12.4
+          70,
+          140
+        ],
+        "observation": "normal",
+        "status": "-ve"
+      },
+      {
+        "inv_id": "TOTA294279LIVE",
+        "value": 0.48,
+        "range": [
+          0.3,
+          1.2
+        ],
+        "observation": "normal",
+        "status": "-ve"
+      }
+    ]
+  },
+  {
+    "id": "SIBARE2506162202876",
+    "result_id": "SIBARE2506162202876",
+    "order_id": "SIBARE2506162202",
+    "staff_id": "REDO250616KU150",
+    "branch_id": "BANG2794",
+    "user_id": "SI2506162249BA",
+    "recorded_at": "2025-06-16T22:49:02.702580",
+    "updated_at": "2025-06-16T22:49:02.702580",
+    "report": [
+      {
+        "inv_id": "SERU159195BIOC",
+        "value": 184.1,
+        "range": [
+          135,
+          145
+        ],
+        "observation": "abnormal",
+        "status": "+ve"
+      }
+    ]
+  },
+  {
+    "id": "ARLUKR2506162202569",
+    "result_id": "ARLUKR2506162202569",
+    "order_id": "ARLUKR2506162202",
+    "staff_id": "KROT250616BH496",
+    "branch_id": "LUCK1487",
+    "user_id": "AR2506162249NA",
+    "recorded_at": "2025-06-16T22:49:02.702580",
+    "updated_at": "2025-06-16T22:49:02.702580",
+    "report": [
+      {
+        "inv_id": "BICA560887RENA",
+        "value": 35.76,
+        "range": [
+          22,
+          29
         ],
         "observation": "abnormal",
         "status": "+ve"
       },
       {
-        "inv_id": "HIV 234496INFE",
-        "value": 0.81,
-        "range": [
-          0,
-          1
-        ],
-        "observation": "normal",
-        "status": "-ve"
-      },
-      {
-        "inv_id": "ALKA749549LIVE",
-        "value": 154.02,
-        "range": [
-          40,
-          129
-        ],
-        "observation": "abnormal",
-        "status": "+ve"
-      }
-    ]
-  },
-  {
-    "id": "ADJAAA2506161517662",
-    "result_id": "ADJAAA2506161517662",
-    "order_id": "ADJAAA2506161517",
-    "staff_id": "AAOT250616TH105",
-    "branch_id": "JAIP7830",
-    "user_id": "AD2506161500JO",
-    "recorded_at": "2025-06-16T15:00:17.217346",
-    "updated_at": "2025-06-16T15:00:17.217346",
-    "report": [
-      {
-        "inv_id": "BLOO680456BIOC",
-        "value": 25.39,
-        "range": [
-          10,
-          50
-        ],
-        "observation": "normal",
-        "status": "-ve"
-      },
-      {
-        "inv_id": "PLAT279748HEMA",
-        "value": 338685.26,
-        "range": [
-          150000,
-          450000
-        ],
-        "observation": "normal",
-        "status": "-ve"
-      }
-    ]
-  },
-  {
-    "id": "ANHYKR2506161517240",
-    "result_id": "ANHYKR2506161517240",
-    "order_id": "ANHYKR2506161517",
-    "staff_id": "KRDO250616KA362",
-    "branch_id": "HYDE0122",
-    "user_id": "AN2506161500GU",
-    "recorded_at": "2025-06-16T15:00:17.217346",
-    "updated_at": "2025-06-16T15:00:17.217346",
-    "report": [
-      {
-        "inv_id": "VLDL044726LIPI",
-        "value": 13.67,
-        "range": [
-          5,
-          40
-        ],
-        "observation": "normal",
-        "status": "-ve"
-      },
-      {
-        "inv_id": "WIDA004844INFE",
-        "value": 124.32,
-        "range": [
-          0,
-          160
-        ],
-        "observation": "normal",
-        "status": "-ve"
-      }
-    ]
-  },
-  {
-    "id": "ISHYRI2506161517127",
-    "result_id": "ISHYRI2506161517127",
-    "order_id": "ISHYRI2506161517",
-    "staff_id": "RIDO250616RE175",
-    "branch_id": "HYDE0122",
-    "user_id": "IS2506161500BA",
-    "recorded_at": "2025-06-16T15:00:17.217346",
-    "updated_at": "2025-06-16T15:00:17.217346",
-    "report": [
-      {
-        "inv_id": "RBC 695285HEMA",
-        "value": 4.42,
-        "range": [
-          4.7,
-          6.1
-        ],
-        "observation": "abnormal",
-        "status": "+ve"
-      },
-      {
-        "inv_id": "HIV 234496INFE",
-        "value": 0.12,
-        "range": [
-          0,
-          1
-        ],
-        "observation": "normal",
-        "status": "-ve"
-      }
-    ]
-  },
-  {
-    "id": "PIJAAY2506161517699",
-    "result_id": "PIJAAY2506161517699",
-    "order_id": "PIJAAY2506161517",
-    "staff_id": "AYOT250616IY622",
-    "branch_id": "JAIP5963",
-    "user_id": "PI2506161500GU",
-    "recorded_at": "2025-06-16T15:00:17.217346",
-    "updated_at": "2025-06-16T15:00:17.217346",
-    "report": [
-      {
-        "inv_id": "BNP018857CARD",
-        "value": 10.38,
-        "range": [
-          0,
-          100
-        ],
-        "observation": "normal",
-        "status": "-ve"
-      },
-      {
-        "inv_id": "LDH479802CARD",
-        "value": 105.94,
+        "inv_id": "LDH373892CARD",
+        "value": 309.92,
         "range": [
           140,
           280
@@ -2998,18 +2068,114 @@
     ]
   },
   {
-    "id": "ARJAMY2506161517666",
-    "result_id": "ARJAMY2506161517666",
-    "order_id": "ARJAMY2506161517",
-    "staff_id": "MYTE250616NA458",
-    "branch_id": "JAIP7830",
-    "user_id": "AR2506161500MI",
-    "recorded_at": "2025-06-16T15:00:17.217346",
-    "updated_at": "2025-06-16T15:00:17.217346",
+    "id": "MYHYMY2506162202572",
+    "result_id": "MYHYMY2506162202572",
+    "order_id": "MYHYMY2506162202",
+    "staff_id": "MYSU250616SH895",
+    "branch_id": "HYDE6128",
+    "user_id": "MY2506162249MI",
+    "recorded_at": "2025-06-16T22:49:02.702580",
+    "updated_at": "2025-06-16T22:49:02.702580",
     "report": [
       {
-        "inv_id": "BLOO680456BIOC",
-        "value": 24.07,
+        "inv_id": "SERU159195BIOC",
+        "value": 164.93,
+        "range": [
+          135,
+          145
+        ],
+        "observation": "abnormal",
+        "status": "+ve"
+      }
+    ]
+  },
+  {
+    "id": "AYHYNI2506162202119",
+    "result_id": "AYHYNI2506162202119",
+    "order_id": "AYHYNI2506162202",
+    "staff_id": "NIOT250616IY770",
+    "branch_id": "HYDE6128",
+    "user_id": "AY2506162249ME",
+    "recorded_at": "2025-06-16T22:49:02.702580",
+    "updated_at": "2025-06-16T22:49:02.702580",
+    "report": [
+      {
+        "inv_id": "PLAT578459HEMA",
+        "value": 372424.94,
+        "range": [
+          150000,
+          450000
+        ],
+        "observation": "normal",
+        "status": "-ve"
+      },
+      {
+        "inv_id": "CHLO755476RENA",
+        "value": 121.11,
+        "range": [
+          96,
+          106
+        ],
+        "observation": "abnormal",
+        "status": "+ve"
+      }
+    ]
+  },
+  {
+    "id": "PIHYPI2506162202535",
+    "result_id": "PIHYPI2506162202535",
+    "order_id": "PIHYPI2506162202",
+    "staff_id": "PIOT250616DA007",
+    "branch_id": "HYDE6128",
+    "user_id": "PI2506162249BA",
+    "recorded_at": "2025-06-16T22:49:02.702580",
+    "updated_at": "2025-06-16T22:49:02.702580",
+    "report": [
+      {
+        "inv_id": "HIV 744325INFE",
+        "value": 1.15,
+        "range": [
+          0,
+          1
+        ],
+        "observation": "abnormal",
+        "status": "+ve"
+      },
+      {
+        "inv_id": "HBA1897551DIAB",
+        "value": 6.61,
+        "range": [
+          4.0,
+          5.6
+        ],
+        "observation": "abnormal",
+        "status": "+ve"
+      },
+      {
+        "inv_id": "HEPA071248INFE",
+        "value": 0.06,
+        "range": [
+          0,
+          0.05
+        ],
+        "observation": "abnormal",
+        "status": "+ve"
+      }
+    ]
+  },
+  {
+    "id": "TAMUDI2506162202647",
+    "result_id": "TAMUDI2506162202647",
+    "order_id": "TAMUDI2506162202",
+    "staff_id": "DIDO250616PA777",
+    "branch_id": "MUMB4102",
+    "user_id": "TA2506162249SI",
+    "recorded_at": "2025-06-16T22:49:02.702580",
+    "updated_at": "2025-06-16T22:49:02.702580",
+    "report": [
+      {
+        "inv_id": "BLOO213437BIOC",
+        "value": 39.22,
         "range": [
           10,
           50
@@ -3018,8 +2184,82 @@
         "status": "-ve"
       },
       {
-        "inv_id": "SERU388492RENA",
-        "value": 4.59,
+        "inv_id": "PLAT578459HEMA",
+        "value": 314103.99,
+        "range": [
+          150000,
+          450000
+        ],
+        "observation": "normal",
+        "status": "-ve"
+      },
+      {
+        "inv_id": "TOTA056230LIPI",
+        "value": 131.8,
+        "range": [
+          125,
+          200
+        ],
+        "observation": "normal",
+        "status": "-ve"
+      }
+    ]
+  },
+  {
+    "id": "NILUAY2506162202812",
+    "result_id": "NILUAY2506162202812",
+    "order_id": "NILUAY2506162202",
+    "staff_id": "AYTE250616JO178",
+    "branch_id": "LUCK0045",
+    "user_id": "NI2506162249VE",
+    "recorded_at": "2025-06-16T22:49:02.702580",
+    "updated_at": "2025-06-16T22:49:02.702580",
+    "report": [
+      {
+        "inv_id": "HBA1897551DIAB",
+        "value": 4.38,
+        "range": [
+          4.0,
+          5.6
+        ],
+        "observation": "normal",
+        "status": "-ve"
+      },
+      {
+        "inv_id": "WBC 118449HEMA",
+        "value": 8384.88,
+        "range": [
+          4500,
+          11000
+        ],
+        "observation": "normal",
+        "status": "-ve"
+      }
+    ]
+  },
+  {
+    "id": "AVDEKA2506162202856",
+    "result_id": "AVDEKA2506162202856",
+    "order_id": "AVDEKA2506162202",
+    "staff_id": "KAOT250616JA263",
+    "branch_id": "DELH7407",
+    "user_id": "AV2506162249NA",
+    "recorded_at": "2025-06-16T22:49:02.702580",
+    "updated_at": "2025-06-16T22:49:02.702580",
+    "report": [
+      {
+        "inv_id": "BLOO313107BIOC",
+        "value": 67.68,
+        "range": [
+          70,
+          100
+        ],
+        "observation": "abnormal",
+        "status": "+ve"
+      },
+      {
+        "inv_id": "SERU040973RENA",
+        "value": 5.53,
         "range": [
           3.5,
           7.2
@@ -3028,14 +2268,774 @@
         "status": "-ve"
       },
       {
-        "inv_id": "SGPT490084LIVE",
-        "value": 22.6,
+        "inv_id": "HIV 744325INFE",
+        "value": 0.72,
         "range": [
-          7,
-          56
+          0,
+          1
         ],
         "observation": "normal",
         "status": "-ve"
+      }
+    ]
+  },
+  {
+    "id": "AYHYNI2506162202135",
+    "result_id": "AYHYNI2506162202135",
+    "order_id": "AYHYNI2506162202",
+    "staff_id": "NIOT250616IY770",
+    "branch_id": "HYDE6128",
+    "user_id": "AY2506162249ME",
+    "recorded_at": "2025-06-16T22:49:02.702580",
+    "updated_at": "2025-06-16T22:49:02.702580",
+    "report": [
+      {
+        "inv_id": "PLAT578459HEMA",
+        "value": 471326.35,
+        "range": [
+          150000,
+          450000
+        ],
+        "observation": "abnormal",
+        "status": "+ve"
+      },
+      {
+        "inv_id": "CHLO755476RENA",
+        "value": 109.77,
+        "range": [
+          96,
+          106
+        ],
+        "observation": "abnormal",
+        "status": "+ve"
+      }
+    ]
+  },
+  {
+    "id": "MYDEKA2506162202895",
+    "result_id": "MYDEKA2506162202895",
+    "order_id": "MYDEKA2506162202",
+    "staff_id": "KAOT250616JA263",
+    "branch_id": "DELH7407",
+    "user_id": "MY2506162249MI",
+    "recorded_at": "2025-06-16T22:49:02.702580",
+    "updated_at": "2025-06-16T22:49:02.702580",
+    "report": [
+      {
+        "inv_id": "HBA1897551DIAB",
+        "value": 7.16,
+        "range": [
+          4.0,
+          5.6
+        ],
+        "observation": "abnormal",
+        "status": "+ve"
+      }
+    ]
+  },
+  {
+    "id": "REHYNI2506162202809",
+    "result_id": "REHYNI2506162202809",
+    "order_id": "REHYNI2506162202",
+    "staff_id": "NIAD250616AG738",
+    "branch_id": "HYDE6128",
+    "user_id": "RE2506162249SI",
+    "recorded_at": "2025-06-16T22:49:02.702580",
+    "updated_at": "2025-06-16T22:49:02.702580",
+    "report": [
+      {
+        "inv_id": "SGOT060392LIVE",
+        "value": 48.48,
+        "range": [
+          5,
+          40
+        ],
+        "observation": "abnormal",
+        "status": "+ve"
+      }
+    ]
+  },
+  {
+    "id": "TADEAY2506162202603",
+    "result_id": "TADEAY2506162202603",
+    "order_id": "TADEAY2506162202",
+    "staff_id": "AYTE250616JO178",
+    "branch_id": "DELH7407",
+    "user_id": "TA2506162249VE",
+    "recorded_at": "2025-06-16T22:49:02.702580",
+    "updated_at": "2025-06-16T22:49:02.702580",
+    "report": [
+      {
+        "inv_id": "SERU872948BIOC",
+        "value": 1.4,
+        "range": [
+          0.6,
+          1.3
+        ],
+        "observation": "abnormal",
+        "status": "+ve"
+      }
+    ]
+  },
+  {
+    "id": "TAPUSA2506162202985",
+    "result_id": "TAPUSA2506162202985",
+    "order_id": "TAPUSA2506162202",
+    "staff_id": "SACL250616ME648",
+    "branch_id": "PUNE6559",
+    "user_id": "TA2506162249SH",
+    "recorded_at": "2025-06-16T22:49:02.702580",
+    "updated_at": "2025-06-16T22:49:02.702580",
+    "report": [
+      {
+        "inv_id": "TRIG559811LIPI",
+        "value": 45.76,
+        "range": [
+          0,
+          150
+        ],
+        "observation": "normal",
+        "status": "-ve"
+      }
+    ]
+  },
+  {
+    "id": "ADLUIR2506162202834",
+    "result_id": "ADLUIR2506162202834",
+    "order_id": "ADLUIR2506162202",
+    "staff_id": "IRDO250616JA260",
+    "branch_id": "LUCK0045",
+    "user_id": "AD2506162249KU",
+    "recorded_at": "2025-06-16T22:49:02.702580",
+    "updated_at": "2025-06-16T22:49:02.702580",
+    "report": [
+      {
+        "inv_id": "FSH957002HORM",
+        "value": 11.12,
+        "range": [
+          1.5,
+          12.4
+        ],
+        "observation": "normal",
+        "status": "-ve"
+      },
+      {
+        "inv_id": "TSH325223THYR",
+        "value": 2.08,
+        "range": [
+          0.4,
+          4.0
+        ],
+        "observation": "normal",
+        "status": "-ve"
+      },
+      {
+        "inv_id": "SERU872948BIOC",
+        "value": 0.49,
+        "range": [
+          0.6,
+          1.3
+        ],
+        "observation": "abnormal",
+        "status": "+ve"
+      }
+    ]
+  },
+  {
+    "id": "TADESA2506162202650",
+    "result_id": "TADESA2506162202650",
+    "order_id": "TADESA2506162202",
+    "staff_id": "SACL250616BA737",
+    "branch_id": "DELH7407",
+    "user_id": "TA2506162249AG",
+    "recorded_at": "2025-06-16T22:49:02.702580",
+    "updated_at": "2025-06-16T22:49:02.702580",
+    "report": [
+      {
+        "inv_id": "LDL 642625LIPI",
+        "value": 126.59,
+        "range": [
+          0,
+          130
+        ],
+        "observation": "normal",
+        "status": "-ve"
+      }
+    ]
+  },
+  {
+    "id": "ISBARE2506162202574",
+    "result_id": "ISBARE2506162202574",
+    "order_id": "ISBARE2506162202",
+    "staff_id": "RESU250616BA024",
+    "branch_id": "BANG2794",
+    "user_id": "IS2506162249NA",
+    "recorded_at": "2025-06-16T22:49:02.702580",
+    "updated_at": "2025-06-16T22:49:02.702580",
+    "report": [
+      {
+        "inv_id": "TEST167299HORM",
+        "value": 971.21,
+        "range": [
+          300,
+          1000
+        ],
+        "observation": "normal",
+        "status": "-ve"
+      },
+      {
+        "inv_id": "HEPA071248INFE",
+        "value": 0.05,
+        "range": [
+          0,
+          0.05
+        ],
+        "observation": "normal",
+        "status": "-ve"
+      }
+    ]
+  },
+  {
+    "id": "REPUSA2506162202756",
+    "result_id": "REPUSA2506162202756",
+    "order_id": "REPUSA2506162202",
+    "staff_id": "SACL250616ME648",
+    "branch_id": "PUNE6559",
+    "user_id": "RE2506162249SI",
+    "recorded_at": "2025-06-16T22:49:02.702580",
+    "updated_at": "2025-06-16T22:49:02.702580",
+    "report": [
+      {
+        "inv_id": "CHLO755476RENA",
+        "value": 98.1,
+        "range": [
+          96,
+          106
+        ],
+        "observation": "normal",
+        "status": "-ve"
+      },
+      {
+        "inv_id": "LH592373HORM",
+        "value": 9.57,
+        "range": [
+          1.7,
+          8.6
+        ],
+        "observation": "abnormal",
+        "status": "+ve"
+      },
+      {
+        "inv_id": "T4309288THYR",
+        "value": 15.43,
+        "range": [
+          5.0,
+          12.0
+        ],
+        "observation": "abnormal",
+        "status": "+ve"
+      }
+    ]
+  },
+  {
+    "id": "KABAKR2506162202219",
+    "result_id": "KABAKR2506162202219",
+    "order_id": "KABAKR2506162202",
+    "staff_id": "KROT250616BH496",
+    "branch_id": "BANG2794",
+    "user_id": "KA2506162249BA",
+    "recorded_at": "2025-06-16T22:49:02.702580",
+    "updated_at": "2025-06-16T22:49:02.702580",
+    "report": [
+      {
+        "inv_id": "FAST671656DIAB",
+        "value": 88.77,
+        "range": [
+          70,
+          100
+        ],
+        "observation": "normal",
+        "status": "-ve"
+      },
+      {
+        "inv_id": "FREE933498THYR",
+        "value": 0.78,
+        "range": [
+          0.8,
+          1.8
+        ],
+        "observation": "abnormal",
+        "status": "+ve"
+      },
+      {
+        "inv_id": "HIV 744325INFE",
+        "value": 0.47,
+        "range": [
+          0,
+          1
+        ],
+        "observation": "normal",
+        "status": "-ve"
+      }
+    ]
+  },
+  {
+    "id": "ISMUMY2506162202079",
+    "result_id": "ISMUMY2506162202079",
+    "order_id": "ISMUMY2506162202",
+    "staff_id": "MYSU250616SH895",
+    "branch_id": "MUMB4102",
+    "user_id": "IS2506162249NA",
+    "recorded_at": "2025-06-16T22:49:02.702580",
+    "updated_at": "2025-06-16T22:49:02.702580",
+    "report": [
+      {
+        "inv_id": "C-PE778514DIAB",
+        "value": 1.26,
+        "range": [
+          0.78,
+          1.89
+        ],
+        "observation": "normal",
+        "status": "-ve"
+      }
+    ]
+  },
+  {
+    "id": "TAMUAD2506162202361",
+    "result_id": "TAMUAD2506162202361",
+    "order_id": "TAMUAD2506162202",
+    "staff_id": "ADCL250616SI853",
+    "branch_id": "MUMB4102",
+    "user_id": "TA2506162249SH",
+    "recorded_at": "2025-06-16T22:49:02.702580",
+    "updated_at": "2025-06-16T22:49:02.702580",
+    "report": [
+      {
+        "inv_id": "SGOT060392LIVE",
+        "value": 7.46,
+        "range": [
+          5,
+          40
+        ],
+        "observation": "normal",
+        "status": "-ve"
+      },
+      {
+        "inv_id": "BICA560887RENA",
+        "value": 36.29,
+        "range": [
+          22,
+          29
+        ],
+        "observation": "abnormal",
+        "status": "+ve"
+      },
+      {
+        "inv_id": "HEMA820698HEMA",
+        "value": 59.5,
+        "range": [
+          38.8,
+          50
+        ],
+        "observation": "abnormal",
+        "status": "+ve"
+      }
+    ]
+  },
+  {
+    "id": "MECHIR2506162202161",
+    "result_id": "MECHIR2506162202161",
+    "order_id": "MECHIR2506162202",
+    "staff_id": "IRDO250616JA260",
+    "branch_id": "CHEN3403",
+    "user_id": "ME2506162249SI",
+    "recorded_at": "2025-06-16T22:49:02.702580",
+    "updated_at": "2025-06-16T22:49:02.702580",
+    "report": [
+      {
+        "inv_id": "HDL 078637LIPI",
+        "value": 62.76,
+        "range": [
+          40,
+          60
+        ],
+        "observation": "abnormal",
+        "status": "+ve"
+      }
+    ]
+  },
+  {
+    "id": "MECHIR2506162202022",
+    "result_id": "MECHIR2506162202022",
+    "order_id": "MECHIR2506162202",
+    "staff_id": "IRDO250616JA260",
+    "branch_id": "CHEN3403",
+    "user_id": "ME2506162249SI",
+    "recorded_at": "2025-06-16T22:49:02.702580",
+    "updated_at": "2025-06-16T22:49:02.702580",
+    "report": [
+      {
+        "inv_id": "HDL 078637LIPI",
+        "value": 41.4,
+        "range": [
+          40,
+          60
+        ],
+        "observation": "normal",
+        "status": "-ve"
+      }
+    ]
+  },
+  {
+    "id": "TADEAN2506162202221",
+    "result_id": "TADEAN2506162202221",
+    "order_id": "TADEAN2506162202",
+    "staff_id": "ANAD250616ME641",
+    "branch_id": "DELH7407",
+    "user_id": "TA2506162249SI",
+    "recorded_at": "2025-06-16T22:49:02.702580",
+    "updated_at": "2025-06-16T22:49:02.702580",
+    "report": [
+      {
+        "inv_id": "ALBU866882LIVE",
+        "value": 3.85,
+        "range": [
+          3.4,
+          5.4
+        ],
+        "observation": "normal",
+        "status": "-ve"
+      },
+      {
+        "inv_id": "INSU725316DIAB",
+        "value": 28.55,
+        "range": [
+          2.0,
+          25.0
+        ],
+        "observation": "abnormal",
+        "status": "+ve"
+      }
+    ]
+  },
+  {
+    "id": "TAPUSA2506162202128",
+    "result_id": "TAPUSA2506162202128",
+    "order_id": "TAPUSA2506162202",
+    "staff_id": "SACL250616ME648",
+    "branch_id": "PUNE6559",
+    "user_id": "TA2506162249SH",
+    "recorded_at": "2025-06-16T22:49:02.702580",
+    "updated_at": "2025-06-16T22:49:02.702580",
+    "report": [
+      {
+        "inv_id": "TRIG559811LIPI",
+        "value": 17.1,
+        "range": [
+          0,
+          150
+        ],
+        "observation": "normal",
+        "status": "-ve"
+      }
+    ]
+  },
+  {
+    "id": "MYHYSI2506162202685",
+    "result_id": "MYHYSI2506162202685",
+    "order_id": "MYHYSI2506162202",
+    "staff_id": "SITE250616CH287",
+    "branch_id": "HYDE6128",
+    "user_id": "MY2506162249NA",
+    "recorded_at": "2025-06-16T22:49:02.702580",
+    "updated_at": "2025-06-16T22:49:02.702580",
+    "report": [
+      {
+        "inv_id": "CALC114914RENA",
+        "value": 12.47,
+        "range": [
+          8.5,
+          10.5
+        ],
+        "observation": "abnormal",
+        "status": "+ve"
+      },
+      {
+        "inv_id": "WBC 118449HEMA",
+        "value": 7497.29,
+        "range": [
+          4500,
+          11000
+        ],
+        "observation": "normal",
+        "status": "-ve"
+      }
+    ]
+  },
+  {
+    "id": "SAHYRE2506162202964",
+    "result_id": "SAHYRE2506162202964",
+    "order_id": "SAHYRE2506162202",
+    "staff_id": "REDO250616KU150",
+    "branch_id": "HYDE6128",
+    "user_id": "SA2506162249KA",
+    "recorded_at": "2025-06-16T22:49:02.702580",
+    "updated_at": "2025-06-16T22:49:02.702580",
+    "report": [
+      {
+        "inv_id": "PROL257638HORM",
+        "value": 6.54,
+        "range": [
+          4.8,
+          23.3
+        ],
+        "observation": "normal",
+        "status": "-ve"
+      },
+      {
+        "inv_id": "HEPA071248INFE",
+        "value": 0.04,
+        "range": [
+          0,
+          0.05
+        ],
+        "observation": "normal",
+        "status": "-ve"
+      },
+      {
+        "inv_id": "SERU159195BIOC",
+        "value": 175.22,
+        "range": [
+          135,
+          145
+        ],
+        "observation": "abnormal",
+        "status": "+ve"
+      }
+    ]
+  },
+  {
+    "id": "AAHYAN2506162202693",
+    "result_id": "AAHYAN2506162202693",
+    "order_id": "AAHYAN2506162202",
+    "staff_id": "ANCL250616DA335",
+    "branch_id": "HYDE6128",
+    "user_id": "AA2506162249RA",
+    "recorded_at": "2025-06-16T22:49:02.702580",
+    "updated_at": "2025-06-16T22:49:02.702580",
+    "report": [
+      {
+        "inv_id": "TRIG559811LIPI",
+        "value": 37.89,
+        "range": [
+          0,
+          150
+        ],
+        "observation": "normal",
+        "status": "-ve"
+      },
+      {
+        "inv_id": "CHLO755476RENA",
+        "value": 114.9,
+        "range": [
+          96,
+          106
+        ],
+        "observation": "abnormal",
+        "status": "+ve"
+      }
+    ]
+  },
+  {
+    "id": "MYLUVI2506162202977",
+    "result_id": "MYLUVI2506162202977",
+    "order_id": "MYLUVI2506162202",
+    "staff_id": "VISU250616RE233",
+    "branch_id": "LUCK1487",
+    "user_id": "MY2506162249SH",
+    "recorded_at": "2025-06-16T22:49:02.702580",
+    "updated_at": "2025-06-16T22:49:02.702580",
+    "report": [
+      {
+        "inv_id": "CALC114914RENA",
+        "value": 6.64,
+        "range": [
+          8.5,
+          10.5
+        ],
+        "observation": "abnormal",
+        "status": "+ve"
+      },
+      {
+        "inv_id": "SERU872948BIOC",
+        "value": 1.33,
+        "range": [
+          0.6,
+          1.3
+        ],
+        "observation": "abnormal",
+        "status": "+ve"
+      },
+      {
+        "inv_id": "HEMO906459HEMA",
+        "value": 9.65,
+        "range": [
+          13.5,
+          17.5
+        ],
+        "observation": "abnormal",
+        "status": "+ve"
+      }
+    ]
+  },
+  {
+    "id": "ISKOPI2506162202044",
+    "result_id": "ISKOPI2506162202044",
+    "order_id": "ISKOPI2506162202",
+    "staff_id": "PIAD250616SH507",
+    "branch_id": "KOLK7793",
+    "user_id": "IS2506162249RE",
+    "recorded_at": "2025-06-16T22:49:02.702580",
+    "updated_at": "2025-06-16T22:49:02.702580",
+    "report": [
+      {
+        "inv_id": "TOTA294279LIVE",
+        "value": 1.34,
+        "range": [
+          0.3,
+          1.2
+        ],
+        "observation": "abnormal",
+        "status": "+ve"
+      },
+      {
+        "inv_id": "BLOO313107BIOC",
+        "value": 62.92,
+        "range": [
+          70,
+          100
+        ],
+        "observation": "abnormal",
+        "status": "+ve"
+      },
+      {
+        "inv_id": "C-PE778514DIAB",
+        "value": 1.24,
+        "range": [
+          0.78,
+          1.89
+        ],
+        "observation": "normal",
+        "status": "-ve"
+      }
+    ]
+  },
+  {
+    "id": "REPUSA2506162202448",
+    "result_id": "REPUSA2506162202448",
+    "order_id": "REPUSA2506162202",
+    "staff_id": "SACL250616ME648",
+    "branch_id": "PUNE6559",
+    "user_id": "RE2506162249SI",
+    "recorded_at": "2025-06-16T22:49:02.702580",
+    "updated_at": "2025-06-16T22:49:02.702580",
+    "report": [
+      {
+        "inv_id": "CHLO755476RENA",
+        "value": 124.76,
+        "range": [
+          96,
+          106
+        ],
+        "observation": "abnormal",
+        "status": "+ve"
+      },
+      {
+        "inv_id": "LH592373HORM",
+        "value": 5.56,
+        "range": [
+          1.7,
+          8.6
+        ],
+        "observation": "normal",
+        "status": "-ve"
+      },
+      {
+        "inv_id": "T4309288THYR",
+        "value": 10.49,
+        "range": [
+          5.0,
+          12.0
+        ],
+        "observation": "normal",
+        "status": "-ve"
+      }
+    ]
+  },
+  {
+    "id": "ISLUMY2506162202794",
+    "result_id": "ISLUMY2506162202794",
+    "order_id": "ISLUMY2506162202",
+    "staff_id": "MYSU250616SH895",
+    "branch_id": "LUCK0045",
+    "user_id": "IS2506162249GH",
+    "recorded_at": "2025-06-16T22:49:02.702580",
+    "updated_at": "2025-06-16T22:49:02.702580",
+    "report": [
+      {
+        "inv_id": "LDL 642625LIPI",
+        "value": 157.23,
+        "range": [
+          0,
+          130
+        ],
+        "observation": "abnormal",
+        "status": "+ve"
+      }
+    ]
+  },
+  {
+    "id": "PIBAPI2506162202877",
+    "result_id": "PIBAPI2506162202877",
+    "order_id": "PIBAPI2506162202",
+    "staff_id": "PIAD250616SH507",
+    "branch_id": "BANG6477",
+    "user_id": "PI2506162249SH",
+    "recorded_at": "2025-06-16T22:49:02.702580",
+    "updated_at": "2025-06-16T22:49:02.702580",
+    "report": [
+      {
+        "inv_id": "HBA1897551DIAB",
+        "value": 4.79,
+        "range": [
+          4.0,
+          5.6
+        ],
+        "observation": "normal",
+        "status": "-ve"
+      }
+    ]
+  },
+  {
+    "id": "TADEAY2506162202861",
+    "result_id": "TADEAY2506162202861",
+    "order_id": "TADEAY2506162202",
+    "staff_id": "AYTE250616JO178",
+    "branch_id": "DELH7407",
+    "user_id": "TA2506162249VE",
+    "recorded_at": "2025-06-16T22:49:02.702580",
+    "updated_at": "2025-06-16T22:49:02.702580",
+    "report": [
+      {
+        "inv_id": "SERU872948BIOC",
+        "value": 1.43,
+        "range": [
+          0.6,
+          1.3
+        ],
+        "observation": "abnormal",
+        "status": "+ve"
       }
     ]
   }

@@ -1,36 +1,36 @@
 [
   {
-    "id": "e6b9f0d3-1427-41b3-a965-369f3b7d420e",
+    "id": "7acd0645-5fdc-4f0e-b050-2a10b444e3ee",
     "name": "Branch",
     "desc": "Branch entity"
   },
   {
-    "id": "6dd9451b-6885-4f59-9493-09ade2a4b315",
+    "id": "32839d87-5544-43b2-b5f8-da4276f61c9a",
     "name": "Staff",
     "desc": "Staff entity"
   },
   {
-    "id": "758f0da4-4e00-4b18-9d37-9cf5bf0a1709",
+    "id": "6a7dc77c-b6b6-4a3f-8f71-0d955e5d0d08",
     "name": "Patient",
     "desc": "Patient entity"
   },
   {
-    "id": "40393042-b9c9-4e08-be9b-df8d7cf92af0",
+    "id": "7d8c7187-ec25-41d4-9888-e74cfd15730e",
     "name": "InvestigationGroup",
     "desc": "InvestigationGroup entity"
   },
   {
-    "id": "8d2223de-4cb6-47dd-b1e3-1a24eb3eef3f",
+    "id": "019bf48b-5c4e-4bab-a295-6e20abbc0ea9",
     "name": "Investigation",
     "desc": "Investigation entity"
   },
   {
-    "id": "e87d8912-630f-4bda-b3ad-4275c19644f5",
+    "id": "69a39e1c-d50d-43d3-9846-ad333c2f3978",
     "name": "Order",
     "desc": "Order entity"
   },
   {
-    "id": "985f8980-4055-46d2-ae21-ee4b59798ee0",
+    "id": "9676c884-271c-49ef-8fc5-07d9950449e0",
     "name": "Result",
     "desc": "Result entity"
   }

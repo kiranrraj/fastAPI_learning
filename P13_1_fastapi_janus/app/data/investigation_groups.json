@@ -1,92 +1,92 @@
 [
   {
-    "id": "BIOCHE93514600",
-    "group_id": "BIOCHE93514600",
+    "id": "BIOCHE04713048",
+    "group_id": "BIOCHE04713048",
     "name": "Biochemistry",
     "description": "Handles biochemistry related tests",
-    "parent_group_id": "DIABET66692383",
-    "created_at": "2025-06-16T15:00:17.217346",
-    "updated_at": "2025-06-16T15:00:17.217346"
+    "parent_group_id": "",
+    "created_at": "2025-06-16T22:49:02.702580",
+    "updated_at": "2025-06-16T22:49:02.702580"
   },
   {
-    "id": "LIVER 48300370",
-    "group_id": "LIVER 48300370",
+    "id": "LIVER 76121008",
+    "group_id": "LIVER 76121008",
     "name": "Liver Function",
     "description": "Handles liver function related tests",
-    "parent_group_id": "DIABET66692383",
-    "created_at": "2025-06-16T15:00:17.217346",
-    "updated_at": "2025-06-16T15:00:17.217346"
+    "parent_group_id": "HORMON58165692",
+    "created_at": "2025-06-16T22:49:02.702580",
+    "updated_at": "2025-06-16T22:49:02.702580"
   },
   {
-    "id": "THYROI19280510",
-    "group_id": "THYROI19280510",
+    "id": "THYROI53370668",
+    "group_id": "THYROI53370668",
     "name": "Thyroid Profile",
     "description": "Handles thyroid profile related tests",
-    "parent_group_id": "BIOCHE93514600",
-    "created_at": "2025-06-16T15:00:17.217346",
-    "updated_at": "2025-06-16T15:00:17.217346"
+    "parent_group_id": "",
+    "created_at": "2025-06-16T22:49:02.702580",
+    "updated_at": "2025-06-16T22:49:02.702580"
   },
   {
-    "id": "LIPID 34137410",
-    "group_id": "LIPID 34137410",
+    "id": "LIPID 89333781",
+    "group_id": "LIPID 89333781",
     "name": "Lipid Profile",
     "description": "Handles lipid profile related tests",
     "parent_group_id": "",
-    "created_at": "2025-06-16T15:00:17.217346",
-    "updated_at": "2025-06-16T15:00:17.217346"
+    "created_at": "2025-06-16T22:49:02.702580",
+    "updated_at": "2025-06-16T22:49:02.702580"
   },
   {
-    "id": "RENAL 13713338",
-    "group_id": "RENAL 13713338",
+    "id": "RENAL 39187354",
+    "group_id": "RENAL 39187354",
     "name": "Renal Profile",
     "description": "Handles renal profile related tests",
     "parent_group_id": "",
-    "created_at": "2025-06-16T15:00:17.217346",
-    "updated_at": "2025-06-16T15:00:17.217346"
+    "created_at": "2025-06-16T22:49:02.702580",
+    "updated_at": "2025-06-16T22:49:02.702580"
   },
   {
-    "id": "HEMATO42044055",
-    "group_id": "HEMATO42044055",
+    "id": "HEMATO30249242",
+    "group_id": "HEMATO30249242",
     "name": "Hematology",
     "description": "Handles hematology related tests",
     "parent_group_id": "",
-    "created_at": "2025-06-16T15:00:17.217346",
-    "updated_at": "2025-06-16T15:00:17.217346"
+    "created_at": "2025-06-16T22:49:02.702580",
+    "updated_at": "2025-06-16T22:49:02.702580"
   },
   {
-    "id": "DIABET66692383",
-    "group_id": "DIABET66692383",
+    "id": "DIABET85402655",
+    "group_id": "DIABET85402655",
     "name": "Diabetes Panel",
     "description": "Handles diabetes panel related tests",
-    "parent_group_id": "HORMON32344012",
-    "created_at": "2025-06-16T15:00:17.217346",
-    "updated_at": "2025-06-16T15:00:17.217346"
+    "parent_group_id": "DIABET85402655",
+    "created_at": "2025-06-16T22:49:02.702580",
+    "updated_at": "2025-06-16T22:49:02.702580"
   },
   {
-    "id": "CARDIA44712321",
-    "group_id": "CARDIA44712321",
+    "id": "CARDIA82667951",
+    "group_id": "CARDIA82667951",
     "name": "Cardiac Markers",
     "description": "Handles cardiac markers related tests",
-    "parent_group_id": "RENAL 13713338",
-    "created_at": "2025-06-16T15:00:17.217346",
-    "updated_at": "2025-06-16T15:00:17.217346"
+    "parent_group_id": "DIABET85402655",
+    "created_at": "2025-06-16T22:49:02.702580",
+    "updated_at": "2025-06-16T22:49:02.702580"
   },
   {
-    "id": "INFECT13131338",
-    "group_id": "INFECT13131338",
+    "id": "INFECT55478027",
+    "group_id": "INFECT55478027",
     "name": "Infectious Diseases",
     "description": "Handles infectious diseases related tests",
-    "parent_group_id": "THYROI19280510",
-    "created_at": "2025-06-16T15:00:17.217346",
-    "updated_at": "2025-06-16T15:00:17.217346"
+    "parent_group_id": "DIABET85402655",
+    "created_at": "2025-06-16T22:49:02.702580",
+    "updated_at": "2025-06-16T22:49:02.702580"
   },
   {
-    "id": "HORMON32344012",
-    "group_id": "HORMON32344012",
+    "id": "HORMON58165692",
+    "group_id": "HORMON58165692",
     "name": "Hormonal Assays",
     "description": "Handles hormonal assays related tests",
     "parent_group_id": "",
-    "created_at": "2025-06-16T15:00:17.217346",
-    "updated_at": "2025-06-16T15:00:17.217346"
+    "created_at": "2025-06-16T22:49:02.702580",
+    "updated_at": "2025-06-16T22:49:02.702580"
   }
 ]
