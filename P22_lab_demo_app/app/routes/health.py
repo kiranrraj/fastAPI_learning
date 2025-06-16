@@ -2,6 +2,8 @@ from fastapi import APIRouter, status
 from fastapi.responses import JSONResponse
 from app.gremlin_client import ping_gremlin
 
+# All endpoints under this router will begin 
+# with /labx, so /health becomes /labx/health.
 router = APIRouter(prefix="/labx")
 
 @router.get("/health", summary="Check Gremlin connection")

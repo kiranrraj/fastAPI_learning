@@ -1,0 +1,1862 @@
+[
+  {
+    "id": "KACHSA2506161517",
+    "order_id": "KACHSA2506161517",
+    "branch_id": "CHEN2967",
+    "staff_id": "SATE250616DA667",
+    "user_id": "KA2506161500MI",
+    "created_at": "2025-06-16T15:00:17.217346",
+    "updated_at": "2025-06-16T15:00:17.217346",
+    "investigations": [
+      {
+        "inv_id": "BNP018857CARD",
+        "group_id": "CARDIA44712321"
+      }
+    ]
+  },
+  {
+    "id": "NIPUIR2506161517",
+    "order_id": "NIPUIR2506161517",
+    "branch_id": "PUNE4981",
+    "staff_id": "IRDO250616KA194",
+    "user_id": "NI2506161500JO",
+    "created_at": "2025-06-16T15:00:17.217346",
+    "updated_at": "2025-06-16T15:00:17.217346",
+    "investigations": [
+      {
+        "inv_id": "WIDA004844INFE",
+        "group_id": "DIABET66692383"
+      }
+    ]
+  },
+  {
+    "id": "TADEAN2506161517",
+    "order_id": "TADEAN2506161517",
+    "branch_id": "DELH5069",
+    "staff_id": "ANTE250616PA450",
+    "user_id": "TA2506161500JA",
+    "created_at": "2025-06-16T15:00:17.217346",
+    "updated_at": "2025-06-16T15:00:17.217346",
+    "investigations": [
+      {
+        "inv_id": "T3052269THYR",
+        "group_id": "BIOCHE93514600"
+      }
+    ]
+  },
+  {
+    "id": "VIPUTA2506161517",
+    "order_id": "VIPUTA2506161517",
+    "branch_id": "PUNE4981",
+    "staff_id": "TACL250616IY581",
+    "user_id": "VI2506161500BH",
+    "created_at": "2025-06-16T15:00:17.217346",
+    "updated_at": "2025-06-16T15:00:17.217346",
+    "investigations": [
+      {
+        "inv_id": "ALKA749549LIVE",
+        "group_id": "CARDIA44712321"
+      },
+      {
+        "inv_id": "FAST335622DIAB",
+        "group_id": "HEMATO42044055"
+      },
+      {
+        "inv_id": "FREE899007THYR",
+        "group_id": "DIABET66692383"
+      }
+    ]
+  },
+  {
+    "id": "SIJAMY2506161517",
+    "order_id": "SIJAMY2506161517",
+    "branch_id": "JAIP7830",
+    "staff_id": "MYCL250616BH244",
+    "user_id": "SI2506161500SH",
+    "created_at": "2025-06-16T15:00:17.217346",
+    "updated_at": "2025-06-16T15:00:17.217346",
+    "investigations": [
+      {
+        "inv_id": "LDL 169758LIPI",
+        "group_id": "THYROI19280510"
+      },
+      {
+        "inv_id": "TSH657926THYR",
+        "group_id": "HEMATO42044055"
+      }
+    ]
+  },
+  {
+    "id": "AVPUSA2506161517",
+    "order_id": "AVPUSA2506161517",
+    "branch_id": "PUNE4981",
+    "staff_id": "SAOT250616IY270",
+    "user_id": "AV2506161500NA",
+    "created_at": "2025-06-16T15:00:17.217346",
+    "updated_at": "2025-06-16T15:00:17.217346",
+    "investigations": [
+      {
+        "inv_id": "WIDA004844INFE",
+        "group_id": "DIABET66692383"
+      },
+      {
+        "inv_id": "FREE899007THYR",
+        "group_id": "DIABET66692383"
+      },
+      {
+        "inv_id": "PLAT279748HEMA",
+        "group_id": "BIOCHE93514600"
+      }
+    ]
+  },
+  {
+    "id": "AACHMY2506161517",
+    "order_id": "AACHMY2506161517",
+    "branch_id": "CHEN2967",
+    "staff_id": "MYTE250616NA458",
+    "user_id": "AA2506161500GU",
+    "created_at": "2025-06-16T15:00:17.217346",
+    "updated_at": "2025-06-16T15:00:17.217346",
+    "investigations": [
+      {
+        "inv_id": "HDL 359533LIPI",
+        "group_id": "HORMON32344012"
+      },
+      {
+        "inv_id": "TSH657926THYR",
+        "group_id": "HEMATO42044055"
+      },
+      {
+        "inv_id": "HEMO133600HEMA",
+        "group_id": "RENAL 13713338"
+      }
+    ]
+  },
+  {
+    "id": "ADDERI2506161517",
+    "order_id": "ADDERI2506161517",
+    "branch_id": "DELH5069",
+    "staff_id": "RICL250616PA273",
+    "user_id": "AD2506161500SH",
+    "created_at": "2025-06-16T15:00:17.217346",
+    "updated_at": "2025-06-16T15:00:17.217346",
+    "investigations": [
+      {
+        "inv_id": "HIV 234496INFE",
+        "group_id": "INFECT13131338"
+      }
+    ]
+  },
+  {
+    "id": "ISMUPI2506161517",
+    "order_id": "ISMUPI2506161517",
+    "branch_id": "MUMB7911",
+    "staff_id": "PISU250616RA330",
+    "user_id": "IS2506161500BA",
+    "created_at": "2025-06-16T15:00:17.217346",
+    "updated_at": "2025-06-16T15:00:17.217346",
+    "investigations": [
+      {
+        "inv_id": "VLDL044726LIPI",
+        "group_id": "LIVER 48300370"
+      }
+    ]
+  },
+  {
+    "id": "PICHSA2506161517",
+    "order_id": "PICHSA2506161517",
+    "branch_id": "CHEN2967",
+    "staff_id": "SATE250616DA667",
+    "user_id": "PI2506161500GU",
+    "created_at": "2025-06-16T15:00:17.217346",
+    "updated_at": "2025-06-16T15:00:17.217346",
+    "investigations": [
+      {
+        "inv_id": "TRIG835644LIPI",
+        "group_id": "LIVER 48300370"
+      },
+      {
+        "inv_id": "T3052269THYR",
+        "group_id": "BIOCHE93514600"
+      },
+      {
+        "inv_id": "LDH479802CARD",
+        "group_id": "LIVER 48300370"
+      }
+    ]
+  },
+  {
+    "id": "ANCHAY2506161517",
+    "order_id": "ANCHAY2506161517",
+    "branch_id": "CHEN2967",
+    "staff_id": "AYOT250616IY622",
+    "user_id": "AN2506161500KA",
+    "created_at": "2025-06-16T15:00:17.217346",
+    "updated_at": "2025-06-16T15:00:17.217346",
+    "investigations": [
+      {
+        "inv_id": "ALKA749549LIVE",
+        "group_id": "CARDIA44712321"
+      }
+    ]
+  },
+  {
+    "id": "REHYIR2506161517",
+    "order_id": "REHYIR2506161517",
+    "branch_id": "HYDE4708",
+    "staff_id": "IRDO250616KA194",
+    "user_id": "RE2506161500RA",
+    "created_at": "2025-06-16T15:00:17.217346",
+    "updated_at": "2025-06-16T15:00:17.217346",
+    "investigations": [
+      {
+        "inv_id": "HEMA652071HEMA",
+        "group_id": "HEMATO42044055"
+      }
+    ]
+  },
+  {
+    "id": "AVMUSA2506161517",
+    "order_id": "AVMUSA2506161517",
+    "branch_id": "MUMB2602",
+    "staff_id": "SAOT250616IY270",
+    "user_id": "AV2506161500NA",
+    "created_at": "2025-06-16T15:00:17.217346",
+    "updated_at": "2025-06-16T15:00:17.217346",
+    "investigations": [
+      {
+        "inv_id": "SERU680545BIOC",
+        "group_id": "INFECT13131338"
+      },
+      {
+        "inv_id": "SGPT490084LIVE",
+        "group_id": "DIABET66692383"
+      },
+      {
+        "inv_id": "HEMA652071HEMA",
+        "group_id": "HEMATO42044055"
+      }
+    ]
+  },
+  {
+    "id": "TADERI2506161517",
+    "order_id": "TADERI2506161517",
+    "branch_id": "DELH5069",
+    "staff_id": "RICL250616PA273",
+    "user_id": "TA2506161500DA",
+    "created_at": "2025-06-16T15:00:17.217346",
+    "updated_at": "2025-06-16T15:00:17.217346",
+    "investigations": [
+      {
+        "inv_id": "RBC 695285HEMA",
+        "group_id": "LIVER 48300370"
+      }
+    ]
+  },
+  {
+    "id": "REMUKA2506161517",
+    "order_id": "REMUKA2506161517",
+    "branch_id": "MUMB2602",
+    "staff_id": "KADO250616GH230",
+    "user_id": "RE2506161500JO",
+    "created_at": "2025-06-16T15:00:17.217346",
+    "updated_at": "2025-06-16T15:00:17.217346",
+    "investigations": [
+      {
+        "inv_id": "HBA1866497DIAB",
+        "group_id": "HEMATO42044055"
+      },
+      {
+        "inv_id": "TSH657926THYR",
+        "group_id": "HEMATO42044055"
+      }
+    ]
+  },
+  {
+    "id": "KRJAME2506161517",
+    "order_id": "KRJAME2506161517",
+    "branch_id": "JAIP5963",
+    "staff_id": "MEDO250616MI294",
+    "user_id": "KR2506161500CH",
+    "created_at": "2025-06-16T15:00:17.217346",
+    "updated_at": "2025-06-16T15:00:17.217346",
+    "investigations": [
+      {
+        "inv_id": "TRIG835644LIPI",
+        "group_id": "LIVER 48300370"
+      },
+      {
+        "inv_id": "DIRE481862LIVE",
+        "group_id": "CARDIA44712321"
+      }
+    ]
+  },
+  {
+    "id": "VICHMY2506161517",
+    "order_id": "VICHMY2506161517",
+    "branch_id": "CHEN2967",
+    "staff_id": "MYTE250616NA458",
+    "user_id": "VI2506161500BA",
+    "created_at": "2025-06-16T15:00:17.217346",
+    "updated_at": "2025-06-16T15:00:17.217346",
+    "investigations": [
+      {
+        "inv_id": "BLOO888223BIOC",
+        "group_id": "DIABET66692383"
+      }
+    ]
+  },
+  {
+    "id": "ANPUAY2506161517",
+    "order_id": "ANPUAY2506161517",
+    "branch_id": "PUNE4981",
+    "staff_id": "AYOT250616ME308",
+    "user_id": "AN2506161500CH",
+    "created_at": "2025-06-16T15:00:17.217346",
+    "updated_at": "2025-06-16T15:00:17.217346",
+    "investigations": [
+      {
+        "inv_id": "FAST335622DIAB",
+        "group_id": "HEMATO42044055"
+      },
+      {
+        "inv_id": "SERU017895BIOC",
+        "group_id": "LIPID 34137410"
+      }
+    ]
+  },
+  {
+    "id": "AYDEKA2506161517",
+    "order_id": "AYDEKA2506161517",
+    "branch_id": "DELH5069",
+    "staff_id": "KADO250616NA488",
+    "user_id": "AY2506161500TH",
+    "created_at": "2025-06-16T15:00:17.217346",
+    "updated_at": "2025-06-16T15:00:17.217346",
+    "investigations": [
+      {
+        "inv_id": "PHOS916368RENA",
+        "group_id": "LIPID 34137410"
+      },
+      {
+        "inv_id": "SERU017895BIOC",
+        "group_id": "LIPID 34137410"
+      }
+    ]
+  },
+  {
+    "id": "SABAVI2506161517",
+    "order_id": "SABAVI2506161517",
+    "branch_id": "BANG9690",
+    "staff_id": "VIAD250616MI905",
+    "user_id": "SA2506161500KA",
+    "created_at": "2025-06-16T15:00:17.217346",
+    "updated_at": "2025-06-16T15:00:17.217346",
+    "investigations": [
+      {
+        "inv_id": "CALC409446RENA",
+        "group_id": "LIPID 34137410"
+      },
+      {
+        "inv_id": "C-PE854137DIAB",
+        "group_id": "LIPID 34137410"
+      }
+    ]
+  },
+  {
+    "id": "KRBAIR2506161517",
+    "order_id": "KRBAIR2506161517",
+    "branch_id": "BANG9690",
+    "staff_id": "IRDO250616KA194",
+    "user_id": "KR2506161500CH",
+    "created_at": "2025-06-16T15:00:17.217346",
+    "updated_at": "2025-06-16T15:00:17.217346",
+    "investigations": [
+      {
+        "inv_id": "BICA679650RENA",
+        "group_id": "THYROI19280510"
+      }
+    ]
+  },
+  {
+    "id": "REBAKR2506161517",
+    "order_id": "REBAKR2506161517",
+    "branch_id": "BANG9690",
+    "staff_id": "KRDO250616KA362",
+    "user_id": "RE2506161500JA",
+    "created_at": "2025-06-16T15:00:17.217346",
+    "updated_at": "2025-06-16T15:00:17.217346",
+    "investigations": [
+      {
+        "inv_id": "LDL 169758LIPI",
+        "group_id": "THYROI19280510"
+      },
+      {
+        "inv_id": "SERU017895BIOC",
+        "group_id": "LIPID 34137410"
+      },
+      {
+        "inv_id": "ALBU333088LIVE",
+        "group_id": "LIVER 48300370"
+      }
+    ]
+  },
+  {
+    "id": "AYMUVI2506161517",
+    "order_id": "AYMUVI2506161517",
+    "branch_id": "MUMB7911",
+    "staff_id": "VIOT250616BH591",
+    "user_id": "AY2506161500SI",
+    "created_at": "2025-06-16T15:00:17.217346",
+    "updated_at": "2025-06-16T15:00:17.217346",
+    "investigations": [
+      {
+        "inv_id": "SGOT035369LIVE",
+        "group_id": "THYROI19280510"
+      },
+      {
+        "inv_id": "ALKA749549LIVE",
+        "group_id": "CARDIA44712321"
+      }
+    ]
+  },
+  {
+    "id": "AYMUAA2506161517",
+    "order_id": "AYMUAA2506161517",
+    "branch_id": "MUMB2602",
+    "staff_id": "AAOT250616TH105",
+    "user_id": "AY2506161500TH",
+    "created_at": "2025-06-16T15:00:17.217346",
+    "updated_at": "2025-06-16T15:00:17.217346",
+    "investigations": [
+      {
+        "inv_id": "FSH467356HORM",
+        "group_id": "HEMATO42044055"
+      },
+      {
+        "inv_id": "HBA1866497DIAB",
+        "group_id": "HEMATO42044055"
+      },
+      {
+        "inv_id": "BICA679650RENA",
+        "group_id": "THYROI19280510"
+      }
+    ]
+  },
+  {
+    "id": "KAMUSA2506161517",
+    "order_id": "KAMUSA2506161517",
+    "branch_id": "MUMB7911",
+    "staff_id": "SAOT250616IY270",
+    "user_id": "KA2506161500PA",
+    "created_at": "2025-06-16T15:00:17.217346",
+    "updated_at": "2025-06-16T15:00:17.217346",
+    "investigations": [
+      {
+        "inv_id": "HEMO133600HEMA",
+        "group_id": "RENAL 13713338"
+      }
+    ]
+  },
+  {
+    "id": "ANJAAY2506161517",
+    "order_id": "ANJAAY2506161517",
+    "branch_id": "JAIP7830",
+    "staff_id": "AYOT250616IY622",
+    "user_id": "AN2506161500GU",
+    "created_at": "2025-06-16T15:00:17.217346",
+    "updated_at": "2025-06-16T15:00:17.217346",
+    "investigations": [
+      {
+        "inv_id": "T4584050THYR",
+        "group_id": "LIPID 34137410"
+      }
+    ]
+  },
+  {
+    "id": "ISBAVI2506161517",
+    "order_id": "ISBAVI2506161517",
+    "branch_id": "BANG9690",
+    "staff_id": "VIAD250616MI905",
+    "user_id": "IS2506161500VE",
+    "created_at": "2025-06-16T15:00:17.217346",
+    "updated_at": "2025-06-16T15:00:17.217346",
+    "investigations": [
+      {
+        "inv_id": "DIRE481862LIVE",
+        "group_id": "CARDIA44712321"
+      }
+    ]
+  },
+  {
+    "id": "VIDESA2506161517",
+    "order_id": "VIDESA2506161517",
+    "branch_id": "DELH5069",
+    "staff_id": "SAOT250616SH753",
+    "user_id": "VI2506161500JO",
+    "created_at": "2025-06-16T15:00:17.217346",
+    "updated_at": "2025-06-16T15:00:17.217346",
+    "investigations": [
+      {
+        "inv_id": "LDL 169758LIPI",
+        "group_id": "THYROI19280510"
+      },
+      {
+        "inv_id": "CK-M177145CARD",
+        "group_id": "INFECT13131338"
+      }
+    ]
+  },
+  {
+    "id": "ISHYRI2506161517",
+    "order_id": "ISHYRI2506161517",
+    "branch_id": "HYDE0122",
+    "staff_id": "RIDO250616RE175",
+    "user_id": "IS2506161500BA",
+    "created_at": "2025-06-16T15:00:17.217346",
+    "updated_at": "2025-06-16T15:00:17.217346",
+    "investigations": [
+      {
+        "inv_id": "RBC 695285HEMA",
+        "group_id": "LIVER 48300370"
+      },
+      {
+        "inv_id": "HIV 234496INFE",
+        "group_id": "INFECT13131338"
+      }
+    ]
+  },
+  {
+    "id": "VIPURI2506161517",
+    "order_id": "VIPURI2506161517",
+    "branch_id": "PUNE4981",
+    "staff_id": "RIDO250616RE175",
+    "user_id": "VI2506161500ME",
+    "created_at": "2025-06-16T15:00:17.217346",
+    "updated_at": "2025-06-16T15:00:17.217346",
+    "investigations": [
+      {
+        "inv_id": "ALKA749549LIVE",
+        "group_id": "CARDIA44712321"
+      },
+      {
+        "inv_id": "CALC409446RENA",
+        "group_id": "LIPID 34137410"
+      },
+      {
+        "inv_id": "HEMO133600HEMA",
+        "group_id": "RENAL 13713338"
+      }
+    ]
+  },
+  {
+    "id": "ADCHRI2506161517",
+    "order_id": "ADCHRI2506161517",
+    "branch_id": "CHEN2967",
+    "staff_id": "RICL250616PA273",
+    "user_id": "AD2506161500SH",
+    "created_at": "2025-06-16T15:00:17.217346",
+    "updated_at": "2025-06-16T15:00:17.217346",
+    "investigations": [
+      {
+        "inv_id": "BLOO484797BIOC",
+        "group_id": "RENAL 13713338"
+      }
+    ]
+  },
+  {
+    "id": "ANBAPI2506161517",
+    "order_id": "ANBAPI2506161517",
+    "branch_id": "BANG9690",
+    "staff_id": "PISU250616RA330",
+    "user_id": "AN2506161500KA",
+    "created_at": "2025-06-16T15:00:17.217346",
+    "updated_at": "2025-06-16T15:00:17.217346",
+    "investigations": [
+      {
+        "inv_id": "TOTA177259LIVE",
+        "group_id": "RENAL 13713338"
+      },
+      {
+        "inv_id": "C-PE854137DIAB",
+        "group_id": "LIPID 34137410"
+      }
+    ]
+  },
+  {
+    "id": "ISHYKR2506161517",
+    "order_id": "ISHYKR2506161517",
+    "branch_id": "HYDE4708",
+    "staff_id": "KRDO250616KA362",
+    "user_id": "IS2506161500JA",
+    "created_at": "2025-06-16T15:00:17.217346",
+    "updated_at": "2025-06-16T15:00:17.217346",
+    "investigations": [
+      {
+        "inv_id": "RBC 695285HEMA",
+        "group_id": "LIVER 48300370"
+      },
+      {
+        "inv_id": "FREE284255THYR",
+        "group_id": "HEMATO42044055"
+      },
+      {
+        "inv_id": "SERU680545BIOC",
+        "group_id": "INFECT13131338"
+      }
+    ]
+  },
+  {
+    "id": "ANBAVI2506161517",
+    "order_id": "ANBAVI2506161517",
+    "branch_id": "BANG9690",
+    "staff_id": "VIOT250616BH591",
+    "user_id": "AN2506161500ME",
+    "created_at": "2025-06-16T15:00:17.217346",
+    "updated_at": "2025-06-16T15:00:17.217346",
+    "investigations": [
+      {
+        "inv_id": "WIDA004844INFE",
+        "group_id": "DIABET66692383"
+      },
+      {
+        "inv_id": "LDH479802CARD",
+        "group_id": "LIVER 48300370"
+      }
+    ]
+  },
+  {
+    "id": "ARDEKR2506161517",
+    "order_id": "ARDEKR2506161517",
+    "branch_id": "DELH5069",
+    "staff_id": "KRDO250616KA362",
+    "user_id": "AR2506161500KU",
+    "created_at": "2025-06-16T15:00:17.217346",
+    "updated_at": "2025-06-16T15:00:17.217346",
+    "investigations": [
+      {
+        "inv_id": "CK-M177145CARD",
+        "group_id": "INFECT13131338"
+      }
+    ]
+  },
+  {
+    "id": "PIBASA2506161517",
+    "order_id": "PIBASA2506161517",
+    "branch_id": "BANG9690",
+    "staff_id": "SAOT250616IY270",
+    "user_id": "PI2506161500GU",
+    "created_at": "2025-06-16T15:00:17.217346",
+    "updated_at": "2025-06-16T15:00:17.217346",
+    "investigations": [
+      {
+        "inv_id": "VLDL044726LIPI",
+        "group_id": "LIVER 48300370"
+      },
+      {
+        "inv_id": "BLOO680456BIOC",
+        "group_id": "RENAL 13713338"
+      }
+    ]
+  },
+  {
+    "id": "ADHYAV2506161517",
+    "order_id": "ADHYAV2506161517",
+    "branch_id": "HYDE0122",
+    "staff_id": "AVTE250616IY469",
+    "user_id": "AD2506161500JO",
+    "created_at": "2025-06-16T15:00:17.217346",
+    "updated_at": "2025-06-16T15:00:17.217346",
+    "investigations": [
+      {
+        "inv_id": "FREE899007THYR",
+        "group_id": "DIABET66692383"
+      },
+      {
+        "inv_id": "PLAT279748HEMA",
+        "group_id": "BIOCHE93514600"
+      }
+    ]
+  },
+  {
+    "id": "MEMUMY2506161517",
+    "order_id": "MEMUMY2506161517",
+    "branch_id": "MUMB2602",
+    "staff_id": "MYAD250616AG507",
+    "user_id": "ME2506161500ME",
+    "created_at": "2025-06-16T15:00:17.217346",
+    "updated_at": "2025-06-16T15:00:17.217346",
+    "investigations": [
+      {
+        "inv_id": "HIV 234496INFE",
+        "group_id": "INFECT13131338"
+      },
+      {
+        "inv_id": "T4584050THYR",
+        "group_id": "LIPID 34137410"
+      }
+    ]
+  },
+  {
+    "id": "VIJAAY2506161517",
+    "order_id": "VIJAAY2506161517",
+    "branch_id": "JAIP7830",
+    "staff_id": "AYOT250616IY622",
+    "user_id": "VI2506161500CH",
+    "created_at": "2025-06-16T15:00:17.217346",
+    "updated_at": "2025-06-16T15:00:17.217346",
+    "investigations": [
+      {
+        "inv_id": "FREE284255THYR",
+        "group_id": "HEMATO42044055"
+      }
+    ]
+  },
+  {
+    "id": "ADJAAV2506161517",
+    "order_id": "ADJAAV2506161517",
+    "branch_id": "JAIP7830",
+    "staff_id": "AVTE250616IY469",
+    "user_id": "AD2506161500SH",
+    "created_at": "2025-06-16T15:00:17.217346",
+    "updated_at": "2025-06-16T15:00:17.217346",
+    "investigations": [
+      {
+        "inv_id": "ALBU333088LIVE",
+        "group_id": "LIVER 48300370"
+      },
+      {
+        "inv_id": "WBC 880466HEMA",
+        "group_id": "DIABET66692383"
+      },
+      {
+        "inv_id": "TROP578035CARD",
+        "group_id": "THYROI19280510"
+      }
+    ]
+  },
+  {
+    "id": "TAHYME2506161517",
+    "order_id": "TAHYME2506161517",
+    "branch_id": "HYDE4708",
+    "staff_id": "MECL250616SI418",
+    "user_id": "TA2506161500CH",
+    "created_at": "2025-06-16T15:00:17.217346",
+    "updated_at": "2025-06-16T15:00:17.217346",
+    "investigations": [
+      {
+        "inv_id": "TRIG835644LIPI",
+        "group_id": "LIVER 48300370"
+      },
+      {
+        "inv_id": "WBC 880466HEMA",
+        "group_id": "DIABET66692383"
+      },
+      {
+        "inv_id": "TSH657926THYR",
+        "group_id": "HEMATO42044055"
+      }
+    ]
+  },
+  {
+    "id": "KRMUVI2506161517",
+    "order_id": "KRMUVI2506161517",
+    "branch_id": "MUMB7911",
+    "staff_id": "VIAD250616MI905",
+    "user_id": "KR2506161500CH",
+    "created_at": "2025-06-16T15:00:17.217346",
+    "updated_at": "2025-06-16T15:00:17.217346",
+    "investigations": [
+      {
+        "inv_id": "WIDA004844INFE",
+        "group_id": "DIABET66692383"
+      }
+    ]
+  },
+  {
+    "id": "IRJAAA2506161517",
+    "order_id": "IRJAAA2506161517",
+    "branch_id": "JAIP5963",
+    "staff_id": "AAOT250616TH105",
+    "user_id": "IR2506161500TH",
+    "created_at": "2025-06-16T15:00:17.217346",
+    "updated_at": "2025-06-16T15:00:17.217346",
+    "investigations": [
+      {
+        "inv_id": "HEPA279915INFE",
+        "group_id": "INFECT13131338"
+      },
+      {
+        "inv_id": "HBA1866497DIAB",
+        "group_id": "HEMATO42044055"
+      }
+    ]
+  },
+  {
+    "id": "RIHYIR2506161517",
+    "order_id": "RIHYIR2506161517",
+    "branch_id": "HYDE0122",
+    "staff_id": "IRDO250616KA194",
+    "user_id": "RI2506161500GH",
+    "created_at": "2025-06-16T15:00:17.217346",
+    "updated_at": "2025-06-16T15:00:17.217346",
+    "investigations": [
+      {
+        "inv_id": "SGOT035369LIVE",
+        "group_id": "THYROI19280510"
+      },
+      {
+        "inv_id": "SGPT490084LIVE",
+        "group_id": "DIABET66692383"
+      }
+    ]
+  },
+  {
+    "id": "ANBAAY2506161517",
+    "order_id": "ANBAAY2506161517",
+    "branch_id": "BANG9690",
+    "staff_id": "AYOT250616IY622",
+    "user_id": "AN2506161500CH",
+    "created_at": "2025-06-16T15:00:17.217346",
+    "updated_at": "2025-06-16T15:00:17.217346",
+    "investigations": [
+      {
+        "inv_id": "RBC 695285HEMA",
+        "group_id": "LIVER 48300370"
+      },
+      {
+        "inv_id": "BLOO888223BIOC",
+        "group_id": "DIABET66692383"
+      }
+    ]
+  },
+  {
+    "id": "KRPUKR2506161517",
+    "order_id": "KRPUKR2506161517",
+    "branch_id": "PUNE4981",
+    "staff_id": "KRTE250616GH279",
+    "user_id": "KR2506161500CH",
+    "created_at": "2025-06-16T15:00:17.217346",
+    "updated_at": "2025-06-16T15:00:17.217346",
+    "investigations": [
+      {
+        "inv_id": "CALC409446RENA",
+        "group_id": "LIPID 34137410"
+      },
+      {
+        "inv_id": "ALKA749549LIVE",
+        "group_id": "CARDIA44712321"
+      }
+    ]
+  },
+  {
+    "id": "REMUKA2506161517",
+    "order_id": "REMUKA2506161517",
+    "branch_id": "MUMB7911",
+    "staff_id": "KADO250616GH230",
+    "user_id": "RE2506161500RA",
+    "created_at": "2025-06-16T15:00:17.217346",
+    "updated_at": "2025-06-16T15:00:17.217346",
+    "investigations": [
+      {
+        "inv_id": "WBC 880466HEMA",
+        "group_id": "DIABET66692383"
+      },
+      {
+        "inv_id": "LDH479802CARD",
+        "group_id": "LIVER 48300370"
+      },
+      {
+        "inv_id": "TOTA177259LIVE",
+        "group_id": "RENAL 13713338"
+      }
+    ]
+  },
+  {
+    "id": "SAMUVI2506161517",
+    "order_id": "SAMUVI2506161517",
+    "branch_id": "MUMB7911",
+    "staff_id": "VIAD250616MI905",
+    "user_id": "SA2506161500BH",
+    "created_at": "2025-06-16T15:00:17.217346",
+    "updated_at": "2025-06-16T15:00:17.217346",
+    "investigations": [
+      {
+        "inv_id": "RBC 695285HEMA",
+        "group_id": "LIVER 48300370"
+      },
+      {
+        "inv_id": "CK-M177145CARD",
+        "group_id": "INFECT13131338"
+      }
+    ]
+  },
+  {
+    "id": "REJARI2506161517",
+    "order_id": "REJARI2506161517",
+    "branch_id": "JAIP5963",
+    "staff_id": "RIDO250616RE175",
+    "user_id": "RE2506161500JO",
+    "created_at": "2025-06-16T15:00:17.217346",
+    "updated_at": "2025-06-16T15:00:17.217346",
+    "investigations": [
+      {
+        "inv_id": "HEMO133600HEMA",
+        "group_id": "RENAL 13713338"
+      }
+    ]
+  },
+  {
+    "id": "KAJAAV2506161517",
+    "order_id": "KAJAAV2506161517",
+    "branch_id": "JAIP7830",
+    "staff_id": "AVTE250616IY469",
+    "user_id": "KA2506161500PA",
+    "created_at": "2025-06-16T15:00:17.217346",
+    "updated_at": "2025-06-16T15:00:17.217346",
+    "investigations": [
+      {
+        "inv_id": "VLDL044726LIPI",
+        "group_id": "LIVER 48300370"
+      }
+    ]
+  },
+  {
+    "id": "ISMUSA2506161517",
+    "order_id": "ISMUSA2506161517",
+    "branch_id": "MUMB7911",
+    "staff_id": "SAOT250616SH753",
+    "user_id": "IS2506161500JA",
+    "created_at": "2025-06-16T15:00:17.217346",
+    "updated_at": "2025-06-16T15:00:17.217346",
+    "investigations": [
+      {
+        "inv_id": "FSH467356HORM",
+        "group_id": "HEMATO42044055"
+      },
+      {
+        "inv_id": "HIV 234496INFE",
+        "group_id": "INFECT13131338"
+      },
+      {
+        "inv_id": "ALKA749549LIVE",
+        "group_id": "CARDIA44712321"
+      }
+    ]
+  },
+  {
+    "id": "ANHYKR2506161517",
+    "order_id": "ANHYKR2506161517",
+    "branch_id": "HYDE0122",
+    "staff_id": "KRDO250616KA362",
+    "user_id": "AN2506161500GU",
+    "created_at": "2025-06-16T15:00:17.217346",
+    "updated_at": "2025-06-16T15:00:17.217346",
+    "investigations": [
+      {
+        "inv_id": "VLDL044726LIPI",
+        "group_id": "LIVER 48300370"
+      },
+      {
+        "inv_id": "WIDA004844INFE",
+        "group_id": "DIABET66692383"
+      }
+    ]
+  },
+  {
+    "id": "MEJAME2506161517",
+    "order_id": "MEJAME2506161517",
+    "branch_id": "JAIP7830",
+    "staff_id": "MECL250616SI418",
+    "user_id": "ME2506161500SH",
+    "created_at": "2025-06-16T15:00:17.217346",
+    "updated_at": "2025-06-16T15:00:17.217346",
+    "investigations": [
+      {
+        "inv_id": "LH271813HORM",
+        "group_id": "LIPID 34137410"
+      },
+      {
+        "inv_id": "HDL 359533LIPI",
+        "group_id": "HORMON32344012"
+      }
+    ]
+  },
+  {
+    "id": "VIMUAY2506161517",
+    "order_id": "VIMUAY2506161517",
+    "branch_id": "MUMB7911",
+    "staff_id": "AYOT250616ME308",
+    "user_id": "VI2506161500JA",
+    "created_at": "2025-06-16T15:00:17.217346",
+    "updated_at": "2025-06-16T15:00:17.217346",
+    "investigations": [
+      {
+        "inv_id": "HIV 234496INFE",
+        "group_id": "INFECT13131338"
+      },
+      {
+        "inv_id": "TEST152169HORM",
+        "group_id": "RENAL 13713338"
+      }
+    ]
+  },
+  {
+    "id": "ISMUIR2506161517",
+    "order_id": "ISMUIR2506161517",
+    "branch_id": "MUMB7911",
+    "staff_id": "IRDO250616KA194",
+    "user_id": "IS2506161500BA",
+    "created_at": "2025-06-16T15:00:17.217346",
+    "updated_at": "2025-06-16T15:00:17.217346",
+    "investigations": [
+      {
+        "inv_id": "BICA679650RENA",
+        "group_id": "THYROI19280510"
+      }
+    ]
+  },
+  {
+    "id": "PIMUKR2506161517",
+    "order_id": "PIMUKR2506161517",
+    "branch_id": "MUMB2602",
+    "staff_id": "KRDO250616KA362",
+    "user_id": "PI2506161500ME",
+    "created_at": "2025-06-16T15:00:17.217346",
+    "updated_at": "2025-06-16T15:00:17.217346",
+    "investigations": [
+      {
+        "inv_id": "LH271813HORM",
+        "group_id": "LIPID 34137410"
+      }
+    ]
+  },
+  {
+    "id": "ISPUIR2506161517",
+    "order_id": "ISPUIR2506161517",
+    "branch_id": "PUNE4981",
+    "staff_id": "IRDO250616KA194",
+    "user_id": "IS2506161500JA",
+    "created_at": "2025-06-16T15:00:17.217346",
+    "updated_at": "2025-06-16T15:00:17.217346",
+    "investigations": [
+      {
+        "inv_id": "WBC 880466HEMA",
+        "group_id": "DIABET66692383"
+      },
+      {
+        "inv_id": "RBC 695285HEMA",
+        "group_id": "LIVER 48300370"
+      }
+    ]
+  },
+  {
+    "id": "VIMUAA2506161517",
+    "order_id": "VIMUAA2506161517",
+    "branch_id": "MUMB2602",
+    "staff_id": "AAOT250616TH105",
+    "user_id": "VI2506161500SH",
+    "created_at": "2025-06-16T15:00:17.217346",
+    "updated_at": "2025-06-16T15:00:17.217346",
+    "investigations": [
+      {
+        "inv_id": "SGPT490084LIVE",
+        "group_id": "DIABET66692383"
+      },
+      {
+        "inv_id": "SERU017895BIOC",
+        "group_id": "LIPID 34137410"
+      },
+      {
+        "inv_id": "FREE899007THYR",
+        "group_id": "DIABET66692383"
+      }
+    ]
+  },
+  {
+    "id": "VIJAME2506161517",
+    "order_id": "VIJAME2506161517",
+    "branch_id": "JAIP7830",
+    "staff_id": "MEDO250616MI294",
+    "user_id": "VI2506161500SH",
+    "created_at": "2025-06-16T15:00:17.217346",
+    "updated_at": "2025-06-16T15:00:17.217346",
+    "investigations": [
+      {
+        "inv_id": "DIRE481862LIVE",
+        "group_id": "CARDIA44712321"
+      }
+    ]
+  },
+  {
+    "id": "KRPUAN2506161517",
+    "order_id": "KRPUAN2506161517",
+    "branch_id": "PUNE4981",
+    "staff_id": "ANTE250616PA450",
+    "user_id": "KR2506161500ME",
+    "created_at": "2025-06-16T15:00:17.217346",
+    "updated_at": "2025-06-16T15:00:17.217346",
+    "investigations": [
+      {
+        "inv_id": "SERU388492RENA",
+        "group_id": "LIPID 34137410"
+      },
+      {
+        "inv_id": "DENG527247INFE",
+        "group_id": "THYROI19280510"
+      },
+      {
+        "inv_id": "PROL463148HORM",
+        "group_id": "LIPID 34137410"
+      }
+    ]
+  },
+  {
+    "id": "AAJAAN2506161517",
+    "order_id": "AAJAAN2506161517",
+    "branch_id": "JAIP5963",
+    "staff_id": "ANTE250616PA450",
+    "user_id": "AA2506161500GU",
+    "created_at": "2025-06-16T15:00:17.217346",
+    "updated_at": "2025-06-16T15:00:17.217346",
+    "investigations": [
+      {
+        "inv_id": "BNP018857CARD",
+        "group_id": "CARDIA44712321"
+      },
+      {
+        "inv_id": "BLOO484797BIOC",
+        "group_id": "RENAL 13713338"
+      }
+    ]
+  },
+  {
+    "id": "KRJASA2506161517",
+    "order_id": "KRJASA2506161517",
+    "branch_id": "JAIP5963",
+    "staff_id": "SAOT250616IY270",
+    "user_id": "KR2506161500NA",
+    "created_at": "2025-06-16T15:00:17.217346",
+    "updated_at": "2025-06-16T15:00:17.217346",
+    "investigations": [
+      {
+        "inv_id": "SERU388492RENA",
+        "group_id": "LIPID 34137410"
+      },
+      {
+        "inv_id": "HBA1866497DIAB",
+        "group_id": "HEMATO42044055"
+      },
+      {
+        "inv_id": "PLAT279748HEMA",
+        "group_id": "BIOCHE93514600"
+      }
+    ]
+  },
+  {
+    "id": "TAHYAY2506161517",
+    "order_id": "TAHYAY2506161517",
+    "branch_id": "HYDE0122",
+    "staff_id": "AYOT250616ME308",
+    "user_id": "TA2506161500GH",
+    "created_at": "2025-06-16T15:00:17.217346",
+    "updated_at": "2025-06-16T15:00:17.217346",
+    "investigations": [
+      {
+        "inv_id": "PHOS916368RENA",
+        "group_id": "LIPID 34137410"
+      }
+    ]
+  },
+  {
+    "id": "REMUSA2506161517",
+    "order_id": "REMUSA2506161517",
+    "branch_id": "MUMB7911",
+    "staff_id": "SAOT250616IY270",
+    "user_id": "RE2506161500JO",
+    "created_at": "2025-06-16T15:00:17.217346",
+    "updated_at": "2025-06-16T15:00:17.217346",
+    "investigations": [
+      {
+        "inv_id": "SERU337646BIOC",
+        "group_id": "INFECT13131338"
+      }
+    ]
+  },
+  {
+    "id": "AAJAME2506161517",
+    "order_id": "AAJAME2506161517",
+    "branch_id": "JAIP5963",
+    "staff_id": "MECL250616SI418",
+    "user_id": "AA2506161500BH",
+    "created_at": "2025-06-16T15:00:17.217346",
+    "updated_at": "2025-06-16T15:00:17.217346",
+    "investigations": [
+      {
+        "inv_id": "PLAT279748HEMA",
+        "group_id": "BIOCHE93514600"
+      },
+      {
+        "inv_id": "SERU388492RENA",
+        "group_id": "LIPID 34137410"
+      },
+      {
+        "inv_id": "WBC 880466HEMA",
+        "group_id": "DIABET66692383"
+      }
+    ]
+  },
+  {
+    "id": "ANCHAA2506161517",
+    "order_id": "ANCHAA2506161517",
+    "branch_id": "CHEN2967",
+    "staff_id": "AAOT250616TH105",
+    "user_id": "AN2506161500ME",
+    "created_at": "2025-06-16T15:00:17.217346",
+    "updated_at": "2025-06-16T15:00:17.217346",
+    "investigations": [
+      {
+        "inv_id": "BLOO484797BIOC",
+        "group_id": "RENAL 13713338"
+      },
+      {
+        "inv_id": "HEMA652071HEMA",
+        "group_id": "HEMATO42044055"
+      }
+    ]
+  },
+  {
+    "id": "ISJASA2506161517",
+    "order_id": "ISJASA2506161517",
+    "branch_id": "JAIP7830",
+    "staff_id": "SAOT250616IY270",
+    "user_id": "IS2506161500JA",
+    "created_at": "2025-06-16T15:00:17.217346",
+    "updated_at": "2025-06-16T15:00:17.217346",
+    "investigations": [
+      {
+        "inv_id": "C-PE854137DIAB",
+        "group_id": "LIPID 34137410"
+      },
+      {
+        "inv_id": "HEPA279915INFE",
+        "group_id": "INFECT13131338"
+      },
+      {
+        "inv_id": "SERU388492RENA",
+        "group_id": "LIPID 34137410"
+      }
+    ]
+  },
+  {
+    "id": "ARJAMY2506161517",
+    "order_id": "ARJAMY2506161517",
+    "branch_id": "JAIP7830",
+    "staff_id": "MYTE250616NA458",
+    "user_id": "AR2506161500MI",
+    "created_at": "2025-06-16T15:00:17.217346",
+    "updated_at": "2025-06-16T15:00:17.217346",
+    "investigations": [
+      {
+        "inv_id": "BLOO680456BIOC",
+        "group_id": "RENAL 13713338"
+      },
+      {
+        "inv_id": "SERU388492RENA",
+        "group_id": "LIPID 34137410"
+      },
+      {
+        "inv_id": "SGPT490084LIVE",
+        "group_id": "DIABET66692383"
+      }
+    ]
+  },
+  {
+    "id": "ANMUIR2506161517",
+    "order_id": "ANMUIR2506161517",
+    "branch_id": "MUMB7911",
+    "staff_id": "IRDO250616KA194",
+    "user_id": "AN2506161500GU",
+    "created_at": "2025-06-16T15:00:17.217346",
+    "updated_at": "2025-06-16T15:00:17.217346",
+    "investigations": [
+      {
+        "inv_id": "BNP018857CARD",
+        "group_id": "CARDIA44712321"
+      },
+      {
+        "inv_id": "HIV 234496INFE",
+        "group_id": "INFECT13131338"
+      },
+      {
+        "inv_id": "WIDA004844INFE",
+        "group_id": "DIABET66692383"
+      }
+    ]
+  },
+  {
+    "id": "MYJASA2506161517",
+    "order_id": "MYJASA2506161517",
+    "branch_id": "JAIP7830",
+    "staff_id": "SAOT250616IY270",
+    "user_id": "MY2506161500DA",
+    "created_at": "2025-06-16T15:00:17.217346",
+    "updated_at": "2025-06-16T15:00:17.217346",
+    "investigations": [
+      {
+        "inv_id": "T3052269THYR",
+        "group_id": "BIOCHE93514600"
+      },
+      {
+        "inv_id": "SERU337646BIOC",
+        "group_id": "INFECT13131338"
+      },
+      {
+        "inv_id": "TROP578035CARD",
+        "group_id": "THYROI19280510"
+      }
+    ]
+  },
+  {
+    "id": "VIHYAY2506161517",
+    "order_id": "VIHYAY2506161517",
+    "branch_id": "HYDE0122",
+    "staff_id": "AYOT250616IY622",
+    "user_id": "VI2506161500BA",
+    "created_at": "2025-06-16T15:00:17.217346",
+    "updated_at": "2025-06-16T15:00:17.217346",
+    "investigations": [
+      {
+        "inv_id": "HIV 234496INFE",
+        "group_id": "INFECT13131338"
+      },
+      {
+        "inv_id": "HBA1866497DIAB",
+        "group_id": "HEMATO42044055"
+      }
+    ]
+  },
+  {
+    "id": "ANBASA2506161517",
+    "order_id": "ANBASA2506161517",
+    "branch_id": "BANG9690",
+    "staff_id": "SAOT250616IY270",
+    "user_id": "AN2506161500JA",
+    "created_at": "2025-06-16T15:00:17.217346",
+    "updated_at": "2025-06-16T15:00:17.217346",
+    "investigations": [
+      {
+        "inv_id": "LH271813HORM",
+        "group_id": "LIPID 34137410"
+      }
+    ]
+  },
+  {
+    "id": "AVHYVI2506161517",
+    "order_id": "AVHYVI2506161517",
+    "branch_id": "HYDE4708",
+    "staff_id": "VIOT250616BH591",
+    "user_id": "AV2506161500NA",
+    "created_at": "2025-06-16T15:00:17.217346",
+    "updated_at": "2025-06-16T15:00:17.217346",
+    "investigations": [
+      {
+        "inv_id": "HEMA652071HEMA",
+        "group_id": "HEMATO42044055"
+      }
+    ]
+  },
+  {
+    "id": "ANPUAA2506161517",
+    "order_id": "ANPUAA2506161517",
+    "branch_id": "PUNE4981",
+    "staff_id": "AAOT250616TH105",
+    "user_id": "AN2506161500CH",
+    "created_at": "2025-06-16T15:00:17.217346",
+    "updated_at": "2025-06-16T15:00:17.217346",
+    "investigations": [
+      {
+        "inv_id": "SERU017895BIOC",
+        "group_id": "LIPID 34137410"
+      },
+      {
+        "inv_id": "C-PE854137DIAB",
+        "group_id": "LIPID 34137410"
+      },
+      {
+        "inv_id": "FREE284255THYR",
+        "group_id": "HEMATO42044055"
+      }
+    ]
+  },
+  {
+    "id": "KAJAKR2506161517",
+    "order_id": "KAJAKR2506161517",
+    "branch_id": "JAIP7830",
+    "staff_id": "KRTE250616GH279",
+    "user_id": "KA2506161500RA",
+    "created_at": "2025-06-16T15:00:17.217346",
+    "updated_at": "2025-06-16T15:00:17.217346",
+    "investigations": [
+      {
+        "inv_id": "BLOO484797BIOC",
+        "group_id": "RENAL 13713338"
+      },
+      {
+        "inv_id": "TOTA177259LIVE",
+        "group_id": "RENAL 13713338"
+      },
+      {
+        "inv_id": "BICA679650RENA",
+        "group_id": "THYROI19280510"
+      }
+    ]
+  },
+  {
+    "id": "VICHRI2506161517",
+    "order_id": "VICHRI2506161517",
+    "branch_id": "CHEN2967",
+    "staff_id": "RICL250616PA273",
+    "user_id": "VI2506161500BA",
+    "created_at": "2025-06-16T15:00:17.217346",
+    "updated_at": "2025-06-16T15:00:17.217346",
+    "investigations": [
+      {
+        "inv_id": "FAST335622DIAB",
+        "group_id": "HEMATO42044055"
+      }
+    ]
+  },
+  {
+    "id": "KRPUPI2506161517",
+    "order_id": "KRPUPI2506161517",
+    "branch_id": "PUNE4981",
+    "staff_id": "PISU250616RA330",
+    "user_id": "KR2506161500ME",
+    "created_at": "2025-06-16T15:00:17.217346",
+    "updated_at": "2025-06-16T15:00:17.217346",
+    "investigations": [
+      {
+        "inv_id": "SERU017895BIOC",
+        "group_id": "LIPID 34137410"
+      },
+      {
+        "inv_id": "HEMA652071HEMA",
+        "group_id": "HEMATO42044055"
+      },
+      {
+        "inv_id": "PROL463148HORM",
+        "group_id": "LIPID 34137410"
+      }
+    ]
+  },
+  {
+    "id": "AAPUME2506161517",
+    "order_id": "AAPUME2506161517",
+    "branch_id": "PUNE4981",
+    "staff_id": "MEDO250616MI294",
+    "user_id": "AA2506161500BH",
+    "created_at": "2025-06-16T15:00:17.217346",
+    "updated_at": "2025-06-16T15:00:17.217346",
+    "investigations": [
+      {
+        "inv_id": "BICA679650RENA",
+        "group_id": "THYROI19280510"
+      },
+      {
+        "inv_id": "PROL463148HORM",
+        "group_id": "LIPID 34137410"
+      }
+    ]
+  },
+  {
+    "id": "MEJAVI2506161517",
+    "order_id": "MEJAVI2506161517",
+    "branch_id": "JAIP5963",
+    "staff_id": "VIOT250616BH591",
+    "user_id": "ME2506161500BA",
+    "created_at": "2025-06-16T15:00:17.217346",
+    "updated_at": "2025-06-16T15:00:17.217346",
+    "investigations": [
+      {
+        "inv_id": "TROP578035CARD",
+        "group_id": "THYROI19280510"
+      },
+      {
+        "inv_id": "LDH479802CARD",
+        "group_id": "LIVER 48300370"
+      },
+      {
+        "inv_id": "CHLO585128RENA",
+        "group_id": "LIPID 34137410"
+      }
+    ]
+  },
+  {
+    "id": "TAJASA2506161517",
+    "order_id": "TAJASA2506161517",
+    "branch_id": "JAIP7830",
+    "staff_id": "SATE250616DA667",
+    "user_id": "TA2506161500GH",
+    "created_at": "2025-06-16T15:00:17.217346",
+    "updated_at": "2025-06-16T15:00:17.217346",
+    "investigations": [
+      {
+        "inv_id": "INSU076168DIAB",
+        "group_id": "CARDIA44712321"
+      },
+      {
+        "inv_id": "TEST152169HORM",
+        "group_id": "RENAL 13713338"
+      },
+      {
+        "inv_id": "SERU337646BIOC",
+        "group_id": "INFECT13131338"
+      }
+    ]
+  },
+  {
+    "id": "REMUTA2506161517",
+    "order_id": "REMUTA2506161517",
+    "branch_id": "MUMB2602",
+    "staff_id": "TACL250616IY581",
+    "user_id": "RE2506161500RA",
+    "created_at": "2025-06-16T15:00:17.217346",
+    "updated_at": "2025-06-16T15:00:17.217346",
+    "investigations": [
+      {
+        "inv_id": "BLOO680456BIOC",
+        "group_id": "RENAL 13713338"
+      },
+      {
+        "inv_id": "INSU076168DIAB",
+        "group_id": "CARDIA44712321"
+      }
+    ]
+  },
+  {
+    "id": "KRJARI2506161517",
+    "order_id": "KRJARI2506161517",
+    "branch_id": "JAIP7830",
+    "staff_id": "RICL250616PA273",
+    "user_id": "KR2506161500ME",
+    "created_at": "2025-06-16T15:00:17.217346",
+    "updated_at": "2025-06-16T15:00:17.217346",
+    "investigations": [
+      {
+        "inv_id": "TROP578035CARD",
+        "group_id": "THYROI19280510"
+      }
+    ]
+  },
+  {
+    "id": "VIMUSA2506161517",
+    "order_id": "VIMUSA2506161517",
+    "branch_id": "MUMB2602",
+    "staff_id": "SAOT250616IY270",
+    "user_id": "VI2506161500JA",
+    "created_at": "2025-06-16T15:00:17.217346",
+    "updated_at": "2025-06-16T15:00:17.217346",
+    "investigations": [
+      {
+        "inv_id": "ALBU333088LIVE",
+        "group_id": "LIVER 48300370"
+      },
+      {
+        "inv_id": "LH271813HORM",
+        "group_id": "LIPID 34137410"
+      }
+    ]
+  },
+  {
+    "id": "MEJAAA2506161517",
+    "order_id": "MEJAAA2506161517",
+    "branch_id": "JAIP7830",
+    "staff_id": "AAOT250616TH105",
+    "user_id": "ME2506161500SH",
+    "created_at": "2025-06-16T15:00:17.217346",
+    "updated_at": "2025-06-16T15:00:17.217346",
+    "investigations": [
+      {
+        "inv_id": "C-PE854137DIAB",
+        "group_id": "LIPID 34137410"
+      },
+      {
+        "inv_id": "FAST335622DIAB",
+        "group_id": "HEMATO42044055"
+      }
+    ]
+  },
+  {
+    "id": "REMUPI2506161517",
+    "order_id": "REMUPI2506161517",
+    "branch_id": "MUMB2602",
+    "staff_id": "PISU250616RA330",
+    "user_id": "RE2506161500JA",
+    "created_at": "2025-06-16T15:00:17.217346",
+    "updated_at": "2025-06-16T15:00:17.217346",
+    "investigations": [
+      {
+        "inv_id": "C-PE854137DIAB",
+        "group_id": "LIPID 34137410"
+      }
+    ]
+  },
+  {
+    "id": "KAPUKA2506161517",
+    "order_id": "KAPUKA2506161517",
+    "branch_id": "PUNE4981",
+    "staff_id": "KADO250616GH230",
+    "user_id": "KA2506161500PA",
+    "created_at": "2025-06-16T15:00:17.217346",
+    "updated_at": "2025-06-16T15:00:17.217346",
+    "investigations": [
+      {
+        "inv_id": "PHOS916368RENA",
+        "group_id": "LIPID 34137410"
+      }
+    ]
+  },
+  {
+    "id": "KRJAKR2506161517",
+    "order_id": "KRJAKR2506161517",
+    "branch_id": "JAIP5963",
+    "staff_id": "KRTE250616GH279",
+    "user_id": "KR2506161500NA",
+    "created_at": "2025-06-16T15:00:17.217346",
+    "updated_at": "2025-06-16T15:00:17.217346",
+    "investigations": [
+      {
+        "inv_id": "BLOO680456BIOC",
+        "group_id": "RENAL 13713338"
+      }
+    ]
+  },
+  {
+    "id": "TAPUTA2506161517",
+    "order_id": "TAPUTA2506161517",
+    "branch_id": "PUNE4981",
+    "staff_id": "TACL250616IY581",
+    "user_id": "TA2506161500CH",
+    "created_at": "2025-06-16T15:00:17.217346",
+    "updated_at": "2025-06-16T15:00:17.217346",
+    "investigations": [
+      {
+        "inv_id": "T3052269THYR",
+        "group_id": "BIOCHE93514600"
+      }
+    ]
+  },
+  {
+    "id": "SAJASA2506161517",
+    "order_id": "SAJASA2506161517",
+    "branch_id": "JAIP7830",
+    "staff_id": "SATE250616DA667",
+    "user_id": "SA2506161500KA",
+    "created_at": "2025-06-16T15:00:17.217346",
+    "updated_at": "2025-06-16T15:00:17.217346",
+    "investigations": [
+      {
+        "inv_id": "INSU076168DIAB",
+        "group_id": "CARDIA44712321"
+      }
+    ]
+  },
+  {
+    "id": "KAPURI2506161517",
+    "order_id": "KAPURI2506161517",
+    "branch_id": "PUNE4981",
+    "staff_id": "RIDO250616RE175",
+    "user_id": "KA2506161500PA",
+    "created_at": "2025-06-16T15:00:17.217346",
+    "updated_at": "2025-06-16T15:00:17.217346",
+    "investigations": [
+      {
+        "inv_id": "TSH657926THYR",
+        "group_id": "HEMATO42044055"
+      }
+    ]
+  },
+  {
+    "id": "KRJAKA2506161517",
+    "order_id": "KRJAKA2506161517",
+    "branch_id": "JAIP5963",
+    "staff_id": "KADO250616NA488",
+    "user_id": "KR2506161500CH",
+    "created_at": "2025-06-16T15:00:17.217346",
+    "updated_at": "2025-06-16T15:00:17.217346",
+    "investigations": [
+      {
+        "inv_id": "HEMA652071HEMA",
+        "group_id": "HEMATO42044055"
+      },
+      {
+        "inv_id": "TROP578035CARD",
+        "group_id": "THYROI19280510"
+      }
+    ]
+  },
+  {
+    "id": "ISMUVI2506161517",
+    "order_id": "ISMUVI2506161517",
+    "branch_id": "MUMB7911",
+    "staff_id": "VIAD250616MI905",
+    "user_id": "IS2506161500SH",
+    "created_at": "2025-06-16T15:00:17.217346",
+    "updated_at": "2025-06-16T15:00:17.217346",
+    "investigations": [
+      {
+        "inv_id": "TOTA177259LIVE",
+        "group_id": "RENAL 13713338"
+      },
+      {
+        "inv_id": "HBA1866497DIAB",
+        "group_id": "HEMATO42044055"
+      }
+    ]
+  },
+  {
+    "id": "PIJAAY2506161517",
+    "order_id": "PIJAAY2506161517",
+    "branch_id": "JAIP5963",
+    "staff_id": "AYOT250616IY622",
+    "user_id": "PI2506161500GU",
+    "created_at": "2025-06-16T15:00:17.217346",
+    "updated_at": "2025-06-16T15:00:17.217346",
+    "investigations": [
+      {
+        "inv_id": "BNP018857CARD",
+        "group_id": "CARDIA44712321"
+      },
+      {
+        "inv_id": "LDH479802CARD",
+        "group_id": "LIVER 48300370"
+      }
+    ]
+  },
+  {
+    "id": "SAMUAY2506161517",
+    "order_id": "SAMUAY2506161517",
+    "branch_id": "MUMB2602",
+    "staff_id": "AYOT250616ME308",
+    "user_id": "SA2506161500KA",
+    "created_at": "2025-06-16T15:00:17.217346",
+    "updated_at": "2025-06-16T15:00:17.217346",
+    "investigations": [
+      {
+        "inv_id": "HEPA279915INFE",
+        "group_id": "INFECT13131338"
+      }
+    ]
+  },
+  {
+    "id": "ARJAME2506161517",
+    "order_id": "ARJAME2506161517",
+    "branch_id": "JAIP5963",
+    "staff_id": "MECL250616SI418",
+    "user_id": "AR2506161500MI",
+    "created_at": "2025-06-16T15:00:17.217346",
+    "updated_at": "2025-06-16T15:00:17.217346",
+    "investigations": [
+      {
+        "inv_id": "HDL 359533LIPI",
+        "group_id": "HORMON32344012"
+      }
+    ]
+  },
+  {
+    "id": "SIJATA2506161517",
+    "order_id": "SIJATA2506161517",
+    "branch_id": "JAIP7830",
+    "staff_id": "TACL250616IY581",
+    "user_id": "SI2506161500RE",
+    "created_at": "2025-06-16T15:00:17.217346",
+    "updated_at": "2025-06-16T15:00:17.217346",
+    "investigations": [
+      {
+        "inv_id": "BLOO484797BIOC",
+        "group_id": "RENAL 13713338"
+      },
+      {
+        "inv_id": "BLOO888223BIOC",
+        "group_id": "DIABET66692383"
+      }
+    ]
+  },
+  {
+    "id": "KRMUSA2506161517",
+    "order_id": "KRMUSA2506161517",
+    "branch_id": "MUMB7911",
+    "staff_id": "SAOT250616IY270",
+    "user_id": "KR2506161500ME",
+    "created_at": "2025-06-16T15:00:17.217346",
+    "updated_at": "2025-06-16T15:00:17.217346",
+    "investigations": [
+      {
+        "inv_id": "T3052269THYR",
+        "group_id": "BIOCHE93514600"
+      },
+      {
+        "inv_id": "DENG527247INFE",
+        "group_id": "THYROI19280510"
+      }
+    ]
+  },
+  {
+    "id": "ADJAAA2506161517",
+    "order_id": "ADJAAA2506161517",
+    "branch_id": "JAIP7830",
+    "staff_id": "AAOT250616TH105",
+    "user_id": "AD2506161500JO",
+    "created_at": "2025-06-16T15:00:17.217346",
+    "updated_at": "2025-06-16T15:00:17.217346",
+    "investigations": [
+      {
+        "inv_id": "BLOO680456BIOC",
+        "group_id": "RENAL 13713338"
+      },
+      {
+        "inv_id": "PLAT279748HEMA",
+        "group_id": "BIOCHE93514600"
+      }
+    ]
+  },
+  {
+    "id": "ADBAMY2506161517",
+    "order_id": "ADBAMY2506161517",
+    "branch_id": "BANG9690",
+    "staff_id": "MYAD250616AG507",
+    "user_id": "AD2506161500SH",
+    "created_at": "2025-06-16T15:00:17.217346",
+    "updated_at": "2025-06-16T15:00:17.217346",
+    "investigations": [
+      {
+        "inv_id": "LDL 169758LIPI",
+        "group_id": "THYROI19280510"
+      },
+      {
+        "inv_id": "CALC409446RENA",
+        "group_id": "LIPID 34137410"
+      }
+    ]
+  },
+  {
+    "id": "ISPUVI2506161517",
+    "order_id": "ISPUVI2506161517",
+    "branch_id": "PUNE4981",
+    "staff_id": "VIOT250616BH591",
+    "user_id": "IS2506161500JA",
+    "created_at": "2025-06-16T15:00:17.217346",
+    "updated_at": "2025-06-16T15:00:17.217346",
+    "investigations": [
+      {
+        "inv_id": "BLOO680456BIOC",
+        "group_id": "RENAL 13713338"
+      },
+      {
+        "inv_id": "WBC 880466HEMA",
+        "group_id": "DIABET66692383"
+      }
+    ]
+  }
+]

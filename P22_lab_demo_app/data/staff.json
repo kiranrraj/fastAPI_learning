@@ -1,0 +1,252 @@
+[
+  {
+    "id": "KADO250616NA488",
+    "staff_id": "KADO250616NA488",
+    "first_name": "Kavya",
+    "last_name": "Nair",
+    "role": "doctor",
+    "branch_id": "JAIP5963",
+    "created_at": "2025-06-16T15:00:17.217346",
+    "updated_at": "2025-06-16T15:00:17.217346"
+  },
+  {
+    "id": "PISU250616RA330",
+    "staff_id": "PISU250616RA330",
+    "first_name": "Pihu",
+    "last_name": "Rao",
+    "role": "supervisor",
+    "branch_id": "HYDE0122",
+    "created_at": "2025-06-16T15:00:17.217346",
+    "updated_at": "2025-06-16T15:00:17.217346"
+  },
+  {
+    "id": "MECL250616SI418",
+    "staff_id": "MECL250616SI418",
+    "first_name": "Meera",
+    "last_name": "Singh",
+    "role": "cleaning",
+    "branch_id": "MUMB2602",
+    "created_at": "2025-06-16T15:00:17.217346",
+    "updated_at": "2025-06-16T15:00:17.217346"
+  },
+  {
+    "id": "SAOT250616SH753",
+    "staff_id": "SAOT250616SH753",
+    "first_name": "Sai",
+    "last_name": "Shetty",
+    "role": "other",
+    "branch_id": "JAIP7830",
+    "created_at": "2025-06-16T15:00:17.217346",
+    "updated_at": "2025-06-16T15:00:17.217346"
+  },
+  {
+    "id": "SAOT250616IY270",
+    "staff_id": "SAOT250616IY270",
+    "first_name": "Sai",
+    "last_name": "Iyer",
+    "role": "other",
+    "branch_id": "DELH5069",
+    "created_at": "2025-06-16T15:00:17.217346",
+    "updated_at": "2025-06-16T15:00:17.217346"
+  },
+  {
+    "id": "MEDO250616MI294",
+    "staff_id": "MEDO250616MI294",
+    "first_name": "Meera",
+    "last_name": "Mishra",
+    "role": "doctor",
+    "branch_id": "MUMB2602",
+    "created_at": "2025-06-16T15:00:17.217346",
+    "updated_at": "2025-06-16T15:00:17.217346"
+  },
+  {
+    "id": "KADO250616GH230",
+    "staff_id": "KADO250616GH230",
+    "first_name": "Kavya",
+    "last_name": "Ghosh",
+    "role": "doctor",
+    "branch_id": "CHEN2967",
+    "created_at": "2025-06-16T15:00:17.217346",
+    "updated_at": "2025-06-16T15:00:17.217346"
+  },
+  {
+    "id": "AYOT250616ME308",
+    "staff_id": "AYOT250616ME308",
+    "first_name": "Ayaan",
+    "last_name": "Menon",
+    "role": "other",
+    "branch_id": "CHEN2967",
+    "created_at": "2025-06-16T15:00:17.217346",
+    "updated_at": "2025-06-16T15:00:17.217346"
+  },
+  {
+    "id": "IRDO250616KA194",
+    "staff_id": "IRDO250616KA194",
+    "first_name": "Ira",
+    "last_name": "Kapoor",
+    "role": "doctor",
+    "branch_id": "HYDE4708",
+    "created_at": "2025-06-16T15:00:17.217346",
+    "updated_at": "2025-06-16T15:00:17.217346"
+  },
+  {
+    "id": "ISSU250616AG839",
+    "staff_id": "ISSU250616AG839",
+    "first_name": "Ishaan",
+    "last_name": "Agarwal",
+    "role": "supervisor",
+    "branch_id": "BANG9690",
+    "created_at": "2025-06-16T15:00:17.217346",
+    "updated_at": "2025-06-16T15:00:17.217346"
+  },
+  {
+    "id": "AYOT250616IY622",
+    "staff_id": "AYOT250616IY622",
+    "first_name": "Ayaan",
+    "last_name": "Iyer",
+    "role": "other",
+    "branch_id": "CHEN2967",
+    "created_at": "2025-06-16T15:00:17.217346",
+    "updated_at": "2025-06-16T15:00:17.217346"
+  },
+  {
+    "id": "SATE250616DA667",
+    "staff_id": "SATE250616DA667",
+    "first_name": "Saanvi",
+    "last_name": "Das",
+    "role": "technician",
+    "branch_id": "HYDE4708",
+    "created_at": "2025-06-16T15:00:17.217346",
+    "updated_at": "2025-06-16T15:00:17.217346"
+  },
+  {
+    "id": "AVTE250616IY469",
+    "staff_id": "AVTE250616IY469",
+    "first_name": "Avni",
+    "last_name": "Iyer",
+    "role": "technician",
+    "branch_id": "MUMB2602",
+    "created_at": "2025-06-16T15:00:17.217346",
+    "updated_at": "2025-06-16T15:00:17.217346"
+  },
+  {
+    "id": "MYTE250616NA458",
+    "staff_id": "MYTE250616NA458",
+    "first_name": "Myra",
+    "last_name": "Nair",
+    "role": "technician",
+    "branch_id": "BANG9690",
+    "created_at": "2025-06-16T15:00:17.217346",
+    "updated_at": "2025-06-16T15:00:17.217346"
+  },
+  {
+    "id": "AAOT250616TH105",
+    "staff_id": "AAOT250616TH105",
+    "first_name": "Aadhya",
+    "last_name": "Thakur",
+    "role": "other",
+    "branch_id": "PUNE4981",
+    "created_at": "2025-06-16T15:00:17.217346",
+    "updated_at": "2025-06-16T15:00:17.217346"
+  },
+  {
+    "id": "RIDO250616RE175",
+    "staff_id": "RIDO250616RE175",
+    "first_name": "Riya",
+    "last_name": "Reddy",
+    "role": "doctor",
+    "branch_id": "PUNE4981",
+    "created_at": "2025-06-16T15:00:17.217346",
+    "updated_at": "2025-06-16T15:00:17.217346"
+  },
+  {
+    "id": "KRTE250616GH279",
+    "staff_id": "KRTE250616GH279",
+    "first_name": "Krishna",
+    "last_name": "Ghosh",
+    "role": "technician",
+    "branch_id": "HYDE4708",
+    "created_at": "2025-06-16T15:00:17.217346",
+    "updated_at": "2025-06-16T15:00:17.217346"
+  },
+  {
+    "id": "RICL250616PA273",
+    "staff_id": "RICL250616PA273",
+    "first_name": "Riya",
+    "last_name": "Patel",
+    "role": "cleaning",
+    "branch_id": "HYDE4708",
+    "created_at": "2025-06-16T15:00:17.217346",
+    "updated_at": "2025-06-16T15:00:17.217346"
+  },
+  {
+    "id": "VIAD250616MI905",
+    "staff_id": "VIAD250616MI905",
+    "first_name": "Vihaan",
+    "last_name": "Mishra",
+    "role": "admin",
+    "branch_id": "MUMB2602",
+    "created_at": "2025-06-16T15:00:17.217346",
+    "updated_at": "2025-06-16T15:00:17.217346"
+  },
+  {
+    "id": "MYCL250616BH244",
+    "staff_id": "MYCL250616BH244",
+    "first_name": "Myra",
+    "last_name": "Bhat",
+    "role": "cleaning",
+    "branch_id": "JAIP5963",
+    "created_at": "2025-06-16T15:00:17.217346",
+    "updated_at": "2025-06-16T15:00:17.217346"
+  },
+  {
+    "id": "KRDO250616KA362",
+    "staff_id": "KRDO250616KA362",
+    "first_name": "Krishna",
+    "last_name": "Kapoor",
+    "role": "doctor",
+    "branch_id": "CHEN2967",
+    "created_at": "2025-06-16T15:00:17.217346",
+    "updated_at": "2025-06-16T15:00:17.217346"
+  },
+  {
+    "id": "ANTE250616PA450",
+    "staff_id": "ANTE250616PA450",
+    "first_name": "Anaya",
+    "last_name": "Patel",
+    "role": "technician",
+    "branch_id": "HYDE0122",
+    "created_at": "2025-06-16T15:00:17.217346",
+    "updated_at": "2025-06-16T15:00:17.217346"
+  },
+  {
+    "id": "TACL250616IY581",
+    "staff_id": "TACL250616IY581",
+    "first_name": "Tara",
+    "last_name": "Iyer",
+    "role": "clerical",
+    "branch_id": "HYDE0122",
+    "created_at": "2025-06-16T15:00:17.217346",
+    "updated_at": "2025-06-16T15:00:17.217346"
+  },
+  {
+    "id": "VIOT250616BH591",
+    "staff_id": "VIOT250616BH591",
+    "first_name": "Vihaan",
+    "last_name": "Bhat",
+    "role": "other",
+    "branch_id": "DELH5069",
+    "created_at": "2025-06-16T15:00:17.217346",
+    "updated_at": "2025-06-16T15:00:17.217346"
+  },
+  {
+    "id": "MYAD250616AG507",
+    "staff_id": "MYAD250616AG507",
+    "first_name": "Myra",
+    "last_name": "Agarwal",
+    "role": "admin",
+    "branch_id": "HYDE0122",
+    "created_at": "2025-06-16T15:00:17.217346",
+    "updated_at": "2025-06-16T15:00:17.217346"
+  }
+]
