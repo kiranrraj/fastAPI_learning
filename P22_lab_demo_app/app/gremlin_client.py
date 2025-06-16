@@ -2,6 +2,10 @@
 
 import asyncio
 from gremlin_python.driver import client, serializer
+from gremlin_python.driver.driver_remote_connection import DriverRemoteConnection
+from gremlin_python.process.anonymous_traversal import traversal
+from gremlin_python.process.graph_traversal import GraphTraversalSource
+
 from app.config import settings
 from app.logger import logger
 
@@ -48,3 +52,8 @@ def get_gremlin_client():
     if not gremlin_client:
         raise RuntimeError("Gremlin client not initialized. Call start_gremlin() first.")
     return gremlin_client
+
+def get_gremlin_traversal() -> GraphTraversalSource:
+    connection = DriverRemoteConnection("ws://localhost:8182/gremlin", "g")
+
+    return traversal().withRemote(connection)
