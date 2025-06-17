@@ -1,5 +1,8 @@
+# /core/labx_restlet.py
+# copy
+
 from app.models.labx_spec_model import LabXEntitySpec, LabXAttribute
-from app.core.labx_graph_janus import filter_duplicates
+from app.utils.entity_utils import filter_duplicates
 from app.core.labx_context import LabXContext
 from app.core.labx_graph_janus import LabXGraphJanus
 from app.exceptions import SpecValidationError
@@ -71,7 +74,7 @@ class LabXRestlet:
         except Exception as e:
             logger.error(f"[Spec] Error retrieving spec for entity='{entity_name}'", exc_info=e)
             raise
-    
+
     def transform_input(
         self,
         entity_name: str,
@@ -123,101 +126,51 @@ class LabXRestlet:
         except Exception as e:
             logger.error(f"[Transform] Error transforming input for entity='{entity_name}'", exc_info=e)
             raise
-
-    async def addupdatelist(self, entity_name: str, params: List[Dict[str, Any]], return_ids: bool = True) -> Dict[str, Any]:
-        """addupdatelist: Insert or update records into the graph with per-record status."""
-
-        results = []
-
+    
+    # return_ids: bool = True # for security reasons, disable id return 
+    async def addupdatelist(
+        self, entity_name: str, params: List[Dict[str, Any]], return_ids: bool = True
+    ) -> List[str] | bool:
         try:
-            # Get metadata spec
             spec = await self.get_spec(entity_name, mode="CRUD")
 
-            # Check for existing records
-            deduped = await filter_duplicates(self.graph, entity_name, params)
-            matched = deduped.get("matched", [])
-            unmatched = deduped.get("unmatched", [])
+            # Filter duplicates using external util
+            filtered_params = await filter_duplicates(self.graph, entity_name, params)
 
-            # --- UPDATE matched records ---
-            for record in matched:
-                janus_id = record.get("janus_id")
-                if not janus_id:
-                    results.append({
-                        "record": record,
-                        "status": "error",
-                        "message": "Missing JanusGraph ID for update"
-                    })
-                    continue
+            if not filtered_params:
+                logger.warning(f"[Upsert] All records for '{entity_name}' were duplicates, nothing inserted.")
+                return [] if return_ids else False
 
-                # Remove internal fields
-                update_props = {k: v for k, v in record.items() if k not in ("janus_id")}
-                update_result = await self.graph.update_vertex(label=entity_name, vertex_id=janus_id, properties=update_props)
+            # Continue as before
+            vertices, edges = self.transform_input(entity_name, filtered_params, mode="store", spec=spec)
+            result = await self.graph.store(vertices=vertices, edges=edges)
 
-                if update_result["status"] == "success":
-                    results.append({
-                        "record": record,
-                        "status": "updated",
-                        "id": janus_id
-                    })
+            if return_ids:
+                inserted_ids = []
+                if isinstance(result, dict) and entity_name in result:
+                    inserted_ids = result[entity_name]
+                elif isinstance(result, list):  # fallback if store() returns just a list
+                    inserted_ids = result
+
+                if inserted_ids:
+                    logger.info(f"[Upsert] Successfully inserted {len(inserted_ids)} '{entity_name}' records: {inserted_ids}")
+                    return inserted_ids
                 else:
-                    results.append({
-                        "record": record,
-                        "status": "error",
-                        "message": update_result.get("message", "Update failed")
-                    })
-
-            # --- INSERT unmatched records ---
-            if unmatched:
-                vertices, edges = self.transform_input(entity_name, unmatched, mode="store", spec=spec)
-                store_result = await self.graph.store(vertices=vertices, edges=edges)
-
-                if store_result["status"] == "success":
-                    inserted_ids = store_result.get("data", [])
-                    for i, record in enumerate(unmatched):
-                        results.append({
-                            "record": record,
-                            "status": "inserted",
-                            "id": inserted_ids[i] if i < len(inserted_ids) else None
-                        })
-                else:
-                    for record in unmatched:
-                        results.append({
-                            "record": record,
-                            "status": "error",
-                            "message": store_result.get("message", "Insert failed")
-                        })
-
-            # --- Determine overall operation status ---
-            success_count = sum(1 for r in results if r["status"] == "inserted")
-            error_count = sum(1 for r in results if r["status"] in {"error", "duplicate"})
-
-            if success_count == len(results):
-                overall_status = "success"
-            elif error_count == len(results):
-                overall_status = "failed"
-            else:
-                overall_status = "partial"
-
-
-            return {
-                "status": overall_status,
-                "results": results,
-                "message": f"Processed {len(results)} record(s) for entity '{entity_name}'"
-            }
+                    logger.warning(f"[Upsert] No inserted IDs returned for '{entity_name}': {result}")
+                    return []
 
         except Exception as e:
-            logger.error(f"[Upsert] Exception during insert/update for '{entity_name}'", exc_info=e)
-            return {
-                "status": "error",
-                "results": [],
-                "message": str(e)
-            }
+            logger.error(f"[Upsert] Exception during insert for '{entity_name}'", exc_info=e)
+            return [] if return_ids else False
+
 
     async def deletelist(self, entity_name: str, ids: List[str]) -> Dict[str, Any]:
         if not ids:
             return {"status": "failed", "message": "No IDs provided", "results": []}
 
         return await self.graph.delete_vertices(label=entity_name, ids=ids)
+
+
 
     async def list(self, entity_name: str, params: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
         try:
@@ -233,14 +186,12 @@ class LabXRestlet:
                 limit = 100
                 skip = 0
 
-            result = await self.graph.query_vertices(
+            return await self.graph.query_vertices(
                 label=entity_name,
                 filters=filter_row.iloc[0].to_dict() if filter_row is not None else {},
                 limit=limit,
                 skip=skip
             )
-            return result["data"] if result["status"] == "success" else []
-
         except Exception as e:
             logger.error(f"[List] Failed for entity='{entity_name}'", exc_info=e)
             return []
@@ -254,15 +205,15 @@ class LabXRestlet:
 
     async def add_entity_attrs(self, entity_name: str, attr_list: List[Dict[str, Any]]) -> bool:
         try:
-            await self.addupdatelist("LabXAttr", attr_list)
+            await self.addupdatelist("GXAttr", attr_list)
             now = pd.Timestamp.utcnow().isoformat()
             edge_rows = [
                 {
-                    "from_vertex_type": "LabXAttr",
-                    "from_gid": f"LabXAttr:{attr['name']}:0000",
+                    "from_vertex_type": "GXAttr",
+                    "from_gid": f"GXAttr:{attr['name']}:0000",
                     "to_vertex_type": "LabXEntity",
                     "to_gid": f"LabXEntity:{entity_name}:0000",
-                    "label": "LabX_attr_entity",
+                    "label": "gx_attr_entity",
                     "srcid": "labxrestlet",
                     "cdt": now,
                     "fdt": now,
@@ -270,8 +221,7 @@ class LabXRestlet:
                 }
                 for attr in attr_list
             ]
-            result = await self.graph.store(vertices=None, edges={"LabX_attr_entity": pd.DataFrame(edge_rows)})
-            return result["status"] == "success"
+            return await self.graph.store(vertices=None, edges={"gx_attr_entity": pd.DataFrame(edge_rows)})
         except Exception as e:
             logger.error(f"[AddEntityAttrs] Failed for entity='{entity_name}'", exc_info=e)
             return False
@@ -285,15 +235,15 @@ class LabXRestlet:
 
     async def add_edge_attrs(self, edge_name: str, attr_list: List[Dict[str, Any]]) -> bool:
         try:
-            await self.addupdatelist("LabXAttr", attr_list)
+            await self.addupdatelist("GXAttr", attr_list)
             now = pd.Timestamp.utcnow().isoformat()
             edge_rows = [
                 {
-                    "from_vertex_type": "LabXAttr",
-                    "from_gid": f"LabXAttr:{attr['name']}:0000",
+                    "from_vertex_type": "GXAttr",
+                    "from_gid": f"GXAttr:{attr['name']}:0000",
                     "to_vertex_type": "LabXEdge",
                     "to_gid": f"LabXEdge:{edge_name}:0000",
-                    "label": "LabX_attr_edge",
+                    "label": "gx_attr_edge",
                     "srcid": "labxrestlet",
                     "cdt": now,
                     "fdt": now,
@@ -301,8 +251,7 @@ class LabXRestlet:
                 }
                 for attr in attr_list
             ]
-            result = await self.graph.store(vertices=None, edges={"LabX_attr_edge": pd.DataFrame(edge_rows)})
-            return result["status"] == "success"
+            return await self.graph.store(vertices=None, edges={"gx_attr_edge": pd.DataFrame(edge_rows)})
         except Exception as e:
             logger.error(f"[AddEdgeAttrs] Failed for edge='{edge_name}'", exc_info=e)
             return False
