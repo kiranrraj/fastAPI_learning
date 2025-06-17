@@ -10,6 +10,10 @@ from app.models.labx_models import (
     BranchModel, StaffModel, PatientModel, InvestigationGroupModel,
     InvestigationModel, OrderModel, ResultModel
 )
+from app.utils.labx_janus_utils import (
+    format_gremlin_properties,
+    flatten_vertex_result
+)
 import json
 
 logger = get_logger("labx-graph")
@@ -66,7 +70,7 @@ class LabXGraphJanus:
 
     async def add_vertex(self, label: str, properties: Dict[str, Any]) -> Dict[str, Any]:
         try:
-            prop_string = self._format_properties(properties)
+            prop_string = format_gremlin_properties(properties)
             query = f"g.addV('{label}'){prop_string}.id()"
             logger.debug(f"[AddVertex] Executing query: {query} | Properties: {properties}")
             results = await self.submit(query)
@@ -86,13 +90,17 @@ class LabXGraphJanus:
             if not existing_data_raw:
                 return {"status": "error", "id": vertex_id, "message": "Vertex not found"}
 
-            existing_data = self._clean_results(existing_data_raw)[0]
+            if isinstance(existing_data_raw, list):
+                existing_data_raw = existing_data_raw[0] if existing_data_raw else {}
+
+            existing_data = flatten_vertex_result(existing_data_raw)
             existing_data.pop("id", None)
+
             changed_fields = self._get_changed_fields(existing_data, new_props)
             if not changed_fields:
                 return {"status": "not_updated", "id": vertex_id}
 
-            prop_str = self._format_properties(changed_fields)
+            prop_str = format_gremlin_properties(changed_fields)
             update_query = f"g.V({json.dumps(vertex_id)}).hasLabel('{label}'){prop_str}.id()"
             logger.debug(f"[UpdateVertex] Executing: {update_query} | Changed: {changed_fields}")
 
@@ -134,7 +142,7 @@ class LabXGraphJanus:
             query += ".valueMap(true)"
             logger.debug(f"[QueryVertices] Executing: {query}")
             result = await self.submit(query)
-            return {"status": "success", "data": self._clean_results(result)}
+            return {"status": "success", "data": flatten_vertex_result(result)}
         except Exception as e:
             logger.error(f"[QueryVertices] Failed for label '{label}': {e}", exc_info=e)
             return {"status": "error", "message": str(e)}
@@ -204,17 +212,6 @@ class LabXGraphJanus:
         result_set = self.client.submit(query, bindings)
         return result_set.all().result()
 
-    def _format_properties(self, props: Dict[str, Any]) -> str:
-        prop_parts = []
-        for k, v in props.items():
-            if isinstance(v, (dict, list)):
-                logger.warning(f"[FormatProps] Skipping complex field '{k}' of type {type(v)}")
-                continue
-            if isinstance(v, str):
-                v = json.dumps(v)
-            prop_parts.append(f".property('{k}', {v})")
-        return "".join(prop_parts)
-
     def _sanitize_update_properties(self, label: str, props: Dict[str, Any]) -> Dict[str, Any]:
         if "record" in props and isinstance(props["record"], dict):
             props = props["record"]
@@ -230,21 +227,3 @@ class LabXGraphJanus:
         except Exception as e:
             logger.error(f"Failed to sanitize properties using model '{label}': {e}")
             return {k: v for k, v in props.items() if not isinstance(v, (dict, list))}
-
-    def _clean_results(self, raw: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
-        cleaned = []
-        for item in raw:
-            flat = {}
-            for key, val in item.items():
-                try:
-                    if isinstance(val, list) and len(val) == 1:
-                        flat[key] = str(val[0])
-                    elif isinstance(val, (dict, list)):
-                        flat[key] = json.dumps(val)
-                    else:
-                        flat[key] = str(val)
-                except Exception as e:
-                    logger.warning(f"[CleanResults] Skipping key '{key}' due to error: {e}", exc_info=e)
-                    continue
-            cleaned.append(flat)
-        return cleaned
