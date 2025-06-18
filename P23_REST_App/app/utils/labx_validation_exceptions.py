@@ -1,4 +1,4 @@
-# labx_app/exceptions.py
+# app\utils\labx_validation_exceptions.py
 
 class LabXError(Exception):
     """Base class for all LabX exceptions."""

@@ -58,16 +58,17 @@ async def delete_entity(entity: str, request: Request):
 async def list_entity(entity_name: str, body: EntityParams, request: Request):
     restlet = get_restlet(request)
     result = await restlet.list(entity_name, body.params)
-    return {
-        "status": "success",
-        "message": f"Listed records for entity '{entity_name}'",
-        "data": result
-    }
+    return result 
 
-@router.get("/entity/{entity_name}/spec", response_model=LabXEntitySpec, tags=["Entity Operations"])
+@router.get("/labx/entity/{entity_name}/spec", response_model=LabXEntitySpec, tags=["Entity Operations"])
 async def get_entity_spec(request: Request, entity_name: str, mode: str = "CRUD"):
-    restlet = get_restlet(request)
-    return await restlet.get_spec(entity_name, mode)
+    # restlet = get_restlet(request)
+    # return await restlet.get_spec(entity_name, mode)
+    try:
+        restlet = get_restlet(request)
+        return await restlet.get_spec(entity_name, mode)
+    except SpecValidationError as e:
+        raise HTTPException(status_code=404, detail=str(e))
 
 # ----------- Metadata Management -----------
 

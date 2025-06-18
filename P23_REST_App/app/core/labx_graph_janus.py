@@ -8,7 +8,7 @@ import pandas as pd
 
 from app.config import config
 from app.logger import get_logger
-from app.exceptions import GraphConnectionError
+from app.utils.labx_validation_exceptions import GraphConnectionError,SpecValidationError
 from app.utils.labx_time_utils import format_to_mmddyyyy_hhmmss
 from app.utils.labx_duplicate_filter_utils import filter_duplicates
 from app.utils.labx_janus_utils import (

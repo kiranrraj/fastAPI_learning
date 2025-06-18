@@ -1,4 +1,5 @@
 from app.models.labx_spec_model import LabXEntitySpec, LabXAttribute
+from app.utils.labx_validation_exceptions import SpecValidationError
 from app.core.labx_graph_janus import filter_duplicates
 from app.core.labx_context import LabXContext
 from app.core.labx_graph_janus import LabXGraphJanus
@@ -38,6 +39,10 @@ class LabXRestlet:
             )
 
             attributes_raw = await self.graph.submit(query_entity)
+            logger.info(attributes_raw)
+            if not attributes_raw:
+                logger.error(f"[Spec] Entity spec not found for '{entity_name}'")
+                raise SpecValidationError(f"Entity spec not found for '{entity_name}'")
             edges = await self.graph.submit(query_edges)
 
             attributes: List[LabXAttribute] = []
@@ -231,7 +236,7 @@ class LabXRestlet:
 
         return await self.graph.delete_vertices(label=entity_name, ids=ids)
 
-    async def list(self, entity_name: str, params: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+    async def list(self, entity_name: str, params: List[Dict[str, Any]]) -> Dict[str, Any]:
         try:
             spec = await self.get_spec(entity_name, mode="GET")
             filters, _ = self.transform_input(entity_name, params, mode="list", spec=spec)
@@ -251,11 +256,28 @@ class LabXRestlet:
                 limit=limit,
                 skip=skip
             )
-            return result["data"] if result["status"] == "success" else []
+
+            if result["status"] != "success" or not result.get("data"):
+                return {
+                    "status": "not_found",
+                    "message": f"No records found for entity '{entity_name}' with given filters",
+                    "data": []
+                }
+
+            return {
+                "status": "success",
+                "message": f"Listed {len(result['data'])} record(s) for entity '{entity_name}'",
+                "data": result["data"]
+            }
 
         except Exception as e:
             logger.error(f"[List] Failed for entity='{entity_name}'", exc_info=e)
-            return []
+            return {
+                "status": "error",
+                "message": str(e),
+                "data": []
+            }
+
 
     async def add_entity_spec(self, entity_dict: Dict[str, Any]) -> bool:
         try:
