@@ -4,6 +4,7 @@ from typing import List, Dict, Any
 from app.core.labx_restlet import LabXRestlet
 from app.core.labx_context import LabXContext
 from app.models.labx_spec_model import LabXEntitySpec
+from app.models import DeleteResponse, DeleteResultItem, DeleteRequest
 
 router = APIRouter()
 
@@ -42,17 +43,24 @@ async def upsert_entity(entity_name: str, body: EntityParams, request: Request):
         "data": result.get("results", [])
     }
 
-@router.post("/entity/{entity}/delete", tags=["Entity Operations"])
-async def delete_entity(entity: str, request: Request):
+# @router.post("/entity/{entity}/delete", tags=["Entity Operations"])
+# async def delete_entity(entity: str, request: Request):
+#     restlet = get_restlet(request)
+#     data = await request.json()
+#     ids = data.get("ids", [])
+#     result = await restlet.deletelist(entity_name=entity, ids=ids)
+#     return {
+#         "status": result.get("status", "unknown"),
+#         "message": result.get("message", ""),
+#         "data": result.get("results", [])
+#     }
+
+@router.post("/entity/{entity}/delete", response_model=DeleteResponse, tags=["Entity Operations"])
+async def delete_entity(entity: str, request_body: DeleteRequest, request: Request):
     restlet = get_restlet(request)
-    data = await request.json()
-    ids = data.get("ids", [])
-    result = await restlet.deletelist(entity_name=entity, ids=ids)
-    return {
-        "status": result.get("status", "unknown"),
-        "message": result.get("message", ""),
-        "data": result.get("results", [])
-    }
+    data = await restlet.deletelist(entity_name=entity, ids=request_body.ids)
+    return data
+
 
 @router.post("/entity/{entity_name}/list", tags=["Entity Operations"])
 async def list_entity(entity_name: str, body: EntityParams, request: Request):

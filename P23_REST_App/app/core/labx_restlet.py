@@ -3,6 +3,7 @@ from app.utils.labx_validation_exceptions import SpecValidationError
 from app.core.labx_graph_janus import filter_duplicates
 from app.core.labx_context import LabXContext
 from app.core.labx_graph_janus import LabXGraphJanus
+from app.models import DeleteResponse, DeleteResultItem
 from app.logger import get_logger
 from typing import Any, Dict, List, Tuple
 import pandas as pd
@@ -229,12 +230,22 @@ class LabXRestlet:
                 "failed_ids": []
             }
 
-
     async def deletelist(self, entity_name: str, ids: List[str]) -> Dict[str, Any]:
-        if not ids:
-            return {"status": "failed", "message": "No IDs provided", "results": []}
+        try:
+            result = await self.graph.delete_vertices(label=entity_name, ids=ids)
+            return {
+                "status": result.get("status", "unknown"),
+                "message": result.get("message", f"Processed {len(ids)} ID(s)"),
+                "results": result.get("results", [])
+            }
+        except Exception as e:
+            logger.error(f"[DeleteList] Failed to delete for entity '{entity_name}'", exc_info=e)
+            return {
+                "status": "error",
+                "message": str(e),
+                "results": []
+            }
 
-        return await self.graph.delete_vertices(label=entity_name, ids=ids)
 
     async def list(self, entity_name: str, params: List[Dict[str, Any]]) -> Dict[str, Any]:
         try:

@@ -3,6 +3,7 @@ from .labx_branch_model import BranchCreate, BranchUpdate, BranchRead
 from .labx_staff_model import StaffCreate, StaffUpdate, StaffRead
 from .labx_order_model import OrderCreate, OrderUpdate, OrderRead
 from .labx_result_model import ResultCreate, ResultUpdate, ResultRead
+from .labx_delete_model import DeleteRequest, DeleteResponse, DeleteResultItem
 from .labx_investigation_model import InvestigationCreate, InvestigationUpdate, InvestigationRead
 from .labx_investigation_group_model import (
     InvestigationGroupCreate,
@@ -32,4 +33,7 @@ __all__ = [
     # model bundles
     "PatientModel", "BranchModel", "StaffModel",
     "OrderModel", "ResultModel", "InvestigationModel", "InvestigationGroupModel"
+
+    # common models
+    "DeleteResponse", "DeleteResultItem", "DeleteRequest"
 ]
