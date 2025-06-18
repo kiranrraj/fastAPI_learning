@@ -5,6 +5,10 @@ from app.core.labx_restlet import LabXRestlet
 from app.core.labx_context import LabXContext
 from app.models.labx_spec_model import LabXEntitySpec
 from app.models import DeleteResponse, DeleteResultItem, DeleteRequest
+from app.models.labx_upsert_model import UpsertRequest
+from app.logger import get_logger
+
+logger = get_logger("labx-logger")
 
 router = APIRouter()
 
@@ -34,14 +38,10 @@ async def health_check():
 # ----------- Entity Operations -----------
 
 @router.post("/entity/{entity_name}/upsert", tags=["Entity Operations"])
-async def upsert_entity(entity_name: str, body: EntityParams, request: Request):
+async def upsert_entity(entity_name: str, body: UpsertRequest, request: Request):
     restlet = get_restlet(request)
-    result = await restlet.addupdatelist(entity_name, body.params)
-    return {
-        "status": result.get("status", "unknown"),
-        "message": result.get("message", ""),
-        "data": result.get("results", [])
-    }
+    result = await restlet.addupdatelist(entity_name, body.records, return_ids=True, allow_update=body.allow_update)
+    return result
 
 # @router.post("/entity/{entity}/delete", tags=["Entity Operations"])
 # async def delete_entity(entity: str, request: Request):

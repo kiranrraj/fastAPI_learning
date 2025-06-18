@@ -13,7 +13,7 @@ from app.utils.labx_model_utils import sanitize_update_properties
 from app.utils.labx_time_utils import format_to_mmddyyyy_hhmmss
 from app.utils.labx_duplicate_utils import filter_duplicates
 from app.utils.labx_data_utils import normalize_gremlin_record
-
+from app.utils.labx_status_utils import determine_overall_status
 from app.logger import get_logger
 from app.core.labx_context import LabXContext
 from app.core.labx_graph_janus import LabXGraphJanus
@@ -142,117 +142,227 @@ class LabXRestlet:
         except Exception as e:
             logger.error(f"[Transform] Error transforming input for entity='{entity_name}'", exc_info=e)
             raise
-
-    async def addupdatelist(self, entity_name: str, params: List[Dict[str, Any]], return_ids: bool = True) -> Dict[str, Any]:
+    
+    async def update_existing_records(self, entity_name: str, matched: List[Dict[str, Any]]) -> Dict[str, Any]:
         results = []
         success_ids = []
         failed_ids = []
 
-        try:
-            spec = await self.get_spec(entity_name, mode="CRUD")
-            deduped = await filter_duplicates(self.graph, entity_name, params)
-            matched = deduped.get("matched", [])
-            unmatched = deduped.get("unmatched", [])
+        logger.info(f"[Update] Starting update for {len(matched)} matched records for '{entity_name}'")
 
-            # --- UPDATE matched records ---
-            for record in matched:
-                janus_id = record.get("janus_id")
-                if not janus_id:
-                    failed_ids.append(None)
-                    results.append({
-                        "record": record,
-                        "status": "error",
-                        "message": "Missing JanusGraph ID for update"
-                    })
-                    continue
+        for record in matched:
+            janus_id = record.get("janus_id")
+            if not janus_id:
+                # Skip records without JanusGraph ID
+                logger.warning(f"[Update] Skipping record without janus_id: {record}")
+                failed_ids.append(None)
+                results.append({
+                    "record": record,
+                    "status": "error",
+                    "message": "Missing JanusGraph ID for update"
+                })
+                continue
 
-                update_props = {k: v for k, v in record.items() if k != "janus_id"}
-                update_result = await self.graph.update_vertex(label=entity_name, vertex_id=janus_id, properties=update_props)
+            # Extract update properties excluding janus_id
+            update_props = {k: v for k, v in record["record"].items() if k != "janus_id"}
+            logger.debug(f"[Update] Updating ID {janus_id} with props: {update_props}")
 
-                if update_result["status"] == "updated":
-                    success_ids.append(janus_id)
-                    results.append({
-                        "record": record,
-                        "status": "updated",
-                        "id": janus_id,
-                        "updated_fields": update_result.get("updated_fields", {})
-                    })
-                elif update_result["status"] == "not_updated":
-                    success_ids.append(janus_id)
-                    results.append({
-                        "record": record,
-                        "status": "not_updated",
-                        "id": janus_id
-                    })
-                else:
-                    failed_ids.append(janus_id)
-                    results.append({
-                        "record": record,
-                        "status": "error",
-                        "message": update_result.get("message", "Update failed")
-                    })
+            update_result = await self.graph.update_vertex(label=entity_name, vertex_id=janus_id, properties=update_props)
 
-            # --- INSERT unmatched records ---
-            if unmatched:
-                vertices, edges = self.transform_input(entity_name, unmatched, mode="store", spec=spec)
-                store_result = await self.graph.store(vertices=vertices, edges=edges)
+            if update_result["status"] == "updated":
+                logger.info(f"[Update] Successfully updated vertex ID {janus_id}")
+                success_ids.append(janus_id)
+                results.append({
+                    "record": record["record"],
+                    "status": "updated",
+                    "id": janus_id,
+                    "updated_fields": update_result.get("updated_fields", {})
+                })
+            elif update_result["status"] == "not_updated":
+                # No actual change detected during update
+                logger.info(f"[Update] No change for vertex ID {janus_id}")
+                results.append({
+                    "record": record["record"],
+                    "status": "not_updated",
+                    "id": janus_id
+                })
+            else:
+                # Catch all unexpected update failures
+                logger.error(f"[Update] Error updating vertex ID {janus_id}: {update_result.get('message')}")
+                failed_ids.append(janus_id)
+                results.append({
+                    "record": record["record"],
+                    "status": "error",
+                    "message": update_result.get("message", "Update failed")
+                })
 
-                if store_result["status"] == "success":
-                    inserted_ids = store_result.get("data", [])
-                    for i, record in enumerate(unmatched):
-                        vertex_id = inserted_ids[i] if i < len(inserted_ids) else None
-                        success_ids.append(vertex_id)
-                        results.append({
-                            "record": record,
-                            "status": "inserted",
-                            "id": vertex_id
-                        })
-                else:
-                    for record in unmatched:
-                        failed_ids.append(None)
-                        results.append({
-                            "record": record,
-                            "status": "error",
-                            "message": store_result.get("message", "Insert failed")
-                        })
+        # Determine overall status across all updates (success, not_updated, failed, partial)
+        overall_status = determine_overall_status(results)
+        logger.info(f"[Update] Overall update status: {overall_status}")
 
-            overall_status = (
-                "success" if all(r["status"] in ("inserted", "updated", "not_updated") for r in results)
-                else "failed" if all(r["status"] == "error" for r in results)
-                else "partial"
-            )
+        return {
+            "status": overall_status,
+            "results": results,
+            "success_ids": success_ids,
+            "failed_ids": failed_ids
+        }
 
-            response = {
-                "status": overall_status,
-                "results": results,
-                "message": f"Processed {len(results)} record(s) for entity '{entity_name}'"
-            }
+    async def insert_new_records(self, entity_name: str, unmatched: List[Dict[str, Any]], spec: LabXEntitySpec) -> Dict[str, Any]:
+        results = []
+        success_ids = []
+        failed_ids = []
 
-            if return_ids:
-                response["success_ids"] = success_ids
-                response["failed_ids"] = failed_ids
-
-            return response
-
-        except Exception as e:
-            logger.error(f"[Upsert] Exception during insert/update for '{entity_name}'", exc_info=e)
+        if not unmatched:
+            # No new records to insert
             return {
-                "status": "error",
+                "status": "skipped",
                 "results": [],
-                "message": str(e),
                 "success_ids": [],
                 "failed_ids": []
             }
 
+        try:
+            logger.info(f"[Insert] Starting insert for {len(unmatched)} unmatched records for '{entity_name}'")
+
+            # Transform raw input into vertex and edge data structures
+            vertices, edges = self.transform_input(entity_name, unmatched, mode="store", spec=spec)
+
+            # Send data to graph storage
+            store_result = await self.graph.store(vertices=vertices, edges=edges)
+
+            inserted_ids = store_result.get("data", []) if store_result["status"] == "success" else []
+
+            for i, record in enumerate(unmatched):
+                vertex_id = inserted_ids[i] if i < len(inserted_ids) else None
+                if vertex_id:
+                    success_ids.append(vertex_id)
+                    results.append({
+                        "record": record,
+                        "status": "inserted",
+                        "id": vertex_id
+                    })
+                else:
+                    failed_ids.append(None)
+                    results.append({
+                        "record": record,
+                        "status": "error",
+                        "message": "Insert failed or ID missing"
+                    })
+
+        except Exception as e:
+            # Log the exception and prepare error response per record
+            logger.error(f"[Insert] Error inserting new records for '{entity_name}'", exc_info=e)
+            results = [
+                {
+                    "record": record,
+                    "status": "error",
+                    "message": str(e)
+                } for record in unmatched
+            ]
+            failed_ids = [None] * len(unmatched)
+
+        # Determine overall outcome of the insert batch
+        overall_status = determine_overall_status(results)
+        logger.info(f"[Insert] Overall insert status: {overall_status}")
+
+        return {
+            "status": overall_status,
+            "results": results,
+            "success_ids": success_ids,
+            "failed_ids": failed_ids
+        }
+
+    # async def addupdatelist(self, entity_name: str, params: List[Dict[str, Any]], return_ids: bool = True) -> Dict[str, Any]:
+    async def addupdatelist(
+        self,
+        entity_name: str,
+        params: List[Dict[str, Any]],
+        return_ids: bool = True,
+        allow_update: bool = True
+    ) -> Dict[str, Any]:
+        # Start upsert operation
+        logger.info(f"[Upsert] Starting upsert for entity '{entity_name}' with {len(params)} records")
+
+        # Fetch entity specification (schema, types)
+        spec = await self.get_spec(entity_name, mode="CRUD")
+        logger.debug(f"[Upsert] Loaded spec for '{entity_name}': {spec}")
+
+        # Deduplicate input records using natural keys
+        deduped = await filter_duplicates(self.graph, entity_name, params)
+        matched = deduped.get("matched", [])
+        unmatched = deduped.get("unmatched", [])
+
+        logger.info(f"[Upsert] Found {len(matched)} matched and {len(unmatched)} unmatched records")
+
+        # Handle matched records (updates or skip)
+        if allow_update:
+            update_result = await self.update_existing_records(entity_name, matched)
+            logger.info(f"[Upsert] Completed update. Success: {len(update_result['success_ids'])}, Failed: {len(update_result['failed_ids'])}")
+        else:
+            logger.info(f"[Upsert] Skipping update of {len(matched)} matched records due to allow_update=False")
+            update_result = {
+                "results": [
+                    {
+                        "record": m["record"],
+                        "status": "skipped",
+                        "id": m.get("janus_id"),
+                        "message": "Update skipped due to allow_update=False"
+                    } for m in matched
+                ],
+                "success_ids": [],
+                "failed_ids": [m.get("janus_id") for m in matched]
+            }
+
+        # Handle unmatched records (insert)
+        insert_result = await self.insert_new_records(entity_name, unmatched, spec)
+        logger.info(f"[Upsert] Completed insert. Success: {len(insert_result['success_ids'])}, Failed: {len(insert_result['failed_ids'])}")
+
+        # Combine results
+        results = update_result["results"] + insert_result["results"]
+        success_ids = update_result["success_ids"] + insert_result["success_ids"]
+        failed_ids = update_result["failed_ids"] + insert_result["failed_ids"]
+
+        # Determine final upsert status
+        overall_status = determine_overall_status(results)
+        logger.info(f"[Upsert] Overall status: {overall_status}, Total processed: {len(results)}")
+        logger.info(f"[Upsert] Completed upsert for entity: {entity_name}")
+
+        # Construct response
+        response = {
+            "status": overall_status,
+            "results": results,
+            "message": f"Processed {len(results)} record(s) for entity '{entity_name}'"
+        }
+
+        if return_ids:
+            response["success_ids"] = success_ids
+            response["failed_ids"] = failed_ids
+
+        return response
+
     async def deletelist(self, entity_name: str, ids: List[str]) -> Dict[str, Any]:
         try:
+            # Log initiation of deletion
+            logger.info(f"[DeleteList] Deleting {len(ids)} ID(s) for entity '{entity_name}'")
+
+            # Perform deletion via graph layer
             result = await self.graph.delete_vertices(label=entity_name, ids=ids)
+
+            # Get per-ID results and compute overall status
+            results = result.get("results", [])
+            status = determine_overall_status(results)
+
+            logger.info(f"[DeleteList] Completed with status: {status}")
+
+            # Return structured response
             return {
-                "status": result.get("status", "unknown"),
+                "status": status,
                 "message": result.get("message", f"Processed {len(ids)} ID(s)"),
-                "results": result.get("results", [])
+                "results": results
             }
+
         except Exception as e:
+            # Catch and report failure
             logger.error(f"[DeleteList] Failed to delete for entity '{entity_name}'", exc_info=e)
             return {
                 "status": "error",
@@ -260,13 +370,16 @@ class LabXRestlet:
                 "results": []
             }
 
-
     async def list(self, entity_name: str, params: List[Dict[str, Any]]) -> Dict[str, Any]:
         try:
+            logger.info(f"[List] Fetching records for entity: {entity_name}")
+            
+            # Load entity specification
             spec = await self.get_spec(entity_name, mode="GET")
             filters, _ = self.transform_input(entity_name, params, mode="list", spec=spec)
             filter_row = filters.get(entity_name)
 
+            # Parse pagination params
             try:
                 limit = int(params[0].get("limit", 100)) if params else 100
                 skip = int(params[0].get("skip", 0)) if params else 0
@@ -275,6 +388,7 @@ class LabXRestlet:
                 limit = 100
                 skip = 0
 
+            # Query vertices from graph
             result = await self.graph.query_vertices(
                 label=entity_name,
                 filters=filter_row.iloc[0].to_dict() if filter_row is not None else {},
@@ -282,21 +396,23 @@ class LabXRestlet:
                 skip=skip
             )
 
-            records = result.get("data", []) if result["status"] == "success" else []
+            raw_records = result.get("data", []) if result["status"] == "success" else []
 
+            # Model transformation
             model_bundle = ENTITY_MODEL_MAP.get(entity_name)
             if model_bundle:
                 ReadModel = model_bundle.Read
                 typed_records = []
-                for raw in records:
+                for raw in raw_records:
                     try:
                         normalized = normalize_gremlin_record(raw)
                         typed_records.append(ReadModel(**normalized))
                     except Exception as e:
                         logger.warning(f"[List] Skipping invalid record: {raw}", exc_info=e)
             else:
-                typed_records = records
+                typed_records = raw_records
 
+            # Determine output status
             status = "success" if typed_records else "not_found"
             message = (
                 f"Listed {len(typed_records)} record(s) for entity '{entity_name}'"
@@ -314,7 +430,7 @@ class LabXRestlet:
             logger.error(f"[List] Failed for entity='{entity_name}'", exc_info=e)
             return {
                 "status": "error",
-                "filters":{},
+                "filters": {},
                 "message": str(e),
                 "data": []
             }
