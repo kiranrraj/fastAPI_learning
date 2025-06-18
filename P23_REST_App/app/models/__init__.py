@@ -10,8 +10,9 @@ from .labx_investigation_group_model import (
     InvestigationGroupUpdate,
     InvestigationGroupRead,
 )
+from app.utils.labx_model_bundle_utils import ModelBundle
 
-# Optional bundling for centralized access
+# --- Optional bundling for centralized access ---
 PatientModel = (PatientCreate, PatientUpdate, PatientRead)
 BranchModel = (BranchCreate, BranchUpdate, BranchRead)
 StaffModel = (StaffCreate, StaffUpdate, StaffRead)
@@ -20,6 +21,18 @@ ResultModel = (ResultCreate, ResultUpdate, ResultRead)
 InvestigationModel = (InvestigationCreate, InvestigationUpdate, InvestigationRead)
 InvestigationGroupModel = (InvestigationGroupCreate, InvestigationGroupUpdate, InvestigationGroupRead)
 
+# --- Centralized registry ---
+ENTITY_MODEL_MAP = {
+    "Patient": ModelBundle(*PatientModel),
+    "Branch": ModelBundle(*BranchModel),
+    "Staff": ModelBundle(*StaffModel),
+    "Order": ModelBundle(*OrderModel),
+    "Result": ModelBundle(*ResultModel),
+    "Investigation": ModelBundle(*InvestigationModel),
+    "InvestigationGroup": ModelBundle(*InvestigationGroupModel),
+}
+
+# --- Export control ---
 __all__ = [
     # individual models
     "PatientCreate", "PatientUpdate", "PatientRead",
@@ -32,8 +45,11 @@ __all__ = [
 
     # model bundles
     "PatientModel", "BranchModel", "StaffModel",
-    "OrderModel", "ResultModel", "InvestigationModel", "InvestigationGroupModel"
+    "OrderModel", "ResultModel", "InvestigationModel", "InvestigationGroupModel",
+
+    # centralized entity map
+    "ENTITY_MODEL_MAP",
 
     # common models
-    "DeleteResponse", "DeleteResultItem", "DeleteRequest"
+    "DeleteRequest", "DeleteResponse", "DeleteResultItem"
 ]

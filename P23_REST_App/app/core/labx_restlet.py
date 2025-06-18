@@ -1,13 +1,27 @@
-from app.models.labx_spec_model import LabXEntitySpec, LabXAttribute
-from app.utils.labx_validation_exceptions import SpecValidationError
-from app.core.labx_graph_janus import filter_duplicates
+# File: app/core/labx_restlet.py
+import json
+import pandas as pd
+from typing import Any, Dict, List, Tuple
+from fastapi.encoders import jsonable_encoder
+
+from app.utils.labx_gremlin_utils import (
+    flatten_vertex_result,
+    clean_element_map,
+    dataframe_to_dict_list
+)
+from app.utils.labx_model_utils import sanitize_update_properties
+from app.utils.labx_time_utils import format_to_mmddyyyy_hhmmss
+from app.utils.labx_duplicate_utils import filter_duplicates
+from app.utils.labx_data_utils import normalize_gremlin_record
+
+from app.logger import get_logger
 from app.core.labx_context import LabXContext
 from app.core.labx_graph_janus import LabXGraphJanus
 from app.models import DeleteResponse, DeleteResultItem
-from app.logger import get_logger
-from typing import Any, Dict, List, Tuple
-import pandas as pd
-import json
+from app.models.labx_spec_model import LabXEntitySpec, LabXAttribute
+from app.utils.labx_validation_exceptions import SpecValidationError
+from app.models import ENTITY_MODEL_MAP
+from pydantic import ValidationError
 
 logger = get_logger("labx-logger")
 
@@ -268,27 +282,42 @@ class LabXRestlet:
                 skip=skip
             )
 
-            if result["status"] != "success" or not result.get("data"):
-                return {
-                    "status": "not_found",
-                    "message": f"No records found for entity '{entity_name}' with given filters",
-                    "data": []
-                }
+            records = result.get("data", []) if result["status"] == "success" else []
+
+            model_bundle = ENTITY_MODEL_MAP.get(entity_name)
+            if model_bundle:
+                ReadModel = model_bundle.Read
+                typed_records = []
+                for raw in records:
+                    try:
+                        normalized = normalize_gremlin_record(raw)
+                        typed_records.append(ReadModel(**normalized))
+                    except Exception as e:
+                        logger.warning(f"[List] Skipping invalid record: {raw}", exc_info=e)
+            else:
+                typed_records = records
+
+            status = "success" if typed_records else "not_found"
+            message = (
+                f"Listed {len(typed_records)} record(s) for entity '{entity_name}'"
+                if typed_records else f"No records found for entity '{entity_name}'"
+            )
 
             return {
-                "status": "success",
-                "message": f"Listed {len(result['data'])} record(s) for entity '{entity_name}'",
-                "data": result["data"]
+                "status": status,
+                "message": message,
+                "filters": filter_row.iloc[0].to_dict() if filter_row is not None else {},
+                "data": [r.model_dump() if hasattr(r, "model_dump") else r for r in typed_records]
             }
 
         except Exception as e:
             logger.error(f"[List] Failed for entity='{entity_name}'", exc_info=e)
             return {
                 "status": "error",
+                "filters":{},
                 "message": str(e),
                 "data": []
             }
-
 
     async def add_entity_spec(self, entity_dict: Dict[str, Any]) -> bool:
         try:

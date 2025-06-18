@@ -2,9 +2,9 @@ import json
 from datetime import datetime
 from typing import Any, Dict, List
 import logging
-import pandas as pd  # Required for dataframe_to_dict_list
+import pandas as pd
 
-logger = logging.getLogger("gremlin-utils")
+logger = logging.getLogger("labx-logger")
 
 def gremlin_safe_value(val: Any) -> str:
     if isinstance(val, datetime):
@@ -47,10 +47,6 @@ def clean_element_map(raw: Dict[Any, Any]) -> Dict[str, Any]:
     return cleaned
 
 def dataframe_to_dict_list(df: pd.DataFrame) -> List[Dict[str, Any]]:
-    """
-    Converts a Pandas DataFrame into a list of dictionaries.
-    Handles NaNs by converting them to None.
-    """
     if df is None or df.empty:
         return []
     return df.where(pd.notnull(df), None).to_dict(orient="records")

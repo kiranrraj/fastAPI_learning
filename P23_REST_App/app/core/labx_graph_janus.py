@@ -1,39 +1,25 @@
+# File: app/services/labx_graph_janus.py
 import json
 import asyncio
+import pandas as pd
 from datetime import datetime
 from typing import Any, Dict, List
 from concurrent.futures import ThreadPoolExecutor
 from gremlin_python.driver.client import Client
-import pandas as pd
 
+from app.models import ENTITY_MODEL_MAP
 from app.config import config
 from app.logger import get_logger
-from app.utils.labx_validation_exceptions import GraphConnectionError,SpecValidationError
+from app.utils.labx_validation_exceptions import GraphConnectionError
 from app.utils.labx_time_utils import format_to_mmddyyyy_hhmmss
-from app.utils.labx_duplicate_filter_utils import filter_duplicates
-from app.utils.labx_janus_utils import (
+from app.utils.labx_duplicate_utils import filter_duplicates
+from app.utils.labx_gremlin_utils import (
     format_gremlin_properties,
     flatten_vertex_result,
     clean_element_map,
     dataframe_to_dict_list
 )
-from app.utils.labx_model_bundle_utils import ModelBundle
-from app.models import (
-    PatientModel, BranchModel, StaffModel,
-    OrderModel, ResultModel,
-    InvestigationModel, InvestigationGroupModel
-)
-
-# --- Entity model registry ---
-ENTITY_MODEL_MAP = {
-    "Patient": ModelBundle(*PatientModel),
-    "Branch": ModelBundle(*BranchModel),
-    "Staff": ModelBundle(*StaffModel),
-    "Order": ModelBundle(*OrderModel),
-    "Result": ModelBundle(*ResultModel),
-    "Investigation": ModelBundle(*InvestigationModel),
-    "InvestigationGroup": ModelBundle(*InvestigationGroupModel),
-}
+from app.utils.labx_model_utils import sanitize_update_properties
 
 logger = get_logger("labx-graph")
 
@@ -42,7 +28,6 @@ class LabXGraphJanus:
         self.client = client
         self.executor = ThreadPoolExecutor()
 
-    # --- Connection Management ---
     @classmethod
     async def create(cls) -> "LabXGraphJanus":
         try:
@@ -71,7 +56,6 @@ class LabXGraphJanus:
         except Exception as e:
             logger.error("[Graph] Error during shutdown: Failed to close client", exc_info=e)
 
-    # --- Core Gremlin Submit ---
     async def submit(self, query: str, bindings: Dict[str, Any] = None) -> List[Any]:
         loop = asyncio.get_running_loop()
         return await loop.run_in_executor(
@@ -84,15 +68,7 @@ class LabXGraphJanus:
         result_set = self.client.submit(query, bindings)
         return result_set.all().result()
 
-    # --- Vertex Operations ---
-
-    async def query_vertices(
-        self,
-        label: str,
-        filters: Dict[str, Any],
-        limit: int = 100,
-        skip: int = 0
-    ) -> Dict[str, Any]:
+    async def query_vertices(self, label: str, filters: Dict[str, Any], limit: int = 100, skip: int = 0) -> Dict[str, Any]:
         try:
             base = f"g.V().hasLabel('{label}')"
             for key, val in filters.items():
@@ -105,11 +81,9 @@ class LabXGraphJanus:
 
             parsed = [flatten_vertex_result(clean_element_map(row)) for row in results]
             return {"status": "success", "data": parsed}
-
         except Exception as e:
             logger.error(f"[QueryVertices] Failed to fetch '{label}'", exc_info=e)
             return {"status": "error", "data": [], "message": str(e)}
-
 
     async def add_vertex(self, label: str, properties: Dict[str, Any]) -> Dict[str, Any]:
         retries = 3
@@ -130,7 +104,7 @@ class LabXGraphJanus:
 
     async def update_vertex(self, label: str, vertex_id: Any, properties: Dict[str, Any]) -> Dict[str, Any]:
         try:
-            new_props = self._sanitize_update_properties(label, properties)
+            new_props = sanitize_update_properties(label, properties)
             query = f"g.V({json.dumps(vertex_id)}).hasLabel('{label}').valueMap(true)"
             existing_data_raw = await self.submit(query)
 
@@ -154,31 +128,18 @@ class LabXGraphJanus:
             if not changed_fields:
                 return {"status": "not_updated", "id": vertex_id}
 
-            # changed_fields["updated_at"] = format_to_mmddyyyy_hhmmss()
             changed_fields["updated_at"] = format_to_mmddyyyy_hhmmss(datetime.utcnow())
             prop_str = format_gremlin_properties(changed_fields)
             update_query = f"g.V({json.dumps(vertex_id)}).hasLabel('{label}'){prop_str}.id()"
             result = await self.submit(update_query)
 
             if result and isinstance(result, list) and len(result) > 0:
-                return {
-                    "status": "updated",
-                    "id": result[0],
-                    "updated_fields": changed_fields
-                }
+                return {"status": "updated", "id": result[0], "updated_fields": changed_fields}
             else:
-                return {
-                    "status": "error",
-                    "id": vertex_id,
-                    "message": "Update failed – empty response from JanusGraph"
-                }
+                return {"status": "error", "id": vertex_id, "message": "Update failed – empty response from JanusGraph"}
         except Exception as e:
             logger.error(f"[UpdateVertex] Failed for ID {vertex_id} on label '{label}'", exc_info=e)
-            return {
-                "status": "error",
-                "id": vertex_id,
-                "message": str(e)
-            }
+            return {"status": "error", "id": vertex_id, "message": str(e)}
 
     async def delete_vertices(self, label: str, ids: List[str]) -> Dict[str, Any]:
         results = []
@@ -207,7 +168,6 @@ class LabXGraphJanus:
             "message": f"Processed {len(results)} ID(s) for label '{label}'"
         }
 
-    # --- Store Vertices/Edges ---
     async def store(self, vertices: Dict[str, pd.DataFrame], edges: Dict[str, pd.DataFrame]) -> Dict[str, Any]:
         inserted_ids = []
         try:
@@ -261,7 +221,6 @@ class LabXGraphJanus:
             except Exception as e:
                 logger.error(f"[Edge] Failed to create edge '{label}' from {row.get('from')} to {row.get('to')}", exc_info=e)
 
-    # --- Internal Utility ---
     async def _vertex_exists(self, label: str, vertex_id: str) -> bool:
         try:
             query = f"g.V({json.dumps(vertex_id)}).hasLabel('{label}').count()"
@@ -270,20 +229,3 @@ class LabXGraphJanus:
         except Exception as e:
             logger.error(f"[CheckExistence] Error checking vertex {vertex_id} of label '{label}'", exc_info=e)
             return False
-
-    def _sanitize_update_properties(self, label: str, props: Dict[str, Any]) -> Dict[str, Any]:
-        if "record" in props and isinstance(props["record"], dict):
-            props = props["record"]
-
-        model_cls = ENTITY_MODEL_MAP.get(label)
-        if not model_cls:
-            logger.warning(f"No model found for label '{label}' — skipping type coercion.")
-            return {k: v for k, v in props.items() if not isinstance(v, (dict, list))}
-
-        try:
-            # model_instance = model_cls(**props)
-            model_instance = model_cls.Update(**props)
-            return model_instance.dict(exclude_unset=True, exclude_none=True)
-        except Exception as e:
-            logger.error(f"Failed to sanitize properties using model '{label}': {e}")
-            return {k: v for k, v in props.items() if not isinstance(v, (dict, list))}
