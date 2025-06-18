@@ -1,38 +1,48 @@
-from gremlin_python.driver.client import Client
+import json
 import asyncio
-from concurrent.futures import ThreadPoolExecutor
+from datetime import datetime
 from typing import Any, Dict, List
+from concurrent.futures import ThreadPoolExecutor
+from gremlin_python.driver.client import Client
+import pandas as pd
+
 from app.config import config
 from app.logger import get_logger
-from app.utils.duplicate_filter import filter_duplicates
-from app.exceptions import GraphConnectionError, VertexInsertError
-from app.models.labx_models import (
-    BranchModel, StaffModel, PatientModel, InvestigationGroupModel,
-    InvestigationModel, OrderModel, ResultModel
-)
+from app.exceptions import GraphConnectionError
+from app.utils.labx_time_utils import format_to_mmddyyyy_hhmmss
+from app.utils.labx_duplicate_filter_utils import filter_duplicates
 from app.utils.labx_janus_utils import (
     format_gremlin_properties,
-    flatten_vertex_result
+    flatten_vertex_result,
+    clean_element_map,
+    dataframe_to_dict_list
 )
-import json
+from app.utils.labx_model_bundle_utils import ModelBundle
+from app.models import (
+    PatientModel, BranchModel, StaffModel,
+    OrderModel, ResultModel,
+    InvestigationModel, InvestigationGroupModel
+)
+
+# --- Entity model registry ---
+ENTITY_MODEL_MAP = {
+    "Patient": ModelBundle(*PatientModel),
+    "Branch": ModelBundle(*BranchModel),
+    "Staff": ModelBundle(*StaffModel),
+    "Order": ModelBundle(*OrderModel),
+    "Result": ModelBundle(*ResultModel),
+    "Investigation": ModelBundle(*InvestigationModel),
+    "InvestigationGroup": ModelBundle(*InvestigationGroupModel),
+}
 
 logger = get_logger("labx-graph")
-
-ENTITY_MODEL_MAP = {
-    "Branch": BranchModel,
-    "Staff": StaffModel,
-    "Patient": PatientModel,
-    "InvestigationGroup": InvestigationGroupModel,
-    "Investigation": InvestigationModel,
-    "Order": OrderModel,
-    "Result": ResultModel
-}
 
 class LabXGraphJanus:
     def __init__(self, client: Client):
         self.client = client
         self.executor = ThreadPoolExecutor()
 
+    # --- Connection Management ---
     @classmethod
     async def create(cls) -> "LabXGraphJanus":
         try:
@@ -61,6 +71,7 @@ class LabXGraphJanus:
         except Exception as e:
             logger.error("[Graph] Error during shutdown: Failed to close client", exc_info=e)
 
+    # --- Core Gremlin Submit ---
     async def submit(self, query: str, bindings: Dict[str, Any] = None) -> List[Any]:
         loop = asyncio.get_running_loop()
         return await loop.run_in_executor(
@@ -68,52 +79,94 @@ class LabXGraphJanus:
             lambda: self._submit_sync(query, bindings or {})
         )
 
-    async def add_vertex(self, label: str, properties: Dict[str, Any]) -> Dict[str, Any]:
+    def _submit_sync(self, query: str, bindings: Dict[str, Any]) -> List[Any]:
+        logger.debug(f"Executing Gremlin query: {query} | Bindings: {bindings}")
+        result_set = self.client.submit(query, bindings)
+        return result_set.all().result()
+
+    # --- Vertex Operations ---
+
+    async def query_vertices(
+        self,
+        label: str,
+        filters: Dict[str, Any],
+        limit: int = 100,
+        skip: int = 0
+    ) -> Dict[str, Any]:
         try:
-            prop_string = format_gremlin_properties(properties)
-            query = f"g.addV('{label}'){prop_string}.id()"
-            logger.debug(f"[AddVertex] Executing query: {query} | Properties: {properties}")
-            results = await self.submit(query)
-            if results and isinstance(results, list) and len(results) > 0:
-                return {"status": "success", "data": str(results[0])}
-            else:
-                return {"status": "error", "message": "Vertex insert returned empty result."}
+            base = f"g.V().hasLabel('{label}')"
+            for key, val in filters.items():
+                if val is not None and val != "":
+                    safe_val = json.dumps(val)
+                    base += f".has('{key}', {safe_val})"
+
+            base += f".range({skip}, {skip + limit}).valueMap(true)"
+            results = await self.submit(base)
+
+            parsed = [flatten_vertex_result(clean_element_map(row)) for row in results]
+            return {"status": "success", "data": parsed}
+
         except Exception as e:
-            logger.error(f"[AddVertex] Failed to add vertex '{label}'", exc_info=e)
-            return {"status": "error", "message": str(e)}
+            logger.error(f"[QueryVertices] Failed to fetch '{label}'", exc_info=e)
+            return {"status": "error", "data": [], "message": str(e)}
+
+
+    async def add_vertex(self, label: str, properties: Dict[str, Any]) -> Dict[str, Any]:
+        retries = 3
+        for attempt in range(retries):
+            try:
+                prop_string = format_gremlin_properties(properties)
+                query = f"g.addV('{label}'){prop_string}.id()"
+                results = await self.submit(query)
+                if results and isinstance(results, list) and len(results) > 0:
+                    return {"status": "success", "data": str(results[0])}
+                else:
+                    return {"status": "error", "message": "Vertex insert returned empty result."}
+            except Exception as e:
+                logger.warning(f"[AddVertex] Attempt {attempt+1} failed for label '{label}': {e}")
+                await asyncio.sleep(0.5 * (attempt + 1))
+        logger.error(f"[AddVertex] Failed to add vertex '{label}' after {retries} attempts.")
+        return {"status": "error", "message": f"Retry limit exceeded for label '{label}'"}
 
     async def update_vertex(self, label: str, vertex_id: Any, properties: Dict[str, Any]) -> Dict[str, Any]:
         try:
             new_props = self._sanitize_update_properties(label, properties)
             query = f"g.V({json.dumps(vertex_id)}).hasLabel('{label}').valueMap(true)"
             existing_data_raw = await self.submit(query)
+
             if not existing_data_raw:
                 return {"status": "error", "id": vertex_id, "message": "Vertex not found"}
 
-            if isinstance(existing_data_raw, list):
-                existing_data_raw = existing_data_raw[0] if existing_data_raw else {}
-
-            existing_data = flatten_vertex_result(existing_data_raw)
+            cleaned_raw = clean_element_map(existing_data_raw[0])
+            existing_data = flatten_vertex_result(cleaned_raw)
             existing_data.pop("id", None)
 
-            changed_fields = self._get_changed_fields(existing_data, new_props)
+            changed_fields = {}
+            for k, v in new_props.items():
+                if k == "created_at":
+                    continue
+                old_val = existing_data.get(k)
+                if isinstance(old_val, list) and len(old_val) == 1:
+                    old_val = old_val[0]
+                if str(old_val) != str(v):
+                    changed_fields[k] = v
+
             if not changed_fields:
                 return {"status": "not_updated", "id": vertex_id}
 
+            # changed_fields["updated_at"] = format_to_mmddyyyy_hhmmss()
+            changed_fields["updated_at"] = format_to_mmddyyyy_hhmmss(datetime.utcnow())
             prop_str = format_gremlin_properties(changed_fields)
             update_query = f"g.V({json.dumps(vertex_id)}).hasLabel('{label}'){prop_str}.id()"
-            logger.debug(f"[UpdateVertex] Executing: {update_query} | Changed: {changed_fields}")
-
             result = await self.submit(update_query)
+
             if result and isinstance(result, list) and len(result) > 0:
-                updated_id = result[0]
                 return {
                     "status": "updated",
-                    "id": updated_id,
+                    "id": result[0],
                     "updated_fields": changed_fields
                 }
             else:
-                logger.error(f"[UpdateVertex] Empty result after update. Query: {update_query}")
                 return {
                     "status": "error",
                     "id": vertex_id,
@@ -126,26 +179,6 @@ class LabXGraphJanus:
                 "id": vertex_id,
                 "message": str(e)
             }
-
-    async def query_vertices(self, label: str, filters: Dict[str, Any] = None, limit: int = None, skip: int = None) -> Dict[str, Any]:
-        try:
-            query = f"g.V().hasLabel('{label}')"
-            if filters:
-                for k, v in filters.items():
-                    query += f".has('{k}', {json.dumps(v)})"
-            if skip is not None and limit is not None:
-                query += f".range({skip}, {skip + limit})"
-            elif skip is not None:
-                query += f".range({skip}, -1)"
-            elif limit is not None:
-                query += f".limit({limit})"
-            query += ".valueMap(true)"
-            logger.debug(f"[QueryVertices] Executing: {query}")
-            result = await self.submit(query)
-            return {"status": "success", "data": flatten_vertex_result(result)}
-        except Exception as e:
-            logger.error(f"[QueryVertices] Failed for label '{label}': {e}", exc_info=e)
-            return {"status": "error", "message": str(e)}
 
     async def delete_vertices(self, label: str, ids: List[str]) -> Dict[str, Any]:
         results = []
@@ -162,12 +195,11 @@ class LabXGraphJanus:
                 logger.error(f"[Delete] Error deleting ID {id_}", exc_info=e)
                 results.append({"id": id_, "status": "error", "message": str(e)})
 
-        if all(r["status"] == "deleted" for r in results):
-            overall_status = "success"
-        elif all(r["status"] == "not_found" for r in results):
-            overall_status = "failed"
-        else:
-            overall_status = "partial"
+        overall_status = (
+            "success" if all(r["status"] == "deleted" for r in results)
+            else "failed" if all(r["status"] == "not_found" for r in results)
+            else "partial"
+        )
 
         return {
             "status": overall_status,
@@ -175,19 +207,61 @@ class LabXGraphJanus:
             "message": f"Processed {len(results)} ID(s) for label '{label}'"
         }
 
-    async def store(self, vertices: Dict[str, Any], edges: Dict[str, Any]) -> Dict[str, Any]:
+    # --- Store Vertices/Edges ---
+    async def store(self, vertices: Dict[str, pd.DataFrame], edges: Dict[str, pd.DataFrame]) -> Dict[str, Any]:
         inserted_ids = []
         try:
-            for label, df in (vertices or {}).items():
-                for _, row in df.iterrows():
-                    result = await self.add_vertex(label, row.to_dict())
-                    if result["status"] == "success":
-                        inserted_ids.append(result["data"])
-            return {"status": "success", "data": inserted_ids}
-        except Exception as e:
-            logger.error(f"[Store] Batch insert failed", exc_info=e)
-            return {"status": "error", "message": str(e)}
+            if vertices:
+                for label, df in vertices.items():
+                    if df.empty:
+                        logger.warning(f"[Store] Vertex DataFrame for label '{label}' is empty")
+                        continue
 
+                    records = dataframe_to_dict_list(df)
+                    logger.info(f"[Store] Adding {len(records)} vertex record(s) for '{label}'")
+                    for rec in records:
+                        result = await self.add_vertex(label, rec)
+                        if result["status"] == "success":
+                            inserted_ids.append(result["data"])
+                        else:
+                            logger.warning(f"[Store] Failed to insert vertex for label '{label}': {result['message']}")
+
+            if edges:
+                for label, df in edges.items():
+                    if df.empty:
+                        continue
+                    logger.info(f"[Store] Creating edges for label '{label}'")
+                    await self.create_edges(label, df)
+
+            return {
+                "status": "success",
+                "message": f"Inserted {len(inserted_ids)} vertex record(s)",
+                "data": inserted_ids
+            }
+        except Exception as e:
+            logger.error("[Store] Error while storing vertices/edges", exc_info=e)
+            return {
+                "status": "error",
+                "message": str(e),
+                "data": []
+            }
+
+    async def create_edges(self, label: str, df: pd.DataFrame):
+        for _, row in df.iterrows():
+            try:
+                from_id = row.get("from")
+                to_id = row.get("to")
+                if not from_id or not to_id:
+                    logger.warning(f"[Edge] Missing 'from' or 'to' in row: {row.to_dict()}")
+                    continue
+                prop_data = {k: v for k, v in row.to_dict().items() if k not in ("from", "to")}
+                prop_str = format_gremlin_properties(prop_data)
+                query = f"g.V({json.dumps(from_id)}).addE('{label}').to(g.V({json.dumps(to_id)})){prop_str}.id()"
+                await self.submit(query)
+            except Exception as e:
+                logger.error(f"[Edge] Failed to create edge '{label}' from {row.get('from')} to {row.get('to')}", exc_info=e)
+
+    # --- Internal Utility ---
     async def _vertex_exists(self, label: str, vertex_id: str) -> bool:
         try:
             query = f"g.V({json.dumps(vertex_id)}).hasLabel('{label}').count()"
@@ -196,21 +270,6 @@ class LabXGraphJanus:
         except Exception as e:
             logger.error(f"[CheckExistence] Error checking vertex {vertex_id} of label '{label}'", exc_info=e)
             return False
-
-    def _get_changed_fields(self, existing: Dict[str, Any], incoming: Dict[str, Any]) -> Dict[str, Any]:
-        changed = {}
-        for k, v in incoming.items():
-            existing_val = existing.get(k)
-            if isinstance(existing_val, list) and len(existing_val) == 1:
-                existing_val = existing_val[0]
-            if str(existing_val) != str(v):
-                changed[k] = v
-        return changed
-
-    def _submit_sync(self, query: str, bindings: Dict[str, Any]) -> List[Any]:
-        logger.debug(f"Executing Gremlin query: {query} | Bindings: {bindings}")
-        result_set = self.client.submit(query, bindings)
-        return result_set.all().result()
 
     def _sanitize_update_properties(self, label: str, props: Dict[str, Any]) -> Dict[str, Any]:
         if "record" in props and isinstance(props["record"], dict):
@@ -222,7 +281,8 @@ class LabXGraphJanus:
             return {k: v for k, v in props.items() if not isinstance(v, (dict, list))}
 
         try:
-            model_instance = model_cls(**props)
+            # model_instance = model_cls(**props)
+            model_instance = model_cls.Update(**props)
             return model_instance.dict(exclude_unset=True, exclude_none=True)
         except Exception as e:
             logger.error(f"Failed to sanitize properties using model '{label}': {e}")

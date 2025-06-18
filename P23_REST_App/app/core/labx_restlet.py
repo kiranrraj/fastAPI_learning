@@ -2,7 +2,6 @@ from app.models.labx_spec_model import LabXEntitySpec, LabXAttribute
 from app.core.labx_graph_janus import filter_duplicates
 from app.core.labx_context import LabXContext
 from app.core.labx_graph_janus import LabXGraphJanus
-from app.exceptions import SpecValidationError
 from app.logger import get_logger
 from typing import Any, Dict, List, Tuple
 import pandas as pd
@@ -125,15 +124,12 @@ class LabXRestlet:
             raise
 
     async def addupdatelist(self, entity_name: str, params: List[Dict[str, Any]], return_ids: bool = True) -> Dict[str, Any]:
-        """addupdatelist: Insert or update records into the graph with per-record status."""
-
         results = []
+        success_ids = []
+        failed_ids = []
 
         try:
-            # Get metadata spec
             spec = await self.get_spec(entity_name, mode="CRUD")
-
-            # Check for existing records
             deduped = await filter_duplicates(self.graph, entity_name, params)
             matched = deduped.get("matched", [])
             unmatched = deduped.get("unmatched", [])
@@ -142,6 +138,7 @@ class LabXRestlet:
             for record in matched:
                 janus_id = record.get("janus_id")
                 if not janus_id:
+                    failed_ids.append(None)
                     results.append({
                         "record": record,
                         "status": "error",
@@ -149,17 +146,26 @@ class LabXRestlet:
                     })
                     continue
 
-                # Remove internal fields
-                update_props = {k: v for k, v in record.items() if k not in ("janus_id")}
+                update_props = {k: v for k, v in record.items() if k != "janus_id"}
                 update_result = await self.graph.update_vertex(label=entity_name, vertex_id=janus_id, properties=update_props)
 
-                if update_result["status"] == "success":
+                if update_result["status"] == "updated":
+                    success_ids.append(janus_id)
                     results.append({
                         "record": record,
                         "status": "updated",
+                        "id": janus_id,
+                        "updated_fields": update_result.get("updated_fields", {})
+                    })
+                elif update_result["status"] == "not_updated":
+                    success_ids.append(janus_id)
+                    results.append({
+                        "record": record,
+                        "status": "not_updated",
                         "id": janus_id
                     })
                 else:
+                    failed_ids.append(janus_id)
                     results.append({
                         "record": record,
                         "status": "error",
@@ -174,44 +180,50 @@ class LabXRestlet:
                 if store_result["status"] == "success":
                     inserted_ids = store_result.get("data", [])
                     for i, record in enumerate(unmatched):
+                        vertex_id = inserted_ids[i] if i < len(inserted_ids) else None
+                        success_ids.append(vertex_id)
                         results.append({
                             "record": record,
                             "status": "inserted",
-                            "id": inserted_ids[i] if i < len(inserted_ids) else None
+                            "id": vertex_id
                         })
                 else:
                     for record in unmatched:
+                        failed_ids.append(None)
                         results.append({
                             "record": record,
                             "status": "error",
                             "message": store_result.get("message", "Insert failed")
                         })
 
-            # --- Determine overall operation status ---
-            success_count = sum(1 for r in results if r["status"] == "inserted")
-            error_count = sum(1 for r in results if r["status"] in {"error", "duplicate"})
+            overall_status = (
+                "success" if all(r["status"] in ("inserted", "updated", "not_updated") for r in results)
+                else "failed" if all(r["status"] == "error" for r in results)
+                else "partial"
+            )
 
-            if success_count == len(results):
-                overall_status = "success"
-            elif error_count == len(results):
-                overall_status = "failed"
-            else:
-                overall_status = "partial"
-
-
-            return {
+            response = {
                 "status": overall_status,
                 "results": results,
                 "message": f"Processed {len(results)} record(s) for entity '{entity_name}'"
             }
+
+            if return_ids:
+                response["success_ids"] = success_ids
+                response["failed_ids"] = failed_ids
+
+            return response
 
         except Exception as e:
             logger.error(f"[Upsert] Exception during insert/update for '{entity_name}'", exc_info=e)
             return {
                 "status": "error",
                 "results": [],
-                "message": str(e)
+                "message": str(e),
+                "success_ids": [],
+                "failed_ids": []
             }
+
 
     async def deletelist(self, entity_name: str, ids: List[str]) -> Dict[str, Any]:
         if not ids:

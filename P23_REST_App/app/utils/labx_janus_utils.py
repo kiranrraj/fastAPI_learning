@@ -1,19 +1,12 @@
-# labx_janus_utils.py
-
 import json
 from datetime import datetime
-from typing import Any, Dict
+from typing import Any, Dict, List
 import logging
+import pandas as pd  # Required for dataframe_to_dict_list
 
 logger = logging.getLogger("gremlin-utils")
 
 def gremlin_safe_value(val: Any) -> str:
-    """
-    Converts a Python value to a Gremlin-safe string for query embedding.
-    - Strings and datetimes are quoted.
-    - Numbers are passed through.
-    - Complex objects (dicts/lists) should be handled before this step.
-    """
     if isinstance(val, datetime):
         return json.dumps(val.isoformat())
     elif isinstance(val, str):
@@ -21,10 +14,6 @@ def gremlin_safe_value(val: Any) -> str:
     return str(val)
 
 def format_gremlin_properties(props: Dict[str, Any]) -> str:
-    """
-    Formats a dict of properties into Gremlin .property('k', v) chain.
-    Skips dicts/lists with a warning.
-    """
     prop_parts = []
     for k, v in props.items():
         if isinstance(v, (dict, list)):
@@ -35,10 +24,6 @@ def format_gremlin_properties(props: Dict[str, Any]) -> str:
     return "".join(prop_parts)
 
 def flatten_vertex_result(raw: Dict[str, Any]) -> Dict[str, str]:
-    """
-    Flattens a valueMap(true) result from JanusGraph.
-    Converts all values to str, including single-item lists.
-    """
     flat = {}
     for key, val in raw.items():
         try:
@@ -52,3 +37,20 @@ def flatten_vertex_result(raw: Dict[str, Any]) -> Dict[str, str]:
             logger.warning(f"[FlattenVertex] Skipping key '{key}' due to error: {e}", exc_info=e)
             continue
     return flat
+
+def clean_element_map(raw: Dict[Any, Any]) -> Dict[str, Any]:
+    remap_keys = {1: "id", 4: "label"}
+    cleaned = {}
+    for k, v in raw.items():
+        key = remap_keys.get(k, k)
+        cleaned[str(key)] = v
+    return cleaned
+
+def dataframe_to_dict_list(df: pd.DataFrame) -> List[Dict[str, Any]]:
+    """
+    Converts a Pandas DataFrame into a list of dictionaries.
+    Handles NaNs by converting them to None.
+    """
+    if df is None or df.empty:
+        return []
+    return df.where(pd.notnull(df), None).to_dict(orient="records")

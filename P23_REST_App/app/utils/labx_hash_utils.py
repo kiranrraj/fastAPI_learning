@@ -1,29 +1,27 @@
 import hashlib
 import json
 from typing import Dict, Any
-
+from datetime import datetime
 
 def normalize_vertex_data(data: Dict[str, Any]) -> Dict[str, Any]:
-    """
-    Normalize the vertex data:
-    - Remove volatile keys (like 'id', timestamps)
-    - Sort keys for consistent hash generation
-    - Flatten single-element lists
-    """
-    ignored_keys = {"id", "created_at", "updated_at", "recorded_at"}
     normalized = {}
+    for key, value in data.items():
+        str_key = str(key)
 
-    for k, v in data.items():
-        if k in ignored_keys:
-            continue
-        if isinstance(v, list) and len(v) == 1:
-            normalized[k] = v[0]
-        elif isinstance(v, (dict, list)):
-            normalized[k] = json.dumps(v, sort_keys=True)
+        # Flatten single-element lists
+        if isinstance(value, list) and len(value) == 1:
+            value = value[0]
+
+        # Convert datetime to ISO string
+        if isinstance(value, datetime):
+            normalized[str_key] = value.isoformat()
         else:
-            normalized[k] = v
+            normalized[str_key] = value
 
-    return dict(sorted(normalized.items()))
+    # Sort by keys for deterministic hash
+    return dict(sorted(normalized.items(), key=lambda x: x[0]))
+
+
 
 
 def hash_vertex_data(data: Dict[str, Any]) -> str:
