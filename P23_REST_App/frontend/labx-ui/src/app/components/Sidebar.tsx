@@ -8,6 +8,11 @@ import {
 } from "../../services/api";
 import Spinner from "./Spinner";
 import styles from "./Sidebar.module.css";
+import { tabExists } from "../utils/sidebar/tabUtils";
+import {
+  getInitialCollapsedMap,
+  filterGroupsWithSearch,
+} from "../utils/sidebar/sidebarUtils";
 
 interface SidebarProps {
   openTabs: Tab[];
@@ -20,21 +25,16 @@ const Sidebar = ({ openTabs, setOpenTabs, collapsed }: SidebarProps) => {
   const [expandedGroups, setExpandedGroups] = useState<{
     [key: string]: boolean;
   }>({});
+  const [searchTerm, setSearchTerm] = useState("");
   const [loading, setLoading] = useState(true);
 
-  // Fetch grouped investigations when the sidebar mounts
+  // Fetch investigation groups when sidebar mounts
   useEffect(() => {
     setLoading(true);
     fetchGroupedInvestigations()
       .then((data) => {
         setItems(data);
-
-        // Initially collapse all groups
-        const initialExpanded: { [key: string]: boolean } = {};
-        data.forEach((group: any) => {
-          initialExpanded[group.group_id] = false;
-        });
-        setExpandedGroups(initialExpanded);
+        setExpandedGroups(getInitialCollapsedMap(data));
       })
       .catch((err) =>
         console.error("Error fetching grouped investigations:", err)
@@ -42,7 +42,6 @@ const Sidebar = ({ openTabs, setOpenTabs, collapsed }: SidebarProps) => {
       .finally(() => setLoading(false));
   }, []);
 
-  // Toggle the expand/collapse state of a group
   const toggleGroup = (groupId: string) => {
     setExpandedGroups((prev) => ({
       ...prev,
@@ -50,10 +49,8 @@ const Sidebar = ({ openTabs, setOpenTabs, collapsed }: SidebarProps) => {
     }));
   };
 
-  // Open a tab for a single investigation
   const handleInvestigationClick = async (inv: any) => {
-    const exists = openTabs.find((tab) => tab.id === inv.investigation_id);
-    if (exists) return;
+    if (tabExists(openTabs, inv.investigation_id)) return;
 
     try {
       const result = await fetchInvestigationById(inv.investigation_id);
@@ -71,10 +68,8 @@ const Sidebar = ({ openTabs, setOpenTabs, collapsed }: SidebarProps) => {
     }
   };
 
-  // Open a tab for a group and show all its children
-  const handleGroupClick = async (group: any) => {
-    const exists = openTabs.find((tab) => tab.id === group.group_id);
-    if (exists) return;
+  const handleGroupClick = (group: any) => {
+    if (tabExists(openTabs, group.group_id)) return;
 
     const results = group.investigations || [];
     setOpenTabs((prev) => [
@@ -88,7 +83,8 @@ const Sidebar = ({ openTabs, setOpenTabs, collapsed }: SidebarProps) => {
     ]);
   };
 
-  // Render the sidebar with collapsible groups and items
+  const filteredGroups = filterGroupsWithSearch(items, searchTerm);
+
   return (
     <aside
       className={`${styles.sidebarContainer} ${
@@ -96,14 +92,23 @@ const Sidebar = ({ openTabs, setOpenTabs, collapsed }: SidebarProps) => {
       }`}
     >
       <div className={styles.sidebarScroll}>
+        {/* Search input */}
+        <div style={{ marginBottom: "12px" }}>
+          <input
+            type="text"
+            placeholder="Search groups or items..."
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+            style={{ width: "100%", padding: "6px 8px" }}
+          />
+        </div>
+
+        {/* Content */}
         {loading ? (
-          // Show spinner while loading investigations
           <Spinner />
         ) : (
-          // Loop through each investigation group
-          items.map((group) => (
+          filteredGroups.map((group) => (
             <div key={group.group_id} className={styles.sidebarGroup}>
-              {/* Group header section with click handlers */}
               <div
                 className={styles.sidebarGroupHeader}
                 onClick={() => handleGroupClick(group)}
@@ -121,10 +126,9 @@ const Sidebar = ({ openTabs, setOpenTabs, collapsed }: SidebarProps) => {
                 <span className={styles.sidebarGroupTitle}>{group.name}</span>
               </div>
 
-              {/* Show investigations if group is expanded */}
               {expandedGroups[group.group_id] && (
                 <div className={styles.sidebarGroupItems}>
-                  {group.investigations && group.investigations.length > 0 ? (
+                  {group.investigations?.length > 0 ? (
                     group.investigations.map((inv: any) => (
                       <div
                         key={inv.investigation_id}
