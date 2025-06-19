@@ -1,92 +1,52 @@
 // src/app/services/api.ts
 
-export async function fetchGroupedInvestigations() {
+// URL to our FastAPI end point
+const BASE_URL = "http://localhost:8000/labx/entity";
+const HEADERS = { "Content-Type": "application/json" };
+
+// Combines BASE_URL + our endpoint
+// Sends request to the endpoint with params
+// Returns the result
+async function postData(endpoint: string, body: any) {
   try {
-    const params = [
-      {
-        include_children: true,
-        limit: 10,
-        skip: 0,
-      }
-    ];
-
-    const groupRes = await fetch("http://localhost:8000/labx/entity/InvestigationGroup/list", {
+    const response = await fetch(`${BASE_URL}/${endpoint}`, {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ params })
-    });
-
-    const groupData = await groupRes.json();
-    console.log("Group Response:", groupData);
-
-    if (!Array.isArray(groupData)) {
-      console.warn("Unexpected response format:", groupData);
-      return [];
-    }
-
-    const groupedResult = groupData.map((group: any) => ({
-      ...group,
-      investigations: group.investigations || []
-    }));
-
-    return groupedResult;
-  } catch (error) {
-    console.error("Error fetching grouped investigations:", error);
-    return [];
-  }
-}
-
-export async function fetchInvestigationById(investigationId: string) {
-  try {
-    const response = await fetch("http://localhost:8000/labx/entity/Investigation/list", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        params: [
-          {
-            filter: { investigation_id: investigationId },
-            limit: 1
-          }
-        ]
-      })
+      headers: HEADERS,
+      body: JSON.stringify(body),
     });
 
     const data = await response.json();
-    console.log(`Investigation ${investigationId}:`, data);
-
-    return Array.isArray(data) ? data[0] : data;
+    return data;
   } catch (error) {
-    console.error("Error fetching investigation by ID:", error);
+    console.error(`API Error (${endpoint}):`, error);
     return null;
   }
 }
 
-export async function fetchInvestigationsByGroup(groupId: string) {
-  try {
-    const response = await fetch("http://localhost:8000/labx/entity/Investigation/list", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        params: [
-          {
-            filter: { group_id: groupId },
-            limit: 100
-          }
-        ]
-      })
-    });
+// Actual fetching done, on the result, checks the response to make sure it's a list.
+// Cleans up the data to make sure every group always has a list of investigations, even if it's empty.
+// Returns the result in a format the frontend can render.
+// ───────────────────────────────────────────────
+export async function fetchGroupedInvestigations(limit = 10, skip = 0) {
+  const data = await postData("InvestigationGroup/list", {
+    params: [{ include_children: true, limit, skip }],
+  });
 
-    const data = await response.json();
-    console.log(`Investigations in group ${groupId}:`, data);
+  if (!Array.isArray(data)) return [];
 
-    return Array.isArray(data)
-      ? data.map((inv: any) => ({
-          ...inv,
-          results: inv.results || {} // optional nested result key
-        }))
-      : [];
-  } catch (error) {
-    console.error("Error fetching investigations by group:", error);
-    return [];
-  }
+  return data.map((group: any) => ({
+    ...group,
+    investigations: group.investigations || [],
+  }));
+}
+
+//  function fetches the full details of a single investigation — 
+// not the group, not the list — just one specific test.
+// ───────────────────────────────────────────────
+export async function fetchInvestigationById(investigationId: string) {
+  const data = await postData("Investigation/list", {
+    params: [{ filter: { investigation_id: investigationId }, limit: 1 }],
+  });
+
+  return Array.isArray(data) ? data[0] : data;
 }
