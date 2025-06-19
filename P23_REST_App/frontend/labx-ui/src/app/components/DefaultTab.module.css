@@ -1,0 +1,45 @@
+.defaultTabContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding: 16px;
+}
+
+.card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 16px;
+  flex: 1 1 300px;
+  box-shadow: var(--shadow-light);
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.shareButton {
+  font-size: 0.9rem;
+  background: var(--button-bg);
+  color: var(--button-text);
+  border: 1px solid var(--button-border);
+  padding: 4px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.shareButton:hover {
+  background: var(--button-hover-bg);
+}
+
+.cardBody {
+  font-size: 0.95rem;
+}
+
+.empty {
+  color: var(--text-muted);
+  font-style: italic;
+}

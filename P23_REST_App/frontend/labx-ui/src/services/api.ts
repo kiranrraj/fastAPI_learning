@@ -16,6 +16,7 @@ async function postData(endpoint: string, body: any) {
     });
 
     const data = await response.json();
+    console.log(data)
     return data;
   } catch (error) {
     console.error(`API Error (${endpoint}):`, error);

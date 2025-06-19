@@ -3,9 +3,9 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import TabPanel from "../components/TabPanel";
 import { Tab } from "../types/tabTypes";
 import styles from "./MainContent.module.css";
+import TabRenderer from "../utils/tab/TabRenderer";
 
 interface MainContentProps {
   openTabs: Tab[];
@@ -17,14 +17,14 @@ const MainContent = ({ openTabs, setOpenTabs }: MainContentProps) => {
     openTabs.length > 0 ? openTabs[0].id : null
   );
 
-  // When tabs change, ensure focus stays
+  // Keep active tab updated when tabs change
   useEffect(() => {
-    // If current active tab was removed, next in the list will be made focused one
+    // Remove focus if active tab is closed
     if (activeTabId && !openTabs.find((t) => t.id === activeTabId)) {
       setActiveTabId(openTabs.length > 0 ? openTabs[0].id : null);
     }
 
-    // Focus will be added to the new opend tab
+    // Focus newly added tab
     if (
       openTabs.length > 0 &&
       activeTabId !== openTabs[openTabs.length - 1].id
@@ -35,13 +35,13 @@ const MainContent = ({ openTabs, setOpenTabs }: MainContentProps) => {
 
   const closeTab = (tabId: string) => {
     const index = openTabs.findIndex((t) => t.id === tabId);
-    const updated = openTabs.filter((t) => t.id !== tabId);
-    setOpenTabs(updated);
+    const updatedTabs = openTabs.filter((t) => t.id !== tabId);
+    setOpenTabs(updatedTabs);
 
-    // Focus handling code
     if (tabId === activeTabId) {
-      if (updated.length > 0) {
-        const nextTab = updated[index] || updated[updated.length - 1];
+      if (updatedTabs.length > 0) {
+        const nextTab =
+          updatedTabs[index] || updatedTabs[updatedTabs.length - 1];
         setActiveTabId(nextTab.id);
       } else {
         setActiveTabId(null);
@@ -62,7 +62,6 @@ const MainContent = ({ openTabs, setOpenTabs }: MainContentProps) => {
             }`}
           >
             <span className={styles.tabTitle}>{tab.title}</span>
-
             <span
               className={styles.closeButton}
               role="button"
@@ -94,7 +93,11 @@ const MainContent = ({ openTabs, setOpenTabs }: MainContentProps) => {
         )}
 
         {openTabs.map((tab) =>
-          tab.id === activeTabId ? <TabPanel key={tab.id} tab={tab} /> : null
+          tab.id === activeTabId ? (
+            <div key={tab.id} className={styles.tabPanel}>
+              <TabRenderer tab={tab} />
+            </div>
+          ) : null
         )}
       </div>
     </div>
