@@ -43,17 +43,6 @@ async def upsert_entity(entity_name: str, body: UpsertRequest, request: Request)
     result = await restlet.addupdatelist(entity_name, body.records, return_ids=True, allow_update=body.allow_update)
     return result
 
-# @router.post("/entity/{entity}/delete", tags=["Entity Operations"])
-# async def delete_entity(entity: str, request: Request):
-#     restlet = get_restlet(request)
-#     data = await request.json()
-#     ids = data.get("ids", [])
-#     result = await restlet.deletelist(entity_name=entity, ids=ids)
-#     return {
-#         "status": result.get("status", "unknown"),
-#         "message": result.get("message", ""),
-#         "data": result.get("results", [])
-#     }
 
 @router.post("/entity/{entity}/delete", response_model=DeleteResponse, tags=["Entity Operations"])
 async def delete_entity(entity: str, request_body: DeleteRequest, request: Request):
@@ -66,7 +55,7 @@ async def delete_entity(entity: str, request_body: DeleteRequest, request: Reque
 async def list_entity(entity_name: str, body: EntityParams, request: Request):
     restlet = get_restlet(request)
     result = await restlet.list(entity_name, body.params)
-    return result 
+    return result
 
 @router.get("/labx/entity/{entity_name}/spec", response_model=LabXEntitySpec, tags=["Entity Operations"])
 async def get_entity_spec(request: Request, entity_name: str, mode: str = "CRUD"):

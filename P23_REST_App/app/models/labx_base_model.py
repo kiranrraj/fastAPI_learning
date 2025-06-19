@@ -1,7 +1,6 @@
 from pydantic import BaseModel, field_validator
 from typing import Any
 
-
 class LabXBaseModel(BaseModel):
     model_config = {
         "from_attributes": True,
@@ -19,12 +18,18 @@ class LabXBaseModel(BaseModel):
     @field_validator("*", mode="before", check_fields=False)
     @classmethod
     def validate_string_lengths(cls, v: Any, info) -> Any:
-        if isinstance(v, str) and info.field_name != "phone":
+        if isinstance(v, str):
+            field = info.field_name
+
+            # Treat empty string as None for optional fields
+            if v.strip() == "":
+                return None
+
             length = len(v.strip())
-            if info.field_name == "address":
-                if not (2 <= length <= 100):
-                    raise ValueError("Address must be between 2 and 100 characters")
-            else:
-                if not (2 <= length <= 50):
-                    raise ValueError(f"{info.field_name} must be between 2 and 50 characters")
+
+            if field == "phone":
+                return v  # phone is validated separately
+            elif not (1 <= length <= 100):
+                raise ValueError(f"{field} must be between 1 and 100 characters")
+
         return v

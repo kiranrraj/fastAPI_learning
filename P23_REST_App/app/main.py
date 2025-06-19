@@ -8,8 +8,9 @@ from app.core.labx_graph_janus import LabXGraphJanus
 from app.logger import get_logger
 from app.config import config
 from app.api.labx_router import router as labx_router
+from fastapi.middleware.cors import CORSMiddleware
 
-logger = get_logger("labx-main")
+logger = get_logger("labx-logger")
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
@@ -40,10 +41,16 @@ app = FastAPI(
     lifespan=lifespan
 )
 
-# Mount all routers
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
 app.include_router(labx_router, prefix="/labx")
 
-# Optional root
 @app.get("/")
 def health_check():
     return {"status": "LabX API running", "version": "1.0.0"}

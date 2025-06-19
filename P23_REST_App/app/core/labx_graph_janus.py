@@ -6,6 +6,7 @@ from datetime import datetime
 from typing import Any, Dict, List
 from concurrent.futures import ThreadPoolExecutor
 from gremlin_python.driver.client import Client
+from typing import Optional, Any, Dict
 
 from app.models import ENTITY_MODEL_MAP
 from app.config import config

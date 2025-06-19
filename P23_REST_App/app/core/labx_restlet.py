@@ -20,6 +20,7 @@ from app.core.labx_graph_janus import LabXGraphJanus
 from app.models import DeleteResponse, DeleteResultItem
 from app.models.labx_spec_model import LabXEntitySpec, LabXAttribute
 from app.utils.labx_validation_exceptions import SpecValidationError
+from app.utils.labx_gremlin_utils import get_investigation_groups_with_children
 from app.models import ENTITY_MODEL_MAP
 from pydantic import ValidationError
 
@@ -29,6 +30,10 @@ class LabXRestlet:
     def __init__(self, context: LabXContext):
         self.context = context
         self.graph: LabXGraphJanus = context.graph
+        self.CHILD_ENTITY_HANDLERS = {
+            "InvestigationGroup": lambda: get_investigation_groups_with_children(self.graph)
+        }
+
 
     async def get_spec(self, entity_name: str, mode: str = "CRUD") -> LabXEntitySpec:
         try:
@@ -370,70 +375,87 @@ class LabXRestlet:
                 "results": []
             }
 
-    async def list(self, entity_name: str, params: List[Dict[str, Any]]) -> Dict[str, Any]:
+    async def get_investigations_by_group_ids(self, group_ids: List[str]) -> Dict[str, List[Dict[str, Any]]]:
         try:
-            logger.info(f"[List] Fetching records for entity: {entity_name}")
-            
-            # Load entity specification
-            spec = await self.get_spec(entity_name, mode="GET")
-            filters, _ = self.transform_input(entity_name, params, mode="list", spec=spec)
-            filter_row = filters.get(entity_name)
+            inv_result = await self.graph.query_vertices("Investigation", filters={})
+            investigations = inv_result.get("data", []) if inv_result["status"] == "success" else []
+            logger.debug(f"[GroupInvestigationMap] Fetched {len(investigations)} Investigations")
 
-            # Parse pagination params
-            try:
-                limit = int(params[0].get("limit", 100)) if params else 100
-                skip = int(params[0].get("skip", 0)) if params else 0
-            except (ValueError, TypeError) as e:
-                logger.warning(f"[List] Invalid pagination parameters: {params[0]}", exc_info=e)
-                limit = 100
-                skip = 0
+            group_map: Dict[str, List[Dict[str, Any]]] = {gid: [] for gid in group_ids}
+            for inv in investigations:
+                raw_gid = inv.get("group_ids")
+                inv_group_ids = [raw_gid] if isinstance(raw_gid, str) else raw_gid or []
 
-            # Query vertices from graph
+                for gid in inv_group_ids:
+                    if gid in group_map:
+                        group_map[gid].append(inv)
+
+            logger.debug(f"[GroupInvestigationMap] Prepared mapping for {len(group_map)} groups")
+            return group_map
+
+        except Exception as e:
+            logger.error("[GroupInvestigationMap] Failed to map investigations to groups", exc_info=e)
+            return {}
+
+    async def list(self, entity_name: str, params: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+        try:
+            # Parse incoming parameters
+            raw_params = params[0] if params else {}
+            limit = int(raw_params.get("limit", 100))
+            skip = int(raw_params.get("skip", 0))
+            filters = raw_params.get("filter", {})  # filters must be a dict of valid vertex props
+            include_children = raw_params.get("include_children", False)  # Check for 'include_children'
+
+            logger.debug(f"[List] Querying entity='{entity_name}' with filters={filters}, limit={limit}, skip={skip}")
+
+            # Query the graph with valid filters
             result = await self.graph.query_vertices(
                 label=entity_name,
-                filters=filter_row.iloc[0].to_dict() if filter_row is not None else {},
+                filters=filters,
                 limit=limit,
                 skip=skip
             )
 
-            raw_records = result.get("data", []) if result["status"] == "success" else []
+            if result["status"] == "success":
+                data = result.get("data", [])
+                logger.debug(f"[List] Fetched {len(data)} records for '{entity_name}'")
 
-            # Model transformation
-            model_bundle = ENTITY_MODEL_MAP.get(entity_name)
-            if model_bundle:
-                ReadModel = model_bundle.Read
-                typed_records = []
-                for raw in raw_records:
-                    try:
-                        normalized = normalize_gremlin_record(raw)
-                        typed_records.append(ReadModel(**normalized))
-                    except Exception as e:
-                        logger.warning(f"[List] Skipping invalid record: {raw}", exc_info=e)
+                # Extract and log T.id values
+                janus_ids = [record.get("T.id") for record in data if "T.id" in record]
+                logger.debug(f"[List] T.id values: {janus_ids}")
+
+                # If entity is InvestigationGroup and include_children flag is set, fetch children
+                if entity_name == "InvestigationGroup" and include_children:
+                    # Fetch all parent groups
+                    group_map = await self.get_investigations_by_group_ids(janus_ids)
+                    logger.debug(f"[List] Group → Investigations map: {group_map}")
+
+                    # Step 1: Identify top-level (parent) groups that have no parent
+                    parent_groups = [group for group in data if group.get("parent_group_id") == ""]
+
+                    # Step 2: Fetch children for each parent group and map investigations
+                    for parent_group in parent_groups:
+                        parent_tid = parent_group.get("T.id")
+                        # Find children groups using the parent_group_id
+                        child_groups = [group for group in data if group.get("parent_group_id") == parent_tid]
+                        if child_groups:
+                            parent_group["children"] = child_groups
+
+                        # Add the investigations to the parent group
+                        parent_group["investigations"] = group_map.get(parent_tid, [])
+
+                    return data
+                else:
+                    return data
+
             else:
-                typed_records = raw_records
-
-            # Determine output status
-            status = "success" if typed_records else "not_found"
-            message = (
-                f"Listed {len(typed_records)} record(s) for entity '{entity_name}'"
-                if typed_records else f"No records found for entity '{entity_name}'"
-            )
-
-            return {
-                "status": status,
-                "message": message,
-                "filters": filter_row.iloc[0].to_dict() if filter_row is not None else {},
-                "data": [r.model_dump() if hasattr(r, "model_dump") else r for r in typed_records]
-            }
+                logger.error(f"[List] Query failed for entity '{entity_name}': {result.get('message')}")
+                return []
 
         except Exception as e:
             logger.error(f"[List] Failed for entity='{entity_name}'", exc_info=e)
-            return {
-                "status": "error",
-                "filters": {},
-                "message": str(e),
-                "data": []
-            }
+            return []
+
 
     async def add_entity_spec(self, entity_dict: Dict[str, Any]) -> bool:
         try:
