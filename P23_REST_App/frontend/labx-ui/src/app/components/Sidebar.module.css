@@ -1,45 +1,41 @@
-/* src/app/components/Sidebar/Sidebar.module.css */
+/* src/app/components/Sidebar.module.css */
 
 .sidebarContainer {
-  width: 250px;
-  height: 100vh;
-  background-color: #f7f7f7;
-  border-right: 1px solid #ccc;
-  padding: 16px;
+  width: 240px;
+  min-height: 100vh;
+  background-color: var(--sidebar-bg);
+  border-right: 1px solid var(--border-color);
+  transition: all 0.3s ease;
   overflow-y: auto;
+  color: var(--text-primary);
+}
+
+.collapsed {
+  width: 0;
+  overflow: hidden;
+  padding: 0;
+  border: none;
 }
 
 .sidebarScroll {
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
+  padding: 16px;
 }
 
 .sidebarGroup {
-  border-bottom: 1px solid #e0e0e0;
-  padding-bottom: 8px;
+  margin-bottom: 12px;
 }
 
 .sidebarGroupHeader {
   display: flex;
   align-items: center;
   font-weight: bold;
-  font-size: 0.95rem;
   cursor: pointer;
-  color: #222;
-  padding: 6px 4px;
-  user-select: none;
-  transition: background 0.2s ease;
-}
-
-.sidebarGroupHeader:hover {
-  background-color: #eaeaea;
+  color: var(--text-primary);
 }
 
 .sidebarArrow {
   margin-right: 8px;
-  font-size: 0.85rem;
-  color: #666;
+  cursor: pointer;
 }
 
 .sidebarGroupTitle {
@@ -47,24 +43,23 @@
 }
 
 .sidebarGroupItems {
-  display: flex;
-  flex-direction: column;
-  margin-left: 18px;
+  padding-left: 16px;
   margin-top: 6px;
-  gap: 5px;
 }
 
 .sidebarItem {
-  font-size: 0.9rem;
-  padding: 4px 8px;
-  color: #444;
-  background-color: #fff;
-  border-radius: 4px;
+  padding: 4px 0;
   cursor: pointer;
-  transition: background 0.2s ease, transform 0.2s ease;
+  font-size: 0.9rem;
+  color: var(--text-primary);
 }
 
 .sidebarItem:hover {
-  background-color: #ddd;
-  transform: translateX(3px);
+  text-decoration: underline;
+}
+
+.sidebarItemEmpty {
+  padding: 4px 0;
+  color: var(--text-muted);
+  font-size: 0.85rem;
 }

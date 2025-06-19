@@ -1,19 +1,40 @@
-.container { position: relative; display: inline-block; }
-.trigger { cursor: pointer; }
+/* src/app/components/DropdownMenu.module.css */
+
+.container {
+  position: relative;
+  display: inline-block;
+}
+
+.trigger {
+  cursor: pointer;
+}
+
 .menu {
   position: absolute;
   right: 0;
   margin-top: 4px;
-  background: white;
-  border: 1px solid #ccc;
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
   border-radius: 4px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   z-index: 100;
+  color: var(--text-color);
 }
-.dropdownList { list-style: none; margin: 0; padding: 8px 0; }
+
+.dropdownList {
+  list-style: none;
+  margin: 0;
+  padding: 8px 0;
+}
+
 .dropdownItem {
   padding: 8px 16px;
   cursor: pointer;
   white-space: nowrap;
+  background: transparent;
+  color: var(--text-color);
 }
-.dropdownItem:hover { background: #f0f0f0; }
+
+.dropdownItem:hover {
+  background: var(--hover-bg);
+}

@@ -1,4 +1,4 @@
-// src/app/components/Sidebar/Sidebar.tsx
+// src/app/components/Sidebar.tsx
 
 'use client'
 
@@ -6,28 +6,25 @@ import { useEffect, useState } from 'react'
 import { Tab } from '../types/tabTypes'
 import {
   fetchGroupedInvestigations,
-  fetchInvestigationById,
-  fetchInvestigationsByGroup
+  fetchInvestigationById
 } from '../../services/api'
 import styles from './Sidebar.module.css'
 
 interface SidebarProps {
   openTabs: Tab[]
   setOpenTabs: React.Dispatch<React.SetStateAction<Tab[]>>
+  collapsed: boolean
 }
 
-const Sidebar = ({ openTabs, setOpenTabs }: SidebarProps) => {
+const Sidebar = ({ openTabs, setOpenTabs, collapsed }: SidebarProps) => {
+  console.log("Collapsed value:", collapsed); 
   const [items, setItems] = useState<any[]>([])
   const [expandedGroups, setExpandedGroups] = useState<{ [key: string]: boolean }>({})
 
-  // Fetch investigation groups (with children)
   useEffect(() => {
     fetchGroupedInvestigations()
       .then((data) => {
-        console.log('[Sidebar] Grouped data fetched:', data)
-
         setItems(data)
-
         const initialExpanded: { [key: string]: boolean } = {}
         data.forEach((group: any) => {
           initialExpanded[group.group_id] = false
@@ -37,7 +34,6 @@ const Sidebar = ({ openTabs, setOpenTabs }: SidebarProps) => {
       .catch((err) => console.error('Error fetching grouped investigations:', err))
   }, [])
 
-  // Expand/Collapse group view
   const toggleGroup = (groupId: string) => {
     setExpandedGroups((prev) => ({
       ...prev,
@@ -45,15 +41,12 @@ const Sidebar = ({ openTabs, setOpenTabs }: SidebarProps) => {
     }))
   }
 
-  // Handle investigation click (single tab)
   const handleInvestigationClick = async (inv: any) => {
     const exists = openTabs.find(tab => tab.id === inv.investigation_id)
     if (exists) return
 
     try {
       const result = await fetchInvestigationById(inv.investigation_id)
-      console.log('[Sidebar] Opened investigation tab:', inv.name, result)
-
       setOpenTabs(prev => [
         ...prev,
         {
@@ -68,37 +61,25 @@ const Sidebar = ({ openTabs, setOpenTabs }: SidebarProps) => {
     }
   }
 
-  // Handle group name click → open tab for all children
   const handleGroupClick = async (group: any) => {
     const exists = openTabs.find(tab => tab.id === group.group_id)
     if (exists) return
 
-    try {
-      console.log('[Sidebar] Group clicked:', group.name)
-
-      // Use pre-fetched children if available
-      const results = group.investigations || []
-
-      // const results = await fetchInvestigationsByGroup(group.group_id)
-
-      console.log(`[Sidebar] Opening tab for group "${group.name}" with children:`, results)
-
-      setOpenTabs(prev => [
-        ...prev,
-        {
-          id: group.group_id,
-          type: 'group',
-          title: group.name,
-          content: results,
-        }
-      ])
-    } catch (err) {
-      console.error('Failed to load group investigations:', err)
-    }
+    const results = group.investigations || []
+    setOpenTabs(prev => [
+      ...prev,
+      {
+        id: group.group_id,
+        type: 'group',
+        title: group.name,
+        content: results,
+      }
+    ])
   }
 
   return (
-    <aside className={styles.sidebarContainer}>
+    <aside className={`${styles.sidebarContainer} ${collapsed ? styles.collapsed : ''}`}>
+    {/* <aside className={`${styles.sidebarContainer} ${collapsed ? styles.collapsed : ''}`}> */}
       <div className={styles.sidebarScroll}>
         {items.map((group) => (
           <div key={group.group_id} className={styles.sidebarGroup}>

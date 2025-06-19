@@ -5,16 +5,30 @@ import ToggleButton from './ToggleButton'
 import DropdownMenu from './DropdownMenu'
 import styles from './Header.module.css'
 
-const Header = () => {
+interface HeaderProps {
+  toggleSidebar?: () => void
+}
+
+const Header = ({ toggleSidebar }: HeaderProps) => {
   const [darkMode, setDarkMode] = useState(false)
   const avatarUrl = "/avatar_default_1.svg"
-  const profileName = 'Kiranraj R.' 
+  const profileName = 'Kiranraj R.'
   const logoUrl = "/logo.jpg"
+  
+  // const toggleTheme = () => {
+  //   setDarkMode(!darkMode)
+  //   if (!darkMode) {
+  //     document.body.classList.add('dark')
+  //   } else {
+  //     document.body.classList.remove('dark')
+  //   }
+  // }
 
   const toggleTheme = () => {
-    setDarkMode(!darkMode)
-    document.body.classList.toggle('dark', !darkMode)
+    setDarkMode(!darkMode);
+    document.body.classList.toggle('dark', !darkMode);
   }
+
 
   const handleLogout = () => {
     console.log('Logging out...')
@@ -22,30 +36,34 @@ const Header = () => {
 
   return (
     <header className={styles.container}>
-      {/* Left: Logo & Title */}
+      {/* Left: Sidebar Toggle + Logo */}
       <div className={styles.left}>
-        {/* Profile Image */}
-        {avatarUrl ? (
-          <img src={logoUrl} alt="Profile" className={styles.logo} />
-        ) : (
-          <div className={styles.logoPlaceholder}>Avatar</div>
+        {toggleSidebar && (
+          <button className={styles.toggleSidebar} onClick={toggleSidebar}>
+            ☰
+          </button>
         )}
+
+
+        {logoUrl ? (
+          <img src={logoUrl} alt="Logo" className={styles.logo} />
+        ) : (
+          <div className={styles.logoPlaceholder}>Logo</div>
+        )}
+
         <span className={styles.title}>LabX</span>
       </div>
 
       {/* Right: Profile, Settings, Toggle, Logout */}
       <div className={styles.right}>
-        {/* Profile Image */}
         {avatarUrl ? (
           <img src={avatarUrl} alt="Profile" className={styles.avatar} />
         ) : (
           <div className={styles.avatarPlaceholder}>Avatar</div>
         )}
 
-        {/* Profile Name */}
         <span className={styles.profileName}>{profileName}</span>
 
-        {/* Settings Dropdown */}
         <DropdownMenu
           trigger={
             <span className={styles.iconButton} title="Settings">
@@ -59,10 +77,8 @@ const Header = () => {
           </ul>
         </DropdownMenu>
 
-        {/* Dark Mode Toggle */}
         <ToggleButton enabled={darkMode} onToggle={toggleTheme} />
 
-        {/* Logout Button */}
         <button className={styles.logoutButton} onClick={handleLogout}>
           Logout
         </button>
