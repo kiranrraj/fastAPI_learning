@@ -1,3 +1,5 @@
+// /src/app/dashboard/page.tsx
+
 import MainLayout from '../components/MainLayout'
 
 export default function DashboardPage() {

@@ -1,45 +1,60 @@
+// src/app/components/Header.tsx
 'use client'
 
-import { useState } from 'react'
+import React, { useEffect, useState } from 'react'
+import ToggleButton from './ToggleButton'
+import DropdownMenu from './DropdownMenu'
+import styles from './Header.module.css'
 
 const Header = () => {
   const [darkMode, setDarkMode] = useState(false)
+  const [avatarUrl, setAvatarUrl] = useState<string | null>(null)
 
-  const toggleTheme = () => setDarkMode(!darkMode)
+  useEffect(() => {
+    fetch('https://randomuser.me/api/')
+      .then((res) => res.json())
+      .then((data) => {
+        setAvatarUrl(data.results[0].picture.thumbnail)
+      })
+      .catch(console.error)
+  }, [])
+
+  const toggleTheme = () => {
+    setDarkMode(!darkMode)
+    document.body.classList.toggle('dark', !darkMode)
+  }
 
   return (
-    <header className="flex justify-between items-center bg-white dark:bg-gray-900 shadow px-6 py-3">
-      {/* Left: Logo + App Name */}
-      <div className="flex items-center gap-2">
-        <img src="/logo.svg" alt="LabX Logo" className="h-8 w-8" />
-        <span className="text-xl font-semibold">LabX</span>
+    <header className={styles.container}>
+      {/* Logo and Title */}
+      <div className={styles.left}>
+        <span className={styles.logo}>🧪</span>
+        <span className={styles.title}>LabX</span>
       </div>
 
-      {/* Right: Profile + Actions */}
-      <div className="flex items-center gap-4">
-        {/* Theme Toggle Placeholder */}
-        <button onClick={toggleTheme} className="text-lg hover:text-primary">
-          {darkMode ? '☀️' : '🌙'}
-        </button>
+      {/* Controls on right */}
+      <div className={styles.right}>
+        <ToggleButton enabled={darkMode} onToggle={toggleTheme} />
 
-        {/* Profile */}
-        <div className="flex items-center gap-2">
-          <img src="/profile.jpg" alt="User" className="w-8 h-8 rounded-full" />
-          <span className="text-sm font-medium">Dr. Ashwin</span>
+        <DropdownMenu
+          trigger={
+            <span className={styles.iconButton} title="Settings">
+              ⚙️
+            </span>
+          }
+        >
+          <ul className={styles.dropdownList}>
+            <li className={styles.dropdownItem}>Profile</li>
+            <li className={styles.dropdownItem}>Settings</li>
+            <li className={styles.dropdownItem}>Logout</li>
+          </ul>
+        </DropdownMenu>
 
-          {/* Settings Dropdown */}
-          <div className="relative group">
-            <span className="cursor-pointer text-lg">⚙️</span>
-            <div className="absolute right-0 mt-2 w-40 bg-white dark:bg-gray-800 border rounded shadow-md hidden group-hover:block z-50">
-              <ul className="py-1 text-sm text-gray-700 dark:text-gray-200">
-                <li className="px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700 cursor-pointer">Settings</li>
-                <li className="px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700 cursor-pointer flex items-center gap-2">
-                  🚪 Logout
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
+        {avatarUrl ? (
+          <img src={avatarUrl} alt="Profile" className={styles.avatar} />
+        ) : (
+          <div className={styles.avatarPlaceholder}>👤</div>
+        )}
       </div>
     </header>
   )

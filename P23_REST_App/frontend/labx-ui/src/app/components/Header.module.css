@@ -1,0 +1,96 @@
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ffffff;
+  padding: 12px 24px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.header-logo {
+  height: 32px;
+  width: 32px;
+}
+
+.header-title {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.header-theme-toggle {
+  font-size: 1.2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.header-profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+}
+
+.header-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
+
+.header-username {
+  font-size: 0.95rem;
+}
+
+.header-settings {
+  position: relative;
+}
+
+.header-gear {
+  cursor: pointer;
+}
+
+.header-settings:hover .header-dropdown {
+  display: block;
+}
+
+.header-dropdown {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 28px;
+  width: 140px;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  z-index: 50;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.header-dropdown ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.header-dropdown li {
+  padding: 8px 12px;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.header-dropdown li:hover {
+  background-color: #f0f0f0;
+}

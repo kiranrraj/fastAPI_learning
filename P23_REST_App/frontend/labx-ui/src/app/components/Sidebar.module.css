@@ -1,0 +1,70 @@
+/* src/app/components/Sidebar/Sidebar.module.css */
+
+.sidebarContainer {
+  width: 250px;
+  height: 100vh;
+  background-color: #f7f7f7;
+  border-right: 1px solid #ccc;
+  padding: 16px;
+  overflow-y: auto;
+}
+
+.sidebarScroll {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.sidebarGroup {
+  border-bottom: 1px solid #e0e0e0;
+  padding-bottom: 8px;
+}
+
+.sidebarGroupHeader {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  font-size: 0.95rem;
+  cursor: pointer;
+  color: #222;
+  padding: 6px 4px;
+  user-select: none;
+  transition: background 0.2s ease;
+}
+
+.sidebarGroupHeader:hover {
+  background-color: #eaeaea;
+}
+
+.sidebarArrow {
+  margin-right: 8px;
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.sidebarGroupTitle {
+  flex-grow: 1;
+}
+
+.sidebarGroupItems {
+  display: flex;
+  flex-direction: column;
+  margin-left: 18px;
+  margin-top: 6px;
+  gap: 5px;
+}
+
+.sidebarItem {
+  font-size: 0.9rem;
+  padding: 4px 8px;
+  color: #444;
+  background-color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.sidebarItem:hover {
+  background-color: #ddd;
+  transform: translateX(3px);
+}

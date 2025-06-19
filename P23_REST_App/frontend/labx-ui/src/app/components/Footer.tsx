@@ -1,6 +1,9 @@
+// src/app/components/Footer/Footer.tsx
+
 'use client'
 
 import { useEffect, useState } from 'react'
+import styles from './Footer.module.css'
 
 const Footer = () => {
   const [time, setTime] = useState('')
@@ -13,10 +16,10 @@ const Footer = () => {
   }, [])
 
   return (
-    <footer className="w-full px-6 py-2 text-sm bg-white dark:bg-gray-900 text-right text-gray-600 dark:text-gray-300 border-t">
-      <span className="mr-4">{time}</span>
-      <span className="mr-4">UID: U12345</span>
-      <span>Server: OK</span>
+    <footer className={styles['footer-container']}>
+      <span className={styles['footer-item']}>{time}</span>
+      <span className={styles['footer-item']}>UID: U12345</span>
+      <span className={styles['footer-item']}>Server: OK</span>
     </footer>
   )
 }
