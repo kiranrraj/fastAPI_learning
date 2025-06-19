@@ -1,4 +1,5 @@
 .card {
+  width: 300px;
   background-color: var(--bg-card);
   border: 1px solid var(--border-color);
   border-radius: 8px;
@@ -6,29 +7,58 @@
   box-shadow: var(--shadow-light);
   display: flex;
   flex-direction: column;
-  gap: 8px;
+}
+
+.topMeta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  margin-bottom: 4px;
+}
+
+.metaLeft {
+  text-align: left;
+}
+
+.metaRight {
+  text-align: right;
+  font-weight: 500;
 }
 
 .header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   margin-bottom: 8px;
 }
 
-.header h3 {
-  margin: 0;
+.title {
   font-size: 1.1rem;
   font-weight: 600;
-  color: var(--text-primary);
+  margin: 0;
 }
 
-.actions {
-  display: flex;
-  gap: 8px;
+.subtitle {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+
+.separator {
+  border: none;
+  height: 1px;
+  background-color: var(--border-color-light);
+  margin: 8px 0 12px 0;
 }
 
 .body {
+  flex-grow: 1;
   font-size: 0.95rem;
-  color: var(--text-secondary);
+  color: var(--text-primary);
+}
+
+.footer {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-top: 12px;
+  padding-top: 8px;
+  border-top: 1px solid var(--border-color-light);
 }
