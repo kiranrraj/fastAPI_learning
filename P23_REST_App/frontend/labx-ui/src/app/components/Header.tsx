@@ -1,38 +1,28 @@
-'use client'
+"use client";
 
-import React, { useState } from 'react'
-import ToggleButton from './ToggleButton'
-import DropdownMenu from './DropdownMenu'
-import styles from './Header.module.css'
+import React, { useState } from "react";
+import ToggleButton from "./ToggleButton";
+import DropdownMenu from "./DropdownMenu";
+import styles from "./Header.module.css";
 
 interface HeaderProps {
-  toggleSidebar?: () => void
+  toggleSidebar?: () => void;
 }
 
 const Header = ({ toggleSidebar }: HeaderProps) => {
-  const [darkMode, setDarkMode] = useState(false)
-  const avatarUrl = "/avatar_default_1.svg"
-  const profileName = 'Kiranraj R.'
-  const logoUrl = "/logo.jpg"
-  
-  // const toggleTheme = () => {
-  //   setDarkMode(!darkMode)
-  //   if (!darkMode) {
-  //     document.body.classList.add('dark')
-  //   } else {
-  //     document.body.classList.remove('dark')
-  //   }
-  // }
+  const [darkMode, setDarkMode] = useState(false);
+  const avatarUrl = "/avatar_default_1.svg";
+  const profileName = "Kiranraj R.";
+  const logoUrl = "/logo.jpg";
 
   const toggleTheme = () => {
     setDarkMode(!darkMode);
-    document.body.classList.toggle('dark', !darkMode);
-  }
-
+    document.body.classList.toggle("dark", !darkMode);
+  };
 
   const handleLogout = () => {
-    console.log('Logging out...')
-  }
+    console.log("Logging out...");
+  };
 
   return (
     <header className={styles.container}>
@@ -43,7 +33,6 @@ const Header = ({ toggleSidebar }: HeaderProps) => {
             ☰
           </button>
         )}
-
 
         {logoUrl ? (
           <img src={logoUrl} alt="Logo" className={styles.logo} />
@@ -84,7 +73,7 @@ const Header = ({ toggleSidebar }: HeaderProps) => {
         </button>
       </div>
     </header>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;

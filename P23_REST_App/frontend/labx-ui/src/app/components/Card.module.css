@@ -1,12 +1,42 @@
 .card {
-  width: 300px;
+  width: 320px;
   background-color: var(--bg-card);
   border: 1px solid var(--border-color);
-  border-radius: 8px;
+  border-radius: 12px;
   padding: 16px;
-  box-shadow: var(--shadow-light);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  min-height: 280px;
+  overflow: hidden;
+}
+
+.card:hover {
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+.topBar {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.topBar button {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 4px;
+  color: var(--text-muted);
+  transition: color 0.2s;
+}
+
+.topBar button:hover {
+  color: var(--highlight-blue);
 }
 
 .topMeta {
@@ -14,20 +44,16 @@
   justify-content: space-between;
   font-size: 0.75rem;
   color: var(--text-muted);
-  margin-bottom: 4px;
+  margin-bottom: 6px;
 }
 
-.metaLeft {
-  text-align: left;
-}
-
+.metaLeft,
 .metaRight {
-  text-align: right;
   font-weight: 500;
 }
 
 .header {
-  margin-bottom: 8px;
+  margin-bottom: 6px;
 }
 
 .title {
@@ -43,10 +69,10 @@
 }
 
 .separator {
-  border: none;
   height: 1px;
   background-color: var(--border-color-light);
-  margin: 8px 0 12px 0;
+  margin: 10px 0 12px 0;
+  border: none;
 }
 
 .body {
@@ -61,4 +87,11 @@
   margin-top: 12px;
   padding-top: 8px;
   border-top: 1px solid var(--border-color-light);
+}
+
+.metaBlock {
+  margin-top: 4px;
+  margin-bottom: 8px;
+  font-size: 0.85rem;
+  color: var(--text-muted);
 }
