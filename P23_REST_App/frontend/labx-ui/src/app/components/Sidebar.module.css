@@ -21,6 +21,63 @@
   padding: 16px;
 }
 
+.sidebarButtonGroup{
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 5px;
+}
+
+.sidebarButton {
+  padding: 4px 8px;
+  font-size: 13px;
+  font-weight: 500;
+  background-color: var(--button-bg, #f2f2f2);
+  color: var(--button-text, #333);
+  border: 1px solid var(--button-border, #ccc);
+  border-radius: 6px;
+  box-shadow: var(--shadow-light, 0 2px 4px rgba(0, 0, 0, 0.08));
+  cursor: pointer;
+  transition: 
+    background-color 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.1s ease;
+}
+
+.sidebarButton:hover:not(:disabled) {
+  background-color: var(--button-hover-bg, #e0e0e0);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+}
+
+.sidebarButton:focus-visible {
+  outline: 2px solid var(--highlight-blue, #007bff);
+  outline-offset: 2px;
+}
+
+.sidebarButton:active:not(:disabled) {
+  transform: scale(0.97);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.sidebarButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.sidebarSearchGroup {
+  margin-bottom: 12px;
+}
+
+.sidebarSearchInput {
+  width: 100%;
+  padding: 6px 8px;
+  font-size: 14px;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  background-color: var(--input-bg);
+  color: var(--text-primary);
+}
+
 .sidebarGroup {
   margin-bottom: 12px;
 }

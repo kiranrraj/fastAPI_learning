@@ -1,18 +1,22 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Spinner from "./Spinner";
+import styles from "./Sidebar.module.css";
 import { Tab } from "../types/tabTypes";
+
 import {
   fetchGroupedInvestigations,
   fetchInvestigationById,
 } from "../../services/api";
-import Spinner from "./Spinner";
-import styles from "./Sidebar.module.css";
-import { tabExists } from "../utils/sidebar/tabUtils";
+
 import {
+  tabExists,
   getInitialCollapsedMap,
   filterGroupsWithSearch,
 } from "../utils/sidebar/sidebarUtils";
+
+import { toggleGroupState } from "../utils/sidebar/toggleUtils";
 
 interface SidebarProps {
   openTabs: Tab[];
@@ -22,31 +26,29 @@ interface SidebarProps {
 
 const Sidebar = ({ openTabs, setOpenTabs, collapsed }: SidebarProps) => {
   const [items, setItems] = useState<any[]>([]);
-  const [expandedGroups, setExpandedGroups] = useState<{
-    [key: string]: boolean;
-  }>({});
+  const [expandedGroups, setExpandedGroups] = useState<Record<string, boolean>>(
+    {}
+  );
   const [searchTerm, setSearchTerm] = useState("");
   const [loading, setLoading] = useState(true);
 
-  // Fetch investigation groups when sidebar mounts
   useEffect(() => {
-    setLoading(true);
-    fetchGroupedInvestigations()
-      .then((data) => {
+    const loadData = async () => {
+      try {
+        const data = await fetchGroupedInvestigations();
         setItems(data);
         setExpandedGroups(getInitialCollapsedMap(data));
-      })
-      .catch((err) =>
-        console.error("Error fetching grouped investigations:", err)
-      )
-      .finally(() => setLoading(false));
+      } catch (err) {
+        console.error("Failed to load groups:", err);
+      } finally {
+        setLoading(false);
+      }
+    };
+    loadData();
   }, []);
 
   const toggleGroup = (groupId: string) => {
-    setExpandedGroups((prev) => ({
-      ...prev,
-      [groupId]: !prev[groupId],
-    }));
+    setExpandedGroups((prev) => toggleGroupState(prev, groupId));
   };
 
   const handleInvestigationClick = async (inv: any) => {
@@ -71,19 +73,41 @@ const Sidebar = ({ openTabs, setOpenTabs, collapsed }: SidebarProps) => {
   const handleGroupClick = (group: any) => {
     if (tabExists(openTabs, group.group_id)) return;
 
-    const results = group.investigations || [];
+    const children = group.investigations || [];
     setOpenTabs((prev) => [
       ...prev,
       {
         id: group.group_id,
         type: "group",
         title: group.name,
-        content: results,
+        content: children,
       },
     ]);
   };
 
+  const handleCollapseAll = () => {
+    if (items.length === 0) return;
+    const collapsedMap = getInitialCollapsedMap(items);
+    setExpandedGroups(collapsedMap);
+  };
+
+  const handleExpandAll = () => {
+    if (items.length === 0) return;
+    const expandedMap = Object.fromEntries(
+      items.map((g) => [g.group_id, true])
+    );
+    setExpandedGroups(expandedMap);
+  };
+
   const filteredGroups = filterGroupsWithSearch(items, searchTerm);
+  const isExpandDisabled =
+    loading ||
+    items.length === 0 ||
+    Object.values(expandedGroups).every((v) => v === true);
+  const isCollapseDisabled =
+    loading ||
+    items.length === 0 ||
+    Object.values(expandedGroups).every((v) => v === false);
 
   return (
     <aside
@@ -92,28 +116,40 @@ const Sidebar = ({ openTabs, setOpenTabs, collapsed }: SidebarProps) => {
       }`}
     >
       <div className={styles.sidebarScroll}>
-        {/* Search input */}
-        <div style={{ marginBottom: "12px" }}>
+        <div className={styles.sidebarButtonGroup}>
+          <button
+            className={styles.sidebarButton}
+            onClick={handleExpandAll}
+            disabled={isExpandDisabled}
+          >
+            Expand All
+          </button>
+
+          <button
+            className={styles.sidebarButton}
+            onClick={handleCollapseAll}
+            disabled={isCollapseDisabled}
+          >
+            Collapse All
+          </button>
+        </div>
+
+        <div className={styles.sidebarSearchGroup}>
           <input
             type="text"
             placeholder="Search groups or items..."
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
-            style={{ width: "100%", padding: "6px 8px" }}
+            className={styles.sidebarSearchInput}
           />
         </div>
 
-        {/* Content */}
         {loading ? (
           <Spinner />
         ) : (
           filteredGroups.map((group) => (
             <div key={group.group_id} className={styles.sidebarGroup}>
-              <div
-                className={styles.sidebarGroupHeader}
-                onClick={() => handleGroupClick(group)}
-                onDoubleClick={() => toggleGroup(group.group_id)}
-              >
+              <div className={styles.sidebarGroupHeader}>
                 <span
                   className={styles.sidebarArrow}
                   onClick={(e) => {
@@ -123,7 +159,12 @@ const Sidebar = ({ openTabs, setOpenTabs, collapsed }: SidebarProps) => {
                 >
                   {expandedGroups[group.group_id] ? "▼" : "►"}
                 </span>
-                <span className={styles.sidebarGroupTitle}>{group.name}</span>
+                <span
+                  className={styles.sidebarGroupTitle}
+                  onClick={() => handleGroupClick(group)}
+                >
+                  {group.name}
+                </span>
               </div>
 
               {expandedGroups[group.group_id] && (

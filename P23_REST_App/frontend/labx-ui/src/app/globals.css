@@ -1,7 +1,6 @@
 @import "tailwindcss";
 
-/* src/app/globals.css */
-
+/* CSS Variables for Light & Dark Themes */
 :root {
   --bg-primary: #ffffff;
   --bg-secondary: #f9f9f9;
@@ -14,6 +13,7 @@
   --bg-toggle: #ccc;
   --bg-toggle-circle: #ffffff;
   --bg-card: #f9f9f9;
+  --bg-footer: #ffffff;
 
   --text-primary: #333333;
   --text-secondary: #555555;
@@ -22,15 +22,12 @@
 
   --border-color: #dddddd;
   --border-color-light: #cccccc;
+
   --shadow-light: 0 2px 4px rgba(0, 0, 0, 0.08);
 
   --highlight-blue: #007bff;
   --danger: #e74c3c;
   --danger-hover: #c0392b;
-
-  --bg-footer: #ffffff;
-  --text-secondary: #555;
-  --border-color: #ddd;
 }
 
 body.dark {
@@ -45,6 +42,7 @@ body.dark {
   --bg-toggle: #666666;
   --bg-toggle-circle: #eeeeee;
   --bg-card: #2c2c2c;
+  --bg-footer: #1f1f1f;
 
   --text-primary: #e0e0e0;
   --text-secondary: #bbbbbb;
@@ -53,15 +51,12 @@ body.dark {
 
   --border-color: #444444;
   --border-color-light: #555555;
+
   --shadow-light: 0 2px 4px rgba(0, 0, 0, 0.5);
 
   --highlight-blue: #3399ff;
   --danger: #e74c3c;
   --danger-hover: #ff4d4d;
-
-  --bg-footer: #1f1f1f;
-  --text-secondary: #aaa;
-  --border-color: #444;
 }
 
 /* Reset and Base Styles */
@@ -87,6 +82,8 @@ textarea {
   font-family: inherit;
   font-size: 1rem;
   outline: none;
+  background: none;
+  border: none;
 }
 
 a {
@@ -104,4 +101,3 @@ img {
   max-width: 100%;
   display: block;
 }
-
