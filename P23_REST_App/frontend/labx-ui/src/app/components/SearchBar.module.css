@@ -1,14 +1,18 @@
-/* src/app/components/SearchBar.module.css */
-
 .searchContainer {
   display: flex;
   gap: 8px;
   margin-bottom: 16px;
 }
 
-.searchInput {
+.inputWrapper {
+  position: relative;
   flex: 1;
+}
+
+.searchInput {
+  width: 100%;
   padding: 8px 12px;
+  padding-right: 32px;
   border: 1px solid var(--border);
   border-radius: 4px;
   background-color: var(--input-bg);
@@ -18,6 +22,25 @@
 .searchInput:focus {
   outline: none;
   border-color: var(--primary);
+}
+
+.clearButton {
+  position: absolute;
+  top: 50%;
+  right: 8px;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  font-size: 18px;
+  color: var(--text-muted);
+  cursor: pointer;
+  padding: 0;
+  line-height: 1;
+  z-index: 2;
+}
+
+.clearButton:hover {
+  color: var(--primary);
 }
 
 .searchButton {

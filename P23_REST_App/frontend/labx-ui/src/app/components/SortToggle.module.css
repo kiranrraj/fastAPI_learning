@@ -1,0 +1,23 @@
+.sortToggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  color: var(--text);
+  font-size: 14px;
+  gap: 4px;
+  padding: 4px 8px;
+}
+
+.sortToggle:hover .sortIcon {
+  color: var(--primary);
+}
+
+.sortLabel {
+  font-weight: 500;
+}
+
+.sortIcon {
+  font-size: 16px;
+}

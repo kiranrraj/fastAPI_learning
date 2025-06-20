@@ -17,6 +17,7 @@ import {
 } from "../utils/sidebar/sidebarUtils";
 
 import { toggleGroupState } from "../utils/sidebar/toggleUtils";
+import SearchBar from "./SearchBar"; // ✅ Imported reusable SearchBar
 
 interface SidebarProps {
   openTabs: Tab[];
@@ -147,13 +148,11 @@ const Sidebar = ({ openTabs, setOpenTabs, collapsed }: SidebarProps) => {
           </button>
         </div>
 
+        {/* ✅ Using reusable SearchBar component */}
         <div className={styles.sidebarSearchGroup}>
-          <input
-            type="text"
+          <SearchBar
+            onSearch={(term) => setSearchTerm(term)}
             placeholder="Search groups or items..."
-            value={searchTerm}
-            onChange={(e) => setSearchTerm(e.target.value)}
-            className={styles.sidebarSearchInput}
           />
         </div>
 

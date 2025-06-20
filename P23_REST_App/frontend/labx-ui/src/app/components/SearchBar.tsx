@@ -1,4 +1,3 @@
-// src/app/components/SearchBar.tsx
 "use client";
 
 import React, { useState } from "react";
@@ -12,27 +11,41 @@ interface SearchBarProps {
 const SearchBar = ({ onSearch, placeholder = "Search..." }: SearchBarProps) => {
   const [term, setTerm] = useState("");
 
-  const handleSearch = () => {
-    onSearch(term.trim());
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === "Enter") onSearch(term.trim());
   };
 
-  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
-    if (e.key === "Enter") handleSearch();
+  const handleClear = () => {
+    setTerm("");
+    onSearch("");
   };
 
   return (
     <div className={styles.searchContainer}>
-      <input
-        type="text"
-        value={term}
-        onChange={(e) => setTerm(e.target.value)}
-        onKeyDown={handleKeyDown}
-        className={styles.searchInput}
-        placeholder={placeholder}
-      />
-      <button onClick={handleSearch} className={styles.searchButton}>
-        Search
-      </button>
+      <div className={styles.inputWrapper}>
+        <input
+          id="search-input"
+          name="search"
+          type="text"
+          value={term}
+          onChange={(e) => setTerm(e.target.value)}
+          onKeyDown={handleKeyDown}
+          className={styles.searchInput}
+          placeholder={placeholder}
+          autoComplete="off"
+        />
+
+        {term && (
+          <button
+            className={styles.clearButton}
+            onClick={handleClear}
+            title="Clear search"
+            aria-label="Clear search"
+          >
+            ×
+          </button>
+        )}
+      </div>
     </div>
   );
 };
