@@ -1,4 +1,5 @@
 // src/app/utils/sidebar/sidebarUtils.ts
+
 import { Tab } from '../../types/tabTypes';
 
 export function getInitialCollapsedMap(groups: any[]): Record<string, boolean> {
@@ -8,13 +9,31 @@ export function getInitialCollapsedMap(groups: any[]): Record<string, boolean> {
 export function filterGroupsWithSearch(groups: any[], search: string) {
   const lower = search.toLowerCase();
 
-  return groups.filter(group => {
-    const groupMatches = group.name.toLowerCase().includes(lower);
-    const childMatches = group.investigations?.some((inv: any) =>
-      inv.name.toLowerCase().includes(lower)
+  return groups
+    .map(group => {
+      const groupMatches = group.name.toLowerCase().includes(lower);
+
+      const sortedAllInvestigations = [...(group.investigations || [])].sort(
+        (a: any, b: any) =>
+          a.name.localeCompare(b.name, undefined, { sensitivity: 'base' })
+      );
+
+      const filteredInvestigations = sortedAllInvestigations.filter((inv: any) =>
+        inv.name.toLowerCase().includes(lower)
+      );
+
+      return {
+        ...group,
+        investigations: groupMatches
+          ? sortedAllInvestigations
+          : filteredInvestigations,
+      };
+    })
+    .filter(
+      group =>
+        group.name.toLowerCase().includes(lower) ||
+        group.investigations.length > 0
     );
-    return groupMatches || childMatches;
-  });
 }
 
 export function tabExists(openTabs: Tab[], id: string): boolean {

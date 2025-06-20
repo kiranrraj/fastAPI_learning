@@ -36,8 +36,21 @@ const Sidebar = ({ openTabs, setOpenTabs, collapsed }: SidebarProps) => {
     const loadData = async () => {
       try {
         const data = await fetchGroupedInvestigations();
-        setItems(data);
-        setExpandedGroups(getInitialCollapsedMap(data));
+
+        // Sort groups by name
+        const sortedData = [...data].sort((a, b) =>
+          a.name.localeCompare(b.name, undefined, { sensitivity: "base" })
+        );
+
+        // Sort investigations within each group
+        sortedData.forEach((group) => {
+          group.investigations?.sort((a: any, b: any) =>
+            a.name.localeCompare(b.name, undefined, { sensitivity: "base" })
+          );
+        });
+
+        setItems(sortedData);
+        setExpandedGroups(getInitialCollapsedMap(sortedData));
       } catch (err) {
         console.error("Failed to load groups:", err);
       } finally {
