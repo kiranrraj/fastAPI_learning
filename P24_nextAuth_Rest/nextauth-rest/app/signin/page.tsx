@@ -1,25 +1,31 @@
 "use client";
 
 import { signIn } from "next-auth/react";
-import { useSearchParams } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import { useState } from "react";
 
 export default function SignInPage() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
-
+  const router = useRouter();
   const searchParams = useSearchParams();
   const error = searchParams.get("error");
 
   const handleLogin = async () => {
     setLoading(true);
-    await signIn("credentials", {
+    const res = await signIn("credentials", {
       username,
       password,
-      redirect: true,
-      callbackUrl: "/main", // or wherever you want to send them post-login
+      redirect: false,
+      callbackUrl: "/main",
     });
+
+    if (res?.error) {
+      router.push(`/auth-error?error=${encodeURIComponent(res.error)}`);
+    } else if (res?.url) {
+      router.push(res.url);
+    }
   };
 
   return (
