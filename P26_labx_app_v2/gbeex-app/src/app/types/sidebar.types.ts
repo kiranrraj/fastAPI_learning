@@ -1,5 +1,6 @@
 // components/sidebar/sidebar.types.ts
 
+// Base types
 export interface Investigation {
     id: string;
     name: string;
@@ -11,5 +12,18 @@ export interface InvestigationGroup {
     investigations: Investigation[];
 }
 
-// Alias SidebarGroup to the same shape (if it's identical)
+// Sidebar-specific
 export type SidebarGroup = InvestigationGroup;
+
+export type SortOrder = "az" | "za";
+
+export interface SidebarHeaderProps {
+    searchTerm: string;
+    setSearchTerm: (value: string) => void;
+    sortOrder: SortOrder;
+    setSortOrder: (value: SortOrder) => void;
+    expanded: boolean;
+    setExpanded: (value: boolean) => void;
+    onExpandAll: () => void;
+    onCollapseAll: () => void;
+}

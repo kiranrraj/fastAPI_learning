@@ -1,22 +1,31 @@
+// Updated SidebarHeader.tsx (favorites button removed)
 "use client";
-import React, { useState } from "react";
+
+import React from "react";
 import SidebarSearch from "./SidebarSearch";
 import SidebarButtonGroup from "./SidebarButtonGroup";
+import { SidebarHeaderProps } from "@/app/types/sidebar.types";
 
-type SortOrder = "az" | "za";
-
-const SidebarHeader: React.FC = () => {
-  const [searchTerm, setSearchTerm] = useState("");
-
-  const [states, setStates] = useState<{
-    sort: SortOrder;
-    expanded: boolean;
-    favorites: boolean;
-  }>({
-    sort: "az",
-    expanded: true,
-    favorites: false,
-  });
+const SidebarHeader: React.FC<SidebarHeaderProps> = ({
+  searchTerm,
+  setSearchTerm,
+  sortOrder,
+  setSortOrder,
+  expanded,
+  setExpanded,
+  onExpandAll,
+  onCollapseAll,
+}) => {
+  const handleToggle = (key: "sort" | "expanded") => {
+    switch (key) {
+      case "sort":
+        setSortOrder(sortOrder === "az" ? "za" : "az");
+        break;
+      case "expanded":
+        setExpanded(!expanded);
+        break;
+    }
+  };
 
   return (
     <div className="mb-4">
@@ -30,7 +39,12 @@ const SidebarHeader: React.FC = () => {
         onClear={() => setSearchTerm("")}
       />
 
-      <SidebarButtonGroup states={states} setStates={setStates} />
+      <SidebarButtonGroup
+        states={{ sort: sortOrder, expanded }}
+        onToggle={handleToggle}
+        onExpandAll={onExpandAll}
+        onCollapseAll={onCollapseAll}
+      />
     </div>
   );
 };

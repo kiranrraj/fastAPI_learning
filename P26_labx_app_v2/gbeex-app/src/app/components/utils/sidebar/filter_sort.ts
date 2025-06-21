@@ -1,6 +1,4 @@
-import { SidebarGroup } from "@/app/types/sidebar.types";
-
-export type SortOrder = "az" | "za";
+import { SidebarGroup, SortOrder } from "@/app/types/sidebar.types";
 
 /**
  * Filters and sorts sidebar groups and investigations.
@@ -39,3 +37,4 @@ export function filterAndSortGroups(
 
     return sorted;
 }
+
