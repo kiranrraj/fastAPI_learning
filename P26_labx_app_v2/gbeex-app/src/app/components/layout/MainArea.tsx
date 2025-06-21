@@ -1,6 +1,6 @@
 // src/app/components/layout/MainArea.tsx
 import React from "react";
-import SidebarArea from "./SidebarArea";
+import SidebarArea from "../layout/sidebar/SidebarArea";
 import ContentArea from "./ContentArea";
 import styles from "@/app/components/styles/MainArea.module.css";
 
