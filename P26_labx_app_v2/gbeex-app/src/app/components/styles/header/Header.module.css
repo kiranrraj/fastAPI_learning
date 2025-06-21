@@ -1,0 +1,22 @@
+/* src/app/components/styles/Header.module.css */
+
+/* Application header wrapper */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  background-color: #ffffff;
+  color: #1f2937;
+  border-bottom: 1px solid #e5e7eb;
+  height: 3.5rem;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+@media (prefers-color-scheme: dark) {
+  .header {
+    background-color: #1f2937;
+    color: #f9fafb;
+    border-color: #374151; /* Tailwind gray-700 */
+  }
+}

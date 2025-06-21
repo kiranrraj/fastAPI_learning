@@ -1,0 +1,21 @@
+/* src/app/components/styles/Footer.module.css */
+
+/* Footer base styles */
+.footer {
+  border-top: 1px solid #e5e7eb; /* Tailwind gray-200 fallback */
+  background-color: var(--footer-bg, #ffffff);
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+@media (prefers-color-scheme: dark) {
+  .footer {
+    background-color: var(--footer-bg-dark, #111827); /* Tailwind gray-900 fallback */
+    color: #9ca3af; /* gray-400 */
+  }
+}

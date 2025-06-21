@@ -1,0 +1,18 @@
+/* src/app/components/styles/ContentArea.module.css */
+
+/* Main content area inside the layout */
+.contentArea {
+  flex-grow: 1;
+  padding: 1rem;
+  overflow: auto;
+  background-color: #ffffff; /* light background */
+  color: #1f2937; /* gray-800 */
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+@media (prefers-color-scheme: dark) {
+  .contentArea {
+    background-color: #1f2937; /* Tailwind gray-800 */
+    color: #f9fafb; /* light text */
+  }
+}
