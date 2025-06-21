@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import { InvestigationGroup } from "@/app/types/investigation.types";
 import { toggleSetValue } from "@/app/components/utils/sidebar/handler_toggle";
 
 // Icons
@@ -17,9 +16,9 @@ interface SidebarListProps {
 const SidebarList: React.FC<SidebarListProps> = ({ groups }) => {
   const [expandedGroups, setExpandedGroups] = useState<Set<string>>(new Set());
 
-  useEffect(() => {
-    setExpandedGroups(new Set(groups.map((g) => g.id))); // Expand all by default
-  }, [groups]);
+  //   useEffect(() => {
+  //     setExpandedGroups(new Set(groups.map((g) => g.id))); // Expand all by default
+  //   }, [groups]);
 
   const handleToggleGroup = (groupId: string) => {
     setExpandedGroups((prev) => toggleSetValue(prev, groupId));

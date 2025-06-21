@@ -1,4 +1,5 @@
 // components/sidebar/sidebar.types.ts
+
 export interface Investigation {
     id: string;
     name: string;
@@ -10,8 +11,5 @@ export interface InvestigationGroup {
     investigations: Investigation[];
 }
 
-export interface SidebarGroup {
-    id: string;
-    name: string;
-    investigations: { id: string; name: string }[];
-}
+// Alias SidebarGroup to the same shape (if it's identical)
+export type SidebarGroup = InvestigationGroup;
