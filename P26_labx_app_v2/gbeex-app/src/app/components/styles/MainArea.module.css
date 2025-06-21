@@ -1,16 +1,7 @@
 /* src/app/components/styles/MainArea.module.css */
 
-/* Wrapper around Sidebar and Content */
 .mainArea {
   display: flex;
-  flex: 1;
-  min-height: 0;
-  background-color: #f3f4f6; /* Tailwind gray-100 */
-  transition: background-color 0.2s ease;
-}
-
-@media (prefers-color-scheme: dark) {
-  .mainArea {
-    background-color: #1f2937; /* Tailwind gray-800 */
-  }
+  flex-grow: 1;
+  overflow: hidden;
 }

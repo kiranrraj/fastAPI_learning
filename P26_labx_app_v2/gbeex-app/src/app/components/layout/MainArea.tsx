@@ -1,5 +1,6 @@
 // src/app/components/layout/MainArea.tsx
 
+// "use client";
 import React from "react";
 import SidebarArea from "../layout/sidebar/SidebarArea";
 import ContentArea from "../layout/content/ContentArea";

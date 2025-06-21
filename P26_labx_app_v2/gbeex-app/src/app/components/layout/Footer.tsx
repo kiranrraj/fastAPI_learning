@@ -1,4 +1,7 @@
 // src/app/components/layout/Footer.tsx
+
+"use client";
+
 import React from "react";
 import IconCopyright from "@/app/components/icons/IconCopyright";
 import IconStatus from "@/app/components/icons/IconStatus";

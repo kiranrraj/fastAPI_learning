@@ -1,13 +1,24 @@
 // src/app/components/layout/AppShell.tsx
+"use client";
 
-import React from "react";
-import Container from "@/app/components/layout/Container";
-import Header from "@/app/components/layout/header/Header";
-import Footer from "@/app/components/layout/Footer";
-import MainArea from "@/app/components/layout/MainArea";
+import React, { useEffect, useState } from "react";
+import Container from "./Container";
+import Header from "./header/Header";
+import Footer from "./Footer";
+import MainArea from "./MainArea";
+import AppLoader from "../ui/AppLoader";
 import styles from "@/app/components/styles/AppShell.module.css";
 
-const AppShell: React.FC<{ children?: React.ReactNode }> = () => {
+const AppShell: React.FC<{ children?: React.ReactNode }> = ({ children }) => {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const timeout = setTimeout(() => setLoading(false), 400); // adjustable
+    return () => clearTimeout(timeout);
+  }, []);
+
+  if (loading) return <AppLoader />;
+
   return (
     <Container className={styles.appShell}>
       <Header />

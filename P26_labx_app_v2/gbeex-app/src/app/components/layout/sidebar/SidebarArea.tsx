@@ -1,6 +1,8 @@
 // src/app/components/layout/sidebar/SidebarArea.tsx
 
+"use client";
 import React from "react";
+import SidebarDataLoader from "./SidebarDataLoader";
 import SidebarControlGroup from "./SidebarControlGroup";
 import SidebarDataGroup from "./SidebarDataGroup";
 import styles from "@/app/components/styles/sidebar/SidebarArea.module.css";
@@ -12,7 +14,7 @@ const SidebarArea: React.FC<{ className?: string }> = ({ className = "" }) => {
       aria-label="Sidebar"
     >
       <SidebarControlGroup />
-      <SidebarDataGroup />
+      <SidebarDataLoader />
     </aside>
   );
 };

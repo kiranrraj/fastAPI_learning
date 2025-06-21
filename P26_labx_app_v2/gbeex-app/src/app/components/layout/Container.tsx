@@ -1,4 +1,7 @@
 // src/app/components/layout/Container.tsx
+
+"use client";
+
 import React from "react";
 import styles from "@/app/components/styles/Container.module.css";
 
