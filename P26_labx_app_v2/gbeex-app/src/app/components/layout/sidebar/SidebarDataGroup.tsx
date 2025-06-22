@@ -8,7 +8,7 @@ import IconChevronUp from "@/app/components/icons/IconChevronUp";
 interface SidebarDataGroupProps {
   group: InvestigationGroup;
   onGroupClick?: (group: InvestigationGroup) => void;
-  onItemClick?: (item: any) => void;
+  onItemClick?: (item: any) => void; // Use a specific item type if available
 }
 
 const SidebarDataGroup: React.FC<SidebarDataGroupProps> = ({
@@ -21,13 +21,18 @@ const SidebarDataGroup: React.FC<SidebarDataGroupProps> = ({
   return (
     <div className="mb-4">
       <div className="flex items-center justify-between">
+        {/* Group name button */}
         <button
-          onClick={() => onGroupClick?.(group)}
+          onClick={() => {
+            setExpanded((prev) => !prev); // Toggle expand/collapse
+            onGroupClick?.(group); // Trigger optional tab open
+          }}
           className="text-md font-semibold text-gray-700 dark:text-gray-200 text-left"
         >
           {group.name}
         </button>
 
+        {/* Expand/collapse toggle */}
         <button
           onClick={() => setExpanded((prev) => !prev)}
           aria-label={expanded ? "Collapse group" : "Expand group"}
@@ -41,6 +46,7 @@ const SidebarDataGroup: React.FC<SidebarDataGroupProps> = ({
         </button>
       </div>
 
+      {/* Children list */}
       {expanded && (
         <ul className="ml-4 mt-1 space-y-1">
           {group.children?.map((item) => (
