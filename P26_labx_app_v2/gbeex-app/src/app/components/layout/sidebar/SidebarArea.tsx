@@ -4,11 +4,11 @@ import React from "react";
 import SidebarDataLoader from "./SidebarDataLoader";
 import SidebarControlGroup from "./SidebarControlGroup";
 import styles from "@/app/components/styles/sidebar/SidebarArea.module.css";
-import { InvestigationGroup } from "@/app/types/sidebar.types";
+import { PortletGroup } from "@/app/types/sidebar.types";
 
 interface SidebarAreaProps {
   className?: string;
-  onGroupClick: (group: InvestigationGroup) => void;
+  onGroupClick: (group: PortletGroup) => void;
   onItemClick: (item: any) => void;
 }
 

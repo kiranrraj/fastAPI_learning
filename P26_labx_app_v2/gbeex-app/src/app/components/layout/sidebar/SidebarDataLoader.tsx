@@ -3,12 +3,11 @@
 import React, { useEffect, useState, useMemo } from "react";
 import SidebarDataGroup from "./SidebarDataGroup";
 import { useSidebarData } from "@/app/hooks/api/useApiData";
-import { InvestigationGroup } from "@/app/types/sidebar.types";
+import { PortletGroup } from "@/app/types/sidebar.types";
 
-// Props for sidebar click handlers
 interface SidebarDataLoaderProps {
-  onGroupClick: (group: InvestigationGroup) => void;
-  onItemClick: (item: any) => void; // Replace `any` with specific item type if available
+  onGroupClick: (group: PortletGroup) => void;
+  onItemClick: (item: any) => void;
 }
 
 const SidebarDataLoader: React.FC<SidebarDataLoaderProps> = ({
@@ -26,7 +25,7 @@ const SidebarDataLoader: React.FC<SidebarDataLoaderProps> = ({
 
   // Memoize rendered group list to prevent unnecessary updates
   const renderedGroups = useMemo(() => {
-    return groups.map((group: InvestigationGroup) => (
+    return groups.map((group: PortletGroup) => (
       <SidebarDataGroup
         key={group.id}
         group={group}

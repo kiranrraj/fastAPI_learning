@@ -1,22 +1,24 @@
-import { TabType } from "@/app/types/tab.";
+// src/app/utils/tab/coreTabHandlers.ts
 
-// Handler functions for managing tab state.
-export function createTabHandlers({
-    tabs,
-    setTabs,
-    activeTabId,
-    setActiveTabId,
-    closedStack,
-    setClosedStack,
-}: {
+import { TabType } from "@/app/types/tab.types";
+
+export interface CoreTabHandlerOptions {
     tabs: TabType[];
     setTabs: React.Dispatch<React.SetStateAction<TabType[]>>;
     activeTabId: string | null;
     setActiveTabId: React.Dispatch<React.SetStateAction<string | null>>;
     closedStack: TabType[];
     setClosedStack: React.Dispatch<React.SetStateAction<TabType[]>>;
-}) {
-    // Opens a new tab or focuses it if it already exists.
+}
+
+export function createCoreTabHandlers({
+    tabs,
+    setTabs,
+    activeTabId,
+    setActiveTabId,
+    closedStack,
+    setClosedStack,
+}: CoreTabHandlerOptions) {
     function openTab(newTab: TabType) {
         setTabs((prev) => {
             const exists = prev.find((t) => t.id === newTab.id);
@@ -29,16 +31,12 @@ export function createTabHandlers({
         });
     }
 
-    // Closes a tab by ID and stores it in the closedStack.
     function closeTab(tabId: string) {
         setTabs((prev) => {
             const toClose = prev.find((t) => t.id === tabId);
-            if (toClose) {
-                setClosedStack((stack) => [toClose, ...stack]);
-            }
+            if (toClose) setClosedStack((stack) => [toClose, ...stack]);
 
             const next = prev.filter((t) => t.id !== tabId);
-
             if (activeTabId === tabId) {
                 setActiveTabId(next.length ? next[next.length - 1].id : null);
             }
@@ -47,7 +45,6 @@ export function createTabHandlers({
         });
     }
 
-    // Restores the most recently closed tab from the stack.
     function restoreLastClosed() {
         setClosedStack((stack) => {
             if (stack.length === 0) return stack;
@@ -59,17 +56,11 @@ export function createTabHandlers({
         });
     }
 
-    // Updates the content or state of a tab by merging fields.
     function updateTab(tabId: string, updates: Partial<TabType>) {
         setTabs((prev) =>
             prev.map((tab) => (tab.id === tabId ? { ...tab, ...updates } : tab))
         );
     }
 
-    return {
-        openTab,
-        closeTab,
-        restoreLastClosed,
-        updateTab,
-    };
+    return { openTab, closeTab, restoreLastClosed, updateTab };
 }

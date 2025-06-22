@@ -2,19 +2,17 @@
 
 import { TabType } from "@/app/types/tab.types";
 
-interface FavoriteHandlerProps {
+interface FavoriteHandlerOptions {
     tabs: TabType[];
     updateTab: (tabId: string, updates: Partial<TabType>) => void;
 }
 
-/**
- * Returns a handler to toggle a tab's favorite (pinned) status.
- */
-export function createFavoriteHandlers({ tabs, updateTab }: FavoriteHandlerProps) {
+export function createFavoriteHandlers({ tabs, updateTab }: FavoriteHandlerOptions) {
     function toggleFavorite(tabId: string) {
-        const tab = tabs.find((t: TabType) => t.id === tabId);
-        if (!tab) return;
-        updateTab(tabId, { pinned: !tab.pinned });
+        const target = tabs.find((tab) => tab.id === tabId);
+        if (target) {
+            updateTab(tabId, { pinned: !target.pinned });
+        }
     }
 
     return { toggleFavorite };

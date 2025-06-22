@@ -1,24 +1,13 @@
-// components/sidebar/sidebar.types.ts
+// src/app/types/sidebar.types.ts
 
 // Base types
-export interface Investigation {
+export interface Portlet {
     id: string;
     name: string;
 }
 
-export interface InvestigationItem {
+export interface PortletGroup {
     id: string;
     name: string;
+    children: Portlet[];
 }
-
-export interface InvestigationGroup {
-    id: string;
-    name: string;
-    children: InvestigationItem[];
-}
-
-export interface InvestigationChild {
-    id: string;
-    name: string;
-}
-

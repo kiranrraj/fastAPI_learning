@@ -1,14 +1,14 @@
 "use client";
 
 import React, { useState } from "react";
-import { InvestigationGroup } from "@/app/types/sidebar.types";
+import { PortletGroup } from "@/app/types/sidebar.types";
 import IconChevronDown from "@/app/components/icons/IconChevronDown";
 import IconChevronUp from "@/app/components/icons/IconChevronUp";
 
 interface SidebarDataGroupProps {
-  group: InvestigationGroup;
-  onGroupClick?: (group: InvestigationGroup) => void;
-  onItemClick?: (item: any) => void; // Use a specific item type if available
+  group: PortletGroup;
+  onGroupClick?: (group: PortletGroup) => void;
+  onItemClick?: (item: any) => void; // Consider replacing `any` with Portlet
 }
 
 const SidebarDataGroup: React.FC<SidebarDataGroupProps> = ({

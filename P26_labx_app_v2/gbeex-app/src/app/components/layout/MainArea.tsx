@@ -7,14 +7,25 @@ import SidebarArea from "../layout/sidebar/SidebarArea";
 import ContentArea from "../layout/content/ContentArea";
 import styles from "@/app/components/styles/MainArea.module.css";
 
+// State hook for managing tab state
 import { useTabState } from "@/app/hooks/tabs/useTabState";
-import { createTabHandlers } from "@/app/utils/tab/tabHandlers";
+
+// Core + modular handler creators
+import { createTabHandlersBundle } from "@/app/utils/tab/tabHandlers";
 import { createGroupTabHandlers } from "@/app/utils/tab/groupTabHandlers";
 import { createItemTabHandlers } from "@/app/utils/tab/itemTabHandlers";
 import { createFavoriteHandlers } from "@/app/utils/tab/favoriteTabHandler";
 
 const MainArea: React.FC = () => {
-  // 👇 Now we get raw state values
+  /**
+   * Tab state management:
+   * - tabs: list of all open tabs
+   * - setTabs: updater for open tabs
+   * - activeTabId: ID of currently active tab
+   * - setActiveTabId: updates active tab
+   * - closedStack: recently closed tabs (LIFO)
+   * - setClosedStack: updater for closed tabs stack
+   */
   const {
     tabs,
     setTabs,
@@ -24,41 +35,56 @@ const MainArea: React.FC = () => {
     setClosedStack,
   } = useTabState();
 
-  // 👇 Inject raw state into tab logic handlers
-  const { openTab, closeTab, updateTab, restoreLastClosed } = createTabHandlers(
-    {
+  /**
+   * Core tab logic handlers:
+   * Provides openTab, closeTab, updateTab, and restoreLastClosed
+   */
+  const { openTab, closeTab, updateTab, restoreLastClosed } =
+    createTabHandlersBundle({
       tabs,
       setTabs,
       activeTabId,
       setActiveTabId,
       closedStack,
       setClosedStack,
-    }
-  );
+    });
 
+  /**
+   * Group tab logic:
+   * Opens a new tab for a portlet group (parent group in sidebar)
+   * Delegates to `openTab` from core
+   */
   const { openGroupTab } = createGroupTabHandlers({
     tabs,
-    setTabs,
-    activeTabId,
     setActiveTabId,
-    closedStack,
-    setClosedStack,
+    openTab,
   });
 
+  /**
+   * Item tab logic:
+   * Opens a new tab for a portlet/item (child in sidebar)
+   * Delegates to `openTab` from core
+   */
   const { openItemTab } = createItemTabHandlers({
     tabs,
-    setTabs,
-    activeTabId,
     setActiveTabId,
-    closedStack,
-    setClosedStack,
+    openTab,
   });
 
+  /**
+   * Favorite (pinned) tab logic:
+   * Toggles favorite/pinned state of a tab
+   */
   const { toggleFavorite } = createFavoriteHandlers({
     tabs,
     updateTab,
   });
 
+  /**
+   * Main layout rendering:
+   * SidebarArea receives handlers to open tabs
+   * ContentArea receives tab state and tab control handlers
+   */
   return (
     <main
       className={`flex flex-1 ${styles.mainArea}`}
