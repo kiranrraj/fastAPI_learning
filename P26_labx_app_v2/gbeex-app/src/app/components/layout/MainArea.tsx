@@ -2,30 +2,27 @@
 
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import SidebarArea from "../layout/sidebar/SidebarArea";
 import ContentArea from "../layout/content/ContentArea";
 import styles from "@/app/components/styles/MainArea.module.css";
+import TabControlBar from "../layout/tabs/TabControlBar";
 
-// State hook for managing tab state
 import { useTabState } from "@/app/hooks/tabs/useTabState";
-
-// Core + modular handler creators
 import { createTabHandlersBundle } from "@/app/utils/tab/tabHandlers";
 import { createGroupTabHandlers } from "@/app/utils/tab/groupTabHandlers";
 import { createItemTabHandlers } from "@/app/utils/tab/itemTabHandlers";
-import { createFavoriteHandlers } from "@/app/utils/tab/favoriteTabHandler";
+import { toggleFavorite as toggleFavoriteUtil } from "@/app/utils/tab/tabControlUtils";
+
+import {
+  closeAllTabs,
+  resetFavorites,
+  sortTabs,
+  filterTabs,
+} from "@/app/utils/tab/tabControlUtils";
+import { TabType } from "@/app/types/tab.types";
 
 const MainArea: React.FC = () => {
-  /**
-   * Tab state management:
-   * - tabs: list of all open tabs
-   * - setTabs: updater for open tabs
-   * - activeTabId: ID of currently active tab
-   * - setActiveTabId: updates active tab
-   * - closedStack: recently closed tabs (LIFO)
-   * - setClosedStack: updater for closed tabs stack
-   */
   const {
     tabs,
     setTabs,
@@ -35,10 +32,6 @@ const MainArea: React.FC = () => {
     setClosedStack,
   } = useTabState();
 
-  /**
-   * Core tab logic handlers:
-   * Provides openTab, closeTab, updateTab, and restoreLastClosed
-   */
   const { openTab, closeTab, updateTab, restoreLastClosed } =
     createTabHandlersBundle({
       tabs,
@@ -49,57 +42,69 @@ const MainArea: React.FC = () => {
       setClosedStack,
     });
 
-  /**
-   * Group tab logic:
-   * Opens a new tab for a portlet group (parent group in sidebar)
-   * Delegates to `openTab` from core
-   */
   const { openGroupTab } = createGroupTabHandlers({
     tabs,
     setActiveTabId,
     openTab,
   });
 
-  /**
-   * Item tab logic:
-   * Opens a new tab for a portlet/item (child in sidebar)
-   * Delegates to `openTab` from core
-   */
   const { openItemTab } = createItemTabHandlers({
     tabs,
     setActiveTabId,
     openTab,
   });
 
-  /**
-   * Favorite (pinned) tab logic:
-   * Toggles favorite/pinned state of a tab
-   */
-  const { toggleFavorite } = createFavoriteHandlers({
-    tabs,
-    updateTab,
-  });
+  const toggleFavorite = (tabId: string) =>
+    toggleFavoriteUtil(tabs, updateTab, tabId);
 
-  /**
-   * Main layout rendering:
-   * SidebarArea receives handlers to open tabs
-   * ContentArea receives tab state and tab control handlers
-   */
+  // UI filter state
+  const [filteredTabs, setFilteredTabs] = useState<TabType[]>(tabs);
+
+  // Keep filteredTabs updated when tabs change
+  React.useEffect(() => {
+    setFilteredTabs(tabs);
+  }, [tabs]);
+
+  const handleSearch = (query: string) => {
+    setFilteredTabs(filterTabs(tabs, query));
+  };
+
+  const handleSort = (criteria: "asc" | "desc" | "favorite") => {
+    setFilteredTabs(sortTabs([...tabs], criteria));
+  };
+
+  const handleCloseAllTabs = () => {
+    const remaining = closeAllTabs(tabs);
+    setTabs(remaining);
+  };
+
+  const handleResetFavorites = () => {
+    const updated = resetFavorites(tabs);
+    setTabs(updated);
+  };
+
   return (
-    <main
-      className={`flex flex-1 ${styles.mainArea}`}
-      role="region"
-      aria-label="Main Area"
-    >
+    <main className={`flex flex-1 ${styles.mainArea}`}>
       <SidebarArea onGroupClick={openGroupTab} onItemClick={openItemTab} />
 
-      <ContentArea
-        tabs={tabs}
-        activeTabId={activeTabId}
-        onTabClick={setActiveTabId}
-        onTabClose={closeTab}
-        onToggleFavorite={toggleFavorite}
-      />
+      <div className="flex flex-col flex-1">
+        <TabControlBar
+          tabs={tabs}
+          onSearch={handleSearch}
+          onSort={handleSort}
+          onRestoreLastClosed={restoreLastClosed}
+          onCloseAllTabs={handleCloseAllTabs}
+          onResetFavorites={handleResetFavorites}
+        />
+
+        <ContentArea
+          tabs={filteredTabs}
+          activeTabId={activeTabId}
+          onTabClick={setActiveTabId}
+          onTabClose={closeTab}
+          onToggleFavorite={toggleFavorite}
+        />
+      </div>
     </main>
   );
 };

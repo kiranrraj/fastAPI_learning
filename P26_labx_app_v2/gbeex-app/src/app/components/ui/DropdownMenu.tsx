@@ -1,5 +1,3 @@
-// src/app/components/ui/DropdownMenu.tsx
-
 "use client";
 import React, { useState, useRef, useEffect } from "react";
 import styles from "../styles/DropdownMenu.module.css";
@@ -55,9 +53,10 @@ const DropdownMenu: React.FC<DropdownMenuProps> = ({
 
       {open && (
         <div
-          className={`absolute mt-2 z-50 min-w-[150px] rounded-md border bg-white dark:bg-gray-900 shadow-lg ${
-            position === "left" ? "left-0" : "right-0"
-          } ${styles.menu}`}
+          className={`absolute mt-2 z-50 min-w-[150px] rounded-md border 
+                      bg-white dark:bg-gray-900 shadow-lg 
+                      ${position === "left" ? "left-0" : "right-0"} 
+                      ${styles.menu}`}
           role="menu"
         >
           {items.map((item, index) => (
@@ -65,9 +64,10 @@ const DropdownMenu: React.FC<DropdownMenuProps> = ({
               key={index}
               type="button"
               onClick={() => handleItemClick(item)}
-              className={`w-full px-4 py-2 text-sm text-left hover:bg-gray-100 dark:hover:bg-gray-800 ${
-                styles.menuItem
-              } ${item.className || ""}`}
+              className={`w-full px-4 py-2 text-sm text-left 
+                          text-neutral-800 dark:text-neutral-100
+                          hover:bg-gray-100 dark:hover:bg-gray-800
+                          ${styles.menuItem} ${item.className || ""}`}
               role="menuitem"
             >
               <div className="flex items-center gap-2">

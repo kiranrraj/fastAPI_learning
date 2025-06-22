@@ -3,6 +3,7 @@
 import React from "react";
 import { TabType } from "@/app/types/tab.types";
 import TabHeaderBar from "./TabHeaderBar";
+import styles from "@/app/components/styles/tabs/TabContainer.module.css";
 
 export interface TabContainerProps {
   tabs: TabType[];
@@ -22,9 +23,8 @@ const TabContainer: React.FC<TabContainerProps> = ({
   renderTabContent,
 }) => {
   const activeTab = tabs.find((tab) => tab.id === activeTabId);
-
   return (
-    <div className="flex flex-col h-full">
+    <div className={`flex flex-col h-full ${styles.tabsContainer}`}>
       <TabHeaderBar
         tabs={tabs}
         activeTabId={activeTabId}
@@ -33,7 +33,9 @@ const TabContainer: React.FC<TabContainerProps> = ({
         onToggleFavorite={onToggleFavorite}
       />
 
-      <div className="flex-1 overflow-auto border rounded-md mt-2 bg-background p-4">
+      <div
+        className={`${styles.tabContent} border rounded-md mt-2 bg-background p-4`}
+      >
         {activeTab ? (
           renderTabContent(activeTab)
         ) : (

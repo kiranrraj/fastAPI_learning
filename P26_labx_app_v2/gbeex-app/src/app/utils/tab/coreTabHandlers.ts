@@ -2,7 +2,7 @@
 
 import { TabType } from "@/app/types/tab.types";
 
-export interface CoreTabHandlerOptions {
+interface CoreTabHandlersOptions {
     tabs: TabType[];
     setTabs: React.Dispatch<React.SetStateAction<TabType[]>>;
     activeTabId: string | null;
@@ -11,6 +11,9 @@ export interface CoreTabHandlerOptions {
     setClosedStack: React.Dispatch<React.SetStateAction<TabType[]>>;
 }
 
+/**
+ * Creates core tab management handlers: openTab, closeTab, updateTab, restoreLastClosed
+ */
 export function createCoreTabHandlers({
     tabs,
     setTabs,
@@ -18,49 +21,80 @@ export function createCoreTabHandlers({
     setActiveTabId,
     closedStack,
     setClosedStack,
-}: CoreTabHandlerOptions) {
+}: CoreTabHandlersOptions) {
+    /**
+     * Open a new tab or focus it if already exists
+     */
     function openTab(newTab: TabType) {
-        setTabs((prev) => {
-            const exists = prev.find((t) => t.id === newTab.id);
-            if (exists) {
-                setActiveTabId(newTab.id);
-                return prev;
-            }
+        const exists = tabs.find((tab) => tab.id === newTab.id);
+        if (exists) {
             setActiveTabId(newTab.id);
-            return [...prev, newTab];
-        });
+        } else {
+            setTabs([...tabs, newTab]);
+            setActiveTabId(newTab.id);
+        }
+
+        // testing
+        // console.log(`[openTab] Opened or focused tab: ${newTab.id}`);
     }
 
+    /**
+     * Close a tab and update closed stack
+     */
     function closeTab(tabId: string) {
-        setTabs((prev) => {
-            const toClose = prev.find((t) => t.id === tabId);
-            if (toClose) setClosedStack((stack) => [toClose, ...stack]);
+        const closingTab = tabs.find((tab) => tab.id === tabId);
+        if (!closingTab) return;
 
-            const next = prev.filter((t) => t.id !== tabId);
-            if (activeTabId === tabId) {
-                setActiveTabId(next.length ? next[next.length - 1].id : null);
+        const remainingTabs = tabs.filter((tab) => tab.id !== tabId);
+        setTabs(remainingTabs);
+        setClosedStack([closingTab, ...closedStack]);
+
+        // Auto-switch to last tab if the closing one is active
+        if (activeTabId === tabId) {
+            if (remainingTabs.length > 0) {
+                setActiveTabId(remainingTabs[remainingTabs.length - 1].id);
+            } else {
+                setActiveTabId(null);
             }
+        }
 
-            return next;
-        });
+        // testing
+        // console.log(`[closeTab] Closed tab: ${tabId}`);
     }
 
-    function restoreLastClosed() {
-        setClosedStack((stack) => {
-            if (stack.length === 0) return stack;
-
-            const [last, ...rest] = stack;
-            setTabs((prev) => [...prev, last]);
-            setActiveTabId(last.id);
-            return rest;
-        });
-    }
-
+    /**
+     * Update a tab's properties by ID
+     */
     function updateTab(tabId: string, updates: Partial<TabType>) {
-        setTabs((prev) =>
-            prev.map((tab) => (tab.id === tabId ? { ...tab, ...updates } : tab))
+        const updatedTabs = tabs.map((tab) =>
+            tab.id === tabId ? { ...tab, ...updates } : tab
         );
+        setTabs(updatedTabs);
+
+        // testing
+        // console.log(`[updateTab] Updated tab: ${tabId}`, updates);
     }
 
-    return { openTab, closeTab, restoreLastClosed, updateTab };
+    /**
+     * Restore the most recently closed tab
+     * Only restores one tab at a time
+     */
+    function restoreLastClosed() {
+        if (closedStack.length === 0) return;
+
+        const [lastClosed, ...rest] = closedStack;
+        setTabs([...tabs, lastClosed]);
+        setActiveTabId(lastClosed.id);
+        setClosedStack(rest);
+
+        // testing
+        // console.log(`[restoreLastClosed] Restored tab: ${lastClosed.id}`);
+    }
+
+    return {
+        openTab,
+        closeTab,
+        updateTab,
+        restoreLastClosed,
+    };
 }

@@ -17,3 +17,9 @@ export type TabType = {
     typeFilter?: string | null;                         // Type filter(like only graph portlet, only table portlets)
     hiddenItemIds?: string[];                           // Any portlets to be hidden, its tab id 
 };
+
+export interface SharedTabHandlerOptions {
+    tabs: TabType[];
+    setActiveTabId: React.Dispatch<React.SetStateAction<string | null>>;
+    openTab: (tab: TabType) => void;
+}

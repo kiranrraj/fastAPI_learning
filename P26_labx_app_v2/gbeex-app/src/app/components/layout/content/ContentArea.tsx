@@ -1,7 +1,7 @@
 // src/app/components/layout/ContentArea.tsx
 
 import React from "react";
-import styles from "@/app/components/styles/ContentArea.module.css";
+import styles from "@/app/components/styles/content/ContentArea.module.css";
 import { TabType } from "@/app/types/tab.types";
 import TabContainer from "../../layout/tabs/TabContainer";
 
