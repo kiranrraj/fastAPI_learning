@@ -1,0 +1,63 @@
+/* src/app/components/ui/DropdownMenu.module.css */
+
+/* Container wraps both trigger and dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Trigger button or icon */
+.trigger {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+/* Dropdown content box */
+.menu {
+  position: absolute;
+  top: calc(100% + 8px);
+  min-width: 180px;
+  background-color: var(--background);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+  padding: 0.5rem 0;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  opacity: 1;
+}
+
+/* Left or right positioning */
+.menu.right {
+  right: 0;
+}
+.menu.left {
+  left: 0;
+}
+
+/* Dropdown menu items (expected to be buttons or links) */
+.menu button,
+.menu a {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  text-align: left;
+  background: none;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background 0.15s ease;
+}
+
+.menu button:hover,
+.menu a:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+/* Dark mode override */
+html.dark .menu button:hover,
+html.dark .menu a:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+}

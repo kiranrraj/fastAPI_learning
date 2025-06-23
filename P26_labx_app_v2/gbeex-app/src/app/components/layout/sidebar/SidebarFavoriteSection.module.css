@@ -1,0 +1,32 @@
+/* src/app/components/sidebar/SidebarFavoritesSection.module.css */
+
+.favoritesWrapper {
+  margin-top: 1rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid #e5e7eb;
+}
+
+.favoritesTitle {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 0.5rem;
+}
+
+.favoritesList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.favoriteItem {
+  font-size: 0.875rem;
+  color: #1d4ed8;
+  cursor: pointer;
+  padding: 0.25rem;
+  border-radius: 0.375rem;
+}
+
+.favoriteItem:hover {
+  background-color: #eff6ff;
+}

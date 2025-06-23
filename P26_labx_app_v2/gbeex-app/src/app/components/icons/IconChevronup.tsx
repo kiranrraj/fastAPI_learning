@@ -1,21 +1,29 @@
 // src/app/components/icons/IconChevronUp.tsx
+
 import React from "react";
 
-const IconChevronUp: React.FC<{ className?: string }> = ({
-  className = "",
+interface IconChevronUpProps {
+  size?: number;
+  color?: string;
+}
+
+const IconChevronUp: React.FC<IconChevronUpProps> = ({
+  size = 20,
+  color = "#6B7280",
 }) => (
   <svg
-    xmlns="http://www.w3.org/2000/svg"
+    width={size}
+    height={size}
     viewBox="0 0 24 24"
     fill="none"
-    stroke="currentColor"
+    stroke={color}
     strokeWidth="2"
     strokeLinecap="round"
     strokeLinejoin="round"
-    className={`w-4 h-4 ${className}`}
+    xmlns="http://www.w3.org/2000/svg"
   >
     <polyline points="18 15 12 9 6 15" />
   </svg>
 );
 
-export default React.memo(IconChevronUp);
+export default IconChevronUp;

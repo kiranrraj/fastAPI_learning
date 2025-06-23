@@ -1,81 +1,83 @@
 "use client";
-import React, { useState, useRef, useEffect } from "react";
-import styles from "../styles/DropdownMenu.module.css";
 
-interface DropdownItem {
-  label: string;
-  icon?: React.ReactNode;
-  onClick?: () => void;
-  className?: string;
-}
+import React, { useState, useRef, useEffect } from "react";
+import styles from "./DropdownMenu.module.css";
+
+/**
+ * Component: DropdownMenu
+ * -----------------------
+ * A generic dropdown menu component.
+ *
+ * INPUTS:
+ * - trigger: React node (icon/button/avatar) that opens the menu
+ * - children: optional React nodes as custom menu content
+ * - items: optional structured array of { label, onClick }
+ * - align: left or right alignment
+ *
+ * OUTPUT:
+ * - Renders a dropdown under the trigger
+ * - Closes when clicked outside or item clicked
+ */
 
 interface DropdownMenuProps {
-  button: React.ReactNode;
-  items: DropdownItem[];
-  position?: "left" | "right";
-  className?: string;
+  trigger: React.ReactNode;
+  children?: React.ReactNode;
+  items?: { label: string; onClick?: () => void }[];
+  align?: "left" | "right";
 }
 
 const DropdownMenu: React.FC<DropdownMenuProps> = ({
-  button,
+  trigger,
+  children,
   items,
-  position = "right",
-  className = "",
+  align = "right",
 }) => {
   const [open, setOpen] = useState(false);
-  const menuRef = useRef<HTMLDivElement>(null);
+  const dropdownRef = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
-      if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
-        setOpen(false);
-      }
-    };
+  const toggleMenu = () => setOpen((prev) => !prev);
 
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => document.removeEventListener("mousedown", handleClickOutside);
-  }, []);
-
-  const handleToggle = () => setOpen((prev) => !prev);
-  const handleItemClick = (item: DropdownItem) => {
-    item.onClick?.();
-    setOpen(false);
+  const handleClickOutside = (event: MouseEvent) => {
+    if (
+      dropdownRef.current &&
+      !dropdownRef.current.contains(event.target as Node)
+    ) {
+      setOpen(false);
+    }
   };
 
-  return (
-    <div
-      ref={menuRef}
-      className={`relative inline-block ${styles.dropdown} ${className}`}
-    >
-      <div onClick={handleToggle} className={styles.trigger}>
-        {button}
-      </div>
+  useEffect(() => {
+    if (open) {
+      document.addEventListener("mousedown", handleClickOutside);
+    } else {
+      document.removeEventListener("mousedown", handleClickOutside);
+    }
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [open]);
 
+  return (
+    <div className={styles.dropdown} ref={dropdownRef}>
+      <div onClick={toggleMenu} className={styles.trigger}>
+        {trigger}
+      </div>
       {open && (
-        <div
-          className={`absolute mt-2 z-50 min-w-[150px] rounded-md border 
-                      bg-white dark:bg-gray-900 shadow-lg 
-                      ${position === "left" ? "left-0" : "right-0"} 
-                      ${styles.menu}`}
-          role="menu"
-        >
-          {items.map((item, index) => (
-            <button
-              key={index}
-              type="button"
-              onClick={() => handleItemClick(item)}
-              className={`w-full px-4 py-2 text-sm text-left 
-                          text-neutral-800 dark:text-neutral-100
-                          hover:bg-gray-100 dark:hover:bg-gray-800
-                          ${styles.menuItem} ${item.className || ""}`}
-              role="menuitem"
-            >
-              <div className="flex items-center gap-2">
-                {item.icon && <span>{item.icon}</span>}
-                <span>{item.label}</span>
-              </div>
-            </button>
-          ))}
+        <div className={`${styles.menu} ${styles[align]}`}>
+          {items && items.length > 0
+            ? items.map((item, idx) => (
+                <div
+                  key={idx}
+                  className={styles.menuItem}
+                  onClick={() => {
+                    item.onClick?.();
+                    setOpen(false);
+                  }}
+                >
+                  {item.label}
+                </div>
+              ))
+            : children}
         </div>
       )}
     </div>

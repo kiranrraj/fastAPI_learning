@@ -1,0 +1,21 @@
+/* src/app/components/styles/AppShell.module.css */
+
+/* Shell layout wrapper for header, main, and footer */
+.appShell {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  background-color: #f9fafb;
+  color: #1f2937;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+@media (prefers-color-scheme: dark) {
+  .appShell {
+    background-color: #111827; /* Tailwind gray-900 */
+    color: #f9fafb;
+  }
+}

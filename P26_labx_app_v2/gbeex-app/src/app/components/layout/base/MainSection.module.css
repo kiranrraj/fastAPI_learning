@@ -1,0 +1,22 @@
+.mainSection {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+.sidebar {
+  width: 280px;
+  background-color: var(--sidebar-bg);
+  color: var(--sidebar-text);
+  border-right: 1px solid var(--border);
+  padding: 1rem;
+  overflow-y: auto;
+}
+
+.content {
+  flex: 1;
+  background-color: var(--content-bg);
+  color: var(--content-text);
+  padding: 1rem;
+  overflow-y: auto;
+}

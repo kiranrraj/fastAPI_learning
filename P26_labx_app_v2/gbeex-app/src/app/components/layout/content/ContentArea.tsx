@@ -1,50 +1,115 @@
-// src/app/components/layout/ContentArea.tsx
+// src/app/components/layout/content/ContentArea.tsx
 
-import React from "react";
-import styles from "@/app/components/styles/content/ContentArea.module.css";
-import { TabType } from "@/app/types/tab.types";
-import TabContainer from "../../layout/tabs/TabContainer";
+"use client";
 
+import React, { useMemo, useState } from "react";
+import { PortletNode } from "@/app/types/common/portlet.types";
+import GroupContentView from "./views/GroupContentView";
+import ItemContentView from "./views/ItemContentView";
+import ContentHeader from "./ContentHeader";
+import styles from "./ContentArea.module.css";
+
+/**
+ * Props for ContentArea
+ */
 interface ContentAreaProps {
-  tabs: TabType[];
-  activeTabId: string | null;
+  tabs: Record<string, PortletNode>;
+  activeTabId: string;
+  portletData: PortletNode[];
+  onCloseTab: (tabId: string) => void;
   onTabClick: (tabId: string) => void;
-  onTabClose: (tabId: string) => void;
-  onToggleFavorite: (tabId: string) => void;
-  className?: string;
+  onRestoreLastTab: () => void;
 }
 
+/**
+ * ContentArea renders:
+ * - Header with tab controls
+ * - List of open tabs
+ * - Active tab content
+ */
 const ContentArea: React.FC<ContentAreaProps> = ({
   tabs,
   activeTabId,
+  portletData,
+  onCloseTab,
   onTabClick,
-  onTabClose,
-  onToggleFavorite,
-  className = "",
+  onRestoreLastTab,
 }) => {
+  const [searchQuery, setSearchQuery] = useState("");
+  const [sortMode, setSortMode] = useState<"default" | "asc" | "desc">(
+    "default"
+  );
+
+  const portletMap = useMemo(() => {
+    return portletData.reduce((acc, node) => {
+      acc[node.id] = node;
+      return acc;
+    }, {} as Record<string, PortletNode>);
+  }, [portletData]);
+
+  const tabEntries = useMemo(() => {
+    let entries = Object.entries(tabs);
+    if (sortMode === "asc") {
+      entries.sort(([, a], [, b]) => a.name.localeCompare(b.name));
+    } else if (sortMode === "desc") {
+      entries.sort(([, a], [, b]) => b.name.localeCompare(a.name));
+    } // default = insertion order
+
+    return entries.filter(([, node]) =>
+      node.name.toLowerCase().includes(searchQuery.toLowerCase())
+    );
+  }, [tabs, searchQuery, sortMode]);
+
+  const activeTab = tabs[activeTabId];
+
   return (
-    <div
-      className={`flex-1 p-4 overflow-auto ${styles.contentArea} ${className}`}
-      role="main"
-      aria-label="Main content"
-    >
-      <TabContainer
-        tabs={tabs}
-        activeTabId={activeTabId}
-        onTabClick={onTabClick}
-        onTabClose={onTabClose}
-        onToggleFavorite={onToggleFavorite}
-        renderTabContent={(tab) => (
-          <div className="p-4">
-            <h2 className="text-xl font-semibold">{tab.title}</h2>
-            <pre className="text-xs text-muted-foreground mt-2">
-              {JSON.stringify(tab.data, null, 2)}
-            </pre>
-          </div>
-        )}
+    <div className={styles.contentAreaWrapper}>
+      {/* Header with Search, Sort, Restore, Close All */}
+      <ContentHeader
+        searchQuery={searchQuery}
+        setSearchQuery={setSearchQuery}
+        sortMode={sortMode}
+        onSortModeChange={(mode) => setSortMode(mode)}
+        onCloseAllTabs={() => Object.keys(tabs).forEach(onCloseTab)}
+        onRestoreTab={onRestoreLastTab}
       />
+
+      {/* Tab Bar */}
+      <div className={styles.tabBar}>
+        {tabEntries.map(([tabId, node]) => (
+          <div
+            key={tabId}
+            className={`${styles.tabItem} ${
+              tabId === activeTabId ? styles.activeTab : ""
+            }`}
+            onClick={() => onTabClick(tabId)}
+          >
+            <span className={styles.tabName}>{node.name}</span>
+            <button
+              onClick={(e) => {
+                e.stopPropagation();
+                onCloseTab(tabId);
+              }}
+              className={styles.tabCloseButton}
+            >
+              ×
+            </button>
+          </div>
+        ))}
+      </div>
+
+      {/* Tab Content */}
+      <div className={styles.tabContentArea}>
+        {!activeTab && (
+          <div className={styles.emptyTabMessage}>No tab selected</div>
+        )}
+        {activeTab?.type === "group" && (
+          <GroupContentView groupNode={activeTab} allNodes={portletMap} />
+        )}
+        {activeTab?.type === "item" && <ItemContentView itemNode={activeTab} />}
+      </div>
     </div>
   );
 };
 
-export default React.memo(ContentArea);
+export default ContentArea;

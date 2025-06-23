@@ -1,18 +1,30 @@
 // src/app/components/icons/IconSearch.tsx
+
 import React from "react";
 
-const IconSearch: React.FC<{ className?: string }> = ({ className = "" }) => (
+interface IconSearchProps {
+  size?: number;
+  color?: string;
+}
+
+const IconSearch: React.FC<IconSearchProps> = ({
+  size = 20,
+  color = "#6B7280", // Default: Tailwind gray-500
+}) => (
   <svg
-    xmlns="http://www.w3.org/2000/svg"
+    width={size}
+    height={size}
     viewBox="0 0 24 24"
     fill="none"
-    stroke="currentColor"
+    stroke={color}
     strokeWidth="2"
-    className={`w-5 h-5 ${className}`}
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    xmlns="http://www.w3.org/2000/svg"
   >
     <circle cx="11" cy="11" r="8" />
-    <line x1="17" y1="17" x2="21" y2="21" />
+    <line x1="21" y1="21" x2="16.65" y2="16.65" />
   </svg>
 );
 
-export default React.memo(IconSearch);
+export default IconSearch;

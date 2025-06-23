@@ -1,0 +1,26 @@
+/* ThemeToggleModule.module.css */
+/* -----------------------------
+   Styling for the ThemeToggleModule that toggles dark/light themes
+   using CSS variables defined in globals.css. Uses the generic Toggle UI.
+--------------------------------*/
+
+.themeToggleWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.25rem;
+}
+
+.icon {
+  font-size: 1.2rem;
+  transition: transform 0.2s ease;
+  color: var(--text);
+}
+
+.icon:hover {
+  transform: scale(1.1);
+}
+
+.iconActive {
+  color: gold;
+}

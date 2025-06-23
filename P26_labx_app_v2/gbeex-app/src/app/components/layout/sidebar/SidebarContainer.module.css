@@ -1,0 +1,12 @@
+/* src/app/components/sidebar/SidebarContainer.module.css */
+
+.sidebar {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--sidebar-bg);
+  color: var(--sidebar-text);
+  overflow: hidden;
+  border: none;
+}

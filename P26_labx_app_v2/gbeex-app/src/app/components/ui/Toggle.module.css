@@ -1,0 +1,18 @@
+.toggle {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 1.3rem;
+  padding: 0.25rem;
+  color: var(--text);
+  transition: transform 0.2s ease;
+}
+
+.toggle:hover {
+  transform: scale(1.1);
+}
+
+.toggle:focus {
+  outline: 2px solid var(--border);
+  outline-offset: 2px;
+}

@@ -1,0 +1,9 @@
+/* src/app/components/sidebar/SidebarContentArea.module.css */
+
+.container {
+  flex: 1;
+  overflow: hidden;
+  padding: 0.5rem 0;
+  background-color: var(--sidebar-bg);
+  color: var(--sidebar-text);
+}

@@ -1,0 +1,7 @@
+/* src/app/components/layout/header/HeaderRightArea.module.css */
+
+.rightArea {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}

@@ -1,0 +1,74 @@
+/* src/app/components/layout/content/ContentArea.module.css */
+
+.contentAreaWrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  background-color: #f9fafb;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.tabBar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 0.5rem 1rem;
+  border-bottom: 1px solid #ddd;
+  background-color: #f1f5f9;
+}
+
+.tabItem {
+  display: flex;
+  align-items: center;
+  background-color: #e2e8f0;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.875rem;
+  transition: background-color 0.2s ease-in-out;
+  border: 1px solid transparent;
+}
+
+.tabItem:hover {
+  background-color: #cbd5e1;
+}
+
+.activeTab {
+  background-color: #ffffff;
+  font-weight: 600;
+  border: 1px solid #94a3b8;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.tabName {
+  margin-right: 8px;
+  color: #1e293b;
+}
+
+.tabCloseButton {
+  background: none;
+  border: none;
+  color: #ef4444;
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 0;
+  transition: color 0.2s ease-in-out;
+}
+
+.tabCloseButton:hover {
+  color: #b91c1c;
+}
+
+.tabContentArea {
+  flex-grow: 1;
+  overflow-y: auto;
+  background-color: #ffffff;
+  padding: 1rem;
+}
+
+.emptyTabMessage {
+  padding: 1rem;
+  color: #6b7280;
+  font-style: italic;
+}

@@ -1,12 +1,21 @@
 // src/app/layout.tsx
 
-import "./globals.css";
 import type { Metadata } from "next";
-import AppShell from "@/app/components/layout/AppShell";
+import "./globals.css";
+import AppShell from "./components/layout/base/AppShell";
+
+/**
+ * Root layout for the entire SPA.
+ * -------------------------------
+ * Wraps all pages inside AppShell and applies global styles.
+ *
+ * Dark mode is handled manually via class "dark" on <html>.
+ * We use suppressHydrationWarning to avoid mismatch between SSR and client theme class.
+ */
 
 export const metadata: Metadata = {
-  title: "Gbeex App",
-  description: "Your real-time dashboard",
+  title: "LabX Portlet SPA",
+  description: "A plug-and-play portlet management system",
 };
 
 export default function RootLayout({
@@ -15,9 +24,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body>
-        <AppShell>{children}</AppShell>
+        {/* AppShell contains Header, MainSection, Footer */}
+        <AppShell />
       </body>
     </html>
   );

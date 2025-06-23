@@ -1,0 +1,38 @@
+.searchWrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 10px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background-color: var(--sidebar-bg);
+  color: var(--sidebar-text);
+  margin-bottom: 8px;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  color: var(--sidebar-text);
+}
+
+.searchInput {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: inherit;
+  font-size: 14px;
+}
+
+.resetButton {
+  background: none;
+  border: none;
+  font-size: 16px;
+  color: var(--sidebar-text);
+  cursor: pointer;
+  padding: 0px 0px 0 10px;
+  margin: 0;
+}

@@ -1,0 +1,34 @@
+/* src/app/components/layout/base/Footer.module.css */
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 1.25rem;
+  background-color: var(--footer-bg);
+  color: var(--footer-text);
+  font-size: 0.875rem;
+  border-top: 1px solid var(--border);
+  height: 48px;
+}
+
+/* Left section (copyright) */
+.left {
+  font-weight: 400;
+}
+
+/* Right section (time and status) */
+.right {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.time {
+  font-variant-numeric: tabular-nums;
+}
+
+.status {
+  color: green;
+  font-weight: 500;
+}

@@ -1,0 +1,31 @@
+/* src/app/components/content/ContentHeader.module.css */
+
+.headerContainer {
+  display: flex;
+  align-items: center;
+  background-color: #222;
+  gap: 12px;
+  padding: 10px;
+}
+
+.searchInput {
+  flex: 1;
+  padding: 6px 10px;
+  font-size: 14px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.sortSelect {
+  padding: 6px;
+  font-size: 14px;
+}
+
+.headerBtn {
+  padding: 6px 10px;
+  font-size: 14px;
+  background-color: darkcyan;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}

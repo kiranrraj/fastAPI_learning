@@ -1,0 +1,28 @@
+/* src/app/components/layout/header/UserContainer.module.css */
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.avatarBlock {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+}
+
+.avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid var(--border);
+}
+
+.username {
+  font-size: 0.875rem;
+  color: var(--header-text);
+  white-space: nowrap;
+}

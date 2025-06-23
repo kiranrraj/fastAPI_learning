@@ -1,26 +1,62 @@
-@import "tailwindcss";
+/* =====================================================
+  GLOBAL THEME VARIABLES
+  These CSS custom properties define base colors for 
+  light and dark modes. They are used across the app for 
+  layout backgrounds, text colors, borders, etc.
+===================================================== */
 
+/* ---------- Light Theme (default) ---------- */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* General background and text */
+  --background: #fff;                 /* Page background */
+  --text: #111;                       /* Default text color */
+
+  /* Header styles */
+  --header-bg: #f9f9f9;               /* Header background */
+  --header-text: #000;                /* Header text */
+
+  /* Footer styles */
+  --footer-bg: #f1f1f1;               /* Footer background */
+  --footer-text: #333;                /* Footer text */
+
+  /* Sidebar styles */
+  --sidebar-bg: #fafafa;              /* Sidebar background */
+  --sidebar-text: #222;               /* Sidebar text */
+
+  /* Content area styles */
+  --content-bg: #ffffff;              /* Content pane background */
+  --content-text: #111;               /* Content text */
+
+  /* Border color */
+  --border: #ddd;                     /* Common border color */
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+/* ---------- Dark Theme Overrides ---------- */
+html.dark {
+  /* General background and text */
+  --background: #121212;             /* Dark base background */
+  --text: #f5f5f5;                   /* Light text for dark bg */
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+  /* Header styles */
+  --header-bg: #1e1e1e;              /* Dark header background */
+  --header-text: #ffffff;            /* Header text in dark mode */
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  /* Footer styles */
+  --footer-bg: #1a1a1a;              /* Footer bg in dark */
+  --footer-text: #bbbbbb;            /* Footer text in dark */
+
+  /* Sidebar styles */
+  --sidebar-bg: #181818;             /* Sidebar bg in dark */
+  --sidebar-text: #eeeeee;           /* Sidebar text in dark */
+
+  /* Content area styles */
+  --content-bg: #1e1e1e;             /* Content bg in dark */
+  --content-text: #f0f0f0;           /* Content text in dark */
+
+  /* Border color */
+  --border: #444;                    /* Border color in dark mode */
+
+  /* Additional root-level styles */
+  background-color: #111827;         /* Page base background */
+  color: #f9fafb;                    /* Default text fallback */
 }

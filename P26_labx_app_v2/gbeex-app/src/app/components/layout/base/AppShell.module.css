@@ -1,0 +1,9 @@
+.appShell {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  background-color: var(--background);
+  color: var(--text);
+}

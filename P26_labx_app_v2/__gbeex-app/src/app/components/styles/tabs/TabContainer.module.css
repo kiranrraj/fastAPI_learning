@@ -1,0 +1,13 @@
+.tabsContainer {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+}
+
+.tabContent {
+  flex: 1;
+  min-height: 0;   
+  overflow-y: auto;
+  overflow-x: hidden;
+}

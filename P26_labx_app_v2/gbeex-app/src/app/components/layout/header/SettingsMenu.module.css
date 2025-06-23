@@ -1,0 +1,23 @@
+/* src/app/components/layout/header/Settings.module.css */
+
+/* Wrapper to align the settings icon in header */
+.settingsWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* The actual button appearance */
+.settingsButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 6px;
+  border-radius: 4px;
+  transition: background-color 0.2s ease-in-out;
+  color: var(--header-text);
+}
+
+.settingsButton:hover {
+  background-color: var(--border);
+}

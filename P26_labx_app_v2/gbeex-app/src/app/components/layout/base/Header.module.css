@@ -1,0 +1,36 @@
+/* src/app/components/layout/base/Header.module.css */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 24px;
+  background-color: var(--header-bg);
+  color: var(--header-text);
+  border-bottom: 1px solid var(--border);
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.themeToggle {
+  background: none;
+  border: 1px solid var(--border);
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  color: var(--header-text);
+}
+
+.left {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  margin: 20px;
+  border-radius: 50%;
+}

@@ -1,0 +1,67 @@
+/* src/app/components/sidebar/SidebarHeader.module.css */
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 1rem;
+  border-bottom: 1px solid #e5e7eb; /* light border */
+}
+
+.title {
+  font-size: 22px;
+  margin: 0;
+}
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.searchInput {
+  border-radius: 4px;
+  font-size: 12px;
+  color: #111827;
+}
+
+.controlButton {
+  padding: 0.375rem 0.75rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #374151; /* gray-700 */
+  background-color: #e5e7eb; /* gray-200 */
+  border: none;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.controlButton:hover {
+  background-color: #d1d5db; /* gray-300 */
+}
+
+.favoritesSection {
+  padding: 0.5rem;
+  background-color: #fef3c7; /* yellow-100 */
+  border-radius: 0.375rem;
+}
+
+.favTitle {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #92400e; /* amber-800 */
+  margin-bottom: 0.5rem;
+}
+
+.favItem {
+  font-size: 0.875rem;
+  color: #92400e;
+  padding: 0.25rem 0;
+  cursor: pointer;
+  text-decoration: underline transparent;
+  transition: text-decoration-color 0.2s ease;
+}
+
+.favItem:hover {
+  text-decoration-color: #92400e;
+}

@@ -1,27 +1,33 @@
-// src/app/components/layout/header/HeaderRight.tsx
+// src/app/components/layout/header/HeaderRightArea.tsx
 
 import React from "react";
-import UserProfile from "@/app/components/layout/header/UserProfile";
-import LogoutButton from "@/app/components/layout/header/LogoutButton";
-import HelpButton from "@/app/components/layout/header/HelpButton";
-import NotificationButton from "@/app/components/layout/header/NotificationButton";
-import SettingsButton from "@/app/components/layout/header/SettingsButton";
-import ThemeToggle from "@/app/components/ui/ThemeToggle"; // ← updated
-import styles from "@/app/components/styles/header/HeaderRight.module.css";
+import styles from "./HeaderRight.module.css";
+import UserContainer from "./UserContainer";
+import NotificationModule from "../../ui/NotificationModule";
+import SettingsMenu from "./SettingsMenu";
+import ThemeToggle from "./ThemeToggle";
 
-const HeaderRight: React.FC<{ className?: string }> = ({ className = "" }) => {
+/**
+ * Component: HeaderRightArea
+ * ---------------------------
+ * Renders the right-hand area of the header including:
+ * - Notifications
+ * - Settings
+ * - Theme Toggle
+ * - User dropdown
+ *
+ * INPUT: none
+ * OUTPUT: UI cluster of control modules
+ */
+const HeaderRight: React.FC = () => {
   return (
-    <div
-      className={`flex items-center gap-2 ${styles.headerRight} ${className}`}
-    >
-      <UserProfile name="John Doe" avatarUrl="/avatar-placeholder.png" />
-      <NotificationButton hasUnread />
-      <SettingsButton />
-      <ThemeToggle /> {/* ← updated usage */}
-      <HelpButton />
-      <LogoutButton />
+    <div className={styles.rightArea}>
+      <UserContainer />
+      <SettingsMenu />
+      <NotificationModule />
+      <ThemeToggle />
     </div>
   );
 };
 
-export default React.memo(HeaderRight);
+export default HeaderRight;
