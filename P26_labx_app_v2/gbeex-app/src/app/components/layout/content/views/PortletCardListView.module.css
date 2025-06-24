@@ -1,10 +1,10 @@
 .container {
   padding: 1rem;
-  background-color: var(--background);
+  background-color: var(--content-bg);
 }
 
 .title {
-  font-size: 14px;
+  font-size: 1.125rem;
   font-weight: 600;
   margin-bottom: 1rem;
   color: var(--text-primary);
@@ -12,11 +12,11 @@
 
 .cardGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  grid-template-columns: repeat(2, 1fr); /* fixed 2 columns */
   gap: 1rem;
 }
 
 .cardMeta {
-  font-size: 10px;
+  font-size: 0.875rem;
   color: var(--text-muted);
 }

@@ -12,10 +12,14 @@
   cursor: pointer;
   padding: 6px;
   color: var(--header-text);
+    background-color: blueviolet;
+  border:2px solid blueviolet;
 }
 
 .notificationButton:hover {
   opacity: 0.85;
+  background-color: transparent;
+  border:2px solid #fff;
 }
 
 .dot {

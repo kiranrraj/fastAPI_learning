@@ -3,7 +3,7 @@
 import React from "react";
 import styles from "./HeaderRight.module.css";
 import UserContainer from "./UserContainer";
-import NotificationModule from "../../ui/NotificationModule";
+import NotificationModule from "./NotificationModule";
 import SettingsMenu from "./SettingsMenu";
 import ThemeToggle from "./ThemeToggle";
 

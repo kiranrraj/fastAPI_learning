@@ -1,3 +1,11 @@
-.wrapper {
+.container {
+  max-width: 600px;
+  margin: 2rem auto;
   padding: 1rem;
+}
+.emptyMessage {
+  text-align: center;
+  color: var(--text-muted);
+  font-style: italic;
+  margin: 2rem;
 }

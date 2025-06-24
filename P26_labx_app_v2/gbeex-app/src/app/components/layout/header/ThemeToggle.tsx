@@ -38,6 +38,7 @@ const ThemeToggle: React.FC = () => {
 
   return (
     <Toggle
+      className={styles.headerBtn}
       isActive={isDark}
       onToggle={toggleTheme}
       label="Toggle theme"

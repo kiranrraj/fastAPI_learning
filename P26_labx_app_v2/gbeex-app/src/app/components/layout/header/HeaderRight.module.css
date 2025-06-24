@@ -1,7 +1,66 @@
 /* src/app/components/layout/header/HeaderRightArea.module.css */
 
-.rightArea {
+
+.rightArea{
+  display: flex;
+  width: 300px;
+  height: 100%;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 10px;
+}
+
+.container > * {
+  cursor: pointer;
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 8px;
+  padding: 4px 8px;
+  border-radius: 6px;
+  transition: background-color 0.2s ease;
+}
+
+.container > *:hover {
+  background-color: var(--primary-hover);
+  color: var(--header-bg);
+}
+
+/* For icon buttons inside header right */
+.iconButton {
+  height: 20px;
+  width: 20px;
+  background: peru;
+  border: none;
+  padding: 6px;
+  border-radius: 50%;
+  transition: background-color 0.2s ease;
+}
+
+.iconButton:hover {
+  background-color: var(--primary-color);
+  color: var(--header-bg);
+}
+
+/* For dropdown menus or notification badges */
+.badge {
+  background-color: var(--danger-color);
+  color: var(--card-footer-text);
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 2px 6px;
+  border-radius: 12px;
+  margin-left: 4px;
+  user-select: none;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .container {
+    gap: 1rem;
+    padding: 0 8px;
+  }
+
+  .container > * {
+    padding: 4px 6px;
+  }
 }

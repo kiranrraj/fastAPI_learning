@@ -1,61 +1,34 @@
 import React from "react";
 import { PortletNode } from "@/app/types/common/portlet.types";
 import PortletCardContainer from "@/app/components/layout/cards/PortletCardContainer";
+import styles from "./ItemContentView.module.css";
 
 interface ItemContentViewProps {
   itemNode: PortletNode;
-
-  onRefresh?: (id: string) => void;
-  onDelete?: (id: string) => void;
-  onShare?: (id: string) => void;
-  onLink?: (id: string) => void;
-  onTogglePin?: (id: string, pinned: boolean) => void;
-  onToggleLock?: (id: string, locked: boolean) => void;
-  onCloseTab?: (id: string) => void;
 }
 
-const ItemContentView: React.FC<ItemContentViewProps> = ({
-  itemNode,
-  onRefresh,
-  onDelete,
-  onShare,
-  onLink,
-  onTogglePin,
-  onToggleLock,
-  onCloseTab,
-}) => {
+const ItemContentView: React.FC<ItemContentViewProps> = ({ itemNode }) => {
   if (!itemNode) {
-    return <div>No item found.</div>;
+    return <div className={styles.emptyMessage}>Item not found.</div>;
   }
 
   return (
-    <PortletCardContainer
-      cardId={itemNode.id}
-      title={itemNode.name}
-      portletType={itemNode.type}
-      tagColor={itemNode.tagColor}
-      status="idle"
-      lastUpdated={itemNode.lastUpdated}
-      isPinned={itemNode.pinned}
-      isLocked={itemNode.locked}
-      onRefresh={onRefresh}
-      onDelete={(id) => {
-        onDelete?.(id);
-        onCloseTab?.(id);
-      }}
-      onShare={onShare}
-      onLink={onLink}
-      onTogglePin={onTogglePin}
-      onToggleLock={onToggleLock}
-      footer={
-        <div style={{ fontSize: 12, color: "#666" }}>
-          Last updated: {itemNode.lastUpdated || "N/A"}
+    <div className={styles.container}>
+      <PortletCardContainer
+        cardId={itemNode.id}
+        title={itemNode.name}
+        portletType={itemNode.portletType ?? "Unknown"}
+        tagColor={itemNode.tagColor ?? "#888"}
+        status="idle"
+        lastUpdated="Just now"
+        // Pass handlers as needed
+      >
+        <div>
+          {itemNode.description ||
+            "Detailed view of this item will be rendered here."}
         </div>
-      }
-    >
-      {/* Pass content as children */}
-      {JSON.stringify(itemNode)}
-    </PortletCardContainer>
+      </PortletCardContainer>
+    </div>
   );
 };
 

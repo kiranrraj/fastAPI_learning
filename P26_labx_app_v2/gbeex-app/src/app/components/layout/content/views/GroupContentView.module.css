@@ -1,39 +1,22 @@
-/* src/app/components/layout/content/views/GroupContentView.module.css */
-
 .wrapper {
   padding: 1rem;
 }
 
 .groupTitle {
-  font-size: 14px;
-  font-weight: 600;
+  font-size: 1.5rem;
+  font-weight: 700;
   margin-bottom: 1rem;
+  color: var(--text-primary);
 }
 
 .emptyMessage {
-  color: #666;
+  color: var(--text-muted);
   font-style: italic;
+  padding: 1rem 0;
 }
 
-.grid {
+.grid{
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-  gap: 10px;
-}
-
-.childCard {
-  background: #fff;
-  padding: 1rem;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-}
-
-.childName {
-  font-weight: 500;
-  margin-bottom: 4px;
-}
-
-.childMeta {
-  font-size: 10px;
-  color: #555;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
 }

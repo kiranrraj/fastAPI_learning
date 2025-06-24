@@ -11,16 +11,15 @@
   padding: 0.25rem;
 }
 
-.icon {
-  font-size: 1.2rem;
+.headerBtn {
   transition: transform 0.2s ease;
   color: var(--text);
-}
-
-.icon:hover {
-  transform: scale(1.1);
+  background-color: blueviolet;
+  border:2px solid blueviolet;
+  padding: 6px 10px;
 }
 
 .iconActive {
-  color: gold;
+  background-color: transparent;
+  border:2px solid #fff;
 }

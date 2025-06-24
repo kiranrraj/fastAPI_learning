@@ -9,15 +9,16 @@
 
 /* The actual button appearance */
 .settingsButton {
-  background: none;
-  border: none;
-  cursor: pointer;
   padding: 6px;
   border-radius: 4px;
   transition: background-color 0.2s ease-in-out;
   color: var(--header-text);
+  background-color: blueviolet;
+  border:2px solid blueviolet;
+  padding: 6px 10px;
 }
 
 .settingsButton:hover {
   background-color: var(--border);
+  border: 2px solid blueviolet;
 }
