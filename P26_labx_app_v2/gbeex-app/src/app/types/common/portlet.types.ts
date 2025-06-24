@@ -1,41 +1,40 @@
 // src/app/types/common/portlet.types.ts
 
 /**
- * Represents a flat node in the portlet structure.
+ * Represents a single node in our portlet structure.
  * Each node is either a group or an individual item.
- * This unified structure powers the sidebar, content area, and tabs.
  */
 export interface PortletNode {
-  id: string;                          // Unique identifier for this node
-  name: string;                        // Display name (title) for UI
-  type: 'group' | 'item';              // Determines if it's a parent group or child item
+  id: string;                          // Unique identifier for the node
+  name: string;                        // Display name of the portlet
+  type: 'group' | 'item' | 'default';  // Node type: group or item [Default for our default view]
 
-  parentIds: string[];                 // List of parent group IDs (can support nesting)
-  childIds?: string[];                 // Only for groups: IDs of child items or subgroups
+  parentIds: string[];                 // List of parent group IDs 
+  childIds?: string[];                 // List of child node IDs (for group-type nodes)
+  group_ids?: string[];                // Legacy compatibility: group IDs assigned to this node
 
-  tags?: string[];                     // Optional: categorization tags (e.g., ["biology", "map"])
-  portletType?: string;                // Optional: visualization type (e.g., "table", "graph")
+  tags?: string[];                     // Optional tags for categorization, filtering, or search
+  portletType?: string;                // Type of visualization (table, chart, graph, map)
+  tagColor?: string;                   // Optional color indicator for UI badge or tag highlight
 
-  readonly?: boolean;                  // Optional: non-editable or locked portlet
-  meta?: PortletMeta;                  // UI, tab, and interaction metadata
+  readonly?: boolean;                  // Read only or not
+  meta?: PortletMeta;                 // Additional metadata for UI, state management, and layout
 }
 
-/**
- * Optional metadata for UI, tab management, and user preferences.
- * This data is used for rendering decisions and behavior tracking.
- */
+//  Supplementary metadata used for UI needs, Interaction history [timestamps], Layout-related preferences
+
 export interface PortletMeta {
-  fav?: boolean;                       // Marked as favorite (shows in favorites list)
-  pinned?: boolean;                    // Pinned in tabs (won’t be closed on 'close all')
-  hidden?: boolean;                    // Hidden from sidebar or views
+  fav?: boolean;                       // Whether the node is marked as a favorite
+  pinned?: boolean;                    // Whether the node is pinned to top or layout
+  hidden?: boolean;                    // Whether the node is hidden 
 
-  createdAt?: number;                  // Timestamp (ms) of creation
-  restoredAt?: number;                 // Timestamp of last restore (for "restore last closed")
-  lastAccessed?: number;              // Timestamp of most recent user access (for sorting)
+  createdAt?: number;                  // Creation timestamp [epoch time]
+  restoredAt?: number;                 // Timestamp when last restored from deleted or hidden state
+  lastAccessed?: number;               // Last interaction time 
 
-  position?: number;                   // Visual or tab position (manual or computed)
-  viewMode?: 'default' | 'compact' | 'table'; // View mode for rendering (cards, list, etc.)
-  tabId?: string;                      // Associated tab ID if open in a tab
+  position?: number;                   // for manual sorting or ordering
+  tabId?: string;                      // If opened in a tab, this field links it to that tab
 
-  custom?: Record<string, any>;        // Fully extensible custom metadata
+  custom?: Record<string, any>;        // for future custom settings 
+  viewMode?: 'default' | 'compact' | 'table'; // User’s preferred view mode for this node
 }

@@ -1,48 +1,55 @@
-// src/app/utils/transform/transformToPortletNodes.ts
+// src/app/utils/transformToPortletNodes.ts
 
 import { PortletNode } from "@/app/types/common/portlet.types";
 
 /**
- * Transforms raw group + investigation data from the API
- * into a flat list of `PortletNode` entries for rendering and tabs.
- *
- * @param rawData - Raw API response (array of groups with investigations)
- * @returns PortletNode[] - flat array of both group and item nodes
+ * Transforms raw API group + investigation data into a flat array of PortletNode[]
+ * used by sidebar, default tab, and card layout rendering logic.
  */
 export function transformToPortletNodes(rawData: any[]): PortletNode[] {
-    const result: PortletNode[] = [];
+    const portletNodes: PortletNode[] = [];
 
-    rawData.forEach((group: any) => {
-        const groupId = group.id;
-        const groupName = group.name;
-        const investigations = Array.isArray(group.investigations) ? group.investigations : [];
-
-        // Group node
-        result.push({
-            id: groupId,
-            name: groupName,
+    rawData.forEach((group) => {
+        // Convert each investigation group into a 'group' PortletNode
+        const groupNode: PortletNode = {
+            id: group.id,
+            name: group.name,
             type: "group",
-            parentIds: [],
-            childIds: investigations.map((inv) => inv.id),
+            parentIds: group.parent_group_id ? [group.parent_group_id] : [],
+            childIds: group.investigations?.map((inv: any) => inv.id) || [],
+            tagColor: "#888",
+            readonly: true,
             meta: {
-                custom: { original: group },
+                createdAt: new Date(group.created_at).getTime(),
+                viewMode: "default",
             },
-        });
+        };
 
-        // Child investigation nodes
-        investigations.forEach((inv: any) => {
-            result.push({
+        portletNodes.push(groupNode);
+
+        // Convert each investigation into an 'item' PortletNode
+        group.investigations?.forEach((inv: any) => {
+            const itemNode: PortletNode = {
                 id: inv.id,
                 name: inv.name,
                 type: "item",
-                parentIds: [groupId],
-                portletType: inv.portletType ?? "default",
+                parentIds: [group.id],
+                group_ids: [group.id], // normalized to array
+
+                portletType: "table",
+                readonly: true,
                 meta: {
-                    custom: { original: inv },
+                    createdAt: new Date(inv.created_at).getTime(),
+                    viewMode: "compact",
+                    custom: {
+                        foreignGroupId: group["T.id"], // backend FK reference
+                    },
                 },
-            });
+            };
+
+            portletNodes.push(itemNode);
         });
     });
 
-    return result;
+    return portletNodes;
 }

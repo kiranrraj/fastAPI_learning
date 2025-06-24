@@ -1,0 +1,39 @@
+/* src/app/components/layout/content/views/GroupContentView.module.css */
+
+.wrapper {
+  padding: 1rem;
+}
+
+.groupTitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.emptyMessage {
+  color: #666;
+  font-style: italic;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.childCard {
+  background: #fff;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.childName {
+  font-weight: 500;
+  margin-bottom: 0.25rem;
+}
+
+.childMeta {
+  font-size: 0.875rem;
+  color: #555;
+}

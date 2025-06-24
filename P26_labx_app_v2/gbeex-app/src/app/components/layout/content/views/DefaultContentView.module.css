@@ -1,0 +1,10 @@
+.wrapper {
+  padding: 1px;
+}
+
+.heading {
+  font-size: 26px;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: aliceblue;
+}

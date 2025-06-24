@@ -1,0 +1,167 @@
+/* Card outer wrapper */
+.cardWrapper {
+  background-color: var(--card, #fff);
+  border: 1px solid var(--border, #e5e7eb);
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow 0.2s ease;
+}
+
+.cardWrapper:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* === Header Section === */
+.cardHeader {
+  padding: 0.75rem 1rem;
+  background-color: var(--muted, #f9f9f9);
+  border-bottom: 1px solid var(--border, #e0e0e0);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+/* Row 1: Top control buttons */
+.cardControls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.controlButton {
+  font-size: 0.75rem;
+  padding: 0.35rem 0.65rem;
+  background-color: var(--button-bg, #f3f4f6);
+  border: 1px solid var(--border, #d1d5db);
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  color: var(--text-primary, #111);
+}
+
+.controlButton:hover {
+  background-color: var(--hover-bg, #e5e7eb);
+}
+
+.controlButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Row 2: Title */
+.cardTitleRow {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary, #222);
+}
+
+/* Row 3: Portlet type, tags, status */
+.cardMetaRow {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.8rem;
+  color: var(--text-muted, #555);
+}
+
+.tagDot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.cardType {
+  font-size: 0.75rem;
+}
+
+/* Optional colored status indicator */
+.statusDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.statusIdle {
+  background-color: #bbb;
+}
+.statusLoading {
+  background-color: #3399ff;
+  animation: pulse 1.25s ease-in-out infinite;
+}
+.statusSuccess {
+  background-color: #28a745;
+}
+.statusError {
+  background-color: #e63946;
+}
+.statusStale {
+  background-color: #fcbf49;
+}
+
+/* === Content Section === */
+.cardContent {
+  padding: 1rem;
+  font-size: 0.9rem;
+  color: var(--text-primary, #222);
+  background-color: var(--background, #fff);
+  animation: fadeIn 0.2s ease-in-out;
+}
+
+/* === Footer Section === */
+.cardFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.6rem 1rem;
+  border-top: 1px solid var(--border, #e2e8f0);
+  background-color: var(--muted, #f8f9fa);
+  font-size: 0.75rem;
+  color: var(--text-muted, #666);
+}
+
+.lastUpdated {
+  font-style: italic;
+}
+
+.footerControls {
+  display: flex;
+  gap: 0.5rem;
+}
+
+/* === Animations === */
+@keyframes pulse {
+  0% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.4;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.cardContentArea {
+  padding: 1rem;
+  background-color: var(--card-bg, #ffffff);
+  border-top: 1px solid #e0e0e0;
+  color: #3399ff;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}

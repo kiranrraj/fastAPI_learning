@@ -14,7 +14,7 @@ import AppShell from "./components/layout/base/AppShell";
  */
 
 export const metadata: Metadata = {
-  title: "LabX Portlet SPA",
+  title: "GBeeX Portlet SPA",
   description: "A plug-and-play portlet management system",
 };
 
