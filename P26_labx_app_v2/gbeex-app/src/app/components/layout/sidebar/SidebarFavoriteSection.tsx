@@ -6,6 +6,8 @@ import React, { useState } from "react";
 import styles from "./SidebarFavoriteSection.module.css";
 import { PortletNode } from "@/app/types/common/portlet.types";
 import SidebarChildItem from "./SidebarChildItem";
+import IconChevronDown from "../../icons/IconChevronDown";
+import IconChevronUp from "../../icons/IconChevronUp";
 
 interface SidebarFavoritesSectionProps {
   favorites: PortletNode[];
@@ -34,8 +36,10 @@ const SidebarFavoritesSection: React.FC<SidebarFavoritesSectionProps> = ({
   return (
     <div className={styles.favoritesWrapper}>
       <div className={styles.header} onClick={() => setExpanded(!expanded)}>
-        <span className={styles.title}>★ Favorites</span>
-        <span className={styles.toggle}>{expanded ? "▾" : "▸"}</span>
+        <span className={styles.toggle}>
+          {expanded ? <IconChevronDown /> : <IconChevronUp />}
+        </span>
+        <span className={styles.title}>Favorites</span>
       </div>
       {expanded && (
         <ul className={styles.list}>

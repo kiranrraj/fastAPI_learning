@@ -1,20 +1,23 @@
 // src/app/utils/sidebar/handlers/expandCollapseHandler.ts
 
 /**
- * Toggle the expand state of all group IDs.
- *
- * @param currentExpandedGroups Current expand state map
- * @param allGroupIds List of all group IDs
- * @param expandAll Whether to expand (true) or collapse (false)
+ * Returns a new expanded state where all group IDs are set to true (expanded)
  */
-export function updateAllGroupExpandState(
-    currentExpandedGroups: Record<string, boolean>,
-    allGroupIds: string[],
-    expandAll: boolean
-): Record<string, boolean> {
-    const newState: Record<string, boolean> = { ...currentExpandedGroups };
-    for (const id of allGroupIds) {
-        newState[id] = expandAll;
+export function expandAllGroups(groupIds: string[]): Record<string, boolean> {
+    const result: Record<string, boolean> = {};
+    for (const id of groupIds) {
+        result[id] = true;
     }
-    return newState;
+    return result;
+}
+
+/**
+ * Returns a new expanded state where all group IDs are set to false (collapsed)
+ */
+export function collapseAllGroups(groupIds: string[]): Record<string, boolean> {
+    const result: Record<string, boolean> = {};
+    for (const id of groupIds) {
+        result[id] = false;
+    }
+    return result;
 }

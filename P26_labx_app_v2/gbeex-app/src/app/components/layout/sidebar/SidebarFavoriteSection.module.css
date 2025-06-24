@@ -1,32 +1,50 @@
-/* src/app/components/sidebar/SidebarFavoritesSection.module.css */
+/* src/app/components/sidebar/SidebarFavoriteSection.module.css */
 
-.favoritesWrapper {
-  margin-top: 1rem;
-  padding-top: 0.5rem;
-  border-top: 1px solid #e5e7eb;
+.section {
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background: #f9f9f9;
+  padding: 8px;
 }
 
-.favoritesTitle {
-  font-size: 0.875rem;
-  font-weight: 600;
-  color: #374151;
-  margin-bottom: 0.5rem;
-}
-
-.favoritesList {
+.header {
   display: flex;
-  flex-direction: column;
-  gap: 0.25rem;
-}
-
-.favoriteItem {
-  font-size: 0.875rem;
-  color: #1d4ed8;
+  align-items: center;
+  gap: 8px;
+  font-weight: bold;
   cursor: pointer;
-  padding: 0.25rem;
-  border-radius: 0.375rem;
+  background: transparent;
+  border: none;
+  padding: 4px 0;
+  font-size: 15px;
 }
 
-.favoriteItem:hover {
-  background-color: #eff6ff;
+.chevron {
+  font-size: 14px;
+  width: 20px;
+  text-align: center;
+}
+
+.title {
+  flex: 1;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 6px 0 0 0;
+}
+
+.item {
+  margin-bottom: 4px;
+}
+
+.limitWarning {
+  margin-top: 8px;
+  background: #fff3cd;
+  color: #856404;
+  padding: 6px 10px;
+  border-radius: 4px;
+  font-size: 13px;
+  border: 1px solid #ffeeba;
 }
