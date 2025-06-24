@@ -1,9 +1,9 @@
-// src/app/components/sidebar/SidebarControls.tsx
-
 "use client";
 
 import React from "react";
 import styles from "./SidebarControls.module.css";
+import IconChevronUp from "@/app/components/icons/IconChevronUp";
+import IconChevronDown from "@/app/components/icons/IconChevronDown";
 
 interface SidebarControlsProps {
   sortOrder: "asc" | "desc";
@@ -26,13 +26,13 @@ const SidebarControls: React.FC<SidebarControlsProps> = ({
   return (
     <div className={styles.controlsWrapper}>
       <button className={styles.controlButton} onClick={onToggleSortOrder}>
-        Sort {sortOrder === "asc" ? "A-Z" : "Z-A"}
+        {sortOrder === "asc" ? "AZ" : "ZA"}
       </button>
       <button className={styles.controlButton} onClick={onExpandAll}>
-        Expand All
+        <IconChevronDown />
       </button>
       <button className={styles.controlButton} onClick={onCollapseAll}>
-        Collapse All
+        <IconChevronUp />
       </button>
     </div>
   );

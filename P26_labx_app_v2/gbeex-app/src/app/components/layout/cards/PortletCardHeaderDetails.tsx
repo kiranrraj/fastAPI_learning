@@ -1,7 +1,7 @@
 // src/app/components/layout/cards/PortletCardHeaderDetails.tsx
 
 import React from "react";
-import styles from "./PortletCardContainer.module.css";
+import styles from "./PortletCardHeaderDetails.module.css";
 
 interface PortletCardHeaderDetailsProps {
   title: string;
@@ -10,15 +10,8 @@ interface PortletCardHeaderDetailsProps {
   status?: "idle" | "loading" | "error" | "success" | "stale";
 }
 
-/**
- * PortletCardHeaderDetails
- * --------------------------
- * Row 3 of the header showing:
- * - Tag dot color (if present)
- * - Portlet type (e.g., table, graph)
- * - Optional status indicator dot
- */
 const PortletCardHeaderDetails: React.FC<PortletCardHeaderDetailsProps> = ({
+  title,
   portletType,
   tagColor,
   status,
@@ -37,14 +30,10 @@ const PortletCardHeaderDetails: React.FC<PortletCardHeaderDetailsProps> = ({
       {tagColor && (
         <span className={styles.tagDot} style={{ backgroundColor: tagColor }} />
       )}
+      <h1 className={styles.cardTitle}>{title}</h1>
 
       {/* Portlet type label */}
       <span className={styles.cardType}>{portletType}</span>
-
-      {/* Optional status dot */}
-      {status && (
-        <span className={`${styles.statusDot} ${statusColorMap[status]}`} />
-      )}
     </div>
   );
 };

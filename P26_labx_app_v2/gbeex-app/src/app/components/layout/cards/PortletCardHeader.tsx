@@ -3,34 +3,29 @@
 import React from "react";
 import PortletCardHeaderControls from "./PortletCardHeaderControls";
 import PortletCardHeaderDetails from "./PortletCardHeaderDetails";
-import styles from "./PortletCardContainer.module.css";
+import styles from "./PortletCardHeader.module.css";
 
 interface PortletCardHeaderProps {
+  cardId: string;
   title: string;
   portletType: string;
   tagColor?: string;
   status?: "idle" | "loading" | "error" | "success" | "stale";
-  isCollapsed?: boolean;
-  isPinned?: boolean;
-  isLocked?: boolean;
-  onRefresh?: () => void;
-  onDelete?: () => void;
-  onShare?: () => void;
-  onLink?: () => void;
-  onToggleCollapse?: () => void;
-  onTogglePin?: () => void;
-  onToggleLock?: () => void;
+  isCollapsed: boolean;
+  isPinned: boolean;
+  isLocked: boolean;
+
+  onRefresh: () => void;
+  onDelete: () => void;
+  onShare: () => void;
+  onLink: () => void;
+  onToggleCollapse: () => void;
+  onTogglePin: () => void;
+  onToggleLock: () => void;
 }
 
-/**
- * PortletCardHeader
- * ------------------
- * Three-row header layout:
- * 1. Top row: Controls (Refresh, Share, Link, Pin, Lock, Collapse, Delete)
- * 2. Second row: Main title
- * 3. Third row: Portlet type, tags, group labels (if any)
- */
 const PortletCardHeader: React.FC<PortletCardHeaderProps> = ({
+  cardId,
   title,
   portletType,
   tagColor,
@@ -48,7 +43,7 @@ const PortletCardHeader: React.FC<PortletCardHeaderProps> = ({
 }) => {
   return (
     <div className={styles.cardHeader}>
-      {/* Row 1: Button controls */}
+      {/* Row 1: Controls */}
       <div className={styles.cardControls}>
         <PortletCardHeaderControls
           isCollapsed={isCollapsed}
@@ -63,13 +58,7 @@ const PortletCardHeader: React.FC<PortletCardHeaderProps> = ({
           onToggleLock={onToggleLock}
         />
       </div>
-
-      {/* Row 2: Main title */}
-      <div className={styles.cardTitleRow}>
-        <h3 className={styles.cardTitle}>{title}</h3>
-      </div>
-
-      {/* Row 3: Tags, type, status */}
+      {/* Row 3: Details */}
       <PortletCardHeaderDetails
         title={title}
         portletType={portletType}

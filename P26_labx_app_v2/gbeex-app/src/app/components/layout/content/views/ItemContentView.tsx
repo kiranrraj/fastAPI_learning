@@ -1,36 +1,61 @@
-// src/app/components/layout/content/views/ItemContentView.tsx
-
 import React from "react";
 import { PortletNode } from "@/app/types/common/portlet.types";
+import PortletCardContainer from "@/app/components/layout/cards/PortletCardContainer";
 
-/**
- * Props for ItemContentView
- */
 interface ItemContentViewProps {
   itemNode: PortletNode;
+
+  onRefresh?: (id: string) => void;
+  onDelete?: (id: string) => void;
+  onShare?: (id: string) => void;
+  onLink?: (id: string) => void;
+  onTogglePin?: (id: string, pinned: boolean) => void;
+  onToggleLock?: (id: string, locked: boolean) => void;
+  onCloseTab?: (id: string) => void;
 }
 
-/**
- * Renders the content for a single item node.
- * You can extend this with dynamic components later (e.g., maps, tables).
- */
-const ItemContentView: React.FC<ItemContentViewProps> = ({ itemNode }) => {
-  return (
-    <div className="p-4">
-      <h2 className="text-xl font-semibold">{itemNode.name}</h2>
-      <p className="text-sm text-gray-600">
-        Type: {itemNode.portletType || "unknown"}
-      </p>
+const ItemContentView: React.FC<ItemContentViewProps> = ({
+  itemNode,
+  onRefresh,
+  onDelete,
+  onShare,
+  onLink,
+  onTogglePin,
+  onToggleLock,
+  onCloseTab,
+}) => {
+  if (!itemNode) {
+    return <div>No item found.</div>;
+  }
 
-      <div className="mt-4 p-4 border rounded bg-gray-50">
-        {/* Placeholder for visualization */}
-        <p>
-          Render content of type:{" "}
-          <strong>{itemNode.portletType || "N/A"}</strong>
-        </p>
-        <p>This is where the actual table/map/chart will render.</p>
-      </div>
-    </div>
+  return (
+    <PortletCardContainer
+      cardId={itemNode.id}
+      title={itemNode.name}
+      portletType={itemNode.type}
+      tagColor={itemNode.tagColor}
+      status="idle"
+      lastUpdated={itemNode.lastUpdated}
+      isPinned={itemNode.pinned}
+      isLocked={itemNode.locked}
+      onRefresh={onRefresh}
+      onDelete={(id) => {
+        onDelete?.(id);
+        onCloseTab?.(id);
+      }}
+      onShare={onShare}
+      onLink={onLink}
+      onTogglePin={onTogglePin}
+      onToggleLock={onToggleLock}
+      footer={
+        <div style={{ fontSize: 12, color: "#666" }}>
+          Last updated: {itemNode.lastUpdated || "N/A"}
+        </div>
+      }
+    >
+      {/* Pass content as children */}
+      {JSON.stringify(itemNode)}
+    </PortletCardContainer>
   );
 };
 

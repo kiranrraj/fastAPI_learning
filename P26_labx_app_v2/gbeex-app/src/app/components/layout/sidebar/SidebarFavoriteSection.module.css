@@ -1,50 +1,110 @@
-/* src/app/components/sidebar/SidebarFavoriteSection.module.css */
+:root {
+  --fav-bg: #fef3c7;
+  --fav-border: #fbbf24;
+  --fav-text: #92400e;
+  --fav-hover-bg: #fde68a;
+  --fav-hover-text: #78350f;
 
-.section {
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  background: #f9f9f9;
-  padding: 8px;
+  --fav-icon-color: #ca8a04;
+
+  --fav-bg-dark: #78350f;
+  --fav-border-dark: #fbbf24;
+  --fav-text-dark: #fde68a;
+  --fav-hover-bg-dark: #92400e;
+  --fav-hover-text-dark: #fef3c7;
 }
 
-.header {
+@media (prefers-color-scheme: dark) {
+  :root {
+    --fav-bg: var(--fav-bg-dark);
+    --fav-border: var(--fav-border-dark);
+    --fav-text: var(--fav-text-dark);
+    --fav-hover-bg: var(--fav-hover-bg-dark);
+    --fav-hover-text: var(--fav-hover-text-dark);
+  }
+}
+
+.favoriteSectionWrapper {
+  background-color: var(--fav-bg);
+  border: 1.5px solid var(--fav-border);
+  border-radius: 10px;
+  padding: 0.75rem 1rem;
+  margin-bottom: 1rem;
+  color: var(--fav-text);
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+}
+
+.favoriteSectionWrapper:hover {
+  background-color: var(--fav-hover-bg);
+  color: var(--fav-hover-text);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
+}
+
+.favoriteItemsList {
+  margin-top: 0.5rem;
+  list-style: none;
+  padding-left: 0;
+  max-height: 240px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--fav-border) transparent;
+}
+
+.favoriteItemsList::-webkit-scrollbar {
+  width: 8px;
+}
+
+.favoriteItemsList::-webkit-scrollbar-thumb {
+  background-color: var(--fav-border);
+  border-radius: 8px;
+}
+
+.favoriteItem {
+  padding: 0.4rem 0.6rem;
+  margin-bottom: 0.25rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
   display: flex;
   align-items: center;
-  gap: 8px;
-  font-weight: bold;
-  cursor: pointer;
-  background: transparent;
-  border: none;
-  padding: 4px 0;
-  font-size: 15px;
+  gap: 0.5rem;
+  font-weight: 500;
+  color: var(--fav-text);
 }
 
-.chevron {
-  font-size: 14px;
-  width: 20px;
-  text-align: center;
+.favoriteItem:hover,
+.favoriteItem:focus-visible {
+  background-color: var(--fav-hover-bg);
+  color: var(--fav-hover-text);
+  outline: none;
 }
 
-.title {
-  flex: 1;
+.favoriteItem:focus-visible {
+  outline: 2px solid var(--fav-border);
+  outline-offset: 2px;
 }
 
-.list {
-  list-style: none;
-  padding: 0;
-  margin: 6px 0 0 0;
+/* Icon inside favorite item */
+.favoriteIcon {
+  color: var(--fav-icon-color);
+  flex-shrink: 0;
 }
 
-.item {
-  margin-bottom: 4px;
+/* Smooth fade-in animation for the section */
+@keyframes fadeInSection {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-.limitWarning {
-  margin-top: 8px;
-  background: #fff3cd;
-  color: #856404;
-  padding: 6px 10px;
-  border-radius: 4px;
-  font-size: 13px;
-  border: 1px solid #ffeeba;
+.favoriteSectionWrapper {
+  animation: fadeInSection 0.35s ease forwards;
 }

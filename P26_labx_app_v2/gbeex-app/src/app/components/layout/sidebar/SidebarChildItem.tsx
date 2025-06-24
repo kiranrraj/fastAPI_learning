@@ -20,9 +20,6 @@ const SidebarChildItem: React.FC<SidebarChildItemProps> = ({
 }) => {
   return (
     <div className={styles.childItemWrapper}>
-      <span className={styles.itemName} onClick={onItemClick}>
-        {highlightedName}
-      </span>
       <button
         className={styles.starButton}
         onClick={(e) => {
@@ -32,6 +29,9 @@ const SidebarChildItem: React.FC<SidebarChildItemProps> = ({
       >
         {isFavorite ? "★" : "☆"}
       </button>
+      <span className={styles.itemName} onClick={onItemClick}>
+        {highlightedName}
+      </span>
     </div>
   );
 };

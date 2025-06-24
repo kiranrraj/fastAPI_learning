@@ -1,0 +1,26 @@
+.popup {
+  position: absolute;
+  right: 100px;
+  bottom: 20px;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  margin: 10px 0;
+  color: #fff;
+}
+
+.info {
+  background-color: #2563eb;
+}
+
+.warning {
+  background-color: #f59e0b;
+}
+
+.error {
+  background-color: #dc2626;
+}
+
+.success {
+  background-color: #16a34a;
+}

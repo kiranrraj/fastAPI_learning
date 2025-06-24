@@ -1,41 +1,77 @@
-/* src/app/components/sidebar/SidebarChildItem.module.css */
+:root {
+  --sidebar-bg: #ffffff;
+  --sidebar-text: #374151;
+  --sidebar-hover-bg: #e5e7eb;
+  --sidebar-active-bg: #3b82f6;
+  --sidebar-active-text: #ffffff;
+  --sidebar-border: #d1d5db;
+
+  --focus-outline: #2563eb;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --sidebar-bg: #111827;
+    --sidebar-text: #d1d5db;
+    --sidebar-hover-bg: #374151;
+    --sidebar-active-bg: #2563eb;
+    --sidebar-active-text: #f9fafb;
+    --sidebar-border: #374151;
+
+    --focus-outline: #60a5fa;
+  }
+}
+
+/* Wrapper for child item */
+.childItemWrapper {
+  padding: 0.5rem 1.25rem;
+  margin: 0.15rem 0;
+  border-radius: 6px;
+  cursor: pointer;
+  background-color: var(--sidebar-bg);
+  color: var(--sidebar-text);
+  transition: background-color 0.25s ease, color 0.25s ease;
+  user-select: text;
+
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+}
+
+/* Hover & focus states */
+.childItemWrapper:hover,
+.childItemWrapper:focus-visible {
+  background-color: var(--sidebar-hover-bg);
+  color: var(--sidebar-active-bg);
+  outline: none;
+}
+
+/* Keyboard focus outline */
+.childItemWrapper:focus-visible {
+  outline: 2px solid var(--focus-outline);
+  outline-offset: 2px;
+}
+
+/* Active/selected child */
+.activeChildItem {
+  background-color: var(--sidebar-active-bg);
+  color: var(--sidebar-active-text);
+  font-weight: 600;
+}
+
+/* Fade-in animation on mount */
+@keyframes fadeInSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
 .childItemWrapper {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0.25rem 1rem;
-  font-size: 0.875rem;
-  color: #374151; /* text-gray-700 */
-  border-radius: 0.25rem;
-  transition: background-color 0.2s ease;
-}
-
-.childItemWrapper:hover {
-  background-color: #f3f4f6; /* hover:bg-gray-100 */
-}
-
-.itemName {
-  cursor: pointer;
-  text-decoration: underline transparent;
-  transition: text-decoration-color 0.2s ease;
-}
-
-.itemName:hover {
-  text-decoration-color: #2563eb; /* hover:underline text-blue-600 */
-  color: #2563eb;
-}
-
-.starButton {
-  margin-left: 0.5rem;
-  font-size: 0.875rem;
-  background: none;
-  border: none;
-  cursor: pointer;
-  color: #fbbf24; /* yellow-400 */
-  transition: color 0.2s ease;
-}
-
-.starButton:hover {
-  color: #f59e0b; /* yellow-500 */
+  animation: fadeInSlideUp 0.3s ease forwards;
 }

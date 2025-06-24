@@ -1,9 +1,50 @@
-/* src/app/components/sidebar/SidebarContentArea.module.css */
+/* SidebarContentArea.module.css */
 
-.container {
+.sidebarContentArea {
   flex: 1;
-  overflow: hidden;
-  padding: 0.5rem 0;
+  overflow-y: auto;
   background-color: var(--sidebar-bg);
   color: var(--sidebar-text);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.sidebarContentArea::-webkit-scrollbar {
+  width: 8px;
+}
+
+.sidebarContentArea::-webkit-scrollbar-thumb {
+  background-color: var(--border);
+  border-radius: 4px;
+}
+
+.sidebarContentArea:hover::-webkit-scrollbar-thumb {
+  background-color: var(--primary-color);
+}
+
+.noItemsMessage {
+  font-style: italic;
+  text-align: center;
+  color: var(--text-muted, #888);
+  margin-top: 2rem;
+  font-size: 0.9rem;
+}
+
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+  .sidebarContentArea {
+    background-color: var(--sidebar-bg);
+    color: var(--sidebar-text);
+  }
+
+  .sidebarContentArea::-webkit-scrollbar-thumb {
+    background-color: var(--border);
+  }
+
+  .sidebarContentArea:hover::-webkit-scrollbar-thumb {
+    background-color: var(--primary-hover);
+  }
+
+  .noItemsMessage {
+    color: var(--text-muted);
+  }
 }

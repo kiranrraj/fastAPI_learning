@@ -11,7 +11,11 @@ export interface PortletNode {
 
   parentIds: string[];                 // List of parent group IDs 
   childIds?: string[];                 // List of child node IDs (for group-type nodes)
-  group_ids?: string[];                // Legacy compatibility: group IDs assigned to this node
+  group_ids?: string[];                // group IDs assigned to this node
+  lastUpdated?: string;
+  pinned?: boolean;
+  locked?: boolean;
+  description?: string;
 
   tags?: string[];                     // Optional tags for categorization, filtering, or search
   portletType?: string;                // Type of visualization (table, chart, graph, map)

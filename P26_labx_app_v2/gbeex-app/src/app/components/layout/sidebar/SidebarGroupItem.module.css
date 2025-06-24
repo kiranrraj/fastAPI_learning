@@ -1,37 +1,113 @@
-/* src/app/components/sidebar/SidebarGroupItem.module.css */
+/* Base colors using CSS variables */
+:root {
+  --sidebar-bg: #ffffff;
+  --sidebar-text: #374151;
+  --sidebar-hover-bg: #e5e7eb;
+  --sidebar-active-bg: #3b82f6;
+  --sidebar-active-text: #ffffff;
+  --sidebar-border: #d1d5db;
 
-.groupItem {
-  display: flex;
-  align-items: center;
-  padding: 6px 10px;
-  cursor: pointer;
-  user-select: none;
+  --focus-outline: #2563eb;
+}
+
+/* Dark mode overrides */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --sidebar-bg: #111827;
+    --sidebar-text: #d1d5db;
+    --sidebar-hover-bg: #374151;
+    --sidebar-active-bg: #2563eb;
+    --sidebar-active-text: #f9fafb;
+    --sidebar-border: #374151;
+
+    --focus-outline: #60a5fa;
+  }
+}
+
+/* Wrapper for group item */
+.groupItemWrapper {
   background-color: var(--sidebar-bg);
   color: var(--sidebar-text);
-  transition: background-color 0.2s ease;
-  border-radius: 4px;
-}
-
-.groupItem:hover {
-  background-color: var(--border);
-}
-
-.chevron {
-  margin-right: 8px;
-  font-size: 12px;
-  background: none;
-  border: none;
+  padding: 0.75rem 1rem;
+  margin: 0.3rem 0;
+  border-radius: 8px;
+  border: 1px solid transparent;
   cursor: pointer;
-  color: inherit;
+  user-select: none;
+  display: flex;
+  flex-direction: column;
+
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease;
+  box-shadow: 0 0 4px transparent;
 }
 
-.groupName {
+/* Hover and focus */
+.groupItemWrapper:hover,
+.groupItemWrapper:focus-visible {
+  background-color: var(--sidebar-hover-bg);
+  border-color: var(--sidebar-border);
+  outline: none;
+  box-shadow: 0 0 8px var(--sidebar-active-bg);
+  color: var(--sidebar-active-bg);
+}
+
+/* Focus outline for keyboard nav */
+.groupItemWrapper:focus-visible {
+  outline: 2px solid var(--focus-outline);
+  outline-offset: 2px;
+}
+
+/* Active/selected group */
+.activeGroupItem {
+  background-color: var(--sidebar-active-bg);
+  color: var(--sidebar-active-text);
+  border-color: var(--sidebar-active-bg);
+  font-weight: 700;
+  box-shadow: 0 0 8px var(--sidebar-active-bg);
+}
+
+/* Group title text */
+.groupTitle {
+  font-size: 1.1rem;
   font-weight: 600;
-  font-size: 14px;
-  background: none;
-  border: none;
-  color: inherit;
-  cursor: pointer;
-  text-align: left;
+  line-height: 1.25;
+  user-select: text;
+}
+
+/* Children container with smooth expand/collapse */
+.groupChildren {
+  margin-top: 0.5rem;
+  padding-left: 1rem;
+  border-left: 2px solid var(--sidebar-border);
+  max-height: 1000px; /* large max-height for expand */
+  overflow: hidden;
+  transition: max-height 0.3s ease, opacity 0.3s ease;
+  opacity: 1;
+}
+
+/* Collapsed state */
+.groupChildrenCollapsed {
+  max-height: 0;
+  opacity: 0;
   padding: 0;
+  border: none;
+}
+
+/* Animation for entry */
+@keyframes slideFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.groupChildren {
+  animation: slideFadeIn 0.3s ease forwards;
 }

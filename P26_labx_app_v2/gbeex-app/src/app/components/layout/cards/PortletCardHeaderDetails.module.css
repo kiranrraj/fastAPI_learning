@@ -1,0 +1,40 @@
+.cardMetaRow {
+  display: flex;
+  position: relative;
+  align-items: center;
+  color: var(--card-meta-text, #555);
+  user-select: none;
+}
+
+.cardTitle{
+  margin: 0;
+  padding: 0;
+  padding-left: 20px;
+}
+
+.tagDot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+}
+
+.cardType {
+  font-weight: 600;
+  color: var(--card-type-text, #6b7280);
+  position: absolute;
+  right: 5px;
+  text-transform:capitalize;
+}
+
+@media (prefers-color-scheme: dark) {
+  .cardMetaRow {
+    color: var(--card-meta-text, #cbd5e1);
+  }
+  .cardType {
+    color: var(--card-type-text, #94a3b8);
+  }
+  .tagDot {
+    box-shadow: 0 0 4px rgba(255, 255, 255, 0.15);
+  }
+}

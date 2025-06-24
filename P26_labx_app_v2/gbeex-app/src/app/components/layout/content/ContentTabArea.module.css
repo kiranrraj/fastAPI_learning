@@ -1,0 +1,14 @@
+.noTabSelected {
+  padding: 16px;
+  color: var(--text-muted, #6b7280);
+  font-size: 1rem;
+  font-style: italic;
+}
+
+.groupViewWrapper {
+  padding: 16px;
+}
+
+.itemViewWrapper {
+  padding: 16px;
+}

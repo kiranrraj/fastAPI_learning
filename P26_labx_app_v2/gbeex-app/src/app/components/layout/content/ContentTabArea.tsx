@@ -1,11 +1,10 @@
-// src/app/components/layout/content/ContentTabArea.tsx
-
 "use client";
 
 import React from "react";
 import GroupContentView from "./views/GroupContentView";
 import ItemContentView from "./views/ItemContentView";
 import { PortletNode } from "@/app/types/common/portlet.types";
+import styles from "./ContentTabArea.module.css";
 
 interface ContentTabAreaProps {
   activeTab: PortletNode | undefined;
@@ -25,15 +24,23 @@ const ContentTabArea: React.FC<ContentTabAreaProps> = ({
   portletMap,
 }) => {
   if (!activeTab) {
-    return <div className="p-4 text-gray-600">No tab selected</div>;
+    return <div className={styles.noTabSelected}>No tab selected</div>;
   }
 
   if (activeTab.type === "group") {
-    return <GroupContentView groupNode={activeTab} allNodes={portletMap} />;
+    return (
+      <div className={styles.groupViewWrapper}>
+        <GroupContentView groupNode={activeTab} allNodes={portletMap} />
+      </div>
+    );
   }
 
   if (activeTab.type === "item") {
-    return <ItemContentView itemNode={activeTab} />;
+    return (
+      <div className={styles.itemViewWrapper}>
+        <ItemContentView itemNode={activeTab} />
+      </div>
+    );
   }
 
   return null;

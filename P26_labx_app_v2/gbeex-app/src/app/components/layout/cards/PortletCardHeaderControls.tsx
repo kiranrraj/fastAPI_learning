@@ -1,7 +1,12 @@
 // src/app/components/layout/cards/PortletCardHeaderControls.tsx
 
+/**
+ * PortletCardHeaderControls
+ * Buttons: Refresh, Share, Link, Pin/Unpin, Lock/Unlock, Collapse/Expand, Delete
+ */
+
 import React from "react";
-import styles from "./PortletCardContainer.module.css";
+import styles from "./PortletCardHeaderControls.module.css";
 
 interface PortletCardHeaderControlsProps {
   isCollapsed?: boolean;
@@ -16,12 +21,6 @@ interface PortletCardHeaderControlsProps {
   onToggleLock?: () => void;
 }
 
-/**
- * PortletCardHeaderControls
- * ---------------------------
- * Row 1: Top row of all control buttons in order.
- * Buttons: Refresh, Share, Link, Pin/Unpin, Lock/Unlock, Collapse/Expand, Delete
- */
 const PortletCardHeaderControls: React.FC<PortletCardHeaderControlsProps> = ({
   isCollapsed,
   isPinned,
@@ -35,7 +34,7 @@ const PortletCardHeaderControls: React.FC<PortletCardHeaderControlsProps> = ({
   onToggleLock,
 }) => {
   return (
-    <>
+    <div className={styles.buttonGroup}>
       <button className={styles.controlButton} onClick={onRefresh}>
         Refresh
       </button>
@@ -61,7 +60,7 @@ const PortletCardHeaderControls: React.FC<PortletCardHeaderControlsProps> = ({
       >
         Delete
       </button>
-    </>
+    </div>
   );
 };
 

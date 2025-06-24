@@ -1,10 +1,15 @@
-// src/app/components/layout/cards/PortletCardContainer.tsx
-
 import React, { useEffect, useState } from "react";
 import PortletCardHeader from "./PortletCardHeader";
 import PortletCardFooter from "./PortletCardFooter";
-import styles from "./PortletCardContainer.module.css";
 import PortletCardContent from "./PortletCardContent";
+import styles from "./PortletCardContainer.module.css";
+
+import { handleRefresh } from "@/app/utils/cards/handlers/handleRefresh";
+import { handleDelete } from "@/app/utils/cards/handlers/handleDelete";
+import { handleShare } from "@/app/utils/cards/handlers/handleShare";
+import { handleLink } from "@/app/utils/cards/handlers/handleLink";
+import { handlePin } from "@/app/utils/cards/handlers/handlePin";
+import { handleLock } from "@/app/utils/cards/handlers/handleLock";
 
 interface PortletCardContainerProps {
   cardId: string;
@@ -27,15 +32,6 @@ interface PortletCardContainerProps {
   footer?: React.ReactNode;
 }
 
-/**
- * PortletCardContainer Component
- * ---------------------------------
- * This is the main container for each portlet card.
- * It renders:
- *  - Header (with all control handlers)
- *  - Collapsible body section (children content)
- *  - Optional footer (last updated info or extra nodes)
- */
 const PortletCardContainer: React.FC<PortletCardContainerProps> = ({
   cardId,
   title,
@@ -54,57 +50,45 @@ const PortletCardContainer: React.FC<PortletCardContainerProps> = ({
   children,
   footer,
 }) => {
-  // State to toggle collapse/expand content
   const [isCollapsed, setIsCollapsed] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [pinned, setPinned] = useState(isPinned);
+  const [locked, setLocked] = useState(isLocked);
+  const [deleted, setDeleted] = useState(false);
 
-  // Collapse toggle handler
-  const handleCollapseToggle = () => setIsCollapsed((prev) => !prev);
+  useEffect(() => setLocked(isLocked), [isLocked]);
+  useEffect(() => setPinned(isPinned), [isPinned]);
 
-  //========== DEBUGGING SECTION ==========
-  //   useEffect(() => {
-  //     console.groupCollapsed(
-  //       `[PortletCardContainer] Props for cardId: ${cardId}`
-  //     );
-  //     console.log("  title:", title);
-  //     console.log("  portletType:", portletType);
-  //     console.log("  tagColor:", tagColor);
-  //     console.log("  status:", status);
-  //     console.log("  lastUpdated:", lastUpdated);
-  //     console.log("  isPinned:", isPinned);
-  //     console.log("  isLocked:", isLocked);
-  //     console.log("  children (raw JSX):", children);
-  //     console.log("  footer (raw JSX):", footer);
-  //     console.groupEnd();
-  //   }, [cardId]);
+  if (deleted) return null;
 
   return (
     <div className={styles.cardWrapper} data-testid={`card-${cardId}`}>
-      {/* === HEADER === */}
       <PortletCardHeader
+        cardId={cardId}
         title={title}
         portletType={portletType}
         tagColor={tagColor}
-        status={status}
+        status={loading ? "loading" : status}
         isCollapsed={isCollapsed}
-        isPinned={isPinned}
-        isLocked={isLocked}
-        onRefresh={() => onRefresh?.(cardId)}
-        onDelete={() => onDelete?.(cardId)}
-        onShare={() => onShare?.(cardId)}
-        onLink={() => onLink?.(cardId)}
-        onToggleCollapse={handleCollapseToggle}
-        onTogglePin={() => onTogglePin?.(cardId, !isPinned)}
-        onToggleLock={() => onToggleLock?.(cardId, !isLocked)}
+        isPinned={pinned}
+        isLocked={locked}
+        onRefresh={() =>
+          !locked && handleRefresh(cardId, setLoading, onRefresh)
+        }
+        onDelete={() => !locked && handleDelete(cardId, setDeleted, onDelete)}
+        onShare={() => !locked && handleShare(cardId, onShare)}
+        onLink={() => !locked && handleLink(cardId, onLink)}
+        onToggleCollapse={() => setIsCollapsed((prev) => !prev)}
+        onTogglePin={() => handlePin(cardId, pinned, setPinned, onTogglePin)}
+        onToggleLock={() => handleLock(cardId, locked, setLocked, onToggleLock)}
       />
 
-      {/* === BODY === */}
       {!isCollapsed && (
         <PortletCardContent>
           <div data-testid={`card-content-${cardId}`}>{children}</div>
         </PortletCardContent>
       )}
 
-      {/* === FOOTER === */}
       <PortletCardFooter lastUpdated={lastUpdated}>{footer}</PortletCardFooter>
     </div>
   );

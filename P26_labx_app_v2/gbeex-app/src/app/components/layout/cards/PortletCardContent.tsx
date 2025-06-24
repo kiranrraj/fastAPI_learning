@@ -1,19 +1,18 @@
 // src/app/components/layout/cards/PortletCardContent.tsx
 
+/**
+ * PortletCardContent
+ * Renders the inner content of a portlet card, receives children and displays
+ * them within a styled wrapper, used inside PortletCardContainer.
+ */
+
 import React from "react";
-import styles from "./PortletCardContainer.module.css";
+import styles from "./PortletCardContent.module.css";
 
 interface PortletCardContentProps {
   children: React.ReactNode;
 }
 
-/**
- * PortletCardContent
- * -------------------
- * This component renders the inner content of a portlet card.
- * It receives children and displays them within a styled wrapper.
- * Used inside PortletCardContainer.
- */
 const PortletCardContent: React.FC<PortletCardContentProps> = ({
   children,
 }) => {

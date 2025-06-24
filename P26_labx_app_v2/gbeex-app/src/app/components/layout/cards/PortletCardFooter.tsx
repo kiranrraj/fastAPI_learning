@@ -1,20 +1,13 @@
 // src/app/components/layout/cards/PortletCardFooter.tsx
 
 import React from "react";
-import styles from "./PortletCardContainer.module.css";
+import styles from "./PortletCardFooter.module.css";
 
 interface PortletCardFooterProps {
   lastUpdated?: string;
   children?: React.ReactNode;
 }
 
-/**
- * PortletCardFooter
- * -------------------
- * Footer section of the card.
- * - Shows last updated time
- * - Optional slot for additional footer controls
- */
 const PortletCardFooter: React.FC<PortletCardFooterProps> = ({
   lastUpdated,
   children,
@@ -26,7 +19,7 @@ const PortletCardFooter: React.FC<PortletCardFooterProps> = ({
         {lastUpdated ? `Last updated: ${lastUpdated}` : ""}
       </div>
 
-      {/* Right side: optional controls (e.g. download, save) */}
+      {/* Right side: optional controls */}
       <div className={styles.footerControls}>{children}</div>
     </div>
   );

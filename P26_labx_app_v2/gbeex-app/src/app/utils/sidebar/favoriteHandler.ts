@@ -5,9 +5,9 @@ export const MAX_FAVORITES = 5;
 /**
  * Toggles favorite state with a limit.
  *
- * @param currentFavorites Current favorite state object
- * @param itemId Item to toggle
- * @returns Updated favorites and optional warning
+ * @param currentFavorites - Current favorite state map
+ * @param itemId - ID of the item being toggled
+ * @returns Updated state + optional warning info
  */
 export function handleFavoriteToggleWithLimit(
     currentFavorites: Record<string, boolean>,
@@ -16,11 +16,12 @@ export function handleFavoriteToggleWithLimit(
     updatedFavorites: Record<string, boolean>;
     showLimitWarning: boolean;
     disableFurther: boolean;
+    message?: string;
 } {
     const isCurrentlyFav = !!currentFavorites[itemId];
     const activeCount = Object.values(currentFavorites).filter(Boolean).length;
 
-    // If already favorite, allow un-favoriting
+    // Case: Unfavorite
     if (isCurrentlyFav) {
         const { [itemId]: _, ...rest } = currentFavorites;
         return {
@@ -30,16 +31,17 @@ export function handleFavoriteToggleWithLimit(
         };
     }
 
-    // Prevent adding more if at max
+    // Case: Max limit reached
     if (activeCount >= MAX_FAVORITES) {
         return {
             updatedFavorites: currentFavorites,
             showLimitWarning: true,
             disableFurther: true,
+            message: `You can only select up to ${MAX_FAVORITES} favorites.`,
         };
     }
 
-    // Otherwise, add to favorites
+    // Case: Add to favorites
     return {
         updatedFavorites: { ...currentFavorites, [itemId]: true },
         showLimitWarning: false,
