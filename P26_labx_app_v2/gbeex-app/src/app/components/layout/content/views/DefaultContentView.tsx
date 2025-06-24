@@ -7,6 +7,7 @@ import { PortletNode } from "@/app/types/common/portlet.types";
 import PortletCardContainer from "../../cards/PortletCardContainer";
 import PortletCardContent from "../../cards/PortletCardContent";
 import styles from "./DefaultContentView.module.css";
+import { getChildItemsForGroup } from "@/app/utils/common/getChildItemsForGroup";
 
 interface DefaultContentViewProps {
   portletData: PortletNode[];
@@ -15,31 +16,21 @@ interface DefaultContentViewProps {
 /**
  * DefaultContentView
  * -------------------
- * Renders all group-type portlets as cards, with child item names.
- * This view is only shown when no other tab is selected.
+ * Displays all group-type portlets as cards.
+ * Each card shows the items that belong to that group.
  */
 const DefaultContentView: React.FC<DefaultContentViewProps> = ({
   portletData,
 }) => {
-  // Get all group-type nodes
   const groupNodes = portletData.filter((node) => node.type === "group");
+  const portletMap = Object.fromEntries(portletData.map((n) => [n.id, n]));
 
   return (
     <div className={styles.wrapper}>
       <h1 className={styles.heading}>Dashboard</h1>
 
-      {/* Render each group and its children in a card */}
       {groupNodes.map((group) => {
-        // Get children using group_ids if present, otherwise fall back to parentIds
-        const childItems = portletData.filter((item) => {
-          if (item.type !== "item") return false;
-
-          const belongsToGroup =
-            item.group_ids?.includes(group.id) ||
-            item.parentIds?.includes(group.id);
-
-          return belongsToGroup;
-        });
+        const childItems = getChildItemsForGroup(group.id, portletMap);
 
         return (
           <PortletCardContainer

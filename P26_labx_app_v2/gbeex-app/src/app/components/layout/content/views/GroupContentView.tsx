@@ -2,43 +2,26 @@
 
 import React from "react";
 import { PortletNode } from "@/app/types/common/portlet.types";
-import styles from "./GroupContentView.module.css"; // CSS module for styling
+import styles from "./GroupContentView.module.css";
+import { getChildItemsForGroup } from "@/app/utils/common/getChildItemsForGroup";
 
-/**
- * Props for GroupContentView
- */
 interface GroupContentViewProps {
   groupNode: PortletNode;
   allNodes: Record<string, PortletNode>;
-  isDefaultTab?: boolean; // If true, fallback logic will be used for children
+  isDefaultTab?: boolean;
 }
 
 /**
  * GroupContentView
  * -----------------
- * Renders a group portlet and its children.
- * If `isDefaultTab` is true, child items are resolved dynamically.
+ * Displays a single group's content and its children.
+ * Uses shared utility to resolve children reliably.
  */
 const GroupContentView: React.FC<GroupContentViewProps> = ({
   groupNode,
   allNodes,
-  isDefaultTab = false,
 }) => {
-  let childNodes: PortletNode[] = [];
-
-  // Use fallback if this is being rendered in the default tab
-  if (isDefaultTab) {
-    childNodes = Object.values(allNodes).filter(
-      (node) =>
-        node.type === "item" &&
-        (node.group_ids?.includes(groupNode.id) ||
-          node.parentIds?.includes(groupNode.id))
-    );
-  } else if (groupNode.childIds?.length) {
-    childNodes = groupNode.childIds
-      .map((id) => allNodes[id])
-      .filter((node): node is PortletNode => !!node);
-  }
+  const childNodes = getChildItemsForGroup(groupNode.id, allNodes);
 
   return (
     <div className={styles.wrapper}>
