@@ -1,5 +1,3 @@
-// src/app/components/layout/base/MainSection.tsx
-
 "use client";
 
 import React, { useEffect, useMemo, useState } from "react";
@@ -9,24 +7,38 @@ import ContentArea from "@/app/components/layout/content/ContentArea";
 import useAPICall from "@/app/hooks/useAPICall";
 import { transformToPortletNodes } from "@/app/utils/transform/transformToPortletNodes";
 import { PortletNode } from "@/app/types/common/portlet.types";
+import Spinner from "@/app/components/layout/base/Spinner";
+import ErrorView from "@/app/components/layout/base/ErrorView";
 
 /**
  * MainSection
- * --------------------
- * This is the core layout manager for:
- * - Fetching portlet data
- * - Opening/closing tabs
- * - Initializing default tab
- * - Handling active tab logic and restoration
+ * -----------
+ * Core layout component managing:
+ * - API data fetching and transformation
+ * - Tab management (open, close, restore)
+ * - Active tab state
+ * - Displaying loading, error, or main content states
+ *
+ * Debugging:
+ * - Use console.groupCollapsed logs for props and state insights (can be toggled on/off)
  */
 const MainSection: React.FC = () => {
+  // Local state for portlet nodes fetched and transformed from API
   const [portletData, setPortletData] = useState<PortletNode[]>([]);
+
+  // Tabs open in the content area, keyed by node ID
   const [tabs, setTabs] = useState<Record<string, PortletNode>>({});
+
+  // Order of tabs for consistent display
   const [tabOrder, setTabOrder] = useState<string[]>([]);
+
+  // Stack for recently closed tabs to support restoration
   const [closedTabsStack, setClosedTabsStack] = useState<PortletNode[]>([]);
+
+  // Currently active tab ID
   const [activeTabId, setActiveTabId] = useState<string>("");
 
-  // API payload for loading all groups with children
+  // API request payload - fetch groups with children, limited for demo
   const payload = useMemo(
     () => ({
       params: [{ include_children: true, limit: 10, skip: 0 }],
@@ -34,13 +46,14 @@ const MainSection: React.FC = () => {
     []
   );
 
+  // Use custom hook to POST and fetch data
   const { data, loading, error } = useAPICall(
     "http://localhost:8000/labx/entity/InvestigationGroup/list",
     payload,
     []
   );
 
-  // Define default tab (acts as a dashboard)
+  // Default tab representing the dashboard / default view
   const defaultTabNode: PortletNode = {
     id: "__default__",
     name: "Dashboard",
@@ -51,13 +64,14 @@ const MainSection: React.FC = () => {
     },
   };
 
-  // Load and transform API data
+  // Effect: On receiving data, transform and initialize tabs
   useEffect(() => {
     if (data) {
+      // Transform API raw data into PortletNode format
       const transformed = transformToPortletNodes(data);
       setPortletData(transformed);
 
-      // On first load, initialize default tab if none is open
+      // Add default tab if not already present
       setTabs((prev) => {
         if (!prev["__default__"]) {
           return { ...prev, ["__default__"]: defaultTabNode };
@@ -65,6 +79,7 @@ const MainSection: React.FC = () => {
         return prev;
       });
 
+      // Add default tab to order if not present
       setTabOrder((prev) => {
         if (!prev.includes("__default__")) {
           return [...prev, "__default__"];
@@ -72,27 +87,38 @@ const MainSection: React.FC = () => {
         return prev;
       });
 
+      // Set active tab to default if none selected
       setActiveTabId((prev) => prev || "__default__");
     }
   }, [data]);
 
+  // Debugging: Log key states when they change
+  useEffect(() => {
+    // Comment this out to disable debug logs
+    console.groupCollapsed("[MainSection Debug]");
+    console.log("portletData:", portletData);
+    console.log("tabs:", tabs);
+    console.log("tabOrder:", tabOrder);
+    console.log("activeTabId:", activeTabId);
+    console.groupEnd();
+  }, [portletData, tabs, tabOrder, activeTabId]);
+
   /**
-   * Open a new tab or focus if already open
+   * Open a new tab or focus existing tab
+   * - Removes default tab if present to focus user on specific content
    */
-  /** Open a new tab and auto-remove the default tab if active */
   const openTab = (node: PortletNode) => {
-    // Update tabs
     setTabs((prev) => {
-      // If already open, just focus it
+      // If tab already open, just focus it
       if (prev[node.id]) {
         setActiveTabId(node.id);
         return prev;
       }
 
-      // Clone existing tabs and add the new one
+      // Clone tabs and add new tab
       const updatedTabs = { ...prev, [node.id]: node };
 
-      // Auto-close the default tab if it's open
+      // Remove default tab if present to avoid clutter
       if (prev["__default__"]) {
         delete updatedTabs["__default__"];
       }
@@ -100,18 +126,21 @@ const MainSection: React.FC = () => {
       return updatedTabs;
     });
 
-    // Update tab order
     setTabOrder((prev) => {
-      const newOrder = prev.filter((id) => id !== "__default__");
-      return newOrder.includes(node.id) ? newOrder : [...newOrder, node.id];
+      // Remove default tab id from order
+      const filtered = prev.filter((id) => id !== "__default__");
+      return filtered.includes(node.id) ? filtered : [...filtered, node.id];
     });
 
-    // Set active tab to the new one
+    // Set newly opened tab as active
     setActiveTabId(node.id);
   };
 
   /**
-   * Close a tab and optionally switch focus
+   * Close a tab
+   * - Removes tab from open tabs
+   * - Pushes closed tab to stack for potential restoration
+   * - Updates active tab appropriately
    */
   const closeTab = (tabId: string) => {
     setTabs((prev) => {
@@ -128,7 +157,7 @@ const MainSection: React.FC = () => {
 
     setTabOrder((prev) => prev.filter((id) => id !== tabId));
 
-    // Adjust focus to last tab in order or empty
+    // Focus fallback: last tab in order or empty string if none
     setActiveTabId((prevActive) =>
       prevActive === tabId
         ? tabOrder.filter((id) => id !== tabId).slice(-1)[0] || ""
@@ -137,25 +166,49 @@ const MainSection: React.FC = () => {
   };
 
   /**
-   * Restore the most recently closed tab
+   * Restore the last closed tab from the stack
    */
   const restoreLastClosedTab = () => {
     if (closedTabsStack.length === 0) return;
+
     const [lastClosed, ...rest] = closedTabsStack;
     setClosedTabsStack(rest);
     openTab(lastClosed);
   };
 
-  // Fallback states
-  if (loading) return <div className={styles.mainSection}>Loading...</div>;
-  if (error) return <div className={styles.mainSection}>Error: {error}</div>;
+  // Render loading spinner inside main section
+  if (loading) {
+    return (
+      <main className={styles.mainSection}>
+        <div className={styles.loadingWrapper} aria-label="Loading content">
+          <Spinner />
+        </div>
+      </main>
+    );
+  }
 
+  // Render error view on API failure
+  if (error) {
+    return (
+      <main className={styles.mainSection}>
+        <ErrorView
+          message={error.message || String(error)}
+          onRetry={() => window.location.reload()}
+        />
+      </main>
+    );
+  }
+
+  // Main render
   return (
     <main className={styles.mainSection}>
-      <div className={styles.sidebar}>
+      {/* Sidebar panel */}
+      <section className={styles.sidebar}>
         <SidebarContainer portletData={portletData} onItemClick={openTab} />
-      </div>
-      <div className={styles.content}>
+      </section>
+
+      {/* Content panel */}
+      <section className={styles.content}>
         <ContentArea
           tabs={Object.fromEntries(tabOrder.map((id) => [id, tabs[id]]))}
           activeTabId={activeTabId}
@@ -164,7 +217,7 @@ const MainSection: React.FC = () => {
           onTabClick={setActiveTabId}
           onRestoreLastTab={restoreLastClosedTab}
         />
-      </div>
+      </section>
     </main>
   );
 };

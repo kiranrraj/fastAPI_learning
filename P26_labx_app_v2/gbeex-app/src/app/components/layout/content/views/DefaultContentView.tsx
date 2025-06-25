@@ -10,13 +10,16 @@ interface DefaultContentViewProps {
 const DefaultContentView: React.FC<DefaultContentViewProps> = ({
   portletData,
 }) => {
+  // Filter only group type portlets for default view
+  const groupPortlets = portletData.filter((node) => node.type === "group");
+
   return (
     <div className={styles.wrapper}>
       <h2 className={styles.title}>Default View</h2>
-      {portletData.length === 0 ? (
-        <p className={styles.emptyMessage}>No portlets available.</p>
+      {groupPortlets.length === 0 ? (
+        <p className={styles.emptyMessage}>No groups available.</p>
       ) : (
-        <PortletCardListView items={portletData} />
+        <PortletCardListView items={groupPortlets} />
       )}
     </div>
   );

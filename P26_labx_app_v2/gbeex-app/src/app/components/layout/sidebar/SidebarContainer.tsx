@@ -1,4 +1,4 @@
-// src/app/components/layout/sidebar/SidebarContainer.tsx
+"use client";
 
 import React, { useState, useMemo } from "react";
 import { PortletNode } from "@/app/types/common/portlet.types";
@@ -23,6 +23,7 @@ const SidebarContainer: React.FC<SidebarContainerProps> = ({
   const [expandAllCounter, setExpandAllCounter] = useState(0);
   const [collapseAllCounter, setCollapseAllCounter] = useState(0);
   const [favorites, setFavorites] = useState<Record<string, boolean>>({});
+  const [showFavLimitPopup, setShowFavLimitPopup] = useState(false);
 
   const handleToggleSortOrder = () => {
     setSortOrder((prev) => (prev === "asc" ? "desc" : "asc"));
@@ -36,9 +37,12 @@ const SidebarContainer: React.FC<SidebarContainerProps> = ({
     setCollapseAllCounter((prev) => prev + 1);
   };
 
+  // Updated toggle favorite handler that manages popup visibility
   const handleToggleFavorite = (id: string) => {
-    const { updatedFavorites } = handleFavoriteToggleWithLimit(favorites, id);
+    const { updatedFavorites, showLimitWarning } =
+      handleFavoriteToggleWithLimit(favorites, id);
     setFavorites(updatedFavorites);
+    setShowFavLimitPopup(showLimitWarning);
   };
 
   const { filteredNodes, autoExpandedGroups } = useMemo(() => {
@@ -77,6 +81,8 @@ const SidebarContainer: React.FC<SidebarContainerProps> = ({
         onToggleFavorite={handleToggleFavorite}
         onItemClick={onItemClick}
         highlight={(name) => name}
+        showFavLimitPopup={showFavLimitPopup}
+        setShowFavLimitPopup={setShowFavLimitPopup}
       />
 
       <SidebarContentArea
