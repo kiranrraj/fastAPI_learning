@@ -18,7 +18,6 @@ const AppShell: React.FC = () => {
     <div className={styles.appShell}>
       <Header />
       <MainSection />
-      <Footer />
     </div>
   );
 };

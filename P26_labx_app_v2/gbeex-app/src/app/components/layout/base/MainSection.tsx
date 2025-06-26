@@ -1,3 +1,5 @@
+// src/app/components/layout/base/MainSection.tsx
+
 "use client";
 
 import React, { useEffect, useMemo, useState } from "react";
@@ -8,7 +10,7 @@ import useAPICall from "@/app/hooks/useAPICall";
 import { transformToPortletNodes } from "@/app/utils/transform/transformToPortletNodes";
 import { PortletNode } from "@/app/types/common/portlet.types";
 import Spinner from "@/app/components/layout/base/Spinner";
-import ErrorView from "@/app/components/layout/base/ErrorView";
+import Footer from "@/app/components/layout/base/Footer";
 
 /**
  * MainSection
@@ -18,12 +20,10 @@ import ErrorView from "@/app/components/layout/base/ErrorView";
  * - Tab management (open, close, restore)
  * - Active tab state
  * - Displaying loading, error, or main content states
- *
- * Debugging:
- * - Use console.groupCollapsed logs for props and state insights (can be toggled on/off)
+ * - Server status and last refresh tracking
  */
 const MainSection: React.FC = () => {
-  // Local state for portlet nodes fetched and transformed from API
+  // State: raw portlet data after API and transform
   const [portletData, setPortletData] = useState<PortletNode[]>([]);
 
   // Tabs open in the content area, keyed by node ID
@@ -38,6 +38,14 @@ const MainSection: React.FC = () => {
   // Currently active tab ID
   const [activeTabId, setActiveTabId] = useState<string>("");
 
+  // Timestamp for last successful data refresh
+  const [lastRefresh, setLastRefresh] = useState<number | undefined>(undefined);
+
+  // Server status indicator: 'online', 'offline', or 'unknown'
+  const [serverStatus, setServerStatus] = useState<
+    "online" | "offline" | "unknown"
+  >("unknown");
+
   // API request payload - fetch groups with children, limited for demo
   const payload = useMemo(
     () => ({
@@ -46,8 +54,8 @@ const MainSection: React.FC = () => {
     []
   );
 
-  // Use custom hook to POST and fetch data
-  const { data, loading, error } = useAPICall(
+  // Custom hook to POST and fetch data
+  const { data, loading, error, refresh } = useAPICall(
     "http://localhost:8000/labx/entity/InvestigationGroup/list",
     payload,
     []
@@ -64,14 +72,12 @@ const MainSection: React.FC = () => {
     },
   };
 
-  // Effect: On receiving data, transform and initialize tabs
+  // Effect: On receiving data, transform and initialize tabs & update status
   useEffect(() => {
     if (data) {
-      // Transform API raw data into PortletNode format
       const transformed = transformToPortletNodes(data);
       setPortletData(transformed);
 
-      // Add default tab if not already present
       setTabs((prev) => {
         if (!prev["__default__"]) {
           return { ...prev, ["__default__"]: defaultTabNode };
@@ -79,7 +85,6 @@ const MainSection: React.FC = () => {
         return prev;
       });
 
-      // Add default tab to order if not present
       setTabOrder((prev) => {
         if (!prev.includes("__default__")) {
           return [...prev, "__default__"];
@@ -87,38 +92,37 @@ const MainSection: React.FC = () => {
         return prev;
       });
 
-      // Set active tab to default if none selected
       setActiveTabId((prev) => prev || "__default__");
-    }
-  }, [data]);
 
-  // Debugging: Log key states when they change
+      setLastRefresh(Date.now());
+      setServerStatus("online");
+    }
+    if (error) {
+      setServerStatus("offline");
+    }
+  }, [data, error]);
+
+  // Debugging logs - comment out to disable
   useEffect(() => {
-    // Comment this out to disable debug logs
     console.groupCollapsed("[MainSection Debug]");
     console.log("portletData:", portletData);
     console.log("tabs:", tabs);
     console.log("tabOrder:", tabOrder);
     console.log("activeTabId:", activeTabId);
+    console.log("serverStatus:", serverStatus);
     console.groupEnd();
-  }, [portletData, tabs, tabOrder, activeTabId]);
+  }, [portletData, tabs, tabOrder, activeTabId, serverStatus]);
 
-  /**
-   * Open a new tab or focus existing tab
-   * - Removes default tab if present to focus user on specific content
-   */
+  // Opens a new tab or focuses existing, removing default tab if needed
   const openTab = (node: PortletNode) => {
     setTabs((prev) => {
-      // If tab already open, just focus it
       if (prev[node.id]) {
         setActiveTabId(node.id);
         return prev;
       }
 
-      // Clone tabs and add new tab
       const updatedTabs = { ...prev, [node.id]: node };
 
-      // Remove default tab if present to avoid clutter
       if (prev["__default__"]) {
         delete updatedTabs["__default__"];
       }
@@ -127,21 +131,14 @@ const MainSection: React.FC = () => {
     });
 
     setTabOrder((prev) => {
-      // Remove default tab id from order
       const filtered = prev.filter((id) => id !== "__default__");
       return filtered.includes(node.id) ? filtered : [...filtered, node.id];
     });
 
-    // Set newly opened tab as active
     setActiveTabId(node.id);
   };
 
-  /**
-   * Close a tab
-   * - Removes tab from open tabs
-   * - Pushes closed tab to stack for potential restoration
-   * - Updates active tab appropriately
-   */
+  // Close a tab, update stack, and focus fallback tab
   const closeTab = (tabId: string) => {
     setTabs((prev) => {
       const updated = { ...prev };
@@ -157,7 +154,6 @@ const MainSection: React.FC = () => {
 
     setTabOrder((prev) => prev.filter((id) => id !== tabId));
 
-    // Focus fallback: last tab in order or empty string if none
     setActiveTabId((prevActive) =>
       prevActive === tabId
         ? tabOrder.filter((id) => id !== tabId).slice(-1)[0] || ""
@@ -165,18 +161,21 @@ const MainSection: React.FC = () => {
     );
   };
 
-  /**
-   * Restore the last closed tab from the stack
-   */
+  // Restore the most recently closed tab
   const restoreLastClosedTab = () => {
     if (closedTabsStack.length === 0) return;
-
     const [lastClosed, ...rest] = closedTabsStack;
     setClosedTabsStack(rest);
     openTab(lastClosed);
   };
 
-  // Render loading spinner inside main section
+  // Manual refresh handler - calls refetch from useAPICall
+  const handleManualRefresh = () => {
+    setServerStatus("unknown");
+    refresh?.();
+  };
+
+  // Loading state with spinner
   if (loading) {
     return (
       <main className={styles.mainSection}>
@@ -187,38 +186,46 @@ const MainSection: React.FC = () => {
     );
   }
 
-  // Render error view on API failure
+  // Error state with message and retry button
   if (error) {
     return (
       <main className={styles.mainSection}>
-        <ErrorView
-          message={error.message || String(error)}
-          onRetry={() => window.location.reload()}
-        />
+        <div className={styles.errorMessage} role="alert">
+          Error loading data: {error.message || String(error)}
+          <button onClick={handleManualRefresh} className={styles.retryButton}>
+            Retry
+          </button>
+        </div>
       </main>
     );
   }
 
   // Main render
   return (
-    <main className={styles.mainSection}>
-      {/* Sidebar panel */}
-      <section className={styles.sidebar}>
-        <SidebarContainer portletData={portletData} onItemClick={openTab} />
-      </section>
+    <>
+      <main className={styles.mainSection}>
+        {/* Sidebar panel with manual refresh button */}
+        <section className={styles.sidebar}>
+          <SidebarContainer onItemClick={openTab} />
+        </section>
 
-      {/* Content panel */}
-      <section className={styles.content}>
-        <ContentArea
-          tabs={Object.fromEntries(tabOrder.map((id) => [id, tabs[id]]))}
-          activeTabId={activeTabId}
-          portletData={portletData}
-          onCloseTab={closeTab}
-          onTabClick={setActiveTabId}
-          onRestoreLastTab={restoreLastClosedTab}
-        />
-      </section>
-    </main>
+        {/* Content panel */}
+        <section className={styles.content}>
+          <h2 className={styles.visuallyHidden}>Content Area</h2>
+          <ContentArea
+            tabs={Object.fromEntries(tabOrder.map((id) => [id, tabs[id]]))}
+            activeTabId={activeTabId}
+            portletData={portletData}
+            onCloseTab={closeTab}
+            onTabClick={setActiveTabId}
+            onRestoreLastTab={restoreLastClosedTab}
+          />
+        </section>
+      </main>
+
+      {/* Footer with last refresh and server status */}
+      <Footer lastRefreshTimestamp={lastRefresh} serverStatus={serverStatus} />
+    </>
   );
 };
 

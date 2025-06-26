@@ -21,3 +21,14 @@
 .controlButton:hover {
   background-color: #e5e7eb;
 }
+
+.spin {
+  animation: spin 1s linear infinite;
+  display: inline-block;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}

@@ -1,25 +1,4 @@
-// src/app/hooks/useAPICall.ts
-
-import { useEffect, useState } from "react";
-
-/**
- * Hook: useAPICall
- * ----------------
- * A reusable hook to POST data to any API endpoint and retrieve results.
- *
- * INPUT:
- * - url: string - the API endpoint to call (e.g. http://localhost:8000/...)
- * - payload: any - body data to POST (will be stringified)
- * - dependencies: any[] - dependency array to re-trigger the API call
- *
- * OUTPUT:
- * - data: any - response data from the API
- * - loading: boolean - true while the request is in progress
- * - error: any - error object if the request fails
- *
- * Example usage:
- * const { data, loading, error } = useAPICall("/api/endpoint", payload, []);
- */
+import { useEffect, useState, useCallback } from "react";
 
 const useAPICall = (
     url: string,
@@ -29,6 +8,14 @@ const useAPICall = (
     const [data, setData] = useState<any>(null);
     const [loading, setLoading] = useState<boolean>(true);
     const [error, setError] = useState<any>(null);
+    const [refreshIndex, setRefreshIndex] = useState<number>(0);
+
+    // Function to trigger refresh manually
+    const refresh = useCallback(() => {
+        // For Testing Only
+        console.log("[MainSection] Manual refresh triggered");
+        setRefreshIndex((prev) => prev + 1);
+    }, []);
 
     useEffect(() => {
         const controller = new AbortController();
@@ -37,9 +24,6 @@ const useAPICall = (
         const fetchData = async () => {
             setLoading(true);
             setError(null);
-            console.debug("[useAPICall] Fetching from:", url);
-            console.debug("[useAPICall] Payload:", payload);
-
             try {
                 const response = await fetch(url, {
                     method: "POST",
@@ -55,13 +39,11 @@ const useAPICall = (
                 }
 
                 const result = await response.json();
-                console.debug("[useAPICall] Response:", result);
                 setData(result);
             } catch (err: any) {
                 if (err.name === "AbortError") {
-                    console.debug("[useAPICall] Request aborted");
+                    // Request aborted
                 } else {
-                    console.error("[useAPICall] Error:", err);
                     setError(err);
                 }
             } finally {
@@ -72,11 +54,11 @@ const useAPICall = (
         fetchData();
 
         return () => {
-            controller.abort(); // cancel if component unmounts or dependencies change
+            controller.abort();
         };
-    }, [url, JSON.stringify(payload), ...dependencies]); // hash payload to track changes
+    }, [url, JSON.stringify(payload), refreshIndex, ...dependencies]);
 
-    return { data, loading, error };
+    return { data, loading, error, refresh };
 };
 
 export default useAPICall;

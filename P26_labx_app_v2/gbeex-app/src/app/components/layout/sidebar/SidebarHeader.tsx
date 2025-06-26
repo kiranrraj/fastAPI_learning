@@ -1,16 +1,8 @@
-// src/app/components/sidebar/SidebarHeader.tsx
-
-"use client";
-
 import React from "react";
 import styles from "./SidebarHeader.module.css";
 import SidebarSearch from "./SidebarSearch";
 import SidebarControls from "./SidebarControls";
-// Removed SidebarFavoritesSection import
 
-/**
- * Props from parent (SidebarContainer) to sync state
- */
 interface SidebarHeaderProps {
   query: string;
   setQuery: (value: string) => void;
@@ -18,16 +10,10 @@ interface SidebarHeaderProps {
   onToggleSortOrder: () => void;
   onExpandAll: () => void;
   onCollapseAll: () => void;
+  onRefresh: () => void;
+  loading: boolean;
 }
 
-/**
- * SidebarHeader
- * -------------
- * Top section of the sidebar:
- * - Title
- * - Search input (controlled)
- * - Controls (sort, expand/collapse)
- */
 const SidebarHeader: React.FC<SidebarHeaderProps> = ({
   query,
   setQuery,
@@ -35,6 +21,8 @@ const SidebarHeader: React.FC<SidebarHeaderProps> = ({
   onToggleSortOrder,
   onExpandAll,
   onCollapseAll,
+  onRefresh,
+  loading,
 }) => {
   return (
     <div className={styles.header}>
@@ -45,6 +33,8 @@ const SidebarHeader: React.FC<SidebarHeaderProps> = ({
         onToggleSortOrder={onToggleSortOrder}
         onExpandAll={onExpandAll}
         onCollapseAll={onCollapseAll}
+        onRefresh={onRefresh}
+        loading={loading}
       />
     </div>
   );
