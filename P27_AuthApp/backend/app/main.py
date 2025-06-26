@@ -1,23 +1,39 @@
-from fastapi import FastAPI, APIRouter
-from app.api.user import router as user_router
+# app/main.py
+
+from fastapi import FastAPI
 from contextlib import asynccontextmanager
 
+from app.api import user, auth
+from app.core.logger import get_logger
+from app.core.config import settings
+from app.db.connection import get_client, close_client
+
+logger = get_logger("main")
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-    print("Starting up...")
-    yield
-    print("Shutting down...")
+    try:
+        get_client()
+        logger.info(" MongoDB connection opened")
+        yield
+    except Exception as e:
+        logger.critical(f" Unexpected error during app lifespan: {e}")
+        raise
+    finally:
+        close_client()
+        logger.info(" MongoDB connection closed")
 
 app = FastAPI(
-    title="User FastAPI",
-    description="API for the user details",
-    version="1.0.0",
+    title=settings.model_config.get("env_file", "AuthApp"),
     lifespan=lifespan
 )
 
-app.include_router(user_router)
+# Root endpoint
+@app.get("/")
+async def root():
+    return {"message": "AuthApp FastAPI is running."}
 
-# curl http://localhost:8000/users/health
-# curl http://localhost:8000/users/spec
-# curl http://localhost:8000/users/
+# Register user routes
+
+app.include_router(auth.router)
+app.include_router(user.router)

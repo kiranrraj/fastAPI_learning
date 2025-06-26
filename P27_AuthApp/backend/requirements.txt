@@ -1,0 +1,24 @@
+# Core framework
+fastapi>=0.110.0
+uvicorn[standard]>=0.27.0
+
+# Database & async MongoDB
+motor>=3.3.1
+pymongo>=4.6.0
+
+# Validation & settings (Pydantic v2)
+pydantic>=2.5
+pydantic-settings>=2.0.3
+
+# Password hashing
+bcrypt>=4.0.1
+
+# Logging tools
+colorlog>=6.8.2
+python-json-logger>=2.0.7
+
+# JWT 
+python-jose[cryptography]>=3.3.0
+
+# Typing support 
+typing_extensions>=4.10.0
