@@ -1,8 +1,8 @@
-// src/app/(protected)/layout.tsx
 "use client";
 
 import { SessionProvider } from "next-auth/react";
-import AppShell from "../components/layout/base/AppShell";
+import AppShell from "../../components/layout/base/AppShell";
+import SessionGuard from "@/app/components/auth/SessionGuard";
 
 export default function ProtectedLayout({
   children,
@@ -11,7 +11,9 @@ export default function ProtectedLayout({
 }) {
   return (
     <SessionProvider>
-      <AppShell>{children}</AppShell>
+      <SessionGuard>
+        <AppShell>{children}</AppShell>
+      </SessionGuard>
     </SessionProvider>
   );
 }

@@ -1,57 +1,98 @@
-// src/app/auth/signin/page.tsx
+// src/app/auth/signin/SignInForm.tsx
 "use client";
 
-import { useState } from "react";
+import { useState, FormEvent } from "react";
 import { signIn } from "next-auth/react";
 import { useRouter, useSearchParams } from "next/navigation";
+import styles from "./SignInForm.module.css";
 
-export default function SignInPage() {
+export default function SignInForm() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const router = useRouter();
+  const [showPassword, setShowPassword] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const searchParams = useSearchParams();
+  const router = useRouter();
 
-  const callbackUrl = searchParams?.get("callbackUrl") ?? "/";
+  // Default to /gbeex unless callbackUrl is safe and valid
+  const rawCallbackUrl = searchParams?.get("callbackUrl");
+  const callbackUrl =
+    rawCallbackUrl && !rawCallbackUrl.includes("/auth/signin")
+      ? rawCallbackUrl
+      : "/gbeex";
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    setIsSubmitting(true);
+
     const res = await signIn("credentials", {
+      redirect: false,
       email,
       password,
       callbackUrl,
-      redirect: true,
     });
 
-    // Optional: handle error or redirect manually if needed
+    if (res?.ok) {
+      router.push(callbackUrl);
+    } else {
+      alert("Invalid email or password.");
+      setIsSubmitting(false);
+    }
   };
 
   return (
-    <div style={{ maxWidth: 400, margin: "100px auto", padding: 20 }}>
-      <h1>Sign In</h1>
-      <form
-        onSubmit={handleSubmit}
-        style={{ display: "flex", flexDirection: "column", gap: 12 }}
-      >
-        <input
-          type="email"
-          placeholder="Email"
-          required
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-        />
+    <div className={styles.container}>
+      <div className={styles.card}>
+        <h1 className={styles.heading}>Welcome Back</h1>
+        <p className={styles.subheading}>Sign in to access your dashboard</p>
 
-        <input
-          type="password"
-          placeholder="Password"
-          required
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-        />
+        <form onSubmit={handleSubmit} className={styles.form}>
+          <label className={styles.label} htmlFor="email">
+            Email
+            <input
+              type="email"
+              id="email"
+              name="email"
+              className={styles.input}
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
+            />
+          </label>
 
-        <button type="submit" style={{ padding: 10 }}>
-          Sign In
-        </button>
-      </form>
+          <label className={styles.label} htmlFor="password">
+            Password
+            <div className={styles.passwordWrapper}>
+              <input
+                type={showPassword ? "text" : "password"}
+                id="password"
+                name="password"
+                className={styles.input}
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                required
+              />
+              <button
+                type="button"
+                onClick={() => setShowPassword(!showPassword)}
+                className={styles.toggleBtn}
+              >
+                {showPassword ? "Hide" : "Show"}
+              </button>
+            </div>
+          </label>
+
+          <button
+            type="submit"
+            className={styles.submitButton}
+            disabled={isSubmitting}
+          >
+            {isSubmitting ? "Signing in..." : "Sign In"}
+          </button>
+        </form>
+
+        <div className={styles.footerNote}>© GBeeX Portlet System</div>
+      </div>
     </div>
   );
 }
