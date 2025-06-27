@@ -1,98 +1,41 @@
-// src/app/auth/signin/SignInForm.tsx
+// src/app/auth/signin/page.tsx
 "use client";
 
-import { useState, FormEvent } from "react";
-import { signIn } from "next-auth/react";
+import { useEffect, useState, FormEvent } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
-import styles from "./SignInForm.module.css";
+import { getCsrfToken } from "next-auth/react";
+import SignInForm from "./SignInForm";
 
-export default function SignInForm() {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [showPassword, setShowPassword] = useState(false);
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const searchParams = useSearchParams();
+export default function SignInPage() {
   const router = useRouter();
+  const searchParams = useSearchParams();
 
-  // Default to /gbeex unless callbackUrl is safe and valid
-  const rawCallbackUrl = searchParams?.get("callbackUrl");
-  const callbackUrl =
-    rawCallbackUrl && !rawCallbackUrl.includes("/auth/signin")
-      ? rawCallbackUrl
-      : "/gbeex";
+  const error = searchParams?.get("error") || undefined;
+  const callbackUrl = searchParams?.get("callbackUrl") || "/gbeex";
 
-  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    setIsSubmitting(true);
+  const [csrfToken, setCsrfToken] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [showPassword, setShowPassword] = useState(false);
 
-    const res = await signIn("credentials", {
-      redirect: false,
-      email,
-      password,
-      callbackUrl,
+  useEffect(() => {
+    getCsrfToken().then((token) => {
+      if (token) setCsrfToken(token);
     });
+  }, []);
 
-    if (res?.ok) {
-      router.push(callbackUrl);
-    } else {
-      alert("Invalid email or password.");
-      setIsSubmitting(false);
-    }
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+    setIsSubmitting(true);
   };
 
   return (
-    <div className={styles.container}>
-      <div className={styles.card}>
-        <h1 className={styles.heading}>Welcome Back</h1>
-        <p className={styles.subheading}>Sign in to access your dashboard</p>
-
-        <form onSubmit={handleSubmit} className={styles.form}>
-          <label className={styles.label} htmlFor="email">
-            Email
-            <input
-              type="email"
-              id="email"
-              name="email"
-              className={styles.input}
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              required
-            />
-          </label>
-
-          <label className={styles.label} htmlFor="password">
-            Password
-            <div className={styles.passwordWrapper}>
-              <input
-                type={showPassword ? "text" : "password"}
-                id="password"
-                name="password"
-                className={styles.input}
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-                required
-              />
-              <button
-                type="button"
-                onClick={() => setShowPassword(!showPassword)}
-                className={styles.toggleBtn}
-              >
-                {showPassword ? "Hide" : "Show"}
-              </button>
-            </div>
-          </label>
-
-          <button
-            type="submit"
-            className={styles.submitButton}
-            disabled={isSubmitting}
-          >
-            {isSubmitting ? "Signing in..." : "Sign In"}
-          </button>
-        </form>
-
-        <div className={styles.footerNote}>© GBeeX Portlet System</div>
-      </div>
-    </div>
+    <SignInForm
+      csrfToken={csrfToken}
+      callbackUrl={callbackUrl}
+      error={error}
+      isSubmitting={isSubmitting}
+      showPassword={showPassword}
+      onTogglePassword={() => setShowPassword((prev) => !prev)}
+      onSubmit={handleSubmit}
+    />
   );
 }

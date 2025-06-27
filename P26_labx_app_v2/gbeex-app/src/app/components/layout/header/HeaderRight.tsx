@@ -6,6 +6,7 @@ import UserContainer from "./UserContainer";
 import NotificationModule from "./NotificationModule";
 import SettingsMenu from "./SettingsMenu";
 import ThemeToggle from "./ThemeToggle";
+import LogoutButton from "./LogoutButton";
 
 /**
  * Component: HeaderRightArea
@@ -26,6 +27,7 @@ const HeaderRight: React.FC = () => {
       <SettingsMenu />
       <NotificationModule />
       <ThemeToggle />
+      <LogoutButton />
     </div>
   );
 };
