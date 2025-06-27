@@ -1,110 +1,36 @@
-:root {
-  --fav-bg: #fef3c7;
-  --fav-border: #fbbf24;
-  --fav-text: #92400e;
-  --fav-hover-bg: #fde68a;
-  --fav-hover-text: #78350f;
-
-  --fav-icon-color: #ca8a04;
-
-  --fav-bg-dark: #78350f;
-  --fav-border-dark: #fbbf24;
-  --fav-text-dark: #fde68a;
-  --fav-hover-bg-dark: #92400e;
-  --fav-hover-text-dark: #fef3c7;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --fav-bg: var(--fav-bg-dark);
-    --fav-border: var(--fav-border-dark);
-    --fav-text: var(--fav-text-dark);
-    --fav-hover-bg: var(--fav-hover-bg-dark);
-    --fav-hover-text: var(--fav-hover-text-dark);
-  }
-}
 
 .favoriteSectionWrapper {
-  background-color: var(--fav-bg);
-  border: 1.5px solid var(--fav-border);
-  border-radius: 10px;
-  padding: 0.75rem 1rem;
-  margin-bottom: 1rem;
-  color: var(--fav-text);
-  font-weight: 600;
-  font-size: 0.95rem;
+  font-size: 14px;
   transition: background-color 0.3s ease, color 0.3s ease;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
 }
 
-.favoriteSectionWrapper:hover {
-  background-color: var(--fav-hover-bg);
-  color: var(--fav-hover-text);
-  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
+.header {
+  margin-bottom: 10px;
+  display: flex;
+  font-size: 16px;
+  /* justify-content: center; */
+  align-items: center;
 }
 
-.favoriteItemsList {
-  margin-top: 0.5rem;
-  list-style: none;
-  padding-left: 0;
-  max-height: 240px;
-  overflow-y: auto;
-  scrollbar-width: thin;
-  scrollbar-color: var(--fav-border) transparent;
+.toggle {
+  padding: 4px;
+  margin-right: 10px;
 }
 
-.favoriteItemsList::-webkit-scrollbar {
-  width: 8px;
-}
-
-.favoriteItemsList::-webkit-scrollbar-thumb {
-  background-color: var(--fav-border);
-  border-radius: 8px;
-}
-
-.favoriteItem {
-  padding: 0.4rem 0.6rem;
-  margin-bottom: 0.25rem;
+.item {
   border-radius: 6px;
   cursor: pointer;
   transition: background-color 0.2s ease;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-weight: 500;
   color: var(--fav-text);
 }
 
-.favoriteItem:hover,
-.favoriteItem:focus-visible {
-  background-color: var(--fav-hover-bg);
-  color: var(--fav-hover-text);
-  outline: none;
-}
-
-.favoriteItem:focus-visible {
-  outline: 2px solid var(--fav-border);
-  outline-offset: 2px;
-}
-
-/* Icon inside favorite item */
-.favoriteIcon {
-  color: var(--fav-icon-color);
-  flex-shrink: 0;
-}
-
-/* Smooth fade-in animation for the section */
-@keyframes fadeInSection {
-  from {
-    opacity: 0;
-    transform: translateY(8px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.favoriteSectionWrapper {
-  animation: fadeInSection 0.35s ease forwards;
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background-color: #ca8a04;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--fav-border) transparent;
 }

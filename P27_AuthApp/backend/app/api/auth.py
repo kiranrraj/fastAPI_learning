@@ -11,7 +11,7 @@ from pydantic import BaseModel, EmailStr, Field, model_validator
 
 from app.db.connection import get_database
 from app.core.config import settings
-from app.services.token_storage import store_refresh_token, is_token_valid, delete_token
+from app.utils.token_storage import store_refresh_token, is_token_valid, delete_token
 
 router = APIRouter(prefix="/auth", tags=["auth"])
 

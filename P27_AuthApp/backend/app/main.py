@@ -3,6 +3,7 @@
 from fastapi import FastAPI
 from contextlib import asynccontextmanager
 
+from app.api.proxy import router as proxy
 from app.api import user, auth
 from app.core.logger import get_logger
 from app.core.config import settings
@@ -36,4 +37,6 @@ async def root():
 # Register user routes
 
 app.include_router(auth.router)
+app.include_router(proxy)
 app.include_router(user.router)
+
