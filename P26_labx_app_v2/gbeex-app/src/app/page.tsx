@@ -1,6 +1,6 @@
-// /app/gbeex/page.tsx
+// /app/page.tsx
 import { redirect } from "next/navigation";
 
-export default function GbeeXRedirect() {
+export default function Home() {
   redirect("/auth/signin");
 }
