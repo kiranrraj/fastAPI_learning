@@ -1,7 +1,4 @@
-// src/app/auth/signin/SignInForm.tsx
-"use client";
-
-import { FormEvent } from "react";
+import React, { FormEvent } from "react";
 import styles from "./SignInForm.module.css";
 
 interface SignInFormProps {
@@ -12,9 +9,11 @@ interface SignInFormProps {
   showPassword: boolean;
   onTogglePassword: () => void;
   onSubmit: (e: FormEvent<HTMLFormElement>) => void;
+  isLockedOut: boolean;
+  remainingTime: number;
 }
 
-export default function SignInForm({
+const SignInForm: React.FC<SignInFormProps> = ({
   csrfToken,
   callbackUrl,
   error,
@@ -22,18 +21,32 @@ export default function SignInForm({
   showPassword,
   onTogglePassword,
   onSubmit,
-}: SignInFormProps) {
+  isLockedOut,
+  remainingTime,
+}) => {
+  const formatTime = (seconds: number) => {
+    const min = Math.floor(seconds / 60);
+    const sec = seconds % 60;
+    return `${min}:${sec.toString().padStart(2, "0")}`;
+  };
+
   return (
     <div className={styles.container}>
       <div className={styles.card}>
         <h1 className={styles.heading}>Welcome Back</h1>
         <p className={styles.subheading}>Sign in to access your dashboard</p>
 
-        {error && (
+        {error && !isLockedOut && (
           <div className={styles.error}>
             {error === "CredentialsSignin"
               ? "Invalid email or password."
               : "Authentication failed. Try again."}
+          </div>
+        )}
+
+        {isLockedOut && (
+          <div className={styles.error}>
+            Too many failed attempts. Please wait {formatTime(remainingTime)}.
           </div>
         )}
 
@@ -54,6 +67,7 @@ export default function SignInForm({
               name="email"
               className={styles.input}
               required
+              disabled={isLockedOut}
             />
           </label>
 
@@ -66,6 +80,7 @@ export default function SignInForm({
                 name="password"
                 className={styles.input}
                 required
+                disabled={isLockedOut}
               />
               <button
                 type="button"
@@ -80,7 +95,7 @@ export default function SignInForm({
           <button
             type="submit"
             className={styles.submitButton}
-            disabled={isSubmitting}
+            disabled={isSubmitting || isLockedOut}
           >
             {isSubmitting ? "Signing in..." : "Sign In"}
           </button>
@@ -90,4 +105,6 @@ export default function SignInForm({
       </div>
     </div>
   );
-}
+};
+
+export default SignInForm;

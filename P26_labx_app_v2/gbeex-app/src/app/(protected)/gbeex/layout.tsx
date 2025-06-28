@@ -1,8 +1,11 @@
+// src\app\(protected)\gbeex\layout.tsx
+
 "use client";
 
 import { SessionProvider } from "next-auth/react";
-import AppShell from "../../components/layout/base/AppShell";
+import AppShell from "@/app/components/layout/base/AppShell";
 import SessionGuard from "@/app/components/auth/SessionGuard";
+import { ToastProvider } from "@/app/components/layout/toast/ToastProvider";
 
 export default function ProtectedLayout({
   children,
@@ -12,7 +15,9 @@ export default function ProtectedLayout({
   return (
     <SessionProvider>
       <SessionGuard>
-        <AppShell>{children}</AppShell>
+        <ToastProvider>
+          <AppShell>{children}</AppShell>
+        </ToastProvider>
       </SessionGuard>
     </SessionProvider>
   );
