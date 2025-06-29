@@ -3,6 +3,7 @@
 from fastapi import APIRouter, HTTPException, status, Response, Cookie, Depends
 from fastapi.responses import JSONResponse
 
+from src.db.crud.user import get_user_by_id
 from src.core.dependencies import get_current_user
 from src.models.user_response import UserPublic, TokenResponse
 from src.models.user_model import LoginRequest
@@ -77,15 +78,55 @@ async def login(request: LoginRequest, response: Response):
     )
 
 
+# @router.post("/refresh", response_model=TokenResponse)
+# async def refresh_token(response: Response, refresh_token: str = Cookie(None)):
+#     "Rotate and return a new access token and refresh token. Refresh token is validated, blacklisted, and replaced."
+#     if not refresh_token:
+#         logger.warning("[REFRESH] Missing refresh token in cookie.")
+#         raise HTTPException(status_code=401, detail="Missing refresh token.")
+
+#     try:
+#         # Ensure token is not reused
+#         if await is_token_blacklisted(refresh_token):
+#             logger.warning("[REFRESH] Reused or blacklisted token.")
+#             raise HTTPException(status_code=401, detail="Invalid refresh token.")
+
+#         user_id, new_access_token, new_refresh_token = await refresh_tokens(refresh_token)
+#     except HTTPException as e:
+#         raise e
+#     except Exception as e:
+#         logger.exception("[REFRESH] Unexpected error during token refresh.")
+#         raise HTTPException(status_code=500, detail="Token refresh failed")
+
+#     # Set the new refresh token in cookie
+#     response.set_cookie(
+#         key="refresh_token",
+#         value=new_refresh_token,
+#         httponly=True,
+#         secure=True,
+#         samesite="strict",
+#         max_age=60 * 60 * 24 * 7,
+#         path="/",
+#     )
+
+#     logger.info(f"[REFRESH] Token refreshed for user: {user_id}")
+
+#     return TokenResponse(
+#         access_token=new_access_token,
+#         refresh_token=new_refresh_token,
+#         user=UserPublic( 
+#             id=user_id,
+#             username="",
+#             email="",
+#             role="",
+#             entity_access=[],
+#             preferences=None
+#         )
+#     )
+
 @router.post("/refresh", response_model=TokenResponse)
 async def refresh_token(response: Response, refresh_token: str = Cookie(None)):
-    """
-    Rotate and return a new access token and refresh token.
-    Refresh token is validated, blacklisted, and replaced.
-
-    Raises:
-        401 - If token is missing or blacklisted or invalid
-    """
+    "Rotate and return a new access token and refresh token."
     if not refresh_token:
         logger.warning("[REFRESH] Missing refresh token in cookie.")
         raise HTTPException(status_code=401, detail="Missing refresh token.")
@@ -103,30 +144,39 @@ async def refresh_token(response: Response, refresh_token: str = Cookie(None)):
         logger.exception("[REFRESH] Unexpected error during token refresh.")
         raise HTTPException(status_code=500, detail="Token refresh failed")
 
-    # Set the new refresh token in cookie
+    #Set the new refresh token in the cookie 
     response.set_cookie(
         key="refresh_token",
         value=new_refresh_token,
         httponly=True,
         secure=True,
         samesite="strict",
-        max_age=60 * 60 * 24 * 7,
+        max_age=60 * 60 * 24 * 7,  
         path="/",
     )
 
-    logger.info(f"[REFRESH] Token refreshed for user: {user_id}")
+    #Load full user data
+    user = await get_user_by_id(user_id)
+    if not user:
+        logger.error(f"[REFRESH] User not found for ID: {user_id}")
+        raise HTTPException(status_code=404, detail="User not found during refresh.")
+
+    user_public = UserPublic(
+        id=user.id,
+        username=user.username,
+        email=user.email,
+        role=user.role,
+        entity_access=user.entity_access,
+        preferences=user.preferences,
+    )
+
+    logger.info(f"[REFRESH] Token refreshed for user: {user.email}")
 
     return TokenResponse(
         access_token=new_access_token,
         refresh_token=new_refresh_token,
-        user=UserPublic(  # Placeholder until decoded payload can be fully resolved
-            id=user_id,
-            username="",
-            email="",
-            role="",
-            entity_access=[],
-            preferences=None
-        )
+        token_type="bearer",
+        user=user_public,
     )
 
 

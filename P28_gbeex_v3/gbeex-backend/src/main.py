@@ -110,7 +110,6 @@ async def get_spec():
         }
     }
 
-
 app.include_router(auth.router)
 app.include_router(notification.router)
 
