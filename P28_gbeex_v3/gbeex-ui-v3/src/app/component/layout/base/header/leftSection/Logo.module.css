@@ -1,0 +1,8 @@
+/* Logo.module.css */
+
+.logo {
+  height: 40px;
+  width: auto;
+  display: block;
+  object-fit: contain;
+}

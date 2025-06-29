@@ -1,0 +1,9 @@
+.username {
+  font-weight: 500;
+  font-size: 0.95rem;
+  color: var(--color-fg);
+  max-width: 150px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
