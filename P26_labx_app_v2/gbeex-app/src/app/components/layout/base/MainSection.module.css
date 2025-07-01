@@ -2,21 +2,24 @@
   display: flex;
   flex: 1;
   overflow: hidden;
+  background-color: #fff;
+  font-family: 'Segoe UI', Roboto, sans-serif;
 }
 
 .sidebar {
   width: 320px;
-  /* background-color: var(--sidebar-bg); */
-  color: var(--sidebar-text);
-  border-right: 1px solid var(--border);
+  background-color: #f9fafb;
+  color: #374151; 
+  border-right: 1px solid #e5e7eb;
   padding: 1rem;
   overflow-y: auto;
+  box-shadow: 2px 0 4px rgba(0, 0, 0, 0.03);
 }
 
 .content {
   flex: 1;
-  background-color: var(--content-bg);
-  color: var(--content-text);
-  padding: 1rem;
+  background-color: #fff;
+  color: #1f2937; 
+  padding: 1.5rem;
   overflow-y: auto;
 }

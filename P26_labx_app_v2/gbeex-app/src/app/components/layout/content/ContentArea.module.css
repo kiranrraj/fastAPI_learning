@@ -1,65 +1,112 @@
-/* src/app/components/layout/content/ContentArea.module.css */
-
 .contentAreaWrapper {
   display: flex;
   flex-direction: column;
   height: 100%;
   width: 100%;
-  font-family: sans-serif;
+  font-family: 'Segoe UI', Roboto, sans-serif;
+  background-color: #fff;
+  color: #333;
 }
 
 .tabBar {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
-  padding: 0.5rem;
-  border-bottom: 1px solid #ccc;
+  padding: 0.5rem 1rem;
+  background-color: #fff;
+  border-bottom: 1px solid #e5e7eb;
 }
 
 .tabItem {
   display: flex;
   align-items: center;
-  background-color: steelblue;
-  padding: 6px 10px;
-  border-radius: 4px;
+  background-color: #f1f5f9;
+  color: #111827;
+  padding: 6px 14px;
+  border-radius: 8px;
   cursor: pointer;
   font-size: 0.875rem;
-  transition: background 0.2s ease-in-out;
+  transition: all 0.3s ease;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+  transform: scale(1);
 }
 
 .tabItem:hover {
-  background-color: blue;
+  background-color: #e2e8f0;
+  transform: scale(1.03);
 }
 
 .activeTab {
-  background-color: tomato;
-  font-weight: bold;
+  background-color: #2563eb;
+  color: #fff;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.3);
+  transform: scale(1.05);
 }
 
 .tabName {
-  margin-right: 6px;
+  margin-right: 8px;
 }
 
 .tabCloseButton {
-  color: red;
+  color: #fff;
   background: none;
   border: none;
   font-size: 1rem;
   cursor: pointer;
   padding: 0;
+  display: flex;
+  align-items: center;
+  transition: transform 0.4s ease, color 0.3s ease;
 }
 
 .tabCloseButton:hover {
-  text-decoration: underline;
+  transform: rotate(180deg);
+  color: #ef4444;
 }
 
 .tabContentArea {
   flex-grow: 1;
   overflow-y: auto;
-  padding: 1rem;
+  padding: 1.5rem;
+  background-color: #fff;
+  border-top: 1px solid #e5e7eb;
+  animation: fadeIn 0.3s ease;
+}
+
+/* Optional fade animation on content switch */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .emptyTabMessage {
   padding: 1rem;
-  color: #fff
+  color: #6b7280;
+  font-style: italic;
+}
+
+.noTabSelectedMessage {
+  padding: 1rem;
+  color: #6b7280;
+  font-style: italic;
+  text-align: center;
+}
+
+.unknownTabMessage {
+  padding: 1rem;
+  color: #ef4444;
+  font-style: italic;
+  text-align: center;
+}
+
+.groupViewWrapper,
+.itemViewWrapper {
+  padding: 16px;
 }

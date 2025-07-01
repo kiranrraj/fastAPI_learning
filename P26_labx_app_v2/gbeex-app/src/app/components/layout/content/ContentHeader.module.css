@@ -1,48 +1,69 @@
-/* ContentHeader.module.css */
-
 .headerContainer {
   display: flex;
   align-items: center;
   gap: 16px;
   padding: 14px 20px;
-  background-color: var(--card-header-bg);
-  border-bottom: 1px solid var(--border);
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  background-color: #fff;
+  border-bottom: 1px solid #e0e0e0;
+  font-family: 'Segoe UI', Roboto, sans-serif;
   user-select: none;
-  transition: background-color 0.3s ease;
+}
+
+.searchWrapper {
+  position: relative;
+  flex-grow: 1;
+  max-width: 280px;
 }
 
 .searchInput {
-  flex-grow: 1;
-  max-width: 280px;
-  padding: 8px 12px;
+  width: 100%;
+  padding: 8px 32px 8px 12px;
   font-size: 0.95rem;
   border-radius: 6px;
-  border: 1.5px solid var(--border);
-  color: var(--content-text);
-  background-color: var(--content-bg);
+  border: 1.5px solid #d1d5db;
+  background-color: #f9fafb;
+  color: #111827;
   transition: border-color 0.3s ease, background-color 0.3s ease, color 0.3s ease;
   outline-offset: 2px;
 }
 
 .searchInput::placeholder {
-  color: var(--text-muted, #999);
+  color: #9ca3af;
 }
 
 .searchInput:focus {
-  border-color: var(--primary-color);
-  background-color: var(--card-bg);
-  color: var(--text);
+  border-color: #3b82f6;
+  background-color: #fff;
+  color: #111827;
+}
+
+.clearBtn {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #6b7280;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.2s ease;
+}
+
+.clearBtn:hover {
+  color: #ef4444;
 }
 
 .sortSelect {
   padding: 8px 12px;
   font-size: 0.95rem;
   border-radius: 6px;
-  border: 1.5px solid var(--border);
-  color: var(--content-text);
-  background-color: var(--content-bg);
+  border: 1.5px solid #d1d5db;
+  background-color: #f9fafb;
+  color: #111827;
   cursor: pointer;
   transition: border-color 0.3s ease, background-color 0.3s ease;
   outline-offset: 2px;
@@ -50,35 +71,31 @@
 
 .sortSelect:hover,
 .sortSelect:focus {
-  border-color: var(--primary-color);
-  background-color: var(--card-bg);
-  color: var(--text);
+  border-color: #3b82f6;
+  background-color: #fff;
+  color: #111827;
 }
 
-.headerBtn {
-  padding: 8px 16px;
+/* New consistent icon-based buttons */
+.iconBtn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
   font-size: 0.9rem;
-  font-weight: 600;
+  font-weight: 500;
   border-radius: 6px;
-  border: none;
-  background-color: var(--primary-color);
-  color: #fff;
+  background-color: #fff;
+  color: #111827;
+  border: 1.5px solid #d1d5db;
   cursor: pointer;
-  user-select: none;
-  transition: background-color 0.3s ease;
-  box-shadow: 0 2px 8px var(--primary-color);
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
 
-.headerBtn:hover,
-.headerBtn:focus {
-  background-color: var(--primary-hover);
-  box-shadow: 0 4px 12px var(--primary-hover);
-  outline: none;
-}
-
-.headerBtn:active {
-  background-color: var(--primary-color);
-  box-shadow: 0 1px 4px var(--primary-color);
+.iconBtn:hover {
+  background-color: #111827;
+  color: #ffffff;
+  border-color: #111827;
 }
 
 /* Responsive tweaks */
@@ -88,9 +105,9 @@
     gap: 10px;
   }
 
-  .searchInput,
+  .searchWrapper,
   .sortSelect,
-  .headerBtn {
+  .iconBtn {
     flex-grow: 1;
     max-width: 100%;
   }

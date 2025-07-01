@@ -1,9 +1,8 @@
-// src/app/components/layout/content/ContentHeader.tsx
-
 "use client";
 
 import React from "react";
 import styles from "./ContentHeader.module.css";
+import { X, RotateCcw, Trash2 } from "lucide-react"; // Lucide icons
 
 export type SortMode = "default" | "asc" | "desc";
 
@@ -16,13 +15,6 @@ interface ContentHeaderProps {
   onRestoreTab: () => void;
 }
 
-/**
- * ContentHeader
- * - Input for tab filtering
- * - Sort dropdown (default, A–Z, Z–A)
- * - Restore last tab
- * - Close all tabs
- */
 const ContentHeader: React.FC<ContentHeaderProps> = ({
   searchQuery,
   setSearchQuery,
@@ -33,13 +25,24 @@ const ContentHeader: React.FC<ContentHeaderProps> = ({
 }) => {
   return (
     <div className={styles.headerContainer}>
-      <input
-        type="text"
-        value={searchQuery}
-        onChange={(e) => setSearchQuery(e.target.value)}
-        placeholder="Search tabs..."
-        className={styles.searchInput}
-      />
+      <div className={styles.searchWrapper}>
+        <input
+          type="text"
+          value={searchQuery}
+          onChange={(e) => setSearchQuery(e.target.value)}
+          placeholder="Search tabs..."
+          className={styles.searchInput}
+        />
+        {searchQuery && (
+          <button
+            className={styles.clearBtn}
+            onClick={() => setSearchQuery("")}
+            aria-label="Clear search"
+          >
+            <X size={16} />
+          </button>
+        )}
+      </div>
 
       <select
         className={styles.sortSelect}
@@ -51,11 +54,13 @@ const ContentHeader: React.FC<ContentHeaderProps> = ({
         <option value="desc">Sort Z–A</option>
       </select>
 
-      <button className={styles.headerBtn} onClick={onRestoreTab}>
-        Restore Tab
+      <button className={styles.iconBtn} onClick={onRestoreTab}>
+        <RotateCcw size={16} />
+        Restore
       </button>
 
-      <button className={styles.headerBtn} onClick={onCloseAllTabs}>
+      <button className={styles.iconBtn} onClick={onCloseAllTabs}>
+        <Trash2 size={16} />
         Close All
       </button>
     </div>

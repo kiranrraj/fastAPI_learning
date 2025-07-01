@@ -7,6 +7,7 @@ import ItemContentView from "./views/ItemContentView";
 import DefaultContentView from "./views/DefaultContentView";
 import ContentHeader from "./ContentHeader";
 import styles from "./ContentArea.module.css";
+import { X } from "lucide-react";
 
 interface ContentAreaProps {
   tabs: Record<string, PortletNode>;
@@ -125,7 +126,7 @@ const ContentArea: React.FC<ContentAreaProps> = ({
               }}
               className={styles.tabCloseButton}
             >
-              ×
+              <X size={16} strokeWidth={2} />
             </button>
           </div>
         ))}

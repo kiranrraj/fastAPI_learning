@@ -1,34 +1,35 @@
-/* src/app/components/layout/base/Footer.module.css */
-
 .footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0.75rem 1.25rem;
-  background-color: var(--footer-bg);
-  color: var(--footer-text);
+  background-color: #fff;
+  color: #374151;
   font-size: 0.875rem;
-  border-top: 1px solid var(--border);
+  border-top: 1px solid #e5e7eb; 
   height: 48px;
+  font-family: 'Segoe UI', Roboto, sans-serif;
+  box-shadow: 0 -1px 3px rgba(0, 0, 0, 0.05);
 }
 
-/* Left section (copyright) */
 .left {
   font-weight: 400;
+  color: #6b7280; 
 }
 
-/* Right section (time and status) */
 .right {
   display: flex;
   align-items: center;
   gap: 1.25rem;
+  color: #4b5563;
 }
 
 .time {
   font-variant-numeric: tabular-nums;
+  font-weight: 500;
 }
 
 .status {
-  color: green;
-  font-weight: 500;
+  color: #10b981; 
+  font-weight: 600;
 }

@@ -59,7 +59,7 @@ const Footer: React.FC<FooterProps> = ({
   return (
     <footer className={styles.footer}>
       {/* Left side: copyright */}
-      <div className={styles.left}>© 2025 GbeeX. All rights reserved.</div>
+      <div className={styles.left}>© 2025 GBeeX. All rights reserved.</div>
 
       {/* Right side: current time, last refresh, and server status */}
       <div className={styles.right}>
