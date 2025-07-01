@@ -1,36 +1,45 @@
-
-.favoriteSectionWrapper {
-  font-size: 14px;
-  transition: background-color 0.3s ease, color 0.3s ease;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+.favoritesWrapper {
+  margin-top: 1rem;
+  background-color: white;
 }
 
 .header {
-  margin-bottom: 10px;
   display: flex;
-  font-size: 16px;
-  /* justify-content: center; */
   align-items: center;
+  padding: 0.6rem 1rem;
+  cursor: pointer;
+  background-color: white;
+  border-radius: 6px;
+  transition: background-color 0.25s ease;
+}
+
+.header:hover {
+  background-color: #f0f4f8;
 }
 
 .toggle {
-  padding: 4px;
-  margin-right: 10px;
+  margin-right: 0.5rem;
+  color: #6b7280;
+  transition: transform 0.2s ease;
 }
 
-.item {
-  border-radius: 6px;
-  cursor: pointer;
-  transition: background-color 0.2s ease;
-  color: var(--fav-text);
+.header:hover .toggle {
+  transform: scale(1.1);
+  color: #2563eb;
+}
+
+.title {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: #374151;
 }
 
 .list {
+  margin-top: 0.5rem;
   list-style: none;
   padding: 0;
-  margin: 0;
-  background-color: #ca8a04;
-  overflow-y: auto;
-  scrollbar-width: thin;
-  scrollbar-color: var(--fav-border) transparent;
+}
+
+.item {
+  margin-bottom: 0.25rem;
 }

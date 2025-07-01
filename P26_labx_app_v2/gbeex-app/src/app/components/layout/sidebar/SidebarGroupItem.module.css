@@ -1,113 +1,42 @@
-/* Base colors using CSS variables */
-:root {
-  --sidebar-bg: #ffffff;
-  --sidebar-text: #374151;
-  --sidebar-hover-bg: #e5e7eb;
-  --sidebar-active-bg: #3b82f6;
-  --sidebar-active-text: #ffffff;
-  --sidebar-border: #d1d5db;
-
-  --focus-outline: #2563eb;
-}
-
-/* Dark mode overrides */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --sidebar-bg: #111827;
-    --sidebar-text: #d1d5db;
-    --sidebar-hover-bg: #374151;
-    --sidebar-active-bg: #2563eb;
-    --sidebar-active-text: #f9fafb;
-    --sidebar-border: #374151;
-
-    --focus-outline: #60a5fa;
-  }
-}
-
-/* Wrapper for group item */
-.groupItemWrapper {
-  background-color: var(--sidebar-bg);
-  color: var(--sidebar-text);
-  padding: 0.75rem 1rem;
-  margin: 0.3rem 0;
-  border-radius: 8px;
-  border: 1px solid transparent;
-  cursor: pointer;
-  user-select: none;
+.groupItem {
   display: flex;
-  flex-direction: column;
-
-  transition:
-    background-color 0.3s ease,
-    color 0.3s ease,
-    border-color 0.3s ease;
-  box-shadow: 0 0 4px transparent;
+  align-items: center;
+  padding: 0.6rem 1rem;
+  border-radius: 6px;
+  background-color: white;
+  transition: background-color 0.25s ease;
+  gap: 0.75rem;
 }
 
-/* Hover and focus */
-.groupItemWrapper:hover,
-.groupItemWrapper:focus-visible {
-  background-color: var(--sidebar-hover-bg);
-  border-color: var(--sidebar-border);
-  outline: none;
-  box-shadow: 0 0 8px var(--sidebar-active-bg);
-  color: var(--sidebar-active-bg);
+.groupItem:hover {
+  background-color: #f0f4f8;
 }
 
-/* Focus outline for keyboard nav */
-.groupItemWrapper:focus-visible {
-  outline: 2px solid var(--focus-outline);
-  outline-offset: 2px;
-}
-
-/* Active/selected group */
-.activeGroupItem {
-  background-color: var(--sidebar-active-bg);
-  color: var(--sidebar-active-text);
-  border-color: var(--sidebar-active-bg);
-  font-weight: 700;
-  box-shadow: 0 0 8px var(--sidebar-active-bg);
-}
-
-/* Group title text */
-.groupTitle {
-  font-size: 1.1rem;
-  font-weight: 600;
-  line-height: 1.25;
-  user-select: text;
-}
-
-/* Children container with smooth expand/collapse */
-.groupChildren {
-  margin-top: 0.5rem;
-  padding-left: 1rem;
-  border-left: 2px solid var(--sidebar-border);
-  max-height: 1000px; /* large max-height for expand */
-  overflow: hidden;
-  transition: max-height 0.3s ease, opacity 0.3s ease;
-  opacity: 1;
-}
-
-/* Collapsed state */
-.groupChildrenCollapsed {
-  max-height: 0;
-  opacity: 0;
-  padding: 0;
+.groupName {
+  background: none;
   border: none;
+  font-size: 1rem;
+  color: #374151;
+  font-weight: 600;
+  cursor: pointer;
+  transition: color 0.25s ease;
 }
 
-/* Animation for entry */
-@keyframes slideFadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(-8px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.groupItem:hover .groupName {
+  color: #2563eb;
 }
 
-.groupChildren {
-  animation: slideFadeIn 0.3s ease forwards;
+.chevron {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #6b7280;
+  display: flex;
+  align-items: center;
+  transition: transform 0.2s ease;
+}
+
+.groupItem:hover .chevron {
+  transform: scale(1.2);
+  color: #2563eb;
 }

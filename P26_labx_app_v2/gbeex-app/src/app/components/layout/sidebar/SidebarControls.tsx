@@ -1,8 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./SidebarControls.module.css";
-import IconChevronUp from "@/app/components/icons/IconChevronUp";
-import IconChevronDown from "@/app/components/icons/IconChevronDown";
-import Image from "next/image";
+import {
+  ChevronDown,
+  ChevronUp,
+  RefreshCcw,
+  SortAsc,
+  SortDesc,
+} from "lucide-react";
 
 interface SidebarControlsProps {
   sortOrder: "asc" | "desc";
@@ -21,42 +25,56 @@ const SidebarControls: React.FC<SidebarControlsProps> = ({
   onRefresh,
   loading,
 }) => {
+  const [isExpanded, setIsExpanded] = useState(false);
+
+  const handleToggleExpandCollapse = () => {
+    if (isExpanded) {
+      onCollapseAll();
+    } else {
+      onExpandAll();
+    }
+    setIsExpanded((prev) => !prev);
+  };
+
   return (
     <div className={styles.controlsWrapper}>
-      <button className={styles.controlButton} onClick={onToggleSortOrder}>
-        {sortOrder === "asc" ? "AZ" : "ZA"}
-      </button>
-      <button className={styles.controlButton} onClick={onExpandAll}>
-        <IconChevronDown />
-      </button>
-      <button className={styles.controlButton} onClick={onCollapseAll}>
-        <IconChevronUp />
-      </button>
       <button
         className={styles.controlButton}
+        onClick={onToggleSortOrder}
+        title="Toggle Sort Order"
+      >
+        {sortOrder === "asc" ? (
+          <SortAsc strokeWidth={2} size={18} />
+        ) : (
+          <SortDesc strokeWidth={2} size={18} />
+        )}
+      </button>
+
+      <button
+        className={styles.controlButton}
+        onClick={handleToggleExpandCollapse}
+        title={isExpanded ? "Collapse All" : "Expand All"}
+      >
+        {isExpanded ? (
+          <ChevronUp strokeWidth={2} size={18} />
+        ) : (
+          <ChevronDown strokeWidth={2} size={18} />
+        )}
+      </button>
+
+      <button
+        className={`${styles.controlButton} ${loading ? styles.loading : ""}`}
         onClick={onRefresh}
         disabled={loading}
         aria-busy={loading}
         aria-label="Refresh portlet data"
+        title="Refresh"
       >
-        {loading ? (
-          <Image
-            src="/icon/refresh.svg"
-            alt="Loading..."
-            width={40}
-            height={40}
-            priority
-            className={styles.spin}
-          />
-        ) : (
-          <Image
-            src="/icon/refresh.svg"
-            alt="Refresh Icon"
-            width={40}
-            height={40}
-            priority
-          />
-        )}
+        <RefreshCcw
+          className={loading ? styles.spin : ""}
+          size={18}
+          strokeWidth={2}
+        />
       </button>
     </div>
   );

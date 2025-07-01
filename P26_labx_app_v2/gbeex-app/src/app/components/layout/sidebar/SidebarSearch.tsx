@@ -1,30 +1,19 @@
-// src/app/components/sidebar/SidebarSearch.tsx
-
 "use client";
 
 import React from "react";
 import styles from "./SidebarSearch.module.css";
-import IconCloseButton from "../../icons/IconCloseButton";
-import IconSearch from "../../icons/IconSearch";
+import { Search, X } from "lucide-react";
 
 interface SidebarSearchProps {
   query: string;
   setQuery: (value: string) => void;
 }
 
-/**
- * SidebarSearch
- * -------------
- * Controlled search input with icon and reset.
- * Props:
- * - query: string - current search value
- * - setQuery: function - updates query in parent
- */
 const SidebarSearch: React.FC<SidebarSearchProps> = ({ query, setQuery }) => {
   return (
     <div className={styles.searchWrapper}>
       <span className={styles.icon}>
-        <IconSearch />
+        <Search size={16} strokeWidth={2} />
       </span>
 
       <input
@@ -41,7 +30,7 @@ const SidebarSearch: React.FC<SidebarSearchProps> = ({ query, setQuery }) => {
           onClick={() => setQuery("")}
           aria-label="Clear search"
         >
-          <IconCloseButton />
+          <X size={16} strokeWidth={2} />
         </button>
       )}
     </div>

@@ -5,8 +5,8 @@
 }
 
 .sidebar {
-  width: 280px;
-  background-color: var(--sidebar-bg);
+  width: 320px;
+  /* background-color: var(--sidebar-bg); */
   color: var(--sidebar-text);
   border-right: 1px solid var(--border);
   padding: 1rem;

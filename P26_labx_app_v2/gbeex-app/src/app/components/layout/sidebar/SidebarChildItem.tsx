@@ -3,6 +3,7 @@
 import React from "react";
 import { PortletNode } from "@/app/types/common/portlet.types";
 import styles from "./SidebarChildItem.module.css";
+import { Star, StarOff } from "lucide-react";
 
 export interface SidebarChildItemProps {
   item: PortletNode;
@@ -27,7 +28,7 @@ const SidebarChildItem: React.FC<SidebarChildItemProps> = ({
           onToggleFavorite();
         }}
       >
-        {isFavorite ? "★" : "☆"}
+        {isFavorite ? <StarOff size={14} /> : <Star size={14} />}
       </button>
       <span className={styles.itemName} onClick={onItemClick}>
         {highlightedName}

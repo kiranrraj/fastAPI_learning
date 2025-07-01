@@ -1,38 +1,57 @@
 .searchWrapper {
   display: flex;
   align-items: center;
-  gap: 8px;
-  padding: 6px 10px;
-  border: 1px solid var(--border);
+  background-color: #ffffff;
+  border: 1px solid #d1d5db;
+  padding: 0.5rem 0.75rem;
   border-radius: 6px;
-  background-color: var(--sidebar-bg);
-  color: var(--sidebar-text);
-  margin-bottom: 8px;
+  gap: 0.5rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.searchWrapper:focus-within {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.15);
 }
 
 .icon {
+  color: #6b7280;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 16px;
-  color: var(--sidebar-text);
+  flex-shrink: 0;
 }
 
 .searchInput {
   flex: 1;
-  background: transparent;
+  min-width: 0; /* prevents overflow */
   border: none;
   outline: none;
-  color: inherit;
-  font-size: 14px;
+  background: transparent;
+  font-size: 0.95rem;
+  color: #111827;
+  font-weight: 500;
 }
 
 .resetButton {
   background: none;
   border: none;
-  font-size: 16px;
-  color: var(--sidebar-text);
+  color: #6b7280;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
-  padding: 0px 0px 0 10px;
-  margin: 0;
+  transition: color 0.2s ease, transform 0.2s ease;
+  padding: 2px;
+  flex-shrink: 0;
+}
+
+.resetButton:hover {
+  color: #ffffff;
+  background-color: #2563eb;
+  border-radius: 4px;
+  transform: scale(1.15);
 }

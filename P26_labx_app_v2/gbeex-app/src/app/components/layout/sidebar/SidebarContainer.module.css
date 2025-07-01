@@ -1,45 +1,9 @@
-/* SidebarContainer.module.css */
-
-.sidebarContainer {
+.container {
+  width: 100%;
+  background-color: white;
+  border-right: 1px solid #e5e7eb;
   display: flex;
   flex-direction: column;
   height: 100vh;
-  width: 280px;
-  background-color: var(--sidebar-bg);
-  color: var(--sidebar-text);
-  border-right: 1px solid var(--border);
-  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.05);
   overflow-y: auto;
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.sidebarContainer::-webkit-scrollbar {
-  width: 8px;
-}
-
-.sidebarContainer::-webkit-scrollbar-thumb {
-  background-color: var(--border);
-  border-radius: 4px;
-}
-
-.sidebarContainer:hover::-webkit-scrollbar-thumb {
-  background-color: var(--primary-color);
-}
-
-/* Dark mode */
-@media (prefers-color-scheme: dark) {
-  .sidebarContainer {
-    background-color: var(--sidebar-bg);
-    color: var(--sidebar-text);
-    border-right: 1px solid var(--border);
-    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.3);
-  }
-
-  .sidebarContainer::-webkit-scrollbar-thumb {
-    background-color: var(--border);
-  }
-
-  .sidebarContainer:hover::-webkit-scrollbar-thumb {
-    background-color: var(--primary-hover);
-  }
 }
