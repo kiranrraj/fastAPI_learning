@@ -1,13 +1,11 @@
-// src\app\components\tab\TabItem.tsx
+// src/app/components/tab/TabItem.tsx
 
 "use client";
 
 import { Star, Lock, LockOpen, X } from "lucide-react";
-import { TabItemProps } from "./tabs.types";
+import { TabItemProps } from "@/app/types/tab.types";
 import styles from "./TabItem.module.css";
-import classNames from "classnames";
 
-// Renders a single tab header with: Title, Favorite toggle, Lock/unlock, Close button
 export default function TabItem({
   id,
   title,
@@ -21,9 +19,7 @@ export default function TabItem({
 }: TabItemProps) {
   return (
     <div
-      className={classNames(styles.tabItem, {
-        [styles.active]: isActive,
-      })}
+      className={`${styles.tabItem} ${isActive ? styles.active : ""}`}
       onClick={() => onSelect(id)}
     >
       <span className={styles.tabTitle}>{title}</span>

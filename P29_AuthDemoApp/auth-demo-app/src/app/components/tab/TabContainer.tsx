@@ -3,9 +3,9 @@
 "use client";
 
 import styles from "./TabContainer.module.css";
-import { TabContainerProps } from "./tabs.types";
+import { TabContainerProps } from "@/app/types/tab.types";
 import TabItem from "./TabItem";
-import TabContent from "./TabContent";
+import TabContent from "@/app/components/tab/TabContent";
 
 /**
  * Renders a horizontal list of tab headers and the corresponding content of the active tab.

@@ -1,6 +1,4 @@
-/* src/app/auth/signin/SignInForm.module.css */
-
-.container {
+.signInContainer {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -9,7 +7,7 @@
   padding: 2rem;
 }
 
-.card {
+.signInCard {
   background-color: #ffffff;
   color: #333333;
   padding: 2.5rem;
@@ -20,37 +18,79 @@
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+  animation: fadeIn 0.3s ease-in;
 }
 
-.heading {
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Header grouping */
+.cardHeader {
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.cardHeading {
   font-size: 2rem;
   font-weight: 600;
-  text-align: center;
   color: #2c3e50;
+  margin: 0;
 }
 
-.subheading {
+.cardSubheading {
   font-size: 1rem;
-  text-align: center;
   color: #555;
+  margin-top: 0.25rem;
 }
 
-.error {
+/* Error & Lockout */
+.errorMessage,
+.lockoutMessage {
   background-color: #ffe6e6;
   color: #cc0000;
   padding: 0.75rem 1rem;
   border-radius: 6px;
   text-align: center;
   font-weight: 500;
+  animation: shake 0.3s ease;
 }
 
-.form {
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  20% {
+    transform: translateX(-5px);
+  }
+  40% {
+    transform: translateX(5px);
+  }
+  60% {
+    transform: translateX(-5px);
+  }
+  80% {
+    transform: translateX(5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.signInForm {
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
 
-.label {
+.formLabel {
   font-size: 0.9rem;
   font-weight: 500;
   color: #333;
@@ -59,50 +99,78 @@
   gap: 0.5rem;
 }
 
-.input {
+.formInput,
+.formSelect,
+.passwordInput {
   padding: 0.75rem 1rem;
   border: 1px solid #ccc;
   border-radius: 8px;
   font-size: 1rem;
-  transition: border-color 0.2s ease-in-out;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
-.input:focus {
+.formInput:focus,
+.formSelect:focus,
+.passwordInput:focus {
   outline: none;
   border-color: #2c3e50;
+  box-shadow: 0 0 0 3px rgba(44, 62, 80, 0.15);
 }
 
-.passwordWrapper {
+.inputError {
+  border-color: #cc0000 !important;
+  animation: shake 0.3s ease;
+}
+
+.passwordField {
+  position: relative;
   display: flex;
   align-items: center;
-  position: relative;
 }
 
-.toggleBtn {
+.passwordInput {
+  width: 100%;
+  padding-right: 2.5rem;
+}
+
+.passwordToggleBtn {
   position: absolute;
-  right: 12px;
+  right: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
   background: none;
   border: none;
   color: #2c3e50;
-  font-size: 0.85rem;
   cursor: pointer;
-  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.toggleBtn:hover {
-  text-decoration: underline;
+.passwordToggleBtn:hover {
+  color: #1f2a38;
 }
 
-.submitButton {
-  background-color: #2c3e50;
-  color: white;
-  padding: 0.9rem 1rem;
+.formActions {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.submitButton,
+.resetButton {
+  padding: 0.85rem 1rem;
   font-size: 1rem;
   font-weight: 600;
   border: none;
   border-radius: 8px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+}
+
+.submitButton {
+  background-color: #2c3e50;
+  color: white;
 }
 
 .submitButton:hover {
@@ -114,7 +182,24 @@
   cursor: not-allowed;
 }
 
-.footerNote {
+.resetButton {
+  background-color: #e0e0e0;
+  color: #333;
+}
+
+.resetButton:hover {
+  background-color: #ccc;
+}
+
+/* Footer disclaimer */
+.infoNote {
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+  color: #666;
+  text-align: center;
+}
+
+.formFooter {
   text-align: center;
   font-size: 0.85rem;
   color: #999;

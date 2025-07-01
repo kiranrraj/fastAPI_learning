@@ -1,4 +1,4 @@
-// src\app\components\header\SettingsDropdown.tsx
+// src/app/components/header/SettingsDropdown.tsx
 
 "use client";
 
@@ -12,7 +12,7 @@ import {
   RotateCcw,
   LogOut,
 } from "lucide-react";
-import DropDown from "@/app/components/common/DropDown";
+import DropDown, { DropDownAction } from "@/app/components/common/DropDown";
 import styles from "./SettingsDropdown.module.css";
 
 interface SettingsDropdownProps {
@@ -32,29 +32,29 @@ export default function SettingsDropdown({
 }: SettingsDropdownProps) {
   const [open, setOpen] = useState(false);
 
-  const settingsItems = [
+  const settingsItems: DropDownAction[] = [
     {
       label: "Clear Favorites",
-      icon: <HeartOff size={16} />,
-      action: onClearFavorites,
+      icon: HeartOff,
+      onClick: onClearFavorites,
       tooltip: "Remove all favorite tabs",
     },
     {
       label: "Clear Locked",
-      icon: <Lock size={16} />,
-      action: onClearLocked,
+      icon: Lock,
+      onClick: onClearLocked,
       tooltip: "Unlock all locked tabs",
     },
     {
       label: "Clear Hidden",
-      icon: <EyeOff size={16} />,
-      action: onClearHidden,
+      icon: EyeOff,
+      onClick: onClearHidden,
       tooltip: "Unhide all hidden tabs",
     },
     {
       label: "Reset to Default",
-      icon: <RotateCcw size={16} />,
-      action: onResetToDefault,
+      icon: RotateCcw,
+      onClick: onResetToDefault,
       tooltip: "Restore default view",
     },
   ];
@@ -70,19 +70,7 @@ export default function SettingsDropdown({
         <Settings2 size={20} />
       </button>
 
-      {open && (
-        <DropDown
-          label="Settings"
-          options={settingsItems.map((item) => item.label)}
-          onSelect={(label) => {
-            const found = settingsItems.find((item) => item.label === label);
-            if (found) found.action();
-            setOpen(false);
-          }}
-          icons={settingsItems.map((item) => item.icon)}
-          tooltips={settingsItems.map((item) => item.tooltip)}
-        />
-      )}
+      {open && <DropDown label="Settings" actions={settingsItems} />}
 
       <button
         className={styles.logoutButton}

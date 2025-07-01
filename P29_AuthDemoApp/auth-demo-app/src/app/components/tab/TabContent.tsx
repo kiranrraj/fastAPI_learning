@@ -2,7 +2,7 @@
 
 "use client";
 
-import { TabContentProps } from "./tabs.types";
+import { TabContentProps } from "@/app/types/tab.types";
 import styles from "./TabContent.module.css";
 
 // Displays the content of the currently active tab.

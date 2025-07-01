@@ -5,7 +5,7 @@ import { signOut } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import styles from "./LogoutPage.module.css";
 
-const LOGOUT_DELAY = 5; // seconds
+const LOGOUT_DELAY = 5;
 
 export default function LogoutPage() {
   const [countdown, setCountdown] = useState(LOGOUT_DELAY);

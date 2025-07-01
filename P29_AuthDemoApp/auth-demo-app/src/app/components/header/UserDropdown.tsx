@@ -1,10 +1,10 @@
-// src\app\components\header\UserDropdown.tsx
+// src/app/components/header/UserDropdown.tsx
 
 "use client";
 
 import { useState } from "react";
 import { UserCircle, LogOut, Settings, Info, Shield } from "lucide-react";
-import DropDown from "./DropDown";
+import DropDown, { DropDownAction } from "@/app/components/common/DropDown";
 import styles from "./UserDropdown.module.css";
 
 interface UserDropdownProps {
@@ -28,31 +28,31 @@ export default function UserDropdown({
 }: UserDropdownProps) {
   const [open, setOpen] = useState(false);
 
-  const items = [
+  const items: DropDownAction[] = [
     {
       label: "Profile",
-      icon: <UserCircle size={16} />,
-      action: onProfile,
+      icon: UserCircle,
+      onClick: onProfile ?? (() => {}),
       tooltip: "Your profile details",
     },
     {
       label: "Settings",
-      icon: <Settings size={16} />,
-      action: onSettings,
+      icon: Settings,
+      onClick: onSettings ?? (() => {}),
       tooltip: "App preferences",
     },
     {
       label: "About",
-      icon: <Info size={16} />,
-      action: onAbout,
+      icon: Info,
+      onClick: onAbout ?? (() => {}),
       tooltip: "Version and info",
     },
     ...(isAdmin
       ? [
           {
             label: "Admin Panel",
-            icon: <Shield size={16} />,
-            action: onAdminPanel,
+            icon: Shield,
+            onClick: onAdminPanel ?? (() => {}),
             tooltip: "Administrative controls",
           },
         ]
@@ -70,19 +70,7 @@ export default function UserDropdown({
         <UserCircle size={20} />
       </button>
 
-      {open && (
-        <DropDown
-          label={userName}
-          options={items.map((item) => item.label)}
-          onSelect={(label) => {
-            const found = items.find((item) => item.label === label);
-            if (found && found.action) found.action();
-            setOpen(false);
-          }}
-          icons={items.map((item) => item.icon)}
-          tooltips={items.map((item) => item.tooltip)}
-        />
-      )}
+      {open && <DropDown label={userName} actions={items} />}
 
       <button
         className={styles.logoutButton}

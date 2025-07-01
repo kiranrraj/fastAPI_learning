@@ -3,7 +3,7 @@
 "use client";
 
 import { useState, useCallback, useEffect, useRef } from "react";
-import { Tab } from "./tabs.types";
+import { Tab } from "@/app/types/tab.types";
 import TabScroller from "./TabScroller";
 import TabContainer from "./TabContainer";
 import TabContent from "./TabContent";
