@@ -32,12 +32,12 @@ const Header: React.FC = () => {
       <div className={styles.left}>
         <Image
           className={styles.logo}
-          src="/images/company_logo.jpg"
+          src="/images/company_logo_resize.png"
           alt="Company logo"
-          width={40}
-          height={40}
+          width={100}
+          height={65}
         />
-        <h1 className={styles.title}>GbeeX Portlet System</h1>
+        <h1 className={styles.title}>Clinical Trials-Knowledge Portal</h1>
       </div>
 
       {/* Right Section: Controls (user, theme toggle, notifications, etc.) */}

@@ -1,7 +1,7 @@
-// src/app/components/layout/header/LogoutButton.tsx
 "use client";
 
 import { useRouter } from "next/navigation";
+import { LogOut } from "lucide-react";
 import styles from "./LogoutButton.module.css";
 
 const LogoutButton: React.FC = () => {
@@ -13,7 +13,8 @@ const LogoutButton: React.FC = () => {
 
   return (
     <button onClick={handleLogout} className={styles.logoutBtn} title="Logout">
-      Logout
+      <LogOut size={18} className={styles.icon} />
+      <span className={styles.label}>Logout</span>
     </button>
   );
 };

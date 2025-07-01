@@ -1,29 +1,39 @@
-/* src/app/components/layout/header/UserContainer.module.css */
-
 .container {
   display: flex;
-  gap: 15px;
   align-items: center;
-  justify-content: center;
+  gap: 10px;
+  padding: 6px 10px;
+  border-radius: 8px;
+  background-color: transparent;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-.avatarBlock {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  cursor: pointer;
+.container:hover {
+  background-color: #f5f5f5;
 }
 
 .avatar {
-  width: 32px;
-  height: 32px;
+  width: 36px;
+  height: 36px;
   border-radius: 50%;
   object-fit: cover;
-  border: 1px solid var(--border);
+  border: 1px solid #ccc;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.container:hover .avatar {
+  transform: scale(1.05);
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.15);
 }
 
 .username {
-  font-size: 0.875rem;
-  color: var(--header-text);
-  white-space: nowrap;
+  font-size: 0.9rem;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.username:hover {
+  color: #111;
 }

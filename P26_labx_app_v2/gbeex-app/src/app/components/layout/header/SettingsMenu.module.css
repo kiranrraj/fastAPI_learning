@@ -1,24 +1,34 @@
-/* src/app/components/layout/header/Settings.module.css */
-
-/* Wrapper to align the settings icon in header */
 .settingsWrapper {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-/* The actual button appearance */
 .settingsButton {
-  padding: 6px;
-  border-radius: 4px;
-  transition: background-color 0.2s ease-in-out;
-  color: var(--header-text);
-  background-color: blueviolet;
-  border:2px solid blueviolet;
-  padding: 6px 10px;
+  background-color: transparent;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 8px;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+  cursor: pointer;
 }
 
 .settingsButton:hover {
-  background-color: var(--border);
-  border: 2px solid blueviolet;
+  background-color: #f4f4f4;
+  border-color: #bbb;
+}
+
+.menuItem {
+  padding: 10px 14px;
+  font-size: 0.95rem;
+  background-color: white;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  width: 100%;
+}
+
+.menuItem:hover {
+  background-color: #f0f0f0;
 }

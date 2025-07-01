@@ -1,66 +1,50 @@
-/* src/app/components/layout/header/HeaderRightArea.module.css */
-
-
-.rightArea{
+.rightArea {
   display: flex;
-  width: 400px;
-  height: 100%;
+  gap: 1rem;
   align-items: center;
-  justify-content: space-between;
-  padding: 0px 10px;
+  justify-content: flex-end;
+  height: 100%;
+  padding: 0 16px;
 }
 
 .container > * {
-  cursor: pointer;
   display: flex;
   align-items: center;
   gap: 8px;
-  padding: 4px 8px;
+  padding: 6px 10px;
   border-radius: 6px;
-  transition: background-color 0.2s ease;
+  cursor: pointer;
+  transition: background-color 0.2s ease, box-shadow 0.2s ease;
 }
 
 .container > *:hover {
-  background-color: var(--primary-hover);
-  color: var(--header-bg);
+  background-color: #f2f2f2;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.05);
+  color: #111;
 }
 
-/* For icon buttons inside header right */
 .iconButton {
-  height: 20px;
-  width: 20px;
-  background: peru;
-  border: none;
-  padding: 6px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  border: 1px solid #ddd;
   border-radius: 50%;
   transition: background-color 0.2s ease;
 }
 
 .iconButton:hover {
-  background-color: var(--primary-color);
-  color: var(--header-bg);
+  background-color: #f2f2f2;
 }
 
-/* For dropdown menus or notification badges */
 .badge {
-  background-color: var(--danger-color);
-  color: var(--card-footer-text);
-  font-size: 0.7rem;
-  font-weight: 600;
+  background-color: #e74c3c;
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: bold;
   padding: 2px 6px;
-  border-radius: 12px;
+  border-radius: 9999px;
   margin-left: 4px;
-  user-select: none;
-}
-
-/* Responsive tweaks */
-@media (max-width: 768px) {
-  .container {
-    gap: 1rem;
-    padding: 0 8px;
-  }
-
-  .container > * {
-    padding: 4px 6px;
-  }
 }

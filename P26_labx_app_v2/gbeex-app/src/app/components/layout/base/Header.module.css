@@ -1,25 +1,16 @@
-/* src/app/components/layout/base/Header.module.css */
-
-/* Header.module.css */
-
-/* Root styles and variables */
 :root {
   --header-bg-light: #ffffff;
-  --header-bg-dark: #1f2937;
   --header-text-light: #111827;
-  --header-text-dark: #f9fafb;
   --border-light: #e5e7eb;
-  --border-dark: #374151;
   --shadow-light: rgba(0, 0, 0, 0.05);
-  --shadow-dark: rgba(0, 0, 0, 0.7);
 }
 
 @media (prefers-color-scheme: dark) {
   .header {
-    background-color: var(--header-bg-dark);
-    color: var(--header-text-dark);
-    border-bottom-color: var(--border-dark);
-    box-shadow: 0 2px 6px var(--shadow-dark);
+    background-color: #1f2937;
+    color: #f9fafb;
+    border-bottom-color: #374151;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.7);
   }
 }
 
@@ -27,52 +18,55 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 1rem 2rem;
   background-color: var(--header-bg-light);
   color: var(--header-text-light);
-  user-select: none;
-  background-color: #031234;
-  max-height: 100px;
+  border-bottom: 1px solid var(--border-light);
+  box-shadow: 0 2px 8px var(--shadow-light);
+  z-index: 100;
+  position: relative;
 }
 
 .left {
   display: flex;
-  width: fit-content;
-  gap: 20px;
   align-items: center;
-  color: #fff;
+  gap: 16px;
 }
 
 .logo {
-  border-radius: 50%;
-  object-fit: contain;
-  box-shadow: 0 0 6px rgba(0,0,0,0.1);
-  transition: box-shadow 0.3s ease;
-}
-
-.logo:hover {
-  box-shadow: 0 0 12px var(--primary-color, #fff);
+  width: 70px;
+  height: 40px;
+  transition: box-shadow 0.3s ease, transform 0.2s ease;
 }
 
 .title {
-  font-size: 20px;
-  font-weight: 700;
-  user-select: text;
+  font-size: 22px;
+  font-weight: 600;
+  color: #1f2937;
+  white-space: nowrap;
 }
 
 .right {
   display: flex;
-  width: fit-content;
   align-items: center;
   gap: 20px;
 }
 
-/* Responsive tweaks */
+/* Mobile */
 @media (max-width: 600px) {
   .header {
-    padding: 8px 16px;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
   }
 
   .title {
-    font-size: 1.25rem;
+    font-size: 1.2rem;
+  }
+
+  .right {
+    margin-top: 0.5rem;
+    width: 100%;
+    justify-content: flex-end;
   }
 }

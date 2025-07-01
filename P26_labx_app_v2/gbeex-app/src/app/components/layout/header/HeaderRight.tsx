@@ -1,31 +1,20 @@
-// src/app/components/layout/header/HeaderRightArea.tsx
+// src/app/components/layout/header/HeaderRight.tsx
+"use client";
 
 import React from "react";
-import styles from "./HeaderRight.module.css";
-import UserContainer from "./UserContainer";
 import NotificationModule from "./NotificationModule";
 import SettingsMenu from "./SettingsMenu";
 import ThemeToggle from "./ThemeToggle";
+import UserContainer from "./UserContainer";
 import LogoutButton from "./LogoutButton";
+import styles from "./HeaderRight.module.css";
 
-/**
- * Component: HeaderRightArea
- * ---------------------------
- * Renders the right-hand area of the header including:
- * - Notifications
- * - Settings
- * - Theme Toggle
- * - User dropdown
- *
- * INPUT: none
- * OUTPUT: UI cluster of control modules
- */
 const HeaderRight: React.FC = () => {
   return (
     <div className={styles.rightArea}>
-      <UserContainer />
-      <SettingsMenu />
+      <UserContainer username="Kiranraj R." />
       <NotificationModule />
+      <SettingsMenu />
       <ThemeToggle />
       <LogoutButton />
     </div>
