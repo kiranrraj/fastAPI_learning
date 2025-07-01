@@ -1,16 +1,33 @@
 .wrapper {
   padding: 1rem;
+  background-color: #fff;
+  color: #111827;
 }
 
 .title {
   font-size: 1.5rem;
   font-weight: 700;
   margin-bottom: 1rem;
-  color: var(--text-primary);
+  color: #111827;
 }
 
 .emptyMessage {
-  color: var(--text-muted);
+  color: #6b7280;
   font-style: italic;
   padding: 1rem 0;
 }
+
+/* @media (prefers-color-scheme: dark) {
+  .wrapper {
+    background-color: #1f2937;
+    color: #f3f4f6;
+  }
+
+  .title {
+    color: #f9fafb;
+  }
+
+  .emptyMessage {
+    color: #9ca3af;
+  }
+} */

@@ -26,11 +26,10 @@
 }
 
 .starButton {
-  all: unset; /* Reset all default button styles */
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #9ca3af; /* Default grey icon */
+  color: #9ca3af; 
   cursor: pointer;
   border-radius: 4px;
   transition:

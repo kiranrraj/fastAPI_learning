@@ -15,7 +15,6 @@ const DefaultContentView: React.FC<DefaultContentViewProps> = ({
 
   return (
     <div className={styles.wrapper}>
-      <h2 className={styles.title}>Default View</h2>
       {groupPortlets.length === 0 ? (
         <p className={styles.emptyMessage}>No groups available.</p>
       ) : (

@@ -1,11 +1,10 @@
 .groupItem {
   display: flex;
   align-items: center;
-  padding: 0.6rem 1rem;
-  border-radius: 6px;
-  background-color: white;
+  padding: 3px 6px;
+  background-color: #ffffff;
   transition: background-color 0.25s ease;
-  gap: 0.75rem;
+  margin-bottom: 5px;
 }
 
 .groupItem:hover {
@@ -13,7 +12,8 @@
 }
 
 .groupName {
-  background: none;
+  width: 100%;
+  text-align: left;
   border: none;
   font-size: 1rem;
   color: #374151;
@@ -33,10 +33,33 @@
   color: #6b7280;
   display: flex;
   align-items: center;
-  transition: transform 0.2s ease;
+  transition: transform 0.2s ease, color 0.2s ease;
 }
 
-.groupItem:hover .chevron {
-  transform: scale(1.2);
-  color: #2563eb;
-}
+/* Dark Mode */
+/* @media (prefers-color-scheme: dark) {
+  .groupItem {
+    background-color: #1f2937;
+    border: 1px solid #4b5563;
+  }
+
+  .groupItem:hover {
+    background-color: #374151;
+  }
+
+  .groupName {
+    color: #e5e7eb;
+  }
+
+  .groupItem:hover .groupName {
+    color: #60a5fa; 
+  }
+
+  .chevron {
+    color: #9ca3af;
+  }
+
+  .groupItem:hover .chevron {
+    color: #60a5fa;
+  }
+} */

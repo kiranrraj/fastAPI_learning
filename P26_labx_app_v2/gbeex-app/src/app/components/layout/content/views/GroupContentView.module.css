@@ -1,5 +1,6 @@
 .wrapper {
   padding: 1rem;
+  border: 2px solid #000;
 }
 
 .groupTitle {
@@ -15,8 +16,30 @@
   padding: 1rem 0;
 }
 
-.grid{
+.grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(430px, 1fr));
+  gap: 20px;
 }
+
+.groupContent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+}
+
+/* Dark mode support */
+/* @media (prefers-color-scheme: dark) {
+  .wrapper {
+    border-color: #f3f4f6;
+  }
+
+  .groupTitle {
+    color: #f9fafb;
+  }
+
+  .emptyMessage {
+    color: #9ca3af;
+  }
+} */

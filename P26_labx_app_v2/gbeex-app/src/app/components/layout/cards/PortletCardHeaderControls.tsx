@@ -1,11 +1,18 @@
-// src/app/components/layout/cards/PortletCardHeaderControls.tsx
-
-/**
- * PortletCardHeaderControls
- * Buttons: Refresh, Share, Link, Pin/Unpin, Lock/Unlock, Collapse/Expand, Delete
- */
+"use client";
 
 import React from "react";
+import {
+  RefreshCcw,
+  Share2,
+  Link,
+  Pin,
+  PinOff,
+  Lock,
+  Unlock,
+  ChevronDown,
+  ChevronUp,
+  Trash2,
+} from "lucide-react";
 import styles from "./PortletCardHeaderControls.module.css";
 
 interface PortletCardHeaderControlsProps {
@@ -35,30 +42,57 @@ const PortletCardHeaderControls: React.FC<PortletCardHeaderControlsProps> = ({
 }) => {
   return (
     <div className={styles.buttonGroup}>
-      <button className={styles.controlButton} onClick={onRefresh}>
-        Refresh
+      <button
+        className={styles.controlButton}
+        onClick={onRefresh}
+        title="Refresh"
+      >
+        <RefreshCcw size={12} />
       </button>
-      <button className={styles.controlButton} onClick={onShare}>
-        Share
+
+      <button className={styles.controlButton} onClick={onShare} title="Share">
+        <Share2 size={12} />
       </button>
-      <button className={styles.controlButton} onClick={onLink}>
-        Link
+
+      <button
+        className={styles.controlButton}
+        onClick={onLink}
+        title="Get Link"
+      >
+        <Link size={12} />
       </button>
-      <button className={styles.controlButton} onClick={onTogglePin}>
-        {isPinned ? "Unpin" : "Pin"}
+
+      <button
+        className={styles.controlButton}
+        onClick={onTogglePin}
+        title={isPinned ? "Unpin" : "Pin"}
+      >
+        {isPinned ? <PinOff size={12} /> : <Pin size={12} />}
       </button>
-      <button className={styles.controlButton} onClick={onToggleLock}>
-        {isLocked ? "Unlock" : "Lock"}
+
+      <button
+        className={styles.controlButton}
+        onClick={onToggleLock}
+        title={isLocked ? "Unlock" : "Lock"}
+      >
+        {isLocked ? <Unlock size={12} /> : <Lock size={12} />}
       </button>
-      <button className={styles.controlButton} onClick={onToggleCollapse}>
-        {isCollapsed ? "Expand" : "Collapse"}
+
+      <button
+        className={styles.controlButton}
+        onClick={onToggleCollapse}
+        title={isCollapsed ? "Expand" : "Collapse"}
+      >
+        {isCollapsed ? <ChevronDown size={12} /> : <ChevronUp size={12} />}
       </button>
+
       <button
         className={styles.controlButton}
         onClick={onDelete}
+        title="Delete"
         disabled={isLocked}
       >
-        Delete
+        <Trash2 size={12} />
       </button>
     </div>
   );

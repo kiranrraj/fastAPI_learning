@@ -1,5 +1,3 @@
-// src/app/components/layout/cards/PortletCardHeaderDetails.tsx
-
 import React from "react";
 import styles from "./PortletCardHeaderDetails.module.css";
 
@@ -16,23 +14,17 @@ const PortletCardHeaderDetails: React.FC<PortletCardHeaderDetailsProps> = ({
   tagColor,
   status,
 }) => {
-  const statusColorMap: Record<string, string> = {
-    idle: styles.statusIdle,
-    loading: styles.statusLoading,
-    success: styles.statusSuccess,
-    error: styles.statusError,
-    stale: styles.statusStale,
-  };
-
   return (
     <div className={styles.cardMetaRow}>
-      {/* Tag color indicator */}
-      {tagColor && (
-        <span className={styles.tagDot} style={{ backgroundColor: tagColor }} />
-      )}
-      <h1 className={styles.cardTitle}>{title}</h1>
+      <h1
+        className={styles.cardTitle}
+        style={{
+          borderBottom: tagColor ? `3px solid ${tagColor}` : undefined,
+        }}
+      >
+        {title}
+      </h1>
 
-      {/* Portlet type label */}
       <span className={styles.cardType}>{portletType}</span>
     </div>
   );

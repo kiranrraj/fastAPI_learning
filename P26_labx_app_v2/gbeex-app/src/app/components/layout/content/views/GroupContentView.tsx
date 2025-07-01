@@ -57,7 +57,9 @@ const GroupContentView: React.FC<GroupContentViewProps> = ({
           onToggleLock={onToggleLock}
           footer={<div>Additional info for {child.name}</div>}
         >
-          <div>{child.description || "Portlet content goes here."}</div>
+          <div className={styles.groupContent}>
+            {child.description || "Portlet content goes here."}
+          </div>
         </PortletCardContainer>
       ))}
     </div>

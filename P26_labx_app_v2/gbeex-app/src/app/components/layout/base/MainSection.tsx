@@ -210,17 +210,14 @@ const MainSection: React.FC = () => {
         </section>
 
         {/* Content panel */}
-        <section className={styles.content}>
-          <h2 className={styles.visuallyHidden}>Content Area</h2>
-          <ContentArea
-            tabs={Object.fromEntries(tabOrder.map((id) => [id, tabs[id]]))}
-            activeTabId={activeTabId}
-            portletData={portletData}
-            onCloseTab={closeTab}
-            onTabClick={setActiveTabId}
-            onRestoreLastTab={restoreLastClosedTab}
-          />
-        </section>
+        <ContentArea
+          tabs={Object.fromEntries(tabOrder.map((id) => [id, tabs[id]]))}
+          activeTabId={activeTabId}
+          portletData={portletData}
+          onCloseTab={closeTab}
+          onTabClick={setActiveTabId}
+          onRestoreLastTab={restoreLastClosedTab}
+        />
       </main>
 
       {/* Footer with last refresh and server status */}

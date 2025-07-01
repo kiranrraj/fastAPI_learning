@@ -21,9 +21,8 @@ const ItemContentView: React.FC<ItemContentViewProps> = ({ itemNode }) => {
         tagColor={itemNode.tagColor ?? "#888"}
         status="idle"
         lastUpdated="Just now"
-        // Pass handlers as needed
       >
-        <div>
+        <div className={styles.itemContent}>
           {itemNode.description ||
             "Detailed view of this item will be rendered here."}
         </div>

@@ -1,5 +1,11 @@
+:root {
+  --content-bg: #fff;
+  --text-primary: #111827;
+  --text-muted: #6b7280;
+}
+
 .container {
-  padding: 1rem;
+  padding: 10px;
   background-color: var(--content-bg);
 }
 
@@ -12,11 +18,34 @@
 
 .cardGrid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* fixed 2 columns */
-  gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(430px, 1fr));
+  gap: 10px;
+  align-items: center;
 }
 
 .cardMeta {
-  font-size: 0.875rem;
-  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  font-size: 14px;
+  color: var(--text-primary);
+  text-align: center;
+  border-radius: 8px;
+  background-color: #f9fafb;
+  box-shadow: inset 0 0 0 1px #e5e7eb;
 }
+
+/* Dark mode */
+/* @media (prefers-color-scheme: dark) {
+  :root {
+    --content-bg: #1f2937;
+    --text-primary: #f3f4f6;
+    --text-muted: #9ca3af;
+  }
+
+  .cardMeta {
+    background-color: #374151;
+    box-shadow: inset 0 0 0 1px #4b5563;
+  }
+} */

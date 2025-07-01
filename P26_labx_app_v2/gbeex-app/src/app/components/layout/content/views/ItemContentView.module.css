@@ -1,11 +1,41 @@
 .container {
-  max-width: 600px;
-  margin: 2rem auto;
+  max-width: 350px;
+  margin: 5px auto;
   padding: 1rem;
+  background-color: #fff;
+  color: #111827;
 }
+
 .emptyMessage {
   text-align: center;
-  color: var(--text-muted);
+  color: #6b7280;
   font-style: italic;
   margin: 2rem;
 }
+
+.itemContent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  background-color: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+}
+
+/* Dark mode support */
+/* @media (prefers-color-scheme: dark) {
+  .container {
+    background-color: #1f2937;
+    color: #f9fafb;
+  }
+
+  .emptyMessage {
+    color: #9ca3af;
+  }
+
+  .itemContent {
+    background-color: #374151;
+    border-color: #4b5563;
+  }
+} */
