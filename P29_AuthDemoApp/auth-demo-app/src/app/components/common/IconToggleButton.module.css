@@ -1,0 +1,22 @@
+/* src\app\components\common\IconToggleButton.module.css */
+
+.toggleButton {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  transition: background 0.2s ease;
+}
+
+.toggleButton:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.toggleButton:focus {
+  outline: 2px solid #4f46e5;
+  outline-offset: 2px;
+}

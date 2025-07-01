@@ -1,0 +1,36 @@
+/* src\app\components\tab\TabScroller.module.css */
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #f1f5f9;
+  padding: 0.25rem 0.5rem;
+  border-bottom: 1px solid #e2e8f0;
+  overflow: hidden;
+}
+
+.scrollContainer {
+  display: flex;
+  overflow-x: auto;
+  scrollbar-width: none;
+  flex: 1;
+  scroll-behavior: smooth;
+}
+
+.scrollContainer::-webkit-scrollbar {
+  display: none; 
+}
+
+.scrollButton {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0.25rem;
+  color: #64748b;
+  transition: color 0.2s ease-in-out;
+}
+
+.scrollButton:hover {
+  color: #1e293b;
+}

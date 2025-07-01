@@ -1,0 +1,17 @@
+/* src\app\components\header\ThemeToggle.module.css */
+
+.themeToggle {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--foreground);
+  transition: color 0.3s ease;
+}
+
+.themeToggle:hover {
+  color: var(--accent);
+}

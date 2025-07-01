@@ -1,0 +1,97 @@
+/* src\app\components\header\NotificationsDropdown.module.css */
+
+.container {
+  position: relative;
+  display: inline-block;
+}
+
+.iconButton {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  padding: 6px;
+  border-radius: 4px;
+  transition: background 0.2s ease;
+}
+
+.iconButton:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.badge {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: red;
+  color: white;
+  border-radius: 50%;
+  font-size: 10px;
+  width: 16px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  min-width: 260px;
+  max-height: 300px;
+  overflow-y: auto;
+  background: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+  z-index: 1000;
+  padding: 8px 0;
+}
+
+.empty {
+  padding: 10px 15px;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.notification {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 12px;
+  border-bottom: 1px solid #eee;
+  transition: background 0.3s ease;
+}
+
+.notification:hover {
+  background-color: #f9f9f9;
+}
+
+.read {
+  opacity: 0.6;
+}
+
+.message {
+  flex: 1;
+  font-size: 0.9rem;
+  margin-right: 10px;
+}
+
+.actions {
+  display: flex;
+  gap: 6px;
+}
+
+.iconBtn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #444;
+  padding: 4px;
+  border-radius: 4px;
+}
+
+.iconBtn:hover {
+  background-color: rgba(0, 0, 0, 0.06);
+}

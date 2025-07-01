@@ -1,0 +1,59 @@
+/* src\app\components\common\DropDown.module.css */
+
+.dropdownContainer {
+  position: relative;
+  display: inline-block;
+  width: 200px;
+  font-family: sans-serif;
+}
+
+.dropdownButton {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  text-align: left;
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: border-color 0.2s ease;
+}
+
+.dropdownButton:hover,
+.dropdownButton:focus {
+  border-color: #0070f3;
+  outline: none;
+}
+
+.dropdownMenu {
+  position: absolute;
+  top: 110%;
+  left: 0;
+  width: 100%;
+  margin: 0;
+  padding: 0.5rem 0;
+  list-style: none;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  z-index: 1000;
+}
+
+.dropdownItem {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  background: none;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  font-size: 0.95rem;
+  color: #333;
+}
+
+.dropdownItem:hover,
+.dropdownItem:focus {
+  background-color: #f0f0f0;
+  color: #0070f3;
+  outline: none;
+}

@@ -1,0 +1,70 @@
+/* src\app\components\common\SearchBar.module.csss */
+
+.searchBarContainer {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 400px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 0.5rem 0.75rem;
+  background-color: #fff;
+  transition: border-color 0.3s ease;
+}
+
+.searchBarContainer:focus-within {
+  border-color: #0070f3; /* highlight color on focus */
+}
+
+.searchIcon {
+  margin-right: 0.5rem;
+  color: #888;
+}
+
+.searchInput {
+  flex-grow: 1;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  padding: 0.25rem;
+  color: #333;
+  background-color: transparent;
+}
+
+.searchInput::placeholder {
+  color: #aaa;
+}
+
+/* Spinner styling shown during debounce delay */
+.spinner {
+  width: 1rem;
+  height: 1rem;
+  margin-left: 0.5rem;
+  animation: spin 1s linear infinite;
+}
+
+/* Clear button next to input */
+.clearButton {
+  background: none;
+  border: none;
+  margin-left: 0.25rem;
+  padding: 0.25rem;
+  cursor: pointer;
+  color: #999;
+  transition: color 0.2s ease;
+}
+
+.clearButton:hover {
+  color: #333;
+}
+
+.clearButton:focus {
+  outline: 2px solid #0070f3;
+  border-radius: 4px;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

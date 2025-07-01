@@ -1,0 +1,36 @@
+/* src\app\components\tab\TabManager.module.css */
+
+.managerWrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+}
+
+.controlBar {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0.5rem 1rem;
+  background-color: #ffffff;
+  border-top: 1px solid #e0e0e0;
+  gap: 0.5rem;
+}
+
+.controlBar button {
+  background-color: #2563eb;
+  color: white;
+  font-size: 0.875rem;
+  padding: 0.4rem 0.8rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.controlBar button:hover {
+  background-color: #1e40af;
+}

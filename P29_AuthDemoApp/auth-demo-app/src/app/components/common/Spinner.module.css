@@ -1,0 +1,47 @@
+/* src\app\components\common\Spinner.module.css */
+
+.spinner {
+  display: inline-block;
+  border-radius: 50%;
+  border-style: solid;
+  border-color: transparent;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Size Variants */
+.sm {
+  width: 20px;
+  height: 20px;
+  border-width: 2px;
+}
+
+.md {
+  width: 32px;
+  height: 32px;
+  border-width: 3px;
+}
+
+.lg {
+  width: 48px;
+  height: 48px;
+  border-width: 4px;
+}
+
+/* Color Variants */
+.primary {
+  border-top-color: #3b82f6; /* Blue */
+}
+
+.secondary {
+  border-top-color: #6b7280; /* Gray */
+}
+
+.danger {
+  border-top-color: #ef4444; /* Red */
+}
