@@ -23,3 +23,49 @@
   padding: 1.5rem;
   overflow-y: auto;
 }
+
+.loadingWrapper {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  background-color: var(--content-bg, #fff);
+  color: var(--text, #1f2937);
+  text-align: center;
+   height: 100vh;
+}
+
+.loadingMessage {
+  margin-top: 1rem;
+  font-size: 1.1rem;
+  color: #555;
+}
+
+.errorMessage {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  background-color: var(--content-bg, #fff);
+  color: var(--danger-color, #ef4444);
+  font-weight: 600;
+  font-size: 1.125rem;
+  text-align: center;
+}
+
+.retryButton {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: var(--primary-color, #3b82f6);
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.retryButton:hover {
+  background-color: var(--primary-hover, #2563eb);
+}

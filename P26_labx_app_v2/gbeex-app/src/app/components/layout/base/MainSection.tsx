@@ -1,5 +1,3 @@
-// src/app/components/layout/base/MainSection.tsx
-
 "use client";
 
 import React, { useEffect, useMemo, useState } from "react";
@@ -12,56 +10,35 @@ import { PortletNode } from "@/app/types/common/portlet.types";
 import Spinner from "@/app/components/layout/base/Spinner";
 import Footer from "@/app/components/layout/base/Footer";
 
-/**
- * MainSection
- * -----------
- * Core layout component managing:
- * - API data fetching and transformation
- * - Tab management (open, close, restore)
- * - Active tab state
- * - Displaying loading, error, or main content states
- * - Server status and last refresh tracking
- */
 const MainSection: React.FC = () => {
-  // State: raw portlet data after API and transform
   const [portletData, setPortletData] = useState<PortletNode[]>([]);
-
-  // Tabs open in the content area, keyed by node ID
   const [tabs, setTabs] = useState<Record<string, PortletNode>>({});
-
-  // Order of tabs for consistent display
   const [tabOrder, setTabOrder] = useState<string[]>([]);
-
-  // Stack for recently closed tabs to support restoration
   const [closedTabsStack, setClosedTabsStack] = useState<PortletNode[]>([]);
-
-  // Currently active tab ID
   const [activeTabId, setActiveTabId] = useState<string>("");
-
-  // Timestamp for last successful data refresh
   const [lastRefresh, setLastRefresh] = useState<number | undefined>(undefined);
-
-  // Server status indicator: 'online', 'offline', or 'unknown'
   const [serverStatus, setServerStatus] = useState<
     "online" | "offline" | "unknown"
   >("unknown");
+  const [currentTime, setCurrentTime] = useState<string>("");
 
-  // API request payload - fetch groups with children, limited for demo
+  const [loadingTimeoutExpired, setLoadingTimeoutExpired] = useState(false);
+  const [showSpinner, setShowSpinner] = useState(true);
+  const [showLoadingMessage, setShowLoadingMessage] = useState(false);
+
   const payload = useMemo(
     () => ({
-      params: [{ include_children: true, limit: 10, skip: 0 }],
+      params: [{ include_children: true, limit: 50, skip: 0 }],
     }),
     []
   );
 
-  // Custom hook to POST and fetch data
   const { data, loading, error, refresh } = useAPICall(
     "http://localhost:8000/labx/entity/InvestigationGroup/list",
     payload,
     []
   );
 
-  // Default tab representing the dashboard / default view
   const defaultTabNode: PortletNode = {
     id: "__default__",
     name: "Dashboard",
@@ -72,37 +49,77 @@ const MainSection: React.FC = () => {
     },
   };
 
-  // Effect: On receiving data, transform and initialize tabs & update status
+  // Spinner + message + fallback timeout logic
+  useEffect(() => {
+    let minSpinnerTimer: NodeJS.Timeout;
+    let timeoutTimer: NodeJS.Timeout;
+
+    if (loading) {
+      setShowSpinner(true);
+
+      // Fallback after 10s
+      timeoutTimer = setTimeout(() => {
+        setLoadingTimeoutExpired(true);
+      }, 10000);
+    } else {
+      // If loading finishes before 2s, let timer hide it later
+      minSpinnerTimer = setTimeout(() => {
+        setShowSpinner(false);
+      }, 2000);
+      setLoadingTimeoutExpired(false);
+    }
+
+    return () => {
+      clearTimeout(minSpinnerTimer);
+      clearTimeout(timeoutTimer);
+    };
+  }, [loading]);
+
+  // Update current time every minute
+  useEffect(() => {
+    const updateCurrentTime = () => {
+      const now = new Date();
+      setCurrentTime(
+        now.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" })
+      );
+    };
+    updateCurrentTime();
+    const intervalId = setInterval(updateCurrentTime, 60000);
+    return () => clearInterval(intervalId);
+  }, []);
+
   useEffect(() => {
     if (data) {
-      const transformed = transformToPortletNodes(data);
-      setPortletData(transformed);
+      if (Array.isArray(data) && data.length === 0) {
+        setServerStatus("offline");
+      } else {
+        const transformed = transformToPortletNodes(data);
+        setPortletData(transformed);
 
-      setTabs((prev) => {
-        if (!prev["__default__"]) {
-          return { ...prev, ["__default__"]: defaultTabNode };
-        }
-        return prev;
-      });
+        setTabs((prev) => {
+          if (!prev["__default__"]) {
+            return { ...prev, ["__default__"]: defaultTabNode };
+          }
+          return prev;
+        });
 
-      setTabOrder((prev) => {
-        if (!prev.includes("__default__")) {
-          return [...prev, "__default__"];
-        }
-        return prev;
-      });
+        setTabOrder((prev) => {
+          if (!prev.includes("__default__")) {
+            return [...prev, "__default__"];
+          }
+          return prev;
+        });
 
-      setActiveTabId((prev) => prev || "__default__");
+        setActiveTabId((prev) => prev || "__default__");
 
-      setLastRefresh(Date.now());
-      setServerStatus("online");
-    }
-    if (error) {
+        setLastRefresh(Date.now());
+        setServerStatus("online");
+      }
+    } else if (error) {
       setServerStatus("offline");
     }
   }, [data, error]);
 
-  // Debugging logs - comment out to disable
   useEffect(() => {
     console.groupCollapsed("[MainSection Debug]");
     console.log("portletData:", portletData);
@@ -113,7 +130,6 @@ const MainSection: React.FC = () => {
     console.groupEnd();
   }, [portletData, tabs, tabOrder, activeTabId, serverStatus]);
 
-  // Opens a new tab or focuses existing, removing default tab if needed
   const openTab = (node: PortletNode) => {
     setTabs((prev) => {
       if (prev[node.id]) {
@@ -138,7 +154,6 @@ const MainSection: React.FC = () => {
     setActiveTabId(node.id);
   };
 
-  // Close a tab, update stack, and focus fallback tab
   const closeTab = (tabId: string) => {
     setTabs((prev) => {
       const updated = { ...prev };
@@ -161,7 +176,6 @@ const MainSection: React.FC = () => {
     );
   };
 
-  // Restore the most recently closed tab
   const restoreLastClosedTab = () => {
     if (closedTabsStack.length === 0) return;
     const [lastClosed, ...rest] = closedTabsStack;
@@ -169,29 +183,31 @@ const MainSection: React.FC = () => {
     openTab(lastClosed);
   };
 
-  // Manual refresh handler - calls refetch from useAPICall
   const handleManualRefresh = () => {
     setServerStatus("unknown");
     refresh?.();
   };
 
-  // Loading state with spinner
-  if (loading) {
+  // Spinner & message view before timeout
+  if (loading && !loadingTimeoutExpired) {
     return (
       <main className={styles.mainSection}>
         <div className={styles.loadingWrapper} aria-label="Loading content">
           <Spinner />
+          {showLoadingMessage && (
+            <p className={styles.loadingMessage}>Loading content...</p>
+          )}
         </div>
       </main>
     );
   }
 
-  // Error state with message and retry button
-  if (error) {
+  // Error view after timeout or fetch failure
+  if (error || loadingTimeoutExpired) {
     return (
       <main className={styles.mainSection}>
         <div className={styles.errorMessage} role="alert">
-          Error loading data: {error.message || String(error)}
+          Error loading data: {error?.message || "Timeout fetching data"}
           <button onClick={handleManualRefresh} className={styles.retryButton}>
             Retry
           </button>
@@ -200,16 +216,14 @@ const MainSection: React.FC = () => {
     );
   }
 
-  // Main render
+  // Main layout
   return (
     <>
       <main className={styles.mainSection}>
-        {/* Sidebar panel with manual refresh button */}
         <section className={styles.sidebar}>
           <SidebarContainer onItemClick={openTab} />
         </section>
 
-        {/* Content panel */}
         <ContentArea
           tabs={Object.fromEntries(tabOrder.map((id) => [id, tabs[id]]))}
           activeTabId={activeTabId}
@@ -220,8 +234,11 @@ const MainSection: React.FC = () => {
         />
       </main>
 
-      {/* Footer with last refresh and server status */}
-      <Footer lastRefreshTimestamp={lastRefresh} serverStatus={serverStatus} />
+      <Footer
+        lastRefreshTimestamp={lastRefresh}
+        serverStatus={serverStatus}
+        currentTime={currentTime}
+      />
     </>
   );
 };

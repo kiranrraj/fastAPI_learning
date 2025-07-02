@@ -1,38 +1,19 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import { signOut } from "next-auth/react";
+import React from "react";
 import { useRouter } from "next/navigation";
 import styles from "./LogoutPage.module.css";
+import { useLogoutCountdown } from "@/app/hooks/useLogoutCountDown";
 
 const LOGOUT_DELAY = 5;
 
 export default function LogoutPage() {
-  const [countdown, setCountdown] = useState(LOGOUT_DELAY);
   const router = useRouter();
 
-  useEffect(() => {
-    let intervalId: NodeJS.Timeout;
-
-    const performLogout = async () => {
-      await signOut({ redirect: false });
-
-      intervalId = setInterval(() => {
-        setCountdown((prev) => prev - 1);
-      }, 1000);
-    };
-
-    performLogout();
-
-    return () => clearInterval(intervalId);
-  }, []);
-
-  // Redirect safely outside of render/update cycle
-  useEffect(() => {
-    if (countdown === 0) {
-      router.push("/auth/signin");
-    }
-  }, [countdown, router]);
+  // Use custom hook for logout and countdown
+  const countdown = useLogoutCountdown(LOGOUT_DELAY, () => {
+    router.push("/auth/signin");
+  });
 
   return (
     <div className={styles.logoutContainer}>
@@ -46,6 +27,7 @@ export default function LogoutPage() {
         <button
           onClick={() => router.push("/auth/signin")}
           className={styles.signinButton}
+          aria-label="Go to Sign In now"
         >
           Go to Sign In
         </button>

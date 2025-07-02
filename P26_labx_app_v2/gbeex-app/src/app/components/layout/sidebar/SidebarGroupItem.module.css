@@ -5,6 +5,7 @@
   background-color: #ffffff;
   transition: background-color 0.25s ease;
   margin-bottom: 5px;
+  border-radius: 6px;
 }
 
 .groupItem:hover {
@@ -20,10 +21,15 @@
   font-weight: 600;
   cursor: pointer;
   transition: color 0.25s ease;
+  
 }
 
 .groupItem:hover .groupName {
   color: #2563eb;
+}
+
+.groupItem:hover{
+  background: #000;
 }
 
 .chevron {

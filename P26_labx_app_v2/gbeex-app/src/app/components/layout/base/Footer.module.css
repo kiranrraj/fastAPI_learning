@@ -1,35 +1,74 @@
 .footer {
+  background-color: var(--content-bg, #fff);
+  color: var(--content-text, #111827);
+  border-top: 1px solid var(--border, #e5e7eb);
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  user-select: none;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.75rem 1.25rem;
-  background-color: #fff;
-  color: #374151;
-  font-size: 0.875rem;
-  border-top: 1px solid #e5e7eb; 
-  height: 48px;
-  font-family: 'Segoe UI', Roboto, sans-serif;
-  box-shadow: 0 -1px 3px rgba(0, 0, 0, 0.05);
+  white-space: nowrap;
 }
 
 .left {
-  font-weight: 400;
-  color: #6b7280; 
+  font-weight: 600;
+  color: var(--text-muted, #6b7280);
 }
 
 .right {
   display: flex;
   align-items: center;
-  gap: 1.25rem;
-  color: #4b5563;
+  gap: 0.4rem;
 }
 
-.time {
-  font-variant-numeric: tabular-nums;
-  font-weight: 500;
-}
-
-.status {
-  color: #10b981; 
+.statusLabel,
+.timeLabel {
   font-weight: 600;
+  margin-right: 0.1rem;
+  color: var(--text-muted, #6b7280);
 }
+
+.statusDot {
+  font-size: 1rem;
+  line-height: 1;
+  margin-right: 0.2rem;
+}
+
+.statusText {
+  text-transform: capitalize;
+  margin-right: 0.75rem;
+}
+
+.timeText {
+  margin-left: 0.2rem;
+  color: var(--text-primary, #111827);
+}
+
+.separator {
+  margin: 0 0.5rem;
+  color: var(--text-muted, #6b7280);
+}
+
+/* Dark mode support */
+/* @media (prefers-color-scheme: dark) {
+  .footer {
+    background-color: var(--content-bg, #1f2937);
+    color: var(--content-text, #f9fafb);
+    border-top: 1px solid var(--border, #374151);
+  }
+
+  .left {
+    color: var(--text-muted, #9ca3af);
+  }
+
+  .statusLabel,
+  .timeLabel {
+    color: var(--text-muted, #9ca3af);
+  }
+
+  .separator {
+    color: var(--text-muted, #9ca3af);
+  }
+} */

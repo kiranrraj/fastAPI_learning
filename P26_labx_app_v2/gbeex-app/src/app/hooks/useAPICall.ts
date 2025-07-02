@@ -1,4 +1,4 @@
-import { useEffect, useState, useCallback } from "react";
+import { useEffect, useState, useCallback, useRef } from "react";
 
 const useAPICall = (
     url: string,
@@ -10,10 +10,12 @@ const useAPICall = (
     const [error, setError] = useState<any>(null);
     const [refreshIndex, setRefreshIndex] = useState<number>(0);
 
-    // Function to trigger refresh manually
+    const isManualRefresh = useRef(false); // track manual refreshes
+
+    // Trigger manual refresh
     const refresh = useCallback(() => {
-        // For Testing Only
         console.log("[MainSection] Manual refresh triggered");
+        isManualRefresh.current = true;
         setRefreshIndex((prev) => prev + 1);
     }, []);
 
@@ -24,6 +26,11 @@ const useAPICall = (
         const fetchData = async () => {
             setLoading(true);
             setError(null);
+
+            if (isManualRefresh.current) {
+                setData(null); // clear only for manual refresh
+            }
+
             try {
                 const response = await fetch(url, {
                     method: "POST",
@@ -41,22 +48,19 @@ const useAPICall = (
                 const result = await response.json();
                 setData(result);
             } catch (err: any) {
-                if (err.name === "AbortError") {
-                    // Request aborted
-                } else {
+                if (err.name !== "AbortError") {
                     setError(err);
                 }
             } finally {
                 setLoading(false);
+                isManualRefresh.current = false; // reset flag
             }
         };
 
         fetchData();
 
-        return () => {
-            controller.abort();
-        };
-    }, [url, JSON.stringify(payload), refreshIndex, ...dependencies]);
+        return () => controller.abort();
+    }, [url, refreshIndex]); // triggers on mount + manual refresh
 
     return { data, loading, error, refresh };
 };
