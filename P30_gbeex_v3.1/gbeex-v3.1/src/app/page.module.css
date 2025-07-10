@@ -1,0 +1,28 @@
+.welcomeContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: var(--color-bg-primary);
+  color: var(--color-text-primary);
+}
+
+.welcomeTitle {
+  font-size: 1.875rem; /* 30px */
+  font-weight: 700;
+}
+
+.welcomeSubtitle {
+  margin-top: 1rem;
+  color: var(--color-text-muted);
+}
+
+.signOutButton {
+  margin-top: 2rem;
+  background-color: #dc2626; /* A red color for sign out */
+}
+
+.signOutButton:hover {
+    background-color: #b91c1c;
+}

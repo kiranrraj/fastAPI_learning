@@ -1,0 +1,152 @@
+:root {
+  --color-bg-primary: #111827;
+  --color-bg-secondary: #1f2937;
+  --color-bg-tertiary: #374151;
+  --color-border: #4b5563;
+  --color-text-primary: #f9fafb;
+  --color-text-secondary: #d1d5db;
+  --color-text-muted: #9ca3af;
+  --color-brand: #3b82f6;
+  --color-brand-hover: #2563eb;
+  --color-error: #ef4444;
+  --color-error-bg: rgba(153, 27, 27, 0.5);
+  --color-info-bg: rgba(29, 78, 216, 0.5);
+}
+
+body {
+  background-color: var(--color-bg-primary);
+  color: var(--color-text-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+/* --- Reusable Utility Classes --- */
+.w-full { width: 100%; }
+
+/* --- Buttons --- */
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1rem;
+  border-radius: 0.375rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+.btn-primary {
+  background-color: var(--color-brand);
+  color: var(--color-text-primary);
+}
+.btn-primary:hover {
+  background-color: var(--color-brand-hover);
+}
+.btn-secondary {
+  background-color: var(--color-bg-tertiary);
+  color: var(--color-text-primary);
+  border-color: var(--color-border);
+}
+.btn-secondary:hover {
+  background-color: #4b5563;
+}
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* --- Forms & Inputs --- */
+.form-container { margin-top: 2rem; }
+.form-group { margin-bottom: 1.5rem; text-align: left; }
+.form-label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--color-text-secondary);
+  display: block;
+  margin-bottom: 0.25rem;
+}
+.form-input, .form-select {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: var(--color-bg-primary);
+  border: 1px solid var(--color-border);
+  border-radius: 0.375rem;
+  color: var(--color-text-primary);
+}
+.form-input:focus, .form-select:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--color-brand);
+}
+.form-input:disabled, .form-select:disabled {
+  opacity: 0.5;
+}
+
+/* --- Divider --- */
+.divider {
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+}
+.divider-line {
+  flex-grow: 1;
+  border-top: 1px solid var(--color-border);
+}
+.divider-text {
+  flex-shrink: 0;
+  margin: 0 1rem;
+  color: var(--color-text-muted);
+  font-size: 0.75rem;
+}
+
+/* --- Alert Component --- */
+.alert {
+  padding: 1rem;
+  border-radius: 0.375rem;
+  font-size: 0.875rem;
+  display: flex;
+  align-items: center;
+  text-align: left;
+}
+.alert-error {
+  background-color: var(--color-error-bg);
+  color: #fca5a5;
+  border: 1px solid #b91c1c;
+}
+.alert-info {
+  background-color: var(--color-info-bg);
+  color: #93c5fd;
+  border: 1px solid #1d4ed8;
+}
+.alert-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-right: 0.75rem;
+  flex-shrink: 0;
+}
+
+.w-5 {
+  width: 1.25rem; /* 20px */
+}
+.h-5 {
+  height: 1.25rem; /* 20px */
+}
+.mr-2 {
+  margin-right: 0.5rem; /* 8px */
+}
+.mr-3 {
+  margin-right: 0.75rem; /* 12px */
+}
+
+/* --- Toast Container --- */
+.toast-container {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 50;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}

@@ -1,0 +1,34 @@
+.signOutContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  text-align: center;
+  padding: 1rem;
+  background-color: var(--color-bg-primary);
+}
+
+.signOutIcon {
+  width: 4rem;
+  height: 4rem;
+  color: var(--color-brand);
+}
+
+.signOutTitle {
+  margin-top: 1.5rem;
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: var(--color-text-primary);
+}
+
+.signOutSubtitle {
+  margin-top: 0.5rem;
+  max-width: 400px;
+  color: var(--color-text-muted);
+  line-height: 1.5;
+}
+
+.signInButton {
+  margin-top: 2rem;
+}
