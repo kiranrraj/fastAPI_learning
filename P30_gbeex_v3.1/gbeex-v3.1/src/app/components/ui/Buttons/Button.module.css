@@ -1,0 +1,129 @@
+:root {
+  --button-default-bg: #1e293b; /* slate-800 */
+  --button-default-text: #ffffff;
+  --button-default-hover-bg: #334155; /* slate-700 */
+
+  --button-destructive-bg: #dc2626; /* red-600 */
+  --button-destructive-text: #ffffff;
+  --button-destructive-hover-bg: #b91c1c; /* red-700 */
+  
+  --button-outline-border: #cbd5e1; /* slate-300 */
+  --button-outline-text: #334155; /* slate-700 */
+  --button-outline-hover-bg: #f1f5f9; /* slate-100 */
+
+  --button-ghost-text: #334155; /* slate-700 */
+  --button-ghost-hover-bg: #f1f5f9; /* slate-100 */
+
+  --button-icon-text: #475569; /* slate-600 */
+  --button-icon-hover-bg: #f1f5f9; /* slate-100 */
+
+  --button-focus-ring-color: #64748b; /* slate-500 */
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  
+  font-weight: 500; /* medium */
+  font-family: inherit;
+  white-space: nowrap;
+  border-radius: 0.375rem; /* 6px */
+  border: 1px solid transparent;
+  cursor: pointer;
+  
+  transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+/* Accessibility: Style for keyboard focus */
+.button:focus-visible {
+  outline: 2px solid transparent;
+  box-shadow: 0 0 0 2px white, 0 0 0 4px var(--button-focus-ring-color);
+}
+
+.button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* --- Variant Styles --- */
+.button--variant-default {
+  background-color: var(--button-default-bg);
+  color: var(--button-default-text);
+}
+.button--variant-default:hover:not(:disabled) {
+  background-color: var(--button-default-hover-bg);
+}
+
+.button--variant-destructive {
+  background-color: var(--button-destructive-bg);
+  color: var(--button-destructive-text);
+}
+.button--variant-destructive:hover:not(:disabled) {
+  background-color: var(--button-destructive-hover-bg);
+}
+
+.button--variant-outline {
+  background-color: transparent;
+  border-color: var(--button-outline-border);
+  color: var(--button-outline-text);
+}
+.button--variant-outline:hover:not(:disabled) {
+  background-color: var(--button-outline-hover-bg);
+}
+
+.button--variant-ghost {
+  background-color: transparent;
+  color: var(--button-ghost-text);
+}
+.button--variant-ghost:hover:not(:disabled) {
+  background-color: var(--button-ghost-hover-bg);
+}
+
+.button--variant-icon {
+  background-color: transparent;
+  color: var(--button-icon-text);
+  border-radius: 9999px; 
+}
+.button--variant-icon:hover:not(:disabled) {
+  background-color: var(--button-icon-hover-bg);
+}
+
+.button--variant-icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+/* --- Size Styles --- */
+.button--size-default {
+  height: 40px;
+  padding-left: 16px;
+  padding-right: 16px;
+  font-size: 14px;
+}
+.button--variant-icon.button--size-default {
+  width: 40px;
+  padding: 0;
+}
+
+.button--size-sm {
+  height: 36px;
+  padding-left: 12px;
+  padding-right: 0.75rem;
+  font-size: 14px;
+}
+.button--variant-icon.button--size-sm {
+  width: 36px;
+  padding: 0;
+}
+
+.button--size-lg {
+  height: 48px;
+  padding-left: 32px ;
+  padding-right: 32px ;
+  font-size: 16px;
+}
+.button--variant-icon.button--size-lg {
+  width: 48px;
+  padding: 0;
+}

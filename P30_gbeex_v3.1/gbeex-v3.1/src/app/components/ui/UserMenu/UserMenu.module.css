@@ -1,0 +1,46 @@
+.user-menu-container {
+  position: relative; 
+  display: inline-block;
+}
+
+.user-menu-trigger {
+  display: flex;
+  align-items: center;
+  padding: 4px;
+  border-radius: 8px;
+}
+
+.user-menu-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 9999px;
+  object-fit: cover;
+  margin-right: 8px;
+}
+
+.user-menu-name {
+  font-weight: 500;
+  font-size: 14px;
+  color: #334155;
+}
+
+@media (max-width: 640px) {
+  .user-menu-name {
+    display: none;
+  }
+
+  .user-menu-trigger {
+    padding-right: 4px;
+  }
+}
+
+.user-menu-dropdown-placeholder {
+  padding: 8px;
+  min-width: 220px;
+}
+
+.user-menu-dropdown-placeholder p {
+  padding: 8px 12px;
+  font-size: 14px;
+  color: #334155;
+}

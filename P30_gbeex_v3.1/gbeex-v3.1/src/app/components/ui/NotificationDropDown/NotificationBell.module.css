@@ -1,0 +1,20 @@
+.notification-bell-container {
+  position: relative;
+  display: inline-block;
+}
+
+.notification-bell-trigger {
+  position: relative;
+}
+
+.notification-bell-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: block;
+  width: 8px;
+  height: 8px;
+  border-radius: 9999px;
+  background-color: #ef4444;
+  border: 2px solid white;
+}

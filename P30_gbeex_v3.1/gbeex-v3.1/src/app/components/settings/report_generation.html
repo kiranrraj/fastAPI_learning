@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Reports Generator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6;
+        }
+    </style>
+</head>
+<body class="p-8">
+
+    <div class="bg-white rounded-lg border border-slate-200 shadow-sm">
+        <!-- Panel Header -->
+        <div class="p-6 border-b border-slate-200">
+            <h2 class="text-xl font-bold text-slate-800">Custom Reports Generator</h2>
+            <p class="text-slate-500 mt-1">Create, configure, and export custom reports based on your trial data.</p>
+        </div>
+
+        <div class="p-8">
+            <div class="space-y-8 divide-y divide-slate-200">
+                <!-- Step 1: Select Report Type -->
+                <div>
+                    <h3 class="text-lg leading-6 font-bold text-slate-900">Step 1: Select Report Type</h3>
+                    <p class="mt-1 text-sm text-slate-500">Choose the primary data source for your report.</p>
+                    <div class="mt-4">
+                        <select id="report-type" class="block w-full md:w-1/2 rounded-md border-slate-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
+                            <option selected>Site Performance Metrics</option>
+                            <option>Trial Pipeline Overview</option>
+                            <option>Query & Deviation Logs</option>
+                            <option>Investigator Profiles</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Step 2: Configure Columns -->
+                <div class="pt-8">
+                    <h3 class="text-lg leading-6 font-bold text-slate-900">Step 2: Choose Metrics & Dimensions</h3>
+                    <p class="mt-1 text-sm text-slate-500">Select the columns to include in your report.</p>
+                    <fieldset class="mt-4">
+                        <legend class="sr-only">Report Columns</legend>
+                        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                            <div class="relative flex items-start"><div class="flex items-center h-5"><input type="checkbox" class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded" checked></div><div class="ml-3 text-sm"><label class="font-medium text-gray-700">Site Name</label></div></div>
+                            <div class="relative flex items-start"><div class="flex items-center h-5"><input type="checkbox" class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded" checked></div><div class="ml-3 text-sm"><label class="font-medium text-gray-700">Investigator</label></div></div>
+                            <div class="relative flex items-start"><div class="flex items-center h-5"><input type="checkbox" class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded" checked></div><div class="ml-3 text-sm"><label class="font-medium text-gray-700">Country</label></div></div>
+                            <div class="relative flex items-start"><div class="flex items-center h-5"><input type="checkbox" class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded" checked></div><div class="ml-3 text-sm"><label class="font-medium text-gray-700">Enrollment Count</label></div></div>
+                            <div class="relative flex items-start"><div class="flex items-center h-5"><input type="checkbox" class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded" checked></div><div class="ml-3 text-sm"><label class="font-medium text-gray-700">Enrollment Rate</label></div></div>
+                            <div class="relative flex items-start"><div class="flex items-center h-5"><input type="checkbox" class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded"></div><div class="ml-3 text-sm"><label class="font-medium text-gray-700">Dropout Rate</label></div></div>
+                            <div class="relative flex items-start"><div class="flex items-center h-5"><input type="checkbox" class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded" checked></div><div class="ml-3 text-sm"><label class="font-medium text-gray-700">Deviation Count</label></div></div>
+                            <div class="relative flex items-start"><div class="flex items-center h-5"><input type="checkbox" class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded"></div><div class="ml-3 text-sm"><label class="font-medium text-gray-700">Query Resolution Time</label></div></div>
+                        </div>
+                    </fieldset>
+                </div>
+
+                <!-- Step 3: Set Filters -->
+                <div class="pt-8">
+                    <h3 class="text-lg leading-6 font-bold text-slate-900">Step 3: Apply Filters</h3>
+                    <p class="mt-1 text-sm text-slate-500">Narrow down the data included in your report.</p>
+                    <div class="mt-4 grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div>
+                            <label for="trial-filter" class="block text-sm font-medium text-slate-700">Trial</label>
+                            <select id="trial-filter" class="mt-1 block w-full rounded-md border-slate-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
+                                <option>All Trials</option>
+                                <option selected>CardioHealth Study (CHS-01)</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="date-range" class="block text-sm font-medium text-slate-700">Date Range</label>
+                             <select id="date-range" class="mt-1 block w-full rounded-md border-slate-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
+                                <option>Last 30 Days</option>
+                                <option selected>Last 90 Days</option>
+                                <option>Last 6 Months</option>
+                                <option>Last 12 Months</option>
+                                <option>All Time</option>
+                            </select>
+                        </div>
+                         <div>
+                            <label for="status-filter" class="block text-sm font-medium text-slate-700">Site Status</label>
+                             <select id="status-filter" class="mt-1 block w-full rounded-md border-slate-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
+                                <option>All</option>
+                                <option selected>Active</option>
+                                <option>Recruiting</option>
+                                <option>Closed</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 4: Export Options -->
+                <div class="pt-8">
+                    <h3 class="text-lg leading-6 font-bold text-slate-900">Step 4: Configure Output</h3>
+                    <p class="mt-1 text-sm text-slate-500">Name your report and choose an export format.</p>
+                    <div class="mt-4 grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="report-name" class="block text-sm font-medium text-slate-700">Report Name</label>
+                            <input type="text" id="report-name" value="Q3 Site Performance - CHS-01" class="mt-1 block w-full shadow-sm sm:text-sm border-slate-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500">
+                        </div>
+                        <div>
+                            <label for="export-format" class="block text-sm font-medium text-slate-700">Export Format</label>
+                            <select id="export-format" class="mt-1 block w-full rounded-md border-slate-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
+                                <option>PDF</option>
+                                <option selected>CSV</option>
+                                <option>Excel (.xlsx)</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Panel Footer -->
+        <div class="p-6 border-t border-slate-200 flex justify-end items-center space-x-4">
+            <button type="button" class="bg-white py-2 px-4 border border-slate-300 rounded-md shadow-sm text-sm font-medium text-slate-700 hover:bg-slate-50">
+                Preview
+            </button>
+            <button type="submit" class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700">
+                <svg class="w-5 h-5 mr-2 -ml-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM6.293 6.707a1 1 0 010-1.414l3-3a1 1 0 011.414 0l3 3a1 1 0 01-1.414 1.414L11 5.414V13a1 1 0 11-2 0V5.414L7.707 6.707a1 1 0 01-1.414 0z" clip-rule="evenodd" /></svg>
+                Generate & Download
+            </button>
+        </div>
+    </div>
+
+</body>
+</html>

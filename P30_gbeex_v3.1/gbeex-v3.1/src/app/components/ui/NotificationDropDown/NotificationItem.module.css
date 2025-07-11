@@ -1,0 +1,53 @@
+.notification-item {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 12px;
+  border-radius: 8px;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.notification-item:hover {
+  background-color: #f8fafc;
+}
+
+.notification-item-content {
+  flex-grow: 1;
+  margin-right: 12px;
+}
+
+.notification-item-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.notification-item-description {
+  font-size: 12px;
+  color: #64748b;
+  margin-top: 2px;
+}
+
+.notification-item-dismiss {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 9999px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #94a3b8;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.notification-item:hover .notification-item-dismiss {
+  opacity: 1;
+}
+
+.notification-item-dismiss:hover {
+  background-color: #e2e8f0;
+}

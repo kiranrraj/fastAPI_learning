@@ -3,10 +3,10 @@
 import React, { useState, useEffect } from "react";
 import { LogIn } from "lucide-react";
 import Image from "next/image";
-import GoogleIcon from "@/app/components/ui/Icons/GoogleIcon";
-import GitHubIcon from "@/app/components/ui/Icons/GitHubIcon";
+import GoogleIcon from "@/app/components/Icons/GoogleIcon";
+import GitHubIcon from "@/app/components/Icons/GitHubIcon";
 import { Alert } from "@/app/components/ui/Alert/Alert";
-import type { SignInPageProps } from "@/app/types/auth";
+import type { SignInPageProps } from "@/app/types/auth.types";
 import styles from "./SignInPage.module.css";
 
 const USER_ROLES = ["Admin", "User", "Doctor", "Analyst"];

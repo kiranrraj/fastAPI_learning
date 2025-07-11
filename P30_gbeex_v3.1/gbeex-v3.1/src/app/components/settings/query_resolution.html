@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Query & Deviation Tracker</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6;
+        }
+    </style>
+</head>
+<body class="p-8">
+
+    <div class="bg-white rounded-lg border border-slate-200 shadow-sm">
+        <!-- Panel Header -->
+        <div class="p-6 border-b border-slate-200">
+            <h2 class="text-xl font-bold text-slate-800">Query Resolution & Deviation Tracker</h2>
+            <p class="text-slate-500 mt-1">Track, manage, and resolve all data queries and protocol deviations.</p>
+        </div>
+
+        <!-- KPI Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 p-6">
+            <div class="bg-white p-5 border border-slate-200 rounded-lg">
+                <h3 class="text-sm font-medium text-slate-500">Open Queries</h3>
+                <p class="mt-1 text-3xl font-semibold text-slate-900">42</p>
+                <p class="mt-1 text-sm text-slate-500"><span class="font-medium text-green-600">5 resolved</span> in last 24h</p>
+            </div>
+             <div class="bg-white p-5 border border-slate-200 rounded-lg">
+                <h3 class="text-sm font-medium text-slate-500">Overdue Items</h3>
+                <p class="mt-1 text-3xl font-semibold text-red-600">8</p>
+                <p class="mt-1 text-sm text-slate-500">3 queries, 5 deviations</p>
+            </div>
+             <div class="bg-white p-5 border border-slate-200 rounded-lg">
+                <h3 class="text-sm font-medium text-slate-500">Total Deviations</h3>
+                <p class="mt-1 text-3xl font-semibold text-slate-900">14</p>
+                <p class="mt-1 text-sm text-slate-500"><span class="font-medium text-green-600">1 closed</span> this week</p>
+            </div>
+             <div class="bg-white p-5 border border-slate-200 rounded-lg">
+                <h3 class="text-sm font-medium text-slate-500">Avg. Resolution Time</h3>
+                <p class="mt-1 text-3xl font-semibold text-slate-900">3.1 <span class="text-base font-medium text-slate-500">days</span></p>
+                <p class="mt-1 text-sm text-slate-500">Target: &lt; 3 days</p>
+            </div>
+        </div>
+
+        <!-- Filters and Actions -->
+        <div class="p-6 border-t border-slate-200 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+            <div class="flex items-center space-x-4">
+                 <select class="rounded-md border-slate-300 shadow-sm text-sm">
+                    <option>Status: All</option>
+                    <option>Open</option>
+                    <option>Closed</option>
+                    <option>Pending</option>
+                </select>
+                 <select class="rounded-md border-slate-300 shadow-sm text-sm">
+                    <option>Priority: All</option>
+                    <option>High</option>
+                    <option>Medium</option>
+                    <option>Low</option>
+                </select>
+                 <select class="rounded-md border-slate-300 shadow-sm text-sm">
+                    <option>Type: All</option>
+                    <option>Query</option>
+                    <option>Deviation</option>
+                </select>
+            </div>
+            <button class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                <svg class="w-5 h-5 mr-2 -ml-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14m-7-7h14" /></svg>
+                Log New Item
+            </button>
+        </div>
+
+        <!-- Tracker Table -->
+        <div class="overflow-x-auto">
+            <table class="min-w-full divide-y divide-slate-200">
+                <thead class="bg-slate-50">
+                    <tr>
+                        <th class="px-6 py-3 text-left text-xs font-medium text-slate-500 uppercase tracking-wider">Type</th>
+                        <th class="px-6 py-3 text-left text-xs font-medium text-slate-500 uppercase tracking-wider">ID</th>
+                        <th class="px-6 py-3 text-left text-xs font-medium text-slate-500 uppercase tracking-wider">Site</th>
+                        <th class="px-6 py-3 text-left text-xs font-medium text-slate-500 uppercase tracking-wider">Description</th>
+                        <th class="px-6 py-3 text-left text-xs font-medium text-slate-500 uppercase tracking-wider">Status</th>
+                        <th class="px-6 py-3 text-left text-xs font-medium text-slate-500 uppercase tracking-wider">Priority</th>
+                        <th class="px-6 py-3 text-left text-xs font-medium text-slate-500 uppercase tracking-wider">Opened</th>
+                        <th class="px-6 py-3 text-left text-xs font-medium text-slate-500 uppercase tracking-wider">Assigned To</th>
+                        <th class="relative px-6 py-3"><span class="sr-only">Actions</span></th>
+                    </tr>
+                </thead>
+                <tbody class="bg-white divide-y divide-slate-200">
+                    <!-- Sample Row 1: High Priority Query -->
+                    <tr>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-500"><span class="inline-flex items-center"><svg class="w-4 h-4 mr-1.5 text-blue-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>Query</span></td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm font-mono text-slate-500">QRY-0192</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-slate-900">City General Hospital</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-500 truncate max-w-xs">Inconsistent systolic blood pressure reading for P-003</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm"><span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-red-100 text-red-800">Open</span></td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-red-600 font-semibold">High</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-500">Jul 10, 2025</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-500">Dr. E. Carter</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium"><a href="#" class="text-indigo-600 hover:text-indigo-900">Resolve</a></td>
+                    </tr>
+                    <!-- Sample Row 2: Closed Deviation -->
+                    <tr>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-500"><span class="inline-flex items-center"><svg class="w-4 h-4 mr-1.5 text-amber-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.46 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg>Deviation</span></td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm font-mono text-slate-500">DEV-0034</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-slate-900">Bayview Medical Center</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-500 truncate max-w-xs">Patient missed scheduled dose on Day 5</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm"><span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">Closed</span></td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-500">Medium</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-500">Jul 08, 2025</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-500">CRA Team</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium"><a href="#" class="text-indigo-600 hover:text-indigo-900">View</a></td>
+                    </tr>
+                    <!-- Sample Row 3: Pending Query -->
+                     <tr>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-500"><span class="inline-flex items-center"><svg class="w-4 h-4 mr-1.5 text-blue-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>Query</span></td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm font-mono text-slate-500">QRY-0191</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-slate-900">Northside Research</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-500 truncate max-w-xs">Unclear entry in patient diary for P-012</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm"><span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-yellow-100 text-yellow-800">Pending</span></td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-500">Low</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-500">Jul 11, 2025</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-slate-500">Site Staff</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium"><a href="#" class="text-indigo-600 hover:text-indigo-900">View</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</body>
+</html>

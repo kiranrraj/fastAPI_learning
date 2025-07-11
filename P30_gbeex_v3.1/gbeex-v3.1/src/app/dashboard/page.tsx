@@ -3,26 +3,24 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import {
-  Search,
-  Bell,
-  User,
   ChevronsLeft,
   ChevronsRight,
   Folder,
   FileText,
   X,
   Home,
-  LogOut,
 } from "lucide-react";
 import styles from "./page.module.css";
 import { useRouter } from "next/navigation";
-// Import the new types
+import Header from "@/app/components/layout/Header/Header";
+
+// Import the necessary types
 import type {
   SidebarItemType,
   TabType,
-  HeaderProps,
   TreeItemProps,
-} from "@/app/types/dashboard";
+  User,
+} from "@/app/types/dashboard.types";
 
 // --- Mock Data for Sidebar ---
 const sidebarData: SidebarItemType[] = [
@@ -70,39 +68,6 @@ const sidebarData: SidebarItemType[] = [
 ];
 
 // --- Sub-Components for the Layout ---
-
-const Header = ({ onSignOut }: HeaderProps) => (
-  <header className={styles.header}>
-    <div className={styles.headerLeft}>
-      <Image
-        src="/company_logo_resize.png"
-        alt="Company Logo"
-        width={50}
-        height={31}
-      />
-      <h1 className={styles.headerTitle}>GBeex Knowledge Dashboard</h1>
-    </div>
-    <div className={styles.headerRight}>
-      <button className={styles.iconButton} aria-label="Search">
-        <Search size={20} />
-      </button>
-      <button className={styles.iconButton} aria-label="Notifications">
-        <Bell size={20} />
-      </button>
-      <button
-        onClick={onSignOut}
-        className={styles.iconButton}
-        aria-label="Sign Out"
-      >
-        <LogOut size={20} />
-      </button>
-      <div className={styles.userMenu}>
-        <User size={20} />
-        <span>Admin</span>
-      </div>
-    </div>
-  </header>
-);
 
 const TreeItem = ({
   item,
@@ -186,9 +151,14 @@ export default function DashboardPage() {
     "study-x-views": true,
   });
 
+  // --- MOCK USER DATA FOR THE NEW HEADER ---
+  const currentUser: User = {
+    name: "Admin",
+    avatarUrl: "https://placehold.co/100x100/E2E8F0/475569?text=A",
+  };
+
   const handleSelectItem = (item: SidebarItemType) => {
     if (!openTabs.find((tab) => tab.id === item.id)) {
-      // Create a new TabType object from the SidebarItemType
       const newTab: TabType = { id: item.id, name: item.name };
       setOpenTabs([...openTabs, newTab]);
     }
@@ -241,7 +211,9 @@ export default function DashboardPage() {
 
   return (
     <div className={styles.dashboardContainer}>
-      <Header onSignOut={handleSignOut} />
+      {/* --- USE THE NEW HEADER COMPONENT --- */}
+      <Header user={currentUser} onSignOut={handleSignOut} />
+
       <div className={styles.mainArea}>
         <nav
           className={`${styles.sidebar} ${

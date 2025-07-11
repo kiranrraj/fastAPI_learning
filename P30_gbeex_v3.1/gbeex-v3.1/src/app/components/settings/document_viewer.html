@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Protocol Document Viewer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6;
+        }
+        .prose {
+            max-width: none;
+        }
+        .sidebar-link-active {
+            background-color: #eef2ff;
+            color: #4338ca;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body class="p-8">
+
+    <div class="bg-white rounded-lg border border-slate-200 shadow-sm flex h-[85vh]">
+        <!-- Left Sidebar: Document Navigation -->
+        <aside class="w-1/4 flex-shrink-0 border-r border-slate-200 bg-slate-50/50 p-6 flex flex-col">
+            <h3 class="text-lg font-bold text-slate-800 mb-4">Document Sections</h3>
+            <nav class="flex-grow overflow-y-auto">
+                <ul class="space-y-1">
+                    <li><a href="#introduction" class="sidebar-link-active block px-3 py-2 rounded-md text-sm">1.0 Introduction</a></li>
+                    <li><a href="#objectives" class="block px-3 py-2 rounded-md text-sm text-slate-600 hover:bg-slate-100">2.0 Objectives</a></li>
+                    <li>
+                        <a href="#studydesign" class="block px-3 py-2 rounded-md text-sm text-slate-600 hover:bg-slate-100">3.0 Study Design</a>
+                        <ul class="pl-4 mt-1 space-y-1">
+                             <li><a href="#studydesign-3-1" class="block px-3 py-2 rounded-md text-sm text-slate-500 hover:bg-slate-100">3.1 General Design</a></li>
+                             <li><a href="#studydesign-3-2" class="block px-3 py-2 rounded-md text-sm text-slate-500 hover:bg-slate-100">3.2 Blinding</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#eligibility" class="block px-3 py-2 rounded-md text-sm text-slate-600 hover:bg-slate-100">4.0 Eligibility Criteria</a>
+                         <ul class="pl-4 mt-1 space-y-1">
+                             <li><a href="#eligibility-4-1" class="block px-3 py-2 rounded-md text-sm text-slate-500 hover:bg-slate-100">4.1 Inclusion Criteria</a></li>
+                             <li><a href="#eligibility-4-2" class="block px-3 py-2 rounded-md text-sm text-slate-500 hover:bg-slate-100">4.2 Exclusion Criteria</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#treatment" class="block px-3 py-2 rounded-md text-sm text-slate-600 hover:bg-slate-100">5.0 Treatment of Subjects</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Right Side: Document Content -->
+        <main class="w-3/4 flex flex-col">
+            <!-- Viewer Header -->
+            <div class="p-4 border-b border-slate-200 flex-shrink-0 flex justify-between items-center">
+                <div>
+                    <h2 class="text-lg font-bold text-slate-800">Protocol: CardioHealth Study (CHS-01)</h2>
+                    <p class="text-sm text-slate-500">Version 2.1 - Last Updated: June 15, 2025</p>
+                </div>
+                <div class="flex items-center space-x-2">
+                    <button class="p-2 rounded-md hover:bg-slate-100 text-slate-500">
+                        <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd" /></svg>
+                    </button>
+                     <button class="p-2 rounded-md hover:bg-slate-100 text-slate-500">
+                        <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path d="M17.414 2.586a2 2 0 00-2.828 0L7 10.172V13h2.828l7.586-7.586a2 2 0 000-2.828z" /><path fill-rule="evenodd" d="M2 6a2 2 0 012-2h4a1 1 0 010 2H4v10h10v-4a1 1 0 112 0v4a2 2 0 01-2 2H4a2 2 0 01-2-2V6z" clip-rule="evenodd" /></svg>
+                    </button>
+                    <button class="p-2 rounded-md hover:bg-slate-100 text-slate-500">
+                        <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M6 2a2 2 0 00-2 2v12a2 2 0 002 2h8a2 2 0 002-2V7.414A2 2 0 0015.414 6L12 2.586A2 2 0 0010.586 2H6zm5 6a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 102 0v-2h2a1 1 0 100-2h-2V8z" clip-rule="evenodd" /></svg>
+                    </button>
+                    <div class="w-px h-6 bg-slate-200"></div>
+                    <button class="p-2 rounded-md hover:bg-slate-100 text-slate-500">
+                        <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM6.293 6.707a1 1 0 010-1.414l3-3a1 1 0 011.414 0l3 3a1 1 0 01-1.414 1.414L11 5.414V13a1 1 0 11-2 0V5.414L7.707 6.707a1 1 0 01-1.414 0z" clip-rule="evenodd" /></svg>
+                    </button>
+                    <button class="p-2 rounded-md hover:bg-slate-100 text-slate-500">
+                        <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5 4v3H4a2 2 0 00-2 2v3a2 2 0 002 2h1v3a2 2 0 002 2h6a2 2 0 002-2v-3h1a2 2 0 002-2V9a2 2 0 00-2-2h-1V4a2 2 0 00-2-2H7a2 2 0 00-2 2zm8 0H7v3h6V4zm0 8H7v4h6v-4z" clip-rule="evenodd" /></svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Scrollable Content Area -->
+            <div class="p-8 flex-grow overflow-y-auto">
+                <article class="prose">
+                    <section id="introduction">
+                        <h3 class="text-lg font-semibold">1.0 Introduction</h3>
+                        <p>This document outlines the protocol for a multicenter, randomized, double-blind, placebo-controlled study to evaluate the efficacy and safety of Cardiocare (Codenamed RX-123) in patients with moderate to severe heart failure. The study aims to enroll approximately 500 subjects across 25 sites globally.</p>
+                        <p>The primary objective is to assess the effect of Cardiocare on the composite endpoint of cardiovascular death or hospitalization for heart failure.</p>
+                    </section>
+
+                    <section id="objectives" class="mt-8">
+                        <h3 class="text-lg font-semibold">2.0 Objectives</h3>
+                        <p>The primary and secondary objectives of this study are as follows:</p>
+                        <ul class="list-disc pl-6 mt-2 space-y-1">
+                            <li>To evaluate the effect of Cardiocare compared with placebo on the primary composite endpoint.</li>
+                            <li>To assess the safety and tolerability profile of Cardiocare.</li>
+                            <li>To evaluate the effect of Cardiocare on patient-reported outcomes using the Kansas City Cardiomyopathy Questionnaire (KCCQ).</li>
+                        </ul>
+                    </section>
+                    
+                    <section id="eligibility" class="mt-8">
+                        <h3 class="text-lg font-semibold">4.0 Eligibility Criteria</h3>
+                        <div id="eligibility-4-1" class="mt-4">
+                            <h4 class="font-semibold">4.1 Inclusion Criteria</h4>
+                            <p>Subjects must meet all of the following inclusion criteria to be eligible for enrollment into the study:</p>
+                            <ol class="list-decimal pl-6 mt-2 space-y-1">
+                                <li>Male or female subjects aged 18 years or older.</li>
+                                <li>Documented diagnosis of chronic heart failure (NYHA Class II-IV).</li>
+                                <li>Left Ventricular Ejection Fraction (LVEF) ≤ 40%.</li>
+                                <li>Subject must be capable of giving signed informed consent.</li>
+                            </ol>
+                        </div>
+                         <div id="eligibility-4-2" class="mt-6">
+                            <h4 class="font-semibold">4.2 Exclusion Criteria</h4>
+                            <p>Subjects who meet any of the following exclusion criteria are not eligible for enrollment:</p>
+                             <ol class="list-decimal pl-6 mt-2 space-y-1">
+                                <li>Myocardial infarction within the last 3 months.</li>
+                                <li>Systolic blood pressure > 160 mmHg or < 90 mmHg.</li>
+                                <li>History of significant renal or hepatic impairment.</li>
+                            </ol>
+                        </div>
+                    </section>
+                </article>
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>

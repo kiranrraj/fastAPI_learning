@@ -1,6 +1,6 @@
 import React from "react";
 import { ShieldX, Clock } from "lucide-react";
-import type { AlertProps } from "@/app/types/alert";
+import type { AlertProps } from "@/app/types/alert.types";
 
 export const Alert = ({ type, message }: AlertProps) => (
   <div className={`alert alert-${type}`}>

@@ -1,0 +1,45 @@
+:root {
+  --dropdown-bg: #ffffff;
+  --dropdown-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -4px rgba(0, 0, 0, 0.1);
+  --dropdown-border-color: #e2e8f0;
+  --dropdown-border-radius: 12px;
+}
+
+.dropdown-panel {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  margin-top: 8px;
+  background-color: var(--dropdown-bg);
+  border: 1px solid var(--dropdown-border-color);
+  border-radius: var(--dropdown-border-radius);
+  box-shadow: var(--dropdown-shadow);
+  z-index: 9999;
+  min-width: 220px;
+  padding: 8px 0;
+  animation: dropdown-fade-in 0.15s ease-out;
+}
+
+.origin-top-right {
+  transform-origin: top right;
+}
+
+.origin-top-left {
+  transform-origin: top left;
+}
+
+.origin-bottom-right {
+  transform-origin: bottom right;
+}
+
+@keyframes dropdown-fade-in {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
