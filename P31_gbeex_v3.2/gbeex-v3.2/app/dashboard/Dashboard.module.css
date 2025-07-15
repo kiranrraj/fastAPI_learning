@@ -1,0 +1,51 @@
+/* app/dashboard/Dashboard.module.css */
+
+.dashboardContainer {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.bodyArea {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+/* Sidebar */
+.sidebarWrapper {
+  width: 400px;
+  transition: width 0.3s ease;
+  background-color: #f9f9f9;
+  border-right: 1px solid #ddd;
+  overflow: hidden;
+}
+
+.sidebarCollapsed {
+  width: 0;
+  min-width: 0;
+  padding: 0;
+  border: none;
+}
+
+/* Main Content */
+.mainContentWrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  transition: margin 0.3s ease;
+  background: #fff;
+  overflow-y: auto;
+}
+
+.headerCollapsed {
+  flex-direction: row-reverse;
+
+}
+
+.dashboardContent {
+  flex: 1;
+  padding: 1rem;
+  overflow-y: auto;
+}
