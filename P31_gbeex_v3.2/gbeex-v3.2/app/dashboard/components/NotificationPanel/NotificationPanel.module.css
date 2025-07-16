@@ -1,0 +1,127 @@
+.panel {
+  background-color: #ffffff;
+  border-radius: 0.75rem; /* Slightly larger radius */
+  border: 1px solid #e2e8f0;
+  width: 360px; /* A bit wider */
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1); /* More subtle shadow */
+  animation: fadeIn 0.15s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.panelHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 1.25rem; /* More horizontal padding */
+  border-bottom: 1px solid #f1f5f9; /* Lighter border */
+}
+
+.panelTitle {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1e293b; /* Darker, more saturated color */
+  margin: 0;
+}
+
+.clearButton {
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+  background: none;
+  border: none;
+  color: #64748b; /* Softer color */
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 0.375rem 0.75rem;
+  border-radius: 0.375rem;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.clearButton:hover {
+  background-color: #fef2f2;
+  color: #ef4444;
+}
+
+.panelContent {
+  padding: 0.5rem;
+  max-height: 320px; /* Slightly more height */
+  overflow-y: auto;
+}
+
+.notificationList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.notificationItem {
+  position: relative;
+  display: flex;
+  align-items: flex-start; /* Align to top for multi-line text */
+  gap: 0.875rem;
+  padding: 1rem 2.5rem 1rem 1rem; /* More padding */
+  border-radius: 0.375rem;
+  transition: background-color 0.2s;
+}
+
+.notificationItem:hover {
+  background-color: #f8fafc;
+}
+
+.iconWrapper {
+  flex-shrink: 0;
+  color: #4f46e5;
+  margin-top: 2px;
+}
+
+.message {
+  font-size: 0.875rem;
+  color: #334155;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.deleteButton {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  background: none;
+  border: none;
+  border-radius: 50%;
+  color: #94a3b8;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.2s, background-color 0.2s, color 0.2s;
+}
+
+.notificationItem:hover .deleteButton {
+  opacity: 1;
+}
+
+.deleteButton:hover {
+  background-color: #f1f5f9;
+  color: #334155;
+}
+
+.emptyMessage {
+  text-align: center;
+  padding: 2.5rem 1rem;
+  font-size: 0.875rem;
+  color: #64748b;
+}

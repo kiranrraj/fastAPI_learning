@@ -1,0 +1,89 @@
+.header {
+  height: 60px;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+  border-bottom: 1px solid #e2e8f0;
+  transition: padding 0.3s ease;
+}
+
+.header.collapsedHeader {
+  padding: 0 12px;
+}
+
+.left, .right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.hamburger, .iconBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  color: #475569;
+  transition: background-color 0.2s;
+}
+
+.hamburger:hover, .iconBtn:hover {
+  background-color: #f1f5f9;
+}
+
+.appName {
+  font-weight: 700;
+  font-size: 1.25rem;
+  display: flex;
+  align-items: center;
+  /* This ensures the app name stays in the center */
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.appNameG { color: #3b82f6; }
+.appNameBee { color: #f97316; }
+.appNameX { color: #10b981; }
+.appNameSub { font-size: 0.9rem; color: #64748b; font-weight: 500; }
+
+.notificationWrapper {
+  position: relative;
+}
+
+.notificationBadge {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  min-width: 18px;
+  height: 18px;
+  border-radius: 999px;
+  background-color: #dc2626;
+  color: white;
+  font-size: 10px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid white;
+}
+
+/* Position the notification panel correctly */
+.notificationWrapper > div {
+  position: absolute;
+  top: calc(100% + 12px);
+  right: 0;
+  z-index: 20;
+}
+
+.separator {
+  width: 1px;
+  height: 24px;
+  background-color: #e2e8f0;
+}

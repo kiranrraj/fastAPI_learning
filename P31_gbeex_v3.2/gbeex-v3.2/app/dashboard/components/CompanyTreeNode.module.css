@@ -1,0 +1,37 @@
+/* app/dashboard/components/sidebar/CompanyTreeNode.module.css */
+
+.node {
+  margin-bottom: 4px;
+}
+
+.label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  flex-grow: 1;
+}
+
+.name {
+  margin-left: 6px;
+  font-size: 14px;
+  color: #222;
+  user-select: none;
+}
+
+.name:hover {
+  text-decoration: underline;
+}
+
+.star {
+  margin-left: 6px;
+}
+
+.children {
+  margin-top: 4px;
+}

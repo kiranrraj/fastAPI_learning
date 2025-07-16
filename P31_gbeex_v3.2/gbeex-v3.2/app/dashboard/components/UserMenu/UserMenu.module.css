@@ -1,0 +1,15 @@
+.userToggleButton { display: flex; align-items: center; gap: 0.5rem; background-color: #ffffff; border: 1px solid #e2e8f0; padding: 0.5rem 0.75rem; border-radius: 0.5rem; cursor: pointer; transition: background-color 0.2s, box-shadow 0.2s; }
+.userToggleButton:hover { background-color: #f8fafc; }
+.userToggleAvatar { width: 28px; height: 28px; border-radius: 50%; background-color: #eef2ff; display: flex; align-items: center; justify-content: center; color: #4f46e5; }
+.userToggleName { font-weight: 500; color: #1e293b; }
+.userChevron { color: #64748b; transition: transform 0.2s; }
+
+.userGrid { display: grid; grid-template-columns: auto 1fr 1fr; grid-template-rows: auto; padding: 1.5rem; gap: 1.5rem; }
+.userAvatarCell { grid-row: 1 / 2; display: flex; align-items: center; justify-content: center; }
+.mainAvatar { width: 80px; height: 80px; border-radius: 50%; background-color: #eef2ff; display: flex; align-items: center; justify-content: center; color: #4f46e5; }
+.userInfoCell, .userActionsCell { display: flex; flex-direction: column; gap: 1rem; justify-content: center; }
+.detailItem { display: flex; gap: 0.75rem; align-items: flex-start; }
+.detailText .label { display: block; font-size: 0.75rem; font-weight: 500; color: #64748b; margin-bottom: 2px; }
+.detailText .value { display: block; font-size: 0.875rem; color: #1e293b; word-break: break-all; }
+.userLogoutButton { display: flex; align-items: center; justify-content: center; gap: 0.75rem; width: 100%; padding: 0.6rem; text-align: center; background-color: #f8fafc; border: 1px solid #e2e8f0; border-radius: 0.375rem; cursor: pointer; font-size: 0.875rem; font-weight: 500; color: #dc2626; transition: background-color 0.2s, border-color 0.2s; }
+.userLogoutButton:hover { background-color: #fee2e2; border-color: #fca5a5; }

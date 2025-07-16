@@ -1,0 +1,70 @@
+.iconButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 50%;
+  color: #475569;
+  cursor: pointer;
+  transition: background-color 0.2s, box-shadow 0.2s;
+}
+.iconButton:hover {
+  background-color: #f8fafc;
+}
+
+.menuList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.menuItem {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0.6rem 0.75rem;
+    background: none;
+    border: none;
+    border-radius: 0.25rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #334155;
+    cursor: pointer;
+    text-align: left;
+    text-decoration: none;
+    transition: background-color 0.2s, color 0.2s;
+}
+.menuItem:hover {
+    background-color: #f8fafc;
+    color: #1e293b;
+}
+.itemContent {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+.itemIcon {
+    color: #64748b;
+}
+.itemChevron {
+    color: #94a3b8;
+}
+.menuSeparator {
+    height: 1px;
+    background-color: #e2e8f0;
+    margin: 0.5rem 0;
+}
+.versionItem {
+    cursor: default;
+}
+.versionItem:hover {
+    background-color: transparent;
+}
+.versionText {
+    font-size: 0.75rem;
+    color: #64748b;
+    font-weight: 400;
+}

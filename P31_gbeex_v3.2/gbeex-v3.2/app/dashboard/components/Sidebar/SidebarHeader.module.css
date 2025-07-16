@@ -1,0 +1,60 @@
+/* app/dashboard/components/sidebar/SidebarHeader.module.css */
+
+.header {
+  padding: 10px 12px;
+  border-bottom: 1px solid #ddd;
+  background-color: #f9f9f9;
+}
+
+.controls {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.controls button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.sortBtn {
+  transition: transform 0.3s ease;
+}
+
+.sortBtn.asc {
+  transform: rotate(0deg);
+}
+
+.sortBtn.desc {
+  transform: rotate(180deg);
+}
+
+.searchContainer {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.searchIcon {
+  position: absolute;
+  left: 8px;
+  color: #999;
+}
+
+.searchInput {
+  padding: 6px 8px 6px 28px;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.clearBtn {
+  position: absolute;
+  right: 6px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}

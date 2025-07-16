@@ -1,51 +1,42 @@
-/* app/dashboard/Dashboard.module.css */
-
 .dashboardContainer {
   display: flex;
   flex-direction: column;
   height: 100vh;
+  width: 100vw;
+  background-color: #f8fafc;
   overflow: hidden;
 }
 
 .bodyArea {
   display: flex;
-  flex: 1;
+  flex-grow: 1;
   overflow: hidden;
 }
 
-/* Sidebar */
 .sidebarWrapper {
-  width: 400px;
-  transition: width 0.3s ease;
-  background-color: #f9f9f9;
-  border-right: 1px solid #ddd;
-  overflow: hidden;
+  flex-shrink: 0;
+  transition: min-width 0.3s ease, width 0.3s ease;
+  width: 280px; 
 }
 
 .sidebarCollapsed {
-  width: 0;
-  min-width: 0;
+  min-width: 0 !important;
+  width: 0 !important;
+  overflow: hidden;
   padding: 0;
-  border: none;
 }
 
-/* Main Content */
 .mainContentWrapper {
-  flex: 1;
+  flex-grow: 1;
   display: flex;
   flex-direction: column;
-  transition: margin 0.3s ease;
-  background: #fff;
-  overflow-y: auto;
-}
-
-.headerCollapsed {
-  flex-direction: row-reverse;
-
+  overflow: hidden;
+  transition: margin-right 0.3s ease;
+  margin-right: 0;
 }
 
 .dashboardContent {
-  flex: 1;
-  padding: 1rem;
+  flex-grow: 1;
   overflow-y: auto;
+  padding: 1.5rem;
 }
