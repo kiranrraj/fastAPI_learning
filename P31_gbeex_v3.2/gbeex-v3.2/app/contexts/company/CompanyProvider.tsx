@@ -1,5 +1,5 @@
 import React, { useState, useEffect, ReactNode } from "react";
-import { CompanyContext } from "./CompanyContext";
+import { CompanyContext, CompanyContextType, Tab } from "./CompanyContext";
 import { Company, Protocol, Site, Subject } from "@/app/types";
 
 const getNodeId = (node: Company | Protocol | Site | Subject): string => {
@@ -13,13 +13,15 @@ export const CompanyProvider = ({ children }: { children: ReactNode }) => {
   const [companies, setCompanies] = useState<Company[]>([]);
   const [isLoading, setIsLoading] = useState<boolean>(true);
 
-  // State for tab management
-  const [openTabs, setOpenTabs] = useState<
-    (Company | Protocol | Site | Subject)[]
-  >([]);
-  const [activeTabId, setActiveTabId] = useState<string | null>(null);
+  const defaultTabs: Tab[] = [
+    { type: "view", id: "__overview__", label: "Overview" },
+    { type: "view", id: "__table_view__", label: "Subject Table" },
+    { type: "view", id: "__heatmap_view__", label: "Heatmap View" },
+  ];
 
-  // Fetch initial data
+  const [openTabs, setOpenTabs] = useState<Tab[]>([...defaultTabs]);
+  const [activeTabId, setActiveTabId] = useState<string>("__overview__");
+
   useEffect(() => {
     setIsLoading(true);
     fetch("http://127.0.0.1:8000/api/v1/dev/companies")
@@ -29,44 +31,51 @@ export const CompanyProvider = ({ children }: { children: ReactNode }) => {
       .finally(() => setIsLoading(false));
   }, []);
 
-  // --- TAB MANAGEMENT LOGIC ---
-
   const handleNodeSelect = (node: Company | Protocol | Site | Subject) => {
     const nodeId = getNodeId(node);
+    const alreadyOpen = openTabs.some(
+      (tab) => tab.type === "node" && getNodeId(tab.data) === nodeId
+    );
 
-    const tabExists = openTabs.some((tab) => getNodeId(tab) === nodeId);
-
-    if (!tabExists) {
-      setOpenTabs((prevTabs) => [...prevTabs, node]);
+    if (!alreadyOpen) {
+      setOpenTabs((prev) => [...prev, { type: "node", data: node }]);
     }
     setActiveTabId(nodeId);
   };
 
-  const handleTabClick = (nodeId: string) => {
-    setActiveTabId(nodeId);
+  const handleTabClick = (tabId: string) => {
+    setActiveTabId(tabId);
   };
 
-  const handleCloseTab = (nodeIdToClose: string, e: React.MouseEvent) => {
+  const handleCloseTab = (tabId: string, e: React.MouseEvent) => {
     e.stopPropagation();
 
-    const closingTabIndex = openTabs.findIndex(
-      (tab) => getNodeId(tab) === nodeIdToClose
+    const closingTabIndex = openTabs.findIndex((tab) =>
+      tab.type === "view" ? tab.id === tabId : getNodeId(tab.data) === tabId
     );
-    const newTabs = openTabs.filter((tab) => getNodeId(tab) !== nodeIdToClose);
+
+    const newTabs = openTabs.filter((tab) =>
+      tab.type === "view" ? tab.id !== tabId : getNodeId(tab.data) !== tabId
+    );
 
     setOpenTabs(newTabs);
 
-    if (activeTabId === nodeIdToClose) {
+    if (activeTabId === tabId) {
       if (newTabs.length > 0) {
         const newActiveIndex = Math.max(0, closingTabIndex - 1);
-        setActiveTabId(getNodeId(newTabs[newActiveIndex]));
+        const newActiveTab = newTabs[newActiveIndex];
+        const newId =
+          newActiveTab.type === "view"
+            ? newActiveTab.id
+            : getNodeId(newActiveTab.data);
+        setActiveTabId(newId);
       } else {
-        setActiveTabId(null);
+        setActiveTabId("");
       }
     }
   };
 
-  const value = {
+  const value: CompanyContextType = {
     companies,
     isLoading,
     openTabs,
