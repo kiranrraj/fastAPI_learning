@@ -40,9 +40,23 @@ const getNodeDetails = (node: Node) => {
 };
 
 export default function NodeCard({ node }: { node: Node }) {
-  const { handleNodeSelect } = useContext(CompanyContext) as CompanyContextType;
+  // Destructure both functions from the context
+  const { handleNodeSelect, handleShowNodeInTableView } = useContext(
+    CompanyContext
+  ) as CompanyContextType;
+
   const { name, type, icon, childrenCount } = getNodeDetails(node);
 
+  // Handler for the new button
+  const handleViewSubjectsClick = (e: React.MouseEvent) => {
+    // Prevent the card's main click event from firing
+    e.stopPropagation();
+    if (handleShowNodeInTableView) {
+      handleShowNodeInTableView(node);
+    }
+  };
+
+  // The main card click still uses handleNodeSelect
   return (
     <div className={styles.card} onClick={() => handleNodeSelect(node)}>
       <div className={styles.cardHeader}>
@@ -55,6 +69,16 @@ export default function NodeCard({ node }: { node: Node }) {
           ? `Status: ${node.status}`
           : `${childrenCount} Children`}
       </p>
+      {!("subjectId" in node) && (
+        <div className={styles.cardFooter}>
+          <button
+            className={styles.viewSubjectsButton}
+            onClick={handleViewSubjectsClick}
+          >
+            View Subjects
+          </button>
+        </div>
+      )}
     </div>
   );
 }

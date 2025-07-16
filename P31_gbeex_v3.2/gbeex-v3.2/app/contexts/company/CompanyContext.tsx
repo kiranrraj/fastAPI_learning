@@ -3,18 +3,13 @@
 import { createContext } from "react";
 import { Company, Protocol, Site, Subject } from "@/app/types";
 
-export type ViewTab = {
-  type: "view";
-  id: "__overview__" | "__table_view__" | "__heatmap_view__";
+// A more flexible and explicit Tab type
+export type Tab = {
+  id: string;
   label: string;
+  type: "overview" | "node_detail" | "node_table";
+  data?: Company | Protocol | Site | Subject;
 };
-
-export type NodeTab = {
-  type: "node";
-  data: Company | Protocol | Site | Subject;
-};
-
-export type Tab = ViewTab | NodeTab;
 
 export type CompanyContextType = {
   companies: Company[];
@@ -25,6 +20,9 @@ export type CompanyContextType = {
   handleNodeSelect: (node: Company | Protocol | Site | Subject) => void;
   handleTabClick: (tabId: string) => void;
   handleCloseTab: (tabId: string, e: React.MouseEvent) => void;
+  handleShowNodeInTableView: (
+    node: Company | Protocol | Site | Subject
+  ) => void;
 };
 
 export const CompanyContext = createContext<CompanyContextType | null>(null);

@@ -4,114 +4,93 @@ import React, { useContext } from "react";
 import {
   CompanyContext,
   CompanyContextType,
-  Tab,
 } from "@/app/contexts/company/CompanyContext";
-import NodeCardGrid from "@/app/dashboard/components/NodeCardGrid";
-import SubjectCard from "@/app/dashboard/components/SubjectCard";
-import TablePortlet from "@/app/dashboard/components/GeneralPortlets/TablePortlet";
-import HeatmapPortlet from "@/app/dashboard/components/GeneralPortlets/HeatmapPortlet";
-import styles from "./Content.module.css";
-import { Loader, X } from "lucide-react";
 import { Node } from "@/app/types";
+import { X } from "lucide-react";
 
-const getNodeChildren = (tab: Tab): Node[] => {
-  if (tab.type !== "node") return [];
-  const node = tab.data;
+// Components for different tab types
+import NodeCardGrid from "@/app/dashboard/components/NodeCardGrid";
+import TablePortlet from "@/app/dashboard/components/GeneralPortlets/TablePortlet";
+// import HeatmapPortlet from "../Portlets/HeatmapPortlet";
+import Overview from "@/app/dashboard/components/Overview";
+
+import styles from "./Content.module.css";
+
+// Helper to get children from a node, needed for the 'node_detail' view
+const getNodeChildren = (node: Node): Node[] => {
   if ("protocols" in node) return node.protocols;
   if ("sites" in node) return node.sites;
   if ("subjects" in node) return node.subjects;
   return [];
 };
 
-const getNodeName = (tab: Tab): string => {
-  if (tab.type === "view") return tab.label;
-  const node = tab.data;
-  if ("companyName" in node) return node.companyName;
-  if ("protocolName" in node) return node.protocolName;
-  if ("siteName" in node) return node.siteName;
-  if ("subjectId" in node) return node.subjectId;
-  return "Unknown";
-};
-
-const getTabId = (tab: Tab): string => {
-  return tab.type === "view" ? tab.id : getNodeId(tab.data);
-};
-
-const getNodeId = (node: any): string => {
-  if ("companyId" in node) return node.companyId;
-  if ("protocolId" in node) return node.protocolId;
-  if ("siteId" in node) return node.siteId;
-  return node.subjectId;
-};
-
 export default function Content() {
-  const {
-    companies,
-    isLoading,
-    openTabs,
-    activeTabId,
-    handleTabClick,
-    handleCloseTab,
-  } = useContext(CompanyContext) as CompanyContextType;
+  const context = useContext(CompanyContext);
 
-  if (isLoading) {
-    return (
-      <div className={styles.messageWrapper}>
-        <Loader className={styles.loader} />
-        <h2>Loading Data...</h2>
-      </div>
-    );
+  // Early exit if context is not yet available
+  if (!context) {
+    return <div className={styles.loading}>Loading...</div>;
   }
 
-  const activeTab = openTabs.find((tab) => getTabId(tab) === activeTabId);
+  const { openTabs, activeTabId, handleTabClick, handleCloseTab } = context;
+  const activeTab = openTabs.find((tab) => tab.id === activeTabId);
+
+  // This function determines which component to show based on the active tab's type
+  const renderTabContent = () => {
+    // Add a check to ensure activeTab is not undefined
+    if (!activeTab) {
+      return (
+        <div className={styles.emptyState}>
+          Please select an item from the sidebar.
+        </div>
+      );
+    }
+
+    switch (activeTab.type) {
+      case "overview":
+        return <Overview />;
+
+      case "node_detail":
+        // Add a check to ensure the data needed for this view exists
+        if (activeTab.data) {
+          const children = getNodeChildren(activeTab.data);
+          return <NodeCardGrid nodes={children} />;
+        }
+        return <div className={styles.emptyState}>No data for this item.</div>;
+
+      case "node_table":
+        // This tab type will render the table of subjects
+        return <TablePortlet />;
+
+      default:
+        return <div className={styles.emptyState}>Unsupported tab type.</div>;
+    }
+  };
 
   return (
-    <div className={styles.contentWrapper}>
-      {openTabs.length > 0 && (
-        <div className={styles.tabBar}>
-          {openTabs.map((tab) => (
-            <button
-              key={getTabId(tab)}
-              className={`${styles.tab} ${
-                activeTabId === getTabId(tab) ? styles.activeTab : ""
-              }`}
-              onClick={() => handleTabClick(getTabId(tab))}
-            >
-              <span>{getNodeName(tab)}</span>
+    <div className={styles.container}>
+      <div className={styles.tabBar}>
+        {openTabs.map((tab) => (
+          <button
+            key={tab.id}
+            className={`${styles.tab} ${
+              activeTabId === tab.id ? styles.active : ""
+            }`}
+            onClick={() => handleTabClick(tab.id)}
+          >
+            <span>{tab.label}</span>
+            {/* Do not allow closing the last tab or the main overview tab */}
+            {openTabs.length > 1 && tab.type !== "overview" && (
               <X
+                className={styles.closeIcon}
                 size={16}
-                className={styles.closeTabIcon}
-                onClick={(e) => handleCloseTab(getTabId(tab), e)}
+                onClick={(e) => handleCloseTab(tab.id, e)}
               />
-            </button>
-          ))}
-        </div>
-      )}
-
-      <div className={styles.contentArea}>
-        {!activeTab ? null : activeTab.type === "view" &&
-          activeTab.id === "__overview__" ? (
-          <>
-            <h2 className={styles.pageTitle}>Companies Overview</h2>
-            {companies.length === 0 ? (
-              <p>Loading companies...</p>
-            ) : (
-              <NodeCardGrid nodes={companies} />
             )}
-          </>
-        ) : activeTab.type === "view" && activeTab.id === "__table_view__" ? (
-          <TablePortlet />
-        ) : activeTab.type === "view" && activeTab.id === "__heatmap_view__" ? (
-          <HeatmapPortlet />
-        ) : activeTab.type === "node" && "subjectId" in activeTab.data ? (
-          <SubjectCard subject={activeTab.data} />
-        ) : activeTab.type === "node" ? (
-          <>
-            <h2 className={styles.pageTitle}>{getNodeName(activeTab)}</h2>
-            <NodeCardGrid nodes={getNodeChildren(activeTab)} />
-          </>
-        ) : null}
+          </button>
+        ))}
       </div>
+      <div className={styles.contentArea}>{renderTabContent()}</div>
     </div>
   );
 }

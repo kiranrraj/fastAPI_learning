@@ -2,10 +2,18 @@ import React, { useState, useEffect, ReactNode } from "react";
 import { CompanyContext, CompanyContextType, Tab } from "./CompanyContext";
 import { Company, Protocol, Site, Subject } from "@/app/types";
 
+// Helper functions also used for tab creation
 const getNodeId = (node: Company | Protocol | Site | Subject): string => {
   if ("companyId" in node) return node.companyId;
   if ("protocolId" in node) return node.protocolId;
   if ("siteId" in node) return node.siteId;
+  return node.subjectId;
+};
+
+const getNodeName = (node: Company | Protocol | Site | Subject): string => {
+  if ("companyName" in node) return node.companyName;
+  if ("protocolName" in node) return node.protocolName;
+  if ("siteName" in node) return node.siteName;
   return node.subjectId;
 };
 
@@ -14,9 +22,7 @@ export const CompanyProvider = ({ children }: { children: ReactNode }) => {
   const [isLoading, setIsLoading] = useState<boolean>(true);
 
   const defaultTabs: Tab[] = [
-    { type: "view", id: "__overview__", label: "Overview" },
-    { type: "view", id: "__table_view__", label: "Subject Table" },
-    { type: "view", id: "__heatmap_view__", label: "Heatmap View" },
+    { id: "__overview__", label: "Overview", type: "overview" },
   ];
 
   const [openTabs, setOpenTabs] = useState<Tab[]>([...defaultTabs]);
@@ -31,44 +37,58 @@ export const CompanyProvider = ({ children }: { children: ReactNode }) => {
       .finally(() => setIsLoading(false));
   }, []);
 
+  // Updated to create a "node_detail" tab
   const handleNodeSelect = (node: Company | Protocol | Site | Subject) => {
     const nodeId = getNodeId(node);
-    const alreadyOpen = openTabs.some(
-      (tab) => tab.type === "node" && getNodeId(tab.data) === nodeId
-    );
+    const alreadyOpen = openTabs.some((tab) => tab.id === nodeId);
 
     if (!alreadyOpen) {
-      setOpenTabs((prev) => [...prev, { type: "node", data: node }]);
+      const newTab: Tab = {
+        id: nodeId,
+        label: getNodeName(node),
+        type: "node_detail",
+        data: node,
+      };
+      setOpenTabs((prev) => [...prev, newTab]);
     }
     setActiveTabId(nodeId);
+  };
+
+  // Updated to create a new "node_table" tab
+  const handleShowNodeInTableView = (
+    node: Company | Protocol | Site | Subject
+  ) => {
+    const nodeId = getNodeId(node);
+    const tabId = `${nodeId}__table`; // Unique ID for the new table tab
+    const alreadyOpen = openTabs.some((tab) => tab.id === tabId);
+
+    if (!alreadyOpen) {
+      const newTab: Tab = {
+        id: tabId,
+        label: `Table: ${getNodeName(node)}`,
+        type: "node_table",
+        data: node,
+      };
+      setOpenTabs((prev) => [...prev, newTab]);
+    }
+    setActiveTabId(tabId);
   };
 
   const handleTabClick = (tabId: string) => {
     setActiveTabId(tabId);
   };
 
+  // Updated to handle the new tab structure
   const handleCloseTab = (tabId: string, e: React.MouseEvent) => {
     e.stopPropagation();
-
-    const closingTabIndex = openTabs.findIndex((tab) =>
-      tab.type === "view" ? tab.id === tabId : getNodeId(tab.data) === tabId
-    );
-
-    const newTabs = openTabs.filter((tab) =>
-      tab.type === "view" ? tab.id !== tabId : getNodeId(tab.data) !== tabId
-    );
-
+    const closingTabIndex = openTabs.findIndex((tab) => tab.id === tabId);
+    const newTabs = openTabs.filter((tab) => tab.id !== tabId);
     setOpenTabs(newTabs);
 
     if (activeTabId === tabId) {
       if (newTabs.length > 0) {
         const newActiveIndex = Math.max(0, closingTabIndex - 1);
-        const newActiveTab = newTabs[newActiveIndex];
-        const newId =
-          newActiveTab.type === "view"
-            ? newActiveTab.id
-            : getNodeId(newActiveTab.data);
-        setActiveTabId(newId);
+        setActiveTabId(newTabs[newActiveIndex].id);
       } else {
         setActiveTabId("");
       }
@@ -83,6 +103,7 @@ export const CompanyProvider = ({ children }: { children: ReactNode }) => {
     handleNodeSelect,
     handleTabClick,
     handleCloseTab,
+    handleShowNodeInTableView,
   };
 
   return (
