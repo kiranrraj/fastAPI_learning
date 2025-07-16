@@ -14,8 +14,8 @@ import GenericDropdown from "@/app/components/shared/GenericDropdown";
 import {
   SettingsContext,
   SettingsContextType,
-} from "@/app/contexts/SettingsContext";
-import { UserContext, UserContextType } from "@/app/contexts/UserContext";
+} from "@/app/contexts/settings/SettingsContext";
+import { UserContext, UserContextType } from "@/app/contexts/user/UserContext";
 import { SettingsCategory } from "@/app/types";
 import styles from "./SettingsMenu.module.css";
 

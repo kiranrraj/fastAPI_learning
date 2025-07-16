@@ -1,7 +1,7 @@
 "use client";
 
 import { useContext } from "react";
-import { SidebarContext } from "@/app/contexts/SidebarContext";
+import { SidebarContext } from "@/app/contexts/sidebar/SidebarContext";
 import { RotateCcw } from "lucide-react";
 
 export default function ResetButton() {

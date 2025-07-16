@@ -11,8 +11,8 @@ import {
   ArrowUpZA,
 } from "lucide-react";
 
-import { SidebarContext } from "@/app/contexts/SidebarContext";
-import { CompanyContext } from "@/app/contexts/CompanyContext";
+import { SidebarContext } from "@/app/contexts/sidebar/SidebarContext";
+import { CompanyContext } from "@/app/contexts/company/CompanyContext";
 
 import { getAllNodeIds } from "@/app/dashboard/utils/sidebar/getAllNodeIds";
 import { expandAllNodes } from "@/app/dashboard/utils/sidebar/expandAllNodes";

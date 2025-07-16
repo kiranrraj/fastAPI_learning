@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useContext } from "react";
-import { SidebarContext } from "@/app/contexts/SidebarContext";
+import { SidebarContext } from "@/app/contexts/sidebar/SidebarContext";
 import { SidebarView } from "@/app/types";
 import styles from "./SidebarViewSwitcher.module.css";
 

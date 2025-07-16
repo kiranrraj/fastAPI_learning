@@ -1,7 +1,10 @@
 "use client";
 
 import React, { ReactNode } from "react";
-import { AppInfoContext, AppInfoContextType } from "./AppInfoContext";
+import {
+  AppInfoContext,
+  AppInfoContextType,
+} from "@/app/contexts/app/AppInfoContext";
 
 // This component provides general app information to its children
 export const AppInfoProvider = ({ children }: { children: ReactNode }) => {

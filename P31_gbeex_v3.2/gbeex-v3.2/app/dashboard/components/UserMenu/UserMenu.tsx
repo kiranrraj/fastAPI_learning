@@ -10,7 +10,7 @@ import {
   Phone,
   MapPin,
 } from "lucide-react";
-import { UserContext, UserContextType } from "@/app/contexts/UserContext";
+import { UserContext, UserContextType } from "@/app/contexts/user/UserContext";
 import GenericDropdown from "@/app/components/shared/GenericDropdown";
 import styles from "./UserMenu.module.css";
 

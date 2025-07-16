@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, ReactNode } from "react";
-import { UserContext, UserContextType } from "./UserContext";
+import { UserContext, UserContextType } from "@/app/contexts/user/UserContext";
 import { UserData } from "@/app/types";
 
 // This component will provide the user data to its children

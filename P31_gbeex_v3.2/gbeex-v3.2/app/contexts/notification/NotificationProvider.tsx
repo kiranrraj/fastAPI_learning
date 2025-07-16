@@ -4,7 +4,7 @@ import React, { useState, ReactNode } from "react";
 import {
   NotificationContext,
   NotificationContextType,
-} from "./NotificationContext";
+} from "@/app/contexts/notification/NotificationContext";
 import { Notification } from "@/app/types";
 
 // This component will provide the notification data to its children

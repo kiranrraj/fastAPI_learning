@@ -2,7 +2,7 @@
 
 import React, { useState, useContext, useRef, useEffect } from "react";
 import { MoreVertical } from "lucide-react";
-import { SidebarContext } from "@/app/contexts/SidebarContext";
+import { SidebarContext } from "@/app/contexts/sidebar/SidebarContext";
 import styles from "./NodeActions.module.css";
 
 type NodeActionsProps = {

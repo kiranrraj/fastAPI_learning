@@ -11,7 +11,7 @@ import NotificationPanel from "@/app/dashboard/components/NotificationPanel/Noti
 import {
   NotificationContext,
   NotificationContextType,
-} from "@/app/contexts/NotificationContext";
+} from "@/app/contexts/notification/NotificationContext";
 
 import styles from "./Header.module.css";
 

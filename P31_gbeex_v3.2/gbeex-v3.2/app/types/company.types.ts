@@ -1,3 +1,5 @@
+// \gbeex-v3.2\app\types\company.types.ts
+
 import { Protocol } from './protocol.types';
 export * from './subject.types';
 export * from './site.types';

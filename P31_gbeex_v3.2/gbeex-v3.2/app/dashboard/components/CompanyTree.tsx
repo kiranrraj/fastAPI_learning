@@ -2,7 +2,7 @@
 
 import React, { useContext } from "react";
 import { Company } from "@/app/types";
-import { SidebarContext } from "@/app/contexts/SidebarContext";
+import { SidebarContext } from "@/app/contexts/sidebar/SidebarContext";
 import CompanyTreeNode from "./CompanyTreeNode";
 import styles from "./CompanyTree.module.css";
 

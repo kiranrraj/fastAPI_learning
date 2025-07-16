@@ -5,7 +5,7 @@ import { useState } from "react";
 import AppProviders from "@/app/contexts/AppProvider";
 import Header from "@/app/dashboard/components/Header/Header";
 import Sidebar from "@/app/dashboard/components/Sidebar/Sidebar";
-import Footer from "./components/Footer";
+import Footer from "./components/Footer/Footer";
 import styles from "./Dashboard.module.css";
 
 export default function DashboardLayout({

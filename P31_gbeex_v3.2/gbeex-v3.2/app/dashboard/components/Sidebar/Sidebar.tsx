@@ -4,8 +4,8 @@ import React, { useContext } from "react";
 import SidebarHeader from "@/app/dashboard/components/Sidebar/SidebarHeader";
 import SidebarViewSwitcher from "@/app/dashboard/components/Sidebar/SidebarViewSwitcher";
 import CompanyTree from "@/app/dashboard/components/CompanyTree";
-import { SidebarContext } from "@/app/contexts/SidebarContext";
-import { CompanyContext } from "@/app/contexts/CompanyContext";
+import { SidebarContext } from "@/app/contexts/sidebar/SidebarContext";
+import { CompanyContext } from "@/app/contexts/company/CompanyContext";
 import styles from "./Sidebar.module.css";
 
 type SidebarProps = {

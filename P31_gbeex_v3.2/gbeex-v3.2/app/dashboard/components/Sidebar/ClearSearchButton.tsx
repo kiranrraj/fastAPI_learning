@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useContext } from "react";
-import { SidebarContext } from "@/app/contexts/SidebarContext";
+import { SidebarContext } from "@/app/contexts/sidebar/SidebarContext";
 import { XCircle } from "lucide-react";
 import styles from "./ClearSearchButton.module.css";
 

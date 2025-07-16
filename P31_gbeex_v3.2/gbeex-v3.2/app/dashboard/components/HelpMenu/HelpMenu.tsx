@@ -8,7 +8,7 @@ import styles from "./HelpMenu.module.css";
 import {
   AppInfoContext,
   AppInfoContextType,
-} from "@/app/contexts/AppInfoContext";
+} from "@/app/contexts/app/AppInfoContext";
 
 export default function HelpMenu() {
   const { appVersion, handleContactAdmin } = useContext(

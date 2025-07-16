@@ -1,6 +1,6 @@
 "use client";
 import React, { useState, useMemo } from "react";
-import { SidebarContext } from "@/app/contexts/SidebarContext";
+import { SidebarContext } from "@/app/contexts/sidebar/SidebarContext";
 import { SidebarView, SortOrder } from "@/app/types/sidebar.types";
 
 export const SidebarProvider = ({

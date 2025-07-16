@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import {
   SettingsContext,
   SettingsContextType,
-} from "@/app/contexts/SettingsContext";
+} from "@/app/contexts/settings/SettingsContext";
 import { Image as ImageIcon } from "lucide-react";
 import styles from "../SettingsMenu.module.css";
 

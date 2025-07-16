@@ -5,7 +5,7 @@ import { Bell, X, Trash2 } from "lucide-react";
 import {
   NotificationContext,
   NotificationContextType,
-} from "@/app/contexts/NotificationContext";
+} from "@/app/contexts/notification/NotificationContext";
 import styles from "./NotificationPanel.module.css";
 
 export default function NotificationPanel() {
