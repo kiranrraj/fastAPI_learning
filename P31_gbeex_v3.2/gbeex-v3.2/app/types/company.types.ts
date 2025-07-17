@@ -8,5 +8,11 @@ export * from './protocol.types';
 export interface Company {
     companyId: string;
     companyName: string;
+    sponsorType: string;
+    headquarters: string;
+    activeRegions: string[];
+    therapeuticAreasCovered: string[];
+    complianceScore: number;
+    riskLevel: string;
     protocols: Protocol[];
 }

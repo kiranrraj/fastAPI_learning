@@ -1,35 +1,31 @@
-export interface Demographics {
-    age: number;
-    sex: "Male" | "Female";
-    ethnicity: string;
-    region: string;
-}
+// \gbeex-v3.2\app\types\subject.types.ts
 
-export interface ClinicalData {
-    treatmentArm: string;
-    adverseEventsCount: number;
-    seriousAdverseEventsCount: number;
-}
-
-export interface Milestones {
-    screeningDate: string;
-    enrollmentDate: string;
-    randomizationDate: string;
-    lastVisitDate: string;
-    endOfStudyDate: string;
-}
-
-export interface OperationalData {
-    missedVisits: number;
-    protocolDeviations: number;
-    eCRFStatus: string;
+export interface ProgressMetrics {
+    enrolled: number;
+    screened: number;
+    completed: number;
+    dropped: number;
+    completionPercentage: number;
 }
 
 export interface Subject {
     subjectId: string;
+    age: number;
+    gender: string;
+    ethnicity: string;
+    visitCount: number;
+    lastVisitDate: string;
     status: string;
-    demographics: Demographics;
-    clinical: ClinicalData;
-    milestones: Milestones;
-    operational: OperationalData;
+    protocolDeviation: boolean;
+    dropoutReason: string;
+    BMI: number;
+    vaccinationStatus: boolean;
+    incomeBracket: string;
+    educationLevel: string;
+    preferredLanguage: string;
+    adherenceScore: number;
+    digitalEngagementLevel: string;
+    progressStatus: string;
+    testProgress?: ProgressMetrics;
+    complications: string[];
 }

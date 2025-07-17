@@ -1,0 +1,18 @@
+/* app/dashboard/components/NodeDetailView.module.css */
+
+.container {
+  width: 100%;
+}
+
+.childrenSection {
+  margin-top: 2.5rem;
+}
+
+.childrenTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #e5e7eb;
+}

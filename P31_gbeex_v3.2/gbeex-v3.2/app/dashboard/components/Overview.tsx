@@ -1,17 +1,15 @@
+// app/dashboard/components/Overview.tsx
+
 "use client";
 
 import React, { useContext } from "react";
-import {
-  CompanyContext,
-  CompanyContextType,
-} from "@/app/contexts/company/CompanyContext";
-import NodeCardGrid from "./NodeCardGrid"; // We'll use this to display the cards
+import { CompanyContext } from "@/app/contexts/company/CompanyContext";
+import NodeCardGrid from "@/app/dashboard/components/node/NodeCardGrid";
 import styles from "./Overview.module.css";
 
 export default function Overview() {
   const context = useContext(CompanyContext);
 
-  // Show a loading state while context is initializing or data is being fetched
   if (!context || context.isLoading) {
     return (
       <div className={styles.loadingState}>
@@ -25,8 +23,10 @@ export default function Overview() {
   return (
     <div className={styles.container}>
       <h1 className={styles.title}>Companies Overview</h1>
-      <p className={styles.subtitle}>Select a company to view its protocols.</p>
-      <NodeCardGrid nodes={companies} />
+      <p className={styles.subtitle}>
+        Select a company to view its protocols in a new tab.
+      </p>
+      <NodeCardGrid nodes={companies} variant="overview" />
     </div>
   );
 }

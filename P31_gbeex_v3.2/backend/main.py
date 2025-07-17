@@ -22,7 +22,7 @@ from pydantic import BaseModel, Field, ConfigDict, ValidationError
 MONGO_URI = "mongodb://localhost:27017/"
 DATABASE_NAME = "GBeeXData"
 USER_COLLECTION = "userData"
-COMPANY_COLLECTION = "clientData"
+COMPANY_COLLECTION = "clientData_2"
 SECRET_KEY = "@password@1234567890@@password@1234567890"
 ALGORITHM = "HS256"
 ACCESS_TOKEN_EXPIRE_MINUTES = 30

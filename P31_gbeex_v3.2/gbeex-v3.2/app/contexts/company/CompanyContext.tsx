@@ -1,28 +1,26 @@
+// app/contexts/company/CompanyContext.tsx
+
 "use client";
 
 import { createContext } from "react";
-import { Company, Protocol, Site, Subject } from "@/app/types";
+import { Company, Node } from "@/app/types";
 
-// A more flexible and explicit Tab type
-export type Tab = {
+export interface Tab {
   id: string;
-  label: string;
-  type: "overview" | "node_detail" | "node_table";
-  data?: Company | Protocol | Site | Subject;
-};
+  title: string; // The property is named 'title'
+  node?: Node;
+}
 
 export type CompanyContextType = {
   companies: Company[];
   isLoading: boolean;
-  openTabs: Tab[];
+  tabs: Tab[];
   activeTabId: string;
-
-  handleNodeSelect: (node: Company | Protocol | Site | Subject) => void;
-  handleTabClick: (tabId: string) => void;
-  handleCloseTab: (tabId: string, e: React.MouseEvent) => void;
-  handleShowNodeInTableView: (
-    node: Company | Protocol | Site | Subject
-  ) => void;
+  handleNodeSelect: (node: Node) => void;
+  setActiveTab: (id: string) => void;
+  closeTab: (id: string) => void;
 };
 
-export const CompanyContext = createContext<CompanyContextType | null>(null);
+export const CompanyContext = createContext<CompanyContextType | undefined>(
+  undefined
+);

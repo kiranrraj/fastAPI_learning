@@ -1,16 +1,19 @@
+// app/contexts/company/CompanyProvider.tsx
+
+"use client";
+
 import React, { useState, useEffect, ReactNode } from "react";
 import { CompanyContext, CompanyContextType, Tab } from "./CompanyContext";
-import { Company, Protocol, Site, Subject } from "@/app/types";
+import { Company, Node } from "@/app/types";
 
-// Helper functions also used for tab creation
-const getNodeId = (node: Company | Protocol | Site | Subject): string => {
+const getNodeId = (node: Node): string => {
   if ("companyId" in node) return node.companyId;
   if ("protocolId" in node) return node.protocolId;
   if ("siteId" in node) return node.siteId;
   return node.subjectId;
 };
 
-const getNodeName = (node: Company | Protocol | Site | Subject): string => {
+const getNodeName = (node: Node): string => {
   if ("companyName" in node) return node.companyName;
   if ("protocolName" in node) return node.protocolName;
   if ("siteName" in node) return node.siteName;
@@ -21,12 +24,10 @@ export const CompanyProvider = ({ children }: { children: ReactNode }) => {
   const [companies, setCompanies] = useState<Company[]>([]);
   const [isLoading, setIsLoading] = useState<boolean>(true);
 
-  const defaultTabs: Tab[] = [
-    { id: "__overview__", label: "Overview", type: "overview" },
-  ];
+  const defaultTabs: Tab[] = [{ id: "overview", title: "Overview" }];
 
-  const [openTabs, setOpenTabs] = useState<Tab[]>([...defaultTabs]);
-  const [activeTabId, setActiveTabId] = useState<string>("__overview__");
+  const [tabs, setTabs] = useState<Tab[]>([...defaultTabs]);
+  const [activeTabId, setActiveTabId] = useState<string>("overview");
 
   useEffect(() => {
     setIsLoading(true);
@@ -37,55 +38,31 @@ export const CompanyProvider = ({ children }: { children: ReactNode }) => {
       .finally(() => setIsLoading(false));
   }, []);
 
-  // Updated to create a "node_detail" tab
-  const handleNodeSelect = (node: Company | Protocol | Site | Subject) => {
+  const handleNodeSelect = (node: Node) => {
     const nodeId = getNodeId(node);
-    const alreadyOpen = openTabs.some((tab) => tab.id === nodeId);
+    const alreadyOpen = tabs.some((tab) => tab.id === nodeId);
 
     if (!alreadyOpen) {
       const newTab: Tab = {
         id: nodeId,
-        label: getNodeName(node),
-        type: "node_detail",
-        data: node,
+        title: getNodeName(node),
+        node: node,
       };
-      setOpenTabs((prev) => [...prev, newTab]);
+      setTabs((prev) => [...prev, newTab]);
     }
     setActiveTabId(nodeId);
   };
 
-  // Updated to create a new "node_table" tab
-  const handleShowNodeInTableView = (
-    node: Company | Protocol | Site | Subject
-  ) => {
-    const nodeId = getNodeId(node);
-    const tabId = `${nodeId}__table`; // Unique ID for the new table tab
-    const alreadyOpen = openTabs.some((tab) => tab.id === tabId);
-
-    if (!alreadyOpen) {
-      const newTab: Tab = {
-        id: tabId,
-        label: `Table: ${getNodeName(node)}`,
-        type: "node_table",
-        data: node,
-      };
-      setOpenTabs((prev) => [...prev, newTab]);
-    }
-    setActiveTabId(tabId);
+  const setActiveTab = (id: string) => {
+    setActiveTabId(id);
   };
 
-  const handleTabClick = (tabId: string) => {
-    setActiveTabId(tabId);
-  };
+  const closeTab = (id: string) => {
+    const closingTabIndex = tabs.findIndex((tab) => tab.id === id);
+    const newTabs = tabs.filter((tab) => tab.id !== id);
+    setTabs(newTabs);
 
-  // Updated to handle the new tab structure
-  const handleCloseTab = (tabId: string, e: React.MouseEvent) => {
-    e.stopPropagation();
-    const closingTabIndex = openTabs.findIndex((tab) => tab.id === tabId);
-    const newTabs = openTabs.filter((tab) => tab.id !== tabId);
-    setOpenTabs(newTabs);
-
-    if (activeTabId === tabId) {
+    if (activeTabId === id) {
       if (newTabs.length > 0) {
         const newActiveIndex = Math.max(0, closingTabIndex - 1);
         setActiveTabId(newTabs[newActiveIndex].id);
@@ -98,12 +75,11 @@ export const CompanyProvider = ({ children }: { children: ReactNode }) => {
   const value: CompanyContextType = {
     companies,
     isLoading,
-    openTabs,
+    tabs,
     activeTabId,
     handleNodeSelect,
-    handleTabClick,
-    handleCloseTab,
-    handleShowNodeInTableView,
+    setActiveTab,
+    closeTab,
   };
 
   return (

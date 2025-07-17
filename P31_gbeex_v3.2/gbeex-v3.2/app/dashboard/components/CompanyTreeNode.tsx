@@ -5,7 +5,7 @@ import { Company, Protocol, Site, Subject } from "@/app/types";
 import { SidebarContext } from "@/app/contexts/sidebar/SidebarContext";
 import { CompanyContext } from "@/app/contexts/company/CompanyContext";
 import ExpandCollapseToggle from "@/app/dashboard/components/Sidebar/ExpandCollapseToggle";
-import NodeActions from "@/app/dashboard/components/NodeActions";
+import NodeActions from "@/app/dashboard/components/node/NodeActions";
 import { Star } from "lucide-react";
 import styles from "./CompanyTreeNode.module.css";
 
