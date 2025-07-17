@@ -1,0 +1,107 @@
+/* app/dashboard/components/DetailViews/ProtocolAnalytics.module.css */
+
+.analyticsContainer {
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid #f3f4f6;
+}
+
+.analyticsTitle {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #111827;
+    margin-bottom: 1.5rem;
+}
+
+.chartContainer, .listContainer {
+    background-color: #f9fafb;
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    border: 1px solid #e5e7eb;
+    margin-bottom: 1.5rem;
+}
+
+.chartTitle {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #374151;
+    margin-bottom: 1.5rem;
+}
+
+.barChart {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.barItem {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.barLabel {
+    width: 80px;
+    font-size: 0.875rem;
+    color: #4b5563;
+    flex-shrink: 0;
+    text-align: right;
+}
+
+.bar {
+    flex-grow: 1;
+    height: 24px;
+    background-color: #e5e7eb;
+    border-radius: 0.375rem;
+}
+
+.barFill {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 0.5rem;
+    color: #ffffff;
+    font-size: 0.75rem;
+    font-weight: 600;
+    border-radius: 0.375rem;
+    transition: width 0.5s ease-in-out;
+    white-space: nowrap;
+}
+
+.barFill.completed { background-color: #22c55e; }
+.barFill.ongoing { background-color: #3b82f6; }
+.barFill.dropped { background-color: #ef4444; }
+
+.topList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.topList li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem;
+    background-color: #ffffff;
+    border-radius: 0.5rem;
+    border: 1px solid #e5e7eb;
+    font-size: 0.875rem;
+    color: #374151;
+}
+
+.listValue {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 600;
+    color: #1f2937;
+}
+
+.listValue svg {
+    color: #9ca3af;
+}

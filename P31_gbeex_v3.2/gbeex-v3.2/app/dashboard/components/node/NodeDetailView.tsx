@@ -3,10 +3,23 @@
 import React from "react";
 import { Node, Company, Protocol, Site, Subject } from "@/app/types";
 import NodeCardGrid from "./NodeCardGrid";
+
+// Import Detail Headers
 import { CompanyDetailHeader } from "@/app/dashboard/components/View/CompanyDetailView";
 import { ProtocolDetailHeader } from "@/app/dashboard/components/View/ProtocolDetailView";
 import { SiteDetailHeader } from "@/app/dashboard/components/View/SiteDetailView";
 import { SubjectDetail } from "@/app/dashboard/components/View/SubjectDetailView";
+
+// Import Standard Analytics
+import { CompanyAnalytics } from "@/app/dashboard/components/analytics/company/CompanyAnalytics";
+import { ProtocolAnalytics } from "@/app/dashboard/components/analytics/protocol/ProtocolAnalytics";
+import { SiteAnalytics } from "@/app/dashboard/components/analytics/site/SiteAnalytics";
+
+// --- FIX: Import Advanced Analytics ---
+import { AdvancedCompanyAnalytics } from "@/app/dashboard/components/analytics/company/AdvancedCompanyAnalytics";
+import { AdvancedProtocolAnalytics } from "@/app/dashboard/components/analytics/protocol/AdvancedProtocolAnalytics";
+import { AdvancedSiteAnalytics } from "@/app/dashboard/components/analytics/site/AdvancedSiteAnalytics";
+
 import styles from "./NodeDetailView.module.css";
 
 // Helper to get the children of any given node
@@ -27,31 +40,56 @@ const getChildrenTypeName = (node: Node): string => {
 
 // This component now acts as a router to the correct detail view.
 export default function NodeDetailView({ node }: { node: Node }) {
-  // If the node is a subject, render its specific detail view and stop, as it has no children.
+  // If the node is a subject, render its specific detail view and stop.
   if ("subjectId" in node) {
     return <SubjectDetail subject={node as Subject} />;
   }
 
-  // --- FIX: Get the children from the node ---
   const children = getNodeChildren(node);
   const childrenTypeName = getChildrenTypeName(node);
 
-  // Dynamically render the correct header based on the node type.
-  const renderHeader = () => {
-    if ("companyId" in node)
-      return <CompanyDetailHeader company={node as Company} />;
-    if ("protocolId" in node)
-      return <ProtocolDetailHeader protocol={node as Protocol} />;
-    if ("siteId" in node) return <SiteDetailHeader site={node as Site} />;
+  // Dynamically render the correct header and analytics based on the node type.
+  const renderDetails = () => {
+    if ("companyId" in node) {
+      const company = node as Company;
+      return (
+        <>
+          <CompanyDetailHeader company={company} />
+          <CompanyAnalytics company={company} />
+          {/* --- FIX: Add Advanced Analytics --- */}
+          <AdvancedCompanyAnalytics company={company} />
+        </>
+      );
+    }
+    if ("protocolId" in node) {
+      const protocol = node as Protocol;
+      return (
+        <>
+          <ProtocolDetailHeader protocol={protocol} />
+          <ProtocolAnalytics protocol={protocol} />
+          {/* --- FIX: Add Advanced Analytics --- */}
+          <AdvancedProtocolAnalytics protocol={protocol} />
+        </>
+      );
+    }
+    if ("siteId" in node) {
+      const site = node as Site;
+      return (
+        <>
+          <SiteDetailHeader site={site} />
+          <SiteAnalytics site={site} />
+          {/* --- FIX: Add Advanced Analytics --- */}
+          <AdvancedSiteAnalytics site={site} />
+        </>
+      );
+    }
     return null;
   };
 
   return (
     <div className={styles.container}>
-      {/* Render the header with the parent's details */}
-      {renderHeader()}
+      {renderDetails()}
 
-      {/* --- FIX: Render the section for the children cards --- */}
       <div className={styles.childrenSection}>
         <h3 className={styles.childrenTitle}>
           {childrenTypeName} ({children.length})
