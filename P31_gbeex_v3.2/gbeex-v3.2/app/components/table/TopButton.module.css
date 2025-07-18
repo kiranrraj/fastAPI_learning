@@ -1,0 +1,9 @@
+/* components/table/TopButton.module.css */
+.topBtn {
+  align-self: flex-end;
+  background: none;
+  border: 1px solid #d1d5db;
+  padding: 0.5rem;
+  border-radius: 0.375rem;
+  cursor: pointer;
+}

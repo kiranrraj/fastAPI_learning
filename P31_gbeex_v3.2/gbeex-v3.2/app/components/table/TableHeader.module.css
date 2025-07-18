@@ -1,0 +1,14 @@
+/* components/table/TableHeader.module.css */
+.headerCell {
+  position: sticky;
+  top: 0;
+  background: #f9fafb;
+  padding: 0.75rem;
+  border-bottom: 1px solid #e5e7eb;
+  cursor: pointer;
+  user-select: none;
+}
+.indicator {
+  margin-left: 0.25rem;
+  color: #6b7280;
+}

@@ -1,0 +1,14 @@
+/* components/table/Table.module.css */
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.tableContainer {
+  overflow-y: auto;
+}
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 600px;
+}
