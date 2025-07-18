@@ -1,8 +1,9 @@
 /* app/dashboard/components/View/CompanyDetailHeader.module.css */
+/* app/dashboard/components/View/CompanyDetailHeader.module.css */
 .detailHeader {
   background-color: #ffffff;
   border-radius: 0.75rem;
-  padding: 2rem;
+  padding: 1.5rem;
   border: 1px solid #e5e7eb;
   box-shadow:
     0 4px 6px -1px rgba(0,0,0,0.05),
@@ -11,13 +12,13 @@
 .headerTitle {
   display: flex;
   align-items: center;
-  gap: 1rem;
-  margin-bottom: 1.5rem;
-  padding-bottom: 1.5rem;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
   border-bottom: 1px solid #f3f4f6;
 }
 .headerTitle h2 {
-  font-size: 1.875rem;
+  font-size: 1.5rem;
   font-weight: 700;
   color: #111827;
 }
@@ -26,38 +27,39 @@
 }
 .headerGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
-  gap: 1.5rem;
-  margin-bottom: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+  gap: 1rem;
+  margin-bottom: 1rem;
 }
 .detailItem {
   display: flex;
   align-items: flex-start;
-  gap: 0.75rem;
+  gap: 0.5rem;
 }
 .detailIcon {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 40px; height: 40px;
+  width: 36px;
+  height: 36px;
   border-radius: 50%;
   background-color: #eef2ff;
   color: #4f46e5;
-  margin-top: 4px;
+  margin-top: 2px;
 }
 .detailLabel {
-  font-size: 0.875rem;
+  font-size: 0.8rem;
   color: #6b7280;
-  margin-bottom: 0.125rem;
+  margin-bottom: 0.1rem;
 }
 .detailValue {
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-weight: 600;
   color: #1f2937;
 }
 .fullWidthSection {
-  padding-top: 1.5rem;
-  margin-top: 1.5rem;
+  padding-top: 1rem;
+  margin-top: 1rem;
   border-top: 1px solid #f3f4f6;
 }
 .listDetailItem .detailIcon {
@@ -66,13 +68,13 @@
 .tagContainer {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem;
+  gap: 0.25rem;
 }
 .tag {
   background-color: #e0e7ff;
   color: #3730a3;
-  padding: 0.25rem 0.75rem;
+  padding: 0.2rem 0.6rem;
   border-radius: 9999px;
-  font-size: 0.875rem;
+  font-size: 0.8rem;
   font-weight: 500;
 }

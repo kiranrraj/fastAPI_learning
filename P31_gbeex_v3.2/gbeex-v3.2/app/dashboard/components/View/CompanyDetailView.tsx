@@ -1,58 +1,52 @@
+// app/dashboard/components/View/CompanyDetailView.tsx
+"use client";
+
 import React, { useState, useMemo } from "react";
-import { Company } from "@/app/types";
+import { Company, Protocol as RawProtocol } from "@/app/types";
 import styles from "./CompanyDetailView.module.css";
 import { Grid as CardIcon, Table as TableIcon } from "lucide-react";
 
-import { CompanyDetailHeader } from "@/app/dashboard/components/View/CompanyDetailHeader";
-import ProtocolCard from "@/app/dashboard/components/Cards/ProtocolCard";
+import { CompanyDetailHeader } from "./CompanyDetailHeader";
+
+// *** IMPORT THE CHILDREN PROTOCOL CARD (raw shape) ***
+import ProtocolCard from "@/app/dashboard/components/children/protocol/ProtocolCard";
+
 import Table from "@/app/components/table/Table";
 import {
   protocolColumns,
-  Protocol,
+  Protocol as TableProtocol,
 } from "@/app/components/table/protocolColumns";
 
 interface Props {
   company: Company & {
-    // raw from API, with nested fields
-    protocols: Array<{
-      protocolId: string;
-      protocolName: string;
-      sites: any[];
-      progressMetrics?: {
-        enrolled?: number;
-        completionPercentage?: number;
-      };
-      timelineDelays?: {
-        actualCompletionDate?: string;
-      };
-    }>;
+    protocols: RawProtocol[]; // raw Protocol type
   };
 }
 
 export default function CompanyDetailView({ company }: Props) {
   const [viewMode, setViewMode] = useState<"card" | "table">("card");
 
-  // Map raw API protocols into our flat Protocol interface
-  const protocols = useMemo<Protocol[]>(
-    () =>
-      company.protocols.map((p) => ({
-        id: p.protocolId,
-        name: p.protocolName,
-        siteCount: Array.isArray(p.sites) ? p.sites.length : 0,
-        enrolled: p.progressMetrics?.enrolled ?? 0,
-        completionPct: p.progressMetrics?.completionPercentage ?? 0,
-        lastUpdated: p.timelineDelays?.actualCompletionDate ?? "",
-      })),
-    [company.protocols]
-  );
+  // Map raw API protocols into the flat TableProtocol shape
+  const tableData: TableProtocol[] = useMemo(() => {
+    return company.protocols.map((p) => ({
+      id: p.protocolId,
+      name: p.protocolName,
+      siteCount: p.sites.length,
+      enrolled: p.progressMetrics?.enrolled ?? 0, // note 'enrolled'
+      completionPct: p.progressMetrics?.completionPercentage ?? 0,
+      lastUpdated:
+        p.timelineDelays?.actualCompletionDate ??
+        p.timelineDelays?.expectedCompletionDate ??
+        "",
+    }));
+  }, [company.protocols]);
 
   return (
     <div className={styles.container}>
-      {/* Company header */}
+      {/* Header + toggle */}
       <div className={styles.headerWrapper}>
         <CompanyDetailHeader company={company} />
 
-        {/* Toggle for child protocols */}
         <div className={styles.viewSwitch}>
           <button
             onClick={() => setViewMode("card")}
@@ -71,16 +65,18 @@ export default function CompanyDetailView({ company }: Props) {
         </div>
       </div>
 
-      {/* Protocols list */}
+      {/* Children: protocols as cards or table */}
       <div className={styles.body}>
         {viewMode === "card" ? (
           <div className={styles.grid}>
-            {protocols.map((protocol) => (
-              <ProtocolCard key={protocol.id} protocol={protocol} />
+            {company.protocols.map((protocol) => (
+              // Pass raw protocol into the _children_ card
+              <ProtocolCard key={protocol.protocolId} protocol={protocol} />
             ))}
           </div>
         ) : (
-          <Table columns={protocolColumns} data={protocols} height="500px" />
+          // Table view: use tableData which has the table‑folder shape
+          <Table columns={protocolColumns} data={tableData} height="500px" />
         )}
       </div>
     </div>
