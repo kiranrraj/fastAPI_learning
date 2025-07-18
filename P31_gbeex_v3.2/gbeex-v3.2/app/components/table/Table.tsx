@@ -84,8 +84,6 @@ export default function Table<T>({
           />
         </table>
       </div>
-
-      <TopButton />
     </div>
   );
 }

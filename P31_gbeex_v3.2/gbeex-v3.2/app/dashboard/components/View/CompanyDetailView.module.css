@@ -1,92 +1,43 @@
 /* app/dashboard/components/DetailViews/CompanyDetailView.module.css */
 
-.detailHeader {
-  background-color: #ffffff;
-  border-radius: 0.75rem;
-  padding: 2rem;
-  margin-bottom: 2rem;
-  border: 1px solid #e5e7eb;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
-}
-
-.headerTitle {
+.container {
   display: flex;
-  align-items: center;
-  gap: 1rem;
-  margin-bottom: 1.5rem;
-  padding-bottom: 1.5rem;
-  border-bottom: 1px solid #f3f4f6;
-}
-
-.headerTitle h2 {
-  font-size: 1.875rem;
-  font-weight: 700;
-  color: #111827;
-}
-
-.headerTitle svg {
-    color: #4f46e5;
-}
-
-.headerGrid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  flex-direction: column;
   gap: 1.5rem;
-  margin-bottom: 1.5rem;
 }
 
-.detailItem {
-    display: flex;
-    align-items: flex-start;
-    gap: 0.75rem;
+.headerWrapper {
+  position: relative;
 }
 
-.detailIcon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background-color: #eef2ff;
-    color: #4f46e5;
-    flex-shrink: 0;
-    margin-top: 4px;
+.viewSwitch {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  display: flex;
+  gap: 0.5rem;
+}
+.viewSwitch button {
+  background: none;
+  border: 1px solid #d1d5db;
+  padding: 0.5rem;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  color: #374151;
+  transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+}
+.viewSwitch .active {
+  background-color: #4f46e5;
+  border-color: #4f46e5;
+  color: #ffffff;
 }
 
-.detailLabel {
-    font-size: 0.875rem;
-    color: #6b7280;
-    margin-bottom: 0.125rem;
+.body {
+  width: 100%;
 }
 
-.detailValue {
-    font-size: 1rem;
-    font-weight: 600;
-    color: #1f2937;
-}
-
-.fullWidthSection {
-    padding-top: 1.5rem;
-    margin-top: 1.5rem;
-    border-top: 1px solid #f3f4f6;
-}
-
-.listDetailItem .detailIcon {
-    margin-top: 0;
-}
-
-.tagContainer {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-}
-
-.tag {
-    background-color: #e0e7ff;
-    color: #3730a3;
-    padding: 0.25rem 0.75rem;
-    border-radius: 9999px;
-    font-size: 0.875rem;
-    font-weight: 500;
+.grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(280px,1fr));
 }

@@ -5,7 +5,7 @@ import { Node, Company, Protocol, Site, Subject } from "@/app/types";
 import NodeCardGrid from "./NodeCardGrid";
 
 // Import Detail Headers
-import { CompanyDetailHeader } from "@/app/dashboard/components/View/CompanyDetailView";
+import CompanyDetailHeader from "@/app/dashboard/components/View/CompanyDetailView";
 import { ProtocolDetailHeader } from "@/app/dashboard/components/View/ProtocolDetailView";
 import { SiteDetailHeader } from "@/app/dashboard/components/View/SiteDetailView";
 import { SubjectDetail } from "@/app/dashboard/components/View/SubjectDetailView";
