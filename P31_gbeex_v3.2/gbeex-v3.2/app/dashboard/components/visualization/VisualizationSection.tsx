@@ -1,12 +1,16 @@
+// app/dashboard/components/visualization/VisualizationSection.tsx
 "use client";
 
-import React from "react";
+import React, { useMemo } from "react";
 import { useDetailContext } from "@/app/contexts/detail/DetailContext";
-import EnrollmentChart from "@/app/dashboard/components/visualization/EnrollmentChart";
-import CompletionHeatmap from "@/app/dashboard/components/visualization/CompletionHeatmap";
-import DelayBarChart from "@/app/dashboard/components/visualization/DelayBarChart";
 import styles from "./VisualizationSection.module.css";
 import { ChevronDown, ChevronUp } from "lucide-react";
+
+// Charts
+import ProtocolEnrollmentLineChart from "@/app/dashboard/components/visualization/ProtocolEnrolmentLineChart";
+
+// Raw API types
+import type { Protocol as RawProtocol } from "@/app/types";
 
 export default function VisualizationSection({
   collapsed,
@@ -15,38 +19,20 @@ export default function VisualizationSection({
   collapsed: boolean;
   onToggle: () => void;
 }) {
-  const { nodeType } = useDetailContext();
+  const { nodeType, company, protocol } = useDetailContext();
 
-  // Choose which visuals to render based on nodeType
-  let visuals: React.ReactNode;
-  switch (nodeType) {
-    case "company":
-      visuals = (
-        <>
-          <EnrollmentChart /> {/* Enrollment trend across all protocols */}
-          <CompletionHeatmap /> {/* World map of protocol completion % */}
-        </>
-      );
-      break;
-    case "protocol":
-      visuals = (
-        <>
-          <EnrollmentChart /> {/* Enrollment trend for this protocol */}
-          <DelayBarChart /> {/* Bar chart of delay reasons */}
-        </>
-      );
-      break;
-    case "site":
-      visuals = (
-        <>
-          <CompletionHeatmap /> {/* Map of subject completion at this site */}
-          <DelayBarChart /> {/* Site‑specific delay breakdown */}
-        </>
-      );
-      break;
-    default:
-      visuals = null;
-  }
+  // Decide which protocols to feed into the chart:
+  // – If we're viewing a company, chart all its protocols
+  // – If we're viewing a single protocol, chart just that one
+  const protocolsForChart: RawProtocol[] = useMemo(() => {
+    if (nodeType === "company" && company) {
+      return company.protocols;
+    }
+    if (nodeType === "protocol" && protocol) {
+      return [protocol];
+    }
+    return [];
+  }, [nodeType, company, protocol]);
 
   return (
     <section className={styles.section}>
@@ -56,12 +42,18 @@ export default function VisualizationSection({
           {collapsed ? <ChevronDown size={16} /> : <ChevronUp size={16} />}
         </button>
       </div>
+
       <div
         className={`${styles.body} ${
           collapsed ? styles.collapsed : styles.expanded
         }`}
       >
-        {visuals}
+        {!collapsed && (
+          <>
+            {/* Protocol Enrollment Line Chart */}
+            <ProtocolEnrollmentLineChart protocols={protocolsForChart} />
+          </>
+        )}
       </div>
     </section>
   );

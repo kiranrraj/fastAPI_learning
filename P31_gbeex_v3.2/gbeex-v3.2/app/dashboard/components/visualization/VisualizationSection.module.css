@@ -40,3 +40,17 @@
   max-height: 0;
   opacity: 0;
 }
+
+.chartPlaceholder {
+  height: 300px; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  border: 1px dashed #d1d5db;
+  border-radius: 0.75rem;
+  color: #6b7280;
+  font-style: italic;
+  margin-top: 1rem; 
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}

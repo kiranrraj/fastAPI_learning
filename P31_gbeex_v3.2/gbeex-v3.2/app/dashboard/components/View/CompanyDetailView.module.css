@@ -42,7 +42,6 @@
   grid-template-columns: repeat(auto-fill, minmax(280px,1fr));
 }
 
-/* New styles for Analytics Section */
 .analyticsSection {
   background-color: #ffffff;
   border-radius: 0.75rem;
@@ -51,7 +50,7 @@
   box-shadow:
     0 4px 6px -1px rgba(0,0,0,0.05),
     0 2px 4px -1px rgba(0,0,0,0.03);
-  margin-top: 1.5rem; /* Space from header */
+  margin-top: 1.5rem; 
 }
 
 .analyticsTitle {

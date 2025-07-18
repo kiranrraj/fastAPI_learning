@@ -1,0 +1,40 @@
+.container {
+  width: 100%;
+  height: 300px;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+.title {
+  margin: 0 0 0.5rem;
+  font-size: 1rem;
+  color: #374151;
+  text-align: center;
+}
+
+.chartWrapper {
+  width: 100%;
+  height: calc(100% - 32px); 
+}
+
+.grid {
+  stroke: #e5e7eb;
+}
+
+/* Placeholder when no data is passed */
+.placeholder {
+  width: 100%;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6b7280;
+  font-style: italic;
+  border: 1px dashed #d1d5db;
+  border-radius: 0.5rem;
+  background-color: #f9fafb;
+  box-sizing: border-box;
+}

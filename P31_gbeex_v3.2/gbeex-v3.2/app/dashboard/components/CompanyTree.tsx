@@ -8,7 +8,6 @@ import styles from "./CompanyTree.module.css";
 
 interface CompanyTreeProps {
   companies: Company[];
-  /** Optional callback to open a new tab when any node is clicked */
   onNodeClick?: (node: Node) => void;
 }
 
@@ -22,7 +21,7 @@ export default function CompanyTree({
   const shouldRenderNode = (nodeId: string): boolean => {
     if (activeView === "favorites") return favoriteIds.has(nodeId);
     if (activeView === "hidden") return hiddenIds.has(nodeId);
-    return !hiddenIds.has(nodeId); // "all" view excludes hidden
+    return !hiddenIds.has(nodeId);
   };
 
   const filterCompanies = (companies: Company[]) => {
@@ -64,16 +63,6 @@ export default function CompanyTree({
         <div className={styles.empty}>No results found.</div>
       ) : (
         <>
-          {/* Original rendering (for rollback): */}
-          {/*
-          filtered.map((company) => (
-            <CompanyTreeNode
-              key={company.companyId}
-              node={company}
-              level={0}
-            />
-          ))
-          */}
           {/* Updated rendering with onNodeClick propagation: */}
           {filtered.map((company) => (
             <CompanyTreeNode

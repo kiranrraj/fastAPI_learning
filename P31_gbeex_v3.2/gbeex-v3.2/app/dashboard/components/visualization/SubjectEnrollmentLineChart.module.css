@@ -1,0 +1,46 @@
+/* app/dashboard/components/analytics/SubjectEnrollmentLineChart.module.css */
+
+.chartContainer {
+  width: 100%;
+  height: 300px;
+  background-color: #fff;
+  border-radius: 0.75rem;
+  padding: 1rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.emptyChartContainer {
+  width: 100%;
+  height: 300px;
+  background-color: #fff;
+  border-radius: 0.75rem;
+  padding: 1rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #6b7280;
+}
+
+.chartTitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 1rem;
+}
+
+.gridStroke {
+  stroke: #e0e0e0;
+}
+
+.axisLabel {
+  font-size: 0.8rem;
+  fill: #6b7280;
+  stroke: #e0e0e0;
+}
+
+.yAxisLabel {
+  text-anchor: middle;
+  fill: #4a5568;
+  font-size: 0.9rem;
+}

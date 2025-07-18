@@ -1,0 +1,17 @@
+/* app/dashboard/components/analytics/ProtocolCompletionPieChart.module.css */
+
+.chartContainer {
+  width: 100%;
+  height: 300px;
+  background-color: #fff;
+  border-radius: 0.75rem;
+  padding: 1rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.chartTitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 1rem;
+}
