@@ -15,6 +15,6 @@ export interface Protocol {
     therapeuticArea: string;
     phase: string;
     timelineDelays?: TimelineDelays;
-    progressMetrics?: ProgressMetrics;
+    progressMetrics: ProgressMetrics;
     sites: Site[];
 }

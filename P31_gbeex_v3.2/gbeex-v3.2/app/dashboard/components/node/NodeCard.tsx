@@ -1,6 +1,6 @@
 // app/dashboard/components/Cards/NodeCard.tsx
 
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { Node, Company, Protocol, Site, Subject } from "@/app/types";
 import {
   CompanyContext,
@@ -12,12 +12,14 @@ import {
   MapPin,
   TestTube2,
   ShieldCheck,
-  Globe,
+  Globe, // Ensure Globe icon is imported for headquarters
   User,
   Activity,
   AlertTriangle,
   CheckCircle,
-  Map as MapIcon, // Renamed to avoid conflict
+  Map as MapIcon,
+  ChevronDown,
+  ChevronUp,
 } from "lucide-react";
 import styles from "./NodeCard.module.css";
 
@@ -29,7 +31,7 @@ const DetailItem = ({
 }: {
   icon: React.ReactNode;
   label: string;
-  value: string | number;
+  value: string | number | React.ReactNode;
 }) => (
   <div className={styles.detailItem}>
     {icon}
@@ -73,79 +75,154 @@ export default function NodeCard({
   variant?: "overview" | "detail";
 }) {
   const { handleNodeSelect } = useContext(CompanyContext) as CompanyContextType;
+  const [isCompact, setIsCompact] = useState(true);
+  const updatedTime = new Date().toLocaleTimeString("en-US", {
+    hour: "2-digit",
+    minute: "2-digit",
+  });
 
-  // Renders the main content of the card based on the node type
   const renderCardContent = () => {
     if ("companyId" in node) {
       const company = node as Company;
+
+      const companyDetailItems = [
+        <DetailItem
+          key="sponsorType"
+          icon={<ShieldCheck size={16} className={styles.detailIconColor} />}
+          label="Sponsor Type"
+          value={company.sponsorType}
+        />,
+        <DetailItem
+          key="headquarters" // Added headquarters (Country)
+          icon={<Globe size={16} className={styles.detailIconColor} />}
+          label="Country"
+          value={company.headquarters}
+        />,
+        <DetailItem
+          key="complianceScore"
+          icon={<CheckCircle size={16} className={styles.detailIconColor} />}
+          label="Compliance Score"
+          value={
+            <span
+              className={
+                company.complianceScore >= 90
+                  ? styles.complianceExcellent
+                  : company.complianceScore >= 70
+                  ? styles.complianceGood
+                  : company.complianceScore >= 50
+                  ? styles.complianceAverage
+                  : styles.compliancePoor
+              }
+            >{`${company.complianceScore}%`}</span>
+          }
+        />,
+        <DetailItem
+          key="riskLevel"
+          icon={
+            <AlertTriangle
+              size={16}
+              className={`${styles.detailIconColor} ${
+                company.riskLevel === "High"
+                  ? styles.riskHigh
+                  : company.riskLevel === "Medium"
+                  ? styles.riskMedium
+                  : styles.riskLow
+              }`}
+            />
+          }
+          label="Risk Level"
+          value={
+            <span
+              className={`${
+                company.riskLevel === "High"
+                  ? styles.riskHigh
+                  : company.riskLevel === "Medium"
+                  ? styles.riskMedium
+                  : styles.riskLow
+              }`}
+            >
+              {company.riskLevel}
+            </span>
+          }
+        />,
+        <DetailItem
+          key="protocolsCount"
+          icon={<FlaskConical size={16} className={styles.detailIconColor} />}
+          label="Protocols"
+          value={company.protocols?.length ?? 0}
+        />,
+        <TagListItem
+          key="activeRegions"
+          icon={<MapIcon size={16} className={styles.detailIconColor} />}
+          label="Active Regions"
+          items={company.activeRegions || []}
+        />,
+        <TagListItem
+          key="therapeuticAreas"
+          icon={<Activity size={16} className={styles.detailIconColor} />}
+          label="Therapeutic Areas"
+          items={company.therapeuticAreasCovered || []}
+        />,
+      ];
+
       return (
         <>
           <div className={styles.cardHeader}>
             <div className={styles.iconWrapper}>
-              <Building2 />
+              <Building2 size={24} />
             </div>
-            <span className={styles.nodeType}>Company</span>
+            <h3 className={styles.nodeName}>{company.companyName}</h3>
           </div>
-          <h3 className={styles.nodeName}>{company.companyName}</h3>
+          {/* Removed locationSubtitle as it's now covered by a DetailItem */}
+          {/* <p className={styles.locationSubtitle}>Our Location: {company.headquarters}</p> */}
 
-          {variant === "detail" && (
-            <div className={styles.detailsContainer}>
-              <div className={styles.detailsGrid}>
-                <DetailItem
-                  icon={<ShieldCheck size={16} />}
-                  label="Type"
-                  value={company.sponsorType}
-                />
-                <DetailItem
-                  icon={<Globe size={16} />}
-                  label="HQ"
-                  value={company.headquarters}
-                />
-                <DetailItem
-                  icon={<AlertTriangle size={16} />}
-                  label="Risk"
-                  value={company.riskLevel}
-                />
-                <DetailItem
-                  icon={<CheckCircle size={16} />}
-                  label="Compliance"
-                  value={`${company.complianceScore}%`}
-                />
-              </div>
-              <TagListItem
-                icon={<MapIcon size={14} />}
-                label="Active Regions"
-                items={company.activeRegions || []}
-              />
-              <TagListItem
-                icon={<Activity size={14} />}
-                label="Therapeutic Areas"
-                items={company.therapeuticAreasCovered || []}
-              />
+          {variant === "overview" && (
+            <div className={styles.overviewDetails}>
+              {isCompact ? companyDetailItems.slice(0, 4) : companyDetailItems}
+              {companyDetailItems.length > 4 && (
+                <button
+                  className={styles.viewMoreButton}
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    setIsCompact(!isCompact);
+                  }}
+                >
+                  {isCompact ? (
+                    <>
+                      View More <ChevronDown size={16} />
+                    </>
+                  ) : (
+                    <>
+                      View Less <ChevronUp size={16} />
+                    </>
+                  )}
+                </button>
+              )}
             </div>
           )}
-          <div className={styles.cardFooter}>
-            <FlaskConical size={14} />
-            <span>{company.protocols?.length ?? 0} Protocols</span>
+
+          <div className={`${styles.cardFooter} ${styles.companyFooter}`}>
+            <div className={styles.updatedTime}>Updated: {updatedTime}</div>
           </div>
         </>
       );
     }
-    // Fallback for other node types to ensure they still render
     if ("protocolId" in node) {
       const protocol = node as Protocol;
       return (
         <>
           <div className={styles.cardHeader}>
             <div className={styles.iconWrapper}>
-              <FlaskConical />
+              <FlaskConical size={24} />
             </div>
-            <span className={styles.nodeType}>Protocol</span>
+            <h3 className={styles.nodeName}>{protocol.protocolName}</h3>
           </div>
-          <h3 className={styles.nodeName}>{protocol.protocolName}</h3>
           <div className={styles.cardFooter}>
-            <MapPin size={14} />
-            <span>{protocol.sites?.length ?? 0} Sites</span>
+            <div className={styles.footerInfo}>
+              <MapPin size={14} />
+              <span>{protocol.sites?.length ?? 0} Sites</span>
+            </div>
+            <div className={styles.updatedTime}>Updated: {updatedTime}</div>
           </div>
         </>
       );
@@ -156,14 +233,16 @@ export default function NodeCard({
         <>
           <div className={styles.cardHeader}>
             <div className={styles.iconWrapper}>
-              <MapPin />
+              <MapPin size={24} />
             </div>
-            <span className={styles.nodeType}>Site</span>
+            <h3 className={styles.nodeName}>{site.siteName}</h3>
           </div>
-          <h3 className={styles.nodeName}>{site.siteName}</h3>
           <div className={styles.cardFooter}>
-            <TestTube2 size={14} />
-            <span>{site.subjects?.length ?? 0} Subjects</span>
+            <div className={styles.footerInfo}>
+              <TestTube2 size={14} />
+              <span>{site.subjects?.length ?? 0} Subjects</span>
+            </div>
+            <div className={styles.updatedTime}>Updated: {updatedTime}</div>
           </div>
         </>
       );
@@ -174,14 +253,16 @@ export default function NodeCard({
         <>
           <div className={styles.cardHeader}>
             <div className={styles.iconWrapper}>
-              <TestTube2 />
+              <TestTube2 size={24} />
             </div>
-            <span className={styles.nodeType}>Subject</span>
+            <h3 className={styles.nodeName}>{subject.subjectId}</h3>
           </div>
-          <h3 className={styles.nodeName}>{subject.subjectId}</h3>
           <div className={styles.cardFooter}>
-            <Activity size={14} />
-            <span>Status: {subject.status}</span>
+            <div className={styles.footerInfo}>
+              <Activity size={14} />
+              <span>Status: {subject.status}</span>
+            </div>
+            <div className={styles.updatedTime}>Updated: {updatedTime}</div>
           </div>
         </>
       );

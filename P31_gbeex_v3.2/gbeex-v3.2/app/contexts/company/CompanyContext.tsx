@@ -19,6 +19,8 @@ export type CompanyContextType = {
   handleNodeSelect: (node: Node) => void;
   setActiveTab: (id: string) => void;
   closeTab: (id: string) => void;
+  // Open (or activate) a tab for the given node
+  openTab: (node: Node) => void;
 };
 
 export const CompanyContext = createContext<CompanyContextType | undefined>(

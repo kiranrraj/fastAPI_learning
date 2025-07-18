@@ -53,6 +53,11 @@ export const CompanyProvider = ({ children }: { children: ReactNode }) => {
     setActiveTabId(nodeId);
   };
 
+  // Alias handleNodeSelect as openTab for card/table click handlers
+  const openTab = (node: Node) => {
+    handleNodeSelect(node);
+  };
+
   const setActiveTab = (id: string) => {
     setActiveTabId(id);
   };
@@ -80,6 +85,7 @@ export const CompanyProvider = ({ children }: { children: ReactNode }) => {
     handleNodeSelect,
     setActiveTab,
     closeTab,
+    openTab, // added so cards and tables can call openTab()
   };
 
   return (

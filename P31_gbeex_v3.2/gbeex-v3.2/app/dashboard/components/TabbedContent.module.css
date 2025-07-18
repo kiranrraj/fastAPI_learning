@@ -70,11 +70,16 @@
 }
 
 .spinnerOverlay {
+  position: absolute; 
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100%;
   width: 100%;
+  background-color: hsla(244, 68%, 59%, 0.1);
+  top: 0;
+  left: 0;
+  z-index: 10; 
 }
 
 .spinner {
@@ -87,6 +92,10 @@
 }
 
 @keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }

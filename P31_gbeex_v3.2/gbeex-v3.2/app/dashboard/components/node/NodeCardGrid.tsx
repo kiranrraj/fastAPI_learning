@@ -1,7 +1,7 @@
 // app/dashboard/components/NodeCardGrid.tsx
 
 import React from "react";
-import { Node } from "@/app/types";
+import { Node } from "@/app/types"; // Only Node type is strictly needed here now
 import NodeCard from "@/app/dashboard/components/node/NodeCard";
 import styles from "./NodeCardGrid.module.css";
 
@@ -11,6 +11,8 @@ const getNodeId = (node: Node): string => {
   if ("siteId" in node) return node.siteId;
   return node.subjectId;
 };
+
+// Removed getNodeSortName as sorting is now handled by the parent component (Overview.tsx)
 
 export default function NodeCardGrid({
   nodes,
@@ -23,6 +25,7 @@ export default function NodeCardGrid({
     return <p className={styles.emptyMessage}>This item has no children.</p>;
   }
 
+  // The nodes array is now expected to be already filtered and sorted by the parent.
   return (
     <div className={styles.grid}>
       {nodes.map((node) => (

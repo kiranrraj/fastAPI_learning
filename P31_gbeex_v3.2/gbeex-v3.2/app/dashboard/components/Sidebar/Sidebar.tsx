@@ -7,12 +7,16 @@ import CompanyTree from "@/app/dashboard/components/CompanyTree";
 import { SidebarContext } from "@/app/contexts/sidebar/SidebarContext";
 import { CompanyContext } from "@/app/contexts/company/CompanyContext";
 import styles from "./Sidebar.module.css";
+import type { Node } from "@/app/types";
 
 type SidebarProps = {
   isCollapsed: boolean;
+  // Optional callback invoked when any node (company/protocol/site/subject)
+  // in the tree is clicked, so you can open it in a new tab.
+  onNodeClick?: (node: Node) => void;
 };
 
-export default function Sidebar({ isCollapsed }: SidebarProps) {
+export default function Sidebar({ isCollapsed, onNodeClick }: SidebarProps) {
   const { companies } = useContext(CompanyContext)!;
   const { activeView } = useContext(SidebarContext)!;
 
@@ -32,7 +36,16 @@ export default function Sidebar({ isCollapsed }: SidebarProps) {
     >
       <SidebarHeader />
       <SidebarViewSwitcher />
-      <CompanyTree companies={getFilteredCompanies()} />
+
+      {/*
+        Original tree without tab support(for rollback):
+        <CompanyTree companies={getFilteredCompanies()} />
+      */}
+      <CompanyTree
+        companies={getFilteredCompanies()}
+        // Now forward clicks for tab creation
+        onNodeClick={onNodeClick}
+      />
     </div>
   );
 }

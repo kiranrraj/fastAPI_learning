@@ -1,12 +1,21 @@
 // app/dashboard/components/sidebar/CompanyTree.tsx
 
 import React, { useContext } from "react";
-import { Company } from "@/app/types";
+import { Company, Node } from "@/app/types";
 import { SidebarContext } from "@/app/contexts/sidebar/SidebarContext";
 import CompanyTreeNode from "./CompanyTreeNode";
 import styles from "./CompanyTree.module.css";
 
-export default function CompanyTree({ companies }: { companies: Company[] }) {
+interface CompanyTreeProps {
+  companies: Company[];
+  /** Optional callback to open a new tab when any node is clicked */
+  onNodeClick?: (node: Node) => void;
+}
+
+export default function CompanyTree({
+  companies,
+  onNodeClick,
+}: CompanyTreeProps) {
   const { activeView, favoriteIds, hiddenIds, searchQuery } =
     useContext(SidebarContext)!;
 
@@ -54,9 +63,27 @@ export default function CompanyTree({ companies }: { companies: Company[] }) {
       {filtered.length === 0 ? (
         <div className={styles.empty}>No results found.</div>
       ) : (
-        filtered.map((company) => (
-          <CompanyTreeNode key={company.companyId} node={company} level={0} />
-        ))
+        <>
+          {/* Original rendering (for rollback): */}
+          {/*
+          filtered.map((company) => (
+            <CompanyTreeNode
+              key={company.companyId}
+              node={company}
+              level={0}
+            />
+          ))
+          */}
+          {/* Updated rendering with onNodeClick propagation: */}
+          {filtered.map((company) => (
+            <CompanyTreeNode
+              key={company.companyId}
+              node={company}
+              level={0}
+              onNodeClick={onNodeClick}
+            />
+          ))}
+        </>
       )}
     </div>
   );

@@ -16,3 +16,8 @@ export interface Company {
     riskLevel: string;
     protocols: Protocol[];
 }
+
+interface CompanyContextType {
+    companies: Company[];
+    isLoading: boolean;
+}

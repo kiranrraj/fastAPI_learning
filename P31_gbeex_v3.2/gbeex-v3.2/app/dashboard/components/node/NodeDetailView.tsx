@@ -4,18 +4,15 @@ import React from "react";
 import { Node, Company, Protocol, Site, Subject } from "@/app/types";
 import NodeCardGrid from "./NodeCardGrid";
 
-// Import Detail Headers
 import CompanyDetailHeader from "@/app/dashboard/components/View/CompanyDetailView";
 import { ProtocolDetailHeader } from "@/app/dashboard/components/View/ProtocolDetailView";
 import { SiteDetailHeader } from "@/app/dashboard/components/View/SiteDetailView";
 import { SubjectDetail } from "@/app/dashboard/components/View/SubjectDetailView";
 
-// Import Standard Analytics
 import { CompanyAnalytics } from "@/app/dashboard/components/analytics/company/CompanyAnalytics";
 import { ProtocolAnalytics } from "@/app/dashboard/components/analytics/protocol/ProtocolAnalytics";
 import { SiteAnalytics } from "@/app/dashboard/components/analytics/site/SiteAnalytics";
 
-// --- FIX: Import Advanced Analytics ---
 import { AdvancedCompanyAnalytics } from "@/app/dashboard/components/analytics/company/AdvancedCompanyAnalytics";
 import { AdvancedProtocolAnalytics } from "@/app/dashboard/components/analytics/protocol/AdvancedProtocolAnalytics";
 import { AdvancedSiteAnalytics } from "@/app/dashboard/components/analytics/site/AdvancedSiteAnalytics";
@@ -38,9 +35,9 @@ const getChildrenTypeName = (node: Node): string => {
   return "";
 };
 
-// This component now acts as a router to the correct detail view.
+// a router to the correct detail view.
 export default function NodeDetailView({ node }: { node: Node }) {
-  // If the node is a subject, render its specific detail view and stop.
+  // If the node is a subject, render its specific detail view
   if ("subjectId" in node) {
     return <SubjectDetail subject={node as Subject} />;
   }
@@ -56,7 +53,6 @@ export default function NodeDetailView({ node }: { node: Node }) {
         <>
           <CompanyDetailHeader company={company} />
           <CompanyAnalytics company={company} />
-          {/* --- FIX: Add Advanced Analytics --- */}
           <AdvancedCompanyAnalytics company={company} />
         </>
       );
@@ -67,7 +63,6 @@ export default function NodeDetailView({ node }: { node: Node }) {
         <>
           <ProtocolDetailHeader protocol={protocol} />
           <ProtocolAnalytics protocol={protocol} />
-          {/* --- FIX: Add Advanced Analytics --- */}
           <AdvancedProtocolAnalytics protocol={protocol} />
         </>
       );
@@ -78,7 +73,6 @@ export default function NodeDetailView({ node }: { node: Node }) {
         <>
           <SiteDetailHeader site={site} />
           <SiteAnalytics site={site} />
-          {/* --- FIX: Add Advanced Analytics --- */}
           <AdvancedSiteAnalytics site={site} />
         </>
       );

@@ -1,0 +1,76 @@
+/* app/dashboard/components/detail/DetailPane.module.css */
+
+/* Root container for the entire detail pane */
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+/* Each major section gets its own wrapper, for spacing and optional borders */
+.headerSection {
+  /* no extra styling here—header component can handle its own padding */
+}
+
+.childrenSection {
+  /* children list (cards or table) */
+}
+
+.analyticsSection {
+  border-top: 1px solid #e5e7eb;
+  padding-top: 1.5rem;
+}
+
+.visualizationSection {
+  border-top: 1px solid #e5e7eb;
+  padding-top: 1.5rem;
+}
+
+/* Common section header styling */
+.sectionHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.sectionHeader h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #111827;
+}
+
+.sectionHeader button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 0.875rem;
+  color: #4f46e5;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+/* Collapsed body styling */
+.sectionBody {
+  transition: max-height 0.3s ease, opacity 0.3s ease;
+  overflow: hidden;
+}
+.sectionBody.collapsed {
+  max-height: 0;
+  opacity: 0;
+  pointer-events: none;
+}
+.sectionBody.expanded {
+  max-height: 10000px; /* large enough to show full content */
+  opacity: 1;
+}
+
+/* Utility: ensure tables and cards fill width */
+.childrenSection .table,
+.childrenSection .grid {
+  width: 100%;
+}

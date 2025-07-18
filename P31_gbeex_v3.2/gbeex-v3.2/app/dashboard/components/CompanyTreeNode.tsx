@@ -1,5 +1,7 @@
 // app/dashboard/components/sidebar/CompanyTreeNode.tsx
 
+"use client";
+
 import React, { useContext } from "react";
 import { Company, Protocol, Site, Subject } from "@/app/types";
 import { SidebarContext } from "@/app/contexts/sidebar/SidebarContext";
@@ -32,7 +34,18 @@ const getNodeChildren = (node: Node): Node[] => {
   return [];
 };
 
-const CompanyTreeNode = ({ node, level }: { node: Node; level: number }) => {
+interface CompanyTreeNodeProps {
+  node: Node;
+  level: number;
+  /** Optional callback to open a new tab on click */
+  onNodeClick?: (node: Node) => void;
+}
+
+const CompanyTreeNode = ({
+  node,
+  level,
+  onNodeClick,
+}: CompanyTreeNodeProps) => {
   const { expandedNodeIds, toggleNodeExpansion, hiddenIds, favoriteIds } =
     useContext(SidebarContext)!;
 
@@ -57,7 +70,20 @@ const CompanyTreeNode = ({ node, level }: { node: Node; level: number }) => {
             onClick={() => toggleNodeExpansion(nodeId)}
           />
 
+          {/* Original click handler (roll back if needed):
           <span className={styles.name} onClick={() => handleNodeSelect(node)}>
+            {nodeName}
+          </span>
+          */}
+
+          {/* Updated: invoke both handleNodeSelect and onNodeClick */}
+          <span
+            className={styles.name}
+            onClick={() => {
+              handleNodeSelect(node);
+              onNodeClick?.(node);
+            }}
+          >
             {nodeName}
           </span>
 
@@ -77,10 +103,14 @@ const CompanyTreeNode = ({ node, level }: { node: Node; level: number }) => {
       {isExpanded && children.length > 0 && (
         <div className={styles.children}>
           {children.map((child) => (
+            // Original mapping (commented for rollback):
+            // <CompanyTreeNode key={getNodeId(child)} node={child} level={level + 1} />
+
             <CompanyTreeNode
               key={getNodeId(child)}
               node={child}
               level={level + 1}
+              onNodeClick={onNodeClick}
             />
           ))}
         </div>
