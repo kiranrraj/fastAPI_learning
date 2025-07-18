@@ -1,56 +1,129 @@
 .section {
-  margin-top: 2rem;
-  border-top: 1px solid #e5e7eb;
-  padding-top: 1.5rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 .header {
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  margin-bottom: 1rem;
+  align-items: center;
+  padding: 15px 20px;
+  border-bottom: 1px solid #e0e0e0;
+  background-color: #f9f9f9;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
 }
 
 .header h2 {
   margin: 0;
-  font-size: 1.25rem;
-  font-weight: 600;
+  font-size: 1.2em;
+  color: #333;
 }
 
 .header button {
   background: none;
   border: none;
   cursor: pointer;
-  color: #4f46e5;
+  padding: 5px;
   display: flex;
   align-items: center;
+  justify-content: center;
+  color: #666;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+.header button:hover {
+  background-color: #e0e0e0;
 }
 
 .body {
-  transition: max-height 0.3s ease, opacity 0.3s ease;
   overflow: hidden;
-}
-
-.body.expanded {
-  max-height: 2000px;
-  opacity: 1;
+  transition: max-height 0.3s ease-out;
 }
 
 .body.collapsed {
   max-height: 0;
-  opacity: 0;
+  padding: 0 20px;
 }
 
-.chartPlaceholder {
-  height: 300px; 
+.body.expanded {
+  max-height: 1000px;
+  padding: 20px;
+}
+
+.tabContainer {
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
+  border-bottom: 1px solid #e0e0e0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.tabButton {
+  flex: 1;
+  min-width: 100px; /* Reduced min-width for more compactness */
+  padding: 8px 10px; /* Adjusted padding */
+  background-color: #f0f0f0;
+  border: none;
+  border-right: 1px solid #e0e0e0;
+  cursor: pointer;
+  font-size: 0.9em; /* Slightly smaller font size */
+  font-weight: 500;
+  color: #555;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+  height: 45px; /* Reduced height for compactness */
+  display: flex;
   align-items: center;
+  justify-content: center;
+  text-align: center;
+  white-space: normal; /* Allow text to wrap */
+  box-sizing: border-box;
+  line-height: 1.2; /* Adjust line height for multi-line text */
+}
+
+.tabButton:last-child {
+  border-right: none;
+}
+
+.tabButton:hover {
+  background-color: #e8e8e8;
+  color: #333;
+}
+
+.tabButton.activeTab {
   background-color: #fff;
-  border: 1px dashed #d1d5db;
-  border-radius: 0.75rem;
-  color: #6b7280;
+  color: #007bff;
+  border-bottom: 3px solid #007bff;
+  font-weight: 600;
+  position: relative;
+  z-index: 1;
+  border-right-color: transparent;
+  border-left: none;
+  border-top: none;
+  border-radius: 0;
+}
+
+.tabButton.activeTab + .tabButton {
+  border-left: none;
+}
+
+.tabContent {
+  padding: 20px 0;
+}
+
+.noDataMessage {
+  padding: 20px;
+  text-align: center;
+  color: #666;
   font-style: italic;
-  margin-top: 1rem; 
-  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  margin-top: 20px;
+  border: 1px dashed #ccc;
 }

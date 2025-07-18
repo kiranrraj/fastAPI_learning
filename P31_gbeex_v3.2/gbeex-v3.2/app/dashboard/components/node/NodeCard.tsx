@@ -12,7 +12,7 @@ import {
   MapPin,
   TestTube2,
   ShieldCheck,
-  Globe, // Ensure Globe icon is imported for headquarters
+  Globe,
   User,
   Activity,
   AlertTriangle,
@@ -93,7 +93,7 @@ export default function NodeCard({
           value={company.sponsorType}
         />,
         <DetailItem
-          key="headquarters" // Added headquarters (Country)
+          key="headquarters"
           icon={<Globe size={16} className={styles.detailIconColor} />}
           label="Country"
           value={company.headquarters}

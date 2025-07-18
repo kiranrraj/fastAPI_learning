@@ -1,0 +1,46 @@
+/* app/dashboard/components/analytics/SiteHeatmap.module.css */
+.wrapper {
+  width: 100%;
+  padding: 1rem;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.5rem;
+  overflow-x: auto;
+}
+
+.grid {
+  display: grid;
+  gap: 2px;
+}
+
+.headerCell {
+  background: #f3f4f6;
+  padding: 0.5rem;
+  font-weight: 600;
+  font-size: 0.875rem;
+  text-align: center;
+  white-space: normal; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1.2; 
+}
+
+.dataCell {
+  padding: 0.5rem;
+  text-align: center;
+  font-size: 0.875rem;
+  color: #fff;
+  text-shadow: 2px 2px 2px #000;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dataCell:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+}
