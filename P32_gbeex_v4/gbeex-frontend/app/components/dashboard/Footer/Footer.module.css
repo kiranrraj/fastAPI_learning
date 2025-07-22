@@ -1,0 +1,10 @@
+/* app/components/dashboard/Footer/Footer.module.css */
+.footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+  background: #fafafa;
+  border-top: 1px solid #e5e5e5;
+  font-size: 0.875rem;
+  color: #555;
+}

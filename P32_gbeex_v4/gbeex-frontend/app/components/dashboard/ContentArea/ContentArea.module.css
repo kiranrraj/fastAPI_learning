@@ -1,0 +1,119 @@
+.contentArea {
+  flex-grow: 1;
+  background-color: #f8f9fa;
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  font-family: 'Inter', sans-serif;
+  margin: 1rem;
+}
+
+.tabBar {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #e9ecef;
+  padding: 0.5rem 1rem;
+  border-bottom: 1px solid #dee2e6;
+  gap: 0.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.tab {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  background-color: #ffffff;
+  color: #495057;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: background-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+  border: 1px solid #e0e0e0;
+}
+
+.tab:hover {
+  background-color: #f1f3f5;
+  color: #212529;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+}
+
+.tab.active {
+  background-color: #007bff;
+  color: #ffffff;
+  border-color: #007bff;
+  box-shadow: 0 2px 8px rgba(0, 123, 255, 0.2);
+  font-weight: 600;
+}
+
+.closeBtn {
+  background: none;
+  border: none;
+  color: #ffffff;
+  margin-left: 0.75rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.2rem;
+  border-radius: 50%;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.tab:not(.active) .closeBtn {
+  color: #6c757d;
+}
+
+.closeBtn:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+}
+
+.tab:not(.active) .closeBtn:hover {
+  background-color: #ced4da;
+  color: #343a40;
+}
+
+.tabContent {
+  padding: 1.5rem;
+  background-color: #ffffff;
+  flex-grow: 1;
+  overflow-y: auto;
+  border-radius: 0 0 8px 8px;
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.03);
+}
+
+.empty {
+  text-align: center;
+  padding: 3rem;
+  color: #6c757d;
+  font-size: 1.1rem;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  margin: 1rem;
+}
+
+@media (max-width: 768px) {
+  .contentArea {
+    margin: 0.5rem;
+  }
+  .tabBar {
+    padding: 0.5rem;
+    gap: 0.25rem;
+  }
+
+  .tab {
+    padding: 0.6rem 0.8rem;
+    font-size: 0.8rem;
+  }
+
+  .closeBtn {
+    margin-left: 0.5rem;
+  }
+
+  .tabContent {
+    padding: 1rem;
+  }
+}

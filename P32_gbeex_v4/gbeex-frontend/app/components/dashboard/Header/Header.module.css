@@ -1,0 +1,28 @@
+/* app/components/dashboard/Header/Header.module.css */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+  height: 60px;
+  background: #fff;
+  border-bottom: 1px solid #e5e5e5;
+}
+.left {
+  display: flex;
+  align-items: center;
+}
+.logo {
+  margin: 0;
+  font-size: 1.25rem;
+}
+.right {
+  display: flex;
+  align-items: center;
+}
+.iconButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+}

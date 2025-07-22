@@ -1,0 +1,56 @@
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    text-align: center;
+    background-color: #f3f4f6;
+    font-family: 'Inter', sans-serif;
+    padding: 16px;
+}
+
+.content {
+    max-width: 500px;
+}
+
+.iconWrapper {
+    margin-bottom: 24px;
+}
+
+.iconWrapper svg {
+    width: 80px;
+    height: 80px;
+    color: #ef4444; /* Red color for error */
+    margin: 0 auto;
+}
+
+.title {
+    font-size: 36px;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 12px;
+}
+
+.description {
+    font-size: 16px;
+    color: #4b5563;
+    margin-bottom: 32px;
+    line-height: 1.6;
+}
+
+.button {
+    display: inline-block;
+    background-color: #ef4444; /* Red button */
+    color: #ffffff;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.button:hover {
+    background-color: #dc2626; /* Darker red on hover */
+}

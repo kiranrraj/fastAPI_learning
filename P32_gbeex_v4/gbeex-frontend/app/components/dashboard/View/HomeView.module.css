@@ -1,0 +1,18 @@
+/* app/components/dashboard/view/HomeView.module.css */
+
+.container {
+  padding: 2rem;
+  text-align: center;
+  color: #374151;
+}
+
+.title {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+  color: #111827;
+}
+
+.message {
+  font-size: 1rem;
+  color: #6b7280;
+}
