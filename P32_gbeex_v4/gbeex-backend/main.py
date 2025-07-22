@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 import os
 import logging
-from datetime import datetime, timedelta
-from typing import List, Optional
+from datetime import datetime, timedelta, timezone
+from typing import List, Optional, Dict, Any
 
 import bcrypt
 from fastapi import Depends, FastAPI, HTTPException, status, Request
@@ -10,7 +10,8 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.security import OAuth2PasswordBearer, OAuth2PasswordRequestForm
 from jose import JWTError, jwt
 from motor.motor_asyncio import AsyncIOMotorClient
-from pydantic import BaseModel, ConfigDict, ValidationError
+from pydantic import BaseModel, ConfigDict, ValidationError, Field
+from fastapi.encoders import jsonable_encoder
 
 # --- Configuration ---
 MONGO_URI                = "mongodb://localhost:27017/"
@@ -18,7 +19,8 @@ DATABASE_NAME            = "GBeeXDataV4"
 USER_COL                 = "users"
 COMPANY_COL              = "clientData"
 NOTIFICATION_COL         = "notifications"
-SECRET_KEY               = os.getenv("GBEEX_SECRET", "@password@1234567890@@")
+PORTLET_COL              = "portlets"
+SECRET_KEY               = "Strong@@password@1234567890@@"
 ALGORITHM                = "HS256"
 ACCESS_TOKEN_EXPIRE_MIN  = 30  # minutes
 LOCKOUT_DURATION_MINUTES = 5
@@ -46,7 +48,7 @@ class Token(BaseModel):
 
 class UserBase(BaseModel):
     model_config = ConfigDict(extra="ignore")
-    staffId:     str        # <-- matches your insert script
+    staffId:     str     
     username:    str
     email:       str
     firstName:   str
@@ -60,7 +62,7 @@ class UserBase(BaseModel):
     updatedAt:   datetime
 
 class UserInDB(UserBase):
-    passwordHash:        str
+    passwordHash: bytes
     failedLoginAttempts: int = 0
     lockoutUntil:        Optional[datetime] = None
     maxLoginAttempts:    int = 5
@@ -118,7 +120,7 @@ def verify_password(plain_password: str, hashed_password) -> bool:
     return bcrypt.checkpw(plain_password.encode('utf-8'), hashed_bytes)
 
 def create_access_token(subject: str, expires_delta: Optional[timedelta] = None) -> str:
-    expire = datetime.utcnow() + (expires_delta or timedelta(minutes=ACCESS_TOKEN_EXPIRE_MIN))
+    expire = datetime.now(timezone.utc) + (expires_delta or timedelta(minutes=ACCESS_TOKEN_EXPIRE_MIN))
     to_encode = {"sub": subject, "exp": int(expire.timestamp())}
     return jwt.encode(to_encode, SECRET_KEY, algorithm=ALGORITHM)
 
@@ -139,11 +141,6 @@ async def get_current_user(token: str = Depends(oauth2_scheme)) -> UserInDB:
     user_doc = await db[USER_COL].find_one({"username": username})
     if not user_doc:
         raise creds_exc
-
-    # If passwordHash stored as bytes, decode it
-    ph = user_doc.get("passwordHash")
-    if isinstance(ph, (bytes, bytearray)):
-        user_doc["passwordHash"] = ph.decode("utf-8")
 
     try:
         return UserInDB(**user_doc)
@@ -259,3 +256,99 @@ async def mark_notification_read(nid: str, current_user: UserInDB = Depends(get_
     if res.matched_count == 0:
         raise HTTPException(status_code=404, detail="Notification not found")
     return {"status": "ok"}
+
+
+# ────── PORTLETS ──────
+
+class PortletBase(BaseModel):
+    key: str = Field(..., example="site-performance")
+    title: str = Field(..., example="Clinical Site Performance Summary")
+    category: str = Field(..., example="Dashboard & Overview Panels")
+    description: Optional[str] = Field(None, example="Map-based heatmap of site performance")
+    enabled: bool = Field(True, example=True)
+    order: int = Field(..., ge=0, example=1)
+    settings: Dict[str, Any] = Field(
+        default_factory=dict,
+        example={
+            "defaultFilters": {"region": "all", "disease": "all"},
+            "mapType": "heatmap",
+            "refreshIntervalSec": 300
+        }
+    )
+
+class Portlet(PortletBase):
+    id: str = Field(..., example="64b1f2a3e8b4f12d34acd567")
+
+@app.get(
+    "/api/v1/portlets",
+    response_model=List[Portlet],
+    summary="List all portlets",
+    tags=["Portlets"]
+)
+async def list_portlets(current_user: UserInDB = Depends(get_current_user)):
+    """
+    Returns the full list of configured portlets.
+    """
+    try:
+        docs = await db[PORTLET_COL].find().to_list(length=None)
+        result = []
+        for d in docs:
+            d["id"] = str(d["_id"])
+            result.append(d)
+        return result
+    except ValidationError as ve:
+        logging.warning("Error serializing portlets: %s", ve)
+        raise HTTPException(
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            detail="Error processing portlet data"
+        )
+    except Exception as e:
+        logging.error("Error listing portlets: %s", e)
+        raise HTTPException(
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            detail="Unable to retrieve portlets"
+        )
+
+@app.post(
+    "/api/v1/portlets",
+    response_model=Portlet,
+    status_code=status.HTTP_201_CREATED,
+    summary="Create a new portlet",
+    tags=["Portlets"]
+)
+async def create_portlet(
+    payload: PortletBase,
+    current_user: UserInDB = Depends(get_current_user)
+):
+    """
+    Adds a new portlet to the collection.
+    """
+    try:
+        data = jsonable_encoder(payload)
+        insert_res = await db[PORTLET_COL].insert_one(data)
+        created = await db[PORTLET_COL].find_one({"_id": insert_res.inserted_id})
+        if not created:
+            raise HTTPException(
+                status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+                detail="Portlet created but could not be fetched"
+            )
+        created["id"] = str(created["_id"])
+        return created
+
+    except ValidationError as ve:
+        logging.warning("Portlet validation failed: %s", ve)
+        raise HTTPException(
+            status_code=status.HTTP_422_UNPROCESSABLE_ENTITY,
+            detail=ve.errors()
+        )
+
+    except HTTPException:
+        # Re‑raise HTTPExceptions we've thrown above
+        raise
+
+    except Exception as e:
+        logging.error("Error creating portlet: %s", e)
+        raise HTTPException(
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            detail="Unable to create portlet"
+        )
