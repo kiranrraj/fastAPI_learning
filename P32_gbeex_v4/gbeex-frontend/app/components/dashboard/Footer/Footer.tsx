@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import styles from "./Footer.module.css";
 
 export function Footer() {
-  // Start with an empty string so SSR and client HTML match
+  // !!!Important: Start with an empty string so SSR and client HTML match
   const [time, setTime] = useState<string>("");
 
   useEffect(() => {
@@ -13,7 +13,6 @@ export function Footer() {
     const update = () => setTime(new Date().toLocaleTimeString());
     update();
 
-    // Then every second
     const id = setInterval(update, 1000);
     return () => clearInterval(id);
   }, []);
@@ -21,7 +20,7 @@ export function Footer() {
   return (
     <footer className={styles.footer}>
       <span>Server status: OK</span>
-      {/* Render the time only after hydration */}
+      {/* !!!Important: Render the time only after hydration */}
       <span>{time}</span>
     </footer>
   );

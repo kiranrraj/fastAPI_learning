@@ -4,19 +4,20 @@ import CredentialsProvider from "next-auth/providers/credentials";
 import { JWT } from "next-auth/jwt"; // Import JWT type for better type safety
 
 // Function to check if a JWT token is expired or close to expiring
-// This is a helper function to avoid repeating logic
+// helper function to avoid repeating logic
 function isJwtExpired(token: string | undefined): boolean {
     if (!token) return true; // Treat undefined/null tokens as expired
 
     try {
         const decoded = JSON.parse(Buffer.from(token.split('.')[1], 'base64').toString());
         // Check if 'exp' (expiration time) exists and if current time is past it
-        // Add a buffer (e.g., 60 seconds) to refresh proactively
-        const REFRESH_THRESHOLD_SECONDS = 60; // Refresh 60 seconds before actual expiry
+        // Add a buffer (60 seconds) to refresh proactively
+        const REFRESH_THRESHOLD_SECONDS = 60;
         return decoded.exp < (Date.now() / 1000) + REFRESH_THRESHOLD_SECONDS;
     } catch (e) {
+        // Malformed token should be treated as expired
         console.error("Error decoding token for expiry check:", e);
-        return true; // Malformed token should be treated as expired
+        return true;
     }
 }
 
@@ -27,7 +28,8 @@ async function refreshAccessToken(refreshToken: string): Promise<{ accessToken: 
             `${process.env.NEXT_PUBLIC_API_URL}/api/v1/auth/refresh`,
             {
                 method: "POST",
-                headers: { "Authorization": `Bearer ${refreshToken}` }, // Send refresh token in Auth header
+                // Send refresh token in Auth header
+                headers: { "Authorization": `Bearer ${refreshToken}` },
             }
         );
 
@@ -82,7 +84,7 @@ export const authOptions: NextAuthOptions = {
                 );
 
                 if (!res.ok) {
-                    // Log the error response from FastAPI for debugging
+                    // Log the error response from FastAPI
                     const errorText = await res.text();
                     console.error("FastAPI login failed:", res.status, errorText);
                     return null;
@@ -91,7 +93,8 @@ export const authOptions: NextAuthOptions = {
                 // Parse out both access_token and refresh_token from the FastAPI response
                 const tokenData: { access_token: string; token_type: string; refresh_token: string } =
                     await res.json();
-                const { access_token, refresh_token } = tokenData; // NEW: Get refresh_token
+                // Get refresh_token
+                const { access_token, refresh_token } = tokenData;
 
                 // Fetch the user profile from FastAPI using the new access_token
                 const userRes = await fetch(
@@ -111,9 +114,9 @@ export const authOptions: NextAuthOptions = {
                 return {
                     id: user.username,
                     name: `${user.firstName} ${user.lastName}`,
-                    accessToken: access_token,      // NEW: Attach access token
-                    refreshToken: refresh_token,    // NEW: Attach refresh token
-                } as any; // Cast to any to allow custom properties
+                    accessToken: access_token,
+                    refreshToken: refresh_token,
+                } as any; // !!!Important: Cast to any to allow custom properties
             },
         }),
     ],
@@ -123,7 +126,7 @@ export const authOptions: NextAuthOptions = {
             // copy accessToken and refreshToken from the user object to the JWT token.
             if (user && (user as any).accessToken && (user as any).refreshToken) {
                 token.accessToken = (user as any).accessToken;
-                token.refreshToken = (user as any).refreshToken; // NEW: Store refresh token
+                token.refreshToken = (user as any).refreshToken; // Store refresh token
                 console.log("JWT Callback: Initial sign-in. Tokens set.");
             }
             // For subsequent requests (user is null), check and refresh tokens
@@ -135,7 +138,8 @@ export const authOptions: NextAuthOptions = {
 
                     if (refreshedTokens) {
                         token.accessToken = refreshedTokens.accessToken;
-                        token.refreshToken = refreshedTokens.refreshToken; // NEW: Update refresh token (rotation)
+                        // Update refresh token (rotation)
+                        token.refreshToken = refreshedTokens.refreshToken;
                         console.log("JWT Callback: Tokens successfully refreshed.");
                     } else {
                         // If refresh failed, invalidate tokens to force re-login
@@ -149,10 +153,8 @@ export const authOptions: NextAuthOptions = {
         },
         async session({ session, token }) {
             // Expose accessToken on the `session` object for client-side use.
-            // DO NOT expose refresh_token directly to the client session for security reasons.
             (session as any).accessToken = (token as any).accessToken;
             // You can optionally add other user-specific data from the token here
-            // (session as any).user = { id: token.sub, name: token.name, etc. };
             return session;
         },
     },

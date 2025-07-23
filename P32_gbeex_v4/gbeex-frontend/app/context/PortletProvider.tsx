@@ -22,7 +22,7 @@ export function PortletProvider({ children }: Props) {
       type: "custom",
       id: "home",
       title: "Home",
-      content: <HomeView />, // <<–– use HomeView here
+      content: <HomeView />, // use HomeView
     },
   ]);
   const [activeTabId, setActiveTabId] = useState("home");
