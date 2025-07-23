@@ -1,25 +1,26 @@
 // app/types/portlet.ts
 
-/** The shape of a portlet as stored on the server (minus its ID) */
+export type PortletCategory = "analytics" | "visualization" | "generic" | "report" | "workflow" | "other";
+export type PortletRenderMechanism = "iframe" | "component";
+
 export interface PortletBase {
-    /** Unique machine‑readable key, e.g. "site-performance" */
     key: string;
-    /** Human‑readable title, e.g. "Site Performance" */
     title: string;
-    /** UI grouping/category, e.g. "Dashboard & Overview Panels" */
-    category: string;
-    /** Optional description */
-    description?: string;
-    /** Whether this panel is shown by default */
+    category: PortletCategory;
+    description: string;
+    longDescription?: string;
     enabled: boolean;
-    /** Sort order within its category */
     order: number;
-    /** Arbitrary settings blob (filters, iframe URL, etc.) */
+    renderMechanism: PortletRenderMechanism;
+    url?: string; // Optional, specific to 'iframe'
+    componentName?: string; // Optional, specific to 'component'
+    isChild: boolean;
+    parentPath?: string;
+    createdBy: string;
+    testNotes?: string;
     settings: Record<string, any>;
 }
 
-/** A portlet as returned from the server (with its ID) */
 export interface Portlet extends PortletBase {
-    /** Mongo/DB-generated ID */
     id: string;
 }

@@ -2,7 +2,7 @@
 import os
 import logging
 from datetime import datetime, timedelta, timezone
-from typing import List, Optional, Dict, Any
+from typing import List, Optional, Dict, Any, Literal 
 import uuid # NEW: Import the uuid module
 
 import bcrypt
@@ -48,7 +48,7 @@ db      = client[DATABASE_NAME]
 class Token(BaseModel):
     access_token: str
     token_type: str
-    refresh_token: str # NEW: Added refresh_token to the Token model
+    refresh_token: str
 
 class UserBase(BaseModel):
     model_config = ConfigDict(extra="ignore")
@@ -411,6 +411,52 @@ class PortletBase(BaseModel):
         }
     )
 
+class PortletBase(BaseModel):
+    key: str = Field(..., example="site-performance-chart", description="Unique identifier for the portlet.")
+    title: str = Field(..., example="Site Performance Overview", description="Human-readable title.")
+    category: Literal["analytics", "visualization", "generic", "report", "workflow", "other"] = Field(
+        ...,
+        example="analytics",
+        description="Categorization of the portlet."
+    )
+    description: str = Field(..., example="A chart visualizing key site performance metrics.", description="Brief description of the portlet's function.")
+    longDescription: Optional[str] = Field(None, description="Detailed description of the portlet's features or use cases.")
+    enabled: bool = Field(True, example=True, description="Whether the portlet is active and visible.")
+    order: int = Field(..., ge=0, example=1, description="Display order of the portlet in lists/sidebars.")
+    renderMechanism: Literal["iframe", "component"] = Field(
+        ...,
+        example="component",
+        description="Determines how the portlet content is rendered: 'iframe' for external URLs, 'component' for local React components."
+    )
+    url: Optional[str] = Field(
+        None,
+        example="https://example.com/dashboard",
+        description="URL to embed if 'renderMechanism' is 'iframe'."
+    )
+    componentName: Optional[str] = Field(
+        None,
+        example="SitePerformanceChart",
+        description="Name of the React component to render if 'renderMechanism' is 'component'. Maps to a component in frontend registry."
+    )
+    isChild: bool = Field(False, description="Indicates if this is a child portlet.")
+    parentPath: Optional[str] = Field(
+        None,
+        example="Dashboard/Analytics",
+        description="Hierarchical path if 'isChild' is true (e.g., 'Parent/SubParent')."
+    )
+    createdBy: str = Field(..., description="The user or role that created this portlet.")
+    testNotes: Optional[str] = Field(None, description="Notes or test cases related to this portlet's development/testing.")
+    
+    settings: Dict[str, Any] = Field(
+        default_factory=dict,
+        description="Arbitrary JSON settings passed to the portlet for configuration.",
+        example={
+            "defaultFilters": {"region": "all", "disease": "all"},
+            "chartType": "bar",
+            "dataEndpoint": "/api/v1/data/site-performance"
+        }
+    )
+
 class Portlet(PortletBase):
     # The '_id' field from MongoDB will be mapped to 'id' here
     id: str = Field(..., example="64b1f2a3e8b4f12d34acd567")
@@ -459,20 +505,26 @@ async def create_portlet(
     current_user: UserInDB = Depends(get_current_user)
 ):
     """
-    Adds a new portlet to the collection.
+    Adds a new portlet to the collection, ensuring uniqueness of the 'key' field.
     """
     try:
-        # Convert the Pydantic model to a dictionary suitable for MongoDB insertion.
+        # Check if a portlet with the given key already exists
+        existing_portlet = await db[PORTLET_COL].find_one({"key": payload.key})
+        if existing_portlet:
+            raise HTTPException(
+                status_code=status.HTTP_409_CONFLICT, # 409 Conflict for duplicate resource
+                detail=f"Portlet with key '{payload.key}' already exists. Please choose a different key."
+            )
+
         data = jsonable_encoder(payload)
         insert_res = await db[PORTLET_COL].insert_one(data)
-        # Fetch the newly created document to return it.
         created = await db[PORTLET_COL].find_one({"_id": insert_res.inserted_id})
         if not created:
             raise HTTPException(
                 status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
                 detail="Portlet created but could not be fetched"
             )
-        # Convert MongoDB's ObjectId '_id' to a string 'id' for Pydantic.
+        # Ensure the 'id' field is correctly mapped from MongoDB's '_id'
         created["id"] = str(created["_id"])
         return created
 
@@ -482,11 +534,8 @@ async def create_portlet(
             status_code=status.HTTP_422_UNPROCESSABLE_ENTITY,
             detail=ve.errors()
         )
-
     except HTTPException:
-        # Re-raise HTTPExceptions we've thrown above
-        raise
-
+        raise # Re-raise HTTPExceptions we've thrown above
     except Exception as e:
         logging.error("Error creating portlet: %s", e)
         raise HTTPException(
