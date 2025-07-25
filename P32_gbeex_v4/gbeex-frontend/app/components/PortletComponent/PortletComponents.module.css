@@ -1,0 +1,65 @@
+/* app/components/PortletComponents.module.css */
+
+.unknownComponentContainer {
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background: #f0f0f0;
+    color: #333;
+    text-align: center;
+    margin: 20px;
+    max-width: 500px;
+    word-break: break-word;
+    box-sizing: border-box; 
+}
+
+.unknownComponentTitle {
+    font-size: 20px;
+    font-weight: bold;
+    color: #cc0000; 
+    margin-bottom: 10px;
+}
+
+.unknownComponentText {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.unknownComponentCode {
+    background-color: #e9ecef;
+    padding: 2px 5px;
+    border-radius: 3px;
+    font-family: monospace;
+    font-size: 14px;
+    color: #000;
+}
+
+.unknownComponentHelp {
+    font-size: 13px;
+    color: #666;
+    margin-top: 15px;
+}
+
+.unknownComponentDetails {
+    margin-top: 10px;
+    font-size: 14px;
+    cursor: pointer;
+    text-align: left; 
+}
+
+.unknownComponentSummary {
+    font-weight: bold;
+    color: #007bff;
+}
+
+.unknownComponentPre {
+    white-space: pre-wrap;
+    word-break: break-all;
+    background-color: #e9ecef;
+    padding: 10px;
+    border-radius: 4px;
+    text-align: left;
+    margin-top: 10px;
+    font-size: 12px;
+    overflow-x: auto; 
+}

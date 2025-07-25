@@ -1,0 +1,47 @@
+/* app/components/common/DataTable.module.css */
+
+.tableContainer {
+  width: 100%;
+  overflow-x: auto;
+  margin: 1rem 0;
+}
+
+.dataTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.dataTable th,
+.dataTable td {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.dataTable th {
+  background-color: #fafafa;
+  font-weight: 600;
+  cursor: default;
+  user-select: none;
+}
+
+.sortableHeader {
+  cursor: pointer;
+}
+
+.sortIcon {
+  margin-left: 0.5rem;
+  vertical-align: middle;
+}
+
+.noDataMessage {
+  padding: 1rem;
+  text-align: center;
+  color: #666;
+}
+
+.cellContent {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

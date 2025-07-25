@@ -1,0 +1,197 @@
+/* app/components/portlets/SubjectSearch.module.css */
+
+.container {
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    font-family: Arial, sans-serif;
+    color: #333;
+    height: 100%; /* Ensure container fills available height */
+    display: flex;
+    flex-direction: column;
+}
+
+.title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #003366;
+}
+
+.description {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.searchForm {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 20px;
+}
+
+.formRow {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.searchInput {
+    flex-grow: 1;
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.searchInput:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+}
+
+.searchButton {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.2s ease;
+}
+
+.searchButton:hover {
+    background-color: #0056b3;
+}
+
+.searchButton:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+.filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.filterInput,
+.filterSelect {
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    min-width: 120px;
+}
+
+.filterSelect {
+    background-color: white;
+    cursor: pointer;
+}
+
+.error {
+    color: #d9534f;
+    background-color: #fdd;
+    border: 1px solid #d9534f;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.loading {
+    text-align: center;
+    font-style: italic;
+    color: #666;
+    padding: 20px 0;
+}
+
+.noResults {
+    text-align: center;
+    color: #666;
+    padding: 20px 0;
+    border: 1px dashed #eee;
+    border-radius: 5px;
+    margin-top: 15px;
+}
+
+.resultsSummary {
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #003366;
+}
+
+.tableContainer {
+    flex-grow: 1; /* Allow table container to fill remaining space */
+    overflow-y: auto; /* Enable vertical scrolling for table if content overflows */
+    overflow-x: auto; /* Allows table to scroll horizontally on small screens */
+    min-height: 0; /* Important for flex-grow to work with overflow-y */
+}
+
+.resultsTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    min-width: 800px; /* Ensure table doesn't get too narrow, adjust as needed */
+}
+
+.resultsTable th,
+.resultsTable td {
+    border: 1px solid #eee;
+    padding: 10px 15px;
+    text-align: left;
+    font-size: 14px;
+}
+
+.resultsTable th {
+    background-color: #f8f8f8;
+    font-weight: bold;
+    color: #555;
+    position: sticky; /* Sticky headers for scrolling table */
+    top: 0;
+    z-index: 10;
+}
+
+.resultsTable td {
+    vertical-align: top; /* Align cell content to top */
+}
+
+.resultsTable tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.resultsTable tbody tr:hover {
+    background-color: #f0f8ff; /* Light blue on row hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .formRow {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .filters {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .filterInput,
+    .filterSelect {
+        width: 100%;
+        min-width: unset;
+    }
+
+    .tableContainer {
+        min-width: unset; /* Allow table container to shrink */
+        overflow-x: auto; /* Ensure horizontal scroll remains */
+    }
+
+    .resultsTable {
+        min-width: 600px; /* Keep minimum width for table content even if container shrinks */
+    }
+}

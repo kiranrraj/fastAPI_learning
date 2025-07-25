@@ -1,0 +1,223 @@
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #f0f2f5;
+  font-family: 'Inter', sans-serif;
+  color: #333;
+}
+
+.header {
+  background-color: #1a202c;
+  color: #ffffff;
+  padding: 20px 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.headerContent, .navContent, .mainContent, .footerContent {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.nav {
+  background-color: #ffffff;
+  padding: 20px 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.navContent {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 30px;
+}
+
+.navSection {
+  flex: 1;
+  min-width: 280px;
+}
+
+.navSectionTitle {
+  font-size: 18px;
+  font-weight: 600;
+  color: #2d3748;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #e2e8f0;
+  padding-bottom: 10px;
+}
+
+.radioForm {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.radioLabel {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-size: 16px;
+  color: #4a5568;
+  transition: color 0.2s ease-in-out;
+}
+
+.radioLabel:hover {
+  color: #2b6cb0;
+}
+
+.radioInput {
+  margin-right: 8px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border: 2px solid #a0aec0;
+  border-radius: 50%;
+  outline: none;
+  cursor: pointer;
+  transition: background-color 0.2s, border-color 0.2s;
+}
+
+.radioInput:checked {
+  background-color: #2b6cb0;
+  border-color: #2b6cb0;
+}
+
+.radioInput:checked::before {
+  content: '';
+  display: block;
+  width: 8px;
+  height: 8px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  position: relative;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.globalSearchBar {
+  width: 100%;
+}
+
+.globalSearchInput {
+  padding: 10px 15px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 14px;
+  width: 100%;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.globalSearchInput::placeholder {
+  color: #a0aec0;
+}
+
+.globalSearchInput:focus {
+  outline: none;
+  border-color: #2b6cb0;
+  box-shadow: 0 0 0 3px rgba(43, 108, 176, 0.2);
+}
+
+.extraParam {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.extraParamInput {
+  padding: 10px 15px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 14px;
+  width: 100%;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.extraParamInput::placeholder {
+  color: #a0aec0;
+}
+
+.extraParamInput:focus {
+  outline: none;
+  border-color: #2b6cb0;
+  box-shadow: 0 0 0 3px rgba(43, 108, 176, 0.2);
+}
+
+.main {
+  flex-grow: 1;
+  padding: 20px 0;
+}
+
+.portletSection {
+  margin-bottom: 20px;
+}
+
+.portletSectionTitle {
+  font-size: 24px;
+  font-weight: 600;
+  color: #2d3748;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.footer {
+  background-color: #1a202c;
+  color: #ffffff;
+  padding: 15px 0;
+}
+
+.footerContent {
+  text-align: center;
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  .headerContent, .navContent, .mainContent, .footerContent {
+    padding: 0 15px;
+  }
+  .navContent {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 20px;
+  }
+  .navSection {
+    min-width: unset;
+    width: 100%;
+  }
+  .radioForm {
+    justify-content: center;
+  }
+  .globalSearchBar, .extraParam {
+    width: 100%;
+  }
+  .extraParam input[type="text"] {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .header h1 {
+    font-size: 24px;
+  }
+  .navSectionTitle {
+    font-size: 16px;
+  }
+  .radioLabel {
+    font-size: 14px;
+  }
+  .globalSearchInput, .extraParamInput {
+    font-size: 12px;
+    padding: 8px 10px;
+  }
+}

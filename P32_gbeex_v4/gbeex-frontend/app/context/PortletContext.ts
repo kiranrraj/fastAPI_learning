@@ -1,4 +1,4 @@
-// app/context/PortletContext.tsx
+// app/context/PortletContext.ts
 import { createContext } from "react";
 import type { Portlet, PortletBase } from "@/app/types/portlet";
 import type { Tab } from "@/app/types/tab";
@@ -8,7 +8,6 @@ export interface PortletContextType {
     portlets: Portlet[];
     /** Re-fetch portlets from GET /api/v1/portlets */
     fetchPortlets: () => Promise<void>;
-
     /** The open tabs in the content area */
     openTabs: Tab[];
     /** Which tab is currently active */
@@ -19,9 +18,8 @@ export interface PortletContextType {
     closeTab: (id: string) => void;
     /** Switch to a different tab */
     setActiveTabId: (id: string) => void;
-
     /** Create a new portlet via POST /api/v1/portlets and open it */
-    registerPortlet: (p: PortletBase) => Promise<void>;
+    registerPortlet: (p: PortletBase) => Promise<Portlet>;
 }
 
 export const PortletContext = createContext<PortletContextType>({
@@ -33,6 +31,5 @@ export const PortletContext = createContext<PortletContextType>({
     openTab: () => { },
     closeTab: () => { },
     setActiveTabId: () => { },
-
-    registerPortlet: async () => { },
+    registerPortlet: async () => ({} as Portlet),
 });

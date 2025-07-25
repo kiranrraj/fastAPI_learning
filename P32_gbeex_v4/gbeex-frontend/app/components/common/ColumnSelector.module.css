@@ -1,0 +1,92 @@
+/* app/components/common/ColumnSelector.module.css */
+
+.columnSelectorContainer {
+    position: relative;
+    display: inline-block;
+    font-family: Arial, sans-serif;
+    margin-left: 15px; /* Adjust spacing from other elements if needed */
+    z-index: 20; /* Ensure dropdown appears above other content */
+}
+
+.toggleButton {
+    background-color: #f0f4f8;
+    color: #4a5568;
+    border: 1px solid #e2e8f0;
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.toggleButton:hover {
+    background-color: #e2e8f0;
+    border-color: #cbd5e0;
+}
+
+.settingsIcon {
+    color: #718096;
+}
+
+.dropdownPanel {
+    position: absolute;
+    top: calc(100% + 8px); /* Position below the button */
+    right: 0; /* Align to the right of the button */
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    min-width: 220px;
+    max-height: 300px; /* Limit height for scrollability */
+    overflow-y: auto; /* Enable scrolling for many columns */
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.optionActions {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.actionButton {
+    background: none;
+    border: none;
+    color: #4299e1;
+    font-size: 13px;
+    cursor: pointer;
+    padding: 5px 8px;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+}
+
+.actionButton:hover {
+    background-color: #ebf8ff;
+}
+
+.columnOptions {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.checkboxLabel {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: #2d3748;
+    cursor: pointer;
+    padding: 5px 0;
+}
+
+.checkboxInput {
+    margin-right: 8px;
+    accent-color: #4299e1;
+    width: 16px;
+    height: 16px;
+}

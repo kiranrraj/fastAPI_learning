@@ -1,0 +1,66 @@
+/* app/components/dashboard/Portlet/Registration/HelpTooltip.module.css */
+
+.helpTooltipContainer {
+  position: relative;
+  display: inline-block;
+  margin-left: 5px;
+}
+
+.infoIconWrapper {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.infoIconWrapper:hover {
+  background-color: #0056b3;
+}
+
+.infoIcon {
+  width: 14px;
+  height: 14px;
+  stroke-width: 2.5;
+}
+
+.helpTooltipContent {
+  visibility: hidden;
+  opacity: 0;
+  width: 250px;
+  background-color: #333;
+  color: #fff;
+  text-align: left;
+  border-radius: 6px;
+  padding: 10px;
+  position: absolute;
+  z-index: 1000;
+  bottom: 125%; /* Position above the icon */
+  left: 50%;
+  margin-left: -125px; /* Center the tooltip */
+  transition: opacity 0.3s, visibility 0.3s;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+.helpTooltipContent::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #333 transparent transparent transparent;
+}
+
+.helpTooltipContentVisible {
+  visibility: visible;
+  opacity: 1;
+}

@@ -1,0 +1,66 @@
+/* app/components/portlets/DataExplorerPortlet.module.css */
+
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05);
+    overflow: hidden; 
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+.portletTitle {
+    font-size: 26px;
+    font-weight: 700;
+    color: #003366;
+    padding: 20px;
+    margin-bottom: 0px;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.portletDescription {
+    font-size: 15px;
+    color: #666;
+    padding: 15px 20px;
+    margin-bottom: 0px;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.columnSelectorWrapper {
+    padding: 10px 20px;
+    background-color: #fcfdfe;
+    border-bottom: 1px solid #e9ecef;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.loadingMessage,
+.errorMessageDisplay {
+    text-align: center;
+    padding: 40px;
+    font-size: 16px;
+    color: #718096;
+    font-style: italic;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.errorMessageDisplay {
+    color: #e53e3e;
+    font-weight: 500;
+    background-color: #ffe6e6;
+    border: 1px solid #e53e3e;
+    margin: 20px;
+    border-radius: 8px;
+}
+
+.container > :global(.tableContainer),
+.container > :global(.subjectDetailViewContainer) {
+    flex-grow: 1;
+    min-height: 0px;
+}

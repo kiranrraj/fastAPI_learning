@@ -16,7 +16,6 @@ from models.auth import UserInDB
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl="/api/v1/auth/login")
 
 def verify_password(plain_password: str, hashed_password) -> bool:
-    """Verifies a plain password against a hashed password."""
     if isinstance(hashed_password, str):
         hashed_bytes = hashed_password.encode('utf-8')
     else:
@@ -24,7 +23,6 @@ def verify_password(plain_password: str, hashed_password) -> bool:
     return bcrypt.checkpw(plain_password.encode('utf-8'), hashed_bytes)
 
 def create_access_token(subject: str, expires_delta: Optional[timedelta] = None) -> str:
-    """Creates a new JWT access token."""
     expire = datetime.now(timezone.utc) + (expires_delta or timedelta(minutes=ACCESS_TOKEN_EXPIRE_MIN))
     to_encode = {
         "sub": subject,
@@ -34,7 +32,6 @@ def create_access_token(subject: str, expires_delta: Optional[timedelta] = None)
     return jwt.encode(to_encode, SECRET_KEY, algorithm=ALGORITHM)
 
 def create_refresh_token(subject: str, expires_delta: Optional[timedelta] = None) -> str:
-    """Creates a new JWT refresh token."""
     expire = datetime.now(timezone.utc) + (expires_delta or timedelta(minutes=REFRESH_TOKEN_EXPIRE_MIN))
     to_encode = {
         "sub": subject,
@@ -44,10 +41,6 @@ def create_refresh_token(subject: str, expires_delta: Optional[timedelta] = None
     return jwt.encode(to_encode, SECRET_KEY, algorithm=ALGORITHM)
 
 async def get_current_user(token: str = Depends(oauth2_scheme), db=Depends(get_database)) -> UserInDB:
-    """
-    Dependency to get the current authenticated user from an access token.
-    Raises HTTPException 401 if the token is invalid or user not found.
-    """
     creds_exc = HTTPException(
         status_code=status.HTTP_401_UNAUTHORIZED,
         detail="Could not validate credentials",
@@ -61,7 +54,6 @@ async def get_current_user(token: str = Depends(oauth2_scheme), db=Depends(get_d
     except JWTError:
         raise creds_exc
 
-    # Import inside to avoid circular dependency at top level/ testing needed
     from config import USER_COL 
     user_doc = await db[USER_COL].find_one({"username": username})
     if not user_doc:

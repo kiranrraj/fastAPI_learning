@@ -1,4 +1,4 @@
-# models/subjects.py
+# gbeex-backend/models/subjects.py
 from datetime import datetime
 from typing import List, Optional, Dict, Any
 from pydantic import BaseModel, Field
@@ -16,12 +16,12 @@ class Subject(BaseModel):
     subjectId: str
     screeningNumber: str
     medicalRecordNumber: str
-    dateOfConsent: str 
-    dateOfEnrollment: str 
-    randomizationDate: str 
+    dateOfConsent: str
+    dateOfEnrollment: str
+    randomizationDate: str
     treatmentArm: str
     age: int
-    dateOfBirth: str 
+    dateOfBirth: str
     gender: str
     ethnicity: str
     heightCm: int
@@ -38,17 +38,17 @@ class Subject(BaseModel):
     dietaryRestrictions: str
     geneticMarkers: str
     visitCount: int
-    lastVisitDate: str 
-    nextScheduledVisit: str 
+    lastVisitDate: str
+    nextScheduledVisit: str
     status: str
     finalStatus: str
-    dateOfLastContact: str 
-    previousTrial: str
+    dateOfLastContact: str
+    previousTrial: bool 
     progressStatus: str
-    protocolDeviation: str
+    protocolDeviation: bool 
     discontinuationReason: Optional[str] = None
     dropoutReason: Optional[str] = None
-    vaccinationStatus: str
+    vaccinationStatus: bool 
     socioeconomicStatus: str
     incomeBracket: str
     educationLevel: str
@@ -61,7 +61,6 @@ class Subject(BaseModel):
     insuranceProvider: str
     emergencyContact: EmergencyContact
     
-    # Add fields to link back to site/protocol/company for context
     siteId: Optional[str] = None
     siteName: Optional[str] = None
     protocolId: Optional[str] = None

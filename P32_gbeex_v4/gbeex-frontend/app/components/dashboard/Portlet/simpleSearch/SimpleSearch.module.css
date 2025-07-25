@@ -1,0 +1,295 @@
+/* app/components/portlets/SimpleSearch.module.css */
+
+.container {
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    font-family: Arial, sans-serif;
+    color: #333;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #003366;
+}
+
+.description {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.searchForm {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 20px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.searchInput {
+    flex-grow: 1;
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    min-width: 200px;
+}
+
+.searchInput:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+}
+
+.searchButton,
+.clearButton {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.2s ease;
+    white-space: nowrap;
+}
+
+.searchButton {
+    background-color: #007bff;
+    color: white;
+}
+
+.searchButton:hover {
+    background-color: #0056b3;
+}
+
+.clearButton {
+    background-color: #f0f0f0;
+    color: #333;
+    border: 1px solid #ccc;
+}
+
+.clearButton:hover {
+    background-color: #e0e0e0;
+}
+
+.searchButton:disabled,
+.clearButton:disabled {
+    background-color: #cccccc;
+    color: #999999;
+    cursor: not-allowed;
+    border-color: #cccccc;
+}
+
+.error {
+    color: #d9534f;
+    background-color: #fdd;
+    border: 1px solid #d9534f;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.loading {
+    text-align: center;
+    font-style: italic;
+    color: #666;
+    padding: 20px 0;
+}
+
+.noResults {
+    text-align: center;
+    color: #666;
+    padding: 20px 0;
+    border: 1px dashed #eee;
+    border-radius: 5px;
+    margin-top: 15px;
+}
+
+.resultsSummary {
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #003366;
+}
+
+.tableContainer {
+    flex-grow: 1;
+    overflow-y: auto;
+    overflow-x: auto;
+    min-height: 0;
+}
+
+.resultsTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    min-width: 600px;
+}
+
+.resultsTable th,
+.resultsTable td {
+    border: 1px solid #eee;
+    padding: 10px 15px;
+    text-align: left;
+    font-size: 14px;
+}
+
+.resultsTable th {
+    background-color: #f8f8f8;
+    font-weight: bold;
+    color: #555;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.resultsTable td {
+    vertical-align: top;
+}
+
+.resultsTable tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.resultsTable tbody tr:hover {
+    background-color: #f0f8ff;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .searchForm {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .searchInput, .searchButton, .clearButton, .searchSelect, .searchLimitSelect, .radioGroup {
+        width: 100%;
+        min-width: unset;
+    }
+    .resultsTable {
+        min-width: 500px;
+    }
+}
+
+.debugPanel {
+    margin-top: 20px;
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+}
+
+.debugTitle {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.debugJson {
+    width: 100%;
+    height: 200px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 13px;
+    background-color: #fff;
+    resize: vertical;
+    overflow: auto;
+}
+
+.searchSelect, .searchLimitSelect {
+  padding: 10px 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  background-color: #fff;
+  cursor: pointer;
+  min-width: 150px;
+}
+
+.searchLimitSelect {
+  min-width: 80px;
+}
+
+.searchSelect:focus, .searchLimitSelect:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+}
+
+.cellContent {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 150px;
+    display: block;
+}
+
+.radioGroup {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    justify-content: center;
+    width: 100%;
+}
+
+.radioOption {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.radioOption input[type="radio"] {
+    margin-right: 5px;
+    accent-color: #007bff;
+}
+
+.radioOption label {
+    font-size: 14px;
+    color: #555;
+    cursor: pointer;
+}
+
+/* New styles for the debug toggle button */
+.debugToggleContainer {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.debugToggleButton {
+    padding: 10px 20px;
+    background-color: #6c757d; /* A neutral color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.2s ease;
+}
+
+.debugToggleButton:hover {
+    background-color: #5a6268;
+}
+
+.debugToggleButton:disabled {
+    background-color: #cccccc;
+    color: #999999;
+    cursor: not-allowed;
+}

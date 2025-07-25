@@ -1,0 +1,94 @@
+/* app/components/common/SearchAndFilterBar.module.css */
+
+.searchBarContainer {
+    padding: 15px;
+    background-color: #f0f4f8;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.searchForm {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.searchInput {
+    flex-grow: 1;
+    padding: 12px 15px;
+    border: 1px solid #cbd5e0;
+    border-radius: 6px;
+    font-size: 16px;
+    color: #2d3748;
+}
+
+.searchInput:focus {
+    border-color: #4299e1;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.25);
+}
+
+.searchButton {
+    padding: 12px 20px;
+    background-color: #4299e1;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.searchButton:hover {
+    background-color: #3182ce;
+    box-shadow: 0 4px 12px rgba(66, 153, 225, 0.2);
+}
+
+.searchButton:disabled {
+    background-color: #e2e8f0;
+    color: #a0aec0;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+.filtersContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding-top: 10px;
+    border-top: 1px solid #ebf8ff; /* Light line above filters */
+}
+
+.filterInput,
+.filterSelect {
+    padding: 8px 12px;
+    border: 1px solid #cbd5e0;
+    border-radius: 6px;
+    font-size: 14px;
+    min-width: 120px;
+    color: #2d3748;
+    background-color: #ffffff;
+}
+
+.filterSelect {
+    appearance: none;
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23718096%22%20d%3D%22M287%2C114.7L159.9%2C241.8c-3.3%2C3.3-7.5%2C5-12.2%2C5s-8.9-1.7-12.2-5L5.4%2C114.7c-3.3-3.3-5-7.5-5-12.2s1.7-8.9%2C5-12.2l12.2-12.2c3.3-3.3%2C7.5-5%2C12.2-5s8.9%2C1.7%2C12.2%2C5l112%2C112L250.4%2C88.1c3.3-3.3%2C7.5-5%2C12.2-5s8.9%2C1.7%2C12.2%2C5l12.2%2C12.2c3.3-3.3%2C5%2C7.5%2C5%2C12.2S290.3%2C111.4%2C287%2C114.7z%22%2F%3E%3C%2Fsvg%3E');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 10px;
+    padding-right: 30px;
+    cursor: pointer;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .searchForm {
+        flex-direction: column;
+    }
+    .filtersContainer {
+        flex-direction: column;
+    }
+    .searchInput, .searchButton, .filterInput, .filterSelect {
+        width: 100%;
+    }
+}
